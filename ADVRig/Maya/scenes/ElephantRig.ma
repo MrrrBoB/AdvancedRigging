@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: ElephantRig.ma
-//Last modified: Fri, Oct 27, 2023 04:34:47 PM
+//Last modified: Fri, Oct 27, 2023 04:37:07 PM
 //Codeset: 1252
 requires maya "2023";
 requires "stereoCamera" "10.0";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202208031415-1dee56799d";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "3D5EFA31-426B-ECCF-15A6-928F6C45985D";
+fileInfo "UUID" "04CBCAD1-4A69-1B1B-69BE-2CB84836AEC9";
 createNode transform -s -n "persp";
 	rename -uid "CFBEB485-41C4-C5C7-F38D-BDA66A97B055";
 	setAttr ".v" no;

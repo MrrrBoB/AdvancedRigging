@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: ElephantRig.ma
-//Last modified: Thu, Nov 02, 2023 05:01:32 PM
+//Last modified: Thu, Nov 02, 2023 06:07:53 PM
 //Codeset: 1252
 requires maya "2023";
 requires "stereoCamera" "10.0";
@@ -12,12 +12,12 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202208031415-1dee56799d";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "2C65EF34-4512-11E5-600D-D3AAAC84DEE2";
+fileInfo "UUID" "7A1E9016-49CE-FA07-CEF9-6AADCC1B42A2";
 createNode transform -s -n "persp";
 	rename -uid "CFBEB485-41C4-C5C7-F38D-BDA66A97B055";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 22.879486042249201 23.272620951295664 28.515723498994124 ;
-	setAttr ".r" -type "double3" -21.599999999990494 2917.1999999989007 0 ;
+	setAttr ".t" -type "double3" 46.141376765040881 15.826233485265755 9.3208699242359465 ;
+	setAttr ".r" -type "double3" -9.0000000000090807 2949.9999999980319 -2.3248299429361643e-15 ;
 	setAttr ".rpt" -type "double3" 1.6935659653864578e-16 5.8119298382004477e-16 -2.2659903583362428e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "19F156C6-4FE4-0364-2386-E9AFE02CF56B";
@@ -26,12 +26,12 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.0032808398950131233;
 	setAttr ".fcp" 328.08398950131232;
 	setAttr ".fd" 0.16404199475065617;
-	setAttr ".coi" 41.084452610037005;
+	setAttr ".coi" 50.622378007839842;
 	setAttr ".ow" 0.32808398950131235;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 85.639427185058651 329.30673738935576 114.8908767700196 ;
+	setAttr ".tp" -type "double3" 3.5527136788005009e-14 149.68808827307004 -321.95957191808441 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "660BFD6F-4100-9DE3-CF88-CBADA6897817";
@@ -443,13 +443,27 @@ createNode pointConstraint -n "L_Front_Leg_IKHandle_pointConstraint1" -p "L_Fron
 	setAttr -k on ".w0";
 createNode ikHandle -n "Tail_Spline_Handle" -p "Deformers";
 	rename -uid "658A6D97-477C-4D84-C710-4FB3E2080667";
-	setAttr ".t" -type "double3" 2.1026957196291739e-15 4.9110265181453423 -10.562978081301981 ;
-	setAttr ".r" -type "double3" -90.000000000000071 48.230647148815997 -89.999999999999986 ;
+	setAttr ".t" -type "double3" 2.1026957109793089e-15 4.9110265163850571 -10.562978079729803 ;
+	setAttr ".r" -type "double3" -90.000000000000071 48.230647148959399 -89.999999999999986 ;
 createNode transform -n "Tail_Spline_Base_Curve" -p "Deformers";
 	rename -uid "484BED31-48A1-C3E2-8458-40A9373274B7";
+	setAttr -l on ".tx";
+	setAttr -l on ".ty";
+	setAttr -l on ".tz";
+	setAttr -l on ".rx";
+	setAttr -l on ".ry";
+	setAttr -l on ".rz";
+	setAttr -l on ".sx";
+	setAttr -l on ".sy";
+	setAttr -l on ".sz";
 createNode nurbsCurve -n "Tail_Spline_Base_CurveShape" -p "Tail_Spline_Base_Curve";
 	rename -uid "56B862F1-4CBC-3070-EEF0-D08AC18657A5";
 	setAttr -k off ".v";
+	setAttr ".tw" yes;
+createNode nurbsCurve -n "Tail_Spline_Base_CurveShapeOrig" -p "Tail_Spline_Base_Curve";
+	rename -uid "5C8C9E4A-44C5-A953-6E91-688964089BF7";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".cc" -type "nurbsCurve" 
 		3 5 0 no 3
 		10 0 0 0 1 2 3 4 5 5 5
@@ -484,8 +498,8 @@ createNode nurbsCurve -n "Tail_Spline_Base_Curve_CopyShape" -p "Tail_Spline_Base
 		;
 createNode ikHandle -n "Trunk_Spline_Handle" -p "Deformers";
 	rename -uid "F3CF2223-4374-543B-BB39-4A9CC31EA489";
-	setAttr ".t" -type "double3" -4.0779370640401352e-15 0.73674676379457515 6.8880221267854322 ;
-	setAttr ".r" -type "double3" 90.000000000000057 7.4682562232781538e-07 -90.000000000000043 ;
+	setAttr ".t" -type "double3" -2.7353346051013424e-15 0.73674676498032865 6.8880221275199824 ;
+	setAttr ".r" -type "double3" 90.000000000000057 7.56087099114146e-07 -90.000000000000043 ;
 createNode transform -n "Trunk_Spline_Base_Curve" -p "Deformers";
 	rename -uid "FB474686-4980-4CD5-6AED-ADA92C959758";
 	setAttr ".t" -type "double3" 9.3247078183740181e-16 0 0 ;
@@ -555,8 +569,8 @@ createNode nurbsCurve -n "Trunk_Spline_Base_Curve_CopyShape" -p "Trunk_Spline_Ba
 		;
 createNode ikHandle -n "Spine_Spline_Handle" -p "Deformers";
 	rename -uid "D5EBF2FF-4992-635F-D4D2-1091545E2D30";
-	setAttr ".t" -type "double3" -2.5868261324202755e-15 10.097877160783037 1.5753079714641325 ;
-	setAttr ".r" -type "double3" 90 -84.952765680992542 -90 ;
+	setAttr ".t" -type "double3" -2.5868261324202755e-15 10.097877162196205 1.5753079716448133 ;
+	setAttr ".r" -type "double3" 90 -84.952765703244935 -90 ;
 createNode transform -n "Spine_Spline_Base_Curve" -p "Deformers";
 	rename -uid "78E0E4B7-4ED1-FE14-17CF-078FE83F81F4";
 	setAttr -l on ".tx";
@@ -920,6 +934,156 @@ createNode scaleConstraint -n "Spine_Spline_Ctrl_Joint_1_scaleConstraint1" -p "S
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".o" -type "double3" 1 1.0000000000000002 1 ;
+	setAttr -k on ".w0";
+createNode transform -n "Tail_Spline_Control_Joints" -p "Deformers";
+	rename -uid "9DC25460-4F25-193F-3C9B-22A74B9E2CA4";
+createNode joint -n "Tail_Spline_Control_Joint_1" -p "Tail_Spline_Control_Joints";
+	rename -uid "C7B6869C-4A1D-8CD8-EC9E-B28EEA60B1D3";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".uoc" 1;
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" -90.000000000000099 48.230675006658643 -90 ;
+	setAttr ".bps" -type "matrix" 0 -0.66613331283407295 -0.74583269540340125 0 -1.7208456881689918e-15 0.74583269540340136 -0.66613331283407307 0
+		 1 1.2767564783189294e-15 -1.1102230246251565e-15 0 -1.8932661725304278e-29 230.90306091309068 -231.02764892578577 1;
+	setAttr ".radi" 10;
+createNode parentConstraint -n "Tail_Spline_Control_Joint_1_parentConstraint1" -p
+		 "Tail_Spline_Control_Joint_1";
+	rename -uid "6ADB6AEE-4A6B-26AC-84A9-13B03C113E0A";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Tail_Spline_Control_Joint_1_CtrlW0" 
+		-dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" -1.2722218291481261e-14 -1.2722219160226863e-14 -3.9124823592568368e-06 ;
+	setAttr ".rst" -type "double3" -6.2115031907166261e-31 7.5755597412431328 -7.5796472744680372 ;
+	setAttr ".rsrr" -type "double3" -9.5416639357973449e-15 -3.180555007243114e-15 -3.9124823497151716e-06 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Tail_Spline_Control_Joint_1_scaleConstraint1" -p "Tail_Spline_Control_Joint_1";
+	rename -uid "CD2ED8B0-46BC-086B-9124-3CAFD76638B0";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Tail_Spline_Control_Joint_1_CtrlW0" 
+		-dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode joint -n "Tail_Spline_Control_Joint_2" -p "Tail_Spline_Control_Joints";
+	rename -uid "538CE5BE-45E4-2D8C-D887-63826C653A60";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jot" -type "string" "none";
+	setAttr ".jo" -type "double3" -90.000000000000114 48.230647148815969 -90.000000000000043 ;
+	setAttr ".bps" -type "matrix" -4.4408920985006262e-16 -0.66613362453642622 -0.74583241700931957 0
+		 -1.4988010832439613e-15 0.74583241700931957 -0.66613362453642622 0 1 8.3266726846886741e-16 -1.3322676295501878e-15 0
+		 1.850924355482947e-14 190.29557459308035 -276.4936104219351 1;
+	setAttr ".radi" 10;
+createNode parentConstraint -n "Tail_Spline_Control_Joint_2_parentConstraint1" -p
+		 "Tail_Spline_Control_Joint_2";
+	rename -uid "0CE2A86B-49B4-FE66-32D6-3C9F82657DE7";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Tail_Spline_Control_Joint_2_CtrlW0" 
+		-dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" -2.5444437451708128e-14 -9.5416640443905503e-15 -6.3611093629270304e-15 ;
+	setAttr ".rst" -type "double3" 6.072586468119905e-16 6.2432931296942371 -9.0713126778850093 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Tail_Spline_Control_Joint_2_scaleConstraint1" -p "Tail_Spline_Control_Joint_2";
+	rename -uid "E04E11DD-404A-B821-85C2-0E91D1BE27B6";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Tail_Spline_Control_Joint_2_CtrlW0" 
+		-dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode joint -n "Tail_Spline_Control_Joint_3" -p "Tail_Spline_Control_Joints";
+	rename -uid "A7497098-4DC0-0F61-E2A0-85BFA83CF3A5";
+	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jot" -type "string" "none";
+	setAttr ".jo" -type "double3" -90.000000000000099 48.230647148815983 -90 ;
+	setAttr ".bps" -type "matrix" -2.2204460492503131e-16 -0.66613362453642611 -0.74583241700931979 0
+		 -1.7208456881689922e-15 0.74583241700931957 -0.66613362453642611 0 1.0000000000000002 1.2767564783189298e-15 -1.1102230246251565e-15 0
+		 3.701848710965875e-14 149.68808827307004 -321.95957191808441 1;
+	setAttr ".radi" 10;
+createNode parentConstraint -n "Tail_Spline_Control_Joint_3_parentConstraint1" -p
+		 "Tail_Spline_Control_Joint_3";
+	rename -uid "6C336F87-4D81-0D69-A875-FD962E0E7820";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Tail_Spline_Control_Joint_3_CtrlW0" 
+		-dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" 6.3611093629270335e-15 9.5416640443905519e-15 -1.272221872585407e-14 ;
+	setAttr ".rst" -type "double3" 1.2145172936239747e-15 4.9110265181453423 -10.562978081301981 ;
+	setAttr ".rsrr" -type "double3" 6.3611093629270335e-15 9.5416640443905519e-15 -1.272221872585407e-14 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Tail_Spline_Control_Joint_3_scaleConstraint1" -p "Tail_Spline_Control_Joint_3";
+	rename -uid "556F9805-4579-5842-574D-FAB2F4F426B3";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Tail_Spline_Control_Joint_3_CtrlW0" 
+		-dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
 	setAttr -k on ".w0";
 createNode transform -n "Skeleton" -p "ELEPHANT";
 	rename -uid "4DCA6F06-4A1C-1700-F50E-74B1F302078B";
@@ -1602,14 +1766,14 @@ createNode joint -n "L_Rear_Leg_01_Jnt_IK" -p "Pelvis_Jnt";
 	rename -uid "906447FE-4DBB-50A8-FC38-9297A5D332FF";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
-	setAttr ".r" -type "double3" 8.4002831848312867e-07 -1.5258395453044536e-07 -1.1185367436143903e-15 ;
+	setAttr ".r" -type "double3" 8.4002831848312867e-07 -1.5258395453044552e-07 -1.1185367436143917e-15 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 90.000000000000057 -12.0114842263726 -90.000000000000014 ;
 createNode joint -n "L_Rear_Leg_02_Jnt_IK" -p "L_Rear_Leg_01_Jnt_IK";
 	rename -uid "72EECEF2-4593-50B4-B31B-379C5717CEA6";
 	setAttr ".t" -type "double3" 4.3440150755887492 -9.3247078183740181e-16 -2.7974123455122052e-15 ;
-	setAttr ".r" -type "double3" -1.6977716149757265e-28 1.0014383262152084e-27 4.9474898572001517e-13 ;
+	setAttr ".r" -type "double3" 1.1665977956271652e-29 -5.7061152984564125e-29 -3.399591977145858e-14 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999989 0.99999999999999967 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -1748,7 +1912,7 @@ createNode joint -n "R_Rear_Leg_01_Jnt_IK" -p "Pelvis_Jnt";
 createNode joint -n "R_Rear_Leg_02_Jnt_IK" -p "R_Rear_Leg_01_Jnt_IK";
 	rename -uid "25AC5A96-4E8B-E110-34BE-C8B0F37E2DFD";
 	setAttr ".t" -type "double3" -4.3440077544126385 1.6914190773563011e-06 -2.3311769545935045e-16 ;
-	setAttr ".r" -type "double3" -1.2733320339596261e-28 1.9785134221645056e-28 7.4212563979133472e-13 ;
+	setAttr ".r" -type "double3" -4.2444401131987545e-29 6.5950447405483531e-29 2.4737521326377822e-13 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999978 1 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -2010,7 +2174,7 @@ createNode parentConstraint -n "Tail_05_Jnt_parentConstraint1" -p "Tail_05_Jnt";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 0 0 -7.4523240643431917e-05 ;
+	setAttr ".lr" -type "double3" 0 0 -7.4508567344176995e-05 ;
 	setAttr ".rst" -type "double3" 0.80000000000000282 -5.5948246910244104e-15 1.174186187503679e-16 ;
 	setAttr ".rsrr" -type "double3" 0 0 -4.7735033533240661e-05 ;
 	setAttr -k on ".w0";
@@ -2051,7 +2215,7 @@ createNode parentConstraint -n "Tail_04_Jnt_parentConstraint1" -p "Tail_04_Jnt";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 0 0 7.4498783539086671e-05 ;
+	setAttr ".lr" -type "double3" 0 0 7.4508567344176995e-05 ;
 	setAttr ".rst" -type "double3" 0.79999999999999816 -3.7298831273496072e-15 1.3671008256084049e-16 ;
 	setAttr ".rsrr" -type "double3" 0 0 2.1103930611372405e-05 ;
 	setAttr -k on ".w0";
@@ -2092,7 +2256,7 @@ createNode parentConstraint -n "Tail_03_Jnt_parentConstraint1" -p "Tail_03_Jnt";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 0 0 -2.3920903194517875e-05 ;
+	setAttr ".lr" -type "double3" 0 0 -2.3844600278602423e-05 ;
 	setAttr ".rst" -type "double3" 0.79999999999999949 3.7298831273496072e-15 4.72174811277213e-17 ;
 	setAttr ".rsrr" -type "double3" 0 0 2.6998693283819177e-06 ;
 	setAttr -k on ".w0";
@@ -2172,7 +2336,7 @@ createNode parentConstraint -n "Tail_01_Jnt_parentConstraint1" -p "Tail_01_Jnt";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 5.429659954219303e-23 -1.5902773407317576e-15 -3.91248232745129e-06 ;
+	setAttr ".lr" -type "double3" -6.36110930735269e-15 -1.5902775630291242e-15 -4.0045533424257638e-06 ;
 	setAttr ".rst" -type "double3" 0 -2.1599971548708887 -1.7562590871897501 ;
 	setAttr ".rsrr" -type "double3" -3.1805546271669164e-15 -1.5902774493249559e-15 
 		-3.9124823051874059e-06 ;
@@ -2202,7 +2366,7 @@ createNode joint -n "Tail_01_Jnt_IK" -p "Cog_Jnt";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
 	setAttr ".t" -type "double3" 0 -2.1599971548708887 -1.7562590871897501 ;
-	setAttr ".r" -type "double3" 1.4196309327940497e-21 -1.2554772047424312e-14 -3.9124823603063801e-06 ;
+	setAttr ".r" -type "double3" 1.6103981954186768e-21 -1.705766728728826e-14 -4.0045533657003902e-06 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -2218,7 +2382,7 @@ createNode joint -n "Tail_02_Jnt_IK" -p "Tail_01_Jnt_IK";
 createNode joint -n "Tail_03_Jnt_IK" -p "Tail_02_Jnt_IK";
 	rename -uid "A48CFE10-4550-0AA7-0480-B790A41B4ABB";
 	setAttr ".t" -type "double3" 0.80000000000000027 1.8649415636748036e-15 2.2485316506774976e-16 ;
-	setAttr ".r" -type "double3" 9.3992869435418809e-21 2.9911039239668712e-20 -2.3920903194517875e-05 ;
+	setAttr ".r" -type "double3" 9.3572846076414835e-21 3.3970069763053302e-20 -2.3814010656927563e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -2226,7 +2390,7 @@ createNode joint -n "Tail_03_Jnt_IK" -p "Tail_02_Jnt_IK";
 createNode joint -n "Tail_04_Jnt_IK" -p "Tail_03_Jnt_IK";
 	rename -uid "D75920D3-4B59-15E0-22A5-28811D3AFA5F";
 	setAttr ".t" -type "double3" 0.79999999999999816 -3.7298831273496072e-15 3.1434576231562767e-16 ;
-	setAttr ".r" -type "double3" -2.7476506319064216e-20 -4.0714951877855666e-20 7.4498783539086671e-05 ;
+	setAttr ".r" -type "double3" -2.1321123027900212e-20 9.4615029365425353e-15 7.4484105421805197e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -2235,7 +2399,7 @@ createNode joint -n "Tail_05_Jnt_IK" -p "Tail_04_Jnt_IK";
 	rename -uid "11235430-45FA-7915-0349-648C537834E3";
 	setAttr ".uoc" 1;
 	setAttr ".t" -type "double3" 0.80000000000000138 -3.7298831273496072e-15 2.9505426579058565e-16 ;
-	setAttr ".r" -type "double3" 1.6547488367200847e-20 -2.1297070359435348e-21 -7.4523240643431917e-05 ;
+	setAttr ".r" -type "double3" 1.3838139806682642e-20 4.1660603187523293e-15 -7.4523240643431917e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -2697,14 +2861,14 @@ createNode joint -n "R_Front_Leg_01_Jnt_IK" -p "R_Scapula_Jnt";
 	rename -uid "9677CC5D-4997-9DDB-45E0-668C857CA24F";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
-	setAttr ".r" -type "double3" 1.3950956214065983e-14 1.5190978354921048e-15 1.4404651951948807e-29 ;
+	setAttr ".r" -type "double3" 1.3950956215077489e-14 1.5190978262027754e-15 1.4404651955957249e-29 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 2.2412801175204007 -11.4147811276745 -17.354840572132566 ;
 createNode joint -n "R_Front_Leg_02_Jnt_IK" -p "R_Front_Leg_01_Jnt_IK";
 	rename -uid "EB1984B4-4189-6DDD-99CC-72BC70D8ED87";
 	setAttr ".t" -type "double3" -3.2781062644439647 3.6413022738778284e-06 -3.4967654318902569e-15 ;
-	setAttr ".r" -type "double3" -8.3021720662654227e-23 5.9999362727206167e-23 8.889918613263511e-08 ;
+	setAttr ".r" -type "double3" -4.7507454384574421e-24 3.4333388480931449e-24 5.0870711860851122e-09 ;
 	setAttr ".s" -type "double3" 1 1.0000000000000002 1.0000000000000004 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -3063,14 +3227,14 @@ createNode joint -n "L_Front_Leg_01_Jnt_IK" -p "L_Scapula_Jnt";
 	rename -uid "AF58EB6F-4925-63F5-1913-C892A820841F";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
-	setAttr ".r" -type "double3" -1.4887963261371789e-14 7.0861886717437624e-15 2.2361699290911531e-05 ;
+	setAttr ".r" -type "double3" -1.4215811346886598e-15 1.3055522954144382e-14 2.2588727439225648e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 2.2412801175203647 -11.414781127674486 -17.354840572132531 ;
 createNode joint -n "L_Front_Leg_02_Jnt_IK" -p "L_Front_Leg_01_Jnt_IK";
 	rename -uid "957F7882-486D-0AA2-2AA1-8585F239DB87";
 	setAttr ".t" -type "double3" 3.2780998848177778 -9.9544941463975162e-16 1.9857204679095307e-16 ;
-	setAttr ".r" -type "double3" 9.7681159806140183e-23 -1.1263645399269055e-20 -4.7805687346730131e-05 ;
+	setAttr ".r" -type "double3" 9.8771129310952316e-23 -1.1389330127241019e-20 -4.8339124311114366e-05 ;
 	setAttr ".s" -type "double3" 1 0.99999999999999989 1 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
@@ -3214,7 +3378,7 @@ createNode parentConstraint -n "L_Scapula_Jnt_parentConstraint1" -p "L_Scapula_J
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -1.9878466759146974e-14 9.5416640443905519e-15 1.7095481412866394e-14 ;
+	setAttr ".lr" -type "double3" -2.6239576122074002e-14 2.4649298781342251e-14 1.6399735076296246e-14 ;
 	setAttr ".rst" -type "double3" 1.3766093815006866 9.5804006813153944 1.7172345339156827 ;
 	setAttr ".rsrr" -type "double3" 0 -9.5416640443905503e-15 0 ;
 	setAttr -k on ".w0";
@@ -4068,7 +4232,7 @@ createNode joint -n "Trunk_01_Jnt_IK" -p "Head_Jnt";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
 	setAttr ".t" -type "double3" -7.2624088007402916e-16 -0.6672913466466186 2.3786980336109753 ;
-	setAttr ".r" -type "double3" -5.432231450135811e-17 1.7444894889701195e-14 -0.14513808073394432 ;
+	setAttr ".r" -type "double3" -5.4322355141393914e-17 1.744489484047536e-14 -0.14513818948224821 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -4081,7 +4245,7 @@ createNode joint -n "Trunk_02_Jnt_IK" -p "Trunk_01_Jnt_IK";
 	rename -uid "F598BA23-45B5-B1B9-5527-1ABA611E4C81";
 	setAttr ".oc" 1;
 	setAttr ".t" -type "double3" 0.74965461274564271 -5.5948246910244104e-15 -1.6645676231733533e-16 ;
-	setAttr ".r" -type "double3" 7.6769614061927345e-17 1.4731738633849863e-16 0.26363142878009754 ;
+	setAttr ".r" -type "double3" 5.3600902871344348e-17 -9.9233173109545022e-15 0.26363150441020938 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -4091,7 +4255,7 @@ createNode joint -n "Trunk_03_Jnt_IK" -p "Trunk_02_Jnt_IK";
 	rename -uid "0DE92701-4AA3-4CCB-D4B2-90B7361AD531";
 	setAttr ".oc" 2;
 	setAttr ".t" -type "double3" 0.96565574488355177 5.5948246910244104e-15 -2.7995754273079222e-16 ;
-	setAttr ".r" -type "double3" -1.3530656294767581e-17 -5.9898657063209681e-16 -0.1649055254651102 ;
+	setAttr ".r" -type "double3" 4.6279103239113694e-19 -1.0322916866943504e-14 -0.16490553588594639 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -4101,7 +4265,7 @@ createNode joint -n "Trunk_04_Jnt_IK" -p "Trunk_03_Jnt_IK";
 	rename -uid "7B702B8F-4D86-EC8D-B2AA-83B9C7551B0E";
 	setAttr ".oc" 3;
 	setAttr ".t" -type "double3" 0.6000000000000022 -7.4597662546992144e-15 -5.2366826986672634e-17 ;
-	setAttr ".r" -type "double3" 5.7986042022239721e-17 1.4810237702695855e-19 0.066818986308011585 ;
+	setAttr ".r" -type "double3" 5.2309980139468054e-17 -9.7340366278932828e-15 0.066818982402582619 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -4110,7 +4274,7 @@ createNode joint -n "Trunk_05_Jnt_IK" -p "Trunk_04_Jnt_IK";
 	rename -uid "DFBEDF9C-4D60-DABC-018F-C8B55FC64C21";
 	setAttr ".oc" 4;
 	setAttr ".t" -type "double3" 0.59999999999999754 3.7298831273496072e-15 -5.2068388607654369e-16 ;
-	setAttr ".r" -type "double3" -2.4747159753682072e-18 2.8994777375297683e-16 -0.026530609611927311 ;
+	setAttr ".r" -type "double3" -2.2196818563616409e-19 -9.4401669800009311e-15 -0.026530608883838829 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -4119,7 +4283,7 @@ createNode joint -n "Trunk_06_Jnt_IK" -p "Trunk_05_Jnt_IK";
 	rename -uid "B3E795CE-4CFA-7E3B-56F5-EAAE21DBD0D9";
 	setAttr ".oc" 5;
 	setAttr ".t" -type "double3" 0.6000000000000022 -1.8649415636748036e-15 -5.4448495157855624e-17 ;
-	setAttr ".r" -type "double3" 3.9279204708082304e-18 1.2752567451863608e-15 0.0080095326654550311 ;
+	setAttr ".r" -type "double3" 3.247730521488703e-18 -8.4560869151174735e-15 0.0080095216535112992 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -4128,7 +4292,7 @@ createNode joint -n "Trunk_07_Jnt_IK" -p "Trunk_06_Jnt_IK";
 	rename -uid "3C387595-490E-B33B-1B03-DFBE5563FBCA";
 	setAttr ".oc" 6;
 	setAttr ".t" -type "double3" 0.59999999999999853 -1.8649415636748036e-15 -2.8756619061719945e-16 ;
-	setAttr ".r" -type "double3" 1.6494585715904892e-18 -2.9874288224009313e-16 -0.0023942723734470027 ;
+	setAttr ".r" -type "double3" 1.8527792969607884e-18 -1.0029719893052012e-14 -0.0023942749612465173 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -4137,7 +4301,7 @@ createNode joint -n "Trunk_08_Jnt_IK" -p "Trunk_07_Jnt_IK";
 	rename -uid "8434023D-4F7A-E253-E5AF-57802B7FCAD4";
 	setAttr ".oc" 7;
 	setAttr ".t" -type "double3" 0.6000000000000022 0 4.1178689576085398e-16 ;
-	setAttr ".r" -type "double3" 5.4951417301149004e-19 -5.6933183221507398e-16 0.00063686821516187883 ;
+	setAttr ".r" -type "double3" 4.9543686205532312e-19 -1.030041181111998e-14 0.00063687508244297461 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -4145,7 +4309,7 @@ createNode joint -n "Trunk_08_Jnt_IK" -p "Trunk_07_Jnt_IK";
 createNode joint -n "Trunk_09_Jnt_IK" -p "Trunk_08_Jnt_IK";
 	rename -uid "0056FCF5-40BD-060E-93DC-E1AA63E850CC";
 	setAttr ".t" -type "double3" 0.60000000000000031 0 -5.2068388607654822e-16 ;
-	setAttr ".r" -type "double3" 4.4508115526851944e-20 1.4879895523879059e-15 -0.00015628022838567809 ;
+	setAttr ".r" -type "double3" 5.777922310404722e-20 -8.2429721210535264e-15 -0.00015628022838567809 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -4154,7 +4318,7 @@ createNode joint -n "Trunk_10_Jnt_IK" -p "Trunk_09_Jnt_IK";
 	rename -uid "A60E8F79-42FD-88B9-AC01-22A2F264A1D7";
 	setAttr ".oc" 1;
 	setAttr ".t" -type "double3" 0.59999999999999942 -3.7298831273496072e-15 1.7866920030149938e-16 ;
-	setAttr ".r" -type "double3" 3.0120032907623348e-21 -9.2114159144191952e-18 3.3220463131887797e-05 ;
+	setAttr ".r" -type "double3" 1.9046017161058801e-22 -9.7423517498599605e-15 3.3242398071968019e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -4163,7 +4327,7 @@ createNode joint -n "Trunk_11_Jnt_IK" -p "Trunk_10_Jnt_IK";
 	rename -uid "B3D7FF27-4F24-B52D-9D09-E5950E8C61D9";
 	setAttr ".oc" 2;
 	setAttr ".t" -type "double3" 0.60000000000000087 1.8649415636748036e-15 -5.4448495157846102e-17 ;
-	setAttr ".r" -type "double3" 4.1541379899833137e-21 5.7163283968143831e-16 -6.0971633888818227e-06 ;
+	setAttr ".r" -type "double3" 4.6712289585124983e-21 -9.1467003345177481e-15 -6.0971633888818227e-06 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -4750,7 +4914,7 @@ createNode parentConstraint -n "Head_Jnt_parentConstraint1" -p "Head_Jnt";
 	setAttr ".tg[0].tot" -type "double3" -4.1410021271444189e-31 5.0237982336428231e-10 
 		3.8889346686076131e-09 ;
 	setAttr ".tg[0].tor" -type "double3" -8.2318643953268573e-08 0 0 ;
-	setAttr ".lr" -type "double3" 8.2318658265764595e-08 0 0 ;
+	setAttr ".lr" -type "double3" 1.0457106559471851e-07 0 0 ;
 	setAttr ".rst" -type "double3" 1.1858382294410839 1.0352505317861047e-31 1.8649415636748036e-15 ;
 	setAttr ".rsrr" -type "double3" 8.2318658265764595e-08 0 0 ;
 	setAttr -k on ".w0";
@@ -4787,7 +4951,7 @@ createNode parentConstraint -n "Neck_01_Jnt_parentConstraint1" -p "Neck_01_Jnt";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 1.0545221004179518e-07 0 ;
+	setAttr ".lr" -type "double3" 0 1.0545222316158323e-07 0 ;
 	setAttr ".rst" -type "double3" 6.993530863780515e-16 9.1046552790988837 2.9423568505314703 ;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "Neck_01_Jnt_scaleConstraint1" -p "Neck_01_Jnt";
@@ -4824,7 +4988,7 @@ createNode parentConstraint -n "Spine_04_Jnt_parentConstraint1" -p "Spine_04_Jnt
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 0 0 -3.0948558657703142e-05 ;
+	setAttr ".lr" -type "double3" 0 0 -3.0972102638592071e-05 ;
 	setAttr ".rst" -type "double3" 1.8648537649097821 5.5948246910244104e-15 6.5902230873610381e-16 ;
 	setAttr ".rsrr" -type "double3" 0 0 -3.0795084028581259e-05 ;
 	setAttr -k on ".w0";
@@ -4865,7 +5029,7 @@ createNode parentConstraint -n "Spine_03_Jnt_parentConstraint1" -p "Spine_03_Jnt
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 0 0 1.5579907033750376e-05 ;
+	setAttr ".lr" -type "double3" 0 0 1.564992944179822e-05 ;
 	setAttr ".rst" -type "double3" 1.8830987931833729 1.8649415636748036e-15 6.5104401607388561e-16 ;
 	setAttr ".rsrr" -type "double3" 0 0 1.5344191369787581e-05 ;
 	setAttr -k on ".w0";
@@ -4906,7 +5070,7 @@ createNode parentConstraint -n "Spine_02_Jnt_parentConstraint1" -p "Spine_02_Jnt
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 0 0 1.5056462251987384e-05 ;
+	setAttr ".lr" -type "double3" 0 0 1.503223623016958e-05 ;
 	setAttr ".rst" -type "double3" 1.860168273338398 -1.8649415636748036e-15 6.1956049402125334e-16 ;
 	setAttr ".rsrr" -type "double3" 0 0 1.5104797727498789e-05 ;
 	setAttr -k on ".w0";
@@ -4976,7 +5140,7 @@ createNode joint -n "Spine_01_Jnt_IK" -p "Cog_Jnt";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
 	setAttr ".t" -type "double3" 0 7.9323415144636274e-08 -9.1382136620065376e-14 ;
-	setAttr ".r" -type "double3" 5.0067404828349548e-21 -3.8345833302189138e-22 -1.5032236230862702e-05 ;
+	setAttr ".r" -type "double3" 5.0067404828349571e-21 -3.8345832967209984e-22 -1.5032236230862702e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -4985,7 +5149,7 @@ createNode joint -n "Spine_01_Jnt_IK" -p "Cog_Jnt";
 createNode joint -n "Spine_02_Jnt_IK" -p "Spine_01_Jnt_IK";
 	rename -uid "59411D59-4AE4-F1F3-20A4-DBB73ECE7790";
 	setAttr ".t" -type "double3" 1.860168273338398 -1.8649415636748036e-15 6.1956049402125334e-16 ;
-	setAttr ".r" -type "double3" -5.2054731320130152e-21 -2.1039663431626182e-21 1.5056462251787269e-05 ;
+	setAttr ".r" -type "double3" -5.1970974654323826e-21 -2.1005810399769131e-21 1.5032236230862702e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -4994,7 +5158,7 @@ createNode joint -n "Spine_02_Jnt_IK" -p "Spine_01_Jnt_IK";
 createNode joint -n "Spine_03_Jnt_IK" -p "Spine_02_Jnt_IK";
 	rename -uid "784A73A1-4968-ADDB-4A5E-978E44774B26";
 	setAttr ".t" -type "double3" 1.8830987931833729 0 6.5104401607388581e-16 ;
-	setAttr ".r" -type "double3" -5.50579687403784e-21 1.0817652645647472e-21 1.5579907034325894e-05 ;
+	setAttr ".r" -type "double3" -5.5305421527748305e-21 1.08494227542341e-21 1.5649929441225564e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -5003,7 +5167,7 @@ createNode joint -n "Spine_03_Jnt_IK" -p "Spine_02_Jnt_IK";
 createNode joint -n "Spine_04_Jnt_IK" -p "Spine_03_Jnt_IK";
 	rename -uid "C7772FB2-4EB0-E8B5-ADBA-D18969411BD2";
 	setAttr ".t" -type "double3" 1.8648537649097816 5.5948246910244104e-15 6.5902230873610381e-16 ;
-	setAttr ".r" -type "double3" 1.0992563342127977e-20 8.3470543315773112e-22 -3.0948558656104818e-05 ;
+	setAttr ".r" -type "double3" 1.1000925886932117e-20 8.3410572428339292e-22 -3.0972102637186708e-05 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -5344,9 +5508,6 @@ createNode nurbsCurve -n "Transform_CtrlShape" -p "Transform_Ctrl";
 	setAttr ".tw" yes;
 createNode transform -n "Cog_Jnt_Ctrl_Grp" -p "Transform_Ctrl";
 	rename -uid "044B7FCB-4BB3-A238-B0F2-C8A375446A72";
-	setAttr ".t" -type "double3" 0 9.7355568961140175 -3.9875719709424753 ;
-	setAttr -av ".ty";
-	setAttr -av ".tz";
 	setAttr ".rp" -type "double3" 0 -1.1655884772967523e-15 0 ;
 	setAttr ".sp" -type "double3" 0 -1.1655884772967523e-15 0 ;
 createNode transform -n "Cog_Jnt_Ctrl" -p "Cog_Jnt_Ctrl_Grp";
@@ -5904,7 +6065,7 @@ createNode parentConstraint -n "R_Scapula_Jnt_Ctrl_Grp_parentConstraint2" -p "R_
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.18690225601079624 -0.50298370162105022 1.3766093815006839 ;
 	setAttr ".tg[0].tor" -type "double3" -5.0472342958739072 90 0 ;
-	setAttr ".lr" -type "double3" 2.3133545812490538e-08 0 0 ;
+	setAttr ".lr" -type "double3" 8.8115597658738942e-10 0 0 ;
 	setAttr ".rst" -type "double3" 0 0 -4.662353909187009e-16 ;
 	setAttr ".rsrr" -type "double3" 7.951386703658788e-16 0 0 ;
 	setAttr -k on ".w0";
@@ -6263,7 +6424,7 @@ createNode parentConstraint -n "L_Scapula_Jnt_Ctrl_Grp_parentConstraint2" -p "L_
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.18690225601079624 -0.50298370162105033 -1.376609381500689 ;
 	setAttr ".tg[0].tor" -type "double3" 1.2669378043953137 11.561601801538957 -78.655840476154623 ;
-	setAttr ".lr" -type "double3" 90.000000004690648 -6.1686580839514606 -78.370128057394766 ;
+	setAttr ".lr" -type "double3" 90.000000000178687 -6.1686581057470207 -78.37012805690992 ;
 	setAttr ".rst" -type "double3" 1.3766093815006866 9.5804006813153944 1.7172345339156818 ;
 	setAttr ".rsrr" -type "double3" 90.000000000000014 -6.1686581066100787 -78.370128056890721 ;
 	setAttr -k on ".w0";
@@ -6934,7 +7095,7 @@ createNode parentConstraint -n "L_Front_Leg_01_Jnt_IK_Ctrl_Grp_parentConstraint2
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 2.2620120086009061 2.6385128677698137e-16 -2.680913879543371e-17 ;
 	setAttr ".tg[0].tor" -type "double3" 2.2412801175203985 -11.414781127674495 -17.354840572132556 ;
-	setAttr ".lr" -type "double3" 90.000000000000043 10.962152723551092 -89.999999999999986 ;
+	setAttr ".lr" -type "double3" 90.000000000000028 10.962152701298679 -89.999999999999957 ;
 	setAttr ".rst" -type "double3" 1.8299649706662799 7.3776555499379723 1.960300210266914 ;
 	setAttr ".rsrr" -type "double3" 90.000000000000043 10.962152700417549 -89.999999999999957 ;
 	setAttr -k on ".w0";
@@ -9486,6 +9647,171 @@ createNode nurbsCurve -n "Tail_06_Jnt_FK_CtrlShape" -p "Tail_06_Jnt_FK_Ctrl";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 6;
 	setAttr ".tw" yes;
+createNode transform -n "Tail_Spline_Control_Joint_Controls" -p "Tail";
+	rename -uid "16F9630C-4393-1AA0-5452-EB81006FD2A3";
+createNode transform -n "Tail_Spline_Control_Joint_1_Ctrl_Grp" -p "Tail_Spline_Control_Joint_Controls";
+	rename -uid "DD1A066E-43C5-F029-FA09-51885B254091";
+	setAttr ".rp" -type "double3" 0 -3.4967654318902565e-16 0 ;
+	setAttr ".sp" -type "double3" 0 -3.4967654318902565e-16 0 ;
+createNode transform -n "Tail_Spline_Control_Joint_1_Ctrl" -p "Tail_Spline_Control_Joint_1_Ctrl_Grp";
+	rename -uid "EE5DB252-4E4F-6F08-A236-6D87B201EA60";
+	addAttr -ci true -k true -sn "FollowTranslate" -ln "FollowTranslate" -dv 1 -min 
+		0 -max 1 -at "double";
+	addAttr -ci true -k true -sn "FollowRotate" -ln "FollowRotate" -dv 1 -min 0 -max 
+		1 -at "double";
+	setAttr -k on ".FollowTranslate";
+	setAttr -k on ".FollowRotate";
+createNode nurbsCurve -n "Tail_Spline_Control_Joint_1_CtrlShape" -p "Tail_Spline_Control_Joint_1_Ctrl";
+	rename -uid "FD078A2E-4DC3-1495-BD88-45BCB9802F22";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".tw" yes;
+createNode parentConstraint -n "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1" 
+		-p "Tail_Spline_Control_Joint_1_Ctrl_Grp";
+	rename -uid "808A139A-4631-20C8-8231-7F980632FAC5";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Pelvis_Jnt_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0 -2.1599971548708856 -1.7562590871897499 ;
+	setAttr ".tg[0].tor" -type "double3" -90.000000000000099 48.230671094176287 -90 ;
+	setAttr ".lr" -type "double3" -90.000000000000099 48.230671094176287 -89.999999999999986 ;
+	setAttr ".rst" -type "double3" 0 7.5755597412431319 -7.5796472744680372 ;
+	setAttr ".rsrr" -type "double3" -90.000000000000099 48.230671094176287 -89.999999999999986 ;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2" 
+		-p "Tail_Spline_Control_Joint_1_Ctrl_Grp";
+	rename -uid "2DFEA5FB-42C0-DCD6-FC45-CBBD81666FEA";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Pelvis_Jnt_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0 -2.1599971548708865 -1.7562590871897499 ;
+	setAttr ".tg[0].tor" -type "double3" -90.000000000000099 48.230671094176287 -90 ;
+	setAttr ".lr" -type "double3" -90.000000000000099 48.230671094176287 -89.999999999999986 ;
+	setAttr ".rst" -type "double3" 0 7.5755597412431319 -7.5796472744680372 ;
+	setAttr ".rsrr" -type "double3" -90.000000000000099 48.230671094176287 -89.999999999999986 ;
+	setAttr -k on ".w0";
+createNode scaleConstraint -n "Tail_Spline_Control_Joint_1_Ctrl_Grp_scaleConstraint1" 
+		-p "Tail_Spline_Control_Joint_1_Ctrl_Grp";
+	rename -uid "DB932FB6-4066-58C2-ADF0-72AB96E95A14";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Pelvis_Jnt_CtrlW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -k on ".w0";
+createNode transform -n "Tail_Spline_Control_Joint_2_Ctrl_Grp" -p "Tail_Spline_Control_Joint_Controls";
+	rename -uid "9E28FDC6-43AA-097F-4D2A-9F9349AAE8E6";
+	setAttr ".rp" -type "double3" 0 -3.4967654318902565e-16 0 ;
+	setAttr ".sp" -type "double3" 0 -3.4967654318902565e-16 0 ;
+createNode transform -n "Tail_Spline_Control_Joint_2_Ctrl" -p "Tail_Spline_Control_Joint_2_Ctrl_Grp";
+	rename -uid "CFB9C4F7-471A-E255-A1CB-DBA26F71AB1B";
+	addAttr -ci true -sn "FollowBaseTip" -ln "FollowBaseTip" -min 0 -max 1 -at "double";
+	setAttr ".rp" -type "double3" 0 0 3.3128017017155351e-30 ;
+	setAttr ".sp" -type "double3" 0 0 3.3128017017155351e-30 ;
+	setAttr -k on ".FollowBaseTip" 0.5;
+createNode nurbsCurve -n "Tail_Spline_Control_Joint_2_CtrlShape" -p "Tail_Spline_Control_Joint_2_Ctrl";
+	rename -uid "2EDB599E-472C-14A9-CB93-37895012E2A4";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".tw" yes;
+createNode parentConstraint -n "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1" 
+		-p "Tail_Spline_Control_Joint_2_Ctrl_Grp";
+	rename -uid "4A89FD93-4F1E-50FA-A388-548D75159E49";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Tail_Spline_Control_Joint_1_CtrlW0" 
+		-dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "Tail_Spline_Control_Joint_3_CtrlW1" 
+		-dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -s 2 ".tg";
+	setAttr ".tg[0].tot" -type "double3" 1.9999999999997726 1.8930654069698346e-08 6.0725868043958413e-16 ;
+	setAttr ".tg[0].tor" -type "double3" 1.2722213408906789e-14 2.5444481316446107e-14 
+		-2.3945360321885303e-05 ;
+	setAttr ".tg[1].tot" -type "double3" -1.9999999999995908 -8.5478141019111833e-07 
+		-1.4954383476592365e-15 ;
+	setAttr ".tg[1].tor" -type "double3" 5.649800061504203e-30 1.1299600123008406e-29 
+		0 ;
+	setAttr ".lr" -type "double3" -90.000000000000099 48.230647148815954 -90 ;
+	setAttr ".rst" -type "double3" 6.0725864681198597e-16 6.243293129694238 -9.0713126778850075 ;
+	setAttr ".rsrr" -type "double3" -90.000000000000114 48.230647148815962 -90.000000000000028 ;
+	setAttr -k on ".w0";
+	setAttr -k on ".w1";
+createNode scaleConstraint -n "Tail_Spline_Control_Joint_2_Ctrl_Grp_scaleConstraint1" 
+		-p "Tail_Spline_Control_Joint_2_Ctrl_Grp";
+	rename -uid "DEF2FF60-4994-580D-2BC4-46BAA1E615D6";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Tail_Spline_Control_Joint_1_CtrlW0" 
+		-dv 1 -min 0 -at "double";
+	addAttr -dcb 0 -ci true -k true -sn "w1" -ln "Tail_Spline_Control_Joint_3_CtrlW1" 
+		-dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr -s 2 ".tg";
+	setAttr -k on ".w0";
+	setAttr -k on ".w1";
+createNode transform -n "Tail_Spline_Control_Joint_3_Ctrl_Grp" -p "Tail_Spline_Control_Joint_Controls";
+	rename -uid "8280AD9B-43FA-E0E9-C2FD-8AB64F697876";
+	setAttr ".t" -type "double3" 1.2145172936239753e-15 4.9110265181453423 -10.562978081301981 ;
+	setAttr ".r" -type "double3" -90.000000000000099 48.230647148815976 -90.000000000000028 ;
+	setAttr ".rp" -type "double3" 0 -3.4967654318902565e-16 0 ;
+	setAttr ".sp" -type "double3" 0 -3.4967654318902565e-16 0 ;
+createNode transform -n "Tail_Spline_Control_Joint_3_Ctrl" -p "Tail_Spline_Control_Joint_3_Ctrl_Grp";
+	rename -uid "06BC9585-4ADE-7361-2528-5DAC7E06C08C";
+createNode nurbsCurve -n "Tail_Spline_Control_Joint_3_CtrlShape" -p "Tail_Spline_Control_Joint_3_Ctrl";
+	rename -uid "3276CED4-4B04-369E-4F82-F985C1D4FE68";
+	setAttr -k off ".v";
+	setAttr ".ove" yes;
+	setAttr ".ovc" 13;
+	setAttr ".tw" yes;
 createNode transform -n "Head" -p "Controls";
 	rename -uid "0810243A-437D-CB2B-816B-EB9C44707CF3";
 createNode transform -n "Head_Ctrl_Grp" -p "Head";
@@ -9690,7 +10016,7 @@ createNode parentConstraint -n "Head_Ctrl_Grp_parentConstraint2" -p "Head_Ctrl_G
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -1.781743325578335 -6.993530863780515e-16 -9.4009362463985262 ;
 	setAttr ".tg[0].tor" -type "double3" 82.822572204193619 0 90 ;
-	setAttr ".lr" -type "double3" 2.313354819790655e-08 0 0 ;
+	setAttr ".lr" -type "double3" 8.8115995228074144e-10 0 0 ;
 	setAttr ".rst" -type "double3" 0 3.7298831273496072e-15 0 ;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "Head_Ctrl_Grp_scaleConstraint1" -p "Head_Ctrl_Grp";
@@ -10614,7 +10940,7 @@ createNode parentConstraint -n "Neck_01_Jnt_Ctrl_Grp_parentConstraint2" -p "Neck
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 1.4491288107162306 -0.86910185604204515 -2.5868261324202759e-15 ;
 	setAttr ".tg[0].tor" -type "double3" -90 0 -2.1301934999324672 ;
-	setAttr ".lr" -type "double3" 0 -82.822572181060082 -90 ;
+	setAttr ".lr" -type "double3" 0 -82.822572203312475 -90 ;
 	setAttr ".rst" -type "double3" 0 9.1046552790988802 2.9423568505314694 ;
 	setAttr ".rsrr" -type "double3" 0 -82.822572204193634 -90 ;
 	setAttr -k on ".w0";
@@ -29658,9 +29984,9 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n"
 		+ "                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n"
 		+ "\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n"
-		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -connectionMinSegment 0.03\n                -connectionOffset 0.03\n                -connectionRoundness 0.8\n                -connectionTension -100\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
+		+ "\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -connectionMinSegment 0.03\n                -connectionOffset 0.03\n                -connectionRoundness 0.8\n                -connectionTension -100\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit 1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n"
 		+ "                -showNamespace 1\n                -showShapes 0\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\t}\n\t\t} else {\n\t\t\t$label = `panel -q -label $panelName`;\n\t\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -connectionMinSegment 0.03\n                -connectionOffset 0.03\n"
-		+ "                -connectionRoundness 0.8\n                -connectionTension -100\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 0\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n"
+		+ "                -connectionRoundness 0.8\n                -connectionTension -100\n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -connectedGraphingMode 1\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit 1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n                -nodeTitleMode \"name\" \n                -gridSnap 0\n                -gridVisibility 1\n                -crosshairOnEdgeDragging 0\n                -popupMenuScript \"nodeEdBuildPanelMenus\" \n                -showNamespace 1\n                -showShapes 0\n                -showSGShapes 0\n                -showTransforms 1\n                -useAssets 1\n                -syncedSelection 1\n                -extendToShapes 1\n                -showUnitConversions 0\n                -editorMode \"default\" \n                -hasWatchpoint 0\n                $editorName;\n\t\t\tif (!$useSceneConfig) {\n\t\t\t\tpanel -e -l $label $panelName;\n\t\t\t}\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"createNodePanel\" (localizedPanelLabel(\"Create Node\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Create Node\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"polyTexturePlacementPanel\" (localizedPanelLabel(\"UV Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n"
@@ -29695,7 +30021,6 @@ createNode materialInfo -n "materialInfo1";
 createNode displayLayer -n "GeometryLayer";
 	rename -uid "709A960B-4D14-7195-3A19-D1AD2B5BC4CD";
 	setAttr ".dt" 2;
-	setAttr ".v" no;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 1;
 createNode phong -n "Material1";
@@ -29804,6 +30129,7 @@ createNode makeNurbCircle -n "makeNurbCircle6";
 	setAttr ".r" 2;
 createNode displayLayer -n "JointsLayer";
 	rename -uid "B48663F6-4782-80AC-3ABB-929B5B01876C";
+	setAttr ".v" no;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 2;
 createNode displayLayer -n "ControlsLayer";
@@ -30271,57 +30597,103 @@ createNode dagPose -n "bindPose2";
 	setAttr ".bp" yes;
 createNode reverse -n "Spine_Middle_Follow_Switch_MD";
 	rename -uid "2AB5876E-4D08-7227-3A0D-FD8BD162C111";
+createNode makeNurbCircle -n "makeNurbCircle45";
+	rename -uid "E158D1A8-4C42-5CE5-A98E-E4AC4FA1D342";
+	setAttr ".r" 1;
+createNode transformGeometry -n "transformGeometry44";
+	rename -uid "E4A50E42-4B08-4C4B-6A99-70B9F44F7E40";
+	setAttr ".txf" -type "matrix" 0 0 -1 0 0 1 0 0 1 0 0 0 0 0 0 1;
+createNode makeNurbCircle -n "makeNurbCircle46";
+	rename -uid "FE8F6378-4AFD-33C0-DE41-71ACBE7F42EF";
+	setAttr ".r" 1;
+createNode transformGeometry -n "transformGeometry45";
+	rename -uid "3C271913-41BE-0838-D80F-BA9FB5C48117";
+	setAttr ".txf" -type "matrix" 0 0 -1 0 0 1 0 0 1 0 0 0 0 0 0 1;
+createNode makeNurbCircle -n "makeNurbCircle47";
+	rename -uid "C0BCDBCF-4073-A818-8A4C-6AAB68564554";
+	setAttr ".r" 1;
+createNode transformGeometry -n "transformGeometry46";
+	rename -uid "F0F6C588-4040-3A4D-CD58-129606778372";
+	setAttr ".txf" -type "matrix" 0 0 -1 0 0 1 0 0 1 0 0 0 0 0 0 1;
+createNode skinCluster -n "skinCluster3";
+	rename -uid "F469FF2B-4A40-23F7-710E-53819394E887";
+	setAttr -s 8 ".wl";
+	setAttr ".wl[0:7].w"
+		1 0 1
+		3 0 0.99941410805024078 1 0.00055987637533836722 2 2.6015574420873749e-05
+		3 0 0.83233648813451955 1 0.16441219670378782 2 0.0032513151616926496
+		3 0 0.0038880479636202027 1 0.9953439416199733 2 0.0007680104164064593
+		3 0 0.00076801019798629919 1 0.99534394350070576 2 0.0038880463013078069
+		3 0 0.003251312846185826 1 0.16441202941590427 2 0.83233665773790988
+		3 0 2.6015648074675346e-05 1 0.00055987808243512284 2 0.99941410626949023
+		1 2 1;
+	setAttr -s 3 ".pm";
+	setAttr ".pm[0]" -type "matrix" 2.2449391629855476e-17 -1.6918032669765817e-15 1 -0
+		 -0.66613331283407318 0.74583269540340136 1.2834629779804003e-15 0 -0.74583269540340147 -0.66613331283407307 -1.1463126391362409e-15 -0
+		 -18.495753201464655 -326.11026543290706 -5.6118544413786355e-13 1;
+	setAttr ".pm[1]" -type "matrix" -4.3898072067268127e-16 -1.5084985063315028e-15 1 -0
+		 -0.66613362453642622 0.74583241700931957 8.2203167955709036e-16 0 -0.74583241700931957 -0.66613362453642622 -1.329617926790653e-15 0
+		 -79.455616911694563 -326.11029921646059 -5.4256909540993668e-13 1;
+	setAttr ".pm[2]" -type "matrix" 2.2450098677373793e-17 -1.6918032575942636e-15 0.99999999999999978 -0
+		 -0.66613362453642611 0.74583241700931979 1.1355511214196756e-15 0 -0.74583241700931957 -0.66613362453642611 -1.3119212399030066e-15 0
+		 -140.41561691168209 -326.11032527019796 -6.2938256440072529e-13 1;
+	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr -s 3 ".ma";
+	setAttr -s 3 ".dpf[0:2]"  4 4 4;
+	setAttr -s 3 ".lw";
+	setAttr -s 3 ".lw";
+	setAttr ".mmi" yes;
+	setAttr ".mi" 5;
+	setAttr ".ucm" yes;
+	setAttr -s 3 ".ifcl";
+	setAttr -s 3 ".ifcl";
+createNode dagPose -n "bindPose3";
+	rename -uid "EC74F14A-44BB-EA8E-2B78-A988D90C3BB2";
+	setAttr -s 3 ".wm";
+	setAttr -s 3 ".xm";
+	setAttr ".xm[0]" -type "matrix" "xform" 0.99999999999999989 1 1 -1.665334517984645e-16
+		 -5.5511156917184438e-17 -6.8285698928693974e-08 0 -1.8932661725304278e-29 230.90306091309068
+		 -231.02764892578577 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.25207501815393307 0.66064982042129927 -0.25207501815393196 0.66064982042129883 1
+		 1 1 yes;
+	setAttr ".xm[1]" -type "matrix" "xform" 1 1 1 0 0 0 0 1.850924355482947e-14
+		 190.29557459308035 -276.4936104219351 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.25207517876155583 0.66064975914044677 -0.25207517876155494 0.6606497591404461 1
+		 1 1 yes;
+	setAttr ".xm[2]" -type "matrix" "xform" 1 1 1 1.1102230246251565e-16 1.6653345369377351e-16
+		 -2.2204460492503136e-16 0 3.701848710965875e-14 149.68808827307004 -321.95957191808441 0
+		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.25207517876155594 0.66064975914044677 -0.25207517876155483 0.66064975914044632 1
+		 1 1 yes;
+	setAttr -s 3 ".m";
+	setAttr -s 3 ".p";
+	setAttr ".bp" yes;
+createNode reverse -n "Tail_Spline_Middle_Follow_Switch_Reverse";
+	rename -uid "F9B4BECD-4DF6-9558-01B2-7B8A62438D1A";
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
-	rename -uid "1101908A-414C-84DE-5A9F-F7A749E2A5C3";
+	rename -uid "54D4BD59-4F3B-DB36-B82A-85874D8C8F7F";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -840.47919148158815 -554.0407844228771 ;
-	setAttr ".tgi[0].vh" -type "double2" 763.72244419403671 248.90036952581846 ;
-	setAttr -s 15 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" -250.25210571289062;
-	setAttr ".tgi[0].ni[0].y" 208.57142639160156;
+	setAttr ".tgi[0].vl" -type "double2" -1415.5523258521437 -691.07635240294576 ;
+	setAttr ".tgi[0].vh" -type "double2" 188.64930982348142 111.86480154574984 ;
+	setAttr -s 7 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -696.644775390625;
+	setAttr ".tgi[0].ni[0].y" -483.09317016601562;
 	setAttr ".tgi[0].ni[0].nvs" 18306;
-	setAttr ".tgi[0].ni[1].x" 167.92414855957031;
-	setAttr ".tgi[0].ni[1].y" 93.858360290527344;
+	setAttr ".tgi[0].ni[1].x" -1134.7899169921875;
+	setAttr ".tgi[0].ni[1].y" 39.663856506347656;
 	setAttr ".tgi[0].ni[1].nvs" 18306;
-	setAttr ".tgi[0].ni[2].x" -640;
-	setAttr ".tgi[0].ni[2].y" -117.14286041259766;
+	setAttr ".tgi[0].ni[2].x" -551.4285888671875;
+	setAttr ".tgi[0].ni[2].y" -148.57142639160156;
 	setAttr ".tgi[0].ni[2].nvs" 18304;
-	setAttr ".tgi[0].ni[3].x" 261.42855834960938;
-	setAttr ".tgi[0].ni[3].y" -314.28570556640625;
+	setAttr ".tgi[0].ni[3].x" -551.4285888671875;
+	setAttr ".tgi[0].ni[3].y" -18.571428298950195;
 	setAttr ".tgi[0].ni[3].nvs" 18304;
-	setAttr ".tgi[0].ni[4].x" -131.42857360839844;
-	setAttr ".tgi[0].ni[4].y" -438.57144165039062;
+	setAttr ".tgi[0].ni[4].x" -540;
+	setAttr ".tgi[0].ni[4].y" -278.57144165039062;
 	setAttr ".tgi[0].ni[4].nvs" 18304;
-	setAttr ".tgi[0].ni[5].x" 512.85711669921875;
-	setAttr ".tgi[0].ni[5].y" -51.428569793701172;
+	setAttr ".tgi[0].ni[5].x" -85.714286804199219;
+	setAttr ".tgi[0].ni[5].y" -254.28572082519531;
 	setAttr ".tgi[0].ni[5].nvs" 18304;
-	setAttr ".tgi[0].ni[6].x" 514.28570556640625;
-	setAttr ".tgi[0].ni[6].y" -181.42857360839844;
+	setAttr ".tgi[0].ni[6].x" -1370;
+	setAttr ".tgi[0].ni[6].y" -254.28572082519531;
 	setAttr ".tgi[0].ni[6].nvs" 18304;
-	setAttr ".tgi[0].ni[7].x" -652.85711669921875;
-	setAttr ".tgi[0].ni[7].y" -271.42855834960938;
-	setAttr ".tgi[0].ni[7].nvs" 18304;
-	setAttr ".tgi[0].ni[8].x" -641.4285888671875;
-	setAttr ".tgi[0].ni[8].y" -401.42855834960938;
-	setAttr ".tgi[0].ni[8].nvs" 18304;
-	setAttr ".tgi[0].ni[9].x" -652.85711669921875;
-	setAttr ".tgi[0].ni[9].y" 167.14285278320312;
-	setAttr ".tgi[0].ni[9].nvs" 18304;
-	setAttr ".tgi[0].ni[10].x" -641.4285888671875;
-	setAttr ".tgi[0].ni[10].y" 37.142856597900391;
-	setAttr ".tgi[0].ni[10].nvs" 18304;
-	setAttr ".tgi[0].ni[11].x" -47.142856597900391;
-	setAttr ".tgi[0].ni[11].y" 5.7142858505249023;
-	setAttr ".tgi[0].ni[11].nvs" 18304;
-	setAttr ".tgi[0].ni[12].x" -37.142856597900391;
-	setAttr ".tgi[0].ni[12].y" -124.28571319580078;
-	setAttr ".tgi[0].ni[12].nvs" 18304;
-	setAttr ".tgi[0].ni[13].x" 472.85714721679688;
-	setAttr ".tgi[0].ni[13].y" 200;
-	setAttr ".tgi[0].ni[13].nvs" 18304;
-	setAttr ".tgi[0].ni[14].x" 482.85714721679688;
-	setAttr ".tgi[0].ni[14].y" 70;
-	setAttr ".tgi[0].ni[14].nvs" 18304;
 select -ne :time1;
 	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
@@ -30338,7 +30710,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 14 ".u";
+	setAttr -s 15 ".u";
 select -ne :defaultRenderingList1;
 select -ne :initialShadingGroup;
 	setAttr -s 5 ".dsm";
@@ -30537,7 +30909,7 @@ connectAttr "Tail_01_Jnt_IK.msg" "Tail_Spline_Handle.hsj";
 connectAttr "effector5.hp" "Tail_Spline_Handle.hee";
 connectAttr "ikSplineSolver.msg" "Tail_Spline_Handle.hsv";
 connectAttr "Tail_Spline_Base_CurveShape.ws" "Tail_Spline_Handle.ic";
-connectAttr "Transform_Ctrl.Tail_IKFK" "Tail_Spline_Base_Curve.v";
+connectAttr "skinCluster3.og[0]" "Tail_Spline_Base_CurveShape.cr";
 connectAttr "Trunk_01_Jnt_IK.msg" "Trunk_Spline_Handle.hsj";
 connectAttr "effector6.hp" "Trunk_Spline_Handle.hee";
 connectAttr "ikSplineSolver.msg" "Trunk_Spline_Handle.hsv";
@@ -30861,6 +31233,162 @@ connectAttr "Spine_Spline_Control_Joint_1.s" "Spine_Spline_Ctrl_Joint_1_scaleCon
 connectAttr "Spine_Spline_Control_Joint_1.pm" "Spine_Spline_Ctrl_Joint_1_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "Spine_Spline_Ctrl_Joint_1_scaleConstraint1.w0" "Spine_Spline_Ctrl_Joint_1_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_parentConstraint1.ctx" "Tail_Spline_Control_Joint_1.tx"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_parentConstraint1.cty" "Tail_Spline_Control_Joint_1.ty"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_parentConstraint1.ctz" "Tail_Spline_Control_Joint_1.tz"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_parentConstraint1.crx" "Tail_Spline_Control_Joint_1.rx"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_parentConstraint1.cry" "Tail_Spline_Control_Joint_1.ry"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_parentConstraint1.crz" "Tail_Spline_Control_Joint_1.rz"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_scaleConstraint1.csx" "Tail_Spline_Control_Joint_1.sx"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_scaleConstraint1.csy" "Tail_Spline_Control_Joint_1.sy"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_scaleConstraint1.csz" "Tail_Spline_Control_Joint_1.sz"
+		;
+connectAttr "Tail_Spline_Control_Joint_1.ro" "Tail_Spline_Control_Joint_1_parentConstraint1.cro"
+		;
+connectAttr "Tail_Spline_Control_Joint_1.pim" "Tail_Spline_Control_Joint_1_parentConstraint1.cpim"
+		;
+connectAttr "Tail_Spline_Control_Joint_1.rp" "Tail_Spline_Control_Joint_1_parentConstraint1.crp"
+		;
+connectAttr "Tail_Spline_Control_Joint_1.rpt" "Tail_Spline_Control_Joint_1_parentConstraint1.crt"
+		;
+connectAttr "Tail_Spline_Control_Joint_1.jo" "Tail_Spline_Control_Joint_1_parentConstraint1.cjo"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.t" "Tail_Spline_Control_Joint_1_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.rp" "Tail_Spline_Control_Joint_1_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.rpt" "Tail_Spline_Control_Joint_1_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.r" "Tail_Spline_Control_Joint_1_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.ro" "Tail_Spline_Control_Joint_1_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.s" "Tail_Spline_Control_Joint_1_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.pm" "Tail_Spline_Control_Joint_1_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_parentConstraint1.w0" "Tail_Spline_Control_Joint_1_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Tail_Spline_Control_Joint_1.pim" "Tail_Spline_Control_Joint_1_scaleConstraint1.cpim"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.s" "Tail_Spline_Control_Joint_1_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.pm" "Tail_Spline_Control_Joint_1_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_scaleConstraint1.w0" "Tail_Spline_Control_Joint_1_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_parentConstraint1.ctx" "Tail_Spline_Control_Joint_2.tx"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_parentConstraint1.cty" "Tail_Spline_Control_Joint_2.ty"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_parentConstraint1.ctz" "Tail_Spline_Control_Joint_2.tz"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_parentConstraint1.crx" "Tail_Spline_Control_Joint_2.rx"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_parentConstraint1.cry" "Tail_Spline_Control_Joint_2.ry"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_parentConstraint1.crz" "Tail_Spline_Control_Joint_2.rz"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_scaleConstraint1.csx" "Tail_Spline_Control_Joint_2.sx"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_scaleConstraint1.csy" "Tail_Spline_Control_Joint_2.sy"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_scaleConstraint1.csz" "Tail_Spline_Control_Joint_2.sz"
+		;
+connectAttr "Tail_Spline_Control_Joint_2.ro" "Tail_Spline_Control_Joint_2_parentConstraint1.cro"
+		;
+connectAttr "Tail_Spline_Control_Joint_2.pim" "Tail_Spline_Control_Joint_2_parentConstraint1.cpim"
+		;
+connectAttr "Tail_Spline_Control_Joint_2.rp" "Tail_Spline_Control_Joint_2_parentConstraint1.crp"
+		;
+connectAttr "Tail_Spline_Control_Joint_2.rpt" "Tail_Spline_Control_Joint_2_parentConstraint1.crt"
+		;
+connectAttr "Tail_Spline_Control_Joint_2.jo" "Tail_Spline_Control_Joint_2_parentConstraint1.cjo"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl.t" "Tail_Spline_Control_Joint_2_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl.rp" "Tail_Spline_Control_Joint_2_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl.rpt" "Tail_Spline_Control_Joint_2_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl.r" "Tail_Spline_Control_Joint_2_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl.ro" "Tail_Spline_Control_Joint_2_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl.s" "Tail_Spline_Control_Joint_2_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl.pm" "Tail_Spline_Control_Joint_2_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_parentConstraint1.w0" "Tail_Spline_Control_Joint_2_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Tail_Spline_Control_Joint_2.pim" "Tail_Spline_Control_Joint_2_scaleConstraint1.cpim"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl.s" "Tail_Spline_Control_Joint_2_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl.pm" "Tail_Spline_Control_Joint_2_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_scaleConstraint1.w0" "Tail_Spline_Control_Joint_2_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_parentConstraint1.ctx" "Tail_Spline_Control_Joint_3.tx"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_parentConstraint1.cty" "Tail_Spline_Control_Joint_3.ty"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_parentConstraint1.ctz" "Tail_Spline_Control_Joint_3.tz"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_parentConstraint1.crx" "Tail_Spline_Control_Joint_3.rx"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_parentConstraint1.cry" "Tail_Spline_Control_Joint_3.ry"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_parentConstraint1.crz" "Tail_Spline_Control_Joint_3.rz"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_scaleConstraint1.csx" "Tail_Spline_Control_Joint_3.sx"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_scaleConstraint1.csy" "Tail_Spline_Control_Joint_3.sy"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_scaleConstraint1.csz" "Tail_Spline_Control_Joint_3.sz"
+		;
+connectAttr "Tail_Spline_Control_Joint_3.ro" "Tail_Spline_Control_Joint_3_parentConstraint1.cro"
+		;
+connectAttr "Tail_Spline_Control_Joint_3.pim" "Tail_Spline_Control_Joint_3_parentConstraint1.cpim"
+		;
+connectAttr "Tail_Spline_Control_Joint_3.rp" "Tail_Spline_Control_Joint_3_parentConstraint1.crp"
+		;
+connectAttr "Tail_Spline_Control_Joint_3.rpt" "Tail_Spline_Control_Joint_3_parentConstraint1.crt"
+		;
+connectAttr "Tail_Spline_Control_Joint_3.jo" "Tail_Spline_Control_Joint_3_parentConstraint1.cjo"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.t" "Tail_Spline_Control_Joint_3_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.rp" "Tail_Spline_Control_Joint_3_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.rpt" "Tail_Spline_Control_Joint_3_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.r" "Tail_Spline_Control_Joint_3_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.ro" "Tail_Spline_Control_Joint_3_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.s" "Tail_Spline_Control_Joint_3_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.pm" "Tail_Spline_Control_Joint_3_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_parentConstraint1.w0" "Tail_Spline_Control_Joint_3_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Tail_Spline_Control_Joint_3.pim" "Tail_Spline_Control_Joint_3_scaleConstraint1.cpim"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.s" "Tail_Spline_Control_Joint_3_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.pm" "Tail_Spline_Control_Joint_3_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_scaleConstraint1.w0" "Tail_Spline_Control_Joint_3_scaleConstraint1.tg[0].tw"
 		;
 connectAttr "JointsLayer.di" "Skeleton.do";
 connectAttr "Snout_Tip_Jnt.s" "SnoutPinch_01_Jnt.is";
@@ -37798,6 +38326,167 @@ connectAttr "Tail_01_Jnt_FK_Ctrl.SubControlsVisible" "Tail_06_Jnt_Auto_FK_OFFSET
 		;
 connectAttr "Transform_Ctrl.Tail_IKFK" "Tail_06_Jnt_FK_Ctrl.v";
 connectAttr "transformGeometry25.og" "Tail_06_Jnt_FK_CtrlShape.cr";
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.ctx" "Tail_Spline_Control_Joint_1_Ctrl_Grp.tx"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.cty" "Tail_Spline_Control_Joint_1_Ctrl_Grp.ty"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.ctz" "Tail_Spline_Control_Joint_1_Ctrl_Grp.tz"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.crx" "Tail_Spline_Control_Joint_1_Ctrl_Grp.rx"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.cry" "Tail_Spline_Control_Joint_1_Ctrl_Grp.ry"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.crz" "Tail_Spline_Control_Joint_1_Ctrl_Grp.rz"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp_scaleConstraint1.csx" "Tail_Spline_Control_Joint_1_Ctrl_Grp.sx"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp_scaleConstraint1.csy" "Tail_Spline_Control_Joint_1_Ctrl_Grp.sy"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp_scaleConstraint1.csz" "Tail_Spline_Control_Joint_1_Ctrl_Grp.sz"
+		;
+connectAttr "transformGeometry44.og" "Tail_Spline_Control_Joint_1_CtrlShape.cr";
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp.ro" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.cro"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp.pim" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.cpim"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp.rp" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.crp"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp.rpt" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.crt"
+		;
+connectAttr "Pelvis_Jnt_Ctrl.t" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Pelvis_Jnt_Ctrl.rp" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Pelvis_Jnt_Ctrl.rpt" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Pelvis_Jnt_Ctrl.r" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Pelvis_Jnt_Ctrl.ro" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Pelvis_Jnt_Ctrl.s" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Pelvis_Jnt_Ctrl.pm" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.w0" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.FollowTranslate" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.w0"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp.ro" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.cro"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp.pim" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.cpim"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp.rp" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.crp"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp.rpt" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.crt"
+		;
+connectAttr "Pelvis_Jnt_Ctrl.t" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.tg[0].tt"
+		;
+connectAttr "Pelvis_Jnt_Ctrl.rp" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.tg[0].trp"
+		;
+connectAttr "Pelvis_Jnt_Ctrl.rpt" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.tg[0].trt"
+		;
+connectAttr "Pelvis_Jnt_Ctrl.r" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.tg[0].tr"
+		;
+connectAttr "Pelvis_Jnt_Ctrl.ro" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.tg[0].tro"
+		;
+connectAttr "Pelvis_Jnt_Ctrl.s" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.tg[0].ts"
+		;
+connectAttr "Pelvis_Jnt_Ctrl.pm" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.tg[0].tpm"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.w0" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.tg[0].tw"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.FollowRotate" "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.w0"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp.pim" "Tail_Spline_Control_Joint_1_Ctrl_Grp_scaleConstraint1.cpim"
+		;
+connectAttr "Pelvis_Jnt_Ctrl.s" "Tail_Spline_Control_Joint_1_Ctrl_Grp_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Pelvis_Jnt_Ctrl.pm" "Tail_Spline_Control_Joint_1_Ctrl_Grp_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp_scaleConstraint1.w0" "Tail_Spline_Control_Joint_1_Ctrl_Grp_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.ctx" "Tail_Spline_Control_Joint_2_Ctrl_Grp.tx"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.cty" "Tail_Spline_Control_Joint_2_Ctrl_Grp.ty"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.ctz" "Tail_Spline_Control_Joint_2_Ctrl_Grp.tz"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.crx" "Tail_Spline_Control_Joint_2_Ctrl_Grp.rx"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.cry" "Tail_Spline_Control_Joint_2_Ctrl_Grp.ry"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.crz" "Tail_Spline_Control_Joint_2_Ctrl_Grp.rz"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp_scaleConstraint1.csx" "Tail_Spline_Control_Joint_2_Ctrl_Grp.sx"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp_scaleConstraint1.csy" "Tail_Spline_Control_Joint_2_Ctrl_Grp.sy"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp_scaleConstraint1.csz" "Tail_Spline_Control_Joint_2_Ctrl_Grp.sz"
+		;
+connectAttr "transformGeometry45.og" "Tail_Spline_Control_Joint_2_CtrlShape.cr";
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp.ro" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.cro"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp.pim" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.cpim"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp.rp" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.crp"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp.rpt" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.crt"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.t" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.tg[0].tt"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.rp" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.tg[0].trp"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.rpt" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.tg[0].trt"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.r" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.tg[0].tr"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.ro" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.tg[0].tro"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.s" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.tg[0].ts"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.pm" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.w0" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.tg[0].tw"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.t" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.tg[1].tt"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.rp" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.tg[1].trp"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.rpt" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.tg[1].trt"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.r" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.tg[1].tr"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.ro" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.tg[1].tro"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.s" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.tg[1].ts"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.pm" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.tg[1].tpm"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.w1" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.tg[1].tw"
+		;
+connectAttr "Tail_Spline_Middle_Follow_Switch_Reverse.ox" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.w0"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl.FollowBaseTip" "Tail_Spline_Control_Joint_2_Ctrl_Grp_parentConstraint1.w1"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp.pim" "Tail_Spline_Control_Joint_2_Ctrl_Grp_scaleConstraint1.cpim"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.s" "Tail_Spline_Control_Joint_2_Ctrl_Grp_scaleConstraint1.tg[0].ts"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl.pm" "Tail_Spline_Control_Joint_2_Ctrl_Grp_scaleConstraint1.tg[0].tpm"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp_scaleConstraint1.w0" "Tail_Spline_Control_Joint_2_Ctrl_Grp_scaleConstraint1.tg[0].tw"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.s" "Tail_Spline_Control_Joint_2_Ctrl_Grp_scaleConstraint1.tg[1].ts"
+		;
+connectAttr "Tail_Spline_Control_Joint_3_Ctrl.pm" "Tail_Spline_Control_Joint_2_Ctrl_Grp_scaleConstraint1.tg[1].tpm"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl_Grp_scaleConstraint1.w1" "Tail_Spline_Control_Joint_2_Ctrl_Grp_scaleConstraint1.tg[1].tw"
+		;
+connectAttr "Tail_Spline_Middle_Follow_Switch_Reverse.ox" "Tail_Spline_Control_Joint_2_Ctrl_Grp_scaleConstraint1.w0"
+		;
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl.FollowBaseTip" "Tail_Spline_Control_Joint_2_Ctrl_Grp_scaleConstraint1.w1"
+		;
+connectAttr "transformGeometry46.og" "Tail_Spline_Control_Joint_3_CtrlShape.cr";
 connectAttr "Head_Ctrl_Grp_parentConstraint1.ctx" "Head_Ctrl_Grp.tx";
 connectAttr "Head_Ctrl_Grp_parentConstraint1.cty" "Head_Ctrl_Grp.ty";
 connectAttr "Head_Ctrl_Grp_parentConstraint1.ctz" "Head_Ctrl_Grp.tz";
@@ -39839,34 +40528,45 @@ connectAttr "Spine_Spline_Ctrl_Joint_2.bps" "bindPose2.wm[1]";
 connectAttr "Spine_Spline_Ctrl_Joint_3.bps" "bindPose2.wm[2]";
 connectAttr "Spine_Spline_Control_Joint_2.FollowHipShoulder" "Spine_Middle_Follow_Switch_MD.ix"
 		;
-connectAttr "Spine_Spline_Control_Joint_2.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+connectAttr "makeNurbCircle45.oc" "transformGeometry44.ig";
+connectAttr "makeNurbCircle46.oc" "transformGeometry45.ig";
+connectAttr "makeNurbCircle47.oc" "transformGeometry46.ig";
+connectAttr "Tail_Spline_Base_CurveShapeOrig.ws" "skinCluster3.ip[0].ig";
+connectAttr "Tail_Spline_Base_CurveShapeOrig.l" "skinCluster3.orggeom[0]";
+connectAttr "bindPose3.msg" "skinCluster3.bp";
+connectAttr "Tail_Spline_Control_Joint_1.wm" "skinCluster3.ma[0]";
+connectAttr "Tail_Spline_Control_Joint_2.wm" "skinCluster3.ma[1]";
+connectAttr "Tail_Spline_Control_Joint_3.wm" "skinCluster3.ma[2]";
+connectAttr "Tail_Spline_Control_Joint_1.liw" "skinCluster3.lw[0]";
+connectAttr "Tail_Spline_Control_Joint_2.liw" "skinCluster3.lw[1]";
+connectAttr "Tail_Spline_Control_Joint_3.liw" "skinCluster3.lw[2]";
+connectAttr "Tail_Spline_Control_Joint_1.obcc" "skinCluster3.ifcl[0]";
+connectAttr "Tail_Spline_Control_Joint_2.obcc" "skinCluster3.ifcl[1]";
+connectAttr "Tail_Spline_Control_Joint_3.obcc" "skinCluster3.ifcl[2]";
+connectAttr "Tail_Spline_Control_Joint_1.msg" "bindPose3.m[0]";
+connectAttr "Tail_Spline_Control_Joint_2.msg" "bindPose3.m[1]";
+connectAttr "Tail_Spline_Control_Joint_3.msg" "bindPose3.m[2]";
+connectAttr "bindPose3.w" "bindPose3.p[0]";
+connectAttr "bindPose3.w" "bindPose3.p[1]";
+connectAttr "bindPose3.w" "bindPose3.p[2]";
+connectAttr "Tail_Spline_Control_Joint_1.bps" "bindPose3.wm[0]";
+connectAttr "Tail_Spline_Control_Joint_2.bps" "bindPose3.wm[1]";
+connectAttr "Tail_Spline_Control_Joint_3.bps" "bindPose3.wm[2]";
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl.FollowBaseTip" "Tail_Spline_Middle_Follow_Switch_Reverse.ix"
 		;
-connectAttr "Spine_Middle_Follow_Switch_MD.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+connectAttr "Tail_Spline_Middle_Follow_Switch_Reverse.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
-connectAttr "Spine_Spline_Control_Joints.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+connectAttr "Tail_Spline_Control_Joint_2_Ctrl.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
-connectAttr "Spine_Spline_Ctrl_Joint_Ctrls.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
 		;
-connectAttr "Head.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn";
-connectAttr "Head_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp_parentConstraint2.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
 		;
-connectAttr "Head_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_Grp_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
-connectAttr "R_Ear_01_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+connectAttr "Tail_Spline_Control_Joints.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
-connectAttr "R_Ear_01_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
-		;
-connectAttr "R_Ear_02_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
-		;
-connectAttr "R_Ear_02_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
-		;
-connectAttr "L_Ear_01_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
-		;
-connectAttr "L_Ear_01_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
-		;
-connectAttr "L_Ear_02_Jnt_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
-		;
-connectAttr "L_Ear_02_Jnt_scaleConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
+connectAttr "Tail_Spline_Control_Joint_Controls.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
 		;
 connectAttr "ElephantFBXASC032BaseFBXASC032MeshFBXASC032RetoppoSG.pa" ":renderPartition.st"
 		 -na;
@@ -39908,6 +40608,8 @@ connectAttr "pasted__Trunk_Auto_FK_Segment_4_Switch_MD.msg" ":defaultRenderUtili
 		 -na;
 connectAttr "Spine_Middle_Follow_Switch_MD.msg" ":defaultRenderUtilityList1.u" -na
 		;
+connectAttr "Tail_Spline_Middle_Follow_Switch_Reverse.msg" ":defaultRenderUtilityList1.u"
+		 -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "MAIN_BODYShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "Bottom_TusksShape.iog" ":initialShadingGroup.dsm" -na;

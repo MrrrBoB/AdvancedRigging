@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Elephant Animate.ma
-//Last modified: Thu, Dec 07, 2023 11:25:08 AM
+//Last modified: Thu, Dec 07, 2023 12:06:33 PM
 //Codeset: 1252
 file -rdi 1 -ns "ElephantRig" -rfn "ElephantRigRN" -op "v=0;" -typ "mayaAscii"
 		 "C:/School/Spring23/AdvancedRigging/ADVRig/Maya/scenes/ElephantRig.ma";
@@ -15,17 +15,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202208031415-1dee56799d";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "6129CAD1-4AC4-30AA-AF64-F693AD850D40";
+fileInfo "UUID" "6BE720B3-4228-4611-FD92-A1B55275FC6B";
 createNode transform -s -n "persp";
 	rename -uid "1662F1BC-427D-404D-0B0D-2793403C0B6F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -636.01734092727543 557.67879056807783 -813.05429619338702 ;
-	setAttr ".r" -type "double3" -17.400000000022732 2376.3999999995226 0 ;
+	setAttr ".t" -type "double3" -745.78689088307055 137.37820636427986 230.24106076855696 ;
+	setAttr ".r" -type "double3" 2.3999999999994133 3173.1999999999712 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C32FD4C3-4584-F710-A141-F98F1B8E327D";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 1236.1468917484044;
+	setAttr ".coi" 858.11271814915403;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -95,21 +95,21 @@ createNode mesh -n "pPlaneShape1" -p "pPlane1";
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ndt" 0;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "1EA29E0F-401F-3FDD-DA0B-0596317219C5";
+	rename -uid "269BD27C-486B-A806-A6BB-70B9C58F5EEB";
 	setAttr -s 6 ".lnk";
 	setAttr -s 6 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "D96039F4-402E-4C96-9C8F-60BCE5CA77FD";
+	rename -uid "979F56F7-4A3C-C069-ACEE-22981179BE39";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "75F541CB-4806-3C3B-E1B6-A5911CDC4DDC";
+	rename -uid "E2284920-4691-2CA6-2700-56BD63C00DB3";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "94CB2DE6-417B-485D-3795-C4B51F0B98CC";
+	rename -uid "E952D043-4D12-1A6B-C39C-F6BA0178B92C";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "D4AFB202-4121-C46F-5695-DB9FB050E44E";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "5C74A0A5-44C8-802E-411C-8380C3EAA225";
+	rename -uid "6E5A238A-46A3-361E-5D01-50A2F3F2EE27";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "73831DED-4D85-4D84-6D74-DBA370676D6A";
 	setAttr ".g" yes;
@@ -131,7 +131,7 @@ createNode polyPlane -n "polyPlane1";
 	setAttr ".cuv" 2;
 createNode reference -n "ElephantRigRN";
 	rename -uid "04FC250C-4BBA-AAF6-5C87-C79567F6ADE5";
-	setAttr -s 64 ".phl";
+	setAttr -s 70 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -196,10 +196,16 @@ createNode reference -n "ElephantRigRN";
 	setAttr ".phl[62]" 0;
 	setAttr ".phl[63]" 0;
 	setAttr ".phl[64]" 0;
+	setAttr ".phl[65]" 0;
+	setAttr ".phl[66]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
+	setAttr ".phl[69]" 0;
+	setAttr ".phl[70]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"ElephantRigRN"
 		"ElephantRigRN" 0
-		"ElephantRigRN" 86
+		"ElephantRigRN" 97
 		2 "|ElephantRig:ELEPHANT|ElephantRig:Skeleton|ElephantRig:ROOT|ElephantRig:Cog_Jnt|ElephantRig:Spine_01_Jnt|ElephantRig:Spine_02_Jnt|ElephantRig:Spine_03_Jnt|ElephantRig:Spine_04_Jnt|ElephantRig:Spine_05_Jnt|ElephantRig:R_Scapula_Jnt" 
 		"translate" " -type \"double3\" 5.69664493227727675 -15.33097606924837741 41.95907279999991601"
 		
@@ -223,7 +229,9 @@ createNode reference -n "ElephantRigRN";
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Rear_Legs|ElephantRig:Right_Rear_Leg|ElephantRig:Right_Rear_Leg_IK|ElephantRig:R_Rear_Leg_01_Jnt_IK_Ctrl_Grp|ElephantRig:R_Rear_Leg_01_Jnt_IK_Ctrl" 
 		"FollowRotate" " -k 1 0"
-		2 "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Rear_Legs|ElephantRig:Pelvis_Jnt_Ctrl_Grp|ElephantRig:Pelvis_Jnt_Ctrl" 
+		2 "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_3_Grp|ElephantRig:Spine_Spline_Control_Joint_3" 
+		"Follow" " -k 1 2"
+		2 "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_1_Grp|ElephantRig:Spine_Spline_Control_Joint_1" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_1_Grp|ElephantRig:Spine_Spline_Control_Joint_1" 
 		"rotate" " -type \"double3\" 0 0 0"
@@ -233,6 +241,12 @@ createNode reference -n "ElephantRigRN";
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Tail|ElephantRig:Tail_Spline_Control_Joint_Controls|ElephantRig:Tail_Spline_Control_Joint_3_Ctrl_Grp|ElephantRig:Tail_Spline_Control_Joint_3_Ctrl" 
 		"Follow" " -k 1 3"
+		2 "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Tail|ElephantRig:Tail_Spline_Control_Joint_Controls|ElephantRig:Tail_Spline_Control_Joint_3_Ctrl_Grp|ElephantRig:Tail_Spline_Control_Joint_3_Ctrl" 
+		"DynamicsEnabled" " -k 1 1"
+		2 "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Tail|ElephantRig:Tail_Spline_Control_Joint_Controls|ElephantRig:Tail_Spline_Control_Joint_3_Ctrl_Grp|ElephantRig:Tail_Spline_Control_Joint_3_Ctrl" 
+		"Simulation" " -k 1 1"
+		2 "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Tail|ElephantRig:Tail_Spline_Control_Joint_Controls|ElephantRig:Tail_Spline_Control_Joint_3_Ctrl_Grp|ElephantRig:Tail_Spline_Control_Joint_3_Ctrl" 
+		"Drag" " -k 1 0"
 		2 "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:Trunk|ElephantRig:Trunk_IK_Spline_Ctrl_Jnt_Ctrls|ElephantRig:Trunk_Spline_Control_Joint_3_Ctrl_Grp|ElephantRig:Trunk_Spline_Control_Joint_3_Ctrl" 
 		"Dynamics" " -k 1 0"
 		2 "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:Trunk|ElephantRig:Trunk_IK_Spline_Ctrl_Jnt_Ctrls|ElephantRig:Trunk_Spline_Control_Joint_3_Ctrl_Grp|ElephantRig:Trunk_Spline_Control_Joint_3_Ctrl" 
@@ -241,6 +255,7 @@ createNode reference -n "ElephantRigRN";
 		"EnableDynamics" " -k 1 0"
 		2 "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:Neck_Ctrl_Grp|ElephantRig:Neck_Ctrl" 
 		"FollowRotate" " -k 1 0"
+		2 "ElephantRig:GeometryLayer" "displayType" " 2"
 		2 "ElephantRig:GeometryLayer" "visibility" " 1"
 		2 "ElephantRig:JointsLayer" "visibility" " 0"
 		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Transform_Ctrl_Grp|ElephantRig:Transform_Ctrl.translateX" 
@@ -321,55 +336,67 @@ createNode reference -n "ElephantRigRN";
 		"ElephantRigRN.placeHolderList[38]" ""
 		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Rear_Legs|ElephantRig:Right_Rear_Leg|ElephantRig:Right_Rear_Leg_IK|ElephantRig:R_Rear_Leg_01_Jnt_IK_Ctrl_Grp|ElephantRig:R_Rear_Leg_01_Jnt_IK_Ctrl.translateZ" 
 		"ElephantRigRN.placeHolderList[39]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Rear_Legs|ElephantRig:Pelvis_Jnt_Ctrl_Grp|ElephantRig:Pelvis_Jnt_Ctrl.rotateX" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Rear_Legs|ElephantRig:Pelvis_Jnt_Ctrl_Grp|ElephantRig:Pelvis_Jnt_Ctrl.translateX" 
 		"ElephantRigRN.placeHolderList[40]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Rear_Legs|ElephantRig:Pelvis_Jnt_Ctrl_Grp|ElephantRig:Pelvis_Jnt_Ctrl.rotateY" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Rear_Legs|ElephantRig:Pelvis_Jnt_Ctrl_Grp|ElephantRig:Pelvis_Jnt_Ctrl.translateY" 
 		"ElephantRigRN.placeHolderList[41]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Rear_Legs|ElephantRig:Pelvis_Jnt_Ctrl_Grp|ElephantRig:Pelvis_Jnt_Ctrl.rotateZ" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Rear_Legs|ElephantRig:Pelvis_Jnt_Ctrl_Grp|ElephantRig:Pelvis_Jnt_Ctrl.translateZ" 
 		"ElephantRigRN.placeHolderList[42]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_3_Grp|ElephantRig:Spine_Spline_Control_Joint_3.rotateX" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Rear_Legs|ElephantRig:Pelvis_Jnt_Ctrl_Grp|ElephantRig:Pelvis_Jnt_Ctrl.rotateX" 
 		"ElephantRigRN.placeHolderList[43]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_3_Grp|ElephantRig:Spine_Spline_Control_Joint_3.rotateY" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Rear_Legs|ElephantRig:Pelvis_Jnt_Ctrl_Grp|ElephantRig:Pelvis_Jnt_Ctrl.rotateY" 
 		"ElephantRigRN.placeHolderList[44]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_3_Grp|ElephantRig:Spine_Spline_Control_Joint_3.rotateZ" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Rear_Legs|ElephantRig:Pelvis_Jnt_Ctrl_Grp|ElephantRig:Pelvis_Jnt_Ctrl.rotateZ" 
 		"ElephantRigRN.placeHolderList[45]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_3_Grp|ElephantRig:Spine_Spline_Control_Joint_3.translateX" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_3_Grp|ElephantRig:Spine_Spline_Control_Joint_3.rotateX" 
 		"ElephantRigRN.placeHolderList[46]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_3_Grp|ElephantRig:Spine_Spline_Control_Joint_3.translateY" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_3_Grp|ElephantRig:Spine_Spline_Control_Joint_3.rotateY" 
 		"ElephantRigRN.placeHolderList[47]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_3_Grp|ElephantRig:Spine_Spline_Control_Joint_3.translateZ" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_3_Grp|ElephantRig:Spine_Spline_Control_Joint_3.rotateZ" 
 		"ElephantRigRN.placeHolderList[48]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_2_Grp|ElephantRig:Spine_Spline_Control_Joint_2.translateX" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_3_Grp|ElephantRig:Spine_Spline_Control_Joint_3.translateX" 
 		"ElephantRigRN.placeHolderList[49]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_2_Grp|ElephantRig:Spine_Spline_Control_Joint_2.translateY" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_3_Grp|ElephantRig:Spine_Spline_Control_Joint_3.translateY" 
 		"ElephantRigRN.placeHolderList[50]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_2_Grp|ElephantRig:Spine_Spline_Control_Joint_2.translateZ" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_3_Grp|ElephantRig:Spine_Spline_Control_Joint_3.translateZ" 
 		"ElephantRigRN.placeHolderList[51]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:Head_Ctrl_Grp|ElephantRig:Head_Ctrl.rotateY" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_2_Grp|ElephantRig:Spine_Spline_Control_Joint_2.translateX" 
 		"ElephantRigRN.placeHolderList[52]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:Head_Ctrl_Grp|ElephantRig:Head_Ctrl.rotateX" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_2_Grp|ElephantRig:Spine_Spline_Control_Joint_2.translateY" 
 		"ElephantRigRN.placeHolderList[53]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:Head_Ctrl_Grp|ElephantRig:Head_Ctrl.rotateZ" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Spine|ElephantRig:Spine_Spline_Ctrl_Joint_Ctrls|ElephantRig:Spine_Spline_Control_Joint_2_Grp|ElephantRig:Spine_Spline_Control_Joint_2.translateZ" 
 		"ElephantRigRN.placeHolderList[54]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:L_Ear_Control_1_Grp|ElephantRig:L_Ear_Control_1.rotateX" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Tail|ElephantRig:Tail_Spline_Control_Joint_Controls|ElephantRig:Tail_Spline_Control_Joint_1_Ctrl_Grp|ElephantRig:Tail_Spline_Control_Joint_1_Ctrl.rotateZ" 
 		"ElephantRigRN.placeHolderList[55]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:L_Ear_Control_1_Grp|ElephantRig:L_Ear_Control_1.rotateY" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Tail|ElephantRig:Tail_Spline_Control_Joint_Controls|ElephantRig:Tail_Spline_Control_Joint_1_Ctrl_Grp|ElephantRig:Tail_Spline_Control_Joint_1_Ctrl.rotateX" 
 		"ElephantRigRN.placeHolderList[56]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:L_Ear_Control_1_Grp|ElephantRig:L_Ear_Control_1.rotateZ" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Tail|ElephantRig:Tail_Spline_Control_Joint_Controls|ElephantRig:Tail_Spline_Control_Joint_1_Ctrl_Grp|ElephantRig:Tail_Spline_Control_Joint_1_Ctrl.rotateY" 
 		"ElephantRigRN.placeHolderList[57]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:Neck_Ctrl_Grp|ElephantRig:Neck_Ctrl.rotateX" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:Head_Ctrl_Grp|ElephantRig:Head_Ctrl.rotateY" 
 		"ElephantRigRN.placeHolderList[58]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:Neck_Ctrl_Grp|ElephantRig:Neck_Ctrl.rotateY" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:Head_Ctrl_Grp|ElephantRig:Head_Ctrl.rotateX" 
 		"ElephantRigRN.placeHolderList[59]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:Neck_Ctrl_Grp|ElephantRig:Neck_Ctrl.rotateZ" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:Head_Ctrl_Grp|ElephantRig:Head_Ctrl.rotateZ" 
 		"ElephantRigRN.placeHolderList[60]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:R_Ear_Control_1_Grp|ElephantRig:R_Ear_Control_1.rotateX" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:L_Ear_Control_1_Grp|ElephantRig:L_Ear_Control_1.rotateX" 
 		"ElephantRigRN.placeHolderList[61]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:R_Ear_Control_1_Grp|ElephantRig:R_Ear_Control_1.rotateY" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:L_Ear_Control_1_Grp|ElephantRig:L_Ear_Control_1.rotateY" 
 		"ElephantRigRN.placeHolderList[62]" ""
-		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:R_Ear_Control_1_Grp|ElephantRig:R_Ear_Control_1.rotateZ" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:L_Ear_Control_1_Grp|ElephantRig:L_Ear_Control_1.rotateZ" 
 		"ElephantRigRN.placeHolderList[63]" ""
-		5 3 "ElephantRigRN" "ElephantRig:GeometryLayer.drawInfo" "ElephantRigRN.placeHolderList[64]" 
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:Neck_Ctrl_Grp|ElephantRig:Neck_Ctrl.rotateX" 
+		"ElephantRigRN.placeHolderList[64]" ""
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:Neck_Ctrl_Grp|ElephantRig:Neck_Ctrl.rotateY" 
+		"ElephantRigRN.placeHolderList[65]" ""
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:Neck_Ctrl_Grp|ElephantRig:Neck_Ctrl.rotateZ" 
+		"ElephantRigRN.placeHolderList[66]" ""
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:R_Ear_Control_1_Grp|ElephantRig:R_Ear_Control_1.rotateX" 
+		"ElephantRigRN.placeHolderList[67]" ""
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:R_Ear_Control_1_Grp|ElephantRig:R_Ear_Control_1.rotateY" 
+		"ElephantRigRN.placeHolderList[68]" ""
+		5 4 "ElephantRigRN" "|ElephantRig:ELEPHANT|ElephantRig:Controls|ElephantRig:Head|ElephantRig:R_Ear_Control_1_Grp|ElephantRig:R_Ear_Control_1.rotateZ" 
+		"ElephantRigRN.placeHolderList[69]" ""
+		5 3 "ElephantRigRN" "ElephantRig:GeometryLayer.drawInfo" "ElephantRigRN.placeHolderList[70]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -451,7 +478,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n"
 		+ "            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n"
 		+ "            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n"
-		+ "            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2630\n            -height 1143\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
+		+ "            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2624\n            -height 1144\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n"
 		+ "            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n"
 		+ "            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n"
@@ -477,8 +504,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
 		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
 		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2630\\n    -height 1143\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2630\\n    -height 1143\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2624\\n    -height 1144\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2624\\n    -height 1144\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 0.00017657299999999996 -size 0.000423776 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -576,21 +603,6 @@ createNode animCurveTL -n "L_Front_Leg_01_Jnt_IK_Ctrl_translateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
 	setAttr -s 4 ".ktv[0:3]"  0 0 12 0 24 0 48 0;
-createNode animCurveTA -n "Pelvis_Jnt_Ctrl_rotateX";
-	rename -uid "C7C15712-411C-8798-3007-A6A5CFC9AB18";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 12 0 24 0 36 0 48 0;
-createNode animCurveTA -n "Pelvis_Jnt_Ctrl_rotateY";
-	rename -uid "B16C57E5-4200-30AE-1B2A-63B0D77E1296";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 12 -10 24 0 36 10 48 0;
-createNode animCurveTA -n "Pelvis_Jnt_Ctrl_rotateZ";
-	rename -uid "9CE1D944-4ED4-7998-749C-A491FC82421A";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 12 0 24 0 36 0 48 0;
 createNode animCurveTA -n "Spine_Spline_Control_Joint_3_rotateX";
 	rename -uid "BCD30577-4372-6660-34CB-91BC3AA9682A";
 	setAttr ".tan" 9;
@@ -843,9 +855,54 @@ createNode animCurveTL -n "Spine_Spline_Control_Joint_3_translateZ";
 	setAttr -s 5 ".kiy[0:4]"  0 0 0 0 0;
 	setAttr -s 5 ".kox[0:4]"  1 1 1 1 1;
 	setAttr -s 5 ".koy[0:4]"  0 0 0 0 0;
+createNode animCurveTA -n "Tail_Spline_Control_Joint_1_Ctrl_rotateX";
+	rename -uid "E00C9CB8-4477-46B2-323F-D8A033D168F3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  20 0;
+createNode animCurveTA -n "Tail_Spline_Control_Joint_1_Ctrl_rotateY";
+	rename -uid "9891C9CC-408D-1DCD-DAB4-2C95FA7FD409";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  20 0;
+createNode animCurveTA -n "Tail_Spline_Control_Joint_1_Ctrl_rotateZ";
+	rename -uid "A7114B72-4B77-D00E-344A-CEB91C57CA7F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  20 -44.940326302020686;
+createNode animCurveTL -n "Pelvis_Jnt_Ctrl_translateX";
+	rename -uid "5C7A40D4-4CB0-7312-F22C-B8ACAE2E8064";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 12 0 24 0 36 0 48 0;
+createNode animCurveTL -n "Pelvis_Jnt_Ctrl_translateZ";
+	rename -uid "88908437-4FDD-375A-4153-0D86CF2474B5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 0 12 0 24 0 36 0 48 0;
+createNode animCurveTA -n "Pelvis_Jnt_Ctrl_rotateX";
+	rename -uid "E30E29EE-433C-F291-51F5-14884DD526D1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  0 0 12 0 36 0 48 0;
+createNode animCurveTA -n "Pelvis_Jnt_Ctrl_rotateY";
+	rename -uid "780D74C1-41F8-1FE5-AA18-1AA0B97A3A74";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  0 0 12 -5 36 5 48 0;
+createNode animCurveTA -n "Pelvis_Jnt_Ctrl_rotateZ";
+	rename -uid "EFB5CE58-4B5E-7D3B-FCC4-3FB73D7BA477";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  0 0 12 5 36 -5 48 0;
+createNode animCurveTL -n "Pelvis_Jnt_Ctrl_translateY";
+	rename -uid "F14E3CCF-410C-D04D-69D4-7A968B384637";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 5 ".ktv[0:4]"  0 10 12 0 24 10 36 0 48 10;
 select -ne :time1;
-	setAttr ".o" 5;
-	setAttr ".unw" 5;
+	setAttr ".o" 35;
+	setAttr ".unw" 35;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -928,31 +985,40 @@ connectAttr "R_Rear_Foot_IK_Ctrl_rotateZ.o" "ElephantRigRN.phl[36]";
 connectAttr "R_Rear_Leg_01_Jnt_IK_Ctrl_translateX.o" "ElephantRigRN.phl[37]";
 connectAttr "R_Rear_Leg_01_Jnt_IK_Ctrl_translateY.o" "ElephantRigRN.phl[38]";
 connectAttr "R_Rear_Leg_01_Jnt_IK_Ctrl_translateZ.o" "ElephantRigRN.phl[39]";
-connectAttr "Pelvis_Jnt_Ctrl_rotateX.o" "ElephantRigRN.phl[40]";
-connectAttr "Pelvis_Jnt_Ctrl_rotateY.o" "ElephantRigRN.phl[41]";
-connectAttr "Pelvis_Jnt_Ctrl_rotateZ.o" "ElephantRigRN.phl[42]";
-connectAttr "Spine_Spline_Control_Joint_3_rotateX.o" "ElephantRigRN.phl[43]";
-connectAttr "Spine_Spline_Control_Joint_3_rotateY.o" "ElephantRigRN.phl[44]";
-connectAttr "Spine_Spline_Control_Joint_3_rotateZ.o" "ElephantRigRN.phl[45]";
-connectAttr "Spine_Spline_Control_Joint_3_translateX.o" "ElephantRigRN.phl[46]";
-connectAttr "Spine_Spline_Control_Joint_3_translateY.o" "ElephantRigRN.phl[47]";
-connectAttr "Spine_Spline_Control_Joint_3_translateZ.o" "ElephantRigRN.phl[48]";
-connectAttr "Spine_Spline_Control_Joint_2_translateX.o" "ElephantRigRN.phl[49]";
-connectAttr "Spine_Spline_Control_Joint_2_translateY.o" "ElephantRigRN.phl[50]";
-connectAttr "Spine_Spline_Control_Joint_2_translateZ.o" "ElephantRigRN.phl[51]";
-connectAttr "Head_Ctrl_rotateY.o" "ElephantRigRN.phl[52]";
-connectAttr "Head_Ctrl_rotateX.o" "ElephantRigRN.phl[53]";
-connectAttr "Head_Ctrl_rotateZ.o" "ElephantRigRN.phl[54]";
-connectAttr "L_Ear_Control_1_rotateX.o" "ElephantRigRN.phl[55]";
-connectAttr "L_Ear_Control_1_rotateY.o" "ElephantRigRN.phl[56]";
-connectAttr "L_Ear_Control_1_rotateZ.o" "ElephantRigRN.phl[57]";
-connectAttr "Neck_Ctrl_rotateX.o" "ElephantRigRN.phl[58]";
-connectAttr "Neck_Ctrl_rotateY.o" "ElephantRigRN.phl[59]";
-connectAttr "Neck_Ctrl_rotateZ.o" "ElephantRigRN.phl[60]";
-connectAttr "R_Ear_Control_1_rotateX.o" "ElephantRigRN.phl[61]";
-connectAttr "R_Ear_Control_1_rotateY.o" "ElephantRigRN.phl[62]";
-connectAttr "R_Ear_Control_1_rotateZ.o" "ElephantRigRN.phl[63]";
-connectAttr "ElephantRigRN.phl[64]" "pPlane1.do";
+connectAttr "Pelvis_Jnt_Ctrl_translateX.o" "ElephantRigRN.phl[40]";
+connectAttr "Pelvis_Jnt_Ctrl_translateY.o" "ElephantRigRN.phl[41]";
+connectAttr "Pelvis_Jnt_Ctrl_translateZ.o" "ElephantRigRN.phl[42]";
+connectAttr "Pelvis_Jnt_Ctrl_rotateX.o" "ElephantRigRN.phl[43]";
+connectAttr "Pelvis_Jnt_Ctrl_rotateY.o" "ElephantRigRN.phl[44]";
+connectAttr "Pelvis_Jnt_Ctrl_rotateZ.o" "ElephantRigRN.phl[45]";
+connectAttr "Spine_Spline_Control_Joint_3_rotateX.o" "ElephantRigRN.phl[46]";
+connectAttr "Spine_Spline_Control_Joint_3_rotateY.o" "ElephantRigRN.phl[47]";
+connectAttr "Spine_Spline_Control_Joint_3_rotateZ.o" "ElephantRigRN.phl[48]";
+connectAttr "Spine_Spline_Control_Joint_3_translateX.o" "ElephantRigRN.phl[49]";
+connectAttr "Spine_Spline_Control_Joint_3_translateY.o" "ElephantRigRN.phl[50]";
+connectAttr "Spine_Spline_Control_Joint_3_translateZ.o" "ElephantRigRN.phl[51]";
+connectAttr "Spine_Spline_Control_Joint_2_translateX.o" "ElephantRigRN.phl[52]";
+connectAttr "Spine_Spline_Control_Joint_2_translateY.o" "ElephantRigRN.phl[53]";
+connectAttr "Spine_Spline_Control_Joint_2_translateZ.o" "ElephantRigRN.phl[54]";
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_rotateZ.o" "ElephantRigRN.phl[55]"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_rotateX.o" "ElephantRigRN.phl[56]"
+		;
+connectAttr "Tail_Spline_Control_Joint_1_Ctrl_rotateY.o" "ElephantRigRN.phl[57]"
+		;
+connectAttr "Head_Ctrl_rotateY.o" "ElephantRigRN.phl[58]";
+connectAttr "Head_Ctrl_rotateX.o" "ElephantRigRN.phl[59]";
+connectAttr "Head_Ctrl_rotateZ.o" "ElephantRigRN.phl[60]";
+connectAttr "L_Ear_Control_1_rotateX.o" "ElephantRigRN.phl[61]";
+connectAttr "L_Ear_Control_1_rotateY.o" "ElephantRigRN.phl[62]";
+connectAttr "L_Ear_Control_1_rotateZ.o" "ElephantRigRN.phl[63]";
+connectAttr "Neck_Ctrl_rotateX.o" "ElephantRigRN.phl[64]";
+connectAttr "Neck_Ctrl_rotateY.o" "ElephantRigRN.phl[65]";
+connectAttr "Neck_Ctrl_rotateZ.o" "ElephantRigRN.phl[66]";
+connectAttr "R_Ear_Control_1_rotateX.o" "ElephantRigRN.phl[67]";
+connectAttr "R_Ear_Control_1_rotateY.o" "ElephantRigRN.phl[68]";
+connectAttr "R_Ear_Control_1_rotateZ.o" "ElephantRigRN.phl[69]";
+connectAttr "ElephantRigRN.phl[70]" "pPlane1.do";
 connectAttr "polyPlane1.out" "pPlaneShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";

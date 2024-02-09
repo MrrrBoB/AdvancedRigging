@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Lara Jump Gap.ma
-//Last modified: Thu, Feb 08, 2024 05:31:02 PM
+//Last modified: Thu, Feb 08, 2024 09:50:01 PM
 //Codeset: 1252
 file -rdi 1 -ns "LaraCroftAdvanced_Rig" -rfn "LaraCroftAdvanced_RigRN" -op "v=0;"
 		 -typ "mayaAscii" "F:/School/AdvancedRigging/ADVRig/scenes/Lara Redo/LaraCroftAdvanced Rig.ma";
@@ -9,27 +9,28 @@ file -r -ns "LaraCroftAdvanced_Rig" -dr 1 -rfn "LaraCroftAdvanced_RigRN" -op "v=
 requires maya "2023";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.2.1.1";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "8A3085F3-467B-0CCC-035E-B2B494B33892";
+fileInfo "UUID" "B5C9B67B-4205-E6AF-2DE3-44AD248968A3";
 createNode transform -s -n "persp";
 	rename -uid "631384E7-4D6B-6245-254A-8096A87DF85A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -602.47116498695289 182.00985640322835 242.32511081292557 ;
-	setAttr ".r" -type "double3" 0.8616472470261467 1365.4000000002129 1.8713998143787957e-16 ;
+	setAttr ".t" -type "double3" -266.74723593196831 -9.444905674684275 1183.2386739473816 ;
+	setAttr ".r" -type "double3" 6.2616472518656856 1055.399999999745 -2.1862821506309553e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "5B78B680-4E40-714E-8D4B-CCA7155F0964";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 662.70826274846945;
+	setAttr ".coi" 895.54994807802507;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -3.2751579226442118e-15 215.97119875714185 61.31097440005297 ;
+	setAttr ".tp" -type "double3" 25.954555918094943 264.17197261574142 231.95952915038913 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "F532B8C8-4B5F-ACE8-A9DB-BDB9ED59818B";
@@ -154,7 +155,6 @@ createNode mesh -n "pCubeShape2" -p "pCube2";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube3";
 	rename -uid "BF8BD0F7-4CAA-DAF5-B752-C2BEAA7E1627";
-	setAttr ".t" -type "double3" 0 613.0377611049264 49.312225965385849 ;
 	setAttr ".s" -type "double3" 287.91853713663841 287.91853713663841 287.91853713663841 ;
 createNode mesh -n "pCubeShape3" -p "pCube3";
 	rename -uid "D49FC8C2-463C-4B9A-14C8-389776523DE2";
@@ -178,16 +178,16 @@ createNode locator -n "locatorShape1" -p "locator1";
 	rename -uid "F7855D6E-424B-BE84-7608-A1BDAAAD775B";
 	setAttr -k off ".v";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9A09E415-41A7-B21D-6B57-62A27D3D295F";
+	rename -uid "50FF982D-4C31-1814-3322-9B9A1CB5AEE7";
 	setAttr -s 101 ".lnk";
 	setAttr -s 101 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "C5804069-43CA-C74C-B3CB-2FB69768C081";
+	rename -uid "36284A51-4AE4-2BFF-C15D-AF88A372C526";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "8887A151-42F0-3E7D-C090-B1AAFDB3E5F5";
+	rename -uid "F9C43A99-4B02-BA91-DB08-A4A440749C81";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "C02AFC87-4DD9-6A0E-0555-7B88F7500A72";
+	rename -uid "9263A5B6-4971-A09D-E833-8D881C60D9FD";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
@@ -195,7 +195,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "7E0DA835-421A-E10C-F0AF-459D2B45892E";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "548619F3-43BA-4E7A-3090-198CBFCEBFCD";
+	rename -uid "BF13C795-4C22-A699-692F-CE9D1EBA5307";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "BED08C1B-4DA0-FB38-99A8-8EA7298A6CE7";
 	setAttr ".g" yes;
@@ -215,7 +215,7 @@ createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	setAttr ".ai_translator" -type "string" "maya";
 createNode reference -n "LaraCroftAdvanced_RigRN";
 	rename -uid "1B82FCD5-4985-9F37-8470-9B97E319FD7C";
-	setAttr -s 730 ".phl";
+	setAttr -s 754 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -946,31 +946,49 @@ createNode reference -n "LaraCroftAdvanced_RigRN";
 	setAttr ".phl[728]" 0;
 	setAttr ".phl[729]" 0;
 	setAttr ".phl[730]" 0;
+	setAttr ".phl[731]" 0;
+	setAttr ".phl[732]" 0;
+	setAttr ".phl[733]" 0;
+	setAttr ".phl[734]" 0;
+	setAttr ".phl[735]" 0;
+	setAttr ".phl[736]" 0;
+	setAttr ".phl[737]" 0;
+	setAttr ".phl[738]" 0;
+	setAttr ".phl[739]" 0;
+	setAttr ".phl[740]" 0;
+	setAttr ".phl[741]" 0;
+	setAttr ".phl[742]" 0;
+	setAttr ".phl[743]" 0;
+	setAttr ".phl[744]" 0;
+	setAttr ".phl[745]" 0;
+	setAttr ".phl[746]" 0;
+	setAttr ".phl[747]" 0;
+	setAttr ".phl[748]" 0;
+	setAttr ".phl[749]" 0;
+	setAttr ".phl[750]" 0;
+	setAttr ".phl[751]" 0;
+	setAttr ".phl[752]" 0;
+	setAttr ".phl[753]" 0;
+	setAttr ".phl[754]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"LaraCroftAdvanced_RigRN"
 		"LaraCroftAdvanced_RigRN" 2
 		2 "|LaraCroftAdvanced_Rig:aiSkyDomeLight1" "visibility" " 0"
 		2 "|LaraCroftAdvanced_Rig:aiSkyDomeLight1|LaraCroftAdvanced_Rig:aiSkyDomeLightShape1" 
 		"camera" " 1"
-		"LaraCroftAdvanced_RigRN" 759
+		"LaraCroftAdvanced_RigRN" 777
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Deformers" "visibility" 
 		" 0"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Transform_Control" 
 		"Left_Leg_IKFK" " -k 1"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Transform_Control" 
 		"Right_Leg_IKFK" " -k 1"
-		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Arm_Ctrls|LaraCroftAdvanced_Rig:L_Arm_IK_Ctrls|LaraCroftAdvanced_Rig:L_Hand_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Hand_IK_Ctrl" 
-		"Follow" " -k 1"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Arm_Ctrls|LaraCroftAdvanced_Rig:L_Arm_IK_Ctrls|LaraCroftAdvanced_Rig:L_Arm_PV_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Arm_PV_OFFSET|LaraCroftAdvanced_Rig:L_Arm_PV_Ctrl" 
 		"Follow" " -k 1 4"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Arm_Ctrls|LaraCroftAdvanced_Rig:R_Arm_IK_Ctrls|LaraCroftAdvanced_Rig:R_Hand_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hand_IK_Ctrl" 
 		"scale" " -type \"double3\" 1 1 1"
-		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Arm_Ctrls|LaraCroftAdvanced_Rig:R_Arm_IK_Ctrls|LaraCroftAdvanced_Rig:R_Hand_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hand_IK_Ctrl" 
-		"Follow" " -k 1"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:L_Knee_PV_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Knee_PV_Ctrl_OFFSET|LaraCroftAdvanced_Rig:L_Knee_PV_Ctrl" 
 		"Follow" " -k 1 4"
-		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:L_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Foot_IK_Ctrl" 
-		"Follow" " -k 1"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:L_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Foot_IK_Ctrl" 
 		"Stretch" " -k 1 0"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_OFFSET|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl" 
@@ -983,8 +1001,6 @@ createNode reference -n "LaraCroftAdvanced_RigRN";
 		"ShowFingerControls" " -k 1 0"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Hide_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hand_Finger_Hide_Ctrl" 
 		"ShowFingerControls" " -k 1 0"
-		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl" 
-		"Follow" " -k 1"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp_parentConstraint1" 
 		"Transform_ControlW1" " -k 1"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp_parentConstraint1" 
@@ -993,12 +1009,8 @@ createNode reference -n "LaraCroftAdvanced_RigRN";
 		"Simulation" " -k 1 0"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl" 
 		"scale" " -type \"double3\" 1.00000000000000044 1 1.00000000000000044"
-		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl" 
-		"Mount" " -k 1"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl" 
 		"scale" " -type \"double3\" 0.99999999999999989 0.99999999999999967 1"
-		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl" 
-		"Mount" " -k 1"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Geo_Grp|LaraCroftAdvanced_Rig:QuiverStrap" 
 		"visibility" " 0"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Geo_Grp|LaraCroftAdvanced_Rig:Quiver" 
@@ -1321,1152 +1333,1200 @@ createNode reference -n "LaraCroftAdvanced_RigRN";
 		"LaraCroftAdvanced_RigRN.placeHolderList[156]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:L_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:L_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:L_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_reverse_foot_outer_Tilt_OFFSET|LaraCroftAdvanced_Rig:L_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:L_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:L_reverse_foot_inner_Tilt_OFFSET|LaraCroftAdvanced_Rig:L_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:L_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:L_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:L_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:L_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:L_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:L_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:L_reverse_foot_toe_tap_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Toe_Tap_OFFSET|LaraCroftAdvanced_Rig:L_reverse_foot_toeTap_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[157]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[158]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[159]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[160]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Knee_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[161]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Knee_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[162]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Knee_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Foot_FK_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[163]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Knee_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[164]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Knee_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[165]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Knee_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[166]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Knee_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[167]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Knee_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[168]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Knee_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[169]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[170]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[171]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[172]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[173]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[174]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Hip_FK_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[175]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Toe_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Toe_FK_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[176]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Toe_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Toe_FK_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[177]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Toe_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Toe_FK_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[178]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Toe_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Toe_FK_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[179]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Toe_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Toe_FK_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[180]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Leg_Ctrls|LaraCroftAdvanced_Rig:L_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:L_Toe_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Toe_FK_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[181]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_OFFSET|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[182]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_OFFSET|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[183]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_OFFSET|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[184]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_OFFSET|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[185]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_OFFSET|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[186]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_OFFSET|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_FK_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[187]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[188]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[189]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[190]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[191]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[192]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[193]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[194]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[195]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[196]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[197]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[198]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_FK_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[199]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Toe_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_FK_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[200]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Toe_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_FK_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[201]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Toe_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_FK_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[202]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Toe_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_FK_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[203]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Toe_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_FK_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[204]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_FK_Ctrls|LaraCroftAdvanced_Rig:R_Toe_FK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_FK_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[205]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_OFFSET|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[206]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_OFFSET|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[207]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_OFFSET|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[208]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_OFFSET|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[209]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_OFFSET|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[210]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl_OFFSET|LaraCroftAdvanced_Rig:R_Knee_PV_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[211]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[212]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[213]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[214]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[215]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[216]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hip_IK_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[217]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[218]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[219]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[220]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[221]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[222]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[223]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ball_Tilt_OFFSET|LaraCroftAdvanced_Rig:R_Ball_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[224]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ball_Tilt_OFFSET|LaraCroftAdvanced_Rig:R_Ball_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[225]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ball_Tilt_OFFSET|LaraCroftAdvanced_Rig:R_Ball_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[226]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ball_Tilt_OFFSET|LaraCroftAdvanced_Rig:R_Ball_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[227]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ball_Tilt_OFFSET|LaraCroftAdvanced_Rig:R_Ball_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[228]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ball_Tilt_OFFSET|LaraCroftAdvanced_Rig:R_Ball_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[229]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_tap_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Tap_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toeTap_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[230]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_tap_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Tap_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toeTap_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[231]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_tap_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Tap_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toeTap_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[232]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_tap_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Tap_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toeTap_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[233]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_tap_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Tap_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toeTap_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[234]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_tap_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Tap_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toeTap_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[235]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[236]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[237]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[238]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[239]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[240]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[241]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[242]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[243]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[244]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[245]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[246]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[247]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ball_Tilt_OFFSET|LaraCroftAdvanced_Rig:R_Ball_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[248]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ball_Tilt_OFFSET|LaraCroftAdvanced_Rig:R_Ball_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[249]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ball_Tilt_OFFSET|LaraCroftAdvanced_Rig:R_Ball_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[250]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ball_Tilt_OFFSET|LaraCroftAdvanced_Rig:R_Ball_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[251]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ball_Tilt_OFFSET|LaraCroftAdvanced_Rig:R_Ball_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[252]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ball_Tilt_OFFSET|LaraCroftAdvanced_Rig:R_Ball_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_ball_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[253]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_tap_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Tap_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toeTap_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[254]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_tap_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Tap_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toeTap_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[255]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_tap_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Tap_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toeTap_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[256]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_tap_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Tap_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toeTap_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[257]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_tap_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Tap_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toeTap_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[258]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl|LaraCroftAdvanced_Rig:R_Reverse_Foot_Hide_Grp|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Outer_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_outer_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_Tilt_Inner_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_inner_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Heel_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Heel_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_heel_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Pivot_OFFSET|LaraCroftAdvanced_Rig:R_Toe_Foot_Roll_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toe_Ctrl|LaraCroftAdvanced_Rig:R_reverse_foot_toe_tap_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Toe_Tap_OFFSET|LaraCroftAdvanced_Rig:R_reverse_foot_toeTap_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[259]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[260]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[261]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[262]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[263]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[264]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_01_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[265]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[266]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[267]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[268]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[269]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[270]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_03_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[271]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[272]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[273]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[274]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[275]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[276]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_Ctrls|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:L_Thumb_02_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[277]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[278]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[279]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[280]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[281]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[282]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_03_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[283]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[284]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[285]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[286]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[287]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[288]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_02_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[289]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[290]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[291]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[292]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[293]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[294]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_Ctrls|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pointer_01_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[295]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[296]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[297]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[298]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[299]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[300]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_03_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[301]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[302]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[303]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[304]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[305]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[306]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_02_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[307]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[308]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[309]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[310]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[311]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[312]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Middle_Ctrls|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Middle_01_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[313]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[314]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[315]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[316]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[317]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[318]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_03_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[319]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[320]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[321]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[322]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[323]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[324]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_02_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[325]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[326]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[327]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[328]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[329]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[330]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Ring_Ctrls|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Ring_01_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[331]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[332]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[333]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[334]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[335]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[336]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_03_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[337]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[338]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[339]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[340]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[341]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[342]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_02_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[343]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[344]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[345]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[346]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[347]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[348]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_Ctrls|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:L_Pinky_01_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[349]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[350]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[351]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[352]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[353]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[354]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_01_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[355]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[356]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[357]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[358]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[359]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[360]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_02_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[361]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[362]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[363]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[364]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[365]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[366]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_Ctrls|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl_Thumb_OFFSET|LaraCroftAdvanced_Rig:R_Thumb_03_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[367]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[368]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[369]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[370]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[371]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[372]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_01_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[373]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:group2|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[374]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:group2|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[375]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:group2|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[376]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:group2|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[377]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:group2|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[378]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:group2|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_02_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[379]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[380]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[381]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[382]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[383]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[384]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_Ctrls|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl_Pointer_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pointer_03_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[385]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[386]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[387]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[388]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[389]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[390]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_01_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[391]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[392]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[393]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[394]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[395]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[396]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_02_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[397]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:group2|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[398]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:group2|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[399]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:group2|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[400]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:group2|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[401]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:group2|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[402]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Middle_Ctrls|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:group2|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl_Middle_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Middle_03_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[403]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[404]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[405]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[406]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[407]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[408]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_01_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[409]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[410]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[411]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[412]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[413]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[414]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_02_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[415]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Pelvis_Ctrl_Grp|LaraCroftAdvanced_Rig:Pelvis_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[416]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Pelvis_Ctrl_Grp|LaraCroftAdvanced_Rig:Pelvis_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[417]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Pelvis_Ctrl_Grp|LaraCroftAdvanced_Rig:Pelvis_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[418]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Pelvis_Ctrl_Grp|LaraCroftAdvanced_Rig:Pelvis_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[419]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Pelvis_Ctrl_Grp|LaraCroftAdvanced_Rig:Pelvis_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[420]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Pelvis_Ctrl_Grp|LaraCroftAdvanced_Rig:Pelvis_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Ring_Ctrls|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl_Ring_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Ring_03_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[421]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl.Follow" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[422]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[423]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[424]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[425]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[426]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_01_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[427]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[428]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[429]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[430]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[431]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[432]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_02_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[433]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[434]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[435]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[436]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[437]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[438]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_Ctrls|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Point_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Rolling_Fist_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl_Pinky_Finger_OFFSET|LaraCroftAdvanced_Rig:R_Pinky_03_Jnt_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[439]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Pelvis_Ctrl_Grp|LaraCroftAdvanced_Rig:Pelvis_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[440]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Pelvis_Ctrl_Grp|LaraCroftAdvanced_Rig:Pelvis_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[441]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Pelvis_Ctrl_Grp|LaraCroftAdvanced_Rig:Pelvis_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[442]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Pelvis_Ctrl_Grp|LaraCroftAdvanced_Rig:Pelvis_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[443]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Pelvis_Ctrl_Grp|LaraCroftAdvanced_Rig:Pelvis_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[444]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Pelvis_Ctrl_Grp|LaraCroftAdvanced_Rig:Pelvis_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[445]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl.Follow" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[446]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[447]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[448]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[449]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[450]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[451]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[452]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[453]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[454]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[455]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[456]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[457]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Mid_Control_Joint_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[458]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[459]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[460]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[461]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[462]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[463]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_2_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[464]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[465]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[466]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[467]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[468]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[469]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[470]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[471]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[472]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[473]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[474]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[475]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[476]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[477]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[478]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[479]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[480]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[481]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[482]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[483]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[484]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[485]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[486]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[487]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[488]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[489]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[490]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[491]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[492]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[493]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[494]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[495]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[496]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[497]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[498]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[499]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[500]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[501]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[502]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[503]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[504]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[505]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[506]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[507]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[508]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[509]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[510]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[511]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[512]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[513]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[514]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[515]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[516]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[517]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[518]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[519]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[520]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[521]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[522]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[523]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[524]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[525]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[526]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[527]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[528]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[529]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[530]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[531]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[532]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[533]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[534]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[535]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[536]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[537]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[538]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[539]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[540]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[541]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[542]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[543]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[544]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[545]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[546]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[547]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[548]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[549]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[550]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[551]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[552]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[553]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[554]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[555]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[556]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[557]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[558]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[559]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[560]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[561]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[562]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[563]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[564]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[565]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[566]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[567]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[568]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[569]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[570]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[571]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[572]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[573]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[574]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[575]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[576]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[577]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[578]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[579]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[580]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[581]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[582]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[583]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[584]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[585]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[586]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[587]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[588]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[589]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[590]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[591]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[592]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[593]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[594]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[595]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[596]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[597]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[598]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[599]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[600]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[601]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[602]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[603]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[604]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[605]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[606]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[607]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[608]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[609]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[610]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[611]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[612]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[613]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[614]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[615]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[616]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[617]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[618]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[619]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[620]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[621]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[622]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[623]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[624]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[625]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[626]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[627]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[628]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[629]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[630]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[631]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[632]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[633]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[634]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[635]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[636]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[637]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[638]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[639]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[640]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[641]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[642]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[643]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[644]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[645]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[646]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[647]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[648]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[649]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[650]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[651]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[652]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[653]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[654]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[655]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[656]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[657]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[658]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[659]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[660]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[661]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[662]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[663]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[664]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[665]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[666]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[667]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[668]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[669]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[670]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[671]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[672]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[673]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[674]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[675]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[676]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[677]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[678]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[679]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[680]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[681]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[682]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[683]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[684]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[685]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[686]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[687]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[688]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[689]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[690]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[691]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[692]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[693]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[694]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[695]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[696]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[697]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[698]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[699]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[700]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[701]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[702]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[703]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[704]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[705]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[706]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[707]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[708]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[709]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[710]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[711]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[712]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[713]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[714]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[715]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[716]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.Mount" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[717]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[718]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[719]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[720]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[721]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[722]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.rotateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[723]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.Mount" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.translateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[724]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.translateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.translateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[725]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.translateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.rotateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[726]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.translateZ" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.rotateY" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[727]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.rotateX" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.rotateZ" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[728]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.rotateY" 
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.translateX" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[729]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.translateY" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[730]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.translateZ" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[731]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.rotateX" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[732]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.rotateY" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[733]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.rotateZ" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[734]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.translateX" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[735]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.translateY" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[736]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.translateZ" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[737]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.rotateX" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[738]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.rotateY" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[739]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.rotateZ" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[740]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.Mount" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[741]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.translateX" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[742]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.translateY" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[743]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.translateZ" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[744]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.rotateX" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[745]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.rotateY" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[746]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.rotateZ" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[747]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.Mount" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[748]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.translateX" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[749]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.translateY" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[750]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.translateZ" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[751]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.rotateX" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[752]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.rotateY" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[753]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[730]" "";
+		"LaraCroftAdvanced_RigRN.placeHolderList[754]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "uiConfigurationScriptNode";
@@ -2475,15 +2535,15 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1243\n            -height 366\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n"
 		+ "            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n"
-		+ "            -width 1243\n            -height 365\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
+		+ "            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
 		+ "            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n"
 		+ "            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n"
-		+ "            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1243\n            -height 365\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
-		+ "            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
+		+ "            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
+		+ "            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
 		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n"
 		+ "            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2493\n            -height 776\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n"
@@ -2512,8 +2572,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
 		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
 		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2493\\n    -height 776\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2493\\n    -height 776\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2493\\n    -height 776\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 1\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2493\\n    -height 776\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -2576,2641 +2636,3251 @@ createNode polyTweak -n "polyTweak2";
 		 -0.1711673 -0.057579648;
 createNode displayLayer -n "Level_Layer";
 	rename -uid "53B07761-499B-A965-3A81-34B2368E1DC6";
+	setAttr ".dt" 2;
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 1;
 createNode animCurveTL -n "R_Foot_IK_Ctrl_translateX";
 	rename -uid "568CF971-4A24-D563-2FC5-8D984296EE5D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 -1.7370653140064028e-15 1 -6.747036571784341e-16
+	setAttr -s 17 ".ktv[0:16]"  0 -1.7370653140064028e-15 1 -6.747036571784341e-16
 		 2 1.5608427155272808e-15 3 4.4982675138386982e-15 4 4.4982675138386982e-15 5 -4.4708227461784894e-15
-		 6 -3.3621261294348616e-15 7 6.9440794341059807e-15 8 2.1902975744954681e-14;
+		 6 -3.3621261294348616e-15 7 6.9440794341059807e-15 8 2.1902975744954681e-14 9 2.0204585202656801e-14
+		 10 1.7996677497669557e-14 11 1.5024494048648273e-14 12 1.0863437220018466e-14 13 4.919070321975895e-15
+		 14 -1.0252965760667002e-15 15 -7.0290806080869919e-15 16 -1.1771310232145333e-14;
 createNode animCurveTL -n "R_Foot_IK_Ctrl_translateY";
 	rename -uid "A2D9C912-4382-5D4D-A4B9-A394DDE08352";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0.32083965287955551 1 8.9956809015369537
+	setAttr -s 17 ".ktv[0:16]"  0 0.32083965287955551 1 8.9956809015369537
 		 2 27.250302350449346 3 26.609817768440763 4 26.609817768440763 5 33.991345066041674
-		 6 86.808565345185571 7 25.00789213710884 8 60.401316349820149;
+		 6 86.808565345185571 7 25.00789213710884 8 60.401316349820149 9 56.787583116181857
+		 10 46.885954056012991 11 36.293198514910785 12 25.97649204026704 13 16.739764799717811
+		 14 11.61591769570321 15 14.153375208337625 16 -1.6254091402036721;
 createNode animCurveTL -n "R_Foot_IK_Ctrl_translateZ";
 	rename -uid "E0E1DC76-4015-239C-FA42-76AF8E097560";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 -52.64807208116801 1 49.080052631197887
+	setAttr -s 17 ".ktv[0:16]"  0 -52.64807208116801 1 49.080052631197887
 		 2 -13.648553899026805 3 -37.707027815637261 4 -37.707027815637261 5 35.531152092739731
-		 6 98.400227611826523 7 14.243672671116897 8 -107.90498538493398;
+		 6 98.400227611826523 7 14.243672671116897 8 -107.90498538493398 9 -98.91648891378739
+		 10 -69.457267250968243 11 -34.410869870439974 12 1.429512444540542 13 37.473271189227347
+		 14 75.667918937201406 15 124.41363527192958 16 162.91658254911619;
 createNode animCurveTL -n "Nose_Ctrl_translateX";
 	rename -uid "82E3DE4B-4AE1-58FE-4315-768B19BBD017";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Nose_Ctrl_translateY";
 	rename -uid "54DFA9DC-48E3-C32D-00B8-67BD48B5ECCC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Nose_Ctrl_translateZ";
 	rename -uid "2EE1C417-49C5-E322-BEDC-94BD26300FE7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Brow_Cluster_Ctrl_translateX";
 	rename -uid "B4147DA6-4CDB-B9FA-1582-748495C11563";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Brow_Cluster_Ctrl_translateY";
 	rename -uid "29CCE199-40AA-24B9-1EF1-A5B264DC2B88";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Brow_Cluster_Ctrl_translateZ";
 	rename -uid "C755F877-4646-6C02-6DF1-7F86F7998D5D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Pick2_Ctrl_translateX";
 	rename -uid "8F9CEC72-4945-2C1C-E3AA-0593CB9047EB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 6 0 11 0 12 -40.811343650101023;
-	setAttr -s 8 ".kit[6:7]"  1 18;
-	setAttr -s 8 ".kot[6:7]"  1 18;
-	setAttr -s 8 ".kix[6:7]"  1 1;
-	setAttr -s 8 ".kiy[6:7]"  0 0;
-	setAttr -s 8 ".kox[6:7]"  1 1;
-	setAttr -s 8 ".koy[6:7]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 -40.811343650101023 13 -40.811343650101023 14 -40.811343650101023 15 -40.811343650101023
+		 16 -40.811343650101023;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0 0 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0 0 0 0;
 createNode animCurveTL -n "Pick2_Ctrl_translateY";
 	rename -uid "0070A6B9-48D6-30A8-124F-1DA8E74498FE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 6 0 11 0 12 -155.67358116812841;
-	setAttr -s 8 ".kit[6:7]"  1 18;
-	setAttr -s 8 ".kot[6:7]"  1 18;
-	setAttr -s 8 ".kix[6:7]"  1 1;
-	setAttr -s 8 ".kiy[6:7]"  0 0;
-	setAttr -s 8 ".kox[6:7]"  1 1;
-	setAttr -s 8 ".koy[6:7]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 -155.67358116812841 13 -155.67358116812841 14 -155.67358116812841 15 -155.67358116812841
+		 16 -155.67358116812841;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0 0 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0 0 0 0;
 createNode animCurveTL -n "Pick2_Ctrl_translateZ";
 	rename -uid "FACD4E29-44A0-A86D-E6B2-9192C19BF9E2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 6 0 11 0 12 17.950157927322032;
-	setAttr -s 8 ".kit[6:7]"  1 18;
-	setAttr -s 8 ".kot[6:7]"  1 18;
-	setAttr -s 8 ".kix[6:7]"  1 1;
-	setAttr -s 8 ".kiy[6:7]"  0 0;
-	setAttr -s 8 ".kox[6:7]"  1 1;
-	setAttr -s 8 ".koy[6:7]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 17.950157927322032 13 17.950157927322032 14 17.950157927322032 15 17.950157927322032
+		 16 17.950157927322032;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0 0 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0 0 0 0;
 createNode animCurveTL -n "R_reverse_foot_outer_Ctrl_translateX";
 	rename -uid "5DF9377C-41F2-E351-30B9-DC813038C894";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 -3.5527136788005009e-15 1 -3.5527136788005009e-15
-		 2 -3.5527136788005009e-15 3 -3.5527136788005009e-15 4 -3.5527136788005009e-15 6 -3.5527136788005009e-15;
+	setAttr -s 17 ".ktv[0:16]"  0 -3.5527136788005009e-15 1 -3.5527136788005009e-15
+		 2 -3.5527136788005009e-15 3 -3.5527136788005009e-15 4 -3.5527136788005009e-15 5 -3.5527136788005009e-15
+		 6 -3.5527136788005009e-15 7 -3.5527136788005009e-15 8 -3.5527136788005009e-15 9 -3.5527136788005009e-15
+		 10 -3.5527136788005009e-15 11 -3.5527136788005009e-15 12 -3.5527136788005009e-15
+		 13 -3.5527136788005009e-15 14 -3.5527136788005009e-15 15 -3.5527136788005009e-15
+		 16 -3.5527136788005009e-15;
 createNode animCurveTL -n "R_reverse_foot_outer_Ctrl_translateY";
 	rename -uid "E92E81CC-4348-F626-F165-3CB4807C6598";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_reverse_foot_outer_Ctrl_translateZ";
 	rename -uid "8288B101-4DC5-5304-3B00-C9907214AEF2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 -8.8817841970012523e-16 1 -8.8817841970012523e-16
-		 2 -8.8817841970012523e-16 3 -8.8817841970012523e-16 4 -8.8817841970012523e-16 6 -8.8817841970012523e-16;
+	setAttr -s 17 ".ktv[0:16]"  0 -8.8817841970012523e-16 1 -8.8817841970012523e-16
+		 2 -8.8817841970012523e-16 3 -8.8817841970012523e-16 4 -8.8817841970012523e-16 5 -8.8817841970012523e-16
+		 6 -8.8817841970012523e-16 7 -8.8817841970012523e-16 8 -8.8817841970012523e-16 9 -8.8817841970012523e-16
+		 10 -8.8817841970012523e-16 11 -8.8817841970012523e-16 12 -8.8817841970012523e-16
+		 13 -8.8817841970012523e-16 14 -8.8817841970012523e-16 15 -8.8817841970012523e-16
+		 16 -8.8817841970012523e-16;
 createNode animCurveTL -n "Spine_Mid_Control_Joint_Ctrl_translateX";
 	rename -uid "59B18890-4F1C-2A91-C372-03A9A16F69BC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Spine_Mid_Control_Joint_Ctrl_translateY";
 	rename -uid "F4CAB1B0-4B50-7704-D32E-5081104BD463";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Spine_Mid_Control_Joint_Ctrl_translateZ";
 	rename -uid "D65DE15F-4FD0-3491-E81C-19899AE135DA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Hip_IK_Ctrl_translateX";
 	rename -uid "1350924A-4AB1-A2A8-3FBD-C09856C082A4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Hip_IK_Ctrl_translateY";
 	rename -uid "F2BCEF49-47A6-CBF5-CC84-1C80FFE8F06F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Hip_IK_Ctrl_translateZ";
 	rename -uid "322EA73C-4759-0C63-76A7-B2AAAA0A54A0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Arm_PV_Ctrl_translateX";
 	rename -uid "EB6650C5-473C-9E93-104E-AB835992CF12";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 -3.5527136788005009e-15 4 -3.5527136788005009e-15
-		 5 -28.776154247178329 6 -27.160498011888425;
+	setAttr -s 17 ".ktv[0:16]"  0 -3.5527136788005009e-15 1 -3.5527136788005009e-15
+		 2 -3.5527136788005009e-15 3 -3.5527136788005009e-15 4 -3.5527136788005009e-15 5 -28.776154247178329
+		 6 -27.160498011888425 7 -17.379768967325774 8 -0.15333457931683014 9 17.800082559423814
+		 10 35.216732579563356 11 50.797783351933965 12 59.439012472178625 13 -14.989349264055599
+		 14 -15.515318643608907 15 -15.515318643608907 16 -15.515318643608907;
 createNode animCurveTL -n "R_Arm_PV_Ctrl_translateY";
 	rename -uid "113DC907-4577-928C-D44F-A5AB1C257C42";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 0 4 0 5 0.20389552061613636 6 -26.521293170337316;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0.20389552061613636
+		 6 -26.521293170337316 7 -25.243695237988124 8 -21.743076903351344 9 -17.998117964152776
+		 10 -14.350753311453108 11 -11.085204124160713 12 -9.2737210836232311 13 -9.6165696528576898
+		 14 -12.896601043985768 15 -12.896601043985768 16 -12.896601043985768;
 createNode animCurveTL -n "R_Arm_PV_Ctrl_translateZ";
 	rename -uid "B34C3738-4CB3-8772-4676-F3B0DF4C8F13";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 3.5527136788005009e-15 4 3.5527136788005009e-15
-		 5 19.943401702862808 6 31.266659508506777;
+	setAttr -s 17 ".ktv[0:16]"  0 3.5527136788005009e-15 1 3.5527136788005009e-15
+		 2 3.5527136788005009e-15 3 3.5527136788005009e-15 4 3.5527136788005009e-15 5 19.943401702862808
+		 6 31.266659508506777 7 31.055965332728796 8 30.331931477448197 9 28.630513040293497
+		 10 26.751956706815996 11 24.744764114599146 12 19.426766103182612 13 -2.3166227454933579
+		 14 -1.8001078134962303 15 -1.8001078134962303 16 -1.8001078134962303;
 createNode animCurveTL -n "L_Lower_Outer_Lips_Ctrl_translateX";
 	rename -uid "DD17837D-467D-192B-B5FF-EDB9B0D30C77";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Lower_Outer_Lips_Ctrl_translateY";
 	rename -uid "9CC91D78-4114-A0CD-C69C-0D9CC66CFB54";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Lower_Outer_Lips_Ctrl_translateZ";
 	rename -uid "45E4C374-422F-A76B-B324-5DB6BECBE78B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Lower_Corner_Lips_Ctrl_translateX";
 	rename -uid "49BE3FE3-4A91-F1D0-8C52-29B6F471A2D8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Lower_Corner_Lips_Ctrl_translateY";
 	rename -uid "87A4967C-4398-DF8E-42DB-B7A5CF309F25";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Lower_Corner_Lips_Ctrl_translateZ";
 	rename -uid "3F625CB8-4F04-BE78-6315-428A547B80EF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Arm_01_Jnt_IK_Ctrl_translateX";
 	rename -uid "EE8C6C40-455C-CACB-B88E-A382B0BD0B58";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Arm_01_Jnt_IK_Ctrl_translateY";
 	rename -uid "A477CC48-4BF6-49ED-B7F6-B2AD591464A9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Arm_01_Jnt_IK_Ctrl_translateZ";
 	rename -uid "6D275C39-4752-C3EF-3440-83B99C96E371";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Lower_Outer_Lips_Ctrl_translateX";
 	rename -uid "D8373292-4D19-D128-EA49-8BB845734585";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Lower_Outer_Lips_Ctrl_translateY";
 	rename -uid "47F6309C-4C76-5D70-3E96-D0B0F4FCB2A6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Lower_Outer_Lips_Ctrl_translateZ";
 	rename -uid "C0020F85-4E49-34DE-A3CE-A2B16E1A871D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Squint_Ctrl_translateX";
 	rename -uid "D3B1145B-4A68-30C6-7D8F-E59DC0D959E7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Squint_Ctrl_translateY";
 	rename -uid "1879BB5E-4891-4FB3-5E75-F596D9FCD029";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Squint_Ctrl_translateZ";
 	rename -uid "ED7D598F-477E-D3AC-F350-6FA14270ECBF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Brow_1_Ctrl_translateX";
 	rename -uid "A31FB44C-4E5E-3302-C478-5AAA73EDE98C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Brow_1_Ctrl_translateY";
 	rename -uid "39D428E9-41B1-855A-5575-1881669866E9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Brow_1_Ctrl_translateZ";
 	rename -uid "AD451358-464B-304D-316B-34BC4D836FFC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Transform_Control_translateX";
 	rename -uid "C98AC1F0-423B-BF73-445E-46BCE0F7AC6E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 11 0 12 0;
+	setAttr -s 17 ".ktv[0:16]"  0 5 1 5 2 5 3 5 4 5 5 5 6 5 7 5 8 5 9 5
+		 10 5 11 5 12 5 13 5 14 5 15 5 16 5;
 createNode animCurveTL -n "Transform_Control_translateY";
 	rename -uid "26BB83DF-4369-32AD-C2A5-9889AD1A980A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 1 28.262039561645381 2 64.446318098472673
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 28.262039561645381 2 64.446318098472673
 		 3 88.596998873422521 4 91.597555209791565 5 91.597555209791565 6 91.597555209791565
-		 11 91.597555209791565 12 121.91988650934177;
+		 7 91.597555209791565 8 91.597555209791565 9 91.597555209791565 10 91.597555209791565
+		 11 91.597555209791565 12 121.91988650934177 13 101.69135124724303 14 -38.491681300647279
+		 15 -41.941229054333668 16 -41.941229054333668;
 createNode animCurveTL -n "Transform_Control_translateZ";
 	rename -uid "1171CFA1-4C81-4F01-8866-4DBA7626A7B4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 -230.3279880666056 1 -178.20628425496309
+	setAttr -s 17 ".ktv[0:16]"  0 -230.3279880666056 1 -178.20628425496309
 		 2 -90.531754130134814 3 -20.003371365470919 4 25.596663745157919 5 49.130596253552724
-		 6 49.130596253552724 11 49.130596253552724 12 118.27885226185569;
+		 6 49.130596253552724 7 49.130596253552724 8 49.130596253552724 9 49.130596253552724
+		 10 49.130596253552724 11 49.130596253552724 12 118.27885226185569 13 232.24077023113213
+		 14 357.68705080672322 15 357.68705080672322 16 357.68705080672322;
 createNode animCurveTL -n "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateX";
 	rename -uid "CBD4B650-43CB-C95C-C7D7-46A8A731BFAB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateY";
 	rename -uid "0F3EF6E5-4D17-A96D-B80E-5AACFC900701";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateZ";
 	rename -uid "CB4E865D-494F-0640-A0EC-7A9826C81C34";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Eyelid_Upper_Ctrl_translateX";
 	rename -uid "0AC322EB-48CC-6590-B24B-E3B5457D5A89";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 8.8817841970012523e-16 1 8.8817841970012523e-16
-		 2 8.8817841970012523e-16 3 8.8817841970012523e-16 4 8.8817841970012523e-16 6 8.8817841970012523e-16;
+	setAttr -s 17 ".ktv[0:16]"  0 8.8817841970012523e-16 1 8.8817841970012523e-16
+		 2 8.8817841970012523e-16 3 8.8817841970012523e-16 4 8.8817841970012523e-16 5 8.8817841970012523e-16
+		 6 8.8817841970012523e-16 7 8.8817841970012523e-16 8 8.8817841970012523e-16 9 8.8817841970012523e-16
+		 10 8.8817841970012523e-16 11 8.8817841970012523e-16 12 8.8817841970012523e-16 13 8.8817841970012523e-16
+		 14 8.8817841970012523e-16 15 8.8817841970012523e-16 16 8.8817841970012523e-16;
 createNode animCurveTL -n "R_Eyelid_Upper_Ctrl_translateY";
 	rename -uid "AA3C652F-4D51-95D6-DCB8-D38A4E37EFBB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 -2.8421709430404007e-14 1 -2.8421709430404007e-14
-		 2 -2.8421709430404007e-14 3 -2.8421709430404007e-14 4 -2.8421709430404007e-14 6 -2.8421709430404007e-14;
+	setAttr -s 17 ".ktv[0:16]"  0 -2.8421709430404007e-14 1 -2.8421709430404007e-14
+		 2 -2.8421709430404007e-14 3 -2.8421709430404007e-14 4 -2.8421709430404007e-14 5 -2.8421709430404007e-14
+		 6 -2.8421709430404007e-14 7 -2.8421709430404007e-14 8 -2.8421709430404007e-14 9 -2.8421709430404007e-14
+		 10 -2.8421709430404007e-14 11 -2.8421709430404007e-14 12 -2.8421709430404007e-14
+		 13 -2.8421709430404007e-14 14 -2.8421709430404007e-14 15 -2.8421709430404007e-14
+		 16 -2.8421709430404007e-14;
 createNode animCurveTL -n "R_Eyelid_Upper_Ctrl_translateZ";
 	rename -uid "5B64215B-4814-1574-6A5F-5986D17C2E67";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 -7.7715611723760958e-16 1 -7.7715611723760958e-16
-		 2 -7.7715611723760958e-16 3 -7.7715611723760958e-16 4 -7.7715611723760958e-16 6 -7.7715611723760958e-16;
+	setAttr -s 17 ".ktv[0:16]"  0 -7.7715611723760958e-16 1 -7.7715611723760958e-16
+		 2 -7.7715611723760958e-16 3 -7.7715611723760958e-16 4 -7.7715611723760958e-16 5 -7.7715611723760958e-16
+		 6 -7.7715611723760958e-16 7 -7.7715611723760958e-16 8 -7.7715611723760958e-16 9 -7.7715611723760958e-16
+		 10 -7.7715611723760958e-16 11 -7.7715611723760958e-16 12 -7.7715611723760958e-16
+		 13 -7.7715611723760958e-16 14 -7.7715611723760958e-16 15 -7.7715611723760958e-16
+		 16 -7.7715611723760958e-16;
 createNode animCurveTL -n "R_Lower_Corner_Lips_Ctrl_translateX";
 	rename -uid "C54ADED6-445E-CA98-700B-2AB7D3583A60";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Lower_Corner_Lips_Ctrl_translateY";
 	rename -uid "19D46608-4466-6E0C-1CE9-C88A1DD8F702";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Lower_Corner_Lips_Ctrl_translateZ";
 	rename -uid "880F9D3C-47D6-B19B-D705-B1939498362B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Cog_Ctrl_translateX";
 	rename -uid "BD242C80-468F-9BE6-3D3C-87B5DA97DE2F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 -5.6843418860808065e-14
-		 8 -1.1368683772161603e-13 9 -1.1368683772161603e-13 10 -1.1368683772161603e-13 11 -1.1368683772161603e-13;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 -4.4408920985006163e-16 14 -8.8817841970012523e-16 15 0 16 0;
 createNode animCurveTL -n "Cog_Ctrl_translateY";
 	rename -uid "D85BD622-471A-130C-8D63-CBA7A0AEEF86";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  0 -30.140276390023743 1 -29.553534842810777
-		 2 0 3 0 4 0 5 -1.813679356817147 6 16.142284474425395 7 -3.0619972260270334 8 15.470146030137414
-		 9 23.520233601108146 10 7.8933105702546413 11 6.7430735982326269;
+	setAttr -s 17 ".ktv[0:16]"  0 -30.140276390023743 1 -29.553534842810777
+		 2 0 3 0 4 0 5 -1.813679356817147 6 16.142284474425395 7 -3.0619972260270334 8 19.561018150902214
+		 9 32.452696270046943 10 7.8933105702546413 11 6.7430735982326269 12 6.7430735982326269
+		 13 -2.2915026298224621 14 -16.571961829006625 15 -24.732224228540328 16 -51.921773151021384;
 createNode animCurveTL -n "Cog_Ctrl_translateZ";
 	rename -uid "FD610239-4158-33A3-DF34-2F9B2927755F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  0 11.575543243147566 1 25.446359720343796
-		 2 0 3 0 4 0 5 9.1260385751501403 6 58.063663015074809 7 5.1957883188910827 8 -42.695873882535977
-		 9 -48.404943001946961 10 -32.223694773484638 11 37.723778269404676;
+	setAttr -s 17 ".ktv[0:16]"  0 11.575543243147566 1 25.446359720343796
+		 2 0 3 0 4 0 5 9.1260385751501403 6 58.063663015074809 7 5.1957883188910827 8 -47.096146283596298
+		 9 -58.561624861426651 10 -32.223694773484638 11 37.723778269404676 12 37.723778269404676
+		 13 37.61342563867894 14 37.503073007953205 15 84.49413452175358 16 136.48930807510934;
 createNode animCurveTL -n "Head_Ctrl_translateX";
 	rename -uid "83306CE5-4AE4-0AD5-E545-BB8F9ACE5E5C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 0 1 0 2 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Head_Ctrl_translateY";
 	rename -uid "8686985A-4D85-D466-18BF-C2AA8312C13B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 0 1 0 2 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Head_Ctrl_translateZ";
 	rename -uid "A6DE6CBA-4911-5235-A7FF-5CB3A85F94D2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 0 1 0 2 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Gun_Ctrl_translateX";
 	rename -uid "5EFD07B6-41B0-9E64-9323-17B4CB5EDD8B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Gun_Ctrl_translateY";
 	rename -uid "7CB65902-4642-721B-E72A-5A8227340EBD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Gun_Ctrl_translateZ";
 	rename -uid "F9977D68-4785-68E9-7332-D69F85F9AD21";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_reverse_foot_ball_Ctrl_translateX";
 	rename -uid "BACFACAF-4DEB-F2E4-1255-4DA9F39581BB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_reverse_foot_ball_Ctrl_translateY";
 	rename -uid "656CA0A3-459E-D346-8624-7692ABB3678E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_reverse_foot_ball_Ctrl_translateZ";
 	rename -uid "4D922E39-47FF-118C-0C34-A687D3D11221";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Hair_Ctrl_Jnt_3_Ctrl_translateX";
 	rename -uid "48BF3B57-48DE-55F8-D633-219C06FFDABA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Hair_Ctrl_Jnt_3_Ctrl_translateY";
 	rename -uid "EBF9DFCA-4FCA-386F-7B8C-E284B00117DE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Hair_Ctrl_Jnt_3_Ctrl_translateZ";
 	rename -uid "CC8C509B-4190-BEC9-399B-80A4A1D48D80";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_ball_Ctrl_translateX";
 	rename -uid "A4E6D0CF-41C2-AC19-C42A-99ADD824F22C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_ball_Ctrl_translateY";
 	rename -uid "D7CB4038-4E64-FA83-150E-3D9D683639E8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_ball_Ctrl_translateZ";
 	rename -uid "83837569-48BC-9418-93CE-399A2FE31657";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_heel_Ctrl_translateX";
 	rename -uid "56FFC666-4E56-8BD3-8572-3EA47F4BE1CB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_heel_Ctrl_translateY";
 	rename -uid "640589A6-4ECF-CDB4-8F36-F7BD22002D18";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_heel_Ctrl_translateZ";
 	rename -uid "226B907C-46C1-68DA-E07E-DBB30E9EA2D6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Pelvis_Ctrl_translateX";
 	rename -uid "6066ADCC-4114-5859-A28F-6A9403068848";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 6 0 10 0 11 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Pelvis_Ctrl_translateY";
 	rename -uid "C2CBE257-42B4-0BC5-82E7-D69E2D72F21D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 6 0 10 0 11 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Pelvis_Ctrl_translateZ";
 	rename -uid "D1A54A80-499C-B07B-CD61-1E8388893F75";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 6 0 10 0 11 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Pick_Holster_Ctrl_translateX";
 	rename -uid "06BE4EB8-4D5A-F336-49A3-75A5AB904CBC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Pick_Holster_Ctrl_translateY";
 	rename -uid "2C01585E-4027-C91C-1CEF-7FA0A6098AAD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Pick_Holster_Ctrl_translateZ";
 	rename -uid "1D789D75-40DE-40BF-1F52-C6A967763055";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Squint_Ctrl_translateX";
 	rename -uid "18BDEED1-4B32-C124-2785-C0AD81BA00B9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Squint_Ctrl_translateY";
 	rename -uid "AF0066F2-48EB-C3EB-C6AC-64A2E1F03935";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Squint_Ctrl_translateZ";
 	rename -uid "BD90069D-40F4-77B1-46BF-0BBBAB62E50A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Look_Ctrl_translateX";
 	rename -uid "5700B9CF-40E5-265A-2205-148D8962B67B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Look_Ctrl_translateY";
 	rename -uid "B6A37CD4-4D10-EC0F-E883-51895B564F40";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Look_Ctrl_translateZ";
 	rename -uid "55618D9B-44BE-2F4F-DA16-03B8449B1987";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_reverse_foot_inner_Ctrl_translateX";
 	rename -uid "2703ADF2-4D6F-9DD6-CA32-239D55E1D336";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_reverse_foot_inner_Ctrl_translateY";
 	rename -uid "575F87FE-4C76-2575-66FA-F880D0F54F9F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_reverse_foot_inner_Ctrl_translateZ";
 	rename -uid "C1FB6002-4F04-9C1F-C9EC-0FB501F90AF1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Upper_Outer_Lips_Ctrl_translateX";
 	rename -uid "3B0B0E3B-4F52-EEBE-CFDD-45AF73F135AE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Upper_Outer_Lips_Ctrl_translateY";
 	rename -uid "63F49084-4418-7042-F4A7-DABD2A0F901E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Upper_Outer_Lips_Ctrl_translateZ";
 	rename -uid "E5C374B3-4D04-9E63-1AD4-AF9FC4868659";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Hand_IK_Ctrl_translateX";
 	rename -uid "0E38FA8D-46E4-8344-1871-0DAC8DBBAADC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 5 -16.479821556653793 6 -5.1958988015397543
-		 11 -5.1958988015397543 12 -40.631183106350669;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  1 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 -1.7139014418919942 2 -5.8750563849470767
+		 3 -10.265097738511241 4 -14.256190078558072 5 -16.479821556653793 6 -5.1958988015397543
+		 7 -5.1958988015397543 8 -5.1958988015397543 9 -5.1958988015397543 10 -5.1958988015397543
+		 11 -5.1958988015397543 12 -28.595674925285653 13 -25.917529077605021 14 -22.635435083456088
+		 15 -26.597565468753324 16 -3.9868290767837409;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 0.013980173884619265 1 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0.99990227259375497 0 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 0.013980173884619265 1 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0.99990227259375497 0 0 0;
 createNode animCurveTL -n "L_Hand_IK_Ctrl_translateY";
 	rename -uid "77B81A4E-4617-264B-F972-459D5CCCC30F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 5 126.76497123676745 6 132.53558502385232
-		 11 132.53558502385232 12 37.942253536945998;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  1 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 10.413662390822987 2 39.608643406902786
+		 3 71.285575746879104 4 101.96034047066497 5 126.76497123676745 6 132.53558502385232
+		 7 132.53558502385232 8 132.53558502385232 9 132.53558502385232 10 132.53558502385232
+		 11 132.53558502385232 12 37.889070543649758 13 16.095271748613179 14 14.971898378005294
+		 15 -28.095819634352218 16 -21.901222620292415;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 0.00071567406208471467 0.012362610565197801 
+		0.012362610565197803 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 -0.99999974390528568 -0.99992358000999926 
+		-0.99992358000999926 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 0.00071567406208471467 0.012362610565197803 
+		0.012362610565197801 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 -0.99999974390528568 -0.99992358000999926 
+		-0.99992358000999926 0 0;
 createNode animCurveTL -n "L_Hand_IK_Ctrl_translateZ";
 	rename -uid "47E64ECE-41C5-C780-BD45-9FA42C754D1E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 5 54.872400805100646 6 72.167480550738588
-		 11 72.167480550738588 12 12.272209484609425;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  1 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 3.782263535710769 2 15.373796936563226
+		 3 28.135652990884253 4 41.126258257049393 5 54.872400805100646 6 72.167480550738588
+		 7 72.167480550738588 8 72.167480550738588 9 72.167480550738588 10 72.167480550738588
+		 11 72.167480550738588 12 -1.7397913736878974 13 26.760938107333324 14 24.988755782051122
+		 15 44.951173136980714 16 7.7342584959245491;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0 0 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0 0 0 0;
 createNode animCurveTL -n "L_Sneer_Ctrl_translateX";
 	rename -uid "492A1844-41E6-C5C1-2A25-38A03B88665A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Sneer_Ctrl_translateY";
 	rename -uid "0212E5E6-4589-22F1-5B0E-2C8AAE210A31";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Sneer_Ctrl_translateZ";
 	rename -uid "D3AF9CFA-4239-8806-2157-6BBE31F4B02F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Eye_Ctrl_translateX";
 	rename -uid "8A243D25-4C8A-772C-0FF7-FD9B72CCEC3D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Eye_Ctrl_translateY";
 	rename -uid "19EE2950-4014-5F91-CF26-32B65001AB85";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Eye_Ctrl_translateZ";
 	rename -uid "92314553-492D-2695-B4FA-4294A50D59B7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Cheek_Ctrl_translateX";
 	rename -uid "0BF6C7F8-42D3-E4ED-0BEF-DCB7AC1CE7B8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Cheek_Ctrl_translateY";
 	rename -uid "34C5311C-474F-7752-038D-54950113083D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Cheek_Ctrl_translateZ";
 	rename -uid "3A32E719-4F68-C447-8AF5-FD95E9ECB59E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Upper_Middle_Lips_Ctrl_translateX";
 	rename -uid "BDFBED18-434D-A306-2814-669CCD6B605F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Upper_Middle_Lips_Ctrl_translateY";
 	rename -uid "346A3738-446F-138C-2727-B2A118F8AE8A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Upper_Middle_Lips_Ctrl_translateZ";
 	rename -uid "7F6E5ACE-4BAC-88B1-86B3-5D822B3ED665";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Arm_PV_Ctrl_translateX";
 	rename -uid "019E0F82-416D-819B-CE0A-D7BD147B3929";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 5 9.0259779129770639 6 9.0259779129770639;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0.93870170294961452 2 3.2177611259763226
+		 3 5.6221813533499354 4 7.8080976987468942 5 9.0259779129770639 6 9.0259779129770639
+		 7 9.0259779129770639 8 9.0259779129770639 9 9.0259779129770639 10 9.0259779129770639
+		 11 9.0259779129770639 12 9.0259779129770639 13 8.9255235885669943 14 8.7918515875302372
+		 15 8.7918515875302372 16 8.7918515875302372;
 createNode animCurveTL -n "L_Arm_PV_Ctrl_translateY";
 	rename -uid "6B1038A2-436E-AAEB-CD52-EAA9F23073C4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 5 14.813412528110206 6 14.813412528110206;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 1.5405949029234609 2 5.2809815662712873
+		 3 9.2271100702873134 4 12.814630546018668 5 14.813412528110206 6 14.813412528110206
+		 7 14.813412528110206 8 14.813412528110206 9 14.813412528110206 10 14.813412528110206
+		 11 14.813412528110206 12 14.813412528110206 13 -3.7007822705989555 14 -0.0081973655690725233
+		 15 -0.0081973655690725233 16 -0.0081973655690725233;
 createNode animCurveTL -n "L_Arm_PV_Ctrl_translateZ";
 	rename -uid "C4B36E62-4C29-37BA-7208-4F969438D9AA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 5 -5.6004625186908337 6 -5.6004625186908337;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 -0.58244810194384655 2 -1.996564887913282
+		 3 -3.4884658755312015 4 -4.8447889996758136 5 -5.6004625186908337 6 -5.6004625186908337
+		 7 -5.6004625186908337 8 -5.6004625186908337 9 -5.6004625186908337 10 -5.6004625186908337
+		 11 -5.6004625186908337 12 -5.6004625186908337 13 4.4863575401349971 14 3.2527905879405354
+		 15 3.2527905879405354 16 3.2527905879405354;
 createNode animCurveTL -n "Pick1_Ctrl_translateX";
 	rename -uid "35932B3A-4090-29FD-FE47-3C923D8F9240";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 6 0 11 0 12 5.4226267874322076;
-	setAttr -s 8 ".kit[6:7]"  1 18;
-	setAttr -s 8 ".kot[6:7]"  1 18;
-	setAttr -s 8 ".kix[6:7]"  1 1;
-	setAttr -s 8 ".kiy[6:7]"  0 0;
-	setAttr -s 8 ".kox[6:7]"  1 1;
-	setAttr -s 8 ".koy[6:7]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 5.4226267874322076 13 5.4226267874322076 14 5.4226267874322076 15 5.4226267874322076
+		 16 5.4226267874322076;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0 0 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0 0 0 0;
 createNode animCurveTL -n "Pick1_Ctrl_translateY";
 	rename -uid "929ABD17-42A4-4948-703C-AA8A2FB00E42";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 6 0 11 0 12 -157.24828162731501;
-	setAttr -s 8 ".kit[6:7]"  1 18;
-	setAttr -s 8 ".kot[6:7]"  1 18;
-	setAttr -s 8 ".kix[6:7]"  1 1;
-	setAttr -s 8 ".kiy[6:7]"  0 0;
-	setAttr -s 8 ".kox[6:7]"  1 1;
-	setAttr -s 8 ".koy[6:7]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 -157.24828162731501 13 -157.24828162731501 14 -157.24828162731501 15 -157.24828162731501
+		 16 -157.24828162731501;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0 0 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0 0 0 0;
 createNode animCurveTL -n "Pick1_Ctrl_translateZ";
 	rename -uid "D8ECEC3D-4C8B-0D30-3D7E-F08C86CF7D13";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 6 0 11 0 12 29.291741985370827;
-	setAttr -s 8 ".kit[6:7]"  1 18;
-	setAttr -s 8 ".kot[6:7]"  1 18;
-	setAttr -s 8 ".kix[6:7]"  1 1;
-	setAttr -s 8 ".kiy[6:7]"  0 0;
-	setAttr -s 8 ".kox[6:7]"  1 1;
-	setAttr -s 8 ".koy[6:7]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 29.291741985370827 13 29.291741985370827 14 29.291741985370827 15 29.291741985370827
+		 16 29.291741985370827;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0 0 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0 0 0 0;
 createNode animCurveTL -n "Neck_Ctrl_translateX";
 	rename -uid "F19E4E71-4035-2A39-ADDC-C6A20671DDD9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Neck_Ctrl_translateY";
 	rename -uid "C45FB975-4F02-D5E2-DE0F-B2AA7472A833";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Neck_Ctrl_translateZ";
 	rename -uid "5D2BA6BA-4E06-5F5D-B24B-C8A1471C9FFF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Hair_Ctrl_Jnt_1_Ctrl_translateX";
 	rename -uid "86C3143A-4185-0695-E41C-04BBE9B00A80";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Hair_Ctrl_Jnt_1_Ctrl_translateY";
 	rename -uid "C6B3850D-4F11-626F-1882-F9BED58BEF83";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Hair_Ctrl_Jnt_1_Ctrl_translateZ";
 	rename -uid "572A7EE3-4C7B-8032-5CA5-9B9B5F8D2E1B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Clavicle_Jnt_Ctrl_translateX";
 	rename -uid "D40F193F-407D-F2B7-C990-C48CC52A884C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 0 1 0 2 0 3 0 4 0 6 0 9 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Clavicle_Jnt_Ctrl_translateY";
 	rename -uid "EC0DB8B3-4970-1609-714A-3C9A2106FE80";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 0 1 0 2 0 3 0 4 0 6 0 9 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Clavicle_Jnt_Ctrl_translateZ";
 	rename -uid "8308BF0B-4FE4-69E3-D222-EBB9CB9E8348";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 0 1 0 2 0 3 0 4 0 6 0 9 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Eyelid_Upper_Ctrl_translateX";
 	rename -uid "BDD095E3-4876-EB13-F04C-31A3724F25CF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 -1.7763568394002505e-15 1 -1.7763568394002505e-15
-		 2 -1.7763568394002505e-15 3 -1.7763568394002505e-15 4 -1.7763568394002505e-15 6 -1.7763568394002505e-15;
+	setAttr -s 17 ".ktv[0:16]"  0 -1.7763568394002505e-15 1 -1.7763568394002505e-15
+		 2 -1.7763568394002505e-15 3 -1.7763568394002505e-15 4 -1.7763568394002505e-15 5 -1.7763568394002505e-15
+		 6 -1.7763568394002505e-15 7 -1.7763568394002505e-15 8 -1.7763568394002505e-15 9 -1.7763568394002505e-15
+		 10 -1.7763568394002505e-15 11 -1.7763568394002505e-15 12 -1.7763568394002505e-15
+		 13 -1.7763568394002505e-15 14 -1.7763568394002505e-15 15 -1.7763568394002505e-15
+		 16 -1.7763568394002505e-15;
 createNode animCurveTL -n "L_Eyelid_Upper_Ctrl_translateY";
 	rename -uid "EE743754-4DF9-7B94-83B4-CF9AB49AD678";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 -2.8421709430404007e-14 1 -2.8421709430404007e-14
-		 2 -2.8421709430404007e-14 3 -2.8421709430404007e-14 4 -2.8421709430404007e-14 6 -2.8421709430404007e-14;
+	setAttr -s 17 ".ktv[0:16]"  0 -2.8421709430404007e-14 1 -2.8421709430404007e-14
+		 2 -2.8421709430404007e-14 3 -2.8421709430404007e-14 4 -2.8421709430404007e-14 5 -2.8421709430404007e-14
+		 6 -2.8421709430404007e-14 7 -2.8421709430404007e-14 8 -2.8421709430404007e-14 9 -2.8421709430404007e-14
+		 10 -2.8421709430404007e-14 11 -2.8421709430404007e-14 12 -2.8421709430404007e-14
+		 13 -2.8421709430404007e-14 14 -2.8421709430404007e-14 15 -2.8421709430404007e-14
+		 16 -2.8421709430404007e-14;
 createNode animCurveTL -n "L_Eyelid_Upper_Ctrl_translateZ";
 	rename -uid "F9C4777B-4296-E1BA-B3BD-158F2102A869";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 -3.3306690738754696e-16 1 -3.3306690738754696e-16
-		 2 -3.3306690738754696e-16 3 -3.3306690738754696e-16 4 -3.3306690738754696e-16 6 -3.3306690738754696e-16;
+	setAttr -s 17 ".ktv[0:16]"  0 -3.3306690738754696e-16 1 -3.3306690738754696e-16
+		 2 -3.3306690738754696e-16 3 -3.3306690738754696e-16 4 -3.3306690738754696e-16 5 -3.3306690738754696e-16
+		 6 -3.3306690738754696e-16 7 -3.3306690738754696e-16 8 -3.3306690738754696e-16 9 -3.3306690738754696e-16
+		 10 -3.3306690738754696e-16 11 -3.3306690738754696e-16 12 -3.3306690738754696e-16
+		 13 -3.3306690738754696e-16 14 -3.3306690738754696e-16 15 -3.3306690738754696e-16
+		 16 -3.3306690738754696e-16;
 createNode animCurveTL -n "R_Upper_Corner_Lips_Ctrl_translateX";
 	rename -uid "9EADB328-4BDF-D12D-2ECA-DF949BDDA784";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Upper_Corner_Lips_Ctrl_translateY";
 	rename -uid "F4B4AC71-452C-4116-12F5-E9A6044BAFAB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Upper_Corner_Lips_Ctrl_translateZ";
 	rename -uid "6D001537-4117-C275-60A0-52B8A8293E17";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_outer_Ctrl_translateX";
 	rename -uid "AA87B153-44BB-8C4C-6AAF-8B8217F36F8E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_outer_Ctrl_translateY";
 	rename -uid "E0DDD5D5-4935-9101-E809-55B1E2C90B52";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_outer_Ctrl_translateZ";
 	rename -uid "AB6E3DB9-4367-F170-79C1-21A5644BAA67";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Jaw_Ctrl_translateX";
 	rename -uid "6D56CFDF-467D-D9EF-4160-4AB69BC9852A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Jaw_Ctrl_translateY";
 	rename -uid "0897029C-421D-30D0-DFC4-EF83F4942795";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Jaw_Ctrl_translateZ";
 	rename -uid "A1DF69A0-4B5B-8451-FC06-D4A6D9A4F51C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Upper_Lip_Ctrl_translateX";
 	rename -uid "1366675E-4A1C-256B-233F-3F81C5AAA245";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Upper_Lip_Ctrl_translateY";
 	rename -uid "3EA903B1-491D-55E2-2A64-638ADA31AF16";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Upper_Lip_Ctrl_translateZ";
 	rename -uid "4B3760DD-41B7-F0DA-4764-6CAB5F74FF2A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Knee_PV_Ctrl_translateX";
 	rename -uid "9FEB8D29-47F1-4E9F-ABF1-57AB998E4246";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 4.4408920985006262e-16 2 4.4408920985006262e-16
-		 3 4.4408920985006262e-16 4 4.4408920985006262e-16 6 4.4408920985006262e-16;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 4.4408920985006262e-16 2 4.4408920985006262e-16
+		 3 4.4408920985006262e-16 4 4.4408920985006262e-16 5 4.4408920985006262e-16 6 4.4408920985006262e-16
+		 7 4.4408920985006262e-16 8 4.4408920985006262e-16 9 4.4408920985006262e-16 10 4.4408920985006262e-16
+		 11 4.4408920985006262e-16 12 4.4408920985006262e-16 13 4.4408920985006262e-16 14 4.4408920985006262e-16
+		 15 4.4408920985006262e-16 16 4.4408920985006262e-16;
 createNode animCurveTL -n "L_Knee_PV_Ctrl_translateY";
 	rename -uid "595156F0-4A0B-D3F4-50D4-2EB83169197A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 27.066400918518664 2 27.066400918518664
-		 3 27.066400918518664 4 27.066400918518664 6 27.066400918518664;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 27.066400918518664 2 27.066400918518664
+		 3 27.066400918518664 4 27.066400918518664 5 27.066400918518664 6 27.066400918518664
+		 7 27.066400918518664 8 27.066400918518664 9 27.066400918518664 10 27.066400918518664
+		 11 27.066400918518664 12 27.066400918518664 13 27.066400918518664 14 27.066400918518664
+		 15 27.066400918518664 16 27.066400918518664;
 createNode animCurveTL -n "L_Knee_PV_Ctrl_translateZ";
 	rename -uid "AF2A0B23-41F3-8AC4-7F6D-DF83016EDE68";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 -8.8061753607796753e-16 2 -8.8061753607796753e-16
-		 3 -8.8061753607796753e-16 4 -8.8061753607796753e-16 6 -8.8061753607796753e-16;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 -8.8061753607796753e-16 2 -8.8061753607796753e-16
+		 3 -8.8061753607796753e-16 4 -8.8061753607796753e-16 5 -8.8061753607796753e-16 6 -8.8061753607796753e-16
+		 7 -8.8061753607796753e-16 8 -8.8061753607796753e-16 9 -8.8061753607796753e-16 10 -8.8061753607796753e-16
+		 11 -8.8061753607796753e-16 12 -8.8061753607796753e-16 13 -8.8061753607796753e-16
+		 14 -8.8061753607796753e-16 15 -8.8061753607796753e-16 16 -8.8061753607796753e-16;
 createNode animCurveTL -n "L_Eyelid_Lower_Ctrl_translateX";
 	rename -uid "2D059EE8-4DD9-B0DB-CDBE-B19AE9D6CC2A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Eyelid_Lower_Ctrl_translateY";
 	rename -uid "2BC83D66-4567-0453-D5A0-EFBA791095C8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Eyelid_Lower_Ctrl_translateZ";
 	rename -uid "08D8B499-4657-1A50-CEFE-818E679A9913";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Brow_2_Ctrl_translateX";
 	rename -uid "FB66800D-4DFE-5A63-4B28-3E9BB38F0D71";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Brow_2_Ctrl_translateY";
 	rename -uid "183DEB1E-49BE-D29B-A306-3E98F50BDDE9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Brow_2_Ctrl_translateZ";
 	rename -uid "76C901E3-41EA-8ECB-44EC-DBB41C29AFE6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Hand_IK_Ctrl_translateX";
 	rename -uid "EE03AB1D-4C8E-650B-0F00-2BA4D74C0C3A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 -17.931916104458502 5 -17.931916104458502
-		 6 -17.931916104458502 11 -17.931916104458502 12 -57.778057656775275;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  1 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 -2.8018618913216402 2 -8.7169036618895497
+		 3 -14.585247734268764 4 -17.931916104458502 5 -17.931916104458502 6 -17.931916104458502
+		 7 -17.931916104458502 8 -17.931916104458502 9 -17.931916104458502 10 -17.931916104458502
+		 11 -17.931916104458502 12 -30.077835434651476 13 -20.817910439431969 14 -17.99509380514267
+		 15 -29.931464417177654 16 -23.150220856198469;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 0.0068967254284974288 1 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0.99997621730637365 0 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 0.0068967254284974288 1 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0.99997621730637365 0 0 0;
 createNode animCurveTL -n "R_Hand_IK_Ctrl_translateY";
 	rename -uid "855C8125-432E-DC7C-B1AB-FA863DA6543B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 134.04293739005388 5 134.04293739005388
-		 6 134.04293739005388 11 134.04293739005388 12 40.691996070755948;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  1 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 20.94420896719592 2 65.159761231276377
+		 3 109.02624334590311 4 134.04293739005388 5 134.04293739005388 6 134.04293739005388
+		 7 134.04293739005388 8 134.04293739005388 9 134.04293739005388 10 134.04293739005388
+		 11 134.04293739005388 12 35.18583697731485 13 13.534920479321148 14 12.537659503062651
+		 15 -33.767205228911209 16 -36.92141884454638;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 0.00069151676000320532 0.013925684905860629 
+		0.013925684905860629 0.0044032383149246969 1;
+	setAttr -s 17 ".kiy[11:16]"  0 -0.99999976090225673 -0.9999030329486468 
+		-0.9999030329486468 -0.99999030569918124 0;
+	setAttr -s 17 ".kox[11:16]"  1 0.00069151676000320521 0.013925684905860629 
+		0.013925684905860629 0.0044032383149246969 1;
+	setAttr -s 17 ".koy[11:16]"  0 -0.99999976090225673 -0.9999030329486468 
+		-0.9999030329486468 -0.99999030569918124 0;
 createNode animCurveTL -n "R_Hand_IK_Ctrl_translateZ";
 	rename -uid "00CD6582-4173-FBE0-71C9-D887A45AE81F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 75.053248260486328 5 75.053248260486328
-		 6 75.053248260486328 11 75.053248260486328 12 13.01216359667883;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  1 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 11.727070040700989 2 36.484217904403103
+		 3 61.045914600760142 4 75.053248260486328 5 75.053248260486328 6 75.053248260486328
+		 7 75.053248260486328 8 75.053248260486328 9 75.053248260486328 10 75.053248260486328
+		 11 75.053248260486328 12 -4.8764400477806875 13 31.987751502643377 14 30.458302521996792
+		 15 38.620620617860439 16 21.097926688135722;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0 0 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0 0 0 0;
 createNode animCurveTL -n "Spine_Top_Control_Joint_Ctrl_translateX";
 	rename -uid "3E5B48E4-459D-58E8-0FAC-9DBF4694C98C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
-		 10 0 11 0 12 2.8421709430404007e-13;
+	setAttr -s 17 ".ktv[0:16]"  0 5 1 5 2 5 3 5 4 5 5 5 6 5 7 5 8 5 9 5
+		 10 5 11 5 12 5 13 0.81713982600457324 14 0 15 0 16 5.2099161533232161;
 createNode animCurveTL -n "Spine_Top_Control_Joint_Ctrl_translateY";
 	rename -uid "ACD34204-472F-8612-28C6-5E93A9098476";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  0 0 1 0 2 0 3 0 4 0 5 96.44621170280206
-		 6 99.734947471838524 7 83.593047729439022 8 104.63148919799437 9 104.01921879157752
-		 10 101.24093339199587 11 95.780505841625398 12 6.8550816699069976;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 96.44621170280206
+		 6 99.734947471838524 7 83.593047729439022 8 108.72236131875917 9 112.95168146051631
+		 10 101.24093339199587 11 95.780505841625398 12 6.8550816699069976 13 6.1704289019035015
+		 14 0 15 -7.9655662552657542 16 -6.9416317037262116;
 createNode animCurveTL -n "Spine_Top_Control_Joint_Ctrl_translateZ";
 	rename -uid "4A18FF41-4B55-71BC-7D56-A6AC8D26D1E2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 13 ".ktv[0:12]"  0 -4.4408920985006262e-16 1 -4.4408920985006262e-16
+	setAttr -s 17 ".ktv[0:16]"  0 -4.4408920985006262e-16 1 -4.4408920985006262e-16
 		 2 -4.4408920985006262e-16 3 -4.4408920985006262e-16 4 -4.4408920985006262e-16 5 55.148016266144332
-		 6 78.911702126789294 7 49.112663563658316 8 23.717111703078707 9 25.970816338713451
-		 10 32.758045971092265 11 64.593299928088101 12 -13.469060096554163;
+		 6 78.911702126789294 7 49.112663563658316 8 19.316839302018398 9 15.814134479233761
+		 10 32.758045971092265 11 64.593299928088101 12 -13.469060096554163 13 -20.256264680742035
+		 14 0 15 13.694385816889595 16 21.973205555214186;
 createNode animCurveTL -n "R_reverse_foot_toe_Ctrl_translateX";
 	rename -uid "76F98585-4D72-5446-96B6-5CB8BC7477ED";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_reverse_foot_toe_Ctrl_translateY";
 	rename -uid "EE72D2E8-479F-EC95-51F5-699C7D3B3F08";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 -3.1554436208840472e-30 1 -3.1554436208840472e-30
-		 2 -3.1554436208840472e-30 3 -3.1554436208840472e-30 4 -3.1554436208840472e-30 6 -3.1554436208840472e-30;
+	setAttr -s 17 ".ktv[0:16]"  0 -3.1554436208840472e-30 1 -3.1554436208840472e-30
+		 2 -3.1554436208840472e-30 3 -3.1554436208840472e-30 4 -3.1554436208840472e-30 5 -3.1554436208840472e-30
+		 6 -3.1554436208840472e-30 7 -3.1554436208840472e-30 8 -3.1554436208840472e-30 9 -3.1554436208840472e-30
+		 10 -3.1554436208840472e-30 11 -3.1554436208840472e-30 12 -3.1554436208840472e-30
+		 13 -3.1554436208840472e-30 14 -3.1554436208840472e-30 15 -3.1554436208840472e-30
+		 16 -3.1554436208840472e-30;
 createNode animCurveTL -n "R_reverse_foot_toe_Ctrl_translateZ";
 	rename -uid "0B6093E3-4718-CBBB-F431-02B4FF08FC7B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Brow_2_Ctrl_translateX";
 	rename -uid "88D7D583-465D-8A57-2BFA-1094D02AEDF6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Brow_2_Ctrl_translateY";
 	rename -uid "644F1E54-495B-C1CF-053F-55A974FA2D7A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Brow_2_Ctrl_translateZ";
 	rename -uid "D4C8DD61-4B47-3133-DAAA-94960A1D0FDF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Sneer_Ctrl_translateX";
 	rename -uid "D3E5607C-42DF-CC3B-7742-9AAB53C39D55";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Sneer_Ctrl_translateY";
 	rename -uid "D8E22730-47F1-2CF1-293C-AA99C02148C9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Sneer_Ctrl_translateZ";
 	rename -uid "85F141FD-4BD3-5587-92DD-BAA5596A1E04";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Brow_3_Ctrl_translateX";
 	rename -uid "CC9E298B-4315-D624-35A6-B2BBF1281BD1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Brow_3_Ctrl_translateY";
 	rename -uid "B6E158CF-462E-0914-E7F8-B39754F58F02";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Brow_3_Ctrl_translateZ";
 	rename -uid "A892AB89-4EFC-56B0-85EE-C7B753857848";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Foot_IK_Ctrl_translateX";
 	rename -uid "A89000EC-4626-CC0C-AADE-45963B64A2A1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 -1.7763568394002505e-15 1 -1.7763568394002505e-15
-		 2 0 3 0 4 0 5 0 6 0 7 0 8 0;
+	setAttr -s 17 ".ktv[0:16]"  0 -1.7763568394002505e-15 1 -1.7763568394002505e-15
+		 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Foot_IK_Ctrl_translateY";
 	rename -uid "B15E1EA3-4779-8832-A668-A0BA60E6F102";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 -1.7763568394002505e-15 1 -1.7763568394002505e-15
+	setAttr -s 17 ".ktv[0:16]"  0 -1.7763568394002505e-15 1 -1.7763568394002505e-15
 		 2 73.779147047149976 3 14.855400056405543 4 29.247303872658378 5 55.254429041350917
-		 6 85.846131444404094 7 24.045458236327363 8 59.438882449038672;
+		 6 85.846131444404094 7 24.045458236327363 8 59.438882449038672 9 57.03259096212539
+		 10 49.147718096476709 11 39.811490668637646 12 30.265296496827744 13 20.669679413292684
+		 14 10.653483794921733 15 -1.4161815859024216 16 -1.4161815859024216;
 createNode animCurveTL -n "L_Foot_IK_Ctrl_translateZ";
 	rename -uid "E2AC845A-4356-8D8C-3A2C-2A9BBD7CF1BA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 -200.74878917638745 1 -200.74878917638745
+	setAttr -s 17 ".ktv[0:16]"  0 -200.74878917638745 1 -200.74878917638745
 		 2 -126.84756085478304 3 -16.624891035638335 4 21.086300826727747 5 60.091566954738639
-		 6 102.38278572788907 7 18.226230787179446 8 -103.92242726887142;
+		 6 102.38278572788907 7 18.226230787179446 8 -103.92242726887142 9 -94.396843656103201
+		 10 -63.226104301984165 11 -27.492056351133755 12 9.0041988782898628 13 45.56231553514435
+		 14 79.650477053263984 15 101.32700145027391 16 101.32700145027391;
 createNode animCurveTL -n "L_Lips_Pull_Ctrl_translateX";
 	rename -uid "6E7807E3-4D16-045B-6B34-789D65DF1737";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Lips_Pull_Ctrl_translateY";
 	rename -uid "F16F56E9-49C5-A377-9A57-278545F92B96";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Lips_Pull_Ctrl_translateZ";
 	rename -uid "F2ED81C8-496F-0D33-DF90-08B3EA61C083";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Upper_Outer_Lips_Ctrl_translateX";
 	rename -uid "994AF530-435B-D4A2-3337-13A72A3786B4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Upper_Outer_Lips_Ctrl_translateY";
 	rename -uid "B9B8D205-41FE-93A3-E055-85A42DD91DC4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Upper_Outer_Lips_Ctrl_translateZ";
 	rename -uid "9E8E05E1-438C-1F3E-9E86-ADBC925C57F4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Hair_Ctrl_Jnt_2_Ctrl_translateX";
 	rename -uid "C4A2FC68-4DBD-110F-56E3-D2B5841B213B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Hair_Ctrl_Jnt_2_Ctrl_translateY";
 	rename -uid "79978D7B-4FF4-97C3-4A85-47BDE2B6CEBD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Hair_Ctrl_Jnt_2_Ctrl_translateZ";
 	rename -uid "175423E0-4DA9-50D3-8A8B-AEBBC8270F02";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Lower_Middle_Lips_Ctrl_translateX";
 	rename -uid "E63660EB-449D-2453-24D1-D2965CBA1EB0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Lower_Middle_Lips_Ctrl_translateY";
 	rename -uid "E0B2C79B-4037-BA14-2C57-AD9277CF8ED5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Lower_Middle_Lips_Ctrl_translateZ";
 	rename -uid "8A070FA6-4241-5599-E04F-64B672B6F79A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Lips_Pull_Ctrl_translateX";
 	rename -uid "24C0270D-44B7-DAB6-1916-BA9F110D76F4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Lips_Pull_Ctrl_translateY";
 	rename -uid "E619A4A8-4A84-AC56-325B-11B0AC538882";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Lips_Pull_Ctrl_translateZ";
 	rename -uid "9ED3333B-423C-EB63-0DF7-9BAA131DA873";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Knee_PV_Ctrl_translateX";
 	rename -uid "1002427D-48DC-3AAE-0C8B-499D8877407D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 29.613653809484369 1 29.613653809484369
-		 2 29.613653809484369 3 29.613653809484369 4 29.613653809484369 6 -28.364547702070123;
+	setAttr -s 17 ".ktv[0:16]"  0 29.613653809484369 1 29.613653809484369
+		 2 29.613653809484369 3 29.613653809484369 4 29.613653809484369 5 0.62455305370711045
+		 6 -28.364547702070123 7 -28.364547702070123 8 -28.364547702070123 9 -28.364547702070123
+		 10 -28.364547702070123 11 -28.364547702070123 12 -28.364547702070123 13 -28.364547702070123
+		 14 -28.364547702070123 15 -28.364547702070123 16 -28.364547702070123;
 createNode animCurveTL -n "R_Knee_PV_Ctrl_translateY";
 	rename -uid "0BEDBD15-4798-4BBB-69E3-1C8292AFEE2A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 37.636443106604169 1 37.636443106604169
-		 2 37.636443106604169 3 37.636443106604169 4 37.636443106604169 6 26.797150692618725;
+	setAttr -s 17 ".ktv[0:16]"  0 37.636443106604169 1 37.636443106604169
+		 2 37.636443106604169 3 37.636443106604169 4 37.636443106604169 5 32.216796899611445
+		 6 26.797150692618725 7 26.797150692618725 8 26.797150692618725 9 26.797150692618725
+		 10 26.797150692618725 11 26.797150692618725 12 26.797150692618725 13 26.797150692618725
+		 14 26.797150692618725 15 26.797150692618725 16 26.797150692618725;
 createNode animCurveTL -n "R_Knee_PV_Ctrl_translateZ";
 	rename -uid "7513CDC7-48E9-E4D5-3451-8D8FFAE77B15";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 -3.9418421721747915e-15 1 -3.9418421721747915e-15
-		 2 -3.9418421721747915e-15 3 -3.9418421721747915e-15 4 -3.9418421721747915e-15 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 -3.9418421721747915e-15 1 -3.9418421721747915e-15
+		 2 -3.9418421721747915e-15 3 -3.9418421721747915e-15 4 -3.9418421721747915e-15 5 -1.9709210860873949e-15
+		 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Cheek_Ctrl_translateX";
 	rename -uid "81AD2620-4DF0-61AC-4CB7-858EAA81F054";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Cheek_Ctrl_translateY";
 	rename -uid "904EE22B-4083-0412-A68E-858D8B506331";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Cheek_Ctrl_translateZ";
 	rename -uid "EC5D77B2-41F4-8FB9-B003-EFB1F0325481";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Eyelid_Lower_Ctrl_translateX";
 	rename -uid "1DF0C714-464E-38DB-5190-B3B07F7610F9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Eyelid_Lower_Ctrl_translateY";
 	rename -uid "140E69C9-44BB-712D-9B05-A789489F6F05";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Eyelid_Lower_Ctrl_translateZ";
 	rename -uid "749315AE-495A-BCCA-367B-9EA7E96F74B7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_toeTap_Ctrl_translateX";
 	rename -uid "D3E206B2-4AF2-A2F1-5093-C3B2F8F95E86";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_toeTap_Ctrl_translateY";
 	rename -uid "EBBED875-4B41-428F-6FEA-8F9C532485EB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_toeTap_Ctrl_translateZ";
 	rename -uid "F541465F-4CC9-F6D8-190A-158F24393566";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Upper_Corner_Lips_Ctrl_translateX";
 	rename -uid "E6980B81-48DA-8755-A4CC-17A07A66461A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Upper_Corner_Lips_Ctrl_translateY";
 	rename -uid "BF130B30-46A8-2E21-90EC-3DACC978716D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Upper_Corner_Lips_Ctrl_translateZ";
 	rename -uid "57AD7439-4B93-5F2D-65DE-F29366CBC207";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Eye_Ctrl_translateX";
 	rename -uid "26CBEF9A-4EDF-E73A-94AD-BF805CA63919";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Eye_Ctrl_translateY";
 	rename -uid "7FF8E8CE-4910-44FA-9E77-FEBA30B2BB41";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Eye_Ctrl_translateZ";
 	rename -uid "B4BF13A7-465C-824D-5218-709097A5E8EA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_reverse_foot_heel_Ctrl_translateX";
 	rename -uid "5C0A5E03-45A4-C0BC-A5B2-2A9E77C4EB2E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_reverse_foot_heel_Ctrl_translateY";
 	rename -uid "CA973547-4B78-F1AF-D1E1-ACAE67ABF269";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_reverse_foot_heel_Ctrl_translateZ";
 	rename -uid "4B48AEDF-453D-EAC8-C606-C5B843398961";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Clavicle_Jnt_Ctrl_translateX";
 	rename -uid "27491491-4C19-8AE4-257B-5CB7C5DA8180";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 0 1 0 2 0 3 0 4 0 6 0 9 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Clavicle_Jnt_Ctrl_translateY";
 	rename -uid "5B263D97-4C55-A29C-2DB6-9AA70921402F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 0 1 0 2 0 3 0 4 0 6 0 9 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Clavicle_Jnt_Ctrl_translateZ";
 	rename -uid "BE9B1485-4793-68E4-2F26-179109530499";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  0 0 1 0 2 0 3 0 4 0 6 0 9 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Arm_01_Jnt_IK_Ctrl_translateX";
 	rename -uid "129F584D-42FA-DDBB-9694-CCB21E0A6009";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Arm_01_Jnt_IK_Ctrl_translateY";
 	rename -uid "96E035BF-43D4-25D3-79F0-23AD0CC757E7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Arm_01_Jnt_IK_Ctrl_translateZ";
 	rename -uid "3BDA22E6-4A17-0A13-FE55-9FBAE31AF980";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Brow_3_Ctrl_translateX";
 	rename -uid "1823C19D-478E-EE9D-2D65-E0B70188F720";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Brow_3_Ctrl_translateY";
 	rename -uid "EA202700-4C03-204D-5318-04AE421F862D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Brow_3_Ctrl_translateZ";
 	rename -uid "F1059730-4691-EB3F-F6DC-FDA590F4E94B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Brow_1_Ctrl_translateX";
 	rename -uid "97FBAB62-46FE-598D-2223-54AF17E5FB98";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Brow_1_Ctrl_translateY";
 	rename -uid "2F4E14B1-4A2A-EED7-A5A2-79880897724C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Brow_1_Ctrl_translateZ";
 	rename -uid "1011B733-4988-387E-32E5-D39CF2B5E966";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_toe_Ctrl_translateX";
 	rename -uid "52F32345-4B63-B5FE-5C62-53B875C96CEC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_toe_Ctrl_translateY";
 	rename -uid "3AE9FA25-46DC-6302-2EE1-AD9FAB25365E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_toe_Ctrl_translateZ";
 	rename -uid "74A990A3-4B4D-F1F7-2700-3F98AE1AEB89";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Lower_Lip_Ctrl_translateX";
 	rename -uid "D5872BB5-460D-7C19-D3A1-9F87471A8D91";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Lower_Lip_Ctrl_translateY";
 	rename -uid "0B51689E-44BD-8161-A9E2-CB936F45F086";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Lower_Lip_Ctrl_translateZ";
 	rename -uid "C72EC490-4D9F-BB61-7A46-DB847B7C2690";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Brow_Cluster_Ctrl_translateX";
 	rename -uid "E7D31919-4F5C-4B02-D168-80B577B29676";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Brow_Cluster_Ctrl_translateY";
 	rename -uid "59E91352-4761-1B75-BBBB-4186C6C7BEA5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Brow_Cluster_Ctrl_translateZ";
 	rename -uid "EEF4B9D4-4FAA-49C8-BEAA-B8AFC619A546";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Face_Controls_translateX";
 	rename -uid "0C12D31B-474C-711B-F6A3-03B7C7B9ED8C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Face_Controls_translateY";
 	rename -uid "D172281A-45C2-40D1-9A9B-64AE74DFB5FE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Face_Controls_translateZ";
 	rename -uid "0FA061E0-4D9B-7DDB-E8BC-1FA557EBABB8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_reverse_foot_toeTap_Ctrl_translateX";
 	rename -uid "86689FCB-48B1-CEAC-8FAD-4899893CE040";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_reverse_foot_toeTap_Ctrl_translateY";
 	rename -uid "2A4A756A-44A6-D798-DCBF-20B0CF58F189";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_reverse_foot_toeTap_Ctrl_translateZ";
 	rename -uid "7DDC0008-4936-B3E2-2FC8-7E8880F1882C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Hip_IK_Ctrl_translateX";
 	rename -uid "985A2546-4DCE-E6C0-E88B-BA9B681E06D9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Hip_IK_Ctrl_translateY";
 	rename -uid "33E990C3-41FF-F694-DAE5-2BB08641810A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Hip_IK_Ctrl_translateZ";
 	rename -uid "3BF6060E-4A0A-CC6D-98A9-09AAC160B82F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Mouth_Move_Ctrl_translateX";
 	rename -uid "7EA08B30-42CB-275B-A15D-C794085AD192";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Mouth_Move_Ctrl_translateY";
 	rename -uid "3E4CE785-4CE8-E6CF-4D12-2E8693A9615F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "Mouth_Move_Ctrl_translateZ";
 	rename -uid "F8A136B9-42DB-C297-0476-61A61FA57491";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_inner_Ctrl_translateX";
 	rename -uid "5BAA6ACE-450C-2D32-F3E2-8BB615905921";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_inner_Ctrl_translateY";
 	rename -uid "E5214112-4E7B-B6FC-3925-DC8B054B6491";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_reverse_foot_inner_Ctrl_translateZ";
 	rename -uid "65A5DCFF-4F8A-915A-5CD5-9C874F2BD64B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Nose_Ctrl_rotateX";
 	rename -uid "7B22375E-4E40-46F3-6336-73B028F0FAAD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Nose_Ctrl_rotateY";
 	rename -uid "DB61FC2D-4D77-76AA-B6AB-05B8976C03E0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Nose_Ctrl_rotateZ";
 	rename -uid "9FECF5ED-4C3A-E8AA-1934-8981D6B12FF8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Brow_Cluster_Ctrl_rotateX";
 	rename -uid "8E606081-48FE-21FF-5C18-58A178598721";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Brow_Cluster_Ctrl_rotateY";
 	rename -uid "87F3B6B5-480C-ADDB-3044-75BEB8792A14";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Brow_Cluster_Ctrl_rotateZ";
 	rename -uid "8C626E15-4489-AFA8-6555-DCA234F12F20";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Pick2_Ctrl_rotateX";
 	rename -uid "47482147-4839-89C9-3884-15BD0B3AE9EC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 6 0 11 0 12 142.05724790367626;
-	setAttr -s 8 ".kit[6:7]"  1 18;
-	setAttr -s 8 ".kot[6:7]"  1 18;
-	setAttr -s 8 ".kix[6:7]"  1 1;
-	setAttr -s 8 ".kiy[6:7]"  0 0;
-	setAttr -s 8 ".kox[6:7]"  1 1;
-	setAttr -s 8 ".koy[6:7]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 142.05724790367626 13 142.05724790367626 14 142.05724790367626 15 142.05724790367626
+		 16 142.05724790367626;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0 0 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0 0 0 0;
 createNode animCurveTA -n "Pick2_Ctrl_rotateY";
 	rename -uid "385E4E15-4BAE-03E7-3516-6DAEFC35F2B8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 6 0 11 0 12 32.090007062156971;
-	setAttr -s 8 ".kit[6:7]"  1 18;
-	setAttr -s 8 ".kot[6:7]"  1 18;
-	setAttr -s 8 ".kix[6:7]"  1 1;
-	setAttr -s 8 ".kiy[6:7]"  0 0;
-	setAttr -s 8 ".kox[6:7]"  1 1;
-	setAttr -s 8 ".koy[6:7]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 32.090007062156971 13 32.090007062156971 14 32.090007062156971 15 32.090007062156971
+		 16 32.090007062156971;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0 0 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0 0 0 0;
 createNode animCurveTA -n "Pick2_Ctrl_rotateZ";
 	rename -uid "78349FA8-404C-110E-C5AB-9F8B0C217B42";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 -31.268410232533558 6 -31.268410232533558
-		 11 -31.268410232533558 12 -57.771562775905743;
-	setAttr -s 8 ".kit[6:7]"  1 18;
-	setAttr -s 8 ".kot[6:7]"  1 18;
-	setAttr -s 8 ".kix[6:7]"  1 1;
-	setAttr -s 8 ".kiy[6:7]"  0 0;
-	setAttr -s 8 ".kox[6:7]"  1 1;
-	setAttr -s 8 ".koy[6:7]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 -31.268410232533558 5 -31.268410232533558
+		 6 -31.268410232533558 7 -31.268410232533558 8 -31.268410232533558 9 -31.268410232533558
+		 10 -31.268410232533558 11 -31.268410232533558 12 -57.771562775905743 13 -57.771562775905743
+		 14 -57.771562775905743 15 -57.771562775905743 16 -57.771562775905743;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0 0 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0 0 0 0;
 createNode animCurveTA -n "R_reverse_foot_outer_Ctrl_rotateX";
 	rename -uid "2DE80555-469C-7DFC-CCAD-97874CE64FE6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_reverse_foot_outer_Ctrl_rotateY";
 	rename -uid "C3A28DBC-48FE-42C7-DE78-439E4FC4EDF1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_reverse_foot_outer_Ctrl_rotateZ";
 	rename -uid "2FB94069-4072-05D4-90C0-4D80A90E5315";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Spine_Mid_Control_Joint_Ctrl_rotateX";
 	rename -uid "0460E8BF-46EA-C027-4ECD-FA9A3D6ABF6D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Spine_Mid_Control_Joint_Ctrl_rotateY";
 	rename -uid "02AE7CFA-4692-F84D-C7F1-03ACE59AD750";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Spine_Mid_Control_Joint_Ctrl_rotateZ";
 	rename -uid "9F1D05AE-486D-CBC2-1783-7292AA9689BB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Hip_IK_Ctrl_rotateX";
 	rename -uid "A81A16CF-4F9E-9F04-09F9-2FAB9462A46E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Hip_IK_Ctrl_rotateY";
 	rename -uid "1A384846-4AFE-5C02-BE21-17B6B5FF97A7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Hip_IK_Ctrl_rotateZ";
 	rename -uid "57EE9A03-4E55-3C7D-6D34-96A4AADDB9E3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Arm_PV_Ctrl_rotateX";
 	rename -uid "22ED0AA1-4728-DCEF-04F9-7E91077DC053";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 0 4 0 5 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Arm_PV_Ctrl_rotateY";
 	rename -uid "57A0469F-4D97-464C-9C01-0188F332BA39";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 0 4 0 5 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Arm_PV_Ctrl_rotateZ";
 	rename -uid "72253190-4060-EBAE-C8D2-E4A324B8A4A8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 0 4 0 5 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Lower_Outer_Lips_Ctrl_rotateX";
 	rename -uid "92160B73-48A2-EB08-F459-50A4EC6F0D32";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Lower_Outer_Lips_Ctrl_rotateY";
 	rename -uid "6150C277-4189-203E-BC71-73985AA03EDC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Lower_Outer_Lips_Ctrl_rotateZ";
 	rename -uid "E4129F2C-4BC6-70BF-C3B1-A1B41CB3D2A0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Lower_Corner_Lips_Ctrl_rotateX";
 	rename -uid "4CF9A85E-4F3A-9288-8341-4EB3351BB710";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Lower_Corner_Lips_Ctrl_rotateY";
 	rename -uid "8D20206B-482D-88C3-80EB-85B976D04586";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Lower_Corner_Lips_Ctrl_rotateZ";
 	rename -uid "9E4F89B8-499D-0CD2-49CA-32907F33B085";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Arm_01_Jnt_IK_Ctrl_rotateX";
 	rename -uid "82FDD84F-4DB8-A88C-A714-9E9FFC7F48BD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Arm_01_Jnt_IK_Ctrl_rotateY";
 	rename -uid "DBCFA453-4C1B-C1F4-EA8A-3FAB53FD5A21";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Arm_01_Jnt_IK_Ctrl_rotateZ";
 	rename -uid "DB3418E0-45BD-703B-23B6-F49BD82A17B4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Lower_Outer_Lips_Ctrl_rotateX";
 	rename -uid "9551897B-41A6-12D1-DF1F-6E8D7450911A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Lower_Outer_Lips_Ctrl_rotateY";
 	rename -uid "1491A5D7-4B16-9D58-36BC-7DA173B5860C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Lower_Outer_Lips_Ctrl_rotateZ";
 	rename -uid "24A65AEB-49E3-ABA7-1826-3F9C57CF23B7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Squint_Ctrl_rotateX";
 	rename -uid "1233B5F4-4A0E-529B-4ABB-24A102C82FF4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Squint_Ctrl_rotateY";
 	rename -uid "6E8231E5-47AA-2F14-A637-459657D9E08E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Squint_Ctrl_rotateZ";
 	rename -uid "5CD38090-4B09-CA73-CFB8-C7A2A8AFEE95";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Brow_1_Ctrl_rotateX";
 	rename -uid "E41B4930-44E1-CB9A-E515-E9A5D0532E6B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Brow_1_Ctrl_rotateY";
 	rename -uid "9628E936-4766-921A-6D81-4E88A08BEE8C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Brow_1_Ctrl_rotateZ";
 	rename -uid "A3BB9F93-45F2-889B-A5A8-81BA728D3A31";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Transform_Control_rotateX";
 	rename -uid "87A34E23-4994-62CF-6329-39B1111A9EE1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 12 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Transform_Control_rotateY";
 	rename -uid "4B62B711-4300-E854-35E8-AEB3D1D3773C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 12 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Transform_Control_rotateZ";
 	rename -uid "69753520-4BE6-D6D1-ACD2-978190913341";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 12 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateX";
 	rename -uid "DBF8081C-45A3-D8E6-E232-9BAA94A5D286";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateY";
 	rename -uid "2F14176F-46E3-2D21-51FF-FF9E21EDC819";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateZ";
 	rename -uid "4F246AFC-4885-1024-E0A5-ADAC33F21196";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Eyelid_Upper_Ctrl_rotateX";
 	rename -uid "C0594672-45C2-ADDD-39F7-C5BDA401EAA2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Eyelid_Upper_Ctrl_rotateY";
 	rename -uid "CAA9BA63-492D-3814-B1DA-93A2313135EE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Eyelid_Upper_Ctrl_rotateZ";
 	rename -uid "0293E5AE-4195-BB60-62AE-50BF23F1C75B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Lower_Corner_Lips_Ctrl_rotateX";
 	rename -uid "522244A7-4713-DCC2-AF5D-E39881C70EA3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Lower_Corner_Lips_Ctrl_rotateY";
 	rename -uid "97575F38-42E3-1C7B-F67C-08BEDA96660A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Lower_Corner_Lips_Ctrl_rotateZ";
 	rename -uid "0D875AE0-4B7D-8A31-E775-7BB9DB601913";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Cog_Ctrl_rotateX";
 	rename -uid "BB050B9B-4EF2-BE6C-1E14-D3B5756DCD5B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  0 15.173448321177901 1 15.173448321177901
+	setAttr -s 17 ".ktv[0:16]"  0 15.173448321177901 1 15.173448321177901
 		 2 15.173448321177901 3 15.173448321177901 4 15.173448321177901 5 -10.925546463522794
 		 6 -72.647546700554898 7 -0.11625891038608729 8 42.012517295738967 9 68.919464572272105
-		 10 40.275924053072096 11 -33.679813568508827;
+		 10 40.275924053072096 11 -33.679813568508827 12 -33.679813568508827 13 -9.3584455680343854
+		 14 -9.3584455680343854 15 -9.3584455680343854 16 12.819380275507644;
 createNode animCurveTA -n "Cog_Ctrl_rotateY";
 	rename -uid "6EC92582-4DF9-9319-A70C-C0A720FFD829";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
-		 10 0 11 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Cog_Ctrl_rotateZ";
 	rename -uid "412DCADA-41EA-3700-ED9A-76B5B760395E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 12 ".ktv[0:11]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
-		 10 0 11 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Head_Ctrl_rotateX";
 	rename -uid "59F1294A-47CE-A15A-C482-9B9D5A1245C6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 -36.99259901758824 1 -29.886167302285987
+	setAttr -s 17 ".ktv[0:16]"  0 -36.99259901758824 1 -29.886167302285987
 		 2 -16.648195455747622 3 -32.841795760798192 4 -32.841795760798192 5 -3.7919255121454105
-		 6 26.465739789705822 9 -12.147055222383463 11 14.228295427776889;
+		 6 26.465739789705822 7 16.455015156941922 8 -1.0637529503948666 9 -12.147055222383463
+		 10 1.0406201026967248 11 14.228295427776889 12 14.228295427776889 13 14.228295427776889
+		 14 14.228295427776889 15 14.228295427776889 16 14.228295427776889;
 createNode animCurveTA -n "Head_Ctrl_rotateY";
 	rename -uid "71C5C172-4B22-B0F0-5358-BEB183161EC5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 11.23582993390834 1 11.235829933908347
+	setAttr -s 17 ".ktv[0:16]"  0 11.23582993390834 1 11.235829933908347
 		 2 -9.0928478059467608 3 -20.27997274486923 4 -20.27997274486923 5 -13.889969298111788
-		 6 -7.4999658513542951 9 -7.4999658513542675 11 -7.4999658513542657;
+		 6 -7.4999658513542951 7 -7.4999658513542879 8 -7.4999658513542791 9 -7.4999658513542675
+		 10 -7.4999658513542657 11 -7.4999658513542657 12 -7.4999658513542657 13 -7.4999658513542657
+		 14 -7.4999658513542657 15 -7.4999658513542657 16 -7.4999658513542657;
 createNode animCurveTA -n "Head_Ctrl_rotateZ";
 	rename -uid "43E33176-4A06-60B5-5E65-A3BEA66B0E0E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 -2.4319924966047259 1 -2.4319924966047219
+	setAttr -s 17 ".ktv[0:16]"  0 -2.4319924966047259 1 -2.4319924966047219
 		 2 -0.26509112710109994 3 5.682275036556347 4 5.682275036556347 5 4.4942477332958815
-		 6 3.3062204300354012 9 3.3062204300353901 11 3.3062204300353919;
+		 6 3.3062204300354012 7 3.3062204300353986 8 3.3062204300353946 9 3.3062204300353901
+		 10 3.306220430035391 11 3.3062204300353919 12 3.3062204300353919 13 3.3062204300353919
+		 14 3.3062204300353919 15 3.3062204300353919 16 3.3062204300353919;
 createNode animCurveTA -n "Gun_Ctrl_rotateX";
 	rename -uid "3C04863C-4A59-9974-3D67-CFB55DAC7F8B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Gun_Ctrl_rotateY";
 	rename -uid "335C176C-4A3A-51FF-7A94-75B0B45B536D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Gun_Ctrl_rotateZ";
 	rename -uid "4817C596-47AD-CB43-BE64-0C9E0090CD3C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_reverse_foot_ball_Ctrl_rotateX";
 	rename -uid "9B7BF03E-4876-087E-CF03-A28F7A58CDB2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 56.735441922794109 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 56.735441922794109 1 0 2 0 3 0 4 0 5 0
+		 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_reverse_foot_ball_Ctrl_rotateY";
 	rename -uid "44DD7D01-4F23-A355-A5AB-299FCFC8F8FE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_reverse_foot_ball_Ctrl_rotateZ";
 	rename -uid "06622441-49EE-AC3C-47A2-4E85ECD68CE9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Hair_Ctrl_Jnt_3_Ctrl_rotateX";
 	rename -uid "AB5E5F60-4AA8-1015-ABAE-0B9AC387A89A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Hair_Ctrl_Jnt_3_Ctrl_rotateY";
 	rename -uid "E05EAE1A-4704-2B15-2A12-6AA74DEAC0A4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Hair_Ctrl_Jnt_3_Ctrl_rotateZ";
 	rename -uid "92C1F698-4994-9C19-2755-CE9AAAEF19F1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_reverse_foot_ball_Ctrl_rotateX";
 	rename -uid "0E09902D-4A2A-CE4B-FCDF-CEA3E2C26946";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 24.377964805991883 1 43.927930524807877
-		 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 24.377964805991883 1 43.927930524807877
+		 2 0 3 0 4 0 5 0 6 0 7 0.44335451490695893 8 2.0179648250746403 9 5.5596930234200022
+		 10 9.2508278981633953 11 12.874606431880895 12 16.371014443928246 13 19.713590169131585
+		 14 23.175950403663581 15 31.633977676433542 16 64.950555631064717;
 createNode animCurveTA -n "L_reverse_foot_ball_Ctrl_rotateY";
 	rename -uid "32F6FB3E-40B1-1940-A835-B188DA560524";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_reverse_foot_ball_Ctrl_rotateZ";
 	rename -uid "395A6A30-477F-E958-7251-C783155CAD6A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_reverse_foot_heel_Ctrl_rotateX";
 	rename -uid "5AD0187E-488E-E30E-766D-2CA62FE0BD49";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_reverse_foot_heel_Ctrl_rotateY";
 	rename -uid "4DDB0DD5-4AD7-9527-8722-6AB71B8483D6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_reverse_foot_heel_Ctrl_rotateZ";
 	rename -uid "D36F1C5F-44B5-3DB1-0242-95B303069EEB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Pelvis_Ctrl_rotateX";
 	rename -uid "84E8F005-4392-2CB6-30C5-7996F3659E6A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 -15.634981769359001 1.7006802721088437e-07 -17.992680298208736
+	setAttr -s 18 ".ktv[0:17]"  0 -15.634981769359001 1.7006802721088437e-07 -17.992680298208736
 		 1 28.133648161891397 2 28.133648161891397 3 28.133648161891397 4 28.133648161891397
-		 6 0 10 0 11 0;
+		 5 14.06682408094569 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Pelvis_Ctrl_rotateY";
 	rename -uid "2040EADC-4D4B-A977-99D4-899A1C5B5C0C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 1.7006802721088437e-07 0 1 -8.4181301777286368
-		 2 -8.4181301777286368 3 -8.4181301777286368 4 -8.4181301777286368 6 0 10 0 11 0;
+	setAttr -s 18 ".ktv[0:17]"  0 0 1.7006802721088437e-07 0 1 -8.4181301777286368
+		 2 -8.4181301777286368 3 -8.4181301777286368 4 -8.4181301777286368 5 -4.2090650888643166
+		 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Pelvis_Ctrl_rotateZ";
 	rename -uid "B2B52468-4744-75D2-FCF1-49ABF077820D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 1.7006802721088437e-07 0 1 -4.4759139170409208
-		 2 -4.4759139170409208 3 -4.4759139170409208 4 -4.4759139170409208 6 -39.192148486063537
-		 10 -15.478078334997459 11 -61.479110344886081;
+	setAttr -s 18 ".ktv[0:17]"  0 0 1.7006802721088437e-07 0 1 -4.4759139170409208
+		 2 -4.4759139170409208 3 -4.4759139170409208 4 -4.4759139170409208 5 -21.834031201552239
+		 6 -39.192148486063537 7 -35.486825024959465 8 -27.66447549596198 9 -19.903881357982886
+		 10 -15.478078334997459 11 -61.479110344886081 12 -61.479110344886081 13 -46.269456518869731
+		 14 -21.689548411543949 15 -5.2575846570299554 16 -5.2575846570299554;
 createNode animCurveTA -n "Pick_Holster_Ctrl_rotateX";
 	rename -uid "F7A75A55-462F-EC95-7B02-F0B49113D1E2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Pick_Holster_Ctrl_rotateY";
 	rename -uid "D4C39E64-4ECE-F794-DA1F-AE8D0A564AFA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Pick_Holster_Ctrl_rotateZ";
 	rename -uid "F373FC41-4DE1-E39F-15DA-E697F0C6E512";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Squint_Ctrl_rotateX";
 	rename -uid "CEF1E7F5-4891-5982-0BAD-40B4AAE51137";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Squint_Ctrl_rotateY";
 	rename -uid "027CDF59-418F-768F-9839-F99CA5761792";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Squint_Ctrl_rotateZ";
 	rename -uid "4E0FD86E-4DEC-2EF8-7200-FDA49364AFA5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Look_Ctrl_rotateX";
 	rename -uid "BB054C6C-4A9C-546B-454B-B9A8DD1D4508";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Look_Ctrl_rotateY";
 	rename -uid "AC605F87-40C5-69F1-1009-119FFB6D3285";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Look_Ctrl_rotateZ";
 	rename -uid "1B612244-4191-A699-2939-7A989AA3C0DB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_reverse_foot_inner_Ctrl_rotateX";
 	rename -uid "9F8D35A3-48C8-05CF-643B-54A371D181F9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_reverse_foot_inner_Ctrl_rotateY";
 	rename -uid "29EC5503-451A-7683-9A90-2A90356A3FB8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_reverse_foot_inner_Ctrl_rotateZ";
 	rename -uid "9B3B6B94-4C3A-6EDD-4956-1D9E8126B40A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Upper_Outer_Lips_Ctrl_rotateX";
 	rename -uid "D22D3F77-4E94-C0D0-8F1D-51A6D433622C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Upper_Outer_Lips_Ctrl_rotateY";
 	rename -uid "5EE5E936-491A-B296-C7AE-48A50819FF4D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Upper_Outer_Lips_Ctrl_rotateZ";
 	rename -uid "4DB5DDCF-4DFF-265C-82BB-BC8AE0377BA9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Hand_IK_Ctrl_rotateX";
 	rename -uid "D6376982-4B3A-E529-8D93-5EBE60BFF8D9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 5 -142.40389041659205 6 -141.22387170137364
-		 11 -141.22387170137364 12 -146.95824318461968;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  1 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 -14.810004603325567 2 -50.766986933515049
+		 3 -88.701801075046106 4 -123.1892543694088 5 -142.40389041659205 6 -141.22387170137364
+		 7 -141.22387170137364 8 -141.22387170137364 9 -141.22387170137364 10 -141.22387170137364
+		 11 -141.22387170137364 12 -115.17914968087847 13 -134.10450976429212 14 -120.58751159851677
+		 15 -93.978795201029115 16 -55.554200374018329;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 1 0.1181586580681154 0.073221425394592698 
+		1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0 0.99299472884982731 0.9973157087217589 
+		0;
+	setAttr -s 17 ".kox[11:16]"  1 1 1 0.1181586580681154 0.073221425394592698 
+		1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0 0.99299472884982731 0.9973157087217589 
+		0;
 createNode animCurveTA -n "L_Hand_IK_Ctrl_rotateY";
 	rename -uid "B33705EF-4076-795B-789B-3495475484BD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 5 2.4733531555650625 6 -13.283501871209079
-		 11 -13.283501871209079 12 22.266695657493834;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  1 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0.25722872817876641 2 0.88175039995894466
+		 3 1.5406241988997489 4 2.1396222401995821 5 2.4733531555650625 6 -13.283501871209079
+		 7 -13.283501871209079 8 -13.283501871209079 9 -13.283501871209079 10 -13.283501871209079
+		 11 -13.283501871209079 12 34.413646232762531 13 -18.571817367811903 14 -44.637384645162172
+		 15 -55.686295043187414 16 0.7681014291093311;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 0.060289698694809817 0.1275950060328257 
+		1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 -0.99818092159251814 -0.9918263529648137 
+		0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 0.060289698694809823 0.1275950060328257 
+		1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 -0.99818092159251826 -0.9918263529648137 
+		0 0;
 createNode animCurveTA -n "L_Hand_IK_Ctrl_rotateZ";
 	rename -uid "105F22FE-418E-7947-1389-70B50F7A7601";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 5 103.11066153834361 6 90.749430816907079
-		 11 90.749430816907079 12 115.21958582900312;
-	setAttr -s 5 ".kit[3:4]"  1 18;
-	setAttr -s 5 ".kot[3:4]"  1 18;
-	setAttr -s 5 ".kix[3:4]"  1 1;
-	setAttr -s 5 ".kiy[3:4]"  0 0;
-	setAttr -s 5 ".kox[3:4]"  1 1;
-	setAttr -s 5 ".koy[3:4]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 10.723508799987732 2 36.758950838419487
+		 3 64.22648539821715 4 89.197882693274053 5 103.11066153834361 6 90.749430816907079
+		 7 90.749430816907079 8 90.749430816907079 9 90.749430816907079 10 90.749430816907079
+		 11 90.749430816907079 12 88.069567629764308 13 64.861244653715246 14 40.432187828035858
+		 15 14.388856173443205 16 -18.505115776085763;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 0.28466085783131984 0.099729346755998732 
+		0.094178749515846677 0.080747789624724578 1;
+	setAttr -s 17 ".kiy[11:16]"  0 -0.95862828876407402 -0.99501460159920352 
+		-0.99555530390814129 -0.99673456570479246 0;
+	setAttr -s 17 ".kox[11:16]"  1 0.28466085783131984 0.099729346755998732 
+		0.094178749515846677 0.080747789624724578 1;
+	setAttr -s 17 ".koy[11:16]"  0 -0.95862828876407424 -0.99501460159920352 
+		-0.99555530390814129 -0.99673456570479246 0;
 createNode animCurveTA -n "L_Sneer_Ctrl_rotateX";
 	rename -uid "6A306DA2-48D3-F2B8-41FB-EFAC5412531B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Sneer_Ctrl_rotateY";
 	rename -uid "DF2F3C9E-458C-E86D-A5BE-BFA521E2A093";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Sneer_Ctrl_rotateZ";
 	rename -uid "5D128E19-49CE-146F-FF14-3DB559A63489";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Eye_Ctrl_rotateX";
 	rename -uid "2F1CF1DB-49E6-B4DA-29F6-39A1679D3F33";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Eye_Ctrl_rotateY";
 	rename -uid "448DCF3A-42CE-975E-4559-56838B26104C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Eye_Ctrl_rotateZ";
 	rename -uid "2248186A-423B-F3B4-CAE5-3FA4B644C747";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Cheek_Ctrl_rotateX";
 	rename -uid "2F8FF07E-4C6F-DE20-DD9C-B28A85D64FDC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Cheek_Ctrl_rotateY";
 	rename -uid "F81162A5-4034-5FFA-5B86-AFBE4F372862";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Cheek_Ctrl_rotateZ";
 	rename -uid "CE56F2BA-4B91-3367-8445-A981E6C3670F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Upper_Middle_Lips_Ctrl_rotateX";
 	rename -uid "6C8FD1D7-4288-97BF-241A-85A455E639E8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Upper_Middle_Lips_Ctrl_rotateY";
 	rename -uid "A1466701-4D18-C0A8-5683-799BF94476EA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Upper_Middle_Lips_Ctrl_rotateZ";
 	rename -uid "6F99F940-426B-54A2-8C44-948CAF976AE6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Arm_PV_Ctrl_rotateX";
 	rename -uid "74C61317-405D-6C1E-2498-8CA0F054F0E0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 5 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Arm_PV_Ctrl_rotateY";
 	rename -uid "BB1F3FA1-4C70-DE31-B01A-5C85F0840248";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 5 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Arm_PV_Ctrl_rotateZ";
 	rename -uid "6E597047-4172-71D8-9AC3-7EB32E917711";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 5 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Pick1_Ctrl_rotateX";
 	rename -uid "07DFA300-4164-A77B-EB65-07825D3EB332";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 11 0 12 -52.250296968228383;
-	setAttr -s 9 ".kit[7:8]"  1 18;
-	setAttr -s 9 ".kot[7:8]"  1 18;
-	setAttr -s 9 ".kix[7:8]"  1 1;
-	setAttr -s 9 ".kiy[7:8]"  0 0;
-	setAttr -s 9 ".kox[7:8]"  1 1;
-	setAttr -s 9 ".koy[7:8]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 -52.250296968228383 13 -52.250296968228383 14 -52.250296968228383 15 -52.250296968228383
+		 16 -52.250296968228383;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0 0 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0 0 0 0;
 createNode animCurveTA -n "Pick1_Ctrl_rotateY";
 	rename -uid "0E1D0A9A-4F31-C59D-DF1C-1CA07A355D29";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 11 0 12 -208.79386180273676;
-	setAttr -s 9 ".kit[7:8]"  1 18;
-	setAttr -s 9 ".kot[7:8]"  1 18;
-	setAttr -s 9 ".kix[7:8]"  1 1;
-	setAttr -s 9 ".kiy[7:8]"  0 0;
-	setAttr -s 9 ".kox[7:8]"  1 1;
-	setAttr -s 9 ".koy[7:8]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 -208.79386180273676 13 -208.79386180273676 14 -208.79386180273676 15 -208.79386180273676
+		 16 -208.79386180273676;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0 0 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0 0 0 0;
 createNode animCurveTA -n "Pick1_Ctrl_rotateZ";
 	rename -uid "496D1D39-49B4-B2F3-88B0-12899E92E80C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 1 0 2 0 3 0 4 0 5 -23.596614023961735
-		 6 -23.596614023961735 11 -23.596614023961735 12 113.58227348595233;
-	setAttr -s 9 ".kit[7:8]"  1 18;
-	setAttr -s 9 ".kot[7:8]"  1 18;
-	setAttr -s 9 ".kix[7:8]"  1 1;
-	setAttr -s 9 ".kiy[7:8]"  0 0;
-	setAttr -s 9 ".kox[7:8]"  1 1;
-	setAttr -s 9 ".koy[7:8]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 -23.596614023961735
+		 6 -23.596614023961735 7 -23.596614023961735 8 -23.596614023961735 9 -23.596614023961735
+		 10 -23.596614023961735 11 -23.596614023961735 12 113.58227348595233 13 113.58227348595233
+		 14 113.58227348595233 15 113.58227348595233 16 113.58227348595233;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0 0 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 1 1 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0 0 0 0;
 createNode animCurveTA -n "Neck_Ctrl_rotateX";
 	rename -uid "6596D765-42A7-4CF6-2D69-CB830F8C2185";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Neck_Ctrl_rotateY";
 	rename -uid "646AAEA7-4704-BAD9-6E5C-81AF2618A61A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Neck_Ctrl_rotateZ";
 	rename -uid "B2D41878-4713-E4F0-1425-298FC8746A61";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Hair_Ctrl_Jnt_1_Ctrl_rotateX";
 	rename -uid "2CB796AE-48CD-F6AF-4D5A-32B8D4269ED0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Hair_Ctrl_Jnt_1_Ctrl_rotateY";
 	rename -uid "CBCC5FDF-46AD-4600-C595-16B1FA892A78";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Hair_Ctrl_Jnt_1_Ctrl_rotateZ";
 	rename -uid "7AE08B55-4E6C-42F7-74C1-CF8AA4E68DC8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Clavicle_Jnt_Ctrl_rotateX";
 	rename -uid "08B3CFD7-41C4-6287-CEED-CFBF5BAACF97";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 9 -14.564090556930362;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 -28.97018470660645
+		 6 0 7 -3.7758753295745411 8 -10.383657156329978 9 -14.564090556930362 10 -13.096957856298296
+		 11 -11.629825155666234 12 -12.949678845025431 13 -13.306205953606579 14 -13.306205953606579
+		 15 -13.306205953606579 16 -13.306205953606579;
 createNode animCurveTA -n "R_Clavicle_Jnt_Ctrl_rotateY";
 	rename -uid "9DFF5562-4F0C-4872-C32E-3AB9A6B25A1E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 5 -29.901521135669569
-		 6 -29.901521135669569 9 2.7100148848285932;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 -29.05344016948958
+		 6 -29.901521135669569 7 -23.185924379633651 8 -9.5464165177399067 9 2.7100148848285932
+		 10 5.3075509575778952 11 9.2315119730950457 12 29.446493032270645 13 6.5457743254297815
+		 14 6.5457743254297815 15 6.5457743254297815 16 6.5457743254297815;
 createNode animCurveTA -n "R_Clavicle_Jnt_Ctrl_rotateZ";
 	rename -uid "517245B3-43D4-C4BC-0423-02837C8076B4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 16.876358769020854 2 16.876358769020854
-		 3 16.876358769020854 4 16.876358769020854 5 16.876358769020921 6 16.876358769020921
-		 9 -3.2923935180248001;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 16.876358769020854 2 35.616227023732257
+		 3 16.876358769020854 4 16.876358769020854 5 32.733800830154991 6 16.876358769020921
+		 7 7.6445125077668665 8 0.49533013761722694 9 -3.2923935180248001 10 10.51821774477779
+		 11 24.328829007580357 12 21.12712219066108 13 12.154587669739751 14 12.154587669739751
+		 15 12.154587669739751 16 12.154587669739751;
 createNode animCurveTA -n "L_Eyelid_Upper_Ctrl_rotateX";
 	rename -uid "93A5CB0B-4297-9630-6112-F89B0201E5ED";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Eyelid_Upper_Ctrl_rotateY";
 	rename -uid "0F73FC48-45E3-8D0F-FFB7-DDB1C4153959";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Eyelid_Upper_Ctrl_rotateZ";
 	rename -uid "AFB6A6B3-4E11-626B-F50B-ECBD2360AA50";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Upper_Corner_Lips_Ctrl_rotateX";
 	rename -uid "3FC9812D-41D2-B70C-0FCC-3DB33A026103";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Upper_Corner_Lips_Ctrl_rotateY";
 	rename -uid "4300C096-4269-F5A1-60FD-05A2F40A62A6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Upper_Corner_Lips_Ctrl_rotateZ";
 	rename -uid "D5C51ADA-422A-6EA1-A53B-F58C987902BE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_reverse_foot_outer_Ctrl_rotateX";
 	rename -uid "66CED555-4CB4-B3DA-F782-DCBEE5507655";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_reverse_foot_outer_Ctrl_rotateY";
 	rename -uid "5758E2D4-4C68-976E-DC53-4B8B92306CD0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_reverse_foot_outer_Ctrl_rotateZ";
 	rename -uid "41E4C3A0-47A1-C94F-6DAE-27B6EDD93BB7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Jaw_Ctrl_rotateX";
 	rename -uid "1926DEA1-4287-F240-DED6-08916306980E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Jaw_Ctrl_rotateY";
 	rename -uid "B6569A21-4AE8-A7D8-6F56-0CB1E7BFF184";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Jaw_Ctrl_rotateZ";
 	rename -uid "51BBC157-40AE-0923-6786-5383664D4A41";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Upper_Lip_Ctrl_rotateX";
 	rename -uid "86B07630-4BAC-F155-1E45-6B9E3F7FC1BC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Upper_Lip_Ctrl_rotateY";
 	rename -uid "A5D3F60B-4279-44C3-50F2-9D98E5BBA7E4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Upper_Lip_Ctrl_rotateZ";
 	rename -uid "AFD0CCE9-4322-026F-8541-B2A60FC11965";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Knee_PV_Ctrl_rotateX";
 	rename -uid "1DE0630A-484D-ECE7-074E-E4BEE70E292E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Knee_PV_Ctrl_rotateY";
 	rename -uid "5038B1B2-4248-B990-38EC-09A8400D8404";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Knee_PV_Ctrl_rotateZ";
 	rename -uid "00F15170-44E6-8221-D4A8-409D1EBBA71E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Eyelid_Lower_Ctrl_rotateX";
 	rename -uid "2B38257F-4256-55B4-AD53-15B12E6F3DD3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Eyelid_Lower_Ctrl_rotateY";
 	rename -uid "09251713-4DF1-0715-8B1C-07BC143FF732";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Eyelid_Lower_Ctrl_rotateZ";
 	rename -uid "381B0E00-467A-8673-5FB1-F481160D990F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Brow_2_Ctrl_rotateX";
 	rename -uid "BF3E4752-47B8-73B0-F543-BBB1D545A276";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Brow_2_Ctrl_rotateY";
 	rename -uid "B2EFEFAC-4160-D683-5247-27BD74245CD8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Brow_2_Ctrl_rotateZ";
 	rename -uid "1C221D43-4427-4BD7-2AAA-F89C7A5CCF7B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Hand_IK_Ctrl_rotateX";
 	rename -uid "9302C1F3-4B3A-BDF7-3EBB-DE91FBB332A7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 55.144761100925997 5 55.144761100925997
-		 6 55.144761100925997 11 55.144761100925997 12 32.771352348142017;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  1 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 8.6163689220196868 2 26.806481090727914
+		 3 44.852987110735818 4 55.144761100925997 5 55.144761100925997 6 55.144761100925997
+		 7 55.144761100925997 8 55.144761100925997 9 55.144761100925997 10 55.144761100925997
+		 11 55.144761100925997 12 60.714180416001007 13 39.089451074692121 14 58.338719221882549
+		 15 77.58798736907292 16 77.58798736907292;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 1 0.12307860864833178 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0 0.99239692466935359 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 1 0.1230786086483318 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0 0.9923969246693537 0 0;
 createNode animCurveTA -n "R_Hand_IK_Ctrl_rotateY";
 	rename -uid "00807F5B-48A0-8C33-BD17-2DB4C592A5E2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 209.97069592906718 5 209.97069592906718
-		 6 209.97069592906718 11 209.97069592906718 12 -188.35987427288848;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  1 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 32.807921238916748 2 102.06908829885209
+		 3 170.78345667147218 4 209.97069592906718 5 209.97069592906718 6 209.97069592906718
+		 7 209.97069592906718 8 209.97069592906718 9 209.97069592906718 10 209.97069592906718
+		 11 209.97069592906718 12 -224.54154680688248 13 -169.74583395131967 14 -141.66956394057073
+		 15 -129.44304434083048 16 -129.44304434083048;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 1 0.057519359111338389 0.11764671507982367 
+		1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 0 0.99834439114336737 0.99305551226048128 
+		0 0;
+	setAttr -s 17 ".kox[11:16]"  1 1 0.057519359111338396 0.11764671507982367 
+		1 1;
+	setAttr -s 17 ".koy[11:16]"  0 0 0.99834439114336737 0.99305551226048128 
+		0 0;
 createNode animCurveTA -n "R_Hand_IK_Ctrl_rotateZ";
 	rename -uid "7DD64FF4-43CF-9456-7659-68A1994BBF0B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 4 -103.2802382922567 5 -103.2802382922567
-		 6 -103.2802382922567 11 -103.2802382922567 12 -60.64731006758678;
-	setAttr -s 6 ".kit[4:5]"  1 18;
-	setAttr -s 6 ".kot[4:5]"  1 18;
-	setAttr -s 6 ".kix[4:5]"  1 1;
-	setAttr -s 6 ".kiy[4:5]"  0 0;
-	setAttr -s 6 ".kox[4:5]"  1 1;
-	setAttr -s 6 ".koy[4:5]"  0 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 -16.137537233165109 2 -50.205671392069227
+		 3 -84.00484659708728 4 -103.2802382922567 5 -103.2802382922567 6 -103.2802382922567
+		 7 -103.2802382922567 8 -103.2802382922567 9 -103.2802382922567 10 -103.2802382922567
+		 11 -103.2802382922567 12 -105.65447909370751 13 -124.54054631199691 14 -164.5352346321651
+		 15 -190.40485954395808 16 -190.40485954395808;
+	setAttr -s 17 ".kit[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kot[11:16]"  1 18 18 18 18 18;
+	setAttr -s 17 ".kix[11:16]"  1 0.31779479518282722 0.080824832056183543 
+		0.072302459726278592 1 1;
+	setAttr -s 17 ".kiy[11:16]"  0 -0.94815951619688177 -0.99672832132085509 
+		-0.99738275216565186 0 0;
+	setAttr -s 17 ".kox[11:16]"  1 0.31779479518282727 0.080824832056183557 
+		0.072302459726278578 1 1;
+	setAttr -s 17 ".koy[11:16]"  0 -0.94815951619688188 -0.99672832132085509 
+		-0.99738275216565164 0 0;
 createNode animCurveTA -n "Spine_Top_Control_Joint_Ctrl_rotateX";
 	rename -uid "1D3403CB-4A8B-3877-B581-00955A488D85";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  0 0 1.7006802721088437e-07 0 1 0 2 -15.812128272177823
+	setAttr -s 18 ".ktv[0:17]"  0 0 1.7006802721088437e-07 0 1 0 2 -15.812128272177823
 		 3 1.2608887483467242 4 1.2608887483467242 5 -9.6190499386540544 6 -30.50275068065897
-		 7 -7.4666636633252548 8 34.309701280560482 9 54.441877592591986 10 38.246352802654762
-		 11 -19.510269866744874 12 -10.756868858426245;
+		 7 -7.4666636633252548 8 34.309701280560489 9 54.441877592591986 10 38.246352802654762
+		 11 -19.510269866744874 12 -10.756868858426245 13 -25.279075764560133 14 0 15 39.694982259413528
+		 16 77.050839010514451;
 createNode animCurveTA -n "Spine_Top_Control_Joint_Ctrl_rotateY";
 	rename -uid "83C310F7-4D58-7B16-F6E2-EC96BB34F998";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  0 -8.2792881465560253 1.7006802721088437e-07 12.444227463694395
+	setAttr -s 18 ".ktv[0:17]"  0 -8.2792881465560253 1.7006802721088437e-07 12.444227463694395
 		 1 12.444227463694395 2 12.444227463694427 3 28.523156110768074 4 28.523156110768074
-		 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0;
+		 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 -16.542872333426065 16 -32.233329937333785;
 createNode animCurveTA -n "Spine_Top_Control_Joint_Ctrl_rotateZ";
 	rename -uid "A1F5BC07-4AFA-7244-B4AA-3ABCBF9E4651";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  0 0 1.7006802721088437e-07 0 1 0 2 0 3 -5.1357509798089955
-		 4 -5.1357509798089955 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0;
+	setAttr -s 18 ".ktv[0:17]"  0 0 1.7006802721088437e-07 0 1 0 2 0 3 -5.1357509798089955
+		 4 -5.1357509798089955 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 -13.297696565755887
+		 16 -29.227529487466047;
 createNode animCurveTA -n "R_reverse_foot_toe_Ctrl_rotateX";
 	rename -uid "499012C1-419C-5756-E4B8-7BB2A0488A91";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 20.146068109447768 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 20.146068109447768 1 0 2 0 3 0 4 0 5 0
+		 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_reverse_foot_toe_Ctrl_rotateY";
 	rename -uid "86EC2379-4876-0A4E-AE2F-A18BD9CC3775";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_reverse_foot_toe_Ctrl_rotateZ";
 	rename -uid "D28D799D-42D7-DFF1-BC94-579BDE9A88CE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Brow_2_Ctrl_rotateX";
 	rename -uid "45BCE68C-437B-C532-742B-CBB5F68BBB6C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Brow_2_Ctrl_rotateY";
 	rename -uid "911ABCC5-4FAA-A114-EC9A-9EAD39A0E9F0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Brow_2_Ctrl_rotateZ";
 	rename -uid "56F3DA8F-4C36-6603-771A-B8B33C10A1F3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Sneer_Ctrl_rotateX";
 	rename -uid "FC6540ED-4A34-E5E4-A7D6-35B03B681C2B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Sneer_Ctrl_rotateY";
 	rename -uid "901AD9D0-4CC5-13DD-9DCD-2BAF13DC35FD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Sneer_Ctrl_rotateZ";
 	rename -uid "55803552-4BEF-8D26-B5BD-0A849AADF43A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Brow_3_Ctrl_rotateX";
 	rename -uid "60EDAC9A-4581-FCE0-12AA-5C903AF8ACDB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Brow_3_Ctrl_rotateY";
 	rename -uid "F1EEB331-4B41-5A1A-B191-24B1A1E71D26";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Brow_3_Ctrl_rotateZ";
 	rename -uid "3ECFCA41-47E3-BDB0-1F0A-DE85193CC831";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Foot_IK_Ctrl_rotateX";
 	rename -uid "C1891B92-47A4-1B4E-5005-ACB94343E7CC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 1 0 2 87.261147488347163 3 63.277936004360569
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 87.261147488347163 3 63.277936004360569
 		 4 30.598443781809927 5 -4.7765376679351439 6 -46.177293578360477 7 29.558644384112313
-		 8 105.29458234658496;
+		 8 105.29458234658496 9 93.670289297049692 10 61.819726341323069 11 27.746017339872857
+		 12 -5.4397248314045585 13 -35.151498590273953 14 -51.633373822141102 15 0 16 0;
 createNode animCurveTA -n "L_Foot_IK_Ctrl_rotateY";
 	rename -uid "D136F544-4EE2-87C8-B76D-F4BF957AE37F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Foot_IK_Ctrl_rotateZ";
 	rename -uid "B5F062B0-4321-C628-A0AE-AA97507CB93D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Lips_Pull_Ctrl_rotateX";
 	rename -uid "A058E957-4285-738D-3B0F-4FB0DB4700DD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Lips_Pull_Ctrl_rotateY";
 	rename -uid "123FB4AB-4609-A72A-B406-5E9D01112390";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Lips_Pull_Ctrl_rotateZ";
 	rename -uid "689A22DB-44C8-10B8-C07B-94841BAA28F3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Upper_Outer_Lips_Ctrl_rotateX";
 	rename -uid "2A5508BC-4B78-90D8-DEC0-6B8EC6391702";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Upper_Outer_Lips_Ctrl_rotateY";
 	rename -uid "97702F21-46AB-BAAB-D8FD-A7A4F5B61C4F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Upper_Outer_Lips_Ctrl_rotateZ";
 	rename -uid "4B214E59-4EE7-CB1D-2FDA-C7BB53BCB516";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Hair_Ctrl_Jnt_2_Ctrl_rotateX";
 	rename -uid "953B9C85-4A8F-EC3A-4E9F-53B992DB23BC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Hair_Ctrl_Jnt_2_Ctrl_rotateY";
 	rename -uid "D64F1B60-4C79-120B-35E9-D5961AD479F7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Hair_Ctrl_Jnt_2_Ctrl_rotateZ";
 	rename -uid "5C7E74E8-4526-992C-CBEF-AB8302545056";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Lower_Middle_Lips_Ctrl_rotateX";
 	rename -uid "D7EC0471-4DAC-5E0B-DBBD-F4BF7CA3D926";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Lower_Middle_Lips_Ctrl_rotateY";
 	rename -uid "FE77F83E-44DC-C617-15B8-46A87F69FCA3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Lower_Middle_Lips_Ctrl_rotateZ";
 	rename -uid "60694EA9-4F66-46E1-0340-1C84D516F86C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Lips_Pull_Ctrl_rotateX";
 	rename -uid "22403556-460D-26BD-9DD3-E9B266EC6017";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Lips_Pull_Ctrl_rotateY";
 	rename -uid "0BF2FABC-40CB-C86C-A89C-8298494531C4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Lips_Pull_Ctrl_rotateZ";
 	rename -uid "7A92B256-4365-41E8-DCA5-18BF13CB79B5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Knee_PV_Ctrl_rotateX";
 	rename -uid "7B86B9E1-4C07-D5EF-C6A0-65BF8B823A9C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Knee_PV_Ctrl_rotateY";
 	rename -uid "87EF90BC-47A1-68E5-03A5-4599FB49FC4D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Knee_PV_Ctrl_rotateZ";
 	rename -uid "96572FD6-4141-B38F-D8DD-28815594CFB8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Foot_IK_Ctrl_rotateX";
 	rename -uid "A0EBB3A7-4BF7-7478-EC9D-3EBFE966E1D0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0.34915866291835773 1 35.036956367353909
+	setAttr -s 17 ".ktv[0:16]"  0 0.34915866291835773 1 35.036956367353909
 		 2 62.193965963251685 3 81.932820859164991 4 81.932820859164991 5 47.824671526295553
-		 6 -36.863021239902807 7 38.87291672256999 8 114.60885468504264;
+		 6 -36.863021239902807 7 38.87291672256999 8 114.60885468504264 9 102.98456163550738
+		 10 71.133998679780788 11 37.060289678330612 12 3.8745475070531969 13 -25.837226251816212
+		 14 -42.319101483683355 15 -12.457967565867976 16 0.059733043691779342;
 createNode animCurveTA -n "R_Foot_IK_Ctrl_rotateY";
 	rename -uid "255BF63C-45B8-E944-2390-2D93B51BE095";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Foot_IK_Ctrl_rotateZ";
 	rename -uid "6C0B5A3B-4FD0-2DEC-F203-2F907B2BD300";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Cheek_Ctrl_rotateX";
 	rename -uid "CB844AB5-49D2-18E0-4C7A-C887F864A783";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Cheek_Ctrl_rotateY";
 	rename -uid "61D7A9C7-4D9F-B090-26A9-B88CDFCEC91D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Cheek_Ctrl_rotateZ";
 	rename -uid "D3EAE0F5-4375-5ADD-1F70-6E8F51376C9D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Eyelid_Lower_Ctrl_rotateX";
 	rename -uid "436DB58E-4F19-D6D4-74CF-4FBAD6987D21";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Eyelid_Lower_Ctrl_rotateY";
 	rename -uid "5402D2D4-44ED-1DDA-B57D-4F8BCCBF29C5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Eyelid_Lower_Ctrl_rotateZ";
 	rename -uid "31E29153-4F11-4DEC-C93F-2CB252D389AB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_reverse_foot_toeTap_Ctrl_rotateX";
 	rename -uid "9E0DF41A-41AA-8446-9AAB-1D8E94A8C205";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_reverse_foot_toeTap_Ctrl_rotateY";
 	rename -uid "D68CD936-46CE-35C2-5062-A5ADCFAFDB57";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_reverse_foot_toeTap_Ctrl_rotateZ";
 	rename -uid "4804ECBB-4A67-F5F8-60D3-868A4ABD89F8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Upper_Corner_Lips_Ctrl_rotateX";
 	rename -uid "454334A2-4C4A-3AEC-A85E-E4AF12F74E3A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Upper_Corner_Lips_Ctrl_rotateY";
 	rename -uid "CF572118-4D6C-F94E-9BB2-08AB61F3547A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Upper_Corner_Lips_Ctrl_rotateZ";
 	rename -uid "6747AA08-4A92-95BE-4041-4796133BB7B6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Eye_Ctrl_rotateX";
 	rename -uid "B5BB7D76-476B-80A4-F2D4-5589AA659536";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Eye_Ctrl_rotateY";
 	rename -uid "840BA53E-43EF-1531-8E90-2F84BB73554E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Eye_Ctrl_rotateZ";
 	rename -uid "C30DE0DF-4BE6-CE08-547B-A78B508B1476";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_reverse_foot_heel_Ctrl_rotateX";
 	rename -uid "D25BE729-4992-746F-19ED-908F7CAF84BE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_reverse_foot_heel_Ctrl_rotateY";
 	rename -uid "F64F4A59-421A-C3DE-3E3E-9DB9D84A57C0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_reverse_foot_heel_Ctrl_rotateZ";
 	rename -uid "758A6633-4A87-9BC8-AB61-ED9165C6F88B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Clavicle_Jnt_Ctrl_rotateX";
 	rename -uid "2000060C-4781-8623-CA64-9A9C662F5996";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 9 -14.564090556930397;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 -28.97018470660645
+		 6 0 7 -3.7758753295745504 8 -10.383657156330001 9 -14.564090556930397 10 -13.096957856298308
+		 11 -11.62982515566622 12 -12.949678845025426 13 -13.306205953606579 14 -13.306205953606579
+		 15 -13.306205953606579 16 -15.104130512835701;
 createNode animCurveTA -n "L_Clavicle_Jnt_Ctrl_rotateY";
 	rename -uid "D6944541-4D50-AD20-64FD-57B6700F2901";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 5 -29.901521135669551
-		 6 -29.901521135669551 9 2.7100148848286216;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 -29.053440169489637
+		 6 -29.901521135669551 7 -23.185924379633633 8 -9.5464165177398748 9 2.7100148848286216
+		 10 5.3075509575779174 11 9.2315119730950617 12 29.446493032270666 13 6.5457743254298002
+		 14 6.5457743254298002 15 6.5457743254298002 16 -28.657294304512259;
 createNode animCurveTA -n "L_Clavicle_Jnt_Ctrl_rotateZ";
 	rename -uid "D0177ABA-40DF-E2C5-7AA7-BFA9A643D17F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  0 0 1 0 2 0 3 0 4 0 5 16.341869267472404
-		 6 16.341869267472404 9 -3.8268830195732537;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 32.199311328606555
+		 6 16.341869267472404 7 7.1100230062183627 8 -0.039159363931245646 9 -3.8268830195732537
+		 10 9.983728243229324 11 23.794339506031871 12 20.592632689112637 13 11.6200981681913
+		 14 11.6200981681913 15 11.6200981681913 16 20.539532445215443;
 createNode animCurveTA -n "R_Arm_01_Jnt_IK_Ctrl_rotateX";
 	rename -uid "7E31727F-427A-7B8E-A47D-608F58837AA1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Arm_01_Jnt_IK_Ctrl_rotateY";
 	rename -uid "DB500388-443C-2893-7529-84AEA4592621";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Arm_01_Jnt_IK_Ctrl_rotateZ";
 	rename -uid "6041EB47-4A12-C8C2-DDD1-14ABC5B15432";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Brow_3_Ctrl_rotateX";
 	rename -uid "093E247E-4563-408D-6247-0ABC5B8CDC96";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Brow_3_Ctrl_rotateY";
 	rename -uid "5F6C07D1-491A-962F-7791-AEB5F29450CC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Brow_3_Ctrl_rotateZ";
 	rename -uid "8BD1E8F9-4229-9F0B-D56D-A9842B1B6506";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Brow_1_Ctrl_rotateX";
 	rename -uid "53BEAA6E-4B92-5CAE-9B22-478A72BAD887";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Brow_1_Ctrl_rotateY";
 	rename -uid "576D60A0-4605-3B90-EC62-4DB434700841";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Brow_1_Ctrl_rotateZ";
 	rename -uid "8AFAD74A-448B-2041-8B63-6CA0E5CB3C3E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_reverse_foot_toe_Ctrl_rotateX";
 	rename -uid "67966B01-44FA-8CD1-024A-2D89753AA202";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 19.549965718815955 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 19.549965718815955 2 0 3 0 4 0 5 0
+		 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 22.748647990648497;
 createNode animCurveTA -n "L_reverse_foot_toe_Ctrl_rotateY";
 	rename -uid "5F34ACD5-43F9-5677-13F9-AB90C0E57ECD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_reverse_foot_toe_Ctrl_rotateZ";
 	rename -uid "66BA2D18-4D23-6A06-060F-2C8BDA2D4319";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Lower_Lip_Ctrl_rotateX";
 	rename -uid "D5A79B77-45B9-2E79-6E4C-F995160849A6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Lower_Lip_Ctrl_rotateY";
 	rename -uid "DCAD9500-44A1-D248-F148-3D9FF4B37DD7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Lower_Lip_Ctrl_rotateZ";
 	rename -uid "E2DCACE1-4127-538E-580C-6E9E2D58D412";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Brow_Cluster_Ctrl_rotateX";
 	rename -uid "5CA81336-49EA-68F3-BE77-B98A592D83CB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Brow_Cluster_Ctrl_rotateY";
 	rename -uid "1AE9EB3D-412B-8650-18E4-D9887B6A8B9F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Brow_Cluster_Ctrl_rotateZ";
 	rename -uid "1272870E-49AC-61F4-7F40-AAAE40191661";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Face_Controls_rotateX";
 	rename -uid "0233D4A5-468B-640C-C489-EC8AF755E5B6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Face_Controls_rotateY";
 	rename -uid "00A492AA-4DA8-F6D1-12DD-F0BDC4992A28";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Face_Controls_rotateZ";
 	rename -uid "A225EF9B-4F07-5C4E-1298-B98D276F8183";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_reverse_foot_toeTap_Ctrl_rotateX";
 	rename -uid "7295C346-4D12-6E2A-259D-429639BF499A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_reverse_foot_toeTap_Ctrl_rotateY";
 	rename -uid "128D0F0B-4FD5-42F7-F76C-7C9CB54DD235";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_reverse_foot_toeTap_Ctrl_rotateZ";
 	rename -uid "72BC386F-4785-9323-6E11-248B597B148E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Hip_IK_Ctrl_rotateX";
 	rename -uid "57CDB3FF-44AD-26BE-74F3-85AC59ED0574";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Hip_IK_Ctrl_rotateY";
 	rename -uid "5D890123-48C0-B089-5E93-ACAFB9583B25";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Hip_IK_Ctrl_rotateZ";
 	rename -uid "7DA32FC3-4139-680E-6803-B4B2297DD6CD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Mouth_Move_Ctrl_rotateX";
 	rename -uid "5EB30AE1-42D2-ADEA-48B1-5EB2E678998D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Mouth_Move_Ctrl_rotateY";
 	rename -uid "50D67161-45E8-5148-A2BD-1BB309D98270";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "Mouth_Move_Ctrl_rotateZ";
 	rename -uid "85F499A1-41A2-E459-48A9-199545DFA66D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_reverse_foot_inner_Ctrl_rotateX";
 	rename -uid "551C302C-480A-D148-98FF-C089630503B4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_reverse_foot_inner_Ctrl_rotateY";
 	rename -uid "2FC7F05A-4EE8-26B9-EC0D-E0A3979F3EA2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_reverse_foot_inner_Ctrl_rotateZ";
 	rename -uid "0F1113EA-4662-AE09-8B5A-2BBEBFF09617";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 0 1 0 2 0 3 0 4 0 6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Middle_01_Jnt_Ctrl_rotateX";
 	rename -uid "082110D0-4BCB-EFE1-2513-87AA201DE27B";
 	setAttr ".tan" 18;
@@ -6115,70 +6785,102 @@ createNode animCurveTA -n "L_Arm_01_Jnt_FK_Ctrl_rotateX";
 	rename -uid "2AEB1F6E-49FC-DFB8-DDC7-D789193DDE9D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 -76.305158536823257 1.7006802721088437e-07 34.643958049734671
-		 1 9.527667247684148 2 -22.886663425480229 3 -60.954180127735114 4 -94.626973820256396;
+	setAttr -s 18 ".ktv[0:17]"  0 -76.305158536823257 1.7006802721088437e-07 34.643958049734671
+		 1 9.527667247684148 2 -22.886663425480229 3 -60.954180127735114 4 -94.626973820256396
+		 5 -94.626973820256396 6 -94.626973820256396 7 -94.626973820256396 8 -94.626973820256396
+		 9 -94.626973820256396 10 -94.626973820256396 11 -94.626973820256396 12 -94.626973820256396
+		 13 -94.626973820256396 14 -94.626973820256396 15 -94.626973820256396 16 -94.626973820256396;
 createNode animCurveTA -n "L_Arm_01_Jnt_FK_Ctrl_rotateY";
 	rename -uid "47216620-4865-C304-BEAB-09996DF376B1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 -67.54350387812427 1.7006802721088437e-07 48.933923733575568
-		 1 5.0943174299150096 2 51.808613561782771 3 37.173770058328316 4 2.587349038955554;
+	setAttr -s 18 ".ktv[0:17]"  0 -67.54350387812427 1.7006802721088437e-07 48.933923733575568
+		 1 5.0943174299150096 2 51.808613561782771 3 37.173770058328316 4 2.587349038955554
+		 5 2.587349038955554 6 2.587349038955554 7 2.587349038955554 8 2.587349038955554 9 2.587349038955554
+		 10 2.587349038955554 11 2.587349038955554 12 2.587349038955554 13 2.587349038955554
+		 14 2.587349038955554 15 2.587349038955554 16 2.587349038955554;
 createNode animCurveTA -n "L_Arm_01_Jnt_FK_Ctrl_rotateZ";
 	rename -uid "7627F8EB-4F44-273C-F68A-40AA1025A2A1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 8.5649364674750874 1.7006802721088437e-07 -56.843375926519492
-		 1 -77.840704518372078 2 -65.094816930332144 3 -25.925888900308447 4 3.6009778177149734;
+	setAttr -s 18 ".ktv[0:17]"  0 8.5649364674750874 1.7006802721088437e-07 -56.843375926519492
+		 1 -77.840704518372078 2 -65.094816930332144 3 -25.925888900308447 4 3.6009778177149734
+		 5 3.6009778177149734 6 3.6009778177149734 7 3.6009778177149734 8 3.6009778177149734
+		 9 3.6009778177149734 10 3.6009778177149734 11 3.6009778177149734 12 3.6009778177149734
+		 13 3.6009778177149734 14 3.6009778177149734 15 3.6009778177149734 16 3.6009778177149734;
 createNode animCurveTA -n "R_Arm_01_Jnt_FK_Ctrl_rotateX";
 	rename -uid "5B20EE1B-4731-087D-A1D6-48B581F55E13";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 22.201947493663173 1.7006802721088437e-07 -57.232221991354926
-		 1 -25.854835169252514 2 -157.64824559550411 3 -124.02668984273774 4 -124.02668984273774;
+	setAttr -s 18 ".ktv[0:17]"  0 22.201947493663173 1.7006802721088437e-07 -57.232221991354926
+		 1 -25.854835169252514 2 -139.86578008795291 3 -124.02668984273774 4 -124.02668984273774
+		 5 -124.02668984273774 6 -124.02668984273774 7 -124.02668984273774 8 -124.02668984273774
+		 9 -124.02668984273774 10 -124.02668984273774 11 -124.02668984273774 12 -124.02668984273774
+		 13 -124.02668984273774 14 -124.02668984273774 15 -124.02668984273774 16 -124.02668984273774;
 createNode animCurveTA -n "R_Arm_01_Jnt_FK_Ctrl_rotateY";
 	rename -uid "D6AD5EAF-4E8A-1829-A494-CFBB8C470455";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 56.419262450587809 1.7006802721088437e-07 -57.950081388493032
-		 1 -50.074024138017833 2 -38.466235965426911 3 -17.742457176114975 4 -17.742457176114975;
+	setAttr -s 18 ".ktv[0:17]"  0 56.419262450587809 1.7006802721088437e-07 -57.950081388493032
+		 1 -50.074024138017833 2 -30.034972287301134 3 -17.742457176114975 4 -17.742457176114975
+		 5 -17.742457176114975 6 -17.742457176114975 7 -17.742457176114975 8 -17.742457176114975
+		 9 -17.742457176114975 10 -17.742457176114975 11 -17.742457176114975 12 -17.742457176114975
+		 13 -17.742457176114975 14 -17.742457176114975 15 -17.742457176114975 16 -17.742457176114975;
 createNode animCurveTA -n "R_Arm_01_Jnt_FK_Ctrl_rotateZ";
 	rename -uid "6F6913CB-4BB1-5C07-47BA-33B9B4619EFC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  0 -66.926410429863054 1.7006802721088437e-07 -21.656629157241035
-		 1 -82.376751775837619 2 54.999437841267564 3 49.259473548385202 4 49.259473548385202;
+	setAttr -s 18 ".ktv[0:17]"  0 -66.926410429863054 1.7006802721088437e-07 -21.656629157241035
+		 1 -82.376751775837619 2 33.643931377265275 3 49.259473548385202 4 49.259473548385202
+		 5 49.259473548385202 6 49.259473548385202 7 49.259473548385202 8 49.259473548385202
+		 9 49.259473548385202 10 49.259473548385202 11 49.259473548385202 12 49.259473548385202
+		 13 49.259473548385202 14 49.259473548385202 15 49.259473548385202 16 49.259473548385202;
 createNode animCurveTA -n "L_Arm_02_Jnt_FK_Ctrl_rotateX";
 	rename -uid "69893F36-4F50-EB5E-95B1-CC80536C0EBF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Arm_02_Jnt_FK_Ctrl_rotateY";
 	rename -uid "21693265-4EFA-C284-8ECD-B59FA4BC2B15";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 -15.781849448647581 1 -15.781849448647581
-		 2 -15.781849448647581 3 -15.781849448647581 4 -69.72981757062162;
+	setAttr -s 17 ".ktv[0:16]"  0 -15.781849448647581 1 -15.781849448647581
+		 2 -15.781849448647581 3 -15.781849448647581 4 -69.72981757062162 5 -69.72981757062162
+		 6 -69.72981757062162 7 -69.72981757062162 8 -69.72981757062162 9 -69.72981757062162
+		 10 -69.72981757062162 11 -69.72981757062162 12 -69.72981757062162 13 -69.72981757062162
+		 14 -69.72981757062162 15 -69.72981757062162 16 -69.72981757062162;
 createNode animCurveTA -n "L_Arm_02_Jnt_FK_Ctrl_rotateZ";
 	rename -uid "14A7CEFF-435D-2CE5-E384-D7AD4576BEB1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Hand_FK_Ctrl_rotateX";
 	rename -uid "1346AB3B-4D0B-B930-8A8C-6C846A7EF86A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 -6.3920929171907632 4 -45.750954495403775;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 -6.3920929171907632 4 -45.750954495403775
+		 5 -45.750954495403775 6 -45.750954495403775 7 -45.750954495403775 8 -45.750954495403775
+		 9 -45.750954495403775 10 -45.750954495403775 11 -45.750954495403775 12 -45.750954495403775
+		 13 -45.750954495403775 14 -45.750954495403775 15 -45.750954495403775 16 -45.750954495403775;
 createNode animCurveTA -n "L_Hand_FK_Ctrl_rotateY";
 	rename -uid "75FCB7FC-4B97-C837-632A-B29BCB663622";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 33.207021798759094 3 3.6958394423831145
-		 4 -31.588685663282291;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 33.207021798759094 3 3.6958394423831145
+		 4 -31.588685663282291 5 -31.588685663282291 6 -31.588685663282291 7 -31.588685663282291
+		 8 -31.588685663282291 9 -31.588685663282291 10 -31.588685663282291 11 -31.588685663282291
+		 12 -31.588685663282291 13 -31.588685663282291 14 -31.588685663282291 15 -31.588685663282291
+		 16 -31.588685663282291;
 createNode animCurveTA -n "L_Hand_FK_Ctrl_rotateZ";
 	rename -uid "53438F9A-4C30-E042-C5A2-38BC4B87B35F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 1.1349308564273961 4 11.953607420359647;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 1.1349308564273961 4 11.953607420359647
+		 5 11.953607420359647 6 11.953607420359647 7 11.953607420359647 8 11.953607420359647
+		 9 11.953607420359647 10 11.953607420359647 11 11.953607420359647 12 11.953607420359647
+		 13 11.953607420359647 14 11.953607420359647 15 11.953607420359647 16 11.953607420359647;
 createNode animCurveTU -n "L_Foot_IK_Ctrl_Follow";
 	rename -uid "D6EB44F3-40DA-6F52-A898-91A4FC839626";
 	setAttr ".tan" 9;
@@ -6189,124 +6891,152 @@ createNode animCurveTA -n "R_Arm_02_Jnt_FK_Ctrl_rotateX";
 	rename -uid "8F6C5061-4AF2-B15D-A273-18B2BDD22977";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Arm_02_Jnt_FK_Ctrl_rotateY";
 	rename -uid "33B43D1A-4212-EAEF-9C8F-5AB282D1869B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 -51.472863554775607 1 -51.472863554775607
-		 2 -61.876992282753925 3 -31.625588561116697 4 -17.854644704039806;
+	setAttr -s 17 ".ktv[0:16]"  0 -51.472863554775607 1 -51.472863554775607
+		 2 -61.876992282753925 3 -31.625588561116697 4 -17.854644704039806 5 -17.854644704039806
+		 6 -17.854644704039806 7 -17.854644704039806 8 -17.854644704039806 9 -17.854644704039806
+		 10 -17.854644704039806 11 -17.854644704039806 12 -17.854644704039806 13 -17.854644704039806
+		 14 -17.854644704039806 15 -17.854644704039806 16 -17.854644704039806;
 createNode animCurveTA -n "R_Arm_02_Jnt_FK_Ctrl_rotateZ";
 	rename -uid "F6789A56-4E2A-BFBA-FDB6-CA9FD979DE1F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Hand_FK_Ctrl_translateX";
 	rename -uid "DCF49704-4312-1817-19CD-B79FDBE24894";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Hand_FK_Ctrl_translateY";
 	rename -uid "64CF58DD-413A-2EA2-DF40-278E5AC007A7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Hand_FK_Ctrl_translateZ";
 	rename -uid "C01CC451-4ABC-4D72-8EA8-099438A2B090";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Arm_01_Jnt_FK_Ctrl_translateX";
 	rename -uid "78143BFB-4B10-16D1-A812-F5B62F8521FF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Arm_01_Jnt_FK_Ctrl_translateY";
 	rename -uid "4BED214F-40D4-3734-3D8D-12BE90366FE6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Arm_01_Jnt_FK_Ctrl_translateZ";
 	rename -uid "4B29C1E5-44D0-3AC2-323C-BCA754F6961C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Arm_02_Jnt_FK_Ctrl_translateX";
 	rename -uid "C66B1D40-42C1-DDAB-4614-44BB1EFD2107";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Arm_02_Jnt_FK_Ctrl_translateY";
 	rename -uid "0656D18D-4412-7C95-12CE-97866C7FED42";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Arm_02_Jnt_FK_Ctrl_translateZ";
 	rename -uid "B88BDCFF-41BB-0501-C5C6-2DB852557E81";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Hand_FK_Ctrl_translateX";
 	rename -uid "4D485AA6-4A46-2AF4-175F-F4A2B5CEEC2A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Hand_FK_Ctrl_translateY";
 	rename -uid "C460E6D5-4144-D62A-79D2-16BB44EF1A5B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Hand_FK_Ctrl_translateZ";
 	rename -uid "0A94B20D-49C3-6189-29A7-4397A3689438";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Arm_02_Jnt_FK_Ctrl_translateX";
 	rename -uid "D3A38C69-4195-567D-44DD-6C9D735AA4B0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Arm_02_Jnt_FK_Ctrl_translateY";
 	rename -uid "A56EED5F-45CB-CE9F-695B-3F964B525C35";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Arm_02_Jnt_FK_Ctrl_translateZ";
 	rename -uid "0E257A1E-466C-40EE-0F84-3D8C6C09817D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Arm_01_Jnt_FK_Ctrl_translateX";
 	rename -uid "4BC6AF78-4786-282D-73E0-63B09EDC9C75";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Arm_01_Jnt_FK_Ctrl_translateY";
 	rename -uid "82DD1C11-45EC-5EFC-B380-FEA52DC58B0C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Arm_01_Jnt_FK_Ctrl_translateZ";
 	rename -uid "4D3FE324-42D6-EA41-4D40-C980363680D9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Hand_FK_Ctrl_rotateX";
 	rename -uid "6AE78931-48B5-4177-23E0-11A6B0EB8182";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Hand_FK_Ctrl_rotateY";
 	rename -uid "3395B990-4A4B-7F1A-C127-3AA6A36E4E2A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 24.686525752202474 2 24.686525752202474
-		 3 24.686525752202474 4 24.686525752202474;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 24.686525752202474 2 24.686525752202474
+		 3 24.686525752202474 4 24.686525752202474 5 24.686525752202474 6 24.686525752202474
+		 7 24.686525752202474 8 24.686525752202474 9 24.686525752202474 10 24.686525752202474
+		 11 24.686525752202474 12 24.686525752202474 13 24.686525752202474 14 24.686525752202474
+		 15 24.686525752202474 16 24.686525752202474;
 createNode animCurveTA -n "R_Hand_FK_Ctrl_rotateZ";
 	rename -uid "8C3E8C23-4AFB-138E-A20C-36BF311B103D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 1 0 2 0 3 0 4 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTU -n "Transform_Control_Left_Arm_IKFK";
 	rename -uid "DEFADF2F-48E5-89E0-F8EB-27819179A757";
 	setAttr ".tan" 18;
@@ -6321,12 +7051,12 @@ createNode animCurveTU -n "Transform_Control_Left_Leg_IKFK";
 	rename -uid "DA5EC77C-428F-2046-C50A-57BBA3643697";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  4 0 5 0 6 1;
+	setAttr -s 6 ".ktv[0:5]"  4 0 5 0 6 1 13 1 14 1 15 0;
 createNode animCurveTU -n "Transform_Control_Right_Leg_IKFK";
 	rename -uid "E868D888-4046-4172-F8DF-BC9541CEBEF5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  4 0 5 0 6 1;
+	setAttr -s 6 ".ktv[0:5]"  4 0 5 0 6 1 13 1 14 1 15 0;
 createNode animCurveTU -n "Spine_Top_Control_Joint_Ctrl_Follow";
 	rename -uid "67072149-48BC-9E8C-899C-8A9D7A4B9170";
 	setAttr ".tan" 9;
@@ -6337,96 +7067,128 @@ createNode animCurveTA -n "L_Knee_Ctrl_rotateX";
 	rename -uid "C4AFFE65-486E-C55D-E819-0C88CD0DB805";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  6 0 8 0 9 0 10 0 12 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Knee_Ctrl_rotateY";
 	rename -uid "C307E489-4AFB-964E-7E70-C5BDC205F745";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  6 0 8 0 9 0 10 0 12 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Knee_Ctrl_rotateZ";
 	rename -uid "2D1B9D07-4019-5E85-B371-99B69353000B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  6 -64.634052292708574 8 -34.271816732222597
-		 9 -56.819300446262382 10 -83.460918677922933 12 -38.815375636266822;
+	setAttr -s 17 ".ktv[0:16]"  0 -64.634052292708574 1 -64.634052292708574
+		 2 -64.634052292708574 3 -64.634052292708574 4 -64.634052292708574 5 -64.634052292708574
+		 6 -64.634052292708574 7 -49.452934512465575 8 -34.271816732222597 9 -56.819300446262382
+		 10 -83.460918677922933 11 -61.138147157094899 12 -38.815375636266822 13 -38.815375636266822
+		 14 -38.815375636266822 15 -38.815375636266822 16 -38.815375636266822;
 createNode animCurveTA -n "R_Knee_Ctrl_rotateX";
 	rename -uid "217A5E6F-480F-AF18-50C7-5991F8F589B0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  6 0 8 0 9 0 10 0 12 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Knee_Ctrl_rotateY";
 	rename -uid "BA5B9733-4A29-53AA-EE05-2A843D5EBD0C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  6 0 8 0 9 0 10 0 12 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Knee_Ctrl_rotateZ";
 	rename -uid "272571B8-46AC-83BB-6E42-0CA55C20CCA3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  6 -90.055874813295063 8 -59.693639252808971
-		 9 -82.241122966848764 10 -108.88274119850921 12 -64.237198156853168;
+	setAttr -s 17 ".ktv[0:16]"  0 -90.055874813295063 1 -90.055874813295063
+		 2 -90.055874813295063 3 -90.055874813295063 4 -90.055874813295063 5 -90.055874813295063
+		 6 -90.055874813295063 7 -74.874757033051992 8 -59.693639252808971 9 -82.241122966848764
+		 10 -108.88274119850921 11 -86.55996967768121 12 -64.237198156853168 13 -97.412191351628792
+		 14 -126.00355088848619 15 -126.00355088848619 16 -126.00355088848619;
 createNode animCurveTA -n "R_Hip_FK_Ctrl_rotateX";
 	rename -uid "2C967CD8-4906-0791-7970-B88C74AA4303";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  6 0 8 0 9 0 10 0 11 0 12 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Hip_FK_Ctrl_rotateY";
 	rename -uid "4A58158D-4D31-00B6-F467-5DAA483D128A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  6 0 8 0 9 0 10 0 11 0 12 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Hip_FK_Ctrl_rotateZ";
 	rename -uid "FAAAC0EA-4273-65C5-203B-5F970F588F91";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  6 13.943739229827944 8 -30.89742040058243
-		 9 -54.641420765114901 10 -56.335410970156438 11 60.907970672467876 12 32.094702696911796;
+	setAttr -s 17 ".ktv[0:16]"  0 13.943739229827944 1 13.943739229827944
+		 2 13.943739229827944 3 13.943739229827944 4 13.943739229827944 5 13.943739229827944
+		 6 13.943739229827944 7 -2.761410585798691 8 -30.89742040058243 9 -54.641420765114901
+		 10 -56.335410970156438 11 60.907970672467876 12 32.094702696911796 13 47.99688942638938
+		 14 75.444638472790288 15 75.444638472790288 16 75.444638472790288;
 createNode animCurveTA -n "R_Foot_FK_Ctrl_rotateX";
 	rename -uid "03105A0E-4F9D-AAB2-D8A9-84BE457F4327";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  6 20.282006544456333;
+	setAttr -s 17 ".ktv[0:16]"  0 20.282006544456333 1 20.282006544456333
+		 2 20.282006544456333 3 20.282006544456333 4 20.282006544456333 5 20.282006544456333
+		 6 20.282006544456333 7 20.282006544456333 8 20.282006544456333 9 20.282006544456333
+		 10 20.282006544456333 11 20.282006544456333 12 20.282006544456333 13 8.8672395034232192
+		 14 -2.5475275376099384 15 -2.5475275376099384 16 -2.5475275376099384;
 createNode animCurveTA -n "R_Foot_FK_Ctrl_rotateY";
 	rename -uid "ED56B32F-4798-C38A-6560-D8A0DF8B187C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "R_Foot_FK_Ctrl_rotateZ";
 	rename -uid "8414A4D5-4F7E-267E-77E1-90B178266F34";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Foot_FK_Ctrl_rotateX";
 	rename -uid "D3B2CD0B-4B74-1858-BC89-7DBD0EF8B160";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  6 6.9439046061621115;
+	setAttr -s 17 ".ktv[0:16]"  0 6.9439046061621115 1 6.9439046061621115
+		 2 6.9439046061621115 3 6.9439046061621115 4 6.9439046061621115 5 6.9439046061621115
+		 6 6.9439046061621115 7 6.9439046061621115 8 6.9439046061621115 9 6.9439046061621115
+		 10 6.9439046061621115 11 6.9439046061621115 12 6.9439046061621115 13 28.613421593512861
+		 14 0.94822009315585809 15 0.94822009315585809 16 0.94822009315585809;
 createNode animCurveTA -n "L_Foot_FK_Ctrl_rotateY";
 	rename -uid "284BB239-45DA-956C-4A43-E89DF9ED3AB0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Foot_FK_Ctrl_rotateZ";
 	rename -uid "CC39403F-4060-D10A-509B-C2A2A1EF1BCD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  6 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Hip_FK_Ctrl_rotateX";
 	rename -uid "FC87357E-45A0-D037-B975-21BAB1B77787";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  6 0 8 0 9 0 10 0 11 0 12 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Hip_FK_Ctrl_rotateY";
 	rename -uid "7AD9BCDF-42D4-8F5B-52AB-2795418C2225";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  6 0 8 0 9 0 10 0 11 0 12 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTA -n "L_Hip_FK_Ctrl_rotateZ";
 	rename -uid "54758E40-4085-98E9-F737-EDB6D2BD269D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  6 37.163243198865842 8 -44.841159630410345
-		 9 -68.585159994942885 10 -70.279150199984372 11 46.964231442639857 12 18.150963467083844;
+	setAttr -s 17 ".ktv[0:16]"  0 37.163243198865842 1 37.163243198865842
+		 2 37.163243198865842 3 37.163243198865842 4 37.163243198865842 5 37.163243198865842
+		 6 37.163243198865842 7 4.973408717045098 8 -44.841159630410345 9 -68.585159994942885
+		 10 -70.279150199984372 11 46.964231442639864 12 18.150963467083844 13 -5.4546482425551863
+		 14 28.422006313049618 15 28.422006313049618 16 28.422006313049618;
 createNode animCurveTU -n "L_Hand_IK_Ctrl_Follow";
 	rename -uid "16433117-434A-1B3C-C4E4-A7A95DE0DE4A";
 	setAttr ".tan" 9;
@@ -6455,65 +7217,268 @@ createNode animCurveTL -n "locator1_translateX";
 	rename -uid "7B6655AD-42D8-D408-9853-C68C7E6E12EB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  12 18.75048725389259;
+	setAttr -s 17 ".ktv[0:16]"  0 18.75048725389259 1 18.75048725389259
+		 2 18.75048725389259 3 18.75048725389259 4 18.75048725389259 5 18.75048725389259 6 18.75048725389259
+		 7 18.75048725389259 8 18.75048725389259 9 18.75048725389259 10 18.75048725389259
+		 11 18.75048725389259 12 18.75048725389259 13 18.75048725389259 14 18.75048725389259
+		 15 18.75048725389259 16 18.75048725389259;
 createNode animCurveTL -n "locator1_translateY";
 	rename -uid "77CE1970-4C42-1FA4-FEC6-408C13039C9C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  12 275.2309293084196;
+	setAttr -s 17 ".ktv[0:16]"  0 275.2309293084196 1 275.2309293084196
+		 2 275.2309293084196 3 275.2309293084196 4 275.2309293084196 5 275.2309293084196 6 275.2309293084196
+		 7 275.2309293084196 8 275.2309293084196 9 275.2309293084196 10 275.2309293084196
+		 11 275.2309293084196 12 275.2309293084196 13 275.2309293084196 14 275.2309293084196
+		 15 275.2309293084196 16 275.2309293084196;
 createNode animCurveTL -n "locator1_translateZ";
 	rename -uid "F451D556-405E-5C3E-DE29-E0B7DAB745CC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  12 63.71595413942152;
+	setAttr -s 17 ".ktv[0:16]"  0 63.71595413942152 1 63.71595413942152
+		 2 63.71595413942152 3 63.71595413942152 4 63.71595413942152 5 63.71595413942152 6 63.71595413942152
+		 7 63.71595413942152 8 63.71595413942152 9 63.71595413942152 10 63.71595413942152
+		 11 63.71595413942152 12 63.71595413942152 13 63.71595413942152 14 63.71595413942152
+		 15 63.71595413942152 16 63.71595413942152;
 createNode animCurveTA -n "locator1_rotateX";
 	rename -uid "6B0A6D33-42C4-E19C-5AB3-278296D29840";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  12 -93.715883230819372;
+	setAttr -s 17 ".ktv[0:16]"  0 -93.715883230819372 1 -93.715883230819372
+		 2 -93.715883230819372 3 -93.715883230819372 4 -93.715883230819372 5 -93.715883230819372
+		 6 -93.715883230819372 7 -93.715883230819372 8 -93.715883230819372 9 -93.715883230819372
+		 10 -93.715883230819372 11 -93.715883230819372 12 -93.715883230819372 13 -93.715883230819372
+		 14 -93.715883230819372 15 -93.715883230819372 16 -93.715883230819372;
 createNode animCurveTA -n "locator1_rotateY";
 	rename -uid "31F51082-40EE-0DA1-DBEE-AF8C007686D8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  12 -50.477314758383585;
+	setAttr -s 17 ".ktv[0:16]"  0 -50.477314758383585 1 -50.477314758383585
+		 2 -50.477314758383585 3 -50.477314758383585 4 -50.477314758383585 5 -50.477314758383585
+		 6 -50.477314758383585 7 -50.477314758383585 8 -50.477314758383585 9 -50.477314758383585
+		 10 -50.477314758383585 11 -50.477314758383585 12 -50.477314758383585 13 -50.477314758383585
+		 14 -50.477314758383585 15 -50.477314758383585 16 -50.477314758383585;
 createNode animCurveTA -n "locator1_rotateZ";
 	rename -uid "815892CF-4D3E-6EC2-B167-82B554560CD6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  12 94.367121608065887;
+	setAttr -s 17 ".ktv[0:16]"  0 94.367121608065887 1 94.367121608065887
+		 2 94.367121608065887 3 94.367121608065887 4 94.367121608065887 5 94.367121608065887
+		 6 94.367121608065887 7 94.367121608065887 8 94.367121608065887 9 94.367121608065887
+		 10 94.367121608065887 11 94.367121608065887 12 94.367121608065887 13 94.367121608065887
+		 14 94.367121608065887 15 94.367121608065887 16 94.367121608065887;
 createNode animCurveTL -n "L_Hip_FK_Ctrl_translateX";
 	rename -uid "A456372A-4665-EBEC-B450-0AB0430DEBC1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  10 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Hip_FK_Ctrl_translateY";
 	rename -uid "65FC305E-46F9-D733-6313-DA8724EE9754";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  10 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "L_Hip_FK_Ctrl_translateZ";
 	rename -uid "16CD100D-48C0-8875-9631-2398D8488522";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  10 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Hip_FK_Ctrl_translateX";
 	rename -uid "B40A4704-4E41-5E4F-84C0-C4ACE369546A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  10 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Hip_FK_Ctrl_translateY";
 	rename -uid "B8BDF5BE-4AFD-6D20-0872-0080D0C124FE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  10 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
 createNode animCurveTL -n "R_Hip_FK_Ctrl_translateZ";
 	rename -uid "1EF15BEA-4732-7B32-BFCA-21A0AF846353";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  10 0;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "L_Knee_Ctrl_translateX";
+	rename -uid "502C8595-45FA-3174-54CA-509896C8EA87";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "L_Knee_Ctrl_translateY";
+	rename -uid "0B462CD1-4169-41CA-28E7-CEB351233A93";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "L_Knee_Ctrl_translateZ";
+	rename -uid "086EB7DE-42EB-FC10-FAE5-A9992C088453";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "L_Foot_FK_Ctrl_translateX";
+	rename -uid "E54F5FA9-4BB2-D76C-7B11-3AAF89788111";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "L_Foot_FK_Ctrl_translateY";
+	rename -uid "CB8628E0-4628-3192-F65F-4099AF5C7244";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "L_Foot_FK_Ctrl_translateZ";
+	rename -uid "BCC78382-4684-923C-D65C-5CAB6AFC7786";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "R_Foot_FK_Ctrl_translateX";
+	rename -uid "D1A7FF40-4448-016E-3B02-1EB3AF62785F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "R_Foot_FK_Ctrl_translateY";
+	rename -uid "8C9C28E8-4DD8-1EB7-2A74-70BF6E54F649";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "R_Foot_FK_Ctrl_translateZ";
+	rename -uid "84D4BE4B-4B4B-BF8B-A9A0-F98E1F70A280";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "R_Toe_FK_Ctrl_translateX";
+	rename -uid "BCC0FA9E-484D-C29C-EDD3-D39BE405EF18";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "R_Toe_FK_Ctrl_translateY";
+	rename -uid "F7133D21-4ED0-2A0B-06D0-EFB82B7C5F1C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "R_Toe_FK_Ctrl_translateZ";
+	rename -uid "FAF69A4B-41C6-86A2-2713-25871729916F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "L_Toe_FK_Ctrl_translateX";
+	rename -uid "49B4F101-4373-6AE4-BA91-119AB061D412";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "L_Toe_FK_Ctrl_translateY";
+	rename -uid "46EB8A7E-4EBB-FF1A-B0C3-399546827DEC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "L_Toe_FK_Ctrl_translateZ";
+	rename -uid "DEEC620D-4D4C-133B-A0DD-7096CF58A256";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "R_Knee_Ctrl_translateX";
+	rename -uid "47C1DC3C-455D-1C23-9F7F-A09A155656D2";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "R_Knee_Ctrl_translateY";
+	rename -uid "FEAC6A33-48B5-6DC4-A393-E6ABD58EACA0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "R_Knee_Ctrl_translateZ";
+	rename -uid "83B575D7-4490-444B-D6CB-22A948C03CDC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTL -n "pCube3_translateX";
+	rename -uid "5DBB2289-44F8-3606-BCAC-4FBFC283D6EC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  12 0;
+createNode animCurveTL -n "pCube3_translateY";
+	rename -uid "99D6952B-4585-7036-5E53-F7AD82E8C70F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  12 613.0377611049264;
+createNode animCurveTL -n "pCube3_translateZ";
+	rename -uid "8D23FFF3-4B80-10ED-40BD-0B9076B07ED1";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  12 49.312225965385849;
+createNode animCurveTA -n "R_Toe_FK_Ctrl_rotateX";
+	rename -uid "01F8C218-415D-45A5-0A36-A4B00F73B46A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTA -n "R_Toe_FK_Ctrl_rotateY";
+	rename -uid "E7ADC7AE-4805-9425-8594-EBA08505AC42";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTA -n "R_Toe_FK_Ctrl_rotateZ";
+	rename -uid "2350639E-41C6-A11C-9BD4-F3B1D773446E";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTA -n "L_Toe_FK_Ctrl_rotateX";
+	rename -uid "F5DD3406-4EC6-A486-E2AB-AFBCC4A6820C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTA -n "L_Toe_FK_Ctrl_rotateY";
+	rename -uid "99265317-438B-68EE-822C-2884AB31C88A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTA -n "L_Toe_FK_Ctrl_rotateZ";
+	rename -uid "3A3FD3BF-41E0-DF27-C2FE-A68D6AADBDEB";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 17 ".ktv[0:16]"  0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0
+		 10 0 11 0 12 0 13 0 14 0 15 0 16 0;
+createNode animCurveTA -n "pCube3_rotateX";
+	rename -uid "ED165E32-4BEA-A817-FDD1-D7B9A46F980A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  12 0;
+createNode animCurveTA -n "pCube3_rotateY";
+	rename -uid "E3F069AD-4C4E-462D-BC9B-97A4B05193BE";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  12 0;
+createNode animCurveTA -n "pCube3_rotateZ";
+	rename -uid "DC3A9BBB-4233-53EA-A685-DDA782453851";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  12 0;
 select -ne :time1;
-	setAttr ".o" 13;
-	setAttr ".unw" 13;
+	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -6560,7 +7525,7 @@ select -ne :hardwareRenderGlobals;
 select -ne :defaultHideFaceDataSet;
 	setAttr -s 4 ".dnsm";
 select -ne :ikSystem;
-	setAttr -s 4 ".sol";
+	setAttr -s 3 ".sol";
 connectAttr "Transform_Control_Left_Arm_IKFK.o" "LaraCroftAdvanced_RigRN.phl[1]";
 connectAttr "Transform_Control_Right_Arm_IKFK.o" "LaraCroftAdvanced_RigRN.phl[2]"
 		;
@@ -6781,833 +7746,863 @@ connectAttr "L_reverse_foot_toeTap_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[
 		;
 connectAttr "L_reverse_foot_toeTap_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[157]"
 		;
-connectAttr "L_Foot_FK_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[158]";
-connectAttr "L_Foot_FK_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[159]";
-connectAttr "L_Foot_FK_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[160]";
-connectAttr "L_Knee_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[161]";
-connectAttr "L_Knee_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[162]";
-connectAttr "L_Knee_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[163]";
-connectAttr "L_Hip_FK_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[164]";
-connectAttr "L_Hip_FK_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[165]";
-connectAttr "L_Hip_FK_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[166]";
-connectAttr "L_Hip_FK_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[167]";
-connectAttr "L_Hip_FK_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[168]";
-connectAttr "L_Hip_FK_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[169]";
-connectAttr "R_Foot_FK_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[170]";
-connectAttr "R_Foot_FK_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[171]";
-connectAttr "R_Foot_FK_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[172]";
-connectAttr "R_Knee_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[173]";
-connectAttr "R_Knee_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[174]";
-connectAttr "R_Knee_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[175]";
-connectAttr "R_Hip_FK_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[176]";
-connectAttr "R_Hip_FK_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[177]";
-connectAttr "R_Hip_FK_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[178]";
-connectAttr "R_Hip_FK_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[179]";
-connectAttr "R_Hip_FK_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[180]";
-connectAttr "R_Hip_FK_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[181]";
-connectAttr "R_Knee_PV_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[182]";
-connectAttr "R_Knee_PV_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[183]";
-connectAttr "R_Knee_PV_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[184]";
-connectAttr "R_Knee_PV_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[185]";
-connectAttr "R_Knee_PV_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[186]";
-connectAttr "R_Knee_PV_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[187]";
-connectAttr "R_Hip_IK_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[188]";
-connectAttr "R_Hip_IK_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[189]";
-connectAttr "R_Hip_IK_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[190]";
-connectAttr "R_Hip_IK_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[191]";
-connectAttr "R_Hip_IK_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[192]";
-connectAttr "R_Hip_IK_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[193]";
-connectAttr "R_Foot_IK_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[194]";
-connectAttr "R_Foot_IK_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[195]";
-connectAttr "R_Foot_IK_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[196]";
-connectAttr "R_Foot_IK_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[197]";
-connectAttr "R_Foot_IK_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[198]";
-connectAttr "R_Foot_IK_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[199]";
-connectAttr "R_reverse_foot_outer_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[200]"
+connectAttr "L_Foot_FK_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[158]";
+connectAttr "L_Foot_FK_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[159]";
+connectAttr "L_Foot_FK_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[160]";
+connectAttr "L_Foot_FK_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[161]";
+connectAttr "L_Foot_FK_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[162]";
+connectAttr "L_Foot_FK_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[163]";
+connectAttr "L_Knee_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[164]";
+connectAttr "L_Knee_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[165]";
+connectAttr "L_Knee_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[166]";
+connectAttr "L_Knee_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[167]";
+connectAttr "L_Knee_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[168]";
+connectAttr "L_Knee_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[169]";
+connectAttr "L_Hip_FK_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[170]";
+connectAttr "L_Hip_FK_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[171]";
+connectAttr "L_Hip_FK_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[172]";
+connectAttr "L_Hip_FK_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[173]";
+connectAttr "L_Hip_FK_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[174]";
+connectAttr "L_Hip_FK_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[175]";
+connectAttr "L_Toe_FK_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[176]";
+connectAttr "L_Toe_FK_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[177]";
+connectAttr "L_Toe_FK_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[178]";
+connectAttr "L_Toe_FK_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[179]";
+connectAttr "L_Toe_FK_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[180]";
+connectAttr "L_Toe_FK_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[181]";
+connectAttr "R_Foot_FK_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[182]";
+connectAttr "R_Foot_FK_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[183]";
+connectAttr "R_Foot_FK_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[184]";
+connectAttr "R_Foot_FK_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[185]";
+connectAttr "R_Foot_FK_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[186]";
+connectAttr "R_Foot_FK_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[187]";
+connectAttr "R_Knee_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[188]";
+connectAttr "R_Knee_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[189]";
+connectAttr "R_Knee_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[190]";
+connectAttr "R_Knee_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[191]";
+connectAttr "R_Knee_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[192]";
+connectAttr "R_Knee_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[193]";
+connectAttr "R_Hip_FK_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[194]";
+connectAttr "R_Hip_FK_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[195]";
+connectAttr "R_Hip_FK_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[196]";
+connectAttr "R_Hip_FK_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[197]";
+connectAttr "R_Hip_FK_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[198]";
+connectAttr "R_Hip_FK_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[199]";
+connectAttr "R_Toe_FK_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[200]";
+connectAttr "R_Toe_FK_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[201]";
+connectAttr "R_Toe_FK_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[202]";
+connectAttr "R_Toe_FK_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[203]";
+connectAttr "R_Toe_FK_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[204]";
+connectAttr "R_Toe_FK_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[205]";
+connectAttr "R_Knee_PV_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[206]";
+connectAttr "R_Knee_PV_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[207]";
+connectAttr "R_Knee_PV_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[208]";
+connectAttr "R_Knee_PV_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[209]";
+connectAttr "R_Knee_PV_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[210]";
+connectAttr "R_Knee_PV_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[211]";
+connectAttr "R_Hip_IK_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[212]";
+connectAttr "R_Hip_IK_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[213]";
+connectAttr "R_Hip_IK_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[214]";
+connectAttr "R_Hip_IK_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[215]";
+connectAttr "R_Hip_IK_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[216]";
+connectAttr "R_Hip_IK_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[217]";
+connectAttr "R_Foot_IK_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[218]";
+connectAttr "R_Foot_IK_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[219]";
+connectAttr "R_Foot_IK_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[220]";
+connectAttr "R_Foot_IK_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[221]";
+connectAttr "R_Foot_IK_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[222]";
+connectAttr "R_Foot_IK_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[223]";
+connectAttr "R_reverse_foot_outer_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[224]"
 		;
-connectAttr "R_reverse_foot_outer_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[201]"
+connectAttr "R_reverse_foot_outer_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[225]"
 		;
-connectAttr "R_reverse_foot_outer_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[202]"
+connectAttr "R_reverse_foot_outer_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[226]"
 		;
-connectAttr "R_reverse_foot_outer_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[203]"
+connectAttr "R_reverse_foot_outer_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[227]"
 		;
-connectAttr "R_reverse_foot_outer_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[204]"
+connectAttr "R_reverse_foot_outer_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[228]"
 		;
-connectAttr "R_reverse_foot_outer_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[205]"
+connectAttr "R_reverse_foot_outer_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[229]"
 		;
-connectAttr "R_reverse_foot_inner_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[206]"
+connectAttr "R_reverse_foot_inner_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[230]"
 		;
-connectAttr "R_reverse_foot_inner_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[207]"
+connectAttr "R_reverse_foot_inner_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[231]"
 		;
-connectAttr "R_reverse_foot_inner_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[208]"
+connectAttr "R_reverse_foot_inner_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[232]"
 		;
-connectAttr "R_reverse_foot_inner_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[209]"
+connectAttr "R_reverse_foot_inner_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[233]"
 		;
-connectAttr "R_reverse_foot_inner_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[210]"
+connectAttr "R_reverse_foot_inner_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[234]"
 		;
-connectAttr "R_reverse_foot_inner_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[211]"
+connectAttr "R_reverse_foot_inner_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[235]"
 		;
-connectAttr "R_reverse_foot_heel_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[212]"
+connectAttr "R_reverse_foot_heel_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[236]"
 		;
-connectAttr "R_reverse_foot_heel_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[213]"
+connectAttr "R_reverse_foot_heel_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[237]"
 		;
-connectAttr "R_reverse_foot_heel_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[214]"
+connectAttr "R_reverse_foot_heel_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[238]"
 		;
-connectAttr "R_reverse_foot_heel_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[215]"
+connectAttr "R_reverse_foot_heel_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[239]"
 		;
-connectAttr "R_reverse_foot_heel_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[216]"
+connectAttr "R_reverse_foot_heel_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[240]"
 		;
-connectAttr "R_reverse_foot_heel_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[217]"
+connectAttr "R_reverse_foot_heel_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[241]"
 		;
-connectAttr "R_reverse_foot_toe_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[218]"
+connectAttr "R_reverse_foot_toe_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[242]"
 		;
-connectAttr "R_reverse_foot_toe_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[219]"
+connectAttr "R_reverse_foot_toe_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[243]"
 		;
-connectAttr "R_reverse_foot_toe_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[220]"
+connectAttr "R_reverse_foot_toe_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[244]"
 		;
-connectAttr "R_reverse_foot_toe_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[221]"
+connectAttr "R_reverse_foot_toe_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[245]"
 		;
-connectAttr "R_reverse_foot_toe_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[222]"
+connectAttr "R_reverse_foot_toe_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[246]"
 		;
-connectAttr "R_reverse_foot_toe_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[223]"
+connectAttr "R_reverse_foot_toe_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[247]"
 		;
-connectAttr "R_reverse_foot_ball_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[224]"
+connectAttr "R_reverse_foot_ball_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[248]"
 		;
-connectAttr "R_reverse_foot_ball_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[225]"
+connectAttr "R_reverse_foot_ball_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[249]"
 		;
-connectAttr "R_reverse_foot_ball_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[226]"
+connectAttr "R_reverse_foot_ball_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[250]"
 		;
-connectAttr "R_reverse_foot_ball_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[227]"
+connectAttr "R_reverse_foot_ball_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[251]"
 		;
-connectAttr "R_reverse_foot_ball_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[228]"
+connectAttr "R_reverse_foot_ball_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[252]"
 		;
-connectAttr "R_reverse_foot_ball_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[229]"
+connectAttr "R_reverse_foot_ball_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[253]"
 		;
-connectAttr "R_reverse_foot_toeTap_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[230]"
+connectAttr "R_reverse_foot_toeTap_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[254]"
 		;
-connectAttr "R_reverse_foot_toeTap_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[231]"
+connectAttr "R_reverse_foot_toeTap_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[255]"
 		;
-connectAttr "R_reverse_foot_toeTap_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[232]"
+connectAttr "R_reverse_foot_toeTap_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[256]"
 		;
-connectAttr "R_reverse_foot_toeTap_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[233]"
+connectAttr "R_reverse_foot_toeTap_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[257]"
 		;
-connectAttr "R_reverse_foot_toeTap_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[234]"
+connectAttr "R_reverse_foot_toeTap_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[258]"
 		;
-connectAttr "R_reverse_foot_toeTap_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[235]"
+connectAttr "R_reverse_foot_toeTap_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[259]"
 		;
-connectAttr "L_Thumb_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[236]"
+connectAttr "L_Thumb_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[260]"
 		;
-connectAttr "L_Thumb_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[237]"
+connectAttr "L_Thumb_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[261]"
 		;
-connectAttr "L_Thumb_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[238]"
+connectAttr "L_Thumb_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[262]"
 		;
-connectAttr "L_Thumb_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[239]";
-connectAttr "L_Thumb_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[240]";
-connectAttr "L_Thumb_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[241]";
-connectAttr "L_Thumb_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[242]"
+connectAttr "L_Thumb_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[263]";
+connectAttr "L_Thumb_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[264]";
+connectAttr "L_Thumb_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[265]";
+connectAttr "L_Thumb_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[266]"
 		;
-connectAttr "L_Thumb_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[243]"
+connectAttr "L_Thumb_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[267]"
 		;
-connectAttr "L_Thumb_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[244]"
+connectAttr "L_Thumb_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[268]"
 		;
-connectAttr "L_Thumb_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[245]";
-connectAttr "L_Thumb_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[246]";
-connectAttr "L_Thumb_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[247]";
-connectAttr "L_Thumb_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[248]"
+connectAttr "L_Thumb_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[269]";
+connectAttr "L_Thumb_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[270]";
+connectAttr "L_Thumb_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[271]";
+connectAttr "L_Thumb_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[272]"
 		;
-connectAttr "L_Thumb_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[249]"
+connectAttr "L_Thumb_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[273]"
 		;
-connectAttr "L_Thumb_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[250]"
+connectAttr "L_Thumb_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[274]"
 		;
-connectAttr "L_Thumb_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[251]";
-connectAttr "L_Thumb_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[252]";
-connectAttr "L_Thumb_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[253]";
-connectAttr "L_Pointer_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[254]"
+connectAttr "L_Thumb_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[275]";
+connectAttr "L_Thumb_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[276]";
+connectAttr "L_Thumb_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[277]";
+connectAttr "L_Pointer_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[278]"
 		;
-connectAttr "L_Pointer_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[255]"
+connectAttr "L_Pointer_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[279]"
 		;
-connectAttr "L_Pointer_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[256]"
+connectAttr "L_Pointer_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[280]"
 		;
-connectAttr "L_Pointer_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[257]"
+connectAttr "L_Pointer_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[281]"
 		;
-connectAttr "L_Pointer_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[258]"
+connectAttr "L_Pointer_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[282]"
 		;
-connectAttr "L_Pointer_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[259]"
+connectAttr "L_Pointer_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[283]"
 		;
-connectAttr "L_Pointer_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[260]"
+connectAttr "L_Pointer_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[284]"
 		;
-connectAttr "L_Pointer_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[261]"
+connectAttr "L_Pointer_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[285]"
 		;
-connectAttr "L_Pointer_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[262]"
+connectAttr "L_Pointer_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[286]"
 		;
-connectAttr "L_Pointer_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[263]"
+connectAttr "L_Pointer_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[287]"
 		;
-connectAttr "L_Pointer_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[264]"
+connectAttr "L_Pointer_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[288]"
 		;
-connectAttr "L_Pointer_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[265]"
+connectAttr "L_Pointer_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[289]"
 		;
-connectAttr "L_Pointer_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[266]"
+connectAttr "L_Pointer_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[290]"
 		;
-connectAttr "L_Pointer_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[267]"
+connectAttr "L_Pointer_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[291]"
 		;
-connectAttr "L_Pointer_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[268]"
+connectAttr "L_Pointer_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[292]"
 		;
-connectAttr "L_Pointer_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[269]"
+connectAttr "L_Pointer_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[293]"
 		;
-connectAttr "L_Pointer_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[270]"
+connectAttr "L_Pointer_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[294]"
 		;
-connectAttr "L_Pointer_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[271]"
+connectAttr "L_Pointer_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[295]"
 		;
-connectAttr "L_Middle_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[272]"
+connectAttr "L_Middle_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[296]"
 		;
-connectAttr "L_Middle_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[273]"
+connectAttr "L_Middle_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[297]"
 		;
-connectAttr "L_Middle_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[274]"
+connectAttr "L_Middle_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[298]"
 		;
-connectAttr "L_Middle_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[275]";
-connectAttr "L_Middle_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[276]";
-connectAttr "L_Middle_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[277]";
-connectAttr "L_Middle_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[278]"
+connectAttr "L_Middle_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[299]";
+connectAttr "L_Middle_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[300]";
+connectAttr "L_Middle_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[301]";
+connectAttr "L_Middle_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[302]"
 		;
-connectAttr "L_Middle_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[279]"
+connectAttr "L_Middle_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[303]"
 		;
-connectAttr "L_Middle_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[280]"
+connectAttr "L_Middle_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[304]"
 		;
-connectAttr "L_Middle_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[281]";
-connectAttr "L_Middle_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[282]";
-connectAttr "L_Middle_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[283]";
-connectAttr "L_Middle_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[284]"
+connectAttr "L_Middle_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[305]";
+connectAttr "L_Middle_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[306]";
+connectAttr "L_Middle_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[307]";
+connectAttr "L_Middle_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[308]"
 		;
-connectAttr "L_Middle_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[285]"
+connectAttr "L_Middle_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[309]"
 		;
-connectAttr "L_Middle_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[286]"
+connectAttr "L_Middle_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[310]"
 		;
-connectAttr "L_Middle_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[287]";
-connectAttr "L_Middle_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[288]";
-connectAttr "L_Middle_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[289]";
-connectAttr "L_Ring_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[290]"
+connectAttr "L_Middle_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[311]";
+connectAttr "L_Middle_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[312]";
+connectAttr "L_Middle_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[313]";
+connectAttr "L_Ring_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[314]"
 		;
-connectAttr "L_Ring_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[291]"
+connectAttr "L_Ring_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[315]"
 		;
-connectAttr "L_Ring_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[292]"
+connectAttr "L_Ring_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[316]"
 		;
-connectAttr "L_Ring_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[293]";
-connectAttr "L_Ring_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[294]";
-connectAttr "L_Ring_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[295]";
-connectAttr "L_Ring_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[296]"
+connectAttr "L_Ring_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[317]";
+connectAttr "L_Ring_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[318]";
+connectAttr "L_Ring_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[319]";
+connectAttr "L_Ring_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[320]"
 		;
-connectAttr "L_Ring_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[297]"
+connectAttr "L_Ring_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[321]"
 		;
-connectAttr "L_Ring_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[298]"
+connectAttr "L_Ring_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[322]"
 		;
-connectAttr "L_Ring_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[299]";
-connectAttr "L_Ring_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[300]";
-connectAttr "L_Ring_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[301]";
-connectAttr "L_Ring_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[302]"
+connectAttr "L_Ring_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[323]";
+connectAttr "L_Ring_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[324]";
+connectAttr "L_Ring_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[325]";
+connectAttr "L_Ring_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[326]"
 		;
-connectAttr "L_Ring_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[303]"
+connectAttr "L_Ring_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[327]"
 		;
-connectAttr "L_Ring_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[304]"
+connectAttr "L_Ring_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[328]"
 		;
-connectAttr "L_Ring_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[305]";
-connectAttr "L_Ring_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[306]";
-connectAttr "L_Ring_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[307]";
-connectAttr "L_Pinky_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[308]"
+connectAttr "L_Ring_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[329]";
+connectAttr "L_Ring_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[330]";
+connectAttr "L_Ring_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[331]";
+connectAttr "L_Pinky_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[332]"
 		;
-connectAttr "L_Pinky_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[309]"
+connectAttr "L_Pinky_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[333]"
 		;
-connectAttr "L_Pinky_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[310]"
+connectAttr "L_Pinky_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[334]"
 		;
-connectAttr "L_Pinky_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[311]";
-connectAttr "L_Pinky_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[312]";
-connectAttr "L_Pinky_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[313]";
-connectAttr "L_Pinky_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[314]"
+connectAttr "L_Pinky_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[335]";
+connectAttr "L_Pinky_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[336]";
+connectAttr "L_Pinky_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[337]";
+connectAttr "L_Pinky_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[338]"
 		;
-connectAttr "L_Pinky_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[315]"
+connectAttr "L_Pinky_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[339]"
 		;
-connectAttr "L_Pinky_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[316]"
+connectAttr "L_Pinky_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[340]"
 		;
-connectAttr "L_Pinky_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[317]";
-connectAttr "L_Pinky_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[318]";
-connectAttr "L_Pinky_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[319]";
-connectAttr "L_Pinky_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[320]"
+connectAttr "L_Pinky_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[341]";
+connectAttr "L_Pinky_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[342]";
+connectAttr "L_Pinky_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[343]";
+connectAttr "L_Pinky_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[344]"
 		;
-connectAttr "L_Pinky_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[321]"
+connectAttr "L_Pinky_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[345]"
 		;
-connectAttr "L_Pinky_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[322]"
+connectAttr "L_Pinky_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[346]"
 		;
-connectAttr "L_Pinky_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[323]";
-connectAttr "L_Pinky_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[324]";
-connectAttr "L_Pinky_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[325]";
-connectAttr "R_Thumb_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[326]"
+connectAttr "L_Pinky_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[347]";
+connectAttr "L_Pinky_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[348]";
+connectAttr "L_Pinky_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[349]";
+connectAttr "R_Thumb_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[350]"
 		;
-connectAttr "R_Thumb_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[327]"
+connectAttr "R_Thumb_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[351]"
 		;
-connectAttr "R_Thumb_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[328]"
+connectAttr "R_Thumb_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[352]"
 		;
-connectAttr "R_Thumb_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[329]";
-connectAttr "R_Thumb_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[330]";
-connectAttr "R_Thumb_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[331]";
-connectAttr "R_Thumb_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[332]"
+connectAttr "R_Thumb_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[353]";
+connectAttr "R_Thumb_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[354]";
+connectAttr "R_Thumb_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[355]";
+connectAttr "R_Thumb_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[356]"
 		;
-connectAttr "R_Thumb_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[333]"
+connectAttr "R_Thumb_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[357]"
 		;
-connectAttr "R_Thumb_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[334]"
+connectAttr "R_Thumb_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[358]"
 		;
-connectAttr "R_Thumb_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[335]";
-connectAttr "R_Thumb_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[336]";
-connectAttr "R_Thumb_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[337]";
-connectAttr "R_Thumb_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[338]"
+connectAttr "R_Thumb_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[359]";
+connectAttr "R_Thumb_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[360]";
+connectAttr "R_Thumb_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[361]";
+connectAttr "R_Thumb_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[362]"
 		;
-connectAttr "R_Thumb_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[339]"
+connectAttr "R_Thumb_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[363]"
 		;
-connectAttr "R_Thumb_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[340]"
+connectAttr "R_Thumb_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[364]"
 		;
-connectAttr "R_Thumb_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[341]";
-connectAttr "R_Thumb_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[342]";
-connectAttr "R_Thumb_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[343]";
-connectAttr "R_Pointer_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[344]"
+connectAttr "R_Thumb_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[365]";
+connectAttr "R_Thumb_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[366]";
+connectAttr "R_Thumb_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[367]";
+connectAttr "R_Pointer_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[368]"
 		;
-connectAttr "R_Pointer_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[345]"
+connectAttr "R_Pointer_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[369]"
 		;
-connectAttr "R_Pointer_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[346]"
+connectAttr "R_Pointer_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[370]"
 		;
-connectAttr "R_Pointer_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[347]"
+connectAttr "R_Pointer_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[371]"
 		;
-connectAttr "R_Pointer_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[348]"
+connectAttr "R_Pointer_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[372]"
 		;
-connectAttr "R_Pointer_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[349]"
+connectAttr "R_Pointer_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[373]"
 		;
-connectAttr "R_Pointer_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[350]"
+connectAttr "R_Pointer_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[374]"
 		;
-connectAttr "R_Pointer_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[351]"
+connectAttr "R_Pointer_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[375]"
 		;
-connectAttr "R_Pointer_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[352]"
+connectAttr "R_Pointer_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[376]"
 		;
-connectAttr "R_Pointer_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[353]"
+connectAttr "R_Pointer_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[377]"
 		;
-connectAttr "R_Pointer_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[354]"
+connectAttr "R_Pointer_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[378]"
 		;
-connectAttr "R_Pointer_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[355]"
+connectAttr "R_Pointer_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[379]"
 		;
-connectAttr "R_Pointer_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[356]"
+connectAttr "R_Pointer_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[380]"
 		;
-connectAttr "R_Pointer_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[357]"
+connectAttr "R_Pointer_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[381]"
 		;
-connectAttr "R_Pointer_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[358]"
+connectAttr "R_Pointer_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[382]"
 		;
-connectAttr "R_Pointer_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[359]"
+connectAttr "R_Pointer_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[383]"
 		;
-connectAttr "R_Pointer_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[360]"
+connectAttr "R_Pointer_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[384]"
 		;
-connectAttr "R_Pointer_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[361]"
+connectAttr "R_Pointer_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[385]"
 		;
-connectAttr "R_Middle_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[362]"
+connectAttr "R_Middle_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[386]"
 		;
-connectAttr "R_Middle_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[363]"
+connectAttr "R_Middle_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[387]"
 		;
-connectAttr "R_Middle_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[364]"
+connectAttr "R_Middle_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[388]"
 		;
-connectAttr "R_Middle_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[365]";
-connectAttr "R_Middle_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[366]";
-connectAttr "R_Middle_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[367]";
-connectAttr "R_Middle_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[368]"
+connectAttr "R_Middle_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[389]";
+connectAttr "R_Middle_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[390]";
+connectAttr "R_Middle_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[391]";
+connectAttr "R_Middle_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[392]"
 		;
-connectAttr "R_Middle_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[369]"
+connectAttr "R_Middle_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[393]"
 		;
-connectAttr "R_Middle_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[370]"
+connectAttr "R_Middle_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[394]"
 		;
-connectAttr "R_Middle_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[371]";
-connectAttr "R_Middle_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[372]";
-connectAttr "R_Middle_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[373]";
-connectAttr "R_Middle_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[374]"
+connectAttr "R_Middle_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[395]";
+connectAttr "R_Middle_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[396]";
+connectAttr "R_Middle_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[397]";
+connectAttr "R_Middle_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[398]"
 		;
-connectAttr "R_Middle_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[375]"
+connectAttr "R_Middle_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[399]"
 		;
-connectAttr "R_Middle_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[376]"
+connectAttr "R_Middle_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[400]"
 		;
-connectAttr "R_Middle_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[377]";
-connectAttr "R_Middle_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[378]";
-connectAttr "R_Middle_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[379]";
-connectAttr "R_Ring_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[380]"
+connectAttr "R_Middle_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[401]";
+connectAttr "R_Middle_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[402]";
+connectAttr "R_Middle_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[403]";
+connectAttr "R_Ring_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[404]"
 		;
-connectAttr "R_Ring_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[381]"
+connectAttr "R_Ring_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[405]"
 		;
-connectAttr "R_Ring_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[382]"
+connectAttr "R_Ring_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[406]"
 		;
-connectAttr "R_Ring_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[383]";
-connectAttr "R_Ring_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[384]";
-connectAttr "R_Ring_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[385]";
-connectAttr "R_Ring_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[386]"
+connectAttr "R_Ring_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[407]";
+connectAttr "R_Ring_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[408]";
+connectAttr "R_Ring_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[409]";
+connectAttr "R_Ring_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[410]"
 		;
-connectAttr "R_Ring_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[387]"
+connectAttr "R_Ring_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[411]"
 		;
-connectAttr "R_Ring_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[388]"
+connectAttr "R_Ring_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[412]"
 		;
-connectAttr "R_Ring_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[389]";
-connectAttr "R_Ring_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[390]";
-connectAttr "R_Ring_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[391]";
-connectAttr "R_Ring_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[392]"
+connectAttr "R_Ring_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[413]";
+connectAttr "R_Ring_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[414]";
+connectAttr "R_Ring_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[415]";
+connectAttr "R_Ring_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[416]"
 		;
-connectAttr "R_Ring_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[393]"
+connectAttr "R_Ring_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[417]"
 		;
-connectAttr "R_Ring_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[394]"
+connectAttr "R_Ring_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[418]"
 		;
-connectAttr "R_Ring_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[395]";
-connectAttr "R_Ring_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[396]";
-connectAttr "R_Ring_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[397]";
-connectAttr "R_Pinky_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[398]"
+connectAttr "R_Ring_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[419]";
+connectAttr "R_Ring_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[420]";
+connectAttr "R_Ring_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[421]";
+connectAttr "R_Pinky_01_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[422]"
 		;
-connectAttr "R_Pinky_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[399]"
+connectAttr "R_Pinky_01_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[423]"
 		;
-connectAttr "R_Pinky_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[400]"
+connectAttr "R_Pinky_01_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[424]"
 		;
-connectAttr "R_Pinky_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[401]";
-connectAttr "R_Pinky_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[402]";
-connectAttr "R_Pinky_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[403]";
-connectAttr "R_Pinky_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[404]"
+connectAttr "R_Pinky_01_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[425]";
+connectAttr "R_Pinky_01_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[426]";
+connectAttr "R_Pinky_01_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[427]";
+connectAttr "R_Pinky_02_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[428]"
 		;
-connectAttr "R_Pinky_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[405]"
+connectAttr "R_Pinky_02_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[429]"
 		;
-connectAttr "R_Pinky_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[406]"
+connectAttr "R_Pinky_02_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[430]"
 		;
-connectAttr "R_Pinky_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[407]";
-connectAttr "R_Pinky_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[408]";
-connectAttr "R_Pinky_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[409]";
-connectAttr "R_Pinky_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[410]"
+connectAttr "R_Pinky_02_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[431]";
+connectAttr "R_Pinky_02_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[432]";
+connectAttr "R_Pinky_02_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[433]";
+connectAttr "R_Pinky_03_Jnt_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[434]"
 		;
-connectAttr "R_Pinky_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[411]"
+connectAttr "R_Pinky_03_Jnt_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[435]"
 		;
-connectAttr "R_Pinky_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[412]"
+connectAttr "R_Pinky_03_Jnt_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[436]"
 		;
-connectAttr "R_Pinky_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[413]";
-connectAttr "R_Pinky_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[414]";
-connectAttr "R_Pinky_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[415]";
-connectAttr "Pelvis_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[416]";
-connectAttr "Pelvis_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[417]";
-connectAttr "Pelvis_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[418]";
-connectAttr "Pelvis_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[419]";
-connectAttr "Pelvis_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[420]";
-connectAttr "Pelvis_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[421]";
-connectAttr "Spine_Top_Control_Joint_Ctrl_Follow.o" "LaraCroftAdvanced_RigRN.phl[422]"
+connectAttr "R_Pinky_03_Jnt_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[437]";
+connectAttr "R_Pinky_03_Jnt_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[438]";
+connectAttr "R_Pinky_03_Jnt_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[439]";
+connectAttr "Pelvis_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[440]";
+connectAttr "Pelvis_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[441]";
+connectAttr "Pelvis_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[442]";
+connectAttr "Pelvis_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[443]";
+connectAttr "Pelvis_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[444]";
+connectAttr "Pelvis_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[445]";
+connectAttr "Spine_Top_Control_Joint_Ctrl_Follow.o" "LaraCroftAdvanced_RigRN.phl[446]"
 		;
-connectAttr "Spine_Top_Control_Joint_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[423]"
+connectAttr "Spine_Top_Control_Joint_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[447]"
 		;
-connectAttr "Spine_Top_Control_Joint_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[424]"
+connectAttr "Spine_Top_Control_Joint_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[448]"
 		;
-connectAttr "Spine_Top_Control_Joint_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[425]"
+connectAttr "Spine_Top_Control_Joint_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[449]"
 		;
-connectAttr "Spine_Top_Control_Joint_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[426]"
+connectAttr "Spine_Top_Control_Joint_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[450]"
 		;
-connectAttr "Spine_Top_Control_Joint_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[427]"
+connectAttr "Spine_Top_Control_Joint_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[451]"
 		;
-connectAttr "Spine_Top_Control_Joint_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[428]"
+connectAttr "Spine_Top_Control_Joint_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[452]"
 		;
-connectAttr "Spine_Mid_Control_Joint_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[429]"
+connectAttr "Spine_Mid_Control_Joint_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[453]"
 		;
-connectAttr "Spine_Mid_Control_Joint_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[430]"
+connectAttr "Spine_Mid_Control_Joint_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[454]"
 		;
-connectAttr "Spine_Mid_Control_Joint_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[431]"
+connectAttr "Spine_Mid_Control_Joint_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[455]"
 		;
-connectAttr "Spine_Mid_Control_Joint_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[432]"
+connectAttr "Spine_Mid_Control_Joint_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[456]"
 		;
-connectAttr "Spine_Mid_Control_Joint_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[433]"
+connectAttr "Spine_Mid_Control_Joint_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[457]"
 		;
-connectAttr "Spine_Mid_Control_Joint_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[434]"
+connectAttr "Spine_Mid_Control_Joint_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[458]"
 		;
-connectAttr "Hair_Ctrl_Jnt_2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[435]"
+connectAttr "Hair_Ctrl_Jnt_2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[459]"
 		;
-connectAttr "Hair_Ctrl_Jnt_2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[436]"
+connectAttr "Hair_Ctrl_Jnt_2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[460]"
 		;
-connectAttr "Hair_Ctrl_Jnt_2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[437]"
+connectAttr "Hair_Ctrl_Jnt_2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[461]"
 		;
-connectAttr "Hair_Ctrl_Jnt_2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[438]";
-connectAttr "Hair_Ctrl_Jnt_2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[439]";
-connectAttr "Hair_Ctrl_Jnt_2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[440]";
-connectAttr "Hair_Ctrl_Jnt_3_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[441]"
+connectAttr "Hair_Ctrl_Jnt_2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[462]";
+connectAttr "Hair_Ctrl_Jnt_2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[463]";
+connectAttr "Hair_Ctrl_Jnt_2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[464]";
+connectAttr "Hair_Ctrl_Jnt_3_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[465]"
 		;
-connectAttr "Hair_Ctrl_Jnt_3_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[442]"
+connectAttr "Hair_Ctrl_Jnt_3_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[466]"
 		;
-connectAttr "Hair_Ctrl_Jnt_3_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[443]"
+connectAttr "Hair_Ctrl_Jnt_3_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[467]"
 		;
-connectAttr "Hair_Ctrl_Jnt_3_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[444]";
-connectAttr "Hair_Ctrl_Jnt_3_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[445]";
-connectAttr "Hair_Ctrl_Jnt_3_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[446]";
-connectAttr "Hair_Ctrl_Jnt_1_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[447]"
+connectAttr "Hair_Ctrl_Jnt_3_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[468]";
+connectAttr "Hair_Ctrl_Jnt_3_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[469]";
+connectAttr "Hair_Ctrl_Jnt_3_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[470]";
+connectAttr "Hair_Ctrl_Jnt_1_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[471]"
 		;
-connectAttr "Hair_Ctrl_Jnt_1_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[448]"
+connectAttr "Hair_Ctrl_Jnt_1_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[472]"
 		;
-connectAttr "Hair_Ctrl_Jnt_1_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[449]"
+connectAttr "Hair_Ctrl_Jnt_1_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[473]"
 		;
-connectAttr "Hair_Ctrl_Jnt_1_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[450]";
-connectAttr "Hair_Ctrl_Jnt_1_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[451]";
-connectAttr "Hair_Ctrl_Jnt_1_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[452]";
-connectAttr "Look_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[453]";
-connectAttr "Look_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[454]";
-connectAttr "Look_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[455]";
-connectAttr "Look_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[456]";
-connectAttr "Look_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[457]";
-connectAttr "Look_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[458]";
-connectAttr "L_Eye_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[459]";
-connectAttr "L_Eye_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[460]";
-connectAttr "L_Eye_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[461]";
-connectAttr "L_Eye_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[462]";
-connectAttr "L_Eye_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[463]";
-connectAttr "L_Eye_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[464]";
-connectAttr "R_Eye_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[465]";
-connectAttr "R_Eye_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[466]";
-connectAttr "R_Eye_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[467]";
-connectAttr "R_Eye_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[468]";
-connectAttr "R_Eye_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[469]";
-connectAttr "R_Eye_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[470]";
-connectAttr "Jaw_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[471]";
-connectAttr "Jaw_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[472]";
-connectAttr "Jaw_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[473]";
-connectAttr "Jaw_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[474]";
-connectAttr "Jaw_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[475]";
-connectAttr "Jaw_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[476]";
-connectAttr "Head_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[477]";
-connectAttr "Head_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[478]";
-connectAttr "Head_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[479]";
-connectAttr "Head_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[480]";
-connectAttr "Head_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[481]";
-connectAttr "Head_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[482]";
-connectAttr "Neck_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[483]";
-connectAttr "Neck_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[484]";
-connectAttr "Neck_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[485]";
-connectAttr "Neck_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[486]";
-connectAttr "Neck_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[487]";
-connectAttr "Neck_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[488]";
-connectAttr "L_Eyelid_Upper_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[489]"
+connectAttr "Hair_Ctrl_Jnt_1_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[474]";
+connectAttr "Hair_Ctrl_Jnt_1_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[475]";
+connectAttr "Hair_Ctrl_Jnt_1_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[476]";
+connectAttr "Look_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[477]";
+connectAttr "Look_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[478]";
+connectAttr "Look_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[479]";
+connectAttr "Look_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[480]";
+connectAttr "Look_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[481]";
+connectAttr "Look_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[482]";
+connectAttr "L_Eye_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[483]";
+connectAttr "L_Eye_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[484]";
+connectAttr "L_Eye_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[485]";
+connectAttr "L_Eye_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[486]";
+connectAttr "L_Eye_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[487]";
+connectAttr "L_Eye_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[488]";
+connectAttr "R_Eye_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[489]";
+connectAttr "R_Eye_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[490]";
+connectAttr "R_Eye_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[491]";
+connectAttr "R_Eye_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[492]";
+connectAttr "R_Eye_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[493]";
+connectAttr "R_Eye_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[494]";
+connectAttr "Jaw_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[495]";
+connectAttr "Jaw_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[496]";
+connectAttr "Jaw_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[497]";
+connectAttr "Jaw_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[498]";
+connectAttr "Jaw_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[499]";
+connectAttr "Jaw_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[500]";
+connectAttr "Head_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[501]";
+connectAttr "Head_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[502]";
+connectAttr "Head_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[503]";
+connectAttr "Head_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[504]";
+connectAttr "Head_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[505]";
+connectAttr "Head_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[506]";
+connectAttr "Neck_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[507]";
+connectAttr "Neck_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[508]";
+connectAttr "Neck_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[509]";
+connectAttr "Neck_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[510]";
+connectAttr "Neck_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[511]";
+connectAttr "Neck_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[512]";
+connectAttr "L_Eyelid_Upper_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[513]"
 		;
-connectAttr "L_Eyelid_Upper_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[490]"
+connectAttr "L_Eyelid_Upper_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[514]"
 		;
-connectAttr "L_Eyelid_Upper_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[491]"
+connectAttr "L_Eyelid_Upper_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[515]"
 		;
-connectAttr "L_Eyelid_Upper_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[492]";
-connectAttr "L_Eyelid_Upper_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[493]";
-connectAttr "L_Eyelid_Upper_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[494]";
-connectAttr "L_Eyelid_Lower_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[495]"
+connectAttr "L_Eyelid_Upper_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[516]";
+connectAttr "L_Eyelid_Upper_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[517]";
+connectAttr "L_Eyelid_Upper_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[518]";
+connectAttr "L_Eyelid_Lower_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[519]"
 		;
-connectAttr "L_Eyelid_Lower_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[496]"
+connectAttr "L_Eyelid_Lower_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[520]"
 		;
-connectAttr "L_Eyelid_Lower_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[497]"
+connectAttr "L_Eyelid_Lower_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[521]"
 		;
-connectAttr "L_Eyelid_Lower_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[498]";
-connectAttr "L_Eyelid_Lower_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[499]";
-connectAttr "L_Eyelid_Lower_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[500]";
-connectAttr "R_Eyelid_Upper_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[501]"
+connectAttr "L_Eyelid_Lower_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[522]";
+connectAttr "L_Eyelid_Lower_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[523]";
+connectAttr "L_Eyelid_Lower_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[524]";
+connectAttr "R_Eyelid_Upper_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[525]"
 		;
-connectAttr "R_Eyelid_Upper_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[502]"
+connectAttr "R_Eyelid_Upper_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[526]"
 		;
-connectAttr "R_Eyelid_Upper_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[503]"
+connectAttr "R_Eyelid_Upper_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[527]"
 		;
-connectAttr "R_Eyelid_Upper_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[504]";
-connectAttr "R_Eyelid_Upper_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[505]";
-connectAttr "R_Eyelid_Upper_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[506]";
-connectAttr "R_Eyelid_Lower_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[507]"
+connectAttr "R_Eyelid_Upper_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[528]";
+connectAttr "R_Eyelid_Upper_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[529]";
+connectAttr "R_Eyelid_Upper_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[530]";
+connectAttr "R_Eyelid_Lower_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[531]"
 		;
-connectAttr "R_Eyelid_Lower_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[508]"
+connectAttr "R_Eyelid_Lower_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[532]"
 		;
-connectAttr "R_Eyelid_Lower_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[509]"
+connectAttr "R_Eyelid_Lower_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[533]"
 		;
-connectAttr "R_Eyelid_Lower_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[510]";
-connectAttr "R_Eyelid_Lower_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[511]";
-connectAttr "R_Eyelid_Lower_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[512]";
-connectAttr "Nose_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[513]";
-connectAttr "Nose_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[514]";
-connectAttr "Nose_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[515]";
-connectAttr "Nose_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[516]";
-connectAttr "Nose_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[517]";
-connectAttr "Nose_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[518]";
-connectAttr "Face_Controls_translateX.o" "LaraCroftAdvanced_RigRN.phl[519]";
-connectAttr "Face_Controls_translateY.o" "LaraCroftAdvanced_RigRN.phl[520]";
-connectAttr "Face_Controls_translateZ.o" "LaraCroftAdvanced_RigRN.phl[521]";
-connectAttr "Face_Controls_rotateX.o" "LaraCroftAdvanced_RigRN.phl[522]";
-connectAttr "Face_Controls_rotateY.o" "LaraCroftAdvanced_RigRN.phl[523]";
-connectAttr "Face_Controls_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[524]";
-connectAttr "R_Brow_Cluster_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[525]"
+connectAttr "R_Eyelid_Lower_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[534]";
+connectAttr "R_Eyelid_Lower_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[535]";
+connectAttr "R_Eyelid_Lower_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[536]";
+connectAttr "Nose_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[537]";
+connectAttr "Nose_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[538]";
+connectAttr "Nose_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[539]";
+connectAttr "Nose_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[540]";
+connectAttr "Nose_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[541]";
+connectAttr "Nose_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[542]";
+connectAttr "Face_Controls_translateX.o" "LaraCroftAdvanced_RigRN.phl[543]";
+connectAttr "Face_Controls_translateY.o" "LaraCroftAdvanced_RigRN.phl[544]";
+connectAttr "Face_Controls_translateZ.o" "LaraCroftAdvanced_RigRN.phl[545]";
+connectAttr "Face_Controls_rotateX.o" "LaraCroftAdvanced_RigRN.phl[546]";
+connectAttr "Face_Controls_rotateY.o" "LaraCroftAdvanced_RigRN.phl[547]";
+connectAttr "Face_Controls_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[548]";
+connectAttr "R_Brow_Cluster_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[549]"
 		;
-connectAttr "R_Brow_Cluster_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[526]"
+connectAttr "R_Brow_Cluster_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[550]"
 		;
-connectAttr "R_Brow_Cluster_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[527]"
+connectAttr "R_Brow_Cluster_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[551]"
 		;
-connectAttr "R_Brow_Cluster_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[528]";
-connectAttr "R_Brow_Cluster_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[529]";
-connectAttr "R_Brow_Cluster_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[530]";
-connectAttr "L_Brow_Cluster_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[531]"
+connectAttr "R_Brow_Cluster_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[552]";
+connectAttr "R_Brow_Cluster_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[553]";
+connectAttr "R_Brow_Cluster_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[554]";
+connectAttr "L_Brow_Cluster_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[555]"
 		;
-connectAttr "L_Brow_Cluster_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[532]"
+connectAttr "L_Brow_Cluster_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[556]"
 		;
-connectAttr "L_Brow_Cluster_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[533]"
+connectAttr "L_Brow_Cluster_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[557]"
 		;
-connectAttr "L_Brow_Cluster_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[534]";
-connectAttr "L_Brow_Cluster_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[535]";
-connectAttr "L_Brow_Cluster_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[536]";
-connectAttr "R_Brow_3_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[537]";
-connectAttr "R_Brow_3_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[538]";
-connectAttr "R_Brow_3_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[539]";
-connectAttr "R_Brow_3_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[540]";
-connectAttr "R_Brow_3_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[541]";
-connectAttr "R_Brow_3_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[542]";
-connectAttr "R_Brow_2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[543]";
-connectAttr "R_Brow_2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[544]";
-connectAttr "R_Brow_2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[545]";
-connectAttr "R_Brow_2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[546]";
-connectAttr "R_Brow_2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[547]";
-connectAttr "R_Brow_2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[548]";
-connectAttr "R_Brow_1_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[549]";
-connectAttr "R_Brow_1_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[550]";
-connectAttr "R_Brow_1_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[551]";
-connectAttr "R_Brow_1_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[552]";
-connectAttr "R_Brow_1_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[553]";
-connectAttr "R_Brow_1_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[554]";
-connectAttr "L_Brow_1_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[555]";
-connectAttr "L_Brow_1_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[556]";
-connectAttr "L_Brow_1_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[557]";
-connectAttr "L_Brow_1_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[558]";
-connectAttr "L_Brow_1_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[559]";
-connectAttr "L_Brow_1_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[560]";
-connectAttr "L_Brow_2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[561]";
-connectAttr "L_Brow_2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[562]";
-connectAttr "L_Brow_2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[563]";
-connectAttr "L_Brow_2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[564]";
-connectAttr "L_Brow_2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[565]";
-connectAttr "L_Brow_2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[566]";
-connectAttr "L_Brow_3_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[567]";
-connectAttr "L_Brow_3_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[568]";
-connectAttr "L_Brow_3_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[569]";
-connectAttr "L_Brow_3_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[570]";
-connectAttr "L_Brow_3_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[571]";
-connectAttr "L_Brow_3_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[572]";
-connectAttr "Mouth_Move_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[573]";
-connectAttr "Mouth_Move_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[574]";
-connectAttr "Mouth_Move_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[575]";
-connectAttr "Mouth_Move_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[576]";
-connectAttr "Mouth_Move_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[577]";
-connectAttr "Mouth_Move_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[578]";
-connectAttr "L_Sneer_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[579]";
-connectAttr "L_Sneer_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[580]";
-connectAttr "L_Sneer_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[581]";
-connectAttr "L_Sneer_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[582]";
-connectAttr "L_Sneer_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[583]";
-connectAttr "L_Sneer_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[584]";
-connectAttr "L_Squint_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[585]";
-connectAttr "L_Squint_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[586]";
-connectAttr "L_Squint_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[587]";
-connectAttr "L_Squint_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[588]";
-connectAttr "L_Squint_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[589]";
-connectAttr "L_Squint_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[590]";
-connectAttr "L_Cheek_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[591]";
-connectAttr "L_Cheek_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[592]";
-connectAttr "L_Cheek_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[593]";
-connectAttr "L_Cheek_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[594]";
-connectAttr "L_Cheek_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[595]";
-connectAttr "L_Cheek_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[596]";
-connectAttr "R_Cheek_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[597]";
-connectAttr "R_Cheek_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[598]";
-connectAttr "R_Cheek_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[599]";
-connectAttr "R_Cheek_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[600]";
-connectAttr "R_Cheek_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[601]";
-connectAttr "R_Cheek_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[602]";
-connectAttr "R_Squint_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[603]";
-connectAttr "R_Squint_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[604]";
-connectAttr "R_Squint_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[605]";
-connectAttr "R_Squint_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[606]";
-connectAttr "R_Squint_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[607]";
-connectAttr "R_Squint_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[608]";
-connectAttr "R_Sneer_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[609]";
-connectAttr "R_Sneer_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[610]";
-connectAttr "R_Sneer_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[611]";
-connectAttr "R_Sneer_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[612]";
-connectAttr "R_Sneer_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[613]";
-connectAttr "R_Sneer_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[614]";
-connectAttr "Lower_Middle_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[615]"
+connectAttr "L_Brow_Cluster_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[558]";
+connectAttr "L_Brow_Cluster_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[559]";
+connectAttr "L_Brow_Cluster_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[560]";
+connectAttr "R_Brow_3_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[561]";
+connectAttr "R_Brow_3_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[562]";
+connectAttr "R_Brow_3_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[563]";
+connectAttr "R_Brow_3_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[564]";
+connectAttr "R_Brow_3_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[565]";
+connectAttr "R_Brow_3_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[566]";
+connectAttr "R_Brow_2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[567]";
+connectAttr "R_Brow_2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[568]";
+connectAttr "R_Brow_2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[569]";
+connectAttr "R_Brow_2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[570]";
+connectAttr "R_Brow_2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[571]";
+connectAttr "R_Brow_2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[572]";
+connectAttr "R_Brow_1_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[573]";
+connectAttr "R_Brow_1_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[574]";
+connectAttr "R_Brow_1_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[575]";
+connectAttr "R_Brow_1_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[576]";
+connectAttr "R_Brow_1_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[577]";
+connectAttr "R_Brow_1_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[578]";
+connectAttr "L_Brow_1_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[579]";
+connectAttr "L_Brow_1_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[580]";
+connectAttr "L_Brow_1_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[581]";
+connectAttr "L_Brow_1_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[582]";
+connectAttr "L_Brow_1_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[583]";
+connectAttr "L_Brow_1_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[584]";
+connectAttr "L_Brow_2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[585]";
+connectAttr "L_Brow_2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[586]";
+connectAttr "L_Brow_2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[587]";
+connectAttr "L_Brow_2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[588]";
+connectAttr "L_Brow_2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[589]";
+connectAttr "L_Brow_2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[590]";
+connectAttr "L_Brow_3_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[591]";
+connectAttr "L_Brow_3_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[592]";
+connectAttr "L_Brow_3_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[593]";
+connectAttr "L_Brow_3_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[594]";
+connectAttr "L_Brow_3_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[595]";
+connectAttr "L_Brow_3_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[596]";
+connectAttr "Mouth_Move_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[597]";
+connectAttr "Mouth_Move_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[598]";
+connectAttr "Mouth_Move_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[599]";
+connectAttr "Mouth_Move_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[600]";
+connectAttr "Mouth_Move_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[601]";
+connectAttr "Mouth_Move_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[602]";
+connectAttr "L_Sneer_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[603]";
+connectAttr "L_Sneer_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[604]";
+connectAttr "L_Sneer_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[605]";
+connectAttr "L_Sneer_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[606]";
+connectAttr "L_Sneer_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[607]";
+connectAttr "L_Sneer_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[608]";
+connectAttr "L_Squint_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[609]";
+connectAttr "L_Squint_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[610]";
+connectAttr "L_Squint_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[611]";
+connectAttr "L_Squint_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[612]";
+connectAttr "L_Squint_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[613]";
+connectAttr "L_Squint_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[614]";
+connectAttr "L_Cheek_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[615]";
+connectAttr "L_Cheek_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[616]";
+connectAttr "L_Cheek_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[617]";
+connectAttr "L_Cheek_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[618]";
+connectAttr "L_Cheek_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[619]";
+connectAttr "L_Cheek_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[620]";
+connectAttr "R_Cheek_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[621]";
+connectAttr "R_Cheek_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[622]";
+connectAttr "R_Cheek_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[623]";
+connectAttr "R_Cheek_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[624]";
+connectAttr "R_Cheek_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[625]";
+connectAttr "R_Cheek_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[626]";
+connectAttr "R_Squint_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[627]";
+connectAttr "R_Squint_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[628]";
+connectAttr "R_Squint_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[629]";
+connectAttr "R_Squint_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[630]";
+connectAttr "R_Squint_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[631]";
+connectAttr "R_Squint_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[632]";
+connectAttr "R_Sneer_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[633]";
+connectAttr "R_Sneer_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[634]";
+connectAttr "R_Sneer_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[635]";
+connectAttr "R_Sneer_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[636]";
+connectAttr "R_Sneer_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[637]";
+connectAttr "R_Sneer_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[638]";
+connectAttr "Lower_Middle_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[639]"
 		;
-connectAttr "Lower_Middle_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[616]"
+connectAttr "Lower_Middle_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[640]"
 		;
-connectAttr "Lower_Middle_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[617]"
+connectAttr "Lower_Middle_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[641]"
 		;
-connectAttr "Lower_Middle_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[618]"
+connectAttr "Lower_Middle_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[642]"
 		;
-connectAttr "Lower_Middle_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[619]"
+connectAttr "Lower_Middle_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[643]"
 		;
-connectAttr "Lower_Middle_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[620]"
+connectAttr "Lower_Middle_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[644]"
 		;
-connectAttr "L_Lower_Outer_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[621]"
+connectAttr "L_Lower_Outer_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[645]"
 		;
-connectAttr "L_Lower_Outer_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[622]"
+connectAttr "L_Lower_Outer_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[646]"
 		;
-connectAttr "L_Lower_Outer_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[623]"
+connectAttr "L_Lower_Outer_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[647]"
 		;
-connectAttr "L_Lower_Outer_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[624]"
+connectAttr "L_Lower_Outer_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[648]"
 		;
-connectAttr "L_Lower_Outer_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[625]"
+connectAttr "L_Lower_Outer_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[649]"
 		;
-connectAttr "L_Lower_Outer_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[626]"
+connectAttr "L_Lower_Outer_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[650]"
 		;
-connectAttr "Upper_Middle_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[627]"
+connectAttr "Upper_Middle_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[651]"
 		;
-connectAttr "Upper_Middle_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[628]"
+connectAttr "Upper_Middle_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[652]"
 		;
-connectAttr "Upper_Middle_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[629]"
+connectAttr "Upper_Middle_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[653]"
 		;
-connectAttr "Upper_Middle_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[630]"
+connectAttr "Upper_Middle_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[654]"
 		;
-connectAttr "Upper_Middle_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[631]"
+connectAttr "Upper_Middle_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[655]"
 		;
-connectAttr "Upper_Middle_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[632]"
+connectAttr "Upper_Middle_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[656]"
 		;
-connectAttr "L_Lower_Corner_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[633]"
+connectAttr "L_Lower_Corner_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[657]"
 		;
-connectAttr "L_Lower_Corner_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[634]"
+connectAttr "L_Lower_Corner_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[658]"
 		;
-connectAttr "L_Lower_Corner_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[635]"
+connectAttr "L_Lower_Corner_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[659]"
 		;
-connectAttr "L_Lower_Corner_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[636]"
+connectAttr "L_Lower_Corner_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[660]"
 		;
-connectAttr "L_Lower_Corner_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[637]"
+connectAttr "L_Lower_Corner_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[661]"
 		;
-connectAttr "L_Lower_Corner_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[638]"
+connectAttr "L_Lower_Corner_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[662]"
 		;
-connectAttr "L_Upper_Outer_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[639]"
+connectAttr "L_Upper_Outer_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[663]"
 		;
-connectAttr "L_Upper_Outer_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[640]"
+connectAttr "L_Upper_Outer_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[664]"
 		;
-connectAttr "L_Upper_Outer_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[641]"
+connectAttr "L_Upper_Outer_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[665]"
 		;
-connectAttr "L_Upper_Outer_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[642]"
+connectAttr "L_Upper_Outer_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[666]"
 		;
-connectAttr "L_Upper_Outer_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[643]"
+connectAttr "L_Upper_Outer_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[667]"
 		;
-connectAttr "L_Upper_Outer_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[644]"
+connectAttr "L_Upper_Outer_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[668]"
 		;
-connectAttr "L_Upper_Corner_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[645]"
+connectAttr "L_Upper_Corner_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[669]"
 		;
-connectAttr "L_Upper_Corner_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[646]"
+connectAttr "L_Upper_Corner_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[670]"
 		;
-connectAttr "L_Upper_Corner_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[647]"
+connectAttr "L_Upper_Corner_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[671]"
 		;
-connectAttr "L_Upper_Corner_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[648]"
+connectAttr "L_Upper_Corner_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[672]"
 		;
-connectAttr "L_Upper_Corner_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[649]"
+connectAttr "L_Upper_Corner_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[673]"
 		;
-connectAttr "L_Upper_Corner_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[650]"
+connectAttr "L_Upper_Corner_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[674]"
 		;
-connectAttr "R_Lower_Corner_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[651]"
+connectAttr "R_Lower_Corner_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[675]"
 		;
-connectAttr "R_Lower_Corner_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[652]"
+connectAttr "R_Lower_Corner_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[676]"
 		;
-connectAttr "R_Lower_Corner_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[653]"
+connectAttr "R_Lower_Corner_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[677]"
 		;
-connectAttr "R_Lower_Corner_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[654]"
+connectAttr "R_Lower_Corner_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[678]"
 		;
-connectAttr "R_Lower_Corner_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[655]"
+connectAttr "R_Lower_Corner_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[679]"
 		;
-connectAttr "R_Lower_Corner_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[656]"
+connectAttr "R_Lower_Corner_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[680]"
 		;
-connectAttr "R_Lower_Outer_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[657]"
+connectAttr "R_Lower_Outer_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[681]"
 		;
-connectAttr "R_Lower_Outer_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[658]"
+connectAttr "R_Lower_Outer_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[682]"
 		;
-connectAttr "R_Lower_Outer_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[659]"
+connectAttr "R_Lower_Outer_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[683]"
 		;
-connectAttr "R_Lower_Outer_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[660]"
+connectAttr "R_Lower_Outer_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[684]"
 		;
-connectAttr "R_Lower_Outer_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[661]"
+connectAttr "R_Lower_Outer_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[685]"
 		;
-connectAttr "R_Lower_Outer_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[662]"
+connectAttr "R_Lower_Outer_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[686]"
 		;
-connectAttr "R_Upper_Corner_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[663]"
+connectAttr "R_Upper_Corner_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[687]"
 		;
-connectAttr "R_Upper_Corner_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[664]"
+connectAttr "R_Upper_Corner_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[688]"
 		;
-connectAttr "R_Upper_Corner_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[665]"
+connectAttr "R_Upper_Corner_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[689]"
 		;
-connectAttr "R_Upper_Corner_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[666]"
+connectAttr "R_Upper_Corner_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[690]"
 		;
-connectAttr "R_Upper_Corner_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[667]"
+connectAttr "R_Upper_Corner_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[691]"
 		;
-connectAttr "R_Upper_Corner_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[668]"
+connectAttr "R_Upper_Corner_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[692]"
 		;
-connectAttr "R_Upper_Outer_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[669]"
+connectAttr "R_Upper_Outer_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[693]"
 		;
-connectAttr "R_Upper_Outer_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[670]"
+connectAttr "R_Upper_Outer_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[694]"
 		;
-connectAttr "R_Upper_Outer_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[671]"
+connectAttr "R_Upper_Outer_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[695]"
 		;
-connectAttr "R_Upper_Outer_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[672]"
+connectAttr "R_Upper_Outer_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[696]"
 		;
-connectAttr "R_Upper_Outer_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[673]"
+connectAttr "R_Upper_Outer_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[697]"
 		;
-connectAttr "R_Upper_Outer_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[674]"
+connectAttr "R_Upper_Outer_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[698]"
 		;
-connectAttr "R_Lips_Pull_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[675]";
-connectAttr "R_Lips_Pull_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[676]";
-connectAttr "R_Lips_Pull_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[677]";
-connectAttr "R_Lips_Pull_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[678]";
-connectAttr "R_Lips_Pull_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[679]";
-connectAttr "R_Lips_Pull_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[680]";
-connectAttr "L_Lips_Pull_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[681]";
-connectAttr "L_Lips_Pull_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[682]";
-connectAttr "L_Lips_Pull_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[683]";
-connectAttr "L_Lips_Pull_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[684]";
-connectAttr "L_Lips_Pull_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[685]";
-connectAttr "L_Lips_Pull_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[686]";
-connectAttr "Lower_Lip_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[687]";
-connectAttr "Lower_Lip_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[688]";
-connectAttr "Lower_Lip_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[689]";
-connectAttr "Lower_Lip_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[690]";
-connectAttr "Lower_Lip_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[691]";
-connectAttr "Lower_Lip_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[692]";
-connectAttr "Upper_Lip_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[693]";
-connectAttr "Upper_Lip_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[694]";
-connectAttr "Upper_Lip_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[695]";
-connectAttr "Upper_Lip_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[696]";
-connectAttr "Upper_Lip_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[697]";
-connectAttr "Upper_Lip_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[698]";
-connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[699]"
+connectAttr "R_Lips_Pull_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[699]";
+connectAttr "R_Lips_Pull_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[700]";
+connectAttr "R_Lips_Pull_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[701]";
+connectAttr "R_Lips_Pull_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[702]";
+connectAttr "R_Lips_Pull_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[703]";
+connectAttr "R_Lips_Pull_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[704]";
+connectAttr "L_Lips_Pull_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[705]";
+connectAttr "L_Lips_Pull_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[706]";
+connectAttr "L_Lips_Pull_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[707]";
+connectAttr "L_Lips_Pull_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[708]";
+connectAttr "L_Lips_Pull_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[709]";
+connectAttr "L_Lips_Pull_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[710]";
+connectAttr "Lower_Lip_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[711]";
+connectAttr "Lower_Lip_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[712]";
+connectAttr "Lower_Lip_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[713]";
+connectAttr "Lower_Lip_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[714]";
+connectAttr "Lower_Lip_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[715]";
+connectAttr "Lower_Lip_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[716]";
+connectAttr "Upper_Lip_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[717]";
+connectAttr "Upper_Lip_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[718]";
+connectAttr "Upper_Lip_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[719]";
+connectAttr "Upper_Lip_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[720]";
+connectAttr "Upper_Lip_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[721]";
+connectAttr "Upper_Lip_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[722]";
+connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[723]"
 		;
-connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[700]"
+connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[724]"
 		;
-connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[701]"
+connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[725]"
 		;
-connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[702]"
+connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[726]"
 		;
-connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[703]"
+connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[727]"
 		;
-connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[704]"
+connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[728]"
 		;
-connectAttr "Pick_Holster_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[705]";
-connectAttr "Pick_Holster_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[706]";
-connectAttr "Pick_Holster_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[707]";
-connectAttr "Pick_Holster_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[708]";
-connectAttr "Pick_Holster_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[709]";
-connectAttr "Pick_Holster_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[710]";
-connectAttr "Gun_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[711]";
-connectAttr "Gun_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[712]";
-connectAttr "Gun_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[713]";
-connectAttr "Gun_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[714]";
-connectAttr "Gun_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[715]";
-connectAttr "Gun_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[716]";
-connectAttr "Pick1_Ctrl_Mount.o" "LaraCroftAdvanced_RigRN.phl[717]";
-connectAttr "Pick1_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[718]";
-connectAttr "Pick1_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[719]";
-connectAttr "Pick1_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[720]";
-connectAttr "Pick1_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[721]";
-connectAttr "Pick1_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[722]";
-connectAttr "Pick1_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[723]";
-connectAttr "Pick2_Ctrl_Mount.o" "LaraCroftAdvanced_RigRN.phl[724]";
-connectAttr "Pick2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[725]";
-connectAttr "Pick2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[726]";
-connectAttr "Pick2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[727]";
-connectAttr "Pick2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[728]";
-connectAttr "Pick2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[729]";
-connectAttr "Pick2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[730]";
+connectAttr "Pick_Holster_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[729]";
+connectAttr "Pick_Holster_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[730]";
+connectAttr "Pick_Holster_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[731]";
+connectAttr "Pick_Holster_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[732]";
+connectAttr "Pick_Holster_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[733]";
+connectAttr "Pick_Holster_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[734]";
+connectAttr "Gun_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[735]";
+connectAttr "Gun_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[736]";
+connectAttr "Gun_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[737]";
+connectAttr "Gun_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[738]";
+connectAttr "Gun_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[739]";
+connectAttr "Gun_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[740]";
+connectAttr "Pick1_Ctrl_Mount.o" "LaraCroftAdvanced_RigRN.phl[741]";
+connectAttr "Pick1_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[742]";
+connectAttr "Pick1_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[743]";
+connectAttr "Pick1_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[744]";
+connectAttr "Pick1_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[745]";
+connectAttr "Pick1_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[746]";
+connectAttr "Pick1_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[747]";
+connectAttr "Pick2_Ctrl_Mount.o" "LaraCroftAdvanced_RigRN.phl[748]";
+connectAttr "Pick2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[749]";
+connectAttr "Pick2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[750]";
+connectAttr "Pick2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[751]";
+connectAttr "Pick2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[752]";
+connectAttr "Pick2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[753]";
+connectAttr "Pick2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[754]";
 connectAttr "Level_Layer.di" "pCube1.do";
 connectAttr "polyCube1.out" "pCubeShape1.i";
 connectAttr "Level_Layer.di" "pCube2.do";
 connectAttr "Level_Layer.di" "pCube3.do";
+connectAttr "pCube3_translateX.o" "pCube3.tx";
+connectAttr "pCube3_translateY.o" "pCube3.ty";
+connectAttr "pCube3_translateZ.o" "pCube3.tz";
+connectAttr "pCube3_rotateX.o" "pCube3.rx";
+connectAttr "pCube3_rotateY.o" "pCube3.ry";
+connectAttr "pCube3_rotateZ.o" "pCube3.rz";
 connectAttr "polyExtrudeFace3.out" "pCubeShape3.i";
 connectAttr "locator1_translateX.o" "locator1.tx";
 connectAttr "locator1_translateY.o" "locator1.ty";

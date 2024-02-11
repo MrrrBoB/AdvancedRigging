@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Lara Jump Gap.ma
-//Last modified: Fri, Feb 09, 2024 07:01:13 PM
+//Last modified: Sat, Feb 10, 2024 07:10:40 PM
 //Codeset: 1252
 file -rdi 1 -ns "LaraCroftAdvanced_Rig" -rfn "LaraCroftAdvanced_RigRN" -op "v=0;"
 		 -typ "mayaAscii" "F:/School/AdvancedRigging/ADVRig/scenes/Lara Redo/LaraCroftAdvanced Rig.ma";
@@ -9,28 +9,28 @@ file -r -ns "LaraCroftAdvanced_Rig" -dr 1 -rfn "LaraCroftAdvanced_RigRN" -op "v=
 requires maya "2023";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.2.1.1";
-requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "2A045833-4FED-C9C1-2A72-8EAB738635F4";
+fileInfo "UUID" "66A463DC-41CD-5212-563C-78ADF3A686A7";
 createNode transform -s -n "persp";
 	rename -uid "631384E7-4D6B-6245-254A-8096A87DF85A";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1282.6214409244408 105.57825236812621 1742.6098329261406 ;
-	setAttr ".r" -type "double3" 1.4616472505478313 -398.59999999985803 -2.5435631516578787e-16 ;
+	setAttr ".t" -type "double3" -165.49256746126647 -34.965517140700719 823.50188344847265 ;
+	setAttr ".r" -type "double3" 11.661647251413166 -742.59999999991123 -4.3063792819141801e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "5B78B680-4E40-714E-8D4B-CCA7155F0964";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 2020.6776664853078;
+	setAttr ".ncp" 0.5;
+	setAttr ".coi" 764.11898326049948;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 4.9999999999999964 218.76859872747465 30.5762226168425 ;
+	setAttr ".tp" -type "double3" 0 124.93229608421379 61.475192368310672 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "F532B8C8-4B5F-ACE8-A9DB-BDB9ED59818B";
@@ -174,35 +174,21 @@ createNode mesh -n "pCubeShape3" -p "pCube3";
 createNode transform -n "locator1";
 	rename -uid "89D064D5-4716-0051-4D8F-B882EF54AD5E";
 	setAttr ".v" no;
-	setAttr ".s" -type "double3" 1.0000000000000002 0.99999999999999989 1.0000000000000002 ;
+	setAttr ".s" -type "double3" 1.0000000000000007 0.99999999999999978 1.0000000000000007 ;
 createNode locator -n "locatorShape1" -p "locator1";
 	rename -uid "F7855D6E-424B-BE84-7608-A1BDAAAD775B";
 	setAttr -k off ".v";
-createNode transform -n "camera1";
-	rename -uid "B7DB9605-4B08-D593-854C-F9B3A92A9D34";
-	setAttr ".t" -type "double3" -236.73524621285213 -39.090925976620227 914.50212867144103 ;
-	setAttr ".r" -type "double3" 10.46164725140858 -741.79999999994595 4.2819106514350841e-16 ;
-createNode camera -n "cameraShape1" -p "camera1";
-	rename -uid "F919FBF6-4283-F018-D4E1-6CAE6A13DBCB";
-	setAttr -k off ".v";
-	setAttr ".rnd" no;
-	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
-	setAttr ".ff" 0;
-	setAttr ".ow" 30;
-	setAttr ".imn" -type "string" "camera1";
-	setAttr ".den" -type "string" "camera1_depth";
-	setAttr ".man" -type "string" "camera1_mask";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "FBE2EDC6-4795-9227-C54B-07871A63CE74";
+	rename -uid "DEF97CA4-44C0-D534-BEEA-FA965BBDC483";
 	setAttr -s 101 ".lnk";
 	setAttr -s 101 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "7D375D19-43D6-09E1-8A86-209E173F71F5";
+	rename -uid "AF01B49D-4A8B-9FBB-F654-719FA9B1FF04";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "591DAB92-482B-C6F6-8510-BAB19BB4A78B";
+	rename -uid "DF06BC93-45FB-A7DD-ECD6-CFB6EB56D29C";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "ACCB09DB-462C-4454-B146-5398C50BE118";
+	rename -uid "FBE6B1BA-4429-2D02-FE0D-88A682CA2CA7";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
@@ -210,7 +196,7 @@ createNode displayLayer -n "defaultLayer";
 	rename -uid "7E0DA835-421A-E10C-F0AF-459D2B45892E";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "C5D0F9B9-4CD6-BA40-7E73-1B82464ADBB9";
+	rename -uid "41A16FAF-42FA-B867-A475-35AA5388CCC3";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "BED08C1B-4DA0-FB38-99A8-8EA7298A6CE7";
 	setAttr ".g" yes;
@@ -230,7 +216,7 @@ createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	setAttr ".ai_translator" -type "string" "maya";
 createNode reference -n "LaraCroftAdvanced_RigRN";
 	rename -uid "1B82FCD5-4985-9F37-8470-9B97E319FD7C";
-	setAttr -s 850 ".phl";
+	setAttr -s 845 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -1076,22 +1062,17 @@ createNode reference -n "LaraCroftAdvanced_RigRN";
 	setAttr ".phl[843]" 0;
 	setAttr ".phl[844]" 0;
 	setAttr ".phl[845]" 0;
-	setAttr ".phl[846]" 0;
-	setAttr ".phl[847]" 0;
-	setAttr ".phl[848]" 0;
-	setAttr ".phl[849]" 0;
-	setAttr ".phl[850]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"LaraCroftAdvanced_RigRN"
 		"LaraCroftAdvanced_RigRN" 2
 		2 "|LaraCroftAdvanced_Rig:aiSkyDomeLight1" "visibility" " 0"
 		2 "|LaraCroftAdvanced_Rig:aiSkyDomeLight1|LaraCroftAdvanced_Rig:aiSkyDomeLightShape1" 
 		"camera" " 1"
-		"LaraCroftAdvanced_RigRN" 872
+		"LaraCroftAdvanced_RigRN" 876
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Deformers" "visibility" 
 		" 0"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Arm_Ctrls|LaraCroftAdvanced_Rig:L_Arm_IK_Ctrls|LaraCroftAdvanced_Rig:L_Hand_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Hand_IK_Ctrl" 
-		"scale" " -type \"double3\" 1.00000000000000044 0.99999999999999989 1.00000000000000044"
+		"scale" " -type \"double3\" 1.00000000000000022 0.99999999999999956 1.00000000000000022"
 		
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Arm_Ctrls|LaraCroftAdvanced_Rig:L_Arm_IK_Ctrls|LaraCroftAdvanced_Rig:L_Arm_PV_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Arm_PV_OFFSET|LaraCroftAdvanced_Rig:L_Arm_PV_Ctrl" 
 		"Follow" " -k 1 4"
@@ -1108,15 +1089,33 @@ createNode reference -n "LaraCroftAdvanced_RigRN";
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Leg_Ctrls|LaraCroftAdvanced_Rig:R_Leg_IK_Ctrls|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Foot_IK_Ctrl" 
 		"Follow" " -k 1 1"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:L_Hand_Ctrls|LaraCroftAdvanced_Rig:L_Hand_Finger_Hide_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Hand_Finger_Hide_Ctrl" 
-		"ShowFingerControls" " -k 1 0"
+		"ShowFingerControls" " -k 1 1"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:R_Hand_Ctrls|LaraCroftAdvanced_Rig:R_Hand_Finger_Hide_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Hand_Finger_Hide_Ctrl" 
-		"ShowFingerControls" " -k 1 0"
+		"ShowFingerControls" " -k 1 1"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp_parentConstraint1" 
 		"Transform_ControlW1" " -k 1"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Spine_Controls|LaraCroftAdvanced_Rig:Spine_IK_Controls|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp|LaraCroftAdvanced_Rig:Spine_Top_Control_Joint_Ctrl_Grp_parentConstraint1" 
 		"Cog_CtrlW2" " -k 1"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl" 
-		"Simulation" " -k 1 0"
+		"Follow" " -k 1 1"
+		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl" 
+		"Simulation" " -k 1 1"
+		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl" 
+		"Drag" " -k 1 5"
+		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl" 
+		"Pose_Attract" " -k 1 0.20000000298023224"
+		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl" 
+		"Drag" " -k 1 5"
+		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl" 
+		"Follow" " -k 1"
+		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl" 
+		"Blink" " -k 1 3.40000009536743164"
+		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl" 
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl" 
 		"scale" " -type \"double3\" 1.00000000000000044 1 1.00000000000000044"
 		2 "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl" 
@@ -2167,668 +2166,658 @@ createNode reference -n "LaraCroftAdvanced_RigRN";
 		"LaraCroftAdvanced_RigRN.placeHolderList[518]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_3_Ctrl.instObjGroups" 
 		"LaraCroftAdvanced_RigRN.placeHolderList[519]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[520]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[521]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[522]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[523]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[520]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[524]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[521]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[525]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[522]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Hair_Controls|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl_Grp|LaraCroftAdvanced_Rig:Hair_Ctrl_Jnt_1_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[526]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[523]" ""
+		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.Follow" 
+		"LaraCroftAdvanced_RigRN.placeHolderList[524]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[527]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[525]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[528]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[526]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[529]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[530]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[531]" ""
-		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[532]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[527]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Look_Ctrl_Grp|LaraCroftAdvanced_Rig:Look_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[533]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[528]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[534]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[529]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[535]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[530]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[536]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[531]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[537]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[532]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[538]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[533]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[539]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[534]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eye_Aim_Offset|LaraCroftAdvanced_Rig:L_Eye_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[540]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[535]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[541]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[536]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[542]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[537]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[543]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[538]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[544]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[539]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[545]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[540]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[546]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[541]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eye_Aim_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eye_Aim_Offset|LaraCroftAdvanced_Rig:R_Eye_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[547]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[542]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[548]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[543]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[549]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[544]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[550]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[545]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[551]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[546]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[552]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[547]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[553]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[548]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Jaw_Ctrl_Grp|LaraCroftAdvanced_Rig:Jaw_Open_Drop_Grp|LaraCroftAdvanced_Rig:Jaw_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[554]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[549]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[555]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[550]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[556]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[551]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[557]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[552]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[558]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[553]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[559]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[554]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[560]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[555]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Head_Ctrl_Grp|LaraCroftAdvanced_Rig:Head_Neck_Follow_Counter_Offset|LaraCroftAdvanced_Rig:Head_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[561]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[556]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[562]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[557]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[563]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[558]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[564]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[559]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[565]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[560]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[566]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[561]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[567]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[562]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:Neck_Ctrl_Grp|LaraCroftAdvanced_Rig:Neck_Head_Turn_Offset|LaraCroftAdvanced_Rig:Neck_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[568]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[563]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[569]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[564]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[570]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[565]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[571]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[566]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[572]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[567]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[573]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[568]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[574]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[569]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Upper_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[575]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[570]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[576]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[571]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[577]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[572]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[578]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[573]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[579]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[574]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[580]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[575]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[581]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[576]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:L_Eyelid_Lower_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[582]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[577]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[583]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[578]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[584]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[579]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[585]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[580]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[586]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[581]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[587]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[582]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[588]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[583]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Upper_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[589]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[584]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[590]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[585]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[591]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[586]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[592]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[587]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[593]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[588]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[594]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[589]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[595]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[590]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Neck_and_Head|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl_Blink_OFFSET|LaraCroftAdvanced_Rig:R_Eyelid_Lower_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[596]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[591]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[597]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[592]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[598]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[593]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[599]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[594]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[600]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[595]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[601]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[596]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[602]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[597]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Nose_Ctrl_Grp|LaraCroftAdvanced_Rig:Nose_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[603]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[598]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[604]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[599]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[605]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[600]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[606]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[601]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[607]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[602]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[608]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[603]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[609]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[604]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Face_Controls_Grp|LaraCroftAdvanced_Rig:Face_Controls.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[610]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[605]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[611]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[606]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[612]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[607]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[613]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[608]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[614]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[609]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[615]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[610]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[616]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[611]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_Cluster_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[617]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[612]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[618]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[613]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[619]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[614]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[620]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[615]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[621]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[616]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[622]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[617]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[623]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[618]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_Cluster_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[624]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[619]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[625]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[620]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[626]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[621]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[627]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[622]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[628]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[623]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[629]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[624]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[630]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[625]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_3_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[631]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[626]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[632]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[627]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[633]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[628]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[634]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[629]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[635]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[630]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[636]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[631]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[637]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[632]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_2_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[638]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[633]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[639]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[634]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[640]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[635]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[641]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[636]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[642]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[637]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[643]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[638]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[644]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[639]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Brow_1_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[645]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[640]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[646]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[641]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[647]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[642]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[648]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[643]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[649]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[644]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[650]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[645]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[651]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[646]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_1_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[652]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[647]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[653]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[648]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[654]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[649]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[655]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[650]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[656]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[651]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[657]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[652]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[658]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[653]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_2_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[659]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[654]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[660]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[655]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[661]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[656]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[662]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[657]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[663]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[658]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[664]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[659]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[665]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[660]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Brow_3_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[666]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[661]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[667]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[662]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[668]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[663]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[669]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[664]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[670]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[665]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[671]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[666]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[672]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[667]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl_Grp|LaraCroftAdvanced_Rig:Mouth_Move_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[673]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[668]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[674]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[669]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[675]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[670]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[676]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[671]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[677]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[672]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[678]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[673]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[679]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[674]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Sneer_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[680]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[675]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[681]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[676]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[682]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[677]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[683]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[678]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[684]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[679]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[685]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[680]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[686]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[681]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Squint_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[687]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[682]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[688]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[683]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[689]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[684]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[690]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[685]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[691]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[686]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[692]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[687]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[693]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[688]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:L_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Cheek_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[694]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[689]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[695]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[690]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[696]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[691]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[697]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[692]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[698]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[693]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[699]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[694]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[700]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[695]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Cheek_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Cheek_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[701]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[696]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[702]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[697]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[703]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[698]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[704]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[699]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[705]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[700]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[706]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[701]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[707]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[702]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Squint_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Squint_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[708]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[703]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[709]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[704]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[710]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[705]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[711]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[706]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[712]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[707]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[713]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[708]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[714]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[709]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Cheeks|LaraCroftAdvanced_Rig:R_Sneer_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Sneer_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[715]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[710]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[716]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[711]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[717]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[712]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[718]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[713]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[719]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[714]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[720]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[715]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[721]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[716]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:Lower_Middle_Lips_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[722]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[717]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[723]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[718]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[724]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[719]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[725]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[720]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[726]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[721]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[727]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[722]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[728]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[723]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Outer_Lips_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[729]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[724]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[730]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[725]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[731]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[726]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[732]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[727]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[733]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[728]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[734]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[729]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[735]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[730]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Middle_Lips_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[736]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[731]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[737]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[732]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[738]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[733]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[739]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[734]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[740]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[735]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[741]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[736]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[742]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[737]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:L_Lower_Corner_Lips_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[743]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[738]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[744]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[739]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[745]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[740]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[746]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[741]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[747]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[742]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[748]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[743]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[749]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[744]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Outer_Lips_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[750]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[745]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[751]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[746]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[752]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[747]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[753]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[748]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[754]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[749]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[755]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[750]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[756]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[751]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Upper_Corner_Lips_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[757]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[752]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[758]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[753]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[759]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[754]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[760]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[755]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[761]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[756]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[762]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[757]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[763]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[758]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Corner_Lips_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[764]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[759]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[765]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[760]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[766]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[761]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[767]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[762]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[768]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[763]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[769]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[764]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[770]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[765]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl_Jaw_Move_OFFSET|LaraCroftAdvanced_Rig:R_Lower_Outer_Lips_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[771]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[766]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[772]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[767]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[773]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[768]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[774]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[769]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[775]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[770]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[776]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[771]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[777]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[772]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Corner_Lips_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[778]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[773]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[779]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[774]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[780]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[775]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[781]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[776]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[782]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[777]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[783]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[778]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[784]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[779]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Upper_Outer_Lips_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[785]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[780]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[786]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[781]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[787]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[782]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[788]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[783]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[789]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[784]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[790]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[785]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[791]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[786]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:R_Lips_Pull_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[792]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[787]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[793]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[788]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[794]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[789]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[795]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[790]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[796]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[791]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[797]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[792]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[798]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[793]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Mouth_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl_Grp|LaraCroftAdvanced_Rig:L_Lips_Pull_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[799]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[794]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[800]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[795]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[801]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[796]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[802]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[797]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[803]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[798]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[804]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[799]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[805]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[800]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Lower_Lip_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[806]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[801]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[807]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[802]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[808]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[803]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[809]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[804]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[810]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[805]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[811]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[806]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[812]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[807]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Face|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl_Grp|LaraCroftAdvanced_Rig:Upper_Lip_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[813]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[808]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[814]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[809]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[815]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[810]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[816]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[811]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[817]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[812]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[818]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[813]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[819]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[814]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Jnt_2_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[820]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[815]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[821]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[816]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[822]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[817]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[823]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[818]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[824]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[819]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[825]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[820]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[826]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[821]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick_Holster_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[827]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[822]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[828]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[823]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[829]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[824]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[830]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[825]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[831]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[826]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[832]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[827]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[833]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[828]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Gun_Ctrl_Grp|LaraCroftAdvanced_Rig:Gun_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[834]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[829]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.Mount" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[835]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[830]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[836]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[831]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[837]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[832]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[838]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[833]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[839]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[834]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[840]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[835]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[841]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[836]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick1_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick1_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[842]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[837]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.Mount" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[843]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[838]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.translateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[844]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[839]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.translateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[845]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[840]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.translateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[846]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[841]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.rotateX" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[847]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[842]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.rotateY" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[848]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[843]" ""
 		5 4 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.rotateZ" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[849]" ""
+		"LaraCroftAdvanced_RigRN.placeHolderList[844]" ""
 		5 3 "LaraCroftAdvanced_RigRN" "|LaraCroftAdvanced_Rig:Lara|LaraCroftAdvanced_Rig:Controls_Master_Grp|LaraCroftAdvanced_Rig:Accessories|LaraCroftAdvanced_Rig:Pick2_Ctrl_Grp|LaraCroftAdvanced_Rig:Pick2_Ctrl.instObjGroups" 
-		"LaraCroftAdvanced_RigRN.placeHolderList[850]" "";
+		"LaraCroftAdvanced_RigRN.placeHolderList[845]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "uiConfigurationScriptNode";
@@ -2847,7 +2836,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
 		+ "            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
 		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n"
-		+ "            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2493\n            -height 531\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n"
+		+ "            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2139\n            -height 978\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n"
 		+ "            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n"
 		+ "            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n"
@@ -2874,13 +2863,13 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n"
 		+ "                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n"
 		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2493\\n    -height 531\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2493\\n    -height 531\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2139\\n    -height 978\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 2139\\n    -height 978\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "9FFD8267-456D-0A66-C230-C685FAECE034";
-	setAttr ".b" -type "string" "playbackOptions -min 0 -max 130 -ast 0 -aet 500 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 118 -ast 0 -aet 500 ";
 	setAttr ".st" 6;
 createNode polyCube -n "polyCube1";
 	rename -uid "7D4E0A0D-4F18-4BB0-C6E5-0A9BE6362D87";
@@ -2945,37 +2934,37 @@ createNode animCurveTL -n "R_Foot_IK_Ctrl_translateX";
 	rename -uid "568CF971-4A24-D563-2FC5-8D984296EE5D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 -1.7370653140064028e-15 3.6338028911564626 -8.406978947230204e-16
+	setAttr -s 19 ".ktv[0:18]"  0 -1.7370653140064028e-15 3.6338028911564626 -8.406978947230204e-16
 		 4.8450715986394561 -6.747036571784341e-16 9.6901437074829939 1.5608427155272808e-15
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0 104 3.9897820391530035e-15;
 createNode animCurveTL -n "R_Foot_IK_Ctrl_translateY";
 	rename -uid "A2D9C912-4382-5D4D-A4B9-A394DDE08352";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0.32083965287955551 3.6338028911564626 -12.272017346307504
+	setAttr -s 18 ".ktv[0:17]"  0 0.32083965287955551 3.6338028911564626 -12.272017346307504
 		 4.8450715986394561 8.9956809015369537 9.6901437074829939 27.250302350449346 14.535221428571429 26.609817768440763
 		 17.563382142857144 26.609817768440763 23.014088775510203 33.991345066041674 27.859159693877551 86.808565345185571
 		 43 25.00789213710884 47 60.401316349820149 52 56.787583116181857 61 46.885954056012991
-		 66 36.293198514910785 83 25.97649204026704 92 16.739764799717811 96 11.61591769570321
-		 100 -1.6254091402036721;
+		 66 36.293198514910785 79 25.97649204026704 88 16.739764799717811 92 11.61591769570321
+		 96 -1.6254091402036721 104 -1.6090391982693966;
 createNode animCurveTL -n "R_Foot_IK_Ctrl_translateZ";
 	rename -uid "E0E1DC76-4015-239C-FA42-76AF8E097560";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 -52.64807208116801 3.6338028911564626 33.185011248690415
+	setAttr -s 18 ".ktv[0:17]"  0 -52.64807208116801 3.6338028911564626 33.185011248690415
 		 4.8450715986394561 49.080052631197887 9.6901437074829939 18.934886963639091 14.535221428571429 -37.707027815637261
 		 17.563382142857144 -37.707027815637261 23.014088775510203 35.531152092739731 27.859159693877551 98.400227611826523
 		 43 14.243672671116897 47 -107.90498538493398 52 -98.91648891378739 61 -69.457267250968243
-		 66 -34.410869870439974 83 1.429512444540542 92 37.473271189227347 96 75.667918937201406
-		 100 162.91658254911619;
+		 66 -34.410869870439974 79 1.429512444540542 88 37.473271189227347 92 75.667918937201406
+		 96 162.91658254911619 104 136.4709615297059;
 createNode animCurveTL -n "Nose_Ctrl_translateX";
 	rename -uid "82E3DE4B-4AE1-58FE-4315-768B19BBD017";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -2990,7 +2979,7 @@ createNode animCurveTL -n "Nose_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3005,7 +2994,7 @@ createNode animCurveTL -n "Nose_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3018,55 +3007,58 @@ createNode animCurveTL -n "R_Brow_Cluster_Ctrl_translateX";
 	rename -uid "B4147DA6-4CDB-B9FA-1582-748495C11563";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 20 ".ktv[0:19]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 86 0 87 1.4988010832439613e-15 90 0 96 0 101 0 105.99999982993198 0
+		 106 0;
+	setAttr -s 20 ".kit[7:19]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18;
+	setAttr -s 20 ".kot[7:19]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18;
+	setAttr -s 20 ".kix[7:19]"  1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 20 ".kiy[7:19]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 20 ".kox[7:19]"  1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 20 ".koy[7:19]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "R_Brow_Cluster_Ctrl_translateY";
 	rename -uid "29CCE199-40AA-24B9-1EF1-A5B264DC2B88";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 20 ".ktv[0:19]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 86 0 87 1.2865483572912837 90 0 96 0 101 0 105.99999982993198 0
+		 106 0;
+	setAttr -s 20 ".kit[7:19]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18;
+	setAttr -s 20 ".kot[7:19]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18;
+	setAttr -s 20 ".kix[7:19]"  1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 20 ".kiy[7:19]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 20 ".kox[7:19]"  1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 20 ".koy[7:19]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "R_Brow_Cluster_Ctrl_translateZ";
 	rename -uid "C755F877-4646-6C02-6DF1-7F86F7998D5D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 20 ".ktv[0:19]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 86 0 87 -4.6851411639181606e-14 90 0 96 0 101 0 105.99999982993198 0
+		 106 0;
+	setAttr -s 20 ".kit[7:19]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18;
+	setAttr -s 20 ".kot[7:19]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18;
+	setAttr -s 20 ".kix[7:19]"  1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 20 ".kiy[7:19]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 20 ".kox[7:19]"  1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 20 ".koy[7:19]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "Pick2_Ctrl_translateX";
 	rename -uid "8F9CEC72-4945-2C1C-E3AA-0593CB9047EB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 62 0 63 -40.811343650101023 100 -40.811343650101023 105 -40.811343650101023
-		 109.99999982993198 -40.811343650101023 110 -40.811343650101023;
+		 38 0 47 0 52 0 61 0 62 0 63 -40.811343650101023 96 -40.811343650101023 101 -40.811343650101023
+		 105.99999982993198 -40.811343650101023 106 -40.811343650101023;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 1 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 1 18 18 18 
@@ -3081,8 +3073,8 @@ createNode animCurveTL -n "Pick2_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 62 0 63 -155.67358116812841 100 -155.67358116812841 105 -155.67358116812841
-		 109.99999982993198 -155.67358116812841 110 -155.67358116812841;
+		 38 0 47 0 52 0 61 0 62 0 63 -155.67358116812841 96 -155.67358116812841 101 -155.67358116812841
+		 105.99999982993198 -155.67358116812841 106 -155.67358116812841;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 1 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 1 18 18 18 
@@ -3097,8 +3089,8 @@ createNode animCurveTL -n "Pick2_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 62 0 63 17.950157927322032 95 17.950157927322032 105 17.950157927322032
-		 109.99999982993198 17.950157927322032 110 17.950157927322032;
+		 38 0 47 0 52 0 61 0 62 0 63 17.950157927322032 91 17.950157927322032 101 17.950157927322032
+		 105.99999982993198 17.950157927322032 106 17.950157927322032;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 1 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 1 18 18 18 
@@ -3113,30 +3105,30 @@ createNode animCurveTL -n "R_reverse_foot_outer_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 -3.5527136788005009e-15 4.8450715986394561 -3.5527136788005009e-15
 		 9.6901437074829939 -3.5527136788005009e-15 14.535221428571429 0 17.563382142857144 0
-		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0
-		 99.99999982993198 0 100 0;
+		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0
+		 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_reverse_foot_outer_Ctrl_translateY";
 	rename -uid "E92E81CC-4348-F626-F165-3CB4807C6598";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_reverse_foot_outer_Ctrl_translateZ";
 	rename -uid "8288B101-4DC5-5304-3B00-C9907214AEF2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 -8.8817841970012523e-16 4.8450715986394561 -8.8817841970012523e-16
 		 9.6901437074829939 -8.8817841970012523e-16 14.535221428571429 0 17.563382142857144 0
-		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0
-		 99.99999982993198 0 100 0;
+		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0
+		 95.99999982993198 0 96 0;
 createNode animCurveTL -n "Spine_Mid_Control_Joint_Ctrl_translateX";
 	rename -uid "59B18890-4F1C-2A91-C372-03A9A16F69BC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 20 ".ktv[0:19]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 89 0 91 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 85 0 87 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 20 ".kit[7:19]"  1 18 18 18 18 18 18 18 
 		18 18 18 18 18;
 	setAttr -s 20 ".kot[7:19]"  1 18 18 18 18 18 18 18 
@@ -3151,8 +3143,8 @@ createNode animCurveTL -n "Spine_Mid_Control_Joint_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 20 ".ktv[0:19]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 89 0 91 -1.0081867541936476 94 0 100 0 105 0 109.99999982993198 0
-		 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 85 0 87 -1.0081867541936476 90 0 96 0 101 0 105.99999982993198 0
+		 106 0;
 	setAttr -s 20 ".kit[7:19]"  1 18 18 18 18 18 18 18 
 		18 18 18 18 18;
 	setAttr -s 20 ".kot[7:19]"  1 18 18 18 18 18 18 18 
@@ -3167,8 +3159,8 @@ createNode animCurveTL -n "Spine_Mid_Control_Joint_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 20 ".ktv[0:19]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 89 0 91 8.3186000959966879 94 0 100 0 105 0 109.99999982993198 0
-		 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 85 0 87 8.3186000959966879 90 0 96 0 101 0 105.99999982993198 0
+		 106 0;
 	setAttr -s 20 ".kit[7:19]"  1 18 18 18 18 18 18 18 
 		18 18 18 18 18;
 	setAttr -s 20 ".kot[7:19]"  1 18 18 18 18 18 18 18 
@@ -3183,85 +3175,87 @@ createNode animCurveTL -n "L_Hip_IK_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_Hip_IK_Ctrl_translateY";
 	rename -uid "F2BCEF49-47A6-CBF5-CC84-1C80FFE8F06F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_Hip_IK_Ctrl_translateZ";
 	rename -uid "322EA73C-4759-0C63-76A7-B2AAAA0A54A0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_Arm_PV_Ctrl_translateX";
 	rename -uid "EB6650C5-473C-9E93-104E-AB835992CF12";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  0 -3.5527136788005009e-15 4.8450717687074834 -3.5527136788005009e-15
-		 9.6901437074829939 -3.5527136788005009e-15 14.535221768707483 0 17.563381462585035 0
-		 23.014088775510203 -28.776154247178329 27.859159693877551 -27.160498011888425 38 -27.160498011888425
-		 47 -17.379768967325774 83 -15.142930194617808 88 -33.066217449463672 100 -14.989349264055599
-		 105 -15.515318643608907 109.99999982993198 -15.515318643608907 110 -15.515318643608907;
-	setAttr -s 15 ".kit[7:14]"  1 18 18 18 18 18 18 18;
-	setAttr -s 15 ".kot[7:14]"  1 18 18 18 18 18 18 18;
-	setAttr -s 15 ".kix[7:14]"  0.053067740918222216 0.21814627324565056 
+	setAttr -s 14 ".ktv[0:13]"  0 -3.5527136788005009e-15 4.8450717687074834 -3.5527136788005009e-15
+		 9.6901437074829939 -3.5527136788005009e-15 14.535221768707483 0 17 -27.730817879789235
+		 27 -27.730817879789235 38 -27.160498011888425 47 -17.379768967325774 79 -15.142930194617808
+		 84 -33.066217449463672 96 -14.989349264055599 101 -15.515318643608907 105.99999982993198 -15.515318643608907
+		 106 -15.515318643608907;
+	setAttr -s 14 ".kit[4:13]"  1 18 1 18 18 18 18 18 
+		18 18;
+	setAttr -s 14 ".kot[4:13]"  1 18 1 18 18 18 18 18 
+		18 18;
+	setAttr -s 14 ".kix[4:13]"  1 1 0.053067740918222216 0.19488344591103321 
 		1 1 1 1 1 1;
-	setAttr -s 15 ".kiy[7:14]"  0.99859091467619332 0.97591608423523479 
+	setAttr -s 14 ".kiy[4:13]"  0 0 0.99859091467619332 0.98082640793865317 
 		0 0 0 0 0 0;
-	setAttr -s 15 ".kox[7:14]"  0.05306774091822225 0.21814627324565056 
+	setAttr -s 14 ".kox[4:13]"  1 1 0.05306774091822225 0.19488344591103321 
 		1 1 1 1 1 1;
-	setAttr -s 15 ".koy[7:14]"  0.99859091467619343 0.9759160842352349 
+	setAttr -s 14 ".koy[4:13]"  0 0 0.99859091467619343 0.98082640793865328 
 		0 0 0 0 0 0;
 createNode animCurveTL -n "R_Arm_PV_Ctrl_translateY";
 	rename -uid "113DC907-4577-928C-D44F-A5AB1C257C42";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0.20389552061613636
-		 27.859159693877551 -26.521293170337316 38 -26.521293170337316 47 -25.243695237988124
-		 83 -13.884992081800183 88 -11.579577051543044 100 -9.6165696528576898 105 -12.896601043985768
-		 109.99999982993198 -12.896601043985768 110 -12.896601043985768;
-	setAttr -s 15 ".kit[7:14]"  1 18 18 18 18 18 18 18;
-	setAttr -s 15 ".kot[7:14]"  1 18 18 18 18 18 18 18;
-	setAttr -s 15 ".kix[7:14]"  1 0.14677503702073519 0.12405751217690338 
-		0.16370850063402836 1 1 1 1;
-	setAttr -s 15 ".kiy[7:14]"  0 0.98916989870677008 0.99227502924969224 
-		0.98650875658564652 0 0 0 0;
-	setAttr -s 15 ".kox[7:14]"  1 0.14677503702073519 0.12405751217690339 
-		0.16370850063402839 1 1 1 1;
-	setAttr -s 15 ".koy[7:14]"  0 0.98916989870677008 0.99227502924969224 
-		0.98650875658564652 0 0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+		 14.535221768707483 0 17 -17.429334144989799 27 -17.429334144989799 38 -26.521293170337316
+		 47 -25.243695237988124 79 -13.884992081800183 84 -11.579577051543044 96 -9.6165696528576898
+		 101 -12.896601043985768 105.99999982993198 -12.896601043985768 106 -12.896601043985768;
+	setAttr -s 14 ".kit[4:13]"  1 18 1 18 18 18 18 18 
+		18 18;
+	setAttr -s 14 ".kot[4:13]"  1 18 1 18 18 18 18 18 
+		18 18;
+	setAttr -s 14 ".kix[4:13]"  0.027578521472450494 1 1 0.13397373927742187 
+		0.11211458197599483 0.16370850063402836 1 1 1 1;
+	setAttr -s 14 ".kiy[4:13]"  -0.99961964023992322 0 0 0.99098488241951777 
+		0.99369528554197539 0.98650875658564652 0 0 0 0;
+	setAttr -s 14 ".kox[4:13]"  0.027578521472450494 1 1 0.13397373927742187 
+		0.11211458197599483 0.16370850063402839 1 1 1 1;
+	setAttr -s 14 ".koy[4:13]"  -0.99961964023992322 0 0 0.99098488241951765 
+		0.99369528554197539 0.98650875658564652 0 0 0 0;
 createNode animCurveTL -n "R_Arm_PV_Ctrl_translateZ";
 	rename -uid "B34C3738-4CB3-8772-4676-F3B0DF4C8F13";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 20 ".ktv[0:19]"  0 3.5527136788005009e-15 4.8450717687074834 3.5527136788005009e-15
-		 9.6901437074829939 3.5527136788005009e-15 14.535221768707483 0 17.563381462585035 0
-		 23.014088775510203 19.943401702862808 27.859159693877551 31.266659508506777 38 31.266659508506777
-		 47 31.055965332728796 52 30.331931477448197 61 28.630513040293497 66 26.751956706815996
-		 82.99999982993198 24.744764114599146 83 24.615541722930498 88 30.91713583834391 94 19.426766103182612
-		 100 -2.3166227454933579 105 -1.8001078134962303 109.99999982993198 -1.8001078134962303
-		 110 -1.8001078134962303;
-	setAttr -s 20 ".kit[7:19]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18;
-	setAttr -s 20 ".kot[7:19]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18;
-	setAttr -s 20 ".kix[7:19]"  1 0.52942991310060628 0.23383715725492252 
-		0.1608224434258039 0.22960244429690108 0.31470588809822136 1 1 0.015043240467875633 
+	setAttr -s 19 ".ktv[0:18]"  0 3.5527136788005009e-15 4.8450717687074834 3.5527136788005009e-15
+		 9.6901437074829939 3.5527136788005009e-15 14.535221768707483 0 17 53.335337814612849
+		 27 53.335337814612849 38 31.266659508506777 47 31.055965332728796 52 30.331931477448197
+		 61 28.630513040293497 66 26.751956706815996 78.99999982993198 24.744764114599146
+		 79 24.615541722930498 84 30.91713583834391 90 19.426766103182612 96 -2.3166227454933579
+		 101 -1.8001078134962303 105.99999982993198 -1.8001078134962303 106 -1.8001078134962303;
+	setAttr -s 19 ".kit[4:18]"  1 18 1 18 18 18 18 18 
+		18 18 18 18 18 18 18;
+	setAttr -s 19 ".kot[4:18]"  1 18 1 18 18 18 18 18 
+		18 18 18 18 18 18 18;
+	setAttr -s 19 ".kix[4:18]"  1 1 1 0.52942991310060628 0.23383715725492252 
+		0.1608224434258039 0.18951516244366812 0.24576386468492989 1 1 0.015043240467875621 
 		1 1 1 1;
-	setAttr -s 20 ".kiy[7:19]"  0 -0.84835368043893378 -0.97227577563515211 
-		-0.98698335431280404 -0.97328449981127751 -0.94918923508239905 0 0 -0.99988684405597905 
+	setAttr -s 19 ".kiy[4:18]"  0 0 0 -0.84835368043893378 -0.97227577563515211 
+		-0.98698335431280404 -0.98187779443469947 -0.96932972863475497 0 0 -0.99988684405597905 
 		0 0 0 0;
-	setAttr -s 20 ".kox[7:19]"  1 0.52942991310060628 0.23383715725492249 
-		0.1608224434258039 0.22960244429690108 0.31470588809822131 1 1 0.015043240467875635 
+	setAttr -s 19 ".kox[4:18]"  1 1 1 0.52942991310060628 0.23383715725492249 
+		0.1608224434258039 0.18951516244366814 0.24576386468492986 1 1 0.015043240467875621 
 		1 1 1 1;
-	setAttr -s 20 ".koy[7:19]"  0 -0.84835368043893367 -0.97227577563515211 
-		-0.98698335431280404 -0.97328449981127751 -0.94918923508239894 0 0 -0.99988684405597905 
+	setAttr -s 19 ".koy[4:18]"  0 0 0 -0.84835368043893367 -0.97227577563515211 
+		-0.98698335431280404 -0.98187779443469947 -0.96932972863475486 0 0 -0.99988684405597905 
 		0 0 0 0;
 createNode animCurveTL -n "L_Lower_Outer_Lips_Ctrl_translateX";
 	rename -uid "DD17837D-467D-192B-B5FF-EDB9B0D30C77";
@@ -3269,7 +3263,7 @@ createNode animCurveTL -n "L_Lower_Outer_Lips_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3284,7 +3278,7 @@ createNode animCurveTL -n "L_Lower_Outer_Lips_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3299,7 +3293,7 @@ createNode animCurveTL -n "L_Lower_Outer_Lips_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3314,7 +3308,7 @@ createNode animCurveTL -n "L_Lower_Corner_Lips_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3329,7 +3323,7 @@ createNode animCurveTL -n "L_Lower_Corner_Lips_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3344,7 +3338,7 @@ createNode animCurveTL -n "L_Lower_Corner_Lips_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3359,7 +3353,7 @@ createNode animCurveTL -n "L_Arm_01_Jnt_IK_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3374,7 +3368,7 @@ createNode animCurveTL -n "L_Arm_01_Jnt_IK_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3389,7 +3383,7 @@ createNode animCurveTL -n "L_Arm_01_Jnt_IK_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3404,7 +3398,7 @@ createNode animCurveTL -n "R_Lower_Outer_Lips_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3419,7 +3413,7 @@ createNode animCurveTL -n "R_Lower_Outer_Lips_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3434,7 +3428,7 @@ createNode animCurveTL -n "R_Lower_Outer_Lips_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3449,7 +3443,7 @@ createNode animCurveTL -n "L_Squint_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3464,7 +3458,7 @@ createNode animCurveTL -n "L_Squint_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3479,7 +3473,7 @@ createNode animCurveTL -n "L_Squint_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3494,7 +3488,7 @@ createNode animCurveTL -n "R_Brow_1_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3509,7 +3503,7 @@ createNode animCurveTL -n "R_Brow_1_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3524,7 +3518,7 @@ createNode animCurveTL -n "R_Brow_1_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3537,17 +3531,17 @@ createNode animCurveTL -n "Transform_Control_translateX";
 	rename -uid "C98AC1F0-423B-BF73-445E-46BCE0F7AC6E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 5 4.8450717687074834 5 9.6901437074829939 5
+	setAttr -s 19 ".ktv[0:18]"  0 5 4.8450717687074834 5 9.6901437074829939 5
 		 14.535221768707483 5 17.563381462585035 5 23.014088775510203 5 27.859159693877551 5
-		 38 5 47 5 52 5 61 5 66 5 83 5 94 5 100 5 105 5 109.99999982993198 5 110 5;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 5 47 5 52 5 61 5 66 5 79 5 89 5 90 5 96 5 101 5 105.99999982993198 5 106 5;
+	setAttr -s 19 ".kit[7:18]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 19 ".kot[7:18]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 19 ".kix[7:18]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".kiy[7:18]"  0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[7:18]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".koy[7:18]"  0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "Transform_Control_translateY";
 	rename -uid "26BB83DF-4369-32AD-C2A5-9889AD1A980A";
 	setAttr ".tan" 18;
@@ -3555,20 +3549,20 @@ createNode animCurveTL -n "Transform_Control_translateY";
 	setAttr -s 12 ".ktv[0:11]"  0 0 13.323942176870748 97.373338656552988
 		 18.169012755102042 84.377825901339833 27.859159693877551 82.773441610572789 38 82.773441610572789
 		 47 91.597555209791565 52 91.597555209791565 61 91.597555209791565 66 91.597555209791565
-		 83 118.73768469827012 94 121.91988650934177 105 -38.491681300647279;
+		 79 118.73768469827012 89 117.73591565747289 101 -38.491681300647279;
 	setAttr -s 12 ".kit[0:11]"  1 18 18 18 1 18 18 18 
 		18 18 18 1;
 	setAttr -s 12 ".kot[0:11]"  1 18 18 18 1 18 18 18 
 		18 18 18 18;
 	setAttr -s 12 ".ktl[11]" no;
 	setAttr -s 12 ".kix[0:11]"  0.0043555797652791786 1 0.08359239755463295 
-		1 1 1 1 1 1 0.047954849087949822 1 0.00099157397669940965;
+		1 1 1 1 1 1 1 0.13733002257813257 0.0015436666185081908;
 	setAttr -s 12 ".kiy[0:11]"  0.999990514417466 0 -0.99650003064278347 
-		0 0 0 0 0 0 0.99884950440441833 0 -0.99999950839040352;
+		0 0 0 0 0 0 0 -0.9905253479334537 -0.99999880854597567;
 	setAttr -s 12 ".kox[0:11]"  0.0043555804605367524 1 0.083592397554632936 
-		1 1 1 1 1 1 0.047954849087949822 1 1;
+		1 1 1 1 1 1 1 0.13733002257813257 1;
 	setAttr -s 12 ".koy[0:11]"  0.99999051441443765 0 -0.99650003064278336 
-		0 0 0 0 0 0 0.99884950440441822 0 0;
+		0 0 0 0 0 0 0 -0.9905253479334537 0;
 createNode animCurveTL -n "Transform_Control_translateZ";
 	rename -uid "1171CFA1-4C81-4F01-8866-4DBA7626A7B4";
 	setAttr ".tan" 18;
@@ -3576,26 +3570,26 @@ createNode animCurveTL -n "Transform_Control_translateZ";
 	setAttr -s 11 ".ktv[0:10]"  0 -230.3279880666056 17.563381972789117 25.596663745157919
 		 23.014089115646257 49.130596253552724 27.859159693877551 49.130596253552724 38 49.130596253552724
 		 47 49.130596253552724 52 49.130596253552724 61 49.130596253552724 66 49.130596253552724
-		 83 49.130596253552724 105 357.68705080672322;
+		 80 49.130596253552724 101 401.9253075756443;
 	setAttr -s 11 ".kit[0:10]"  1 18 18 18 1 18 18 18 
 		18 1 1;
 	setAttr -s 11 ".kot[0:10]"  1 18 18 18 1 18 18 18 
 		18 1 1;
 	setAttr -s 11 ".kix[0:10]"  0.0029232182016583007 0.0034313303953675376 
-		1 1 1 1 1 1 1 0.0020365573868863849 0.002327614755734465;
+		1 1 1 1 1 1 1 0.0029720782243088978 0.0035313659927574425;
 	setAttr -s 11 ".kiy[0:10]"  0.99999572738854503 0.99999411296853036 
-		0 0 0 0 0 0 0 0.99999792621485473 0.99999729110110536;
+		0 0 0 0 0 0 0 0.999995583365761 0.99999376470767321;
 	setAttr -s 11 ".kox[0:10]"  0.0029232167716465854 0.0034313303953675384 
-		1 1 1 1 1 1 1 0.002036558159703954 0.0023276148913672157;
+		1 1 1 1 1 1 1 0.0029720782235851334 0.0035313711761324742;
 	setAttr -s 11 ".koy[0:10]"  0.99999572739272535 0.99999411296853047 
-		0 0 0 0 0 0 0 0.99999792621328076 0.99999729110078972;
+		0 0 0 0 0 0 0 0.99999558336576322 0.99999376468936851;
 createNode animCurveTL -n "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateX";
 	rename -uid "CBD4B650-43CB-C95C-C7D7-46A8A731BFAB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3610,7 +3604,7 @@ createNode animCurveTL -n "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3625,7 +3619,7 @@ createNode animCurveTL -n "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3640,8 +3634,8 @@ createNode animCurveTL -n "R_Eyelid_Upper_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 8.8817841970012523e-16 4.8450717687074834 8.8817841970012523e-16
 		 9.6901437074829939 8.8817841970012523e-16 14.535221768707483 0 17.563381462585035 0
-		 23.014088775510203 0 27.859159693877551 0 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0
-		 105 0 109.99999982993198 0 110 0;
+		 23.014088775510203 0 27.859159693877551 0 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0
+		 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3656,8 +3650,8 @@ createNode animCurveTL -n "R_Eyelid_Upper_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 -2.8421709430404007e-14 4.8450717687074834 -2.8421709430404007e-14
 		 9.6901437074829939 -2.8421709430404007e-14 14.535221768707483 0 17.563381462585035 0
-		 23.014088775510203 0 27.859159693877551 0 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0
-		 105 0 109.99999982993198 0 110 0;
+		 23.014088775510203 0 27.859159693877551 0 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0
+		 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3672,8 +3666,8 @@ createNode animCurveTL -n "R_Eyelid_Upper_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 -7.7715611723760958e-16 4.8450717687074834 -7.7715611723760958e-16
 		 9.6901437074829939 -7.7715611723760958e-16 14.535221768707483 0 17.563381462585035 0
-		 23.014088775510203 0 27.859159693877551 0 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0
-		 105 0 109.99999982993198 0 110 0;
+		 23.014088775510203 0 27.859159693877551 0 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0
+		 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3688,7 +3682,7 @@ createNode animCurveTL -n "R_Lower_Corner_Lips_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3703,7 +3697,7 @@ createNode animCurveTL -n "R_Lower_Corner_Lips_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3718,7 +3712,7 @@ createNode animCurveTL -n "R_Lower_Corner_Lips_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3733,8 +3727,8 @@ createNode animCurveTL -n "Cog_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 27 ".ktv[0:26]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23 0 23.014088775510203 0 27 0 33 0 47 0
-		 51 0 61 0 64 0 66 0 74 0 80 0 83 0 88 0 90 0 93.99999982993198 0 94 0 100 0 105 0
-		 109.99999982993198 0 110 0 113 0 116 0;
+		 51 0 61 0 64 0 66 0 72 0 76 0 79 0 84 0 86 0 89.99999982993198 0 90 0 96 0 101 0
+		 105.99999982993198 0 106 0 109 0 118 0;
 	setAttr -s 27 ".kit[5:26]"  18 16 18 18 16 18 18 18 
 		16 18 18 16 18 18 18 16 16 16 16 16 18 18;
 	setAttr -s 27 ".kot[5:26]"  18 16 18 18 16 18 18 18 
@@ -3743,85 +3737,74 @@ createNode animCurveTL -n "Cog_Ctrl_translateY";
 	rename -uid "D85BD622-471A-130C-8D63-CBA7A0AEEF86";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  0 -30.140276390023743 9.6901437074829939 0
+	setAttr -s 21 ".ktv[0:20]"  0 -30.140276390023743 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23 6.1699020205795883 27 19.647862084638618
-		 33 24.665013054633619 47 -3.0619972260270334 61 36.189276064351326 64 25.552672286194131
-		 66 7.8933105702546413 74 5.7412793690749044 80 12.17962217170567 83 6.7430735982326269
-		 88 15.625853379909339 90 18.886853893916278 94 16.126483172370598 100 -2.2915026298224621
-		 105 -16.571961829006625 110 -51.921773151021384 113 -50.024475739601414 116 -42.298081932888557;
-	setAttr -s 22 ".kit[0:21]"  16 16 16 16 18 18 18 16 
-		18 18 16 18 18 16 18 18 18 16 16 16 18 18;
-	setAttr -s 22 ".kot[0:21]"  16 16 16 16 18 18 18 16 
-		18 18 16 18 18 16 18 18 18 16 16 16 18 18;
+		 33 24.665013054633619 47 -3.0619972260270334 51 11.998502711526076 61 36.189276064351326
+		 64 25.552672286194131 72 5.7412793690749044 76 12.17962217170567 79 6.7430735982326269
+		 84 15.625853379909339 86 18.886853893916278 90 16.126483172370598 96 -2.2915026298224621
+		 101 -16.571961829006625 106 -51.921773151021384 118 -42.298081932888557;
+	setAttr -s 21 ".kit[0:20]"  16 16 16 16 18 18 18 16 
+		18 18 18 18 18 16 18 18 18 16 16 16 18;
+	setAttr -s 21 ".kot[0:20]"  16 16 16 16 18 18 18 16 
+		18 18 18 18 18 16 18 18 18 16 16 16 18;
 createNode animCurveTL -n "Cog_Ctrl_translateZ";
 	rename -uid "FD610239-4158-33A3-DF34-2F9B2927755F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  0 11.575543243147566 4.8450717687074834 25.446359720343796
+	setAttr -s 21 ".ktv[0:20]"  0 11.575543243147566 4.8450717687074834 25.446359720343796
 		 23 16.574278437334378 27 39.326868656463112 33 64.92523784525109 47 5.1957883188910827
-		 51 -29.296697525642383 61 -52.193936274185397 62 -52.158175812017731 64 -45.409113720972719
-		 66 -32.223694773484638 74 34.7552078863338 80 59.282732289640691 88 43.129148310816319
-		 90 37.723778269404676 93.99999982993198 37.723778269404676 94 37.723778269404676
-		 100 37.61342563867894 105 37.503073007953205 110 136.48930807510934 113 148.02240081517917
-		 116 151.66141136003091;
-	setAttr -s 22 ".kit[0:21]"  16 16 18 18 18 16 18 18 
-		18 18 16 18 18 18 18 18 16 16 16 1 18 18;
-	setAttr -s 22 ".kot[0:21]"  16 16 18 18 18 16 18 18 
-		18 18 16 18 18 18 18 18 16 16 16 1 18 18;
-	setAttr -s 22 ".kix[19:21]"  0.0044182529726935517 0.016475373470748803 
-		1;
-	setAttr -s 22 ".kiy[19:21]"  0.99999023947270071 0.99986427182343074 
-		0;
-	setAttr -s 22 ".kox[19:21]"  0.0044182520504539545 0.016475373470748803 
-		1;
-	setAttr -s 22 ".koy[19:21]"  0.99999023947677546 0.99986427182343074 
-		0;
+		 51 -28.384466448006474 61 -52.193936274185397 62 -52.158175812017731 64 -45.409113720972719
+		 66 -32.223694773484638 76 59.282732289640691 84 43.129148310816319 86 37.723778269404676
+		 89.99999982993198 37.723778269404676 90 37.723778269404676 96 37.61342563867894 101 37.503073007953205
+		 106 117.03541471952605 109 126.3949378733785 118 121.71517629645226;
+	setAttr -s 21 ".kit[0:20]"  16 16 18 18 18 16 18 18 
+		18 18 16 18 18 18 18 16 16 16 1 18 18;
+	setAttr -s 21 ".kot[0:20]"  16 16 18 18 18 16 18 18 
+		18 18 16 18 18 18 18 16 16 16 1 18 18;
+	setAttr -s 21 ".kix[18:20]"  0.0044182529726935517 1 1;
+	setAttr -s 21 ".kiy[18:20]"  0.99999023947270071 0 0;
+	setAttr -s 21 ".kox[18:20]"  0.0044182520504539545 1 1;
+	setAttr -s 21 ".koy[18:20]"  0.99999023947677546 0 0;
 createNode animCurveTL -n "Head_Ctrl_translateX";
 	rename -uid "83306CE5-4AE4-0AD5-E545-BB8F9ACE5E5C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0;
-	setAttr -s 9 ".kit[7:8]"  1 18;
-	setAttr -s 9 ".kot[7:8]"  1 18;
-	setAttr -s 9 ".kix[7:8]"  1 1;
-	setAttr -s 9 ".kiy[7:8]"  0 0;
-	setAttr -s 9 ".kox[7:8]"  1 1;
-	setAttr -s 9 ".koy[7:8]"  0 0;
+	setAttr -s 5 ".ktv[0:4]"  0 0 18 0 23.014088775510203 0 38 0 47 0;
+	setAttr -s 5 ".kit[3:4]"  1 18;
+	setAttr -s 5 ".kot[3:4]"  1 18;
+	setAttr -s 5 ".kix[3:4]"  1 1;
+	setAttr -s 5 ".kiy[3:4]"  0 0;
+	setAttr -s 5 ".kox[3:4]"  1 1;
+	setAttr -s 5 ".koy[3:4]"  0 0;
 createNode animCurveTL -n "Head_Ctrl_translateY";
 	rename -uid "8686985A-4D85-D466-18BF-C2AA8312C13B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0;
-	setAttr -s 9 ".kit[7:8]"  1 18;
-	setAttr -s 9 ".kot[7:8]"  1 18;
-	setAttr -s 9 ".kix[7:8]"  1 1;
-	setAttr -s 9 ".kiy[7:8]"  0 0;
-	setAttr -s 9 ".kox[7:8]"  1 1;
-	setAttr -s 9 ".koy[7:8]"  0 0;
+	setAttr -s 5 ".ktv[0:4]"  0 0 18 0 23.014088775510203 0 38 0 47 0;
+	setAttr -s 5 ".kit[3:4]"  1 18;
+	setAttr -s 5 ".kot[3:4]"  1 18;
+	setAttr -s 5 ".kix[3:4]"  1 1;
+	setAttr -s 5 ".kiy[3:4]"  0 0;
+	setAttr -s 5 ".kox[3:4]"  1 1;
+	setAttr -s 5 ".koy[3:4]"  0 0;
 createNode animCurveTL -n "Head_Ctrl_translateZ";
 	rename -uid "A6DE6CBA-4911-5235-A7FF-5CB3A85F94D2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 9 ".ktv[0:8]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0;
-	setAttr -s 9 ".kit[7:8]"  1 18;
-	setAttr -s 9 ".kot[7:8]"  1 18;
-	setAttr -s 9 ".kix[7:8]"  1 1;
-	setAttr -s 9 ".kiy[7:8]"  0 0;
-	setAttr -s 9 ".kox[7:8]"  1 1;
-	setAttr -s 9 ".koy[7:8]"  0 0;
+	setAttr -s 5 ".ktv[0:4]"  0 0 18 0 23.014088775510203 0 38 0 47 0;
+	setAttr -s 5 ".kit[3:4]"  1 18;
+	setAttr -s 5 ".kot[3:4]"  1 18;
+	setAttr -s 5 ".kix[3:4]"  1 1;
+	setAttr -s 5 ".kiy[3:4]"  0 0;
+	setAttr -s 5 ".kox[3:4]"  1 1;
+	setAttr -s 5 ".koy[3:4]"  0 0;
 createNode animCurveTL -n "Gun_Ctrl_translateX";
 	rename -uid "5EFD07B6-41B0-9E64-9323-17B4CB5EDD8B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3836,7 +3819,7 @@ createNode animCurveTL -n "Gun_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3851,7 +3834,7 @@ createNode animCurveTL -n "Gun_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3866,115 +3849,115 @@ createNode animCurveTL -n "R_reverse_foot_ball_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_reverse_foot_ball_Ctrl_translateY";
 	rename -uid "656CA0A3-459E-D346-8624-7692ABB3678E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_reverse_foot_ball_Ctrl_translateZ";
 	rename -uid "4D922E39-47FF-118C-0C34-A687D3D11221";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "Hair_Ctrl_Jnt_3_Ctrl_translateX";
 	rename -uid "48BF3B57-48DE-55F8-D633-219C06FFDABA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 19 ".ktv[0:18]"  0 0 4.8450717687074834 0 7 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
+	setAttr -s 19 ".kit[8:18]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 19 ".kot[8:18]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kix[8:18]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".kiy[8:18]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[8:18]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".koy[8:18]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "Hair_Ctrl_Jnt_3_Ctrl_translateY";
 	rename -uid "EBF9DFCA-4FCA-386F-7B8C-E284B00117DE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 19 ".ktv[0:18]"  0 0 4.8450717687074834 0 7 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
+	setAttr -s 19 ".kit[8:18]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 19 ".kot[8:18]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kix[8:18]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".kiy[8:18]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[8:18]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".koy[8:18]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "Hair_Ctrl_Jnt_3_Ctrl_translateZ";
 	rename -uid "CC8C509B-4190-BEC9-399B-80A4A1D48D80";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 19 ".ktv[0:18]"  0 0 4.8450717687074834 0 7 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
+	setAttr -s 19 ".kit[8:18]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 19 ".kot[8:18]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kix[8:18]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".kiy[8:18]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[8:18]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".koy[8:18]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "L_reverse_foot_ball_Ctrl_translateX";
 	rename -uid "A4E6D0CF-41C2-AC19-C42A-99ADD824F22C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 15 ".ktv[0:14]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 98 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 94 0;
 createNode animCurveTL -n "L_reverse_foot_ball_Ctrl_translateY";
 	rename -uid "D7CB4038-4E64-FA83-150E-3D9D683639E8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 15 ".ktv[0:14]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 98 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 94 0;
 createNode animCurveTL -n "L_reverse_foot_ball_Ctrl_translateZ";
 	rename -uid "83837569-48BC-9418-93CE-399A2FE31657";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 15 ".ktv[0:14]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 98 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 94 0;
 createNode animCurveTL -n "L_reverse_foot_heel_Ctrl_translateX";
 	rename -uid "56FFC666-4E56-8BD3-8572-3EA47F4BE1CB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_reverse_foot_heel_Ctrl_translateY";
 	rename -uid "640589A6-4ECF-CDB4-8F36-F7BD22002D18";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_reverse_foot_heel_Ctrl_translateZ";
 	rename -uid "226B907C-46C1-68DA-E07E-DBB30E9EA2D6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "Pelvis_Ctrl_translateX";
 	rename -uid "6066ADCC-4114-5859-A28F-6A9403068848";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -3989,7 +3972,7 @@ createNode animCurveTL -n "Pelvis_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4004,7 +3987,7 @@ createNode animCurveTL -n "Pelvis_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4019,7 +4002,7 @@ createNode animCurveTL -n "Pick_Holster_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4034,7 +4017,7 @@ createNode animCurveTL -n "Pick_Holster_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4049,7 +4032,7 @@ createNode animCurveTL -n "Pick_Holster_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4064,7 +4047,7 @@ createNode animCurveTL -n "R_Squint_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4079,7 +4062,7 @@ createNode animCurveTL -n "R_Squint_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4094,52 +4077,7 @@ createNode animCurveTL -n "R_Squint_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-createNode animCurveTL -n "Look_Ctrl_translateX";
-	rename -uid "5700B9CF-40E5-265A-2205-148D8962B67B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-createNode animCurveTL -n "Look_Ctrl_translateY";
-	rename -uid "B6A37CD4-4D10-EC0F-E883-51895B564F40";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-createNode animCurveTL -n "Look_Ctrl_translateZ";
-	rename -uid "55618D9B-44BE-2F4F-DA16-03B8449B1987";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4154,28 +4092,28 @@ createNode animCurveTL -n "R_reverse_foot_inner_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_reverse_foot_inner_Ctrl_translateY";
 	rename -uid "575F87FE-4C76-2575-66FA-F880D0F54F9F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_reverse_foot_inner_Ctrl_translateZ";
 	rename -uid "C1FB6002-4F04-9C1F-C9EC-0FB501F90AF1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_Upper_Outer_Lips_Ctrl_translateX";
 	rename -uid "3B0B0E3B-4F52-EEBE-CFDD-45AF73F135AE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4190,7 +4128,7 @@ createNode animCurveTL -n "R_Upper_Outer_Lips_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4205,7 +4143,7 @@ createNode animCurveTL -n "R_Upper_Outer_Lips_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4218,80 +4156,81 @@ createNode animCurveTL -n "L_Hand_IK_Ctrl_translateX";
 	rename -uid "0E38FA8D-46E4-8344-1871-0DAC8DBBAADC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  0 0 4.8450717687074834 -1.7139014418919942
+	setAttr -s 21 ".ktv[0:20]"  0 0 4.8450717687074834 -1.7139014418919942
 		 9.6901437074829939 -5.8750563849470767 14.535221768707483 -10.265097738511241 17.563381462585035 -14.256190078558072
 		 21 -16.479821556653793 24 -5.1958988015397543 38 -5.1958988015397543 47 -5.1958988015397543
-		 52 -5.1958988015397543 61 -5.1958988015397543 85 -5.1958988015397543 86 -17.620736383098301
-		 86.00000017006802 -23.550859629391965 87 -20.170413949569923 88 -21.258162872086679
-		 100 -25.917529077605021 105 -22.635435083456088 110 -3.9868290767837409 111 230.1259117598872
-		 113 230.1259117598872 114 230.1259117598872 117 230.12600876790489;
-	setAttr -s 23 ".kit[7:22]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18 1 18 18;
-	setAttr -s 23 ".kot[7:22]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18 1 18 18;
-	setAttr -s 23 ".kix[7:22]"  1 1 1 1 1 0.0022700438746357404 1 1 0.093834337140692614 
-		1 0.021153844207894248 0.0037238152241418792 1 1 1 1;
-	setAttr -s 23 ".kiy[7:22]"  0 0 0 0 0 -0.99999742344708442 0 0 -0.99558782494231368 
-		0 0.99977623240164504 0.99999306657605203 0 0 0 0;
-	setAttr -s 23 ".kox[7:22]"  1 1 1 1 1 0.0022700438746357404 1 1 0.093834337140692628 
-		1 0.021153844207894248 0.0037238152241418796 1 1 1 1;
-	setAttr -s 23 ".koy[7:22]"  0 0 0 0 0 -0.99999742344708431 0 0 -0.99558782494231368 
-		0 0.99977623240164504 0.99999306657605203 0 0 0 0;
+		 52 -5.1958988015397543 61 -5.1958988015397543 81 -5.1958988015397543 82 -23.665702678626769
+		 82.00000017006802 -23.550859629391965 83 -21.743220783841874 84 -21.258162872086679
+		 96 -25.917529077605021 101 -22.635435083456088 105 0.17021671197735661 106 -4.9530594641095433
+		 107 242.56641087740471;
+	setAttr -s 21 ".kit[7:20]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 21 ".kot[7:20]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 21 ".kix[7:20]"  1 1 1 1 1 1 0.021668284147892999 0.036323309464157537 
+		1 1 0.021153844207894248 1 1 1;
+	setAttr -s 21 ".kiy[7:20]"  0 0 0 0 0 0 0.99976521516908479 0.99934009085474551 
+		0 0 0.99977623240164504 0 0 0;
+	setAttr -s 21 ".kox[7:20]"  1 1 1 1 1 1 0.021668284147892999 0.036323309464157537 
+		1 1 0.021153844207894252 1 1 1;
+	setAttr -s 21 ".koy[7:20]"  0 0 0 0 0 0 0.99976521516908468 0.99934009085474551 
+		0 0 0.99977623240164504 0 0 0;
 createNode animCurveTL -n "L_Hand_IK_Ctrl_translateY";
 	rename -uid "77B81A4E-4617-264B-F972-459D5CCCC30F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  0 0 4.8450717687074834 10.413662390822987
+	setAttr -s 22 ".ktv[0:21]"  0 0 4.8450717687074834 10.413662390822987
 		 9.6901437074829939 39.608643406902786 14.535221768707483 71.285575746879104 17.563381462585035 101.96034047066497
-		 21 126.76497123676745 24 132.53558502385232 38 132.53558502385232 47 132.53558502385232
-		 52 132.53558502385232 61 132.53558502385232 85 132.53558502385232 86 39.952552958375861
-		 86.00000017006802 34.19156253075392 86.000000340136054 24.495510790757514 87 36.302491535829823
-		 88 30.421078876024698 100 16.095271748613179 105 14.971898378005294 110 -21.901222620292415
-		 111 -171.83297237197064 113 -171.83297237197064 117 -158.48495723260407;
-	setAttr -s 23 ".kit[7:22]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 1 18;
-	setAttr -s 23 ".kot[7:22]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18 18 1 18;
-	setAttr -s 23 ".kix[7:22]"  1 1 1 1 1 0.00042368279186491971 9.1688533625199589e-10 
-		1 1 0.026795975524217894 0.061699998009314035 0.061699998009314035 0.0018833317985192694 
-		1 1 1;
-	setAttr -s 23 ".kiy[7:22]"  0 0 0 0 0 -0.99999991024644186 -1 0 0 -0.99964092337984323 
-		-0.99809474011521115 -0.99809474011521115 -0.99999822652909565 0 0 0;
-	setAttr -s 23 ".kox[7:22]"  1 1 1 1 1 0.00042368279186491965 9.1688533625199589e-10 
-		1 1 0.026795975524217894 0.061699998009314035 0.061699998009314035 0.0018833317985192694 
-		1 1 1;
-	setAttr -s 23 ".koy[7:22]"  0 0 0 0 0 -0.99999991024644186 -1 0 0 -0.99964092337984323 
-		-0.99809474011521115 -0.99809474011521115 -0.99999822652909576 0 0 0;
+		 21 134.99504325712036 24 132.53558502385232 38 132.53558502385232 47 132.53558502385232
+		 52 132.53558502385232 61 132.53558502385232 81 132.53558502385232 82 28.757735824251164
+		 82.00000017006802 34.19156253075392 82.000000340136054 24.495510790757514 83 33.212741342443969
+		 84 30.421078876024698 96 16.095271748613179 101 14.971898378005294 105 -0.098611779586921869
+		 106 -9.7871918128207085 107 -171.83297237197058;
+	setAttr -s 22 ".kit[7:21]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18;
+	setAttr -s 22 ".kot[7:21]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18 18;
+	setAttr -s 22 ".kix[7:21]"  1 1 1 1 1 1 1 1 1 0.031628253741033251 
+		0.061699998009314035 0.061699998009314035 0.0084141201015959059 0.0014335304627035228 
+		1;
+	setAttr -s 22 ".kiy[7:21]"  0 0 0 0 0 0 0 0 0 -0.9994997016334185 -0.99809474011521115 
+		-0.99809474011521115 -0.99996460066490145 -0.9999989724946784 0;
+	setAttr -s 22 ".kox[7:21]"  1 1 1 1 1 1 1 1 1 0.031628253741033251 
+		0.061699998009314035 0.061699998009314042 0.0084141201015959059 0.0014335304627035228 
+		1;
+	setAttr -s 22 ".koy[7:21]"  0 0 0 0 0 0 0 0 0 -0.99949970163341861 
+		-0.99809474011521115 -0.99809474011521115 -0.99996460066490156 -0.9999989724946784 
+		0;
 createNode animCurveTL -n "L_Hand_IK_Ctrl_translateZ";
 	rename -uid "47E64ECE-41C5-C780-BD45-9FA42C754D1E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 23 ".ktv[0:22]"  0 0 4.8450717687074834 3.782263535710769
+	setAttr -s 21 ".ktv[0:20]"  0 0 4.8450717687074834 3.782263535710769
 		 9.6901437074829939 15.373796936563226 14.535221768707483 28.135652990884253 17.563381462585035 41.126258257049393
 		 21 54.872400805100646 24 72.167480550738588 38 72.167480550738588 47 72.167480550738588
-		 52 72.167480550738588 61 72.167480550738588 85 72.167480550738588 86 19.844182619212923
-		 86.00000017006802 42.999493274636976 87 31.497405028677061 88 38.323931131074524
-		 100 26.760938107333324 105 24.988755782051122 110 7.7342584959245491 111 483.35332388114631
-		 113 483.35332388114631 114 483.35332388114631 117 480.30534678519388;
-	setAttr -s 23 ".kit[7:22]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18 1 18 18;
-	setAttr -s 23 ".kot[7:22]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18 1 18 18;
-	setAttr -s 23 ".kix[7:22]"  1 1 1 1 1 1 1 1 1 0.053042884563278721 
-		0.039155784241709422 1 1 1 1 1;
-	setAttr -s 23 ".kiy[7:22]"  0 0 0 0 0 0 0 0 0 -0.99859223529787511 
-		-0.99923311822638095 0 0 0 0 0;
-	setAttr -s 23 ".kox[7:22]"  1 1 1 1 1 1 1 1 1 0.053042884563278735 
-		0.039155784241709422 1 1 1 1 1;
-	setAttr -s 23 ".koy[7:22]"  0 0 0 0 0 0 0 0 0 -0.99859223529787511 
-		-0.99923311822638095 0 0 0 0 0;
+		 52 72.167480550738588 61 72.167480550738588 81 72.167480550738588 82 21.657005325246093
+		 82.00000017006802 42.999493274636976 83 32.370642046511982 84 38.323931131074524
+		 96 26.760938107333324 101 24.988755782051122 105 7.4817614936815042 106 2.9053418927775851
+		 107 504.78924353744861;
+	setAttr -s 21 ".kit[7:20]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 21 ".kot[7:20]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 21 ".kix[7:20]"  1 1 1 1 1 1 1 1 1 0.053042884563278686 
+		0.039155784241709422 0.0094335080738887096 1 1;
+	setAttr -s 21 ".kiy[7:20]"  0 0 0 0 0 0 0 0 0 -0.99859223529787511 
+		-0.99923311822638095 -0.99995550347273954 0 0;
+	setAttr -s 21 ".kox[7:20]"  1 1 1 1 1 1 1 1 1 0.053042884563278686 
+		0.039155784241709422 0.0094335080738887096 1 1;
+	setAttr -s 21 ".koy[7:20]"  0 0 0 0 0 0 0 0 0 -0.99859223529787511 
+		-0.99923311822638106 -0.99995550347273954 0 0;
 createNode animCurveTL -n "L_Sneer_Ctrl_translateX";
 	rename -uid "492A1844-41E6-C5C1-2A25-38A03B88665A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4306,7 +4245,7 @@ createNode animCurveTL -n "L_Sneer_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4321,7 +4260,7 @@ createNode animCurveTL -n "L_Sneer_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4336,7 +4275,7 @@ createNode animCurveTL -n "L_Eye_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4351,7 +4290,7 @@ createNode animCurveTL -n "L_Eye_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4366,7 +4305,7 @@ createNode animCurveTL -n "L_Eye_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4381,7 +4320,7 @@ createNode animCurveTL -n "R_Cheek_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4396,7 +4335,7 @@ createNode animCurveTL -n "R_Cheek_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4411,7 +4350,7 @@ createNode animCurveTL -n "R_Cheek_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4426,7 +4365,7 @@ createNode animCurveTL -n "Upper_Middle_Lips_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4441,7 +4380,7 @@ createNode animCurveTL -n "Upper_Middle_Lips_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4456,7 +4395,7 @@ createNode animCurveTL -n "Upper_Middle_Lips_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4471,73 +4410,70 @@ createNode animCurveTL -n "L_Arm_PV_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 20 ".ktv[0:19]"  0 0 4.8450717687074834 0.93870170294961452
 		 9.6901437074829939 3.2177611259763226 14.535221768707483 5.6221813533499354 17.563381462585035 7.8080976987468942
-		 23.014088775510203 9.0259779129770639 27.859159693877551 9.0259779129770639 38 9.0259779129770639
-		 47 9.0259779129770639 52 9.0259779129770639 61 9.0259779129770639 66 9.0259779129770639
-		 82.99999982993198 9.0259779129770639 83 9.0259779129770639 88 23.232193826262993
-		 94 9.0259779129770639 100 8.9255235885669943 105 8.7918515875302372 109.99999982993198 8.7918515875302372
-		 110 8.7918515875302372;
-	setAttr -s 20 ".kit[7:19]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18;
-	setAttr -s 20 ".kot[7:19]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18;
-	setAttr -s 20 ".kix[7:19]"  1 1 1 1 1 1 1 1 0.63847090441704335 0.89053932969541572 
-		1 1 1;
-	setAttr -s 20 ".kiy[7:19]"  0 0 0 0 0 0 0 0 -0.76964596030440047 -0.45490625656902045 
-		0 0 0;
-	setAttr -s 20 ".kox[7:19]"  1 1 1 1 1 1 1 1 0.63847090441704324 0.89053932969541583 
-		1 1 1;
-	setAttr -s 20 ".koy[7:19]"  0 0 0 0 0 0 0 0 -0.76964596030440047 -0.45490625656902056 
-		0 0 0;
+		 24 2.124106485077792 29 2.124106485077792 38 9.0259779129770639 47 9.0259779129770639
+		 52 9.0259779129770639 61 9.0259779129770639 66 9.0259779129770639 78.99999982993198 9.0259779129770639
+		 79 9.0259779129770639 84 23.232193826262993 90 9.0259779129770639 96 8.9255235885669943
+		 101 8.7918515875302372 105.99999982993198 8.7918515875302372 106 8.7918515875302372;
+	setAttr -s 20 ".kit[5:19]"  1 1 1 18 18 18 18 18 
+		18 18 18 18 18 18 18;
+	setAttr -s 20 ".kot[5:19]"  1 1 1 18 18 18 18 18 
+		18 18 18 18 18 18 18;
+	setAttr -s 20 ".kix[5:19]"  1 1 1 1 1 1 1 1 1 1 0.63847090441704257 
+		0.8905393296954156 1 1 1;
+	setAttr -s 20 ".kiy[5:19]"  0 0 0 0 0 0 0 0 0 0 -0.76964596030440102 
+		-0.45490625656902078 0 0 0;
+	setAttr -s 20 ".kox[5:19]"  1 1 1 1 1 1 1 1 1 1 0.63847090441704257 
+		0.8905393296954156 1 1 1;
+	setAttr -s 20 ".koy[5:19]"  0 0 0 0 0 0 0 0 0 0 -0.76964596030440102 
+		-0.45490625656902078 0 0 0;
 createNode animCurveTL -n "L_Arm_PV_Ctrl_translateY";
 	rename -uid "6B1038A2-436E-AAEB-CD52-EAA9F23073C4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 20 ".ktv[0:19]"  0 0 4.8450717687074834 1.5405949029234609
 		 9.6901437074829939 5.2809815662712873 14.535221768707483 9.2271100702873134 17.563381462585035 12.814630546018668
-		 23.014088775510203 14.813412528110206 27.859159693877551 14.813412528110206 38 14.813412528110206
-		 47 14.813412528110206 52 14.813412528110206 61 14.813412528110206 66 14.813412528110206
-		 82.99999982993198 14.813412528110206 83 14.813412528110206 88 14.232817303830585
-		 94 14.813412528110206 100 -3.7007822705989555 105 -0.0081973655690725233 109.99999982993198 -0.0081973655690725233
-		 110 -0.0081973655690725233;
-	setAttr -s 20 ".kit[7:19]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18;
-	setAttr -s 20 ".kot[7:19]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18;
-	setAttr -s 20 ".kix[7:19]"  1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 20 ".kiy[7:19]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 20 ".kox[7:19]"  1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 20 ".koy[7:19]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
+		 24 30.609812929020283 29 30.609812929020283 38 14.813412528110206 47 14.813412528110206
+		 52 14.813412528110206 61 14.813412528110206 66 14.813412528110206 78.99999982993198 14.813412528110206
+		 79 14.813412528110206 84 14.232817303830585 90 14.813412528110206 96 -3.7007822705989555
+		 101 -0.0081973655690725233 105.99999982993198 -0.0081973655690725233 106 -0.0081973655690725233;
+	setAttr -s 20 ".kit[5:19]"  1 1 1 18 18 18 18 18 
+		18 18 18 18 18 18 18;
+	setAttr -s 20 ".kot[5:19]"  1 1 1 18 18 18 18 18 
+		18 18 18 18 18 18 18;
+	setAttr -s 20 ".kix[5:19]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 20 ".kiy[5:19]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 20 ".kox[5:19]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 20 ".koy[5:19]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "L_Arm_PV_Ctrl_translateZ";
 	rename -uid "C4B36E62-4C29-37BA-7208-4F969438D9AA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 20 ".ktv[0:19]"  0 0 4.8450717687074834 -0.58244810194384655
 		 9.6901437074829939 -1.996564887913282 14.535221768707483 -3.4884658755312015 17.563381462585035 -4.8447889996758136
-		 23.014088775510203 -5.6004625186908337 27.859159693877551 -5.6004625186908337 38 -5.6004625186908337
-		 47 -5.6004625186908337 52 -5.6004625186908337 61 -5.6004625186908337 66 -5.6004625186908337
-		 82.99999982993198 -5.6004625186908337 83 -5.6004625186908337 88 -18.671319024355917
-		 94 -5.6004625186908337 100 4.4863575401349971 105 3.2527905879405354 109.99999982993198 3.2527905879405354
-		 110 3.2527905879405354;
-	setAttr -s 20 ".kit[7:19]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18;
-	setAttr -s 20 ".kot[7:19]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18;
-	setAttr -s 20 ".kix[7:19]"  1 1 1 1 1 1 1 1 0.021586081630634819 1 
-		1 1 1;
-	setAttr -s 20 ".kiy[7:19]"  0 0 0 0 0 0 0 0 0.99976699339387853 0 0 
-		0 0;
-	setAttr -s 20 ".kox[7:19]"  1 1 1 1 1 1 1 1 0.021586081630634815 1 
-		1 1 1;
-	setAttr -s 20 ".koy[7:19]"  0 0 0 0 0 0 0 0 0.99976699339387853 0 0 
-		0 0;
+		 24 12.785149815188877 29 12.785149815188877 38 -5.6004625186908337 47 -5.6004625186908337
+		 52 -5.6004625186908337 61 -5.6004625186908337 66 -5.6004625186908337 78.99999982993198 -5.6004625186908337
+		 79 -5.6004625186908337 84 -18.671319024355917 90 -5.6004625186908337 96 4.4863575401349971
+		 101 3.2527905879405354 105.99999982993198 3.2527905879405354 106 3.2527905879405354;
+	setAttr -s 20 ".kit[5:19]"  1 1 1 18 18 18 18 18 
+		18 18 18 18 18 18 18;
+	setAttr -s 20 ".kot[5:19]"  1 1 1 18 18 18 18 18 
+		18 18 18 18 18 18 18;
+	setAttr -s 20 ".kix[5:19]"  1 1 1 1 1 1 1 1 1 1 0.021586081630634798 
+		1 1 1 1;
+	setAttr -s 20 ".kiy[5:19]"  0 0 0 0 0 0 0 0 0 0 0.99976699339387853 
+		0 0 0 0;
+	setAttr -s 20 ".kox[5:19]"  1 1 1 1 1 1 1 1 1 1 0.021586081630634798 
+		1 1 1 1;
+	setAttr -s 20 ".koy[5:19]"  0 0 0 0 0 0 0 0 0 0 0.99976699339387853 
+		0 0 0 0;
 createNode animCurveTL -n "Pick1_Ctrl_translateX";
 	rename -uid "35932B3A-4090-29FD-FE47-3C923D8F9240";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 21 0 24 0 38 0 47 0 52 0 61 0 62 0 63 5.4226267874322076
-		 100 5.4226267874322076 105 5.4226267874322076 109.99999982993198 5.4226267874322076
-		 110 5.4226267874322076;
+		 96 5.4226267874322076 101 5.4226267874322076 105.99999982993198 5.4226267874322076
+		 106 5.4226267874322076;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 1 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 1 18 18 18 
@@ -4552,8 +4488,8 @@ createNode animCurveTL -n "Pick1_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 21 0 24 0 38 0 47 0 52 0 61 0 62 0 63 -157.24828162731501
-		 100 -157.24828162731501 105 -157.24828162731501 109.99999982993198 -157.24828162731501
-		 110 -157.24828162731501;
+		 96 -157.24828162731501 101 -157.24828162731501 105.99999982993198 -157.24828162731501
+		 106 -157.24828162731501;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 1 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 1 18 18 18 
@@ -4568,8 +4504,8 @@ createNode animCurveTL -n "Pick1_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 21 0 24 0 38 0 47 0 52 0 61 0 62 0 63 29.291741985370827
-		 100 29.291741985370827 105 29.291741985370827 109.99999982993198 29.291741985370827
-		 110 29.291741985370827;
+		 96 29.291741985370827 101 29.291741985370827 105.99999982993198 29.291741985370827
+		 106 29.291741985370827;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 1 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 1 18 18 18 
@@ -4584,7 +4520,7 @@ createNode animCurveTL -n "Neck_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4599,7 +4535,7 @@ createNode animCurveTL -n "Neck_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4614,52 +4550,7 @@ createNode animCurveTL -n "Neck_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-createNode animCurveTL -n "Hair_Ctrl_Jnt_1_Ctrl_translateX";
-	rename -uid "86C3143A-4185-0695-E41C-04BBE9B00A80";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-createNode animCurveTL -n "Hair_Ctrl_Jnt_1_Ctrl_translateY";
-	rename -uid "C6B3850D-4F11-626F-1882-F9BED58BEF83";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-createNode animCurveTL -n "Hair_Ctrl_Jnt_1_Ctrl_translateZ";
-	rename -uid "572A7EE3-4C7B-8032-5CA5-9B9B5F8D2E1B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4674,7 +4565,7 @@ createNode animCurveTL -n "R_Clavicle_Jnt_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4689,7 +4580,7 @@ createNode animCurveTL -n "R_Clavicle_Jnt_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4704,7 +4595,7 @@ createNode animCurveTL -n "R_Clavicle_Jnt_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4719,8 +4610,8 @@ createNode animCurveTL -n "L_Eyelid_Upper_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 -1.7763568394002505e-15 4.8450717687074834 -1.7763568394002505e-15
 		 9.6901437074829939 -1.7763568394002505e-15 14.535221768707483 0 17.563381462585035 0
-		 23.014088775510203 0 27.859159693877551 0 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0
-		 105 0 109.99999982993198 0 110 0;
+		 23.014088775510203 0 27.859159693877551 0 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0
+		 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4735,8 +4626,8 @@ createNode animCurveTL -n "L_Eyelid_Upper_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 -2.8421709430404007e-14 4.8450717687074834 -2.8421709430404007e-14
 		 9.6901437074829939 -2.8421709430404007e-14 14.535221768707483 0 17.563381462585035 0
-		 23.014088775510203 0 27.859159693877551 0 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0
-		 105 0 109.99999982993198 0 110 0;
+		 23.014088775510203 0 27.859159693877551 0 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0
+		 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4751,8 +4642,8 @@ createNode animCurveTL -n "L_Eyelid_Upper_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 -3.3306690738754696e-16 4.8450717687074834 -3.3306690738754696e-16
 		 9.6901437074829939 -3.3306690738754696e-16 14.535221768707483 0 17.563381462585035 0
-		 23.014088775510203 0 27.859159693877551 0 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0
-		 105 0 109.99999982993198 0 110 0;
+		 23.014088775510203 0 27.859159693877551 0 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0
+		 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4767,7 +4658,7 @@ createNode animCurveTL -n "R_Upper_Corner_Lips_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4782,7 +4673,7 @@ createNode animCurveTL -n "R_Upper_Corner_Lips_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4797,7 +4688,7 @@ createNode animCurveTL -n "R_Upper_Corner_Lips_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4812,28 +4703,28 @@ createNode animCurveTL -n "L_reverse_foot_outer_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_reverse_foot_outer_Ctrl_translateY";
 	rename -uid "E0DDD5D5-4935-9101-E809-55B1E2C90B52";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_reverse_foot_outer_Ctrl_translateZ";
 	rename -uid "AB6E3DB9-4367-F170-79C1-21A5644BAA67";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "Jaw_Ctrl_translateX";
 	rename -uid "6D56CFDF-467D-D9EF-4160-4AB69BC9852A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4848,7 +4739,7 @@ createNode animCurveTL -n "Jaw_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4863,7 +4754,7 @@ createNode animCurveTL -n "Jaw_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4876,55 +4767,55 @@ createNode animCurveTL -n "Upper_Lip_Ctrl_translateX";
 	rename -uid "1366675E-4A1C-256B-233F-3F81C5AAA245";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
+	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 17 ".kix[7:16]"  1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[7:16]"  0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 17 ".kox[7:16]"  1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 17 ".koy[7:16]"  0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "Upper_Lip_Ctrl_translateY";
 	rename -uid "3EA903B1-491D-55E2-2A64-638ADA31AF16";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
+	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 17 ".kix[7:16]"  1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[7:16]"  0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 17 ".kox[7:16]"  1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 17 ".koy[7:16]"  0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "Upper_Lip_Ctrl_translateZ";
 	rename -uid "4B3760DD-41B7-F0DA-4764-6CAB5F74FF2A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
+	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 17 ".kix[7:16]"  1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[7:16]"  0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 17 ".kox[7:16]"  1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 17 ".koy[7:16]"  0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTL -n "L_Knee_PV_Ctrl_translateX";
 	rename -uid "9FEB8D29-47F1-4E9F-ABF1-57AB998E4246";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 4.4408920985006262e-16
 		 9.6901437074829939 4.4408920985006262e-16 14.535221428571429 0 17.563382142857144 0
-		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0
-		 99.99999982993198 0 100 0;
+		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0
+		 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_Knee_PV_Ctrl_translateY";
 	rename -uid "595156F0-4A0B-D3F4-50D4-2EB83169197A";
 	setAttr ".tan" 18;
@@ -4933,23 +4824,23 @@ createNode animCurveTL -n "L_Knee_PV_Ctrl_translateY";
 		 9.6901437074829939 27.066400918518664 14.535221428571429 27.066400918518664 17.563382142857144 27.066400918518664
 		 23.014088775510203 27.066400918518664 27.859159693877551 27.066400918518664 43 27.066400918518664
 		 47 27.066400918518664 52 27.066400918518664 61 27.066400918518664 66 27.066400918518664
-		 83 27.066400918518664 92 27.066400918518664 96 27.066400918518664 99.99999982993198 27.066400918518664
-		 100 27.066400918518664;
+		 79 27.066400918518664 88 27.066400918518664 92 27.066400918518664 95.99999982993198 27.066400918518664
+		 96 27.066400918518664;
 createNode animCurveTL -n "L_Knee_PV_Ctrl_translateZ";
 	rename -uid "AF2A0B23-41F3-8AC4-7F6D-DF83016EDE68";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 -8.8061753607796753e-16
 		 9.6901437074829939 -8.8061753607796753e-16 14.535221428571429 0 17.563382142857144 0
-		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0
-		 99.99999982993198 0 100 0;
+		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0
+		 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_Eyelid_Lower_Ctrl_translateX";
 	rename -uid "2D059EE8-4DD9-B0DB-CDBE-B19AE9D6CC2A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4964,7 +4855,7 @@ createNode animCurveTL -n "L_Eyelid_Lower_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4979,7 +4870,7 @@ createNode animCurveTL -n "L_Eyelid_Lower_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -4994,7 +4885,7 @@ createNode animCurveTL -n "L_Brow_2_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5009,7 +4900,7 @@ createNode animCurveTL -n "L_Brow_2_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5024,7 +4915,7 @@ createNode animCurveTL -n "L_Brow_2_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5040,19 +4931,19 @@ createNode animCurveTL -n "R_Hand_IK_Ctrl_translateX";
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 -2.8018618913216402
 		 9.6901437074829939 -8.7169036618895497 14.535221768707483 -14.585247734268764 17.563381462585035 -17.931916104458502
 		 23.014088775510203 -17.931916104458502 27.859159693877551 -17.931916104458502 38 -17.931916104458502
-		 47 -17.931916104458502 52 -17.931916104458502 61 -17.931916104458502 85 -17.931916104458502
-		 86 -19.589386721936581 87 -16.108483197995319 88 -17.203351529783724 100 -20.817910439431969
-		 105 -17.99509380514267 110 -23.150220856198469;
+		 47 -17.931916104458502 52 -17.931916104458502 61 -17.931916104458502 81 -17.931916104458502
+		 82 -25.71067278967643 83 -17.70217775576717 84 -17.203351529783724 96 -20.817910439431969
+		 101 -17.99509380514267 106 -23.150220856198469;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 0.11426420611828758 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 -0.99345039695002257 0 0 
-		0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 0.1142642061182876 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 -0.99345039695002257 0 0 
-		0;
+	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 0.027832354594323927 1 1 1 
+		1;
+	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0.99961260498141769 0 0 0 0;
+	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 0.027832354594323927 1 1 1 
+		1;
+	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0.99961260498141769 0 0 0 0;
 createNode animCurveTL -n "R_Hand_IK_Ctrl_translateY";
 	rename -uid "855C8125-432E-DC7C-B1AB-FA863DA6543B";
 	setAttr ".tan" 18;
@@ -5060,21 +4951,21 @@ createNode animCurveTL -n "R_Hand_IK_Ctrl_translateY";
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 20.94420896719592
 		 9.6901437074829939 65.159761231276377 14.535221768707483 109.02624334590311 17.563381462585035 134.04293739005388
 		 23.014088775510203 134.04293739005388 27.859159693877551 134.04293739005388 38 134.04293739005388
-		 47 134.04293739005388 52 134.04293739005388 61 134.04293739005388 85 134.04293739005388
-		 86 39.080242149998959 87 34.95711253626088 88 27.541149391147179 100 13.534920479321148
-		 105 12.537659503062651 110 -36.92141884454638;
+		 47 134.04293739005388 52 134.04293739005388 61 134.04293739005388 81 134.04293739005388
+		 82 27.939414417384416 83 31.883700766861029 84 27.541149391147179 96 13.534920479321148
+		 101 12.537659503062651 106 -36.92141884454638;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 0.003368511638507681 0.0072216388275646547 
-		0.025277226150573123 0.069466955884718184 0.069466955884718198 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 -0.99999432654857656 -0.99997392362633353 
-		-0.99968047987251052 -0.99758425310352128 -0.9975842531035215 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 0.003368511638507681 0.0072216388275646547 
-		0.02527722615057312 0.069466955884718198 0.069466955884718198 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 -0.99999432654857656 -0.99997392362633353 
-		-0.99968047987251041 -0.9975842531035215 -0.9975842531035215 0;
+	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 0.029507726978732794 0.069466955884718184 
+		0.069466955884718198 1;
+	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 -0.99956455221688834 -0.99758425310352139 
+		-0.9975842531035215 0;
+	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 0.029507726978732791 0.069466955884718198 
+		0.069466955884718184 1;
+	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 -0.99956455221688822 -0.9975842531035215 
+		-0.99758425310352139 0;
 createNode animCurveTL -n "R_Hand_IK_Ctrl_translateZ";
 	rename -uid "00CD6582-4173-FBE0-71C9-D887A45AE81F";
 	setAttr ".tan" 18;
@@ -5082,77 +4973,77 @@ createNode animCurveTL -n "R_Hand_IK_Ctrl_translateZ";
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 11.727070040700989
 		 9.6901437074829939 36.484217904403103 14.535221768707483 61.045914600760142 17.563381462585035 75.053248260486328
 		 23.014088775510203 75.053248260486328 27.859159693877551 75.053248260486328 38 75.053248260486328
-		 47 75.053248260486328 52 75.053248260486328 61 75.053248260486328 85 75.053248260486328
-		 86 17.552589152603399 87 26.380323032114354 88 35.194853232177685 100 31.987751502643377
-		 105 30.458302521996792 110 21.097926688135722;
+		 47 75.053248260486328 52 75.053248260486328 61 75.053248260486328 81 75.053248260486328
+		 82 19.440362617078669 83 27.273126614667913 84 35.194853232177685 96 31.987751502643377
+		 101 30.458302521996792 106 21.097926688135722;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 0.0047234529155085851 1 0.14790154060248131 
+	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 0.0052894231626519905 1 0.1479015406024812 
 		0.045358146874565783 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0.99998884443405411 0 -0.98900209013298479 
+	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0.99998601090345585 0 -0.98900209013298479 
 		-0.9989707896190485 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 0.0047234529155085851 1 0.14790154060248131 
+	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 0.0052894231626519897 1 0.1479015406024812 
 		0.045358146874565783 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0.99998884443405411 0 -0.98900209013298479 
+	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0.99998601090345574 0 -0.98900209013298479 
 		-0.9989707896190485 0;
 createNode animCurveTL -n "Spine_Top_Control_Joint_Ctrl_translateX";
 	rename -uid "3E5B48E4-459D-58E8-0FAC-9DBF4694C98C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 22 ".ktv[0:21]"  0 5 4.8450717687074834 5 9.6901437074829939 5
-		 14.535221768707483 5 22 5 23 5 33 5 47 5 51.999999829931973 5 52 5 62 8.3139306200153626
-		 66 5 74 5 84 5 87 5 87.00000017006802 5 88 5.0000000000000018 94 3.571614115026096
-		 96 2.908731455525519 100 0.81713982600457324 105 0 110 5.2099161533232161;
+		 14.535221768707483 5 22 5 23 6.4950204906407567 33 5 47 5 51.999999829931973 5 52 5
+		 62 8.3139306200153626 66 5 72 5 80 5 83 5 83.00000017006802 5 84 5.0000000000000018
+		 90 3.571614115026096 92 2.908731455525519 96 0.81713982600457324 101 0 106 5.2099161533232161;
 createNode animCurveTL -n "Spine_Top_Control_Joint_Ctrl_translateY";
 	rename -uid "ACD34204-472F-8612-28C6-5E93A9098476";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 20 ".ktv[0:19]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 19 ".ktv[0:18]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 22 -3.0839012328570798 23 84.62372600776726 33 102.17493262166133
-		 47 83.593047729439022 61 112.95168146051631 62 111.85536965616519 66 101.24093339199587
-		 74 109.5144472472205 84 117.42575352171036 87 123.00517659579333 88 3.5444556423432809
-		 94 3.8473231954030953 96 9.3413888030202159 100 6.1704289019035015 105 0 110 -6.9416317037262116;
+		 47 83.593047729439022 61 112.95168146051631 66 101.24093339199587 72 109.5144472472205
+		 80 117.42575352171036 83 123.00517659579333 84 10.650021435605462 90 3.8473231954030953
+		 92 9.3413888030202159 96 6.1704289019035015 101 0 106 -6.9416317037262116;
 createNode animCurveTL -n "Spine_Top_Control_Joint_Ctrl_translateZ";
 	rename -uid "4A18FF41-4B55-71BC-7D56-A6AC8D26D1E2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 21 ".ktv[0:20]"  0 -4.4408920985006262e-16 4.8450717687074834 -4.4408920985006262e-16
+	setAttr -s 20 ".ktv[0:19]"  0 -4.4408920985006262e-16 4.8450717687074834 -4.4408920985006262e-16
 		 9.6901437074829939 -4.4408920985006262e-16 14.535221768707483 0 22 -4.9441051055077923
 		 23 53.780330195692997 33 82.280445542719093 47 49.112663563658316 51.999999829931973 19.955455498932036
-		 52 19.316839302018398 61 15.814134479233761 62 17.027161631904523 66 32.758045971092265
-		 74 35.146051344958536 84 81.450192294446154 87 126.41108022113401 88 -14.4184563097389
-		 94 -26.694075110837538 100 -20.256264680742035 105 0 110 21.973205555214186;
+		 52 19.316839302018398 61 15.814134479233761 66 32.758045971092265 72 35.146051344958536
+		 80 81.450192294446154 83 126.41108022113401 84 -2.9714408869565276 90 -26.694075110837538
+		 96 -20.256264680742035 101 0 106 21.973205555214186;
 createNode animCurveTL -n "R_reverse_foot_toe_Ctrl_translateX";
 	rename -uid "76F98585-4D72-5446-96B6-5CB8BC7477ED";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_reverse_foot_toe_Ctrl_translateY";
 	rename -uid "EE72D2E8-479F-EC95-51F5-699C7D3B3F08";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 -3.1554436208840472e-30 4.8450715986394561 -3.1554436208840472e-30
 		 9.6901437074829939 -3.1554436208840472e-30 14.535221428571429 0 17.563382142857144 0
-		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0
-		 99.99999982993198 0 100 0;
+		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0
+		 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_reverse_foot_toe_Ctrl_translateZ";
 	rename -uid "0B6093E3-4718-CBBB-F431-02B4FF08FC7B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_Brow_2_Ctrl_translateX";
 	rename -uid "88D7D583-465D-8A57-2BFA-1094D02AEDF6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5167,7 +5058,7 @@ createNode animCurveTL -n "R_Brow_2_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5182,7 +5073,7 @@ createNode animCurveTL -n "R_Brow_2_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5197,7 +5088,7 @@ createNode animCurveTL -n "R_Sneer_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5212,7 +5103,7 @@ createNode animCurveTL -n "R_Sneer_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5227,7 +5118,7 @@ createNode animCurveTL -n "R_Sneer_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5242,7 +5133,7 @@ createNode animCurveTL -n "L_Brow_3_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5257,7 +5148,7 @@ createNode animCurveTL -n "L_Brow_3_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5272,7 +5163,7 @@ createNode animCurveTL -n "L_Brow_3_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5285,86 +5176,81 @@ createNode animCurveTL -n "L_Foot_IK_Ctrl_translateX";
 	rename -uid "A89000EC-4626-CC0C-AADE-45963B64A2A1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 24 ".ktv[0:23]"  0 -1.7763568394002505e-15 3 -1.7763568394002505e-15
+	setAttr -s 25 ".ktv[0:24]"  0 -1.7763568394002505e-15 3 -1.7763568394002505e-15
 		 3.6338028911564626 -1.7763568394002505e-15 4.8450715986394561 -1.7763568394002505e-15
 		 7.2676062925170068 -8.8817875956471069e-16 9.6901416666666673 -6.1550872129869446e-28
 		 9.6901437074829939 0 10.901407482993196 0 10.901408843537414 0 11 0 14.535221428571429 0
 		 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0
-		 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0 104 -5.3290705182007514e-15;
 createNode animCurveTL -n "L_Foot_IK_Ctrl_translateY";
 	rename -uid "B15E1EA3-4779-8832-A668-A0BA60E6F102";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 21 ".ktv[0:20]"  0 -1.7763568394002505e-15 3 3.4277134881319427
+	setAttr -s 22 ".ktv[0:21]"  0 -1.7763568394002505e-15 3 3.4277134881319427
 		 3.6338028911564626 -1.7763568394002505e-15 4.8450715986394561 -1.7763568394002505e-15
 		 7.2676062925170068 41.918273882041809 10.901407482993196 109.4989182751321 11 11.01060406950603
 		 14.535221428571429 14.855400056405543 17.563382142857144 29.247303872658378 23.014088775510203 55.254429041350917
 		 27.859159693877551 85.846131444404094 43 24.045458236327363 47 59.438882449038672
-		 52 57.03259096212539 61 49.147718096476709 66 39.811490668637646 83 30.265296496827744
-		 92 20.669679413292684 96 10.653483794921733 99.99999982993198 -1.4161815859024216
-		 100 -1.4161815859024216;
+		 52 57.03259096212539 61 49.147718096476709 66 39.811490668637646 79 30.265296496827744
+		 88 20.669679413292684 92 10.653483794921733 95.99999982993198 -4.0431181615584997
+		 96 -4.0431181615584997 104 -4.043118161558489;
 createNode animCurveTL -n "L_Foot_IK_Ctrl_translateZ";
 	rename -uid "E2AC845A-4356-8D8C-3A2C-2A9BBD7CF1BA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 19 ".ktv[0:18]"  0 -200.74878917638745 3 -199.22171717312739
+	setAttr -s 20 ".ktv[0:19]"  0 -200.74878917638745 3 -199.22171717312739
 		 3.6338028911564626 -200.74878917638745 4.8450715986394561 -200.74878917638745 11 -34.807934106568212
 		 14.535221428571429 -16.624891035638335 17.563382142857144 21.086300826727747 23.014088775510203 60.091566954738639
 		 27.859159693877551 102.38278572788907 43 18.226230787179446 47 -103.92242726887142
-		 52 -94.396843656103201 61 -63.226104301984165 66 -27.492056351133755 83 9.0041988782898628
-		 92 45.56231553514435 96 79.650477053263984 99.99999982993198 101.32700145027391 100 101.32700145027391;
+		 52 -94.396843656103201 61 -63.226104301984165 66 -27.492056351133755 79 9.0041988782898628
+		 88 45.56231553514435 92 79.650477053263984 95.99999982993198 91.493451111779308 96 91.493451111779308
+		 104 86.590487053665839;
 createNode animCurveTL -n "L_Lips_Pull_Ctrl_translateX";
 	rename -uid "6E7807E3-4D16-045B-6B34-789D65DF1737";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTL -n "L_Lips_Pull_Ctrl_translateY";
 	rename -uid "F16F56E9-49C5-A377-9A57-278545F92B96";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTL -n "L_Lips_Pull_Ctrl_translateZ";
 	rename -uid "F2ED81C8-496F-0D33-DF90-08B3EA61C083";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTL -n "L_Upper_Outer_Lips_Ctrl_translateX";
 	rename -uid "994AF530-435B-D4A2-3337-13A72A3786B4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5379,7 +5265,7 @@ createNode animCurveTL -n "L_Upper_Outer_Lips_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5394,7 +5280,7 @@ createNode animCurveTL -n "L_Upper_Outer_Lips_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5409,7 +5295,7 @@ createNode animCurveTL -n "Hair_Ctrl_Jnt_2_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5424,7 +5310,7 @@ createNode animCurveTL -n "Hair_Ctrl_Jnt_2_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5439,7 +5325,7 @@ createNode animCurveTL -n "Hair_Ctrl_Jnt_2_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5454,7 +5340,7 @@ createNode animCurveTL -n "Lower_Middle_Lips_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5469,7 +5355,7 @@ createNode animCurveTL -n "Lower_Middle_Lips_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5484,7 +5370,7 @@ createNode animCurveTL -n "Lower_Middle_Lips_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5497,47 +5383,41 @@ createNode animCurveTL -n "R_Lips_Pull_Ctrl_translateX";
 	rename -uid "24C0270D-44B7-DAB6-1916-BA9F110D76F4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTL -n "R_Lips_Pull_Ctrl_translateY";
 	rename -uid "E619A4A8-4A84-AC56-325B-11B0AC538882";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTL -n "R_Lips_Pull_Ctrl_translateZ";
 	rename -uid "9ED3333B-423C-EB63-0DF7-9BAA131DA873";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTL -n "R_Knee_PV_Ctrl_translateX";
 	rename -uid "1002427D-48DC-3AAE-0C8B-499D8877407D";
 	setAttr ".tan" 18;
@@ -5546,8 +5426,8 @@ createNode animCurveTL -n "R_Knee_PV_Ctrl_translateX";
 		 9.6901437074829939 29.613653809484369 14.535221428571429 29.613653809484369 17.563382142857144 29.613653809484369
 		 23.014088775510203 0.62455305370711045 27.859159693877551 -28.364547702070123 43 -28.364547702070123
 		 47 -28.364547702070123 52 -28.364547702070123 61 -28.364547702070123 66 -28.364547702070123
-		 83 -28.364547702070123 92 -28.364547702070123 96 -28.364547702070123 99.99999982993198 -28.364547702070123
-		 100 -28.364547702070123;
+		 79 -28.364547702070123 88 -28.364547702070123 92 -28.364547702070123 95.99999982993198 -28.364547702070123
+		 96 -28.364547702070123;
 createNode animCurveTL -n "R_Knee_PV_Ctrl_translateY";
 	rename -uid "0BEDBD15-4798-4BBB-69E3-1C8292AFEE2A";
 	setAttr ".tan" 18;
@@ -5556,23 +5436,23 @@ createNode animCurveTL -n "R_Knee_PV_Ctrl_translateY";
 		 9.6901437074829939 37.636443106604169 14.535221428571429 37.636443106604169 17.563382142857144 37.636443106604169
 		 23.014088775510203 32.216796899611445 27.859159693877551 26.797150692618725 43 26.797150692618725
 		 47 26.797150692618725 52 26.797150692618725 61 26.797150692618725 66 26.797150692618725
-		 83 26.797150692618725 92 26.797150692618725 96 26.797150692618725 99.99999982993198 26.797150692618725
-		 100 26.797150692618725;
+		 79 26.797150692618725 88 26.797150692618725 92 26.797150692618725 95.99999982993198 26.797150692618725
+		 96 26.797150692618725;
 createNode animCurveTL -n "R_Knee_PV_Ctrl_translateZ";
 	rename -uid "7513CDC7-48E9-E4D5-3451-8D8FFAE77B15";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 -3.9418421721747915e-15 4.8450715986394561 -3.9418421721747915e-15
 		 9.6901437074829939 -3.9418421721747915e-15 14.535221428571429 0 17.563382142857144 0
-		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0
-		 99.99999982993198 0 100 0;
+		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0
+		 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_Cheek_Ctrl_translateX";
 	rename -uid "81AD2620-4DF0-61AC-4CB7-858EAA81F054";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5587,7 +5467,7 @@ createNode animCurveTL -n "L_Cheek_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5602,7 +5482,7 @@ createNode animCurveTL -n "L_Cheek_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5617,7 +5497,7 @@ createNode animCurveTL -n "R_Eyelid_Lower_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5632,7 +5512,7 @@ createNode animCurveTL -n "R_Eyelid_Lower_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5647,7 +5527,7 @@ createNode animCurveTL -n "R_Eyelid_Lower_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5662,28 +5542,28 @@ createNode animCurveTL -n "L_reverse_foot_toeTap_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_reverse_foot_toeTap_Ctrl_translateY";
 	rename -uid "EBBED875-4B41-428F-6FEA-8F9C532485EB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_reverse_foot_toeTap_Ctrl_translateZ";
 	rename -uid "F541465F-4CC9-F6D8-190A-158F24393566";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_Upper_Corner_Lips_Ctrl_translateX";
 	rename -uid "E6980B81-48DA-8755-A4CC-17A07A66461A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5698,7 +5578,7 @@ createNode animCurveTL -n "L_Upper_Corner_Lips_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5713,7 +5593,7 @@ createNode animCurveTL -n "L_Upper_Corner_Lips_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5728,7 +5608,7 @@ createNode animCurveTL -n "R_Eye_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5743,7 +5623,7 @@ createNode animCurveTL -n "R_Eye_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5758,7 +5638,7 @@ createNode animCurveTL -n "R_Eye_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5773,73 +5653,46 @@ createNode animCurveTL -n "R_reverse_foot_heel_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_reverse_foot_heel_Ctrl_translateY";
 	rename -uid "CA973547-4B78-F1AF-D1E1-ACAE67ABF269";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_reverse_foot_heel_Ctrl_translateZ";
 	rename -uid "4B48AEDF-453D-EAC8-C606-C5B843398961";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_Clavicle_Jnt_Ctrl_translateX";
 	rename -uid "27491491-4C19-8AE4-257B-5CB7C5DA8180";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 10 ".ktv[0:9]"  47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0
+		 105.99999982993198 0 106 0;
 createNode animCurveTL -n "L_Clavicle_Jnt_Ctrl_translateY";
 	rename -uid "5B263D97-4C55-A29C-2DB6-9AA70921402F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 10 ".ktv[0:9]"  47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0
+		 105.99999982993198 0 106 0;
 createNode animCurveTL -n "L_Clavicle_Jnt_Ctrl_translateZ";
 	rename -uid "BE9B1485-4793-68E4-2F26-179109530499";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 10 ".ktv[0:9]"  47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0
+		 105.99999982993198 0 106 0;
 createNode animCurveTL -n "R_Arm_01_Jnt_IK_Ctrl_translateX";
 	rename -uid "129F584D-42FA-DDBB-9694-CCB21E0A6009";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5854,7 +5707,7 @@ createNode animCurveTL -n "R_Arm_01_Jnt_IK_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5869,7 +5722,7 @@ createNode animCurveTL -n "R_Arm_01_Jnt_IK_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5884,7 +5737,7 @@ createNode animCurveTL -n "R_Brow_3_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5899,7 +5752,7 @@ createNode animCurveTL -n "R_Brow_3_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5914,7 +5767,7 @@ createNode animCurveTL -n "R_Brow_3_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5929,7 +5782,7 @@ createNode animCurveTL -n "L_Brow_1_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5944,7 +5797,7 @@ createNode animCurveTL -n "L_Brow_1_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5959,7 +5812,7 @@ createNode animCurveTL -n "L_Brow_1_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -5974,118 +5827,106 @@ createNode animCurveTL -n "L_reverse_foot_toe_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 15 ".ktv[0:14]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 106 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 102 0;
 createNode animCurveTL -n "L_reverse_foot_toe_Ctrl_translateY";
 	rename -uid "3AE9FA25-46DC-6302-2EE1-AD9FAB25365E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 15 ".ktv[0:14]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 106 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 102 0;
 createNode animCurveTL -n "L_reverse_foot_toe_Ctrl_translateZ";
 	rename -uid "74A990A3-4B4D-F1F7-2700-3F98AE1AEB89";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 15 ".ktv[0:14]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 106 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 102 0;
 createNode animCurveTL -n "Lower_Lip_Ctrl_translateX";
 	rename -uid "D5872BB5-460D-7C19-D3A1-9F87471A8D91";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTL -n "Lower_Lip_Ctrl_translateY";
 	rename -uid "0B51689E-44BD-8161-A9E2-CB936F45F086";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTL -n "Lower_Lip_Ctrl_translateZ";
 	rename -uid "C72EC490-4D9F-BB61-7A46-DB847B7C2690";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTL -n "L_Brow_Cluster_Ctrl_translateX";
 	rename -uid "E7D31919-4F5C-4B02-D168-80B577B29676";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTL -n "L_Brow_Cluster_Ctrl_translateY";
 	rename -uid "59E91352-4761-1B75-BBBB-4186C6C7BEA5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTL -n "L_Brow_Cluster_Ctrl_translateZ";
 	rename -uid "EEF4B9D4-4FAA-49C8-BEAA-B8AFC619A546";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTL -n "Face_Controls_translateX";
 	rename -uid "0C12D31B-474C-711B-F6A3-03B7C7B9ED8C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6100,7 +5941,7 @@ createNode animCurveTL -n "Face_Controls_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6115,7 +5956,7 @@ createNode animCurveTL -n "Face_Controls_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6130,49 +5971,49 @@ createNode animCurveTL -n "R_reverse_foot_toeTap_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_reverse_foot_toeTap_Ctrl_translateY";
 	rename -uid "2A4A756A-44A6-D798-DCBF-20B0CF58F189";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_reverse_foot_toeTap_Ctrl_translateZ";
 	rename -uid "7DDC0008-4936-B3E2-2FC8-7E8880F1882C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_Hip_IK_Ctrl_translateX";
 	rename -uid "985A2546-4DCE-E6C0-E88B-BA9B681E06D9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_Hip_IK_Ctrl_translateY";
 	rename -uid "33E990C3-41FF-F694-DAE5-2BB08641810A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_Hip_IK_Ctrl_translateZ";
 	rename -uid "3BF6060E-4A0A-CC6D-98A9-09AAC160B82F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "Mouth_Move_Ctrl_translateX";
 	rename -uid "7EA08B30-42CB-275B-A15D-C794085AD192";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6187,7 +6028,7 @@ createNode animCurveTL -n "Mouth_Move_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6202,7 +6043,7 @@ createNode animCurveTL -n "Mouth_Move_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6217,28 +6058,28 @@ createNode animCurveTL -n "L_reverse_foot_inner_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_reverse_foot_inner_Ctrl_translateY";
 	rename -uid "E5214112-4E7B-B6FC-3925-DC8B054B6491";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_reverse_foot_inner_Ctrl_translateZ";
 	rename -uid "65A5DCFF-4F8A-915A-5CD5-9C874F2BD64B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "Nose_Ctrl_rotateX";
 	rename -uid "7B22375E-4E40-46F3-6336-73B028F0FAAD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6253,7 +6094,7 @@ createNode animCurveTA -n "Nose_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6268,7 +6109,7 @@ createNode animCurveTA -n "Nose_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6283,7 +6124,7 @@ createNode animCurveTA -n "R_Brow_Cluster_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6298,7 +6139,7 @@ createNode animCurveTA -n "R_Brow_Cluster_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6313,7 +6154,7 @@ createNode animCurveTA -n "R_Brow_Cluster_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6328,8 +6169,8 @@ createNode animCurveTA -n "Pick2_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 62 0 63 142.05724790367626 100 142.05724790367626 105 142.05724790367626
-		 109.99999982993198 142.05724790367626 110 142.05724790367626;
+		 38 0 47 0 52 0 61 0 62 0 63 142.05724790367626 96 142.05724790367626 101 142.05724790367626
+		 105.99999982993198 142.05724790367626 106 142.05724790367626;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 1 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 1 18 18 18 
@@ -6344,8 +6185,8 @@ createNode animCurveTA -n "Pick2_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 62 0 63 32.090007062156971 100 32.090007062156971 105 32.090007062156971
-		 109.99999982993198 32.090007062156971 110 32.090007062156971;
+		 38 0 47 0 52 0 61 0 62 0 63 32.090007062156971 96 32.090007062156971 101 32.090007062156971
+		 105.99999982993198 32.090007062156971 106 32.090007062156971;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 1 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 1 18 18 18 
@@ -6362,8 +6203,8 @@ createNode animCurveTA -n "Pick2_Ctrl_rotateZ";
 		 14.535221768707483 0 17.563381462585035 -31.268410232533558 23.014088775510203 -31.268410232533558
 		 27.859159693877551 -31.268410232533558 38 -31.268410232533558 47 -31.268410232533558
 		 52 -31.268410232533558 61 -31.268410232533558 62 -31.268410232533558 63 -57.771562775905743
-		 100 -57.771562775905743 105 -57.771562775905743 109.99999982993198 -57.771562775905743
-		 110 -57.771562775905743;
+		 96 -57.771562775905743 101 -57.771562775905743 105.99999982993198 -57.771562775905743
+		 106 -57.771562775905743;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 1 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 1 18 18 18 
@@ -6378,28 +6219,28 @@ createNode animCurveTA -n "R_reverse_foot_outer_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_reverse_foot_outer_Ctrl_rotateY";
 	rename -uid "C3A28DBC-48FE-42C7-DE78-439E4FC4EDF1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_reverse_foot_outer_Ctrl_rotateZ";
 	rename -uid "2FB94069-4072-05D4-90C0-4D80A90E5315";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "Spine_Mid_Control_Joint_Ctrl_rotateX";
 	rename -uid "0460E8BF-46EA-C027-4ECD-FA9A3D6ABF6D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6414,7 +6255,7 @@ createNode animCurveTA -n "Spine_Mid_Control_Joint_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6429,7 +6270,7 @@ createNode animCurveTA -n "Spine_Mid_Control_Joint_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6444,73 +6285,73 @@ createNode animCurveTA -n "L_Hip_IK_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_Hip_IK_Ctrl_rotateY";
 	rename -uid "1A384846-4AFE-5C02-BE21-17B6B5FF97A7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_Hip_IK_Ctrl_rotateZ";
 	rename -uid "57EE9A03-4E55-3C7D-6D34-96A4AADDB9E3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_Arm_PV_Ctrl_rotateX";
 	rename -uid "22ED0AA1-4728-DCEF-04F9-7E91077DC053";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 15 ".ktv[0:14]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+		 14.535221768707483 0 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0
+		 106 0;
+	setAttr -s 15 ".kit[4:14]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 15 ".kot[4:14]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".kix[4:14]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".kiy[4:14]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".kox[4:14]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".koy[4:14]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "R_Arm_PV_Ctrl_rotateY";
 	rename -uid "57A0469F-4D97-464C-9C01-0188F332BA39";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 15 ".ktv[0:14]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+		 14.535221768707483 0 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0
+		 106 0;
+	setAttr -s 15 ".kit[4:14]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 15 ".kot[4:14]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".kix[4:14]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".kiy[4:14]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".kox[4:14]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".koy[4:14]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "R_Arm_PV_Ctrl_rotateZ";
 	rename -uid "72253190-4060-EBAE-C8D2-E4A324B8A4A8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 15 ".ktv[0:14]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+		 14.535221768707483 0 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0
+		 106 0;
+	setAttr -s 15 ".kit[4:14]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 15 ".kot[4:14]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".kix[4:14]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".kiy[4:14]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 15 ".kox[4:14]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 15 ".koy[4:14]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "L_Lower_Outer_Lips_Ctrl_rotateX";
 	rename -uid "92160B73-48A2-EB08-F459-50A4EC6F0D32";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6525,7 +6366,7 @@ createNode animCurveTA -n "L_Lower_Outer_Lips_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6540,7 +6381,7 @@ createNode animCurveTA -n "L_Lower_Outer_Lips_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6555,7 +6396,7 @@ createNode animCurveTA -n "L_Lower_Corner_Lips_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6570,7 +6411,7 @@ createNode animCurveTA -n "L_Lower_Corner_Lips_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6585,7 +6426,7 @@ createNode animCurveTA -n "L_Lower_Corner_Lips_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6600,7 +6441,7 @@ createNode animCurveTA -n "L_Arm_01_Jnt_IK_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6615,7 +6456,7 @@ createNode animCurveTA -n "L_Arm_01_Jnt_IK_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6630,7 +6471,7 @@ createNode animCurveTA -n "L_Arm_01_Jnt_IK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6645,7 +6486,7 @@ createNode animCurveTA -n "R_Lower_Outer_Lips_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6660,7 +6501,7 @@ createNode animCurveTA -n "R_Lower_Outer_Lips_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6675,7 +6516,7 @@ createNode animCurveTA -n "R_Lower_Outer_Lips_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6690,7 +6531,7 @@ createNode animCurveTA -n "L_Squint_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6705,7 +6546,7 @@ createNode animCurveTA -n "L_Squint_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6720,7 +6561,7 @@ createNode animCurveTA -n "L_Squint_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6735,7 +6576,7 @@ createNode animCurveTA -n "R_Brow_1_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6750,7 +6591,7 @@ createNode animCurveTA -n "R_Brow_1_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6765,7 +6606,7 @@ createNode animCurveTA -n "R_Brow_1_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6780,7 +6621,7 @@ createNode animCurveTA -n "Transform_Control_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6795,7 +6636,7 @@ createNode animCurveTA -n "Transform_Control_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6810,7 +6651,7 @@ createNode animCurveTA -n "Transform_Control_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6825,7 +6666,7 @@ createNode animCurveTA -n "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6840,7 +6681,7 @@ createNode animCurveTA -n "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6855,7 +6696,7 @@ createNode animCurveTA -n "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6870,7 +6711,7 @@ createNode animCurveTA -n "R_Eyelid_Upper_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6885,7 +6726,7 @@ createNode animCurveTA -n "R_Eyelid_Upper_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6900,7 +6741,7 @@ createNode animCurveTA -n "R_Eyelid_Upper_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6915,7 +6756,7 @@ createNode animCurveTA -n "R_Lower_Corner_Lips_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6930,7 +6771,7 @@ createNode animCurveTA -n "R_Lower_Corner_Lips_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6945,7 +6786,7 @@ createNode animCurveTA -n "R_Lower_Corner_Lips_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -6958,31 +6799,28 @@ createNode animCurveTA -n "Cog_Ctrl_rotateX";
 	rename -uid "BB050B9B-4EF2-BE6C-1E14-D3B5756DCD5B";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 15.173448321177901 4.8450717687074834 15.173448321177901
+	setAttr -s 14 ".ktv[0:13]"  0 15.173448321177901 4.8450717687074834 15.173448321177901
 		 9.6901437074829939 15.173448321177901 14.535221768707483 15.173448321177901 17.563381462585035 15.173448321177901
 		 23.014088775510203 -10.925546463522794 33 -81.334478791291886 47 -0.11625891038608729
-		 61 68.919464572272105 66 40.275924053072096 74 -9.1854671609579128 83 -33.679813568508827
-		 90 -45.786809183284085 94 -33.679813568508827 105 -9.3584455680343854 110 12.819380275507644
-		 113 26.979669414440579 116 16.384772998448813;
-	setAttr -s 18 ".kit[6:17]"  18 16 16 16 18 1 18 16 
-		16 16 18 18;
-	setAttr -s 18 ".kot[6:17]"  18 16 16 16 18 1 18 16 
-		16 16 18 18;
-	setAttr -s 18 ".kix[11:17]"  0.25701960889762332 1 0.7010268604198806 
-		0.6347535130374089 0.4652364546085605 1 1;
-	setAttr -s 18 ".kiy[11:17]"  -0.96640618822631363 0 0.71313486870987119 
-		0.77271468064652959 0.8851864443738714 0 0;
-	setAttr -s 18 ".kox[11:17]"  0.25701963406012873 1 0.7010268604198806 
-		0.6347535130374089 0.4652364546085605 1 1;
-	setAttr -s 18 ".koy[11:17]"  -0.96640618153424374 0 0.71313486870987119 
-		0.77271468064652959 0.8851864443738714 0 0;
+		 61 68.919464572272105 72 -9.1854671609579128 85 -55.276531922035474 106 12.819380275507644
+		 109 26.979669414440579 118 22.946890216653877;
+	setAttr -s 14 ".kit[6:13]"  18 16 16 18 1 1 18 18;
+	setAttr -s 14 ".kot[6:13]"  18 16 16 18 1 1 18 18;
+	setAttr -s 14 ".kix[10:13]"  0.52439734510733949 0.94212341680931011 
+		1 1;
+	setAttr -s 14 ".kiy[10:13]"  0.85147367806901331 0.33526626358694495 
+		0 0;
+	setAttr -s 14 ".kox[10:13]"  0.52439742197781081 0.94212341676855194 
+		1 1;
+	setAttr -s 14 ".koy[10:13]"  0.85147363072676885 0.33526626370147894 
+		0 0;
 createNode animCurveTA -n "Cog_Ctrl_rotateY";
 	rename -uid "6EC92582-4DF9-9319-A70C-C0A720FFD829";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
 	setAttr -s 19 ".ktv[0:18]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 33 0 47 0 66 0 74 0
-		 83 0 90 0 94 0 100 0 105 0 109.99999982993198 0 110 0 113 0 116 0;
+		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 33 0 47 0 66 0 72 0
+		 79 0 86 0 90 0 96 0 101 0 105.99999982993198 0 106 0 109 0 118 0;
 	setAttr -s 19 ".kit[6:18]"  18 16 16 18 16 18 16 16 
 		16 16 16 18 18;
 	setAttr -s 19 ".kot[6:18]"  18 16 16 18 16 18 16 16 
@@ -6992,8 +6830,8 @@ createNode animCurveTA -n "Cog_Ctrl_rotateZ";
 	setAttr ".tan" 16;
 	setAttr ".wgt" no;
 	setAttr -s 19 ".ktv[0:18]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 33 0 47 0 66 0 74 0
-		 83 0 90 0 94 0 100 0 105 0 109.99999982993198 0 110 0 113 0 116 0;
+		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 33 0 47 0 66 0 72 0
+		 79 0 86 0 90 0 96 0 101 0 105.99999982993198 0 106 0 109 0 118 0;
 	setAttr -s 19 ".kit[6:18]"  18 16 16 18 16 18 16 16 
 		16 16 16 18 18;
 	setAttr -s 19 ".kot[6:18]"  18 16 16 18 16 18 16 16 
@@ -7002,58 +6840,57 @@ createNode animCurveTA -n "Head_Ctrl_rotateX";
 	rename -uid "59F1294A-47CE-A15A-C482-9B9D5A1245C6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 14 ".ktv[0:13]"  0 -36.99259901758824 4.8450717687074834 -29.886167302285987
-		 9.6901437074829939 -16.648195455747622 14.535221768707483 -32.841795760798192 17.563381462585035 -32.841795760798192
-		 23.014088775510203 -3.7919255121454105 27.859159693877551 26.465739789705822 38 26.465739789705822
-		 47 16.455015156941922 59 -25.201789919188567 66 -25.201789919188567 89 44.466155128143882
-		 96 40.604331524369961 116 -43.540981610611468;
-	setAttr -s 14 ".kit[7:13]"  1 18 18 18 18 18 18;
-	setAttr -s 14 ".kot[7:13]"  1 18 18 18 18 18 18;
-	setAttr -s 14 ".kix[7:13]"  1 0.69637459676983371 1 1 1 0.82182076612392396 
-		1;
-	setAttr -s 14 ".kiy[7:13]"  0 -0.71767849415574059 0 0 0 -0.56974610869007836 
-		0;
-	setAttr -s 14 ".kox[7:13]"  1 0.69637459676983371 1 1 1 0.82182076612392396 
-		1;
-	setAttr -s 14 ".koy[7:13]"  0 -0.71767849415574059 0 0 0 -0.56974610869007836 
-		0;
+	setAttr -s 13 ".ktv[0:12]"  0 -36.99259901758824 18 -32.841795760798192
+		 22 -2.8051014188980541 23.014088775510203 -3.7919255121454105 28 28.749566922702712
+		 38 26.465739789705822 47 16.455015156941922 59 -25.201789919188567 66 -25.201789919188567
+		 75 43.588272919378305 85 -18.453089181900094 92 40.604331524369961 118 -43.540981610611468;
+	setAttr -s 13 ".kit[5:12]"  1 18 18 18 18 18 18 18;
+	setAttr -s 13 ".kot[5:12]"  1 18 18 18 18 18 18 18;
+	setAttr -s 13 ".kix[5:12]"  1 0.69637459676983371 1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[5:12]"  0 -0.71767849415574059 0 0 0 0 0 0;
+	setAttr -s 13 ".kox[5:12]"  1 0.69637459676983371 1 1 1 1 1 1;
+	setAttr -s 13 ".koy[5:12]"  0 -0.71767849415574059 0 0 0 0 0 0;
 createNode animCurveTA -n "Head_Ctrl_rotateY";
 	rename -uid "71C5C172-4B22-B0F0-5358-BEB183161EC5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  0 11.23582993390834 4.8450717687074834 11.235829933908347
-		 9.6901437074829939 -9.0928478059467608 14.535221768707483 -20.27997274486923 17.563381462585035 -20.27997274486923
-		 23.014088775510203 -13.889969298111788 27.859159693877551 -7.4999658513542951 38 -7.4999658513542951
-		 47 -7.4999658513542879 59 -7.4999658513542773 66 -7.4999658513542773 82 -7.4999658513542693
-		 92 -7.4999658513542657 96 -7.4999658513542657 116 31.762361871850302;
-	setAttr -s 15 ".kit[7:14]"  1 18 18 18 18 18 18 18;
-	setAttr -s 15 ".kot[7:14]"  1 18 18 18 18 18 18 18;
-	setAttr -s 15 ".kix[7:14]"  1 1 1 1 1 1 1 1;
-	setAttr -s 15 ".kiy[7:14]"  0 0 0 0 0 0 0 0;
-	setAttr -s 15 ".kox[7:14]"  1 1 1 1 1 1 1 1;
-	setAttr -s 15 ".koy[7:14]"  0 0 0 0 0 0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  0 11.23582993390834 18 -20.27997274486923
+		 22 -1.902219024685359 23.014088775510203 -13.889969298111788 28 -14.774558147616752
+		 38 -7.4999658513542951 47 -7.4999658513542879 59 -7.4999658513542773 66 -7.4999658513542773
+		 75 -7.4999658513542711 78 -7.4999658513542693 88 -7.4999658513542657 92 -7.4999658513542657
+		 118 31.762361871850302;
+	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 14 ".kix[5:13]"  1 1 1 1 1 1 1 1 1;
+	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0 0;
+	setAttr -s 14 ".kox[5:13]"  1 1 1 1 1 1 1 1 1;
+	setAttr -s 14 ".koy[5:13]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Head_Ctrl_rotateZ";
 	rename -uid "43E33176-4A06-60B5-5E65-A3BEA66B0E0E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  0 -2.4319924966047259 4.8450717687074834 -2.4319924966047219
-		 9.6901437074829939 -0.26509112710109994 14.535221768707483 5.682275036556347 17.563381462585035 5.682275036556347
-		 23.014088775510203 4.4942477332958815 27.859159693877551 3.3062204300354012 38 3.3062204300354012
-		 47 3.3062204300353986 59 3.3062204300353888 66 3.3062204300353888 82 3.3062204300353879
-		 92 3.3062204300353888 96 3.3062204300353875 116 -20.462975278896383;
-	setAttr -s 15 ".kit[7:14]"  1 18 18 18 18 18 18 18;
-	setAttr -s 15 ".kot[7:14]"  1 18 18 18 18 18 18 18;
-	setAttr -s 15 ".kix[7:14]"  1 1 1 1 1 1 1 1;
-	setAttr -s 15 ".kiy[7:14]"  0 0 0 0 0 0 0 0;
-	setAttr -s 15 ".kox[7:14]"  1 1 1 1 1 1 1 1;
-	setAttr -s 15 ".koy[7:14]"  0 0 0 0 0 0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  0 -2.4319924966047259 18 5.682275036556347
+		 22 2.6970395607645936 23.014088775510203 4.4942477332958815 28 -4.7605135418608784
+		 38 3.3062204300354012 47 3.3062204300353986 59 3.3062204300353888 66 3.3062204300353888
+		 75 3.3062204300353932 78 3.3062204300353879 88 3.3062204300353888 92 3.3062204300353875
+		 118 -20.462975278896383;
+	setAttr -s 14 ".kit[5:13]"  1 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 14 ".kot[5:13]"  1 18 18 18 18 18 18 18 
+		18;
+	setAttr -s 14 ".kix[5:13]"  1 1 1 1 1 1 1 1 1;
+	setAttr -s 14 ".kiy[5:13]"  0 0 0 0 0 0 0 0 0;
+	setAttr -s 14 ".kox[5:13]"  1 1 1 1 1 1 1 1 1;
+	setAttr -s 14 ".koy[5:13]"  0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Gun_Ctrl_rotateX";
 	rename -uid "3C04863C-4A59-9974-3D67-CFB55DAC7F8B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7068,7 +6905,7 @@ createNode animCurveTA -n "Gun_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7083,7 +6920,7 @@ createNode animCurveTA -n "Gun_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7098,67 +6935,67 @@ createNode animCurveTA -n "R_reverse_foot_ball_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 56.735441922794109 4.8450715986394561 0
 		 9.6901437074829939 0 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0
-		 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0
-		 100 0;
+		 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0
+		 96 0;
 createNode animCurveTA -n "R_reverse_foot_ball_Ctrl_rotateY";
 	rename -uid "44DD7D01-4F23-A355-A5AB-299FCFC8F8FE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_reverse_foot_ball_Ctrl_rotateZ";
 	rename -uid "06622441-49EE-AC3C-47A2-4E85ECD68CE9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "Hair_Ctrl_Jnt_3_Ctrl_rotateX";
 	rename -uid "AB5E5F60-4AA8-1015-ABAE-0B9AC387A89A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 19 ".ktv[0:18]"  0 0 4.8450717687074834 0 7 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
+	setAttr -s 19 ".kit[8:18]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 19 ".kot[8:18]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kix[8:18]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".kiy[8:18]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[8:18]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".koy[8:18]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Hair_Ctrl_Jnt_3_Ctrl_rotateY";
 	rename -uid "E05EAE1A-4704-2B15-2A12-6AA74DEAC0A4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 19 ".ktv[0:18]"  0 0 4.8450717687074834 0 7 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
+	setAttr -s 19 ".kit[8:18]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 19 ".kot[8:18]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kix[8:18]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".kiy[8:18]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[8:18]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".koy[8:18]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Hair_Ctrl_Jnt_3_Ctrl_rotateZ";
 	rename -uid "92C1F698-4994-9C19-2755-CE9AAAEF19F1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 19 ".ktv[0:18]"  0 0 4.8450717687074834 0 7 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
+	setAttr -s 19 ".kit[8:18]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 19 ".kot[8:18]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kix[8:18]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".kiy[8:18]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[8:18]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".koy[8:18]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "L_reverse_foot_ball_Ctrl_rotateX";
 	rename -uid "0E09902D-4A2A-CE4B-FCDF-CEA3E2C26946";
 	setAttr ".tan" 18;
@@ -7166,43 +7003,43 @@ createNode animCurveTA -n "L_reverse_foot_ball_Ctrl_rotateX";
 	setAttr -s 16 ".ktv[0:15]"  0 24.377964805991883 4.8450715986394561 43.927930524807877
 		 9.6901437074829939 0 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0
 		 27.859159693877551 0 43 0.44335451490695893 47 2.0179648250746403 52 5.5596930234200022
-		 61 9.2508278981633953 66 12.874606431880895 83 16.371014443928246 92 19.713590169131585
-		 98 23.175950403663581 110 64.950555631064717;
+		 61 9.2508278981633953 66 12.874606431880895 79 16.371014443928246 88 19.713590169131585
+		 94 23.175950403663581 106 64.950555631064717;
 createNode animCurveTA -n "L_reverse_foot_ball_Ctrl_rotateY";
 	rename -uid "32F6FB3E-40B1-1940-A835-B188DA560524";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 15 ".ktv[0:14]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 98 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 94 0;
 createNode animCurveTA -n "L_reverse_foot_ball_Ctrl_rotateZ";
 	rename -uid "395A6A30-477F-E958-7251-C783155CAD6A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 15 ".ktv[0:14]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 98 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 94 0;
 createNode animCurveTA -n "L_reverse_foot_heel_Ctrl_rotateX";
 	rename -uid "5AD0187E-488E-E30E-766D-2CA62FE0BD49";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_reverse_foot_heel_Ctrl_rotateY";
 	rename -uid "4DDB0DD5-4AD7-9527-8722-6AB71B8483D6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_reverse_foot_heel_Ctrl_rotateZ";
 	rename -uid "D36F1C5F-44B5-3DB1-0242-95B303069EEB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "Pelvis_Ctrl_rotateX";
 	rename -uid "84E8F005-4392-2CB6-30C5-7996F3659E6A";
 	setAttr ".tan" 18;
@@ -7210,7 +7047,7 @@ createNode animCurveTA -n "Pelvis_Ctrl_rotateX";
 	setAttr -s 19 ".ktv[0:18]"  0 -15.634981769359001 1.7006802721088437e-07 -17.992680298208736
 		 4.8450717687074834 28.133648161891397 9.6901437074829939 28.133648161891397 14.535221768707483 28.133648161891397
 		 17.563381462585035 28.133648161891397 23.014088775510203 14.066824080945691 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 19 ".kit[8:18]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 19 ".kot[8:18]"  1 18 18 18 18 18 18 18 
@@ -7226,7 +7063,7 @@ createNode animCurveTA -n "Pelvis_Ctrl_rotateY";
 	setAttr -s 19 ".ktv[0:18]"  0 0 1.7006802721088437e-07 0 4.8450717687074834 -8.4181301777286368
 		 9.6901437074829939 -8.4181301777286368 14.535221768707483 -8.4181301777286368 17.563381462585035 -8.4181301777286368
 		 23.014088775510203 -4.2090650888643166 27.859159693877551 0 38 0 47 0 52 0 61 0 66 0
-		 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 19 ".kit[8:18]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 19 ".kot[8:18]"  1 18 18 18 18 18 18 18 
@@ -7242,8 +7079,8 @@ createNode animCurveTA -n "Pelvis_Ctrl_rotateZ";
 	setAttr -s 16 ".ktv[0:15]"  0 0 1.7006802721088437e-07 0 4.8450717687074834 -4.4759139170409208
 		 9.6901437074829939 -4.4759139170409208 14.535221768707483 -4.4759139170409208 17.563381462585035 -4.4759139170409208
 		 23.014088775510203 -21.834031201552239 27.859159693877551 -39.192148486063537 38 -39.192148486063537
-		 47 -35.486825024959465 52 -27.66447549596198 61 -19.903881357982886 83 -61.479110344886081
-		 94 -61.479110344886081 109.99999982993198 -5.2575846570299554 110 -5.2575846570299554;
+		 47 -35.486825024959465 52 -27.66447549596198 61 -19.903881357982886 79 -61.479110344886081
+		 90 -61.479110344886081 105.99999982993198 -5.2575846570299554 106 -5.2575846570299554;
 	setAttr -s 16 ".kit[8:15]"  1 18 18 18 18 18 18 18;
 	setAttr -s 16 ".kot[8:15]"  1 18 18 18 18 18 18 18;
 	setAttr -s 16 ".kix[8:15]"  1 0.94534979344841186 0.90633107003036972 
@@ -7260,7 +7097,7 @@ createNode animCurveTA -n "Pick_Holster_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7275,7 +7112,7 @@ createNode animCurveTA -n "Pick_Holster_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7290,7 +7127,7 @@ createNode animCurveTA -n "Pick_Holster_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7305,7 +7142,7 @@ createNode animCurveTA -n "R_Squint_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7320,7 +7157,7 @@ createNode animCurveTA -n "R_Squint_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7335,52 +7172,7 @@ createNode animCurveTA -n "R_Squint_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-createNode animCurveTA -n "Look_Ctrl_rotateX";
-	rename -uid "BB054C6C-4A9C-546B-454B-B9A8DD1D4508";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-createNode animCurveTA -n "Look_Ctrl_rotateY";
-	rename -uid "AC605F87-40C5-69F1-1009-119FFB6D3285";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-createNode animCurveTA -n "Look_Ctrl_rotateZ";
-	rename -uid "1B612244-4191-A699-2939-7A989AA3C0DB";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7395,28 +7187,28 @@ createNode animCurveTA -n "R_reverse_foot_inner_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_reverse_foot_inner_Ctrl_rotateY";
 	rename -uid "29EC5503-451A-7683-9A90-2A90356A3FB8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_reverse_foot_inner_Ctrl_rotateZ";
 	rename -uid "9B3B6B94-4C3A-6EDD-4956-1D9E8126B40A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_Upper_Outer_Lips_Ctrl_rotateX";
 	rename -uid "D22D3F77-4E94-C0D0-8F1D-51A6D433622C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7431,7 +7223,7 @@ createNode animCurveTA -n "R_Upper_Outer_Lips_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7446,7 +7238,7 @@ createNode animCurveTA -n "R_Upper_Outer_Lips_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7459,73 +7251,75 @@ createNode animCurveTA -n "L_Hand_IK_Ctrl_rotateX";
 	rename -uid "D6376982-4B3A-E529-8D93-5EBE60BFF8D9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 -14.810004603325567
+	setAttr -s 19 ".ktv[0:18]"  0 0 4.8450717687074834 -14.810004603325567
 		 9.6901437074829939 -50.766986933515049 14.535221768707483 -88.701801075046106 17.563381462585035 -123.1892543694088
-		 21 -142.40389041659205 24 -141.22387170137364 38 -141.22387170137364 47 -141.22387170137364
-		 52 -141.22387170137364 61 -141.22387170137364 85 -141.22387170137364 86 -121.76139945942461
-		 100 -134.10450976429212 105 -120.58751159851677 110 -55.554200374018329 111 38.234982574075666
-		 113 38.234982574075666;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 1;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 1;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 0.29078953702504923 0.089823817778710596 
-		1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0.95678704274083759 0.99595767066660867 
-		0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 0.29078953702504923 0.089823817778710596 
-		1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0.95678704274083759 0.99595767066660867 
-		0 0;
+		 21 -151.9933860922246 24 -141.22387170137364 38 -141.22387170137364 47 -141.22387170137364
+		 52 -141.22387170137364 61 -141.22387170137364 81 -141.22387170137364 82 -118.09621640330801
+		 83 -118.45396686007641 96 -134.10450976429212 101 -120.58751159851677 105 -62.035126722877408
+		 106 -64.64838194175573 107 38.234982574075637;
+	setAttr -s 19 ".kit[7:18]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 19 ".kot[7:18]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 19 ".kix[7:18]"  1 1 1 1 1 1 0.9120707762101079 1 0.28570181398503364 
+		1 1 1;
+	setAttr -s 19 ".kiy[7:18]"  0 0 0 0 0 0 -0.41003280257010077 0 0.95831856576279539 
+		0 0 0;
+	setAttr -s 19 ".kox[7:18]"  1 1 1 1 1 1 0.9120707762101079 1 0.28570181398503358 
+		1 1 1;
+	setAttr -s 19 ".koy[7:18]"  0 0 0 0 0 0 -0.41003280257010077 0 0.95831856576279539 
+		0 0 0;
 createNode animCurveTA -n "L_Hand_IK_Ctrl_rotateY";
 	rename -uid "B33705EF-4076-795B-789B-3495475484BD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0.25722872817876641
+	setAttr -s 19 ".ktv[0:18]"  0 0 4.8450717687074834 0.25722872817876641
 		 9.6901437074829939 0.88175039995894466 14.535221768707483 1.5406241988997491 17.563381462585035 2.1396222401995821
-		 21 2.4733531555650625 24 -13.283501871209079 38 -13.283501871209079 47 -13.283501871209079
-		 52 -13.283501871209079 61 -13.283501871209079 85 -13.283501871209079 86 -6.2236103053795517
-		 100 -18.571817367811903 105 -44.637384645162172 110 0.7681014291093311 111 -7.7783565708823943
-		 113 -7.7783565708823943;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 1;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 1;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 0.76311288742937178 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 -0.64626520952253574 0 0 0 
-		0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 0.76311288742937178 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 -0.64626520952253574 0 0 0 
-		0;
+		 21 1.6170552905819557 24 -13.283501871209079 38 -13.283501871209079 47 -13.283501871209079
+		 52 -13.283501871209079 61 -13.283501871209079 81 -13.283501871209079 82 -53.226835200333525
+		 83 -15.086254197393286 96 -18.571817367811903 101 -44.637384645162172 105 -9.457924333533045
+		 106 4.4308207849153121 107 -7.7783565708823579;
+	setAttr -s 19 ".kit[7:18]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 19 ".kot[7:18]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 19 ".kix[7:18]"  1 1 1 1 1 1 1 0.94765586514215283 1 0.2363723561108908 
+		1 1;
+	setAttr -s 19 ".kiy[7:18]"  0 0 0 0 0 0 0 -0.31929353463807875 0 0.97166254907070815 
+		0 0;
+	setAttr -s 19 ".kox[7:18]"  1 1 1 1 1 1 1 0.94765586514215283 1 0.23637235611089077 
+		1 1;
+	setAttr -s 19 ".koy[7:18]"  0 0 0 0 0 0 0 -0.31929353463807875 0 0.97166254907070804 
+		0 0;
 createNode animCurveTA -n "L_Hand_IK_Ctrl_rotateZ";
 	rename -uid "105F22FE-418E-7947-1389-70B50F7A7601";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 10.723508799987732
+	setAttr -s 19 ".ktv[0:18]"  0 0 4.8450717687074834 10.723508799987732
 		 9.6901437074829939 36.758950838419487 14.535221768707483 64.22648539821715 17.563381462585035 89.197882693274067
-		 21 103.11066153834361 24 90.749430816907079 38 90.749430816907079 47 90.749430816907079
-		 52 90.749430816907079 61 90.749430816907079 85 90.749430816907079 86 68.498908127648932
-		 100 64.861244653715246 105 40.432187828035858 110 -18.505115776085763 111 -89.906112986868735
-		 113 -89.906112986868735;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 1;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 1;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 0.95060958036070553 0.95060958036070542 
-		0.2752997938509123 0.10924049932275796 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 -0.31038915207597634 -0.31038915207597628 
-		-0.96135842613753852 -0.99401534862783414 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 0.95060958036070542 0.95060958036070553 
-		0.2752997938509123 0.10924049932275795 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 -0.31038915207597628 -0.31038915207597634 
-		-0.96135842613753852 -0.99401534862783403 0 0;
+		 21 99.6733625920197 24 90.749430816907079 38 90.749430816907079 47 90.749430816907079
+		 52 90.749430816907079 61 90.749430816907079 81 90.749430816907079 82 49.092858987807666
+		 83 59.020358888242967 96 64.861244653715246 101 40.432187828035858 105 -0.8715523635732253
+		 106 -2.8208270891041383 107 -89.906112986868735;
+	setAttr -s 19 ".kit[7:18]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 19 ".kot[7:18]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 19 ".kix[7:18]"  1 1 1 1 1 1 0.90439987556479706 1 0.31069116019124376 
+		0.37795903451752838 0.37795903451752838 1;
+	setAttr -s 19 ".kiy[7:18]"  0 0 0 0 0 0 0.42668590916314519 0 -0.95051091681212108 
+		-0.92582232000885456 -0.92582232000885445 0;
+	setAttr -s 19 ".kox[7:18]"  1 1 1 1 1 1 0.90439987556479695 1 0.31069116019124376 
+		0.37795903451752838 0.37795903451752838 1;
+	setAttr -s 19 ".koy[7:18]"  0 0 0 0 0 0 0.42668590916314514 0 -0.95051091681212108 
+		-0.92582232000885445 -0.92582232000885445 0;
 createNode animCurveTA -n "L_Sneer_Ctrl_rotateX";
 	rename -uid "6A306DA2-48D3-F2B8-41FB-EFAC5412531B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7540,7 +7334,7 @@ createNode animCurveTA -n "L_Sneer_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7555,7 +7349,7 @@ createNode animCurveTA -n "L_Sneer_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7570,7 +7364,7 @@ createNode animCurveTA -n "L_Eye_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7585,7 +7379,7 @@ createNode animCurveTA -n "L_Eye_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7600,7 +7394,7 @@ createNode animCurveTA -n "L_Eye_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7615,7 +7409,7 @@ createNode animCurveTA -n "R_Cheek_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7630,7 +7424,7 @@ createNode animCurveTA -n "R_Cheek_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7645,7 +7439,7 @@ createNode animCurveTA -n "R_Cheek_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7660,7 +7454,7 @@ createNode animCurveTA -n "Upper_Middle_Lips_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7675,7 +7469,7 @@ createNode animCurveTA -n "Upper_Middle_Lips_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7690,7 +7484,7 @@ createNode animCurveTA -n "Upper_Middle_Lips_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7703,55 +7497,55 @@ createNode animCurveTA -n "L_Arm_PV_Ctrl_rotateX";
 	rename -uid "74C61317-405D-6C1E-2498-8CA0F054F0E0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 16 ".ktv[0:15]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+		 14.535221768707483 0 17.563381462585035 0 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0
+		 101 0 105.99999982993198 0 106 0;
+	setAttr -s 16 ".kit[5:15]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 16 ".kot[5:15]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 16 ".kix[5:15]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 16 ".kiy[5:15]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 16 ".kox[5:15]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 16 ".koy[5:15]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "L_Arm_PV_Ctrl_rotateY";
 	rename -uid "BB1F3FA1-4C70-DE31-B01A-5C85F0840248";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 16 ".ktv[0:15]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+		 14.535221768707483 0 17.563381462585035 0 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0
+		 101 0 105.99999982993198 0 106 0;
+	setAttr -s 16 ".kit[5:15]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 16 ".kot[5:15]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 16 ".kix[5:15]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 16 ".kiy[5:15]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 16 ".kox[5:15]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 16 ".koy[5:15]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "L_Arm_PV_Ctrl_rotateZ";
 	rename -uid "6E597047-4172-71D8-9AC3-7EB32E917711";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 16 ".ktv[0:15]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+		 14.535221768707483 0 17.563381462585035 0 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0
+		 101 0 105.99999982993198 0 106 0;
+	setAttr -s 16 ".kit[5:15]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
+	setAttr -s 16 ".kot[5:15]"  1 18 18 18 18 18 18 18 
 		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 16 ".kix[5:15]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 16 ".kiy[5:15]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 16 ".kox[5:15]"  1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 16 ".koy[5:15]"  0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Pick1_Ctrl_rotateX";
 	rename -uid "07DFA300-4164-A77B-EB65-07825D3EB332";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 21 0 24 0 38 0 47 0 52 0 61 0 62 0 63 -52.250296968228383
-		 100 -52.250296968228383 105 -52.250296968228383 109.99999982993198 -52.250296968228383
-		 110 -52.250296968228383;
+		 96 -52.250296968228383 101 -52.250296968228383 105.99999982993198 -52.250296968228383
+		 106 -52.250296968228383;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 1 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 1 18 18 18 
@@ -7766,8 +7560,8 @@ createNode animCurveTA -n "Pick1_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 21 0 24 0 38 0 47 0 52 0 61 0 62 0 63 -208.79386180273676
-		 100 -208.79386180273676 105 -208.79386180273676 109.99999982993198 -208.79386180273676
-		 110 -208.79386180273676;
+		 96 -208.79386180273676 101 -208.79386180273676 105.99999982993198 -208.79386180273676
+		 106 -208.79386180273676;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 1 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 1 18 18 18 
@@ -7783,8 +7577,8 @@ createNode animCurveTA -n "Pick1_Ctrl_rotateZ";
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 21 -23.596614023961735 24 -23.596614023961735
 		 38 -23.596614023961735 47 -23.596614023961735 52 -23.596614023961735 61 -23.596614023961735
-		 62 -23.596614023961735 63 113.58227348595233 100 113.58227348595233 105 113.58227348595233
-		 109.99999982993198 113.58227348595233 110 113.58227348595233;
+		 62 -23.596614023961735 63 113.58227348595233 96 113.58227348595233 101 113.58227348595233
+		 105.99999982993198 113.58227348595233 106 113.58227348595233;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 1 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 1 18 18 18 
@@ -7799,7 +7593,7 @@ createNode animCurveTA -n "Neck_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7814,7 +7608,7 @@ createNode animCurveTA -n "Neck_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7829,52 +7623,7 @@ createNode animCurveTA -n "Neck_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-createNode animCurveTA -n "Hair_Ctrl_Jnt_1_Ctrl_rotateX";
-	rename -uid "2CB796AE-48CD-F6AF-4D5A-32B8D4269ED0";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-createNode animCurveTA -n "Hair_Ctrl_Jnt_1_Ctrl_rotateY";
-	rename -uid "CBCC5FDF-46AD-4600-C595-16B1FA892A78";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-createNode animCurveTA -n "Hair_Ctrl_Jnt_1_Ctrl_rotateZ";
-	rename -uid "7AE08B55-4E6C-42F7-74C1-CF8AA4E68DC8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7890,41 +7639,41 @@ createNode animCurveTA -n "R_Clavicle_Jnt_Ctrl_rotateX";
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 -28.97018470660645 27.859159693877551 0
 		 38 0 47 -3.7758753295745411 52 -10.383657156329978 61 -14.564090556930362 66 -13.096957856298296
-		 83 -11.629825155666234 94 -12.949678845025431 100 -13.306205953606579 105 -13.306205953606579
-		 109.99999982993198 -13.306205953606579 110 -13.306205953606579;
+		 79 -11.629825155666234 90 -12.949678845025431 96 -13.306205953606579 101 -13.306205953606579
+		 105.99999982993198 -13.306205953606579 106 -13.306205953606579;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kix[7:17]"  1 0.95497394480054654 0.95165243560540957 
-		1 0.99844301138389369 1 0.99914800032092499 1 1 1 1;
+		1 0.99767680578153195 1 0.99914800032092499 1 1 1 1;
 	setAttr -s 18 ".kiy[7:17]"  0 -0.2966896775286979 -0.30717689009151022 
-		0 0.055781296315718785 0 -0.041270733634100547 0 0 0 0;
+		0 0.068124820774510667 0 -0.041270733634100554 0 0 0 0;
 	setAttr -s 18 ".kox[7:17]"  1 0.95497394480054643 0.95165243560540957 
-		1 0.99844301138389369 1 0.9991480003209251 1 1 1 1;
+		1 0.99767680578153195 1 0.9991480003209251 1 1 1 1;
 	setAttr -s 18 ".koy[7:17]"  0 -0.29668967752869785 -0.30717689009151022 
-		0 0.055781296315718792 0 -0.041270733634100554 0 0 0 0;
+		0 0.068124820774510667 0 -0.041270733634100554 0 0 0 0;
 createNode animCurveTA -n "R_Clavicle_Jnt_Ctrl_rotateY";
 	rename -uid "9DFF5562-4F0C-4872-C32E-3AB9A6B25A1E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 -29.05344016948958 27.859159693877551 -29.901521135669569
-		 38 -29.901521135669569 47 -23.185924379633651 52 -9.5464165177399067 61 2.7100148848285932
-		 66 5.3075509575778952 83 9.2315119730950457 94 29.446493032270645 100 6.5457743254297815
-		 105 6.5457743254297815 109.99999982993198 6.5457743254297815 110 6.5457743254297815;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 0.85407424334068804 0.7904897996497362 
-		0.91381656009688728 0.9923790402443764 0.96041410279669892 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0.5201511192548095 0.61247520492646867 
-		0.40612719004357739 0.12322272713931563 0.27857629322900379 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 0.85407424334068804 0.79048979964973631 
-		0.91381656009688728 0.99237904024437651 0.96041410279669881 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0.5201511192548095 0.61247520492646867 
-		0.40612719004357739 0.12322272713931565 0.27857629322900385 0 0 0 0 0;
+		 38 -29.901521135669569 47 -23.185924379633651 61 2.7100148848285932 66 5.3075509575778952
+		 79 9.2315119730950457 90 29.446493032270645 96 6.5457743254297815 101 6.5457743254297815
+		 105.99999982993198 6.5457743254297815 106 6.5457743254297815;
+	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 17 ".kix[7:16]"  1 0.85978846730145608 0.84678788217023604 
+		0.98867930856563979 0.93499847178935547 1 1 1 1 1;
+	setAttr -s 17 ".kiy[7:16]"  0 0.51065036129960073 0.5319307122263639 
+		0.15004407623817892 0.35465174150364703 0 0 0 0 0;
+	setAttr -s 17 ".kox[7:16]"  1 0.85978846730145619 0.84678788217023593 
+		0.98867930856563968 0.93499847178935547 1 1 1 1 1;
+	setAttr -s 17 ".koy[7:16]"  0 0.51065036129960084 0.53193071222636379 
+		0.15004407623817889 0.35465174150364709 0 0 0 0 0;
 createNode animCurveTA -n "R_Clavicle_Jnt_Ctrl_rotateZ";
 	rename -uid "517245B3-43D4-C4BC-0423-02837C8076B4";
 	setAttr ".tan" 18;
@@ -7933,27 +7682,27 @@ createNode animCurveTA -n "R_Clavicle_Jnt_Ctrl_rotateZ";
 		 9.6901437074829939 35.616227023732257 14.535221768707483 16.876358769020854 17.563381462585035 16.876358769020854
 		 23.014088775510203 32.733800830154991 27.859159693877551 16.876358769020921 38 16.876358769020921
 		 47 7.6445125077668665 52 0.49533013761722694 61 -3.2923935180248001 66 10.51821774477779
-		 83 24.328829007580357 94 21.12712219066108 100 12.154587669739751 105 12.154587669739751
-		 109.99999982993198 12.154587669739751 110 12.154587669739751;
+		 79 24.328829007580357 90 21.12712219066108 96 12.154587669739751 101 12.154587669739751
+		 105.99999982993198 12.154587669739751 106 12.154587669739751;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kix[7:17]"  0.81036887417078263 0.89794799375534473 
-		0.95040872159686096 1 0.88506735030066275 1 0.95783350686957847 1 1 1 1;
+		0.95040872159686096 1 0.84120989192656392 1 0.95783350686957835 1 1 1 1;
 	setAttr -s 18 ".kiy[7:17]"  -0.58592003530787229 -0.44010157976398057 
-		-0.31100363649420643 0 0.465462979657635 0 -0.28732381230577703 0 0 0 0;
+		-0.31100363649420643 0 0.54070871800341691 0 -0.28732381230577703 0 0 0 0;
 	setAttr -s 18 ".kox[7:17]"  0.81036887417078263 0.89794799375534473 
-		0.95040872159686085 1 0.88506735030066286 1 0.95783350686957835 1 1 1 1;
+		0.95040872159686085 1 0.84120989192656392 1 0.95783350686957835 1 1 1 1;
 	setAttr -s 18 ".koy[7:17]"  -0.58592003530787229 -0.44010157976398062 
-		-0.31100363649420643 0 0.46546297965763506 0 -0.28732381230577703 0 0 0 0;
+		-0.31100363649420643 0 0.54070871800341702 0 -0.28732381230577697 0 0 0 0;
 createNode animCurveTA -n "L_Eyelid_Upper_Ctrl_rotateX";
 	rename -uid "93A5CB0B-4297-9630-6112-F89B0201E5ED";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7968,7 +7717,7 @@ createNode animCurveTA -n "L_Eyelid_Upper_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7983,7 +7732,7 @@ createNode animCurveTA -n "L_Eyelid_Upper_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -7998,7 +7747,7 @@ createNode animCurveTA -n "R_Upper_Corner_Lips_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8013,7 +7762,7 @@ createNode animCurveTA -n "R_Upper_Corner_Lips_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8028,7 +7777,7 @@ createNode animCurveTA -n "R_Upper_Corner_Lips_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8043,28 +7792,28 @@ createNode animCurveTA -n "L_reverse_foot_outer_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_reverse_foot_outer_Ctrl_rotateY";
 	rename -uid "5758E2D4-4C68-976E-DC53-4B8B92306CD0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_reverse_foot_outer_Ctrl_rotateZ";
 	rename -uid "41E4C3A0-47A1-C94F-6DAE-27B6EDD93BB7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "Jaw_Ctrl_rotateX";
 	rename -uid "1926DEA1-4287-F240-DED6-08916306980E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8079,7 +7828,7 @@ createNode animCurveTA -n "Jaw_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8094,7 +7843,7 @@ createNode animCurveTA -n "Jaw_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8107,75 +7856,75 @@ createNode animCurveTA -n "Upper_Lip_Ctrl_rotateX";
 	rename -uid "86B07630-4BAC-F155-1E45-6B9E3F7FC1BC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
+	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 17 ".kix[7:16]"  1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[7:16]"  0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 17 ".kox[7:16]"  1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 17 ".koy[7:16]"  0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Upper_Lip_Ctrl_rotateY";
 	rename -uid "A5D3F60B-4279-44C3-50F2-9D98E5BBA7E4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
+	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 17 ".kix[7:16]"  1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[7:16]"  0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 17 ".kox[7:16]"  1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 17 ".koy[7:16]"  0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "Upper_Lip_Ctrl_rotateZ";
 	rename -uid "AFD0CCE9-4322-026F-8541-B2A60FC11965";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
+	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 17 ".kix[7:16]"  1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 17 ".kiy[7:16]"  0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 17 ".kox[7:16]"  1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 17 ".koy[7:16]"  0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "L_Knee_PV_Ctrl_rotateX";
 	rename -uid "1DE0630A-484D-ECE7-074E-E4BEE70E292E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_Knee_PV_Ctrl_rotateY";
 	rename -uid "5038B1B2-4248-B990-38EC-09A8400D8404";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_Knee_PV_Ctrl_rotateZ";
 	rename -uid "00F15170-44E6-8221-D4A8-409D1EBBA71E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_Eyelid_Lower_Ctrl_rotateX";
 	rename -uid "2B38257F-4256-55B4-AD53-15B12E6F3DD3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8190,7 +7939,7 @@ createNode animCurveTA -n "L_Eyelid_Lower_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8205,7 +7954,7 @@ createNode animCurveTA -n "L_Eyelid_Lower_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8220,7 +7969,7 @@ createNode animCurveTA -n "L_Brow_2_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8235,7 +7984,7 @@ createNode animCurveTA -n "L_Brow_2_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8250,7 +7999,7 @@ createNode animCurveTA -n "L_Brow_2_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8266,39 +8015,43 @@ createNode animCurveTA -n "R_Hand_IK_Ctrl_rotateX";
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 8.6163689220196868
 		 9.6901437074829939 26.806481090727914 14.535221768707483 44.852987110735818 17.563381462585035 55.144761100925997
 		 23.014088775510203 55.144761100925997 27.859159693877551 55.144761100925997 38 55.144761100925997
-		 47 55.144761100925997 52 55.144761100925997 61 55.144761100925997 85 55.144761100925997
-		 86 41.315187222755263 100 39.089451074692121 105 58.338719221882549 109.99999982993198 77.58798736907292
-		 110 77.58798736907292;
+		 47 55.144761100925997 52 55.144761100925997 61 55.144761100925997 81 55.144761100925997
+		 82 23.120376856278806 83 31.301585200542288 96 39.089451074692121 101 59.661603720495179
+		 106 106.13320526878701;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
-	setAttr -s 17 ".kix[7:16]"  1 1 1 1 1 0.9806218383998021 1 0.52700581870757612 
-		1 1;
-	setAttr -s 17 ".kiy[7:16]"  0 0 0 0 0 -0.19591020916070831 0 0.84986167524389367 
-		0 0;
-	setAttr -s 17 ".kox[7:16]"  1 1 1 1 1 0.98062183839980199 1 0.52700581870757612 
-		1 1;
-	setAttr -s 17 ".koy[7:16]"  0 0 0 0 0 -0.19591020916070828 0 0.84986167524389367 
-		0 0;
+	setAttr -s 17 ".kix[7:16]"  1 1 1 1 1 1 0.90229826835352755 0.83462183893106945 
+		0.33545199938748255 1;
+	setAttr -s 17 ".kiy[7:16]"  0 0 0 0 0 0 0.43111232286519691 0.55082337094509715 
+		0.94205729980025121 0;
+	setAttr -s 17 ".kox[7:16]"  1 1 1 1 1 1 0.90229826835352744 0.83462183893106945 
+		0.3354519993874826 1;
+	setAttr -s 17 ".koy[7:16]"  0 0 0 0 0 0 0.43111232286519696 0.55082337094509726 
+		0.94205729980025132 0;
 createNode animCurveTA -n "R_Hand_IK_Ctrl_rotateY";
 	rename -uid "00807F5B-48A0-8C33-BD17-2DB4C592A5E2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  0 0 4.8450717687074834 32.807921238916748
+	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 32.807921238916748
 		 9.6901437074829939 102.06908829885209 14.535221768707483 170.78345667147218 17.563381462585035 209.97069592906718
 		 23.014088775510203 209.97069592906718 27.859159693877551 209.97069592906718 38 209.97069592906718
-		 47 209.97069592906718 52 209.97069592906718 61 209.97069592906718 85 209.97069592906718
-		 100 131.28363180159604 105 159.35990181234499 109.99999982993198 171.58642141208523
-		 110 171.58642141208523;
-	setAttr -s 16 ".kit[7:15]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 16 ".kot[7:15]"  1 18 18 18 18 18 18 18 
-		18;
-	setAttr -s 16 ".kix[7:15]"  1 1 1 1 1 1 0.50964606722969186 1 1;
-	setAttr -s 16 ".kiy[7:15]"  0 0 0 0 0 0 0.86038415034059545 0 0;
-	setAttr -s 16 ".kox[7:15]"  1 1 1 1 1 1 0.50964606722969186 1 1;
-	setAttr -s 16 ".koy[7:15]"  0 0 0 0 0 0 0.86038415034059557 0 0;
+		 47 209.97069592906718 52 209.97069592906718 61 209.97069592906718 81 209.97069592906718
+		 82 255.52585849479908 83 217.41738251450218 96 131.28363180159604 101 193.47320640779492
+		 106 215.9158533618054;
+	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
+		18 18;
+	setAttr -s 17 ".kix[7:16]"  1 1 1 1 1 1 0.25977567699668869 1 0.2714877100470332 
+		1;
+	setAttr -s 17 ".kiy[7:16]"  0 0 0 0 0 0 -0.96566898968586123 0 0.96244190645119876 
+		0;
+	setAttr -s 17 ".kox[7:16]"  1 1 1 1 1 1 0.25977567699668869 1 0.27148771004703315 
+		1;
+	setAttr -s 17 ".koy[7:16]"  0 0 0 0 0 0 -0.96566898968586123 0 0.96244190645119876 
+		0;
 createNode animCurveTA -n "R_Hand_IK_Ctrl_rotateZ";
 	rename -uid "7DD64FF4-43CF-9456-7659-68A1994BBF0B";
 	setAttr ".tan" 18;
@@ -8306,75 +8059,78 @@ createNode animCurveTA -n "R_Hand_IK_Ctrl_rotateZ";
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 -16.137537233165109
 		 9.6901437074829939 -50.205671392069227 14.535221768707483 -84.00484659708728 17.563381462585035 -103.2802382922567
 		 23.014088775510203 -103.2802382922567 27.859159693877551 -103.2802382922567 38 -103.2802382922567
-		 47 -103.2802382922567 52 -103.2802382922567 61 -103.2802382922567 85 -103.2802382922567
-		 86 -111.21409673918876 100 -124.54054631199691 105 -164.5352346321651 109.99999982993198 -190.40485954395808
-		 110 -190.40485954395808;
+		 47 -103.2802382922567 52 -103.2802382922567 61 -103.2802382922567 81 -103.2802382922567
+		 82 -112.01605480474862 83 -106.87975773265293 96 -124.54054631199691 101 -144.50635585672242
+		 106 -168.02848821013268;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
-	setAttr -s 17 ".kix[7:16]"  1 1 1 1 1 0.85987369254611612 0.64794850974015894 
-		0.34076686847159932 1 1;
-	setAttr -s 17 ".kiy[7:16]"  0 0 0 0 0 -0.51050683919719186 -0.76168413973608984 
-		-0.94014782952047482 0 0;
-	setAttr -s 17 ".kox[7:16]"  1 1 1 1 1 0.85987369254611601 0.64794850974015894 
-		0.34076686847159926 1 1;
-	setAttr -s 17 ".koy[7:16]"  0 0 0 0 0 -0.51050683919719175 -0.76168413973608973 
-		-0.94014782952047471 0 0;
+	setAttr -s 17 ".kix[7:16]"  1 1 1 1 1 1 1 0.75234895367181331 0.48122022413338594 
+		1;
+	setAttr -s 17 ".kiy[7:16]"  0 0 0 0 0 0 0 -0.65876479255416176 -0.87659973527546409 
+		0;
+	setAttr -s 17 ".kox[7:16]"  1 1 1 1 1 1 1 0.7523489536718132 0.48122022413338589 
+		1;
+	setAttr -s 17 ".koy[7:16]"  0 0 0 0 0 0 0 -0.65876479255416176 -0.87659973527546409 
+		0;
 createNode animCurveTA -n "Spine_Top_Control_Joint_Ctrl_rotateX";
 	rename -uid "1D3403CB-4A8B-3877-B581-00955A488D85";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 19 ".ktv[0:18]"  0 0 1.7006802721088437e-07 0 4.8450717687074834 0
-		 14.535221768707483 1.2608887483467242 22 1.2608887483467242 23 -5.6633095661573787
+	setAttr -s 23 ".ktv[0:22]"  0 0 1.7006802721088437e-07 0 4.8450717687074834 0
+		 14.535221768707483 1.2608887483467242 17 1.2608887483467242 18 1.1899652311171138
+		 19 1.1190417138875035 22 1.1262932020262149 23 -4.6744899499753219 24 -8.6818627530972119
 		 33 -37.849531851976671 47 -7.4666636633252548 52 34.309701280560489 61 54.441877592591986
-		 66 38.246352802654762 74 -13.423559748250437 84 -38.07077590123027 87 -72.31069317319492
-		 88 -33.62122401856071 96 -31.887725144226131 100 -25.279075764560133 105 0 110 77.050839010514451;
+		 66 38.246352802654762 72 -13.423559748250437 80 -38.07077590123027 83 -72.310693173194935
+		 84 -17.967806042197765 92 -31.887725144226131 96 -25.279075764560133 101 0 106 95.877112279450969;
 createNode animCurveTA -n "Spine_Top_Control_Joint_Ctrl_rotateY";
 	rename -uid "83C310F7-4D58-7B16-F6E2-EC96BB34F998";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 21 ".ktv[0:20]"  0 -8.2792881465560253 1.7006802721088437e-07 12.444227463694395
+	setAttr -s 25 ".ktv[0:24]"  0 -8.2792881465560253 1.7006802721088437e-07 12.444227463694395
 		 4.8450717687074834 12.444227463694395 9.6901437074829939 12.444227463694427 14.535221768707483 28.523156110768074
-		 22 28.523156110768074 23 22.030894078101888 33 0 47 0 52 0 61 0 66 0 74 0 84 0 87 0
-		 87.00000017006802 0 88 0 96 0 100 0 105 0 110 -32.233329937333785;
+		 17 28.523156110768074 18 18.32054271361233 19 8.1179293164565891 22 -10.388882391752086
+		 23 6.7105688102774748 24 22.836797989906252 33 0 47 0 52 0 61 0 66 0 72 0 80 0 83 0
+		 83.00000017006802 0 84 0 92 0 96 0 101 0 106 -32.233329937333785;
 createNode animCurveTA -n "Spine_Top_Control_Joint_Ctrl_rotateZ";
 	rename -uid "A1F5BC07-4AFA-7244-B4AA-3ABCBF9E4651";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 21 ".ktv[0:20]"  0 0 1.7006802721088437e-07 0 4.8450717687074834 0
-		 9.6901437074829939 0 14.535221768707483 -5.1357509798089955 22 -5.1357509798089955
-		 23 -15.85612888766099 33 0 47 0 52 0 61 0 66 0 74 0 84 0 87 0 87.00000017006802 0
-		 88 0 96 0 100 0 105 0 110 -29.227529487466047;
+	setAttr -s 25 ".ktv[0:24]"  0 0 1.7006802721088437e-07 0 4.8450717687074834 0
+		 9.6901437074829939 0 14.535221768707483 -5.1357509798089955 17 -5.1357509798089955
+		 18 -5.3578140870839848 19 -5.579877194358974 22 -5.941045762978229 23 -5.9179578550627561
+		 24 -4.3929885797341006 33 0 47 0 52 0 61 0 66 0 72 0 80 0 83 0 83.00000017006802 0
+		 84 0 92 0 96 0 101 0 106 -29.227529487466047;
 createNode animCurveTA -n "R_reverse_foot_toe_Ctrl_rotateX";
 	rename -uid "499012C1-419C-5756-E4B8-7BB2A0488A91";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 20.146068109447768 4.8450715986394561 0
 		 9.6901437074829939 0 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0
-		 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0
-		 100 0;
+		 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0
+		 96 0;
 createNode animCurveTA -n "R_reverse_foot_toe_Ctrl_rotateY";
 	rename -uid "86EC2379-4876-0A4E-AE2F-A18BD9CC3775";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_reverse_foot_toe_Ctrl_rotateZ";
 	rename -uid "D28D799D-42D7-DFF1-BC94-579BDE9A88CE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_Brow_2_Ctrl_rotateX";
 	rename -uid "45BCE68C-437B-C532-742B-CBB5F68BBB6C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8389,7 +8145,7 @@ createNode animCurveTA -n "R_Brow_2_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8404,7 +8160,7 @@ createNode animCurveTA -n "R_Brow_2_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8419,7 +8175,7 @@ createNode animCurveTA -n "R_Sneer_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8434,7 +8190,7 @@ createNode animCurveTA -n "R_Sneer_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8449,7 +8205,7 @@ createNode animCurveTA -n "R_Sneer_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8464,7 +8220,7 @@ createNode animCurveTA -n "L_Brow_3_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8479,7 +8235,7 @@ createNode animCurveTA -n "L_Brow_3_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8494,7 +8250,7 @@ createNode animCurveTA -n "L_Brow_3_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8511,76 +8267,70 @@ createNode animCurveTA -n "L_Foot_IK_Ctrl_rotateX";
 		 7.2676062925170068 35.183370911385047 14.535221428571429 63.277936004360569 17.563382142857144 30.598443781809927
 		 23.014088775510203 -4.7765376679351439 27.859159693877551 -46.177293578360477 43 29.558644384112313
 		 47 105.29458234658496 52 93.670289297049692 61 61.819726341323069 66 27.746017339872857
-		 83 -5.4397248314045585 92 -35.151498590273953 96 -51.633373822141102 99.99999982993198 0
-		 100 0;
+		 79 -5.4397248314045585 88 -35.151498590273953 92 -51.633373822141102 95.99999982993198 0
+		 96 0;
 createNode animCurveTA -n "L_Foot_IK_Ctrl_rotateY";
 	rename -uid "D136F544-4EE2-87C8-B76D-F4BF957AE37F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 20 ".ktv[0:19]"  0 0 3 0 3.6338028911564626 0 4.8450715986394561 0
 		 9.6901416666666673 0 9.6901437074829939 0 14.535221428571429 0 17.563382142857144 0
-		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0
-		 99.99999982993198 0 100 0;
+		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0
+		 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_Foot_IK_Ctrl_rotateZ";
 	rename -uid "B5F062B0-4321-C628-A0AE-AA97507CB93D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 20 ".ktv[0:19]"  0 0 3 0 3.6338028911564626 0 4.8450715986394561 0
 		 9.6901416666666673 0 9.6901437074829939 0 14.535221428571429 0 17.563382142857144 0
-		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0
-		 99.99999982993198 0 100 0;
+		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0
+		 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_Lips_Pull_Ctrl_rotateX";
 	rename -uid "A058E957-4285-738D-3B0F-4FB0DB4700DD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTA -n "L_Lips_Pull_Ctrl_rotateY";
 	rename -uid "123FB4AB-4609-A72A-B406-5E9D01112390";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTA -n "L_Lips_Pull_Ctrl_rotateZ";
 	rename -uid "689A22DB-44C8-10B8-C07B-94841BAA28F3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTA -n "L_Upper_Outer_Lips_Ctrl_rotateX";
 	rename -uid "2A5508BC-4B78-90D8-DEC0-6B8EC6391702";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8595,7 +8345,7 @@ createNode animCurveTA -n "L_Upper_Outer_Lips_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8610,7 +8360,7 @@ createNode animCurveTA -n "L_Upper_Outer_Lips_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8625,7 +8375,7 @@ createNode animCurveTA -n "Hair_Ctrl_Jnt_2_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8640,7 +8390,7 @@ createNode animCurveTA -n "Hair_Ctrl_Jnt_2_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8655,7 +8405,7 @@ createNode animCurveTA -n "Hair_Ctrl_Jnt_2_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8670,7 +8420,7 @@ createNode animCurveTA -n "Lower_Middle_Lips_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8685,7 +8435,7 @@ createNode animCurveTA -n "Lower_Middle_Lips_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8700,7 +8450,7 @@ createNode animCurveTA -n "Lower_Middle_Lips_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8713,68 +8463,62 @@ createNode animCurveTA -n "R_Lips_Pull_Ctrl_rotateX";
 	rename -uid "22403556-460D-26BD-9DD3-E9B266EC6017";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTA -n "R_Lips_Pull_Ctrl_rotateY";
 	rename -uid "0BF2FABC-40CB-C86C-A89C-8298494531C4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTA -n "R_Lips_Pull_Ctrl_rotateZ";
 	rename -uid "7A92B256-4365-41E8-DCA5-18BF13CB79B5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTA -n "R_Knee_PV_Ctrl_rotateX";
 	rename -uid "7B86B9E1-4C07-D5EF-C6A0-65BF8B823A9C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_Knee_PV_Ctrl_rotateY";
 	rename -uid "87EF90BC-47A1-68E5-03A5-4599FB49FC4D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_Knee_PV_Ctrl_rotateZ";
 	rename -uid "96572FD6-4141-B38F-D8DD-28815594CFB8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_Foot_IK_Ctrl_rotateX";
 	rename -uid "A0EBB3A7-4BF7-7478-EC9D-3EBFE966E1D0";
 	setAttr ".tan" 18;
@@ -8783,28 +8527,28 @@ createNode animCurveTA -n "R_Foot_IK_Ctrl_rotateX";
 		 9.6901437074829939 62.193965963251685 14.535221428571429 81.932820859164991 17.563382142857144 81.932820859164991
 		 23.014088775510203 47.824671526295553 27.859159693877551 -36.863021239902807 43 38.87291672256999
 		 47 114.60885468504264 52 102.98456163550738 61 71.133998679780788 66 37.060289678330612
-		 83 3.8745475070531969 92 -25.837226251816212 96 -42.319101483683355 100 0.059733043691779342;
+		 79 3.8745475070531969 88 -25.837226251816212 92 -42.319101483683355 96 0.059733043691779342;
 createNode animCurveTA -n "R_Foot_IK_Ctrl_rotateY";
 	rename -uid "255BF63C-45B8-E944-2390-2D93B51BE095";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_Foot_IK_Ctrl_rotateZ";
 	rename -uid "6C0B5A3B-4FD0-2DEC-F203-2F907B2BD300";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_Cheek_Ctrl_rotateX";
 	rename -uid "CB844AB5-49D2-18E0-4C7A-C887F864A783";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8819,7 +8563,7 @@ createNode animCurveTA -n "L_Cheek_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8834,7 +8578,7 @@ createNode animCurveTA -n "L_Cheek_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8849,7 +8593,7 @@ createNode animCurveTA -n "R_Eyelid_Lower_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8864,7 +8608,7 @@ createNode animCurveTA -n "R_Eyelid_Lower_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8879,7 +8623,7 @@ createNode animCurveTA -n "R_Eyelid_Lower_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8894,28 +8638,28 @@ createNode animCurveTA -n "L_reverse_foot_toeTap_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_reverse_foot_toeTap_Ctrl_rotateY";
 	rename -uid "D68CD936-46CE-35C2-5062-A5ADCFAFDB57";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_reverse_foot_toeTap_Ctrl_rotateZ";
 	rename -uid "4804ECBB-4A67-F5F8-60D3-868A4ABD89F8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_Upper_Corner_Lips_Ctrl_rotateX";
 	rename -uid "454334A2-4C4A-3AEC-A85E-E4AF12F74E3A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8930,7 +8674,7 @@ createNode animCurveTA -n "L_Upper_Corner_Lips_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8945,7 +8689,7 @@ createNode animCurveTA -n "L_Upper_Corner_Lips_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8960,7 +8704,7 @@ createNode animCurveTA -n "R_Eye_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8975,7 +8719,7 @@ createNode animCurveTA -n "R_Eye_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -8990,7 +8734,7 @@ createNode animCurveTA -n "R_Eye_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -9005,93 +8749,52 @@ createNode animCurveTA -n "R_reverse_foot_heel_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_reverse_foot_heel_Ctrl_rotateY";
 	rename -uid "F64F4A59-421A-C3DE-3E3E-9DB9D84A57C0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_reverse_foot_heel_Ctrl_rotateZ";
 	rename -uid "758A6633-4A87-9BC8-AB61-ED9165C6F88B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_Clavicle_Jnt_Ctrl_rotateX";
 	rename -uid "2000060C-4781-8623-CA64-9A9C662F5996";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 19 ".ktv[0:18]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 -28.97018470660645 24 -28.535646560679485
-		 27.859159693877551 0 38 0 47 -8.8584620268305212 48 -11.245435670714809 52 -10.383657156330001
-		 61 -14.564090556930397 66 -13.096957856298308 83 -11.62982515566622 94 -12.949678845025428
-		 100 -13.306205953606579 105 -13.306205953606579 110 -15.104130512835701;
-	setAttr -s 19 ".kit[8:18]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 19 ".kot[8:18]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 19 ".kix[8:18]"  1 0.90465849502394358 1 1 1 0.99844301138389357 
-		1 0.99914800032092488 1 1 1;
-	setAttr -s 19 ".kiy[8:18]"  0 -0.4261373104775189 0 0 0 0.055781296315719729 
-		0 -0.041270733634100894 0 0 0;
-	setAttr -s 19 ".kox[8:18]"  1 0.90465849502394358 1 1 1 0.99844301138389369 
-		1 0.9991480003209251 1 1 1;
-	setAttr -s 19 ".koy[8:18]"  0 -0.42613731047751896 0 0 0 0.055781296315719729 
-		0 -0.041270733634100901 0 0 0;
+	setAttr -s 14 ".ktv[0:13]"  0 0 24 -14.321435845633872 47 -8.8584620268305212
+		 48 -11.245435670714809 52 -12.708235389527124 61 -14.564090556930397 66 -13.096957856298308
+		 79 -11.62982515566622 90 -12.949678845025428 96 -13.306205953606579 101 -13.306205953606579
+		 106 -15.104130512835701 109 -15.104130512835701 113.00000017006802 -17.385241924140129;
 createNode animCurveTA -n "L_Clavicle_Jnt_Ctrl_rotateY";
 	rename -uid "D6944541-4D50-AD20-64FD-57B6700F2901";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 -29.053440169489637
-		 24 -27.106840112052353 27.859159693877551 -29.901521135669551 38 -29.901521135669551
-		 48 -38.497814615624669 52 -9.5464165177398748 61 2.7100148848286216 66 5.3075509575779174
-		 83 9.2315119730950617 94 29.446493032270666 100 6.5457743254298002 105 6.5457743254298002
-		 110 -28.657294304512259;
-	setAttr -s 18 ".kit[8:17]"  1 18 18 18 18 18 18 18 
-		18 18;
-	setAttr -s 18 ".kot[8:17]"  1 18 18 18 18 18 18 18 
-		18 18;
-	setAttr -s 18 ".kix[8:17]"  1 1 0.60160342099984598 0.91381656009688739 
-		0.99237904024437662 0.96041410279669903 1 1 1 1;
-	setAttr -s 18 ".kiy[8:17]"  0 0 0.79879491976431727 0.40612719004357734 
-		0.12322272713931542 0.27857629322900346 0 0 0 0;
-	setAttr -s 18 ".kox[8:17]"  1 1 0.60160342099984598 0.91381656009688739 
-		0.99237904024437651 0.96041410279669892 1 1 1 1;
-	setAttr -s 18 ".koy[8:17]"  0 0 0.79879491976431738 0.40612719004357728 
-		0.12322272713931541 0.2785762932290034 0 0 0 0;
+	setAttr -s 12 ".ktv[0:11]"  0 -29.901521135669551 24 -20.897339732868215
+		 48 -38.497814615624669 61 2.7100148848286216 66 5.3075509575779174 79 9.2315119730950617
+		 90 29.446493032270666 96 6.5457743254298002 101 6.5457743254298002 106 -28.657294304512259
+		 109 -28.657294304512259 113.00000017006802 -31.066748340343121;
 createNode animCurveTA -n "L_Clavicle_Jnt_Ctrl_rotateZ";
 	rename -uid "D0177ABA-40DF-E2C5-7AA7-BFA9A643D17F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 20 ".ktv[0:19]"  0 0 4.8450717687074834 0 9.6901437074829939 0
-		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 32.199311328606555 24 37.695854031026272
-		 27.859159693877551 16.341869267472404 38 16.341869267472404 46.999999829931973 21.17465655467884
-		 47 7.1100230062183627 48 8.7268556012432974 52 -0.039159363931245646 61 -3.8268830195732537
-		 66 9.9837282432293257 83 23.794339506031871 94 20.592632689112637 100 11.6200981681913
-		 105 11.6200981681913 110 20.539532445215443;
-	setAttr -s 20 ".kit[8:19]"  1 18 18 18 18 18 18 18 
-		18 18 18 18;
-	setAttr -s 20 ".kot[8:19]"  1 18 18 18 18 18 18 18 
-		18 18 18 18;
-	setAttr -s 20 ".kix[8:19]"  0.81036887417078196 1 1 1 0.92703128561563508 
-		1 0.88506735030066297 1 0.95783350686957858 1 1 1;
-	setAttr -s 20 ".kiy[8:19]"  -0.58592003530787329 0 0 0 -0.37498399364482615 
-		0 0.46546297965763467 0 -0.2873238123057763 0 0 0;
-	setAttr -s 20 ".kox[8:19]"  0.81036887417078196 1 1 1 0.92703128561563497 
-		1 0.88506735030066297 1 0.95783350686957858 1 1 1;
-	setAttr -s 20 ".koy[8:19]"  -0.58592003530787318 0 0 0 -0.37498399364482615 
-		0 0.46546297965763461 0 -0.28732381230577636 0 0 0;
+	setAttr -s 13 ".ktv[0:12]"  0 16.341869267472404 24 42.543492473692048
+		 46.999999829931973 21.17465655467884 52 16.921305759279065 61 -3.8268830195732537
+		 66 9.9837282432293257 79 23.794339506031871 90 20.592632689112637 96 11.6200981681913
+		 101 11.6200981681913 106 20.539532445215443 109 20.539532445215443 113.00000017006802 11.472021353423859;
 createNode animCurveTA -n "R_Arm_01_Jnt_IK_Ctrl_rotateX";
 	rename -uid "7E31727F-427A-7B8E-A47D-608F58837AA1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -9106,7 +8809,7 @@ createNode animCurveTA -n "R_Arm_01_Jnt_IK_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -9121,7 +8824,7 @@ createNode animCurveTA -n "R_Arm_01_Jnt_IK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -9136,7 +8839,7 @@ createNode animCurveTA -n "R_Brow_3_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -9151,7 +8854,7 @@ createNode animCurveTA -n "R_Brow_3_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -9166,7 +8869,7 @@ createNode animCurveTA -n "R_Brow_3_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -9181,7 +8884,7 @@ createNode animCurveTA -n "L_Brow_1_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -9196,7 +8899,7 @@ createNode animCurveTA -n "L_Brow_1_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -9211,7 +8914,7 @@ createNode animCurveTA -n "L_Brow_1_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -9226,118 +8929,106 @@ createNode animCurveTA -n "L_reverse_foot_toe_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 16 ".ktv[0:15]"  0 0 4.8450715986394561 19.549965718815955
 		 9.6901437074829939 0 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0
-		 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 83 0 92 0 106 0 110 22.748647990648497;
+		 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 79 0 88 0 102 0 106 22.748647990648497;
 createNode animCurveTA -n "L_reverse_foot_toe_Ctrl_rotateY";
 	rename -uid "5F34ACD5-43F9-5677-13F9-AB90C0E57ECD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 15 ".ktv[0:14]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 106 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 102 0;
 createNode animCurveTA -n "L_reverse_foot_toe_Ctrl_rotateZ";
 	rename -uid "66BA2D18-4D23-6A06-060F-2C8BDA2D4319";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 15 ".ktv[0:14]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 106 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 102 0;
 createNode animCurveTA -n "Lower_Lip_Ctrl_rotateX";
 	rename -uid "D5A79B77-45B9-2E79-6E4C-F995160849A6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTA -n "Lower_Lip_Ctrl_rotateY";
 	rename -uid "DCAD9500-44A1-D248-F148-3D9FF4B37DD7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTA -n "Lower_Lip_Ctrl_rotateZ";
 	rename -uid "E2DCACE1-4127-538E-580C-6E9E2D58D412";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTA -n "L_Brow_Cluster_Ctrl_rotateX";
 	rename -uid "5CA81336-49EA-68F3-BE77-B98A592D83CB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTA -n "L_Brow_Cluster_Ctrl_rotateY";
 	rename -uid "1AE9EB3D-412B-8650-18E4-D9887B6A8B9F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTA -n "L_Brow_Cluster_Ctrl_rotateZ";
 	rename -uid "1272870E-49AC-61F4-7F40-AAAE40191661";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 13 ".ktv[0:12]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0;
+	setAttr -s 13 ".kit[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kot[7:12]"  1 18 18 18 18 18;
+	setAttr -s 13 ".kix[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".kiy[7:12]"  0 0 0 0 0 0;
+	setAttr -s 13 ".kox[7:12]"  1 1 1 1 1 1;
+	setAttr -s 13 ".koy[7:12]"  0 0 0 0 0 0;
 createNode animCurveTA -n "Face_Controls_rotateX";
 	rename -uid "0233D4A5-468B-640C-C489-EC8AF755E5B6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -9352,7 +9043,7 @@ createNode animCurveTA -n "Face_Controls_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -9367,7 +9058,7 @@ createNode animCurveTA -n "Face_Controls_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -9382,49 +9073,49 @@ createNode animCurveTA -n "R_reverse_foot_toeTap_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_reverse_foot_toeTap_Ctrl_rotateY";
 	rename -uid "128D0F0B-4FD5-42F7-F76C-7C9CB54DD235";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_reverse_foot_toeTap_Ctrl_rotateZ";
 	rename -uid "72BC386F-4785-9323-6E11-248B597B148E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_Hip_IK_Ctrl_rotateX";
 	rename -uid "57CDB3FF-44AD-26BE-74F3-85AC59ED0574";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_Hip_IK_Ctrl_rotateY";
 	rename -uid "5D890123-48C0-B089-5E93-ACAFB9583B25";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_Hip_IK_Ctrl_rotateZ";
 	rename -uid "7DA32FC3-4139-680E-6803-B4B2297DD6CD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "Mouth_Move_Ctrl_rotateX";
 	rename -uid "5EB30AE1-42D2-ADEA-48B1-5EB2E678998D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -9439,7 +9130,7 @@ createNode animCurveTA -n "Mouth_Move_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -9454,7 +9145,7 @@ createNode animCurveTA -n "Mouth_Move_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 94 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 90 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -9469,21 +9160,21 @@ createNode animCurveTA -n "L_reverse_foot_inner_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_reverse_foot_inner_Ctrl_rotateY";
 	rename -uid "2FC7F05A-4EE8-26B9-EC0D-E0A3979F3EA2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_reverse_foot_inner_Ctrl_rotateZ";
 	rename -uid "0F1113EA-4662-AE09-8B5A-2BBEBFF09617";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_Middle_01_Jnt_Ctrl_rotateX";
 	rename -uid "082110D0-4BCB-EFE1-2513-87AA201DE27B";
 	setAttr ".tan" 18;
@@ -9713,227 +9404,242 @@ createNode animCurveTA -n "R_Middle_02_Jnt_Ctrl_rotateX";
 	rename -uid "5E05CEA4-464B-3E23-E1AB-719497BCD219";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Middle_02_Jnt_Ctrl_rotateY";
 	rename -uid "B0B5D1A6-43F9-63A6-71AF-65A239BA28E8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Middle_02_Jnt_Ctrl_rotateZ";
 	rename -uid "9872D90E-416D-1B06-C87D-65A1E868CF6B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 54.396653728708472;
+	setAttr -s 4 ".ktv[0:3]"  0 54.396653728708472 104 54.396653728708472
+		 108 0 118 9.4410885719710507;
 createNode animCurveTA -n "R_Pointer_01_Jnt_Ctrl_rotateX";
 	rename -uid "9267AAFE-4B73-93C4-3C58-F5BEEA672155";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Pointer_01_Jnt_Ctrl_rotateY";
 	rename -uid "A7D3595A-4158-8092-E0BC-8981579A121E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Pointer_01_Jnt_Ctrl_rotateZ";
 	rename -uid "CEA2D38B-4E86-E1F7-8FAF-6F861D496CCD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 54.396653728708472;
+	setAttr -s 4 ".ktv[0:3]"  0 54.396653728708472 104 54.396653728708472
+		 108 0 118 9.4410885719710507;
 createNode animCurveTA -n "R_Pinky_01_Jnt_Ctrl_rotateX";
 	rename -uid "B74BBD4A-4A4A-B840-E966-EC995A9A6F2D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Pinky_01_Jnt_Ctrl_rotateY";
 	rename -uid "441E2FF7-42FC-58A8-E834-C5A18BECC6B0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Pinky_01_Jnt_Ctrl_rotateZ";
 	rename -uid "5564A966-400B-9069-DCD8-BE82655FCECA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 54.396653728708472;
+	setAttr -s 4 ".ktv[0:3]"  0 54.396653728708472 104 54.396653728708472
+		 108 0 118 9.4410885719710507;
 createNode animCurveTA -n "R_Pointer_02_Jnt_Ctrl_rotateX";
 	rename -uid "6BE01961-4324-4578-F01E-82B2146525BA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Pointer_02_Jnt_Ctrl_rotateY";
 	rename -uid "C16F7FB2-4BCA-660F-4D97-32A1E41C30F0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Pointer_02_Jnt_Ctrl_rotateZ";
 	rename -uid "924E8A8D-4EE0-AD86-8596-55889128B984";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 54.396653728708472;
+	setAttr -s 4 ".ktv[0:3]"  0 54.396653728708472 104 54.396653728708472
+		 108 0 118 9.4410885719710507;
 createNode animCurveTA -n "R_Ring_01_Jnt_Ctrl_rotateX";
 	rename -uid "F740E11C-44FF-2FBF-F8D5-97B23BAF5909";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Ring_01_Jnt_Ctrl_rotateY";
 	rename -uid "B6B493EE-4CCD-8F1A-647B-94B720FC78E9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Ring_01_Jnt_Ctrl_rotateZ";
 	rename -uid "09C95593-4CBB-1D19-D12F-A8B94051C40B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 54.396653728708472;
+	setAttr -s 4 ".ktv[0:3]"  0 54.396653728708472 104 54.396653728708472
+		 108 0 118 9.4410885719710507;
 createNode animCurveTA -n "R_Pinky_02_Jnt_Ctrl_rotateX";
 	rename -uid "9D26A67A-4E3C-D485-CDE9-DCBD49342A6C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Pinky_02_Jnt_Ctrl_rotateY";
 	rename -uid "53FF83F0-4141-3B5A-18A2-7D800F982BD3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Pinky_02_Jnt_Ctrl_rotateZ";
 	rename -uid "9100AC1E-4A32-2A33-5878-7793331712D8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 54.396653728708472;
+	setAttr -s 4 ".ktv[0:3]"  0 54.396653728708472 104 54.396653728708472
+		 108 0 118 9.4410885719710507;
 createNode animCurveTA -n "R_Pointer_03_Jnt_Ctrl_rotateX";
 	rename -uid "86DBA8EF-4AFA-DCD7-8E70-D2B342CCED07";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Pointer_03_Jnt_Ctrl_rotateY";
 	rename -uid "76D2F981-48DE-A086-E314-6F89A70FA04E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Pointer_03_Jnt_Ctrl_rotateZ";
 	rename -uid "B02EBDEA-492C-C2FC-036F-2F9B0C83B72E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 54.396653728708472;
+	setAttr -s 4 ".ktv[0:3]"  0 54.396653728708472 104 54.396653728708472
+		 108 0 118 9.4410885719710507;
 createNode animCurveTA -n "R_Middle_03_Jnt_Ctrl_rotateX";
 	rename -uid "1186E566-4602-9A57-F897-59AE2D258D1E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Middle_03_Jnt_Ctrl_rotateY";
 	rename -uid "26711B55-44D8-F951-92DF-A0929BDE3C0C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Middle_03_Jnt_Ctrl_rotateZ";
 	rename -uid "98B3213D-457A-92D8-4BFC-CC92548C7587";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 54.396653728708472;
+	setAttr -s 4 ".ktv[0:3]"  0 54.396653728708472 104 54.396653728708472
+		 108 0 118 9.4410885719710507;
 createNode animCurveTA -n "R_Middle_01_Jnt_Ctrl_rotateX";
 	rename -uid "B2560235-4F98-62BC-12CC-5C9B9B133467";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Middle_01_Jnt_Ctrl_rotateY";
 	rename -uid "4E2349A3-4C36-01E2-98A7-C5A29F30639F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Middle_01_Jnt_Ctrl_rotateZ";
 	rename -uid "3B635F63-492D-52EB-19CE-239284BC4DF7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 54.396653728708472;
+	setAttr -s 4 ".ktv[0:3]"  0 54.396653728708472 104 54.396653728708472
+		 108 0 118 9.4410885719710507;
 createNode animCurveTA -n "R_Ring_03_Jnt_Ctrl_rotateX";
 	rename -uid "B697A6D4-4FA4-BF06-8316-658A522CCA71";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Ring_03_Jnt_Ctrl_rotateY";
 	rename -uid "3EA07AD5-40E5-EA18-A80E-81A5E857BDB3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Ring_03_Jnt_Ctrl_rotateZ";
 	rename -uid "036C2122-4CAE-6CD5-BED5-8CBBEED79182";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 54.396653728708472;
+	setAttr -s 4 ".ktv[0:3]"  0 54.396653728708472 104 54.396653728708472
+		 108 0 118 9.4410885719710507;
 createNode animCurveTA -n "R_Pinky_03_Jnt_Ctrl_rotateX";
 	rename -uid "30C82DC2-47CB-0AC0-46F0-BBB61FCB80D7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Pinky_03_Jnt_Ctrl_rotateY";
 	rename -uid "E38D2047-4317-C7F0-D42D-5DBBF56CC3FE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Pinky_03_Jnt_Ctrl_rotateZ";
 	rename -uid "2FE64710-4F49-3F86-91B2-30AD75ED7A80";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 54.396653728708472;
+	setAttr -s 4 ".ktv[0:3]"  0 54.396653728708472 104 54.396653728708472
+		 108 0 118 9.4410885719710507;
 createNode animCurveTA -n "R_Ring_02_Jnt_Ctrl_rotateX";
 	rename -uid "3B317AC8-4B9F-0806-7E65-918FB259F692";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Ring_02_Jnt_Ctrl_rotateY";
 	rename -uid "750D6723-4C58-B545-B7B6-70AE667A2AA9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Ring_02_Jnt_Ctrl_rotateZ";
 	rename -uid "5F30EDFD-4B7D-9E11-AA70-2D9C987DFF7D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 54.396653728708472;
+	setAttr -s 4 ".ktv[0:3]"  0 54.396653728708472 104 54.396653728708472
+		 108 0 118 9.4410885719710507;
 createNode animCurveTA -n "R_Thumb_01_Jnt_Ctrl_rotateX";
 	rename -uid "F7C7B96C-4F67-4D6E-476A-2896D1282780";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Thumb_01_Jnt_Ctrl_rotateY";
 	rename -uid "C09B5AB3-4A3D-CD85-2A8B-4ABAB6D2BBD4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Thumb_01_Jnt_Ctrl_rotateZ";
 	rename -uid "36209262-4AAA-8970-3E7E-C2B14C91DF47";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 39.0596036542129;
+	setAttr -s 4 ".ktv[0:3]"  0 39.0596036542129 104 39.0596036542129
+		 108 0 118 9.4410885719710507;
 createNode animCurveTA -n "R_Thumb_02_Jnt_Ctrl_rotateX";
 	rename -uid "F122B3F3-4C4F-D8B0-DC6F-16B0C7ADABD3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Thumb_02_Jnt_Ctrl_rotateY";
 	rename -uid "13AB3239-4A1F-5EE0-B0CF-4DBE0FD36EB1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Thumb_02_Jnt_Ctrl_rotateZ";
 	rename -uid "5586FA44-4F1F-9E3C-92E2-00BE2CF23772";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 12.960960620177641;
+	setAttr -s 4 ".ktv[0:3]"  0 12.960960620177641 104 12.960960620177641
+		 108 0 118 9.4410885719710507;
 createNode animCurveTA -n "R_Thumb_03_Jnt_Ctrl_rotateX";
 	rename -uid "34A1723B-477E-4CA5-CBE0-B98B2975C408";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Thumb_03_Jnt_Ctrl_rotateY";
 	rename -uid "2CB83E25-4BB8-7597-8058-0EBF0CD8AAD4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 104 0 108 0 118 0;
 createNode animCurveTA -n "R_Thumb_03_Jnt_Ctrl_rotateZ";
 	rename -uid "7D24F33D-4EEE-0999-29F3-8CA97BA8AB06";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 54.421065001531161;
+	setAttr -s 4 ".ktv[0:3]"  0 54.421065001531161 104 54.421065001531161
+		 108 0 118 9.4410885719710507;
 createNode animCurveTL -n "R_Middle_02_Jnt_Ctrl_translateX";
 	rename -uid "796EB710-442B-173D-3A6C-5BB17DBA89EC";
 	setAttr ".tan" 18;
@@ -10388,116 +10094,119 @@ createNode animCurveTA -n "L_Arm_01_Jnt_FK_Ctrl_rotateX";
 	rename -uid "2AEB1F6E-49FC-DFB8-DDC7-D789193DDE9D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 -78.094267595872125 4.8450715986394561 9.527667247684148
-		 9.6901437074829939 -22.886663425480229 14.535221428571429 -60.954180127735114 17.563382142857144 -94.626973820256396
-		 23.014088775510203 -94.626973820256396 27.859159693877551 -94.626973820256396 43 -94.626973820256396
+	setAttr -s 14 ".ktv[0:13]"  0 -108.30623573005964 18 -109.7365410783034
+		 23 -101.26285531737979 27.859159693877551 -94.626973820256396 43 -94.626973820256396
 		 47 -94.626973820256396 52 -94.626973820256396 61 -94.626973820256396 66 -94.626973820256396
-		 83 -94.626973820256396 92 -94.626973820256396 96 -94.626973820256396 99.99999982993198 -94.626973820256396
-		 100 -94.626973820256396;
+		 79 -94.626973820256396 88 -94.626973820256396 92 -94.626973820256396 95.99999982993198 -94.626973820256396
+		 96 -94.626973820256396;
 createNode animCurveTA -n "L_Arm_01_Jnt_FK_Ctrl_rotateY";
 	rename -uid "47216620-4865-C304-BEAB-09996DF376B1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 -69.346409304311237 4.8450715986394561 5.0943174299150096
-		 9.6901437074829939 51.808613561782771 14.535221428571429 37.173770058328316 17.563382142857144 2.587349038955554
-		 23.014088775510203 2.587349038955554 27.859159693877551 2.587349038955554 43 2.587349038955554
+	setAttr -s 14 ".ktv[0:13]"  0 -39.937898020071678 18 36.543831916598215
+		 23 -12.303621180349237 27.859159693877551 2.587349038955554 43 2.587349038955554
 		 47 2.587349038955554 52 2.587349038955554 61 2.587349038955554 66 2.587349038955554
-		 83 2.587349038955554 92 2.587349038955554 96 2.587349038955554 99.99999982993198 2.587349038955554
-		 100 2.587349038955554;
+		 79 2.587349038955554 88 2.587349038955554 92 2.587349038955554 95.99999982993198 2.587349038955554
+		 96 2.587349038955554;
+	setAttr -s 14 ".kit[2:13]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 14 ".kot[2:13]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 14 ".kix[2:13]"  0.12459771697841629 1 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 14 ".kiy[2:13]"  -0.99220734170019453 0 0 0 0 0 0 0 0 0 
+		0 0;
+	setAttr -s 14 ".kox[2:13]"  0.12459774699135365 1 1 1 1 1 1 1 1 1 1 
+		1;
+	setAttr -s 14 ".koy[2:13]"  -0.99220733793128069 0 0 0 0 0 0 0 0 0 
+		0 0;
 createNode animCurveTA -n "L_Arm_01_Jnt_FK_Ctrl_rotateZ";
 	rename -uid "7627F8EB-4F44-273C-F68A-40AA1025A2A1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 1.8288648643633347 4.8450715986394561 -77.840704518372078
-		 9.6901437074829939 -65.094816930332144 14.535221428571429 -25.925888900308447 17.563382142857144 3.6009778177149734
-		 23.014088775510203 3.6009778177149734 27.859159693877551 3.6009778177149734 43 3.6009778177149734
+	setAttr -s 14 ".ktv[0:13]"  0 33.773088334525312 18 59.754059393697673
+		 23 27.171350204125073 27.859159693877551 3.6009778177149734 43 3.6009778177149734
 		 47 3.6009778177149734 52 3.6009778177149734 61 3.6009778177149734 66 3.6009778177149734
-		 83 3.6009778177149734 92 3.6009778177149734 96 3.6009778177149734 99.99999982993198 3.6009778177149734
-		 100 3.6009778177149734;
+		 79 3.6009778177149734 88 3.6009778177149734 92 3.6009778177149734 95.99999982993198 3.6009778177149734
+		 96 3.6009778177149734;
 createNode animCurveTA -n "R_Arm_01_Jnt_FK_Ctrl_rotateX";
 	rename -uid "5B20EE1B-4731-087D-A1D6-48B581F55E13";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 -0.52682966252625474 4.8450715986394561 -25.854835169252514
-		 9 -74.935907686359414 15 -145.76699236092122 16 -143.17076650938293 17.563382142857144 -143.45869703798499
-		 23.014088775510203 -143.45869703798499 27.859159693877551 -143.45869703798499 43 -124.02668984273774
-		 47 -124.02668984273774 52 -124.02668984273774 61 -124.02668984273774 66 -124.02668984273774
-		 83 -124.02668984273774 92 -124.02668984273774 96 -124.02668984273774 99.99999982993198 -124.02668984273774
-		 100 -124.02668984273774;
+	setAttr -s 19 ".ktv[0:18]"  0 -0.52682966252625474 4.8450715986394561 -25.854835169252514
+		 9 -74.935907686359414 15 -145.76699236092122 16 -143.17076650938293 17 -120.44941253101506
+		 17.563382142857144 -143.45869703798499 23.014088775510203 -143.45869703798499 27.859159693877551 -143.45869703798499
+		 43 -124.02668984273774 47 -124.02668984273774 52 -124.02668984273774 61 -124.02668984273774
+		 66 -124.02668984273774 79 -124.02668984273774 88 -124.02668984273774 92 -124.02668984273774
+		 95.99999982993198 -124.02668984273774 96 -124.02668984273774;
 createNode animCurveTA -n "R_Arm_01_Jnt_FK_Ctrl_rotateY";
 	rename -uid "D6AD5EAF-4E8A-1829-A494-CFBB8C470455";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 38.787530738726481 5 -32.297237895437782
-		 9 -62.468519168138677 15 -11.513431422475886 16 -9.2488750583598094 17.563382142857144 -17.742457176114975
-		 23.014088775510203 -17.742457176114975 27.859159693877551 -17.742457176114975 43 -17.742457176114975
-		 47 -17.742457176114975 52 -17.742457176114975 61 -17.742457176114975 66 -17.742457176114975
-		 83 -17.742457176114975 92 -17.742457176114975 96 -17.742457176114975 99.99999982993198 -17.742457176114975
-		 100 -17.742457176114975;
+	setAttr -s 19 ".ktv[0:18]"  0 38.787530738726481 5 -32.297237895437782
+		 9 -62.468519168138677 15 -11.513431422475886 16 -9.2488750583598094 17 2.814498910710804
+		 17.563382142857144 -17.742457176114975 23.014088775510203 -17.742457176114975 27.859159693877551 -17.742457176114975
+		 43 -17.742457176114975 47 -17.742457176114975 52 -17.742457176114975 61 -17.742457176114975
+		 66 -17.742457176114975 79 -17.742457176114975 88 -17.742457176114975 92 -17.742457176114975
+		 95.99999982993198 -17.742457176114975 96 -17.742457176114975;
 createNode animCurveTA -n "R_Arm_01_Jnt_FK_Ctrl_rotateZ";
 	rename -uid "6F6913CB-4BB1-5C07-47BA-33B9B4619EFC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  0 -64.036362824138251 4.8450715986394561 -82.376751775837619
-		 9 -49.204393621287679 17.563382142857144 49.259473548385202 23.014088775510203 49.259473548385202
-		 27.859159693877551 49.259473548385202 43 49.259473548385202 47 49.259473548385202
-		 52 49.259473548385202 61 49.259473548385202 66 49.259473548385202 83 49.259473548385202
-		 92 49.259473548385202 96 49.259473548385202 99.99999982993198 49.259473548385202
-		 100 49.259473548385202;
+	setAttr -s 17 ".ktv[0:16]"  0 -64.036362824138251 4.8450715986394561 -82.376751775837619
+		 9 -49.204393621287679 17 32.867333686998698 17.563382142857144 49.259473548385202
+		 23.014088775510203 49.259473548385202 27.859159693877551 49.259473548385202 43 49.259473548385202
+		 47 49.259473548385202 52 49.259473548385202 61 49.259473548385202 66 49.259473548385202
+		 79 49.259473548385202 88 49.259473548385202 92 49.259473548385202 95.99999982993198 49.259473548385202
+		 96 49.259473548385202;
 createNode animCurveTA -n "L_Arm_02_Jnt_FK_Ctrl_rotateX";
 	rename -uid "69893F36-4F50-EB5E-95B1-CC80536C0EBF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
-		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+	setAttr -s 14 ".ktv[0:13]"  0 0 11 0 23 -2.4599607765817413 27.859159693877551 0
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_Arm_02_Jnt_FK_Ctrl_rotateY";
 	rename -uid "21693265-4EFA-C284-8ECD-B59FA4BC2B15";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 -15.781849448647581 4.8450715986394561 -15.781849448647581
-		 9.6901437074829939 -15.781849448647581 11 -15.781849448647581 17.563382142857144 -69.72981757062162
-		 23.014088775510203 -69.72981757062162 27.859159693877551 -69.72981757062162 43 -69.72981757062162
-		 47 -69.72981757062162 52 -69.72981757062162 61 -69.72981757062162 66 -69.72981757062162
-		 83 -69.72981757062162 92 -69.72981757062162 96 -69.72981757062162 99.99999982993198 -69.72981757062162
-		 100 -69.72981757062162;
+	setAttr -s 14 ".ktv[0:13]"  0 0 11 -53.724721624509385 23 -35.359928965750996
+		 27.859159693877551 -69.72981757062162 43 -69.72981757062162 47 -69.72981757062162
+		 52 -69.72981757062162 61 -69.72981757062162 66 -69.72981757062162 79 -69.72981757062162
+		 88 -69.72981757062162 92 -69.72981757062162 95.99999982993198 -69.72981757062162
+		 96 -69.72981757062162;
 createNode animCurveTA -n "L_Arm_02_Jnt_FK_Ctrl_rotateZ";
 	rename -uid "14A7CEFF-435D-2CE5-E384-D7AD4576BEB1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
-		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+	setAttr -s 14 ".ktv[0:13]"  0 0 11 0 23 9.6362504757673673 27.859159693877551 0
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "L_Hand_FK_Ctrl_rotateX";
 	rename -uid "1346AB3B-4D0B-B930-8A8C-6C846A7EF86A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
-		 14.535221428571429 -6.3920929171907632 17.563382142857144 -45.750954495403775 23.014088775510203 -45.750954495403775
-		 27.859159693877551 -45.750954495403775 43 -45.750954495403775 47 -45.750954495403775
-		 52 -45.750954495403775 61 -45.750954495403775 66 -45.750954495403775 83 -45.750954495403775
-		 92 -45.750954495403775 96 -45.750954495403775 99.99999982993198 -45.750954495403775
-		 100 -45.750954495403775;
+	setAttr -s 14 ".ktv[0:13]"  0 0 18 -33.056002542282712 23 -49.152238597347726
+		 27.859159693877551 -106.98063045182053 43 -45.750954495403775 47 -45.750954495403775
+		 52 -45.750954495403775 61 -45.750954495403775 66 -45.750954495403775 79 -45.750954495403775
+		 88 -45.750954495403775 92 -45.750954495403775 95.99999982993198 -45.750954495403775
+		 96 -45.750954495403775;
 createNode animCurveTA -n "L_Hand_FK_Ctrl_rotateY";
 	rename -uid "75FCB7FC-4B97-C837-632A-B29BCB663622";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 33.207021798759094
-		 14.535221428571429 3.6958394423831145 17.563382142857144 -31.588685663282291 23.014088775510203 -31.588685663282291
+	setAttr -s 14 ".ktv[0:13]"  0 0 18 6.3283755404653945 23 19.155831816952475
 		 27.859159693877551 -31.588685663282291 43 -31.588685663282291 47 -31.588685663282291
-		 52 -31.588685663282291 61 -31.588685663282291 66 -31.588685663282291 83 -31.588685663282291
-		 92 -31.588685663282291 96 -31.588685663282291 99.99999982993198 -31.588685663282291
-		 100 -31.588685663282291;
+		 52 -31.588685663282291 61 -31.588685663282291 66 -31.588685663282291 79 -31.588685663282291
+		 88 -31.588685663282291 92 -31.588685663282291 95.99999982993198 -31.588685663282291
+		 96 -31.588685663282291;
 createNode animCurveTA -n "L_Hand_FK_Ctrl_rotateZ";
 	rename -uid "53438F9A-4C30-E042-C5A2-38BC4B87B35F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
-		 14.535221428571429 1.1349308564273961 17.563382142857144 11.953607420359647 23.014088775510203 11.953607420359647
+	setAttr -s 14 ".ktv[0:13]"  0 0 18 47.376205819833515 23 -2.4052780502283242
 		 27.859159693877551 11.953607420359647 43 11.953607420359647 47 11.953607420359647
-		 52 11.953607420359647 61 11.953607420359647 66 11.953607420359647 83 11.953607420359647
-		 92 11.953607420359647 96 11.953607420359647 99.99999982993198 11.953607420359647
-		 100 11.953607420359647;
+		 52 11.953607420359647 61 11.953607420359647 66 11.953607420359647 79 11.953607420359647
+		 88 11.953607420359647 92 11.953607420359647 95.99999982993198 11.953607420359647
+		 96 11.953607420359647;
 createNode animCurveTU -n "L_Foot_IK_Ctrl_Follow";
 	rename -uid "D6EB44F3-40DA-6F52-A898-91A4FC839626";
 	setAttr ".tan" 9;
@@ -10508,159 +10217,150 @@ createNode animCurveTA -n "R_Arm_02_Jnt_FK_Ctrl_rotateX";
 	rename -uid "8F6C5061-4AF2-B15D-A273-18B2BDD22977";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
-		 15 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0
-		 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450715986394561 0 9.6901437074829939 0
+		 15 0 17 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0 43 0 47 0
+		 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_Arm_02_Jnt_FK_Ctrl_rotateY";
 	rename -uid "33B43D1A-4212-EAEF-9C8F-5AB282D1869B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 -51.472863554775607 4.8450715986394561 -51.472863554775607
-		 14 -61.876992282753925 16 -2.5820828308977579 17.563382142857144 -17.854644704039806
+		 14 -61.876992282753925 17 -23.388683188278243 17.563382142857144 -17.854644704039806
 		 23.014088775510203 -17.854644704039806 27.859159693877551 -17.854644704039806 43 -17.854644704039806
 		 47 -17.854644704039806 52 -17.854644704039806 61 -17.854644704039806 66 -17.854644704039806
-		 83 -17.854644704039806 92 -17.854644704039806 96 -17.854644704039806 99.99999982993198 -17.854644704039806
-		 100 -17.854644704039806;
+		 79 -17.854644704039806 88 -17.854644704039806 92 -17.854644704039806 95.99999982993198 -17.854644704039806
+		 96 -17.854644704039806;
 createNode animCurveTA -n "R_Arm_02_Jnt_FK_Ctrl_rotateZ";
 	rename -uid "F6789A56-4E2A-BFBA-FDB6-CA9FD979DE1F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
-		 15 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0
-		 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450715986394561 0 9.6901437074829939 0
+		 15 0 17 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0 43 0 47 0
+		 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_Hand_FK_Ctrl_translateX";
 	rename -uid "DCF49704-4312-1817-19CD-B79FDBE24894";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_Hand_FK_Ctrl_translateY";
 	rename -uid "64CF58DD-413A-2EA2-DF40-278E5AC007A7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_Hand_FK_Ctrl_translateZ";
 	rename -uid "C01CC451-4ABC-4D72-8EA8-099438A2B090";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_Arm_01_Jnt_FK_Ctrl_translateX";
 	rename -uid "78143BFB-4B10-16D1-A812-F5B62F8521FF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 16 ".ktv[0:15]"  4.8450715986394561 0 10 0 15 0 17.563382142857144 0
-		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0
-		 99.99999982993198 0 100 0;
+		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0
+		 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_Arm_01_Jnt_FK_Ctrl_translateY";
 	rename -uid "4BED214F-40D4-3734-3D8D-12BE90366FE6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 16 ".ktv[0:15]"  4.8450715986394561 0 10 0 15 0 17.563382142857144 0
-		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0
-		 99.99999982993198 0 100 0;
+		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0
+		 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_Arm_01_Jnt_FK_Ctrl_translateZ";
 	rename -uid "4B29C1E5-44D0-3AC2-323C-BCA754F6961C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 16 ".ktv[0:15]"  4.8450715986394561 0 10 0 15 0 17.563382142857144 0
-		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0
-		 99.99999982993198 0 100 0;
+		 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0
+		 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_Arm_02_Jnt_FK_Ctrl_translateX";
 	rename -uid "C66B1D40-42C1-DDAB-4614-44BB1EFD2107";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 15 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0
-		 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_Arm_02_Jnt_FK_Ctrl_translateY";
 	rename -uid "0656D18D-4412-7C95-12CE-97866C7FED42";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 15 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0
-		 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "R_Arm_02_Jnt_FK_Ctrl_translateZ";
 	rename -uid "B88BDCFF-41BB-0501-C5C6-2DB852557E81";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 15 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0 43 0 47 0 52 0
-		 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_Hand_FK_Ctrl_translateX";
 	rename -uid "4D485AA6-4A46-2AF4-175F-F4A2B5CEEC2A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
-		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+	setAttr -s 11 ".ktv[0:10]"  27.859159693877551 0 43 0 47 0 52 0 61 0
+		 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_Hand_FK_Ctrl_translateY";
 	rename -uid "C460E6D5-4144-D62A-79D2-16BB44EF1A5B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
-		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+	setAttr -s 11 ".ktv[0:10]"  27.859159693877551 0 43 0 47 0 52 0 61 0
+		 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_Hand_FK_Ctrl_translateZ";
 	rename -uid "0A94B20D-49C3-6189-29A7-4397A3689438";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
-		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+	setAttr -s 11 ".ktv[0:10]"  27.859159693877551 0 43 0 47 0 52 0 61 0
+		 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_Arm_02_Jnt_FK_Ctrl_translateX";
 	rename -uid "D3A38C69-4195-567D-44DD-6C9D735AA4B0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
-		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+	setAttr -s 11 ".ktv[0:10]"  27.859159693877551 0 43 0 47 0 52 0 61 0
+		 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_Arm_02_Jnt_FK_Ctrl_translateY";
 	rename -uid "A56EED5F-45CB-CE9F-695B-3F964B525C35";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
-		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+	setAttr -s 11 ".ktv[0:10]"  27.859159693877551 0 43 0 47 0 52 0 61 0
+		 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_Arm_02_Jnt_FK_Ctrl_translateZ";
 	rename -uid "0E257A1E-466C-40EE-0F84-3D8C6C09817D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
-		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+	setAttr -s 11 ".ktv[0:10]"  27.859159693877551 0 43 0 47 0 52 0 61 0
+		 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_Arm_01_Jnt_FK_Ctrl_translateX";
 	rename -uid "4BC6AF78-4786-282D-73E0-63B09EDC9C75";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  4.8450715986394561 0 9.6901437074829939 0
-		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+	setAttr -s 11 ".ktv[0:10]"  27.859159693877551 0 43 0 47 0 52 0 61 0
+		 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_Arm_01_Jnt_FK_Ctrl_translateY";
 	rename -uid "82DD1C11-45EC-5EFC-B380-FEA52DC58B0C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  4.8450715986394561 0 9.6901437074829939 0
-		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+	setAttr -s 11 ".ktv[0:10]"  27.859159693877551 0 43 0 47 0 52 0 61 0
+		 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTL -n "L_Arm_01_Jnt_FK_Ctrl_translateZ";
 	rename -uid "4D3FE324-42D6-EA41-4D40-C980363680D9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 16 ".ktv[0:15]"  4.8450715986394561 0 9.6901437074829939 0
-		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+	setAttr -s 11 ".ktv[0:10]"  27.859159693877551 0 43 0 47 0 52 0 61 0
+		 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_Hand_FK_Ctrl_rotateX";
 	rename -uid "6AE78931-48B5-4177-23E0-11A6B0EB8182";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTA -n "R_Hand_FK_Ctrl_rotateY";
 	rename -uid "3395B990-4A4B-7F1A-C127-3AA6A36E4E2A";
 	setAttr ".tan" 18;
@@ -10669,32 +10369,34 @@ createNode animCurveTA -n "R_Hand_FK_Ctrl_rotateY";
 		 9.6901437074829939 24.686525752202474 14.535221428571429 24.686525752202474 17.563382142857144 24.686525752202474
 		 23.014088775510203 24.686525752202474 27.859159693877551 24.686525752202474 43 24.686525752202474
 		 47 24.686525752202474 52 24.686525752202474 61 24.686525752202474 66 24.686525752202474
-		 83 24.686525752202474 92 24.686525752202474 96 24.686525752202474 99.99999982993198 24.686525752202474
-		 100 24.686525752202474;
+		 79 24.686525752202474 88 24.686525752202474 92 24.686525752202474 95.99999982993198 24.686525752202474
+		 96 24.686525752202474;
 createNode animCurveTA -n "R_Hand_FK_Ctrl_rotateZ";
 	rename -uid "8C3E8C23-4AFB-138E-A20C-36BF311B103D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450715986394561 0 9.6901437074829939 0
 		 14.535221428571429 0 17.563382142857144 0 23.014088775510203 0 27.859159693877551 0
-		 43 0 47 0 52 0 61 0 66 0 83 0 92 0 96 0 99.99999982993198 0 100 0;
+		 43 0 47 0 52 0 61 0 66 0 79 0 88 0 92 0 95.99999982993198 0 96 0;
 createNode animCurveTU -n "Transform_Control_Left_Arm_IKFK";
 	rename -uid "DEFADF2F-48E5-89E0-F8EB-27819179A757";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  14.535220068027211 1 17.563381292517008 1
 		 23.014088265306121 0;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTU -n "Transform_Control_Right_Arm_IKFK";
 	rename -uid "8F856304-478A-D78C-2B30-15B399CA0ADE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  14.535220068027211 1 17.563382482993198 0;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTU -n "Transform_Control_Left_Leg_IKFK";
 	rename -uid "DA5EC77C-428F-2046-C50A-57BBA3643697";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  3 0 4 1 27.859159013605442 1 38 1 100 1
-		 105 1 108 0;
+	setAttr -s 7 ".ktv[0:6]"  3 0 4 1 27.859159013605442 1 38 1 96 1 101 1
+		 104 0;
 	setAttr -s 7 ".kit[0:6]"  2 2 18 1 18 2 2;
 	setAttr -s 7 ".kot[0:6]"  5 5 18 1 18 5 5;
 	setAttr -s 7 ".kix[3:6]"  1 1 1 0.12403473458920847;
@@ -10705,8 +10407,8 @@ createNode animCurveTU -n "Transform_Control_Right_Leg_IKFK";
 	rename -uid "E868D888-4046-4172-F8DF-BC9541CEBEF5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  3 0 4 1 27.859159013605442 1 38 1 100 1
-		 105 1 108 0;
+	setAttr -s 7 ".ktv[0:6]"  3 0 4 1 27.859159013605442 1 38 1 96 1 101 1
+		 104 0;
 	setAttr -s 7 ".kit[0:6]"  2 2 18 1 18 2 2;
 	setAttr -s 7 ".kot[0:6]"  5 5 18 1 18 5 5;
 	setAttr -s 7 ".kix[3:6]"  1 1 1 0.12403473458920847;
@@ -10717,7 +10419,7 @@ createNode animCurveTU -n "Spine_Top_Control_Joint_Ctrl_Follow";
 	rename -uid "67072149-48BC-9E8C-899C-8A9D7A4B9170";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  22 2 22.000000170068027 0 87 0 87.00000017006802 2;
+	setAttr -s 4 ".ktv[0:3]"  22 2 22.000000170068027 0 83 0 83.00000017006802 2;
 	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTA -n "L_Knee_Ctrl_rotateX";
 	rename -uid "C4AFFE65-486E-C55D-E819-0C88CD0DB805";
@@ -10725,7 +10427,7 @@ createNode animCurveTA -n "L_Knee_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 21 ".ktv[0:20]"  0 0 4 0 4.8450717687074834 0 9 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 33 0 38 0 47 0 52 0 61 0 66 0 83 0 86 0 100 0 105 0 106 0 107 0;
+		 33 0 38 0 47 0 52 0 61 0 66 0 79 0 82 0 96 0 101 0 102 0 103 0;
 	setAttr -s 21 ".kit[10:20]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 21 ".kot[10:20]"  1 18 18 18 18 18 18 18 
@@ -10740,7 +10442,7 @@ createNode animCurveTA -n "L_Knee_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 21 ".ktv[0:20]"  0 0 4 0 4.8450717687074834 0 9 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 33 0 38 0 47 0 52 0 61 0 66 0 83 0 86 0 100 0 105 0 106 0 107 0;
+		 33 0 38 0 47 0 52 0 61 0 66 0 79 0 82 0 96 0 101 0 102 0 103 0;
 	setAttr -s 21 ".kit[10:20]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 21 ".kot[10:20]"  1 18 18 18 18 18 18 18 
@@ -10753,79 +10455,81 @@ createNode animCurveTA -n "L_Knee_Ctrl_rotateZ";
 	rename -uid "2D1B9D07-4019-5E85-B371-99B69353000B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  0 -64.634052292708574 4 -20.237179568526123
+	setAttr -s 14 ".ktv[0:13]"  0 -64.634052292708574 4 -20.237179568526123
 		 9 -61.345066234546259 23.014088775510203 -64.634052292708574 33 -77.84623570747641
 		 47 -49.452934512465575 52 -34.271816732222597 61 -56.819300446262382 66 -83.460918677922933
-		 83 -98.622858256141399 86 3.0666087694497581 100 -38.815375636266822 105 -38.815375636266822
-		 106 -45.212721601450184 107 -92.153302661538163;
+		 79 -98.622858256141399 82 3.0666087694497581 96 -38.815375636266822 101 -41.625216172500295
+		 103 -83.50054730878783;
 createNode animCurveTA -n "R_Knee_Ctrl_rotateX";
 	rename -uid "217A5E6F-480F-AF18-50C7-5991F8F589B0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 20 ".ktv[0:19]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 21 ".ktv[0:20]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 33 0 38 0 47 0 52 0 61 0 66 0 83 0 86 0 100 0 105 0 107 0 109.99999982993198 0 110 0;
-	setAttr -s 20 ".kit[8:19]"  1 18 18 18 18 18 18 18 
-		18 18 18 18;
-	setAttr -s 20 ".kot[8:19]"  1 18 18 18 18 18 18 18 
-		18 18 18 18;
-	setAttr -s 20 ".kix[8:19]"  1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 20 ".kiy[8:19]"  0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 20 ".kox[8:19]"  1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 20 ".koy[8:19]"  0 0 0 0 0 0 0 0 0 0 0 0;
+		 33 0 38 0 47 0 52 0 61 0 66 0 79 0 82 0 96 0 97 0 101 0 103 0 105.99999982993198 0
+		 106 0;
+	setAttr -s 21 ".kit[8:20]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18;
+	setAttr -s 21 ".kot[8:20]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18;
+	setAttr -s 21 ".kix[8:20]"  1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 21 ".kiy[8:20]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 21 ".kox[8:20]"  1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 21 ".koy[8:20]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "R_Knee_Ctrl_rotateY";
 	rename -uid "BA5B9733-4A29-53AA-EE05-2A843D5EBD0C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 20 ".ktv[0:19]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 21 ".ktv[0:20]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 33 0 38 0 47 0 52 0 61 0 66 0 83 0 86 0 100 0 105 0 107 0 109.99999982993198 0 110 0;
-	setAttr -s 20 ".kit[8:19]"  1 18 18 18 18 18 18 18 
-		18 18 18 18;
-	setAttr -s 20 ".kot[8:19]"  1 18 18 18 18 18 18 18 
-		18 18 18 18;
-	setAttr -s 20 ".kix[8:19]"  1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 20 ".kiy[8:19]"  0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 20 ".kox[8:19]"  1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 20 ".koy[8:19]"  0 0 0 0 0 0 0 0 0 0 0 0;
+		 33 0 38 0 47 0 52 0 61 0 66 0 79 0 82 0 96 0 97 0 101 0 103 0 105.99999982993198 0
+		 106 0;
+	setAttr -s 21 ".kit[8:20]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18;
+	setAttr -s 21 ".kot[8:20]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18;
+	setAttr -s 21 ".kix[8:20]"  1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 21 ".kiy[8:20]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 21 ".kox[8:20]"  1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 21 ".koy[8:20]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "R_Knee_Ctrl_rotateZ";
 	rename -uid "272571B8-46AC-83BB-6E42-0CA55C20CCA3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 -90.055874813295063 4.8450717687074834 -90.055874813295063
+	setAttr -s 18 ".ktv[0:17]"  0 -90.055874813295063 4.8450717687074834 -90.055874813295063
 		 9.6901437074829939 -90.055874813295063 14.535221768707483 -90.055874813295063 17.563381462585035 -90.055874813295063
 		 23.014088775510203 -90.055874813295063 33 -103.2680582280629 47 -74.874757033051992
-		 52 -59.693639252808971 61 -82.241122966848764 66 -108.88274119850921 83 -124.04468077672766
-		 86 -22.355213751136642 104 -97.412191351628792 107 -59.940792048457901 109.99999982993198 -126.00355088848619
-		 110 -126.00355088848619;
+		 52 -59.693639252808971 61 -82.241122966848764 66 -108.88274119850921 79 -124.04468077672766
+		 82 -22.355213751136642 90 -44.19227051583394 97 -72.197896414343404 103 -41.537641852902667
+		 105.99999982993198 -126.00355088848619 106 -126.00355088848619;
 createNode animCurveTA -n "R_Hip_FK_Ctrl_rotateX";
 	rename -uid "2C967CD8-4906-0791-7970-B88C74AA4303";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  0 0 4 -9.0530016384185927 27.859159693877551 0
-		 33 0 38 0 47 0 52 0 61 0 66 0 83 0 87 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 15 ".kit[4:14]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 15 ".kot[4:14]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 15 ".kix[4:14]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 15 ".kiy[4:14]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 15 ".kox[4:14]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 15 ".koy[4:14]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 16 ".ktv[0:15]"  0 0 4 -9.0530016384185927 27.859159693877551 0
+		 33 0 38 0 47 0 52 0 61 0 66 0 79 0 83 0 91 0 96 0 101 0 105.99999982993198 0 106 0;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 16 ".kox[4:15]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "R_Hip_FK_Ctrl_rotateY";
 	rename -uid "4A58158D-4D31-00B6-F467-5DAA483D128A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 15 ".ktv[0:14]"  0 0 4 25.852170082027289 27.859159693877551 0
-		 33 0 38 0 47 0 52 0 61 0 66 0 83 0 87 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 15 ".kit[4:14]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 15 ".kot[4:14]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 15 ".kix[4:14]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 15 ".kiy[4:14]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 15 ".kox[4:14]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 15 ".koy[4:14]"  0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 16 ".ktv[0:15]"  0 0 4 25.852170082027289 27.859159693877551 0
+		 33 0 38 0 47 0 52 0 61 0 66 0 79 0 83 0 91 0 96 0 101 0 105.99999982993198 0 106 0;
+	setAttr -s 16 ".kit[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kot[4:15]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 16 ".kix[4:15]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 16 ".kiy[4:15]"  0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 16 ".kox[4:15]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 16 ".koy[4:15]"  0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "R_Hip_FK_Ctrl_rotateZ";
 	rename -uid "FAAAC0EA-4273-65C5-203B-5F970F588F91";
 	setAttr ".tan" 18;
@@ -10833,20 +10537,20 @@ createNode animCurveTA -n "R_Hip_FK_Ctrl_rotateZ";
 	setAttr -s 15 ".ktv[0:14]"  0 13.943739229827944 4 77.404480857289471
 		 27.859159693877551 13.943739229827944 33 18.896517579473635 38 13.943739229827944
 		 47 -2.761410585798691 52 -30.89742040058243 61 -54.641420765114901 66 -56.335410970156438
-		 83 75.676333778195186 87 2.4403355922426049 100 23.902757478363934 105 75.444638472790288
-		 109.99999982993198 75.444638472790288 110 75.444638472790288;
+		 79 75.676333778195186 83 -18.546285663264733 91 -14.209940330574927 101 71.160252979965762
+		 105.99999982993198 71.160252979965762 106 71.160252979965762;
 	setAttr -s 15 ".kit[4:14]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 15 ".kot[4:14]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 15 ".kix[4:14]"  1 0.59761328173735462 0.54157256905408868 
-		0.92008359377724525 1 1 1 0.50726678076626908 1 1 1;
+		0.92008359377724525 1 1 1 0.82648370544933292 1 1 1;
 	setAttr -s 15 ".kiy[4:14]"  0 -0.80178448818314585 -0.84065400281456715 
-		-0.3917220704299787 0 0 0 0.86178907693879825 0 0 0;
+		-0.3917220704299787 0 0 0 0.56296064216492114 0 0 0;
 	setAttr -s 15 ".kox[4:14]"  1 0.59761328173735462 0.54157256905408868 
-		0.92008359377724513 1 1 1 0.50726678076626908 1 1 1;
+		0.92008359377724513 1 1 1 0.82648370544933292 1 1 1;
 	setAttr -s 15 ".koy[4:14]"  0 -0.80178448818314574 -0.84065400281456715 
-		-0.3917220704299787 0 0 0 0.86178907693879825 0 0 0;
+		-0.3917220704299787 0 0 0 0.56296064216492114 0 0 0;
 createNode animCurveTA -n "R_Foot_FK_Ctrl_rotateX";
 	rename -uid "03105A0E-4F9D-AAB2-D8A9-84BE457F4327";
 	setAttr ".tan" 18;
@@ -10855,19 +10559,19 @@ createNode animCurveTA -n "R_Foot_FK_Ctrl_rotateX";
 		 9.6901437074829939 20.282006544456333 14.535221768707483 20.282006544456333 17.563381462585035 20.282006544456333
 		 23.014088775510203 20.282006544456333 27.859159693877551 20.282006544456333 38 20.282006544456333
 		 47 20.282006544456333 52 20.282006544456333 61 20.282006544456333 66 20.282006544456333
-		 83 20.282006544456333 92 44.835220380417177 100 8.8672395034232192 105 -2.5475275376099384
-		 107 16.155925488152661 109.99999982993198 -2.5475275376099384 110 -2.5475275376099384;
+		 79 20.282006544456333 88 44.835220380417177 96 8.8672395034232192 101 16.722800342464559
+		 103 16.155925488152661 105.99999982993198 -2.5475275376099384 106 -2.5475275376099384;
 	setAttr -s 19 ".kit[7:18]"  1 18 18 18 18 18 18 18 
 		18 18 18 18;
 	setAttr -s 19 ".kot[7:18]"  1 18 18 18 18 18 18 18 
 		18 18 18 18;
-	setAttr -s 19 ".kix[7:18]"  1 1 1 1 1 1 1 0.5479193370822959 1 1 1 
+	setAttr -s 19 ".kix[7:18]"  1 1 1 1 1 1 1 1 1 0.94202946830347067 1 
 		1;
-	setAttr -s 19 ".kiy[7:18]"  0 0 0 0 0 0 0 -0.83653117099800722 0 0 
+	setAttr -s 19 ".kiy[7:18]"  0 0 0 0 0 0 0 0 0 -0.33553014894027083 
 		0 0;
-	setAttr -s 19 ".kox[7:18]"  1 1 1 1 1 1 1 0.5479193370822959 1 1 1 
+	setAttr -s 19 ".kox[7:18]"  1 1 1 1 1 1 1 1 1 0.94202946830347067 1 
 		1;
-	setAttr -s 19 ".koy[7:18]"  0 0 0 0 0 0 0 -0.83653117099800733 0 0 
+	setAttr -s 19 ".koy[7:18]"  0 0 0 0 0 0 0 0 0 -0.33553014894027089 
 		0 0;
 createNode animCurveTA -n "R_Foot_FK_Ctrl_rotateY";
 	rename -uid "ED56B32F-4798-C38A-6560-D8A0DF8B187C";
@@ -10875,7 +10579,7 @@ createNode animCurveTA -n "R_Foot_FK_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 19 ".ktv[0:18]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 92 0 100 0 105 0 107 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 88 0 96 0 101 0 103 0 105.99999982993198 0 106 0;
 	setAttr -s 19 ".kit[7:18]"  1 18 18 18 18 18 18 18 
 		18 18 18 18;
 	setAttr -s 19 ".kot[7:18]"  1 18 18 18 18 18 18 18 
@@ -10890,7 +10594,7 @@ createNode animCurveTA -n "R_Foot_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 19 ".ktv[0:18]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 92 0 100 0 105 0 107 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 88 0 96 0 101 0 103 0 105.99999982993198 0 106 0;
 	setAttr -s 19 ".kit[7:18]"  1 18 18 18 18 18 18 18 
 		18 18 18 18;
 	setAttr -s 19 ".kot[7:18]"  1 18 18 18 18 18 18 18 
@@ -10903,123 +10607,119 @@ createNode animCurveTA -n "L_Foot_FK_Ctrl_rotateX";
 	rename -uid "D3B2CD0B-4B74-1858-BC89-7DBD0EF8B160";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 6.9439046061621115 4.8450717687074834 6.9439046061621115
+	setAttr -s 19 ".ktv[0:18]"  0 6.9439046061621115 4.8450717687074834 6.9439046061621115
 		 9.6901437074829939 6.9439046061621115 14.535221768707483 6.9439046061621115 17.563381462585035 6.9439046061621115
 		 23.014088775510203 6.9439046061621115 27.859159693877551 6.9439046061621115 38 6.9439046061621115
 		 47 6.9439046061621115 52 6.9439046061621115 61 6.9439046061621115 66 6.9439046061621115
-		 83 6.9439046061621115 92 31.497118442123014 100 28.613421593512861 105 0.94822009315585809
-		 109.99999982993198 0.94822009315585809 110 0.94822009315585809;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 0.91090630290957619 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 -0.41261326604898124 0 0 
-		0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 0.9109063029095763 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 -0.41261326604898124 0 0 
-		0;
+		 79 6.9439046061621115 88 31.497118442123014 96 28.613421593512861 101 -8.2164494115342848
+		 102 -8.2164494115342848 105.99999982993198 -8.2164494115342848 106 -8.2164494115342848;
+	setAttr -s 19 ".kit[7:18]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 19 ".kot[7:18]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 19 ".kix[7:18]"  1 1 1 1 1 1 1 0.91090630290957619 1 1 1 
+		1;
+	setAttr -s 19 ".kiy[7:18]"  0 0 0 0 0 0 0 -0.41261326604898124 0 0 
+		0 0;
+	setAttr -s 19 ".kox[7:18]"  1 1 1 1 1 1 1 0.9109063029095763 1 1 1 
+		1;
+	setAttr -s 19 ".koy[7:18]"  0 0 0 0 0 0 0 -0.41261326604898124 0 0 
+		0 0;
 createNode animCurveTA -n "L_Foot_FK_Ctrl_rotateY";
 	rename -uid "284BB239-45DA-956C-4A43-E89DF9ED3AB0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 19 ".ktv[0:18]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 92 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 88 0 96 0 101 0 102 0 105.99999982993198 0 106 0;
+	setAttr -s 19 ".kit[7:18]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 19 ".kot[7:18]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 19 ".kix[7:18]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".kiy[7:18]"  0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[7:18]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".koy[7:18]"  0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "L_Foot_FK_Ctrl_rotateZ";
 	rename -uid "CC39403F-4060-D10A-509B-C2A2A1EF1BCD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
+	setAttr -s 19 ".ktv[0:18]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 92 0 100 0 105 0 109.99999982993198 0 110 0;
-	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
-		18 18 18;
-	setAttr -s 18 ".kix[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".kiy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 18 ".kox[7:17]"  1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 18 ".koy[7:17]"  0 0 0 0 0 0 0 0 0 0 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 88 0 96 0 101 0 102 0 105.99999982993198 0 106 0;
+	setAttr -s 19 ".kit[7:18]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 19 ".kot[7:18]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 19 ".kix[7:18]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".kiy[7:18]"  0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 19 ".kox[7:18]"  1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 19 ".koy[7:18]"  0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "L_Hip_FK_Ctrl_rotateX";
 	rename -uid "FC87357E-45A0-D037-B975-21BAB1B77787";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  0 0 4 26.713651108021029 9 2.1569300300243559
+	setAttr -s 23 ".ktv[0:22]"  0 0 4 26.713651108021029 9 2.1569300300243559
 		 9.6901437074829939 0 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0
-		 27.859159693877551 0 33 0 38 0 47 0 52 0 61 0 66 0 83 0 87 0 100 0 105 0 106 0 107 0
-		 109.99999982993198 0 110 0;
-	setAttr -s 22 ".kit[9:21]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18;
-	setAttr -s 22 ".kot[9:21]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18;
-	setAttr -s 22 ".kix[9:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 22 ".kiy[9:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 22 ".kox[9:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 22 ".koy[9:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
+		 27.859159693877551 0 33 0 38 0 47 0 52 0 61 0 66 0 79 0 83 0 91 0 96 0 101 0 102 0
+		 103 0 105.99999982993198 0 106 0;
+	setAttr -s 23 ".kit[9:22]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 23 ".kot[9:22]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 23 ".kix[9:22]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 23 ".kiy[9:22]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 23 ".kox[9:22]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 23 ".koy[9:22]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "L_Hip_FK_Ctrl_rotateY";
 	rename -uid "7AD9BCDF-42D4-8F5B-52AB-2795418C2225";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 22 ".ktv[0:21]"  0 0 4 -2.4848083448933725e-17 9 14.87044184983017
+	setAttr -s 23 ".ktv[0:22]"  0 0 4 -2.4848083448933725e-17 9 14.87044184983017
 		 14 0 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 33 0 38 0 47 0 52 0 61 0 66 0 83 0 87 0 100 0 105 0 106 0 107 0 109.99999982993198 0
-		 110 0;
-	setAttr -s 22 ".kit[9:21]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18;
-	setAttr -s 22 ".kot[9:21]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18;
-	setAttr -s 22 ".kix[9:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 22 ".kiy[9:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
-	setAttr -s 22 ".kox[9:21]"  1 1 1 1 1 1 1 1 1 1 1 1 1;
-	setAttr -s 22 ".koy[9:21]"  0 0 0 0 0 0 0 0 0 0 0 0 0;
+		 33 0 38 0 47 0 52 0 61 0 66 0 79 0 83 0 91 0 96 0 101 0 102 0 103 0 105.99999982993198 0
+		 106 0;
+	setAttr -s 23 ".kit[9:22]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 23 ".kot[9:22]"  1 18 18 18 18 18 18 18 
+		18 18 18 18 18 18;
+	setAttr -s 23 ".kix[9:22]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 23 ".kiy[9:22]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+	setAttr -s 23 ".kox[9:22]"  1 1 1 1 1 1 1 1 1 1 1 1 1 1;
+	setAttr -s 23 ".koy[9:22]"  0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 createNode animCurveTA -n "L_Hip_FK_Ctrl_rotateZ";
 	rename -uid "54758E40-4085-98E9-F737-EDB6D2BD269D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 18 ".ktv[0:17]"  0 37.163243198865842 4 0.72530843271086254
+	setAttr -s 17 ".ktv[0:16]"  0 37.163243198865842 4 0.72530843271086254
 		 9 -11.780551788052319 27.859159693877551 37.163243198865842 33 42.116021548511512
 		 38 37.163243198865842 47 4.973408717045098 52 -44.841159630410345 61 -68.585159994942885
-		 66 -70.279150199984372 83 61.732594548367238 87 -9.3856410539361388 100 -5.4546482425551863
-		 105 28.422006313049618 106 37.412743704935778 107 64.330818333105881 109.99999982993198 28.422006313049618
-		 110 28.422006313049618;
-	setAttr -s 18 ".kit[5:17]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18;
-	setAttr -s 18 ".kot[5:17]"  1 18 18 18 18 18 18 18 
-		18 18 18 18 18;
-	setAttr -s 18 ".kix[5:17]"  1 0.37742605191137713 0.41366779614352539 
-		0.92008359377724902 1 1 1 0.9347876096111396 0.31692092790141213 0.13180586713533515 
-		1 1 1;
-	setAttr -s 18 ".kiy[5:17]"  0 -0.92603972665247491 -0.9104278963398249 
-		-0.39172207042997004 0 0 0 0.35520715775092671 0.94845196265182985 0.99127554866883638 
-		0 0 0;
-	setAttr -s 18 ".kox[5:17]"  1 0.37742605191137713 0.41366779614352528 
-		0.92008359377724891 1 1 1 0.9347876096111396 0.31692092790141208 0.13180586713533515 
-		1 1 1;
-	setAttr -s 18 ".koy[5:17]"  0 -0.92603972665247491 -0.91042789633982479 
-		-0.39172207042996998 0 0 0 0.35520715775092676 0.94845196265182974 0.99127554866883638 
-		0 0 0;
+		 66 -70.279150199984372 79 61.732594548367238 83 -30.372262309443482 91 -34.079578986259158
+		 101 41.476563095164515 103 67.518949166784296 105.99999982993198 28.422006313049618
+		 106 28.422006313049618;
+	setAttr -s 17 ".kit[5:16]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 17 ".kot[5:16]"  1 18 18 18 18 18 18 18 
+		18 18 18 18;
+	setAttr -s 17 ".kix[5:16]"  1 0.37742605191137713 0.41366779614352539 
+		0.92008359377724902 1 1 0.86415078249206068 1 0.2713890383067265 1 1 1;
+	setAttr -s 17 ".kiy[5:16]"  0 -0.92603972665247491 -0.9104278963398249 
+		-0.39172207042997004 0 0 -0.50323297300391512 0 0.96246973453036433 0 0 0;
+	setAttr -s 17 ".kox[5:16]"  1 0.37742605191137713 0.41366779614352528 
+		0.92008359377724891 1 1 0.86415078249206079 1 0.27138903830672645 1 1 1;
+	setAttr -s 17 ".koy[5:16]"  0 -0.92603972665247491 -0.91042789633982479 
+		-0.39172207042996998 0 0 -0.50323297300391523 0 0.96246973453036433 0 0 0;
 createNode animCurveTU -n "L_Hand_IK_Ctrl_Follow";
 	rename -uid "16433117-434A-1B3C-C4E4-A7A95DE0DE4A";
-	setAttr ".tan" 5;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  85 0 85.00000017006802 3 110 3 111 0 113 0;
-	setAttr -s 5 ".kit[0:4]"  9 9 9 9 1;
-	setAttr -s 5 ".kix[4]"  0.013887549490757815;
-	setAttr -s 5 ".kiy[4]"  -0.99990356333455566;
+	setAttr -s 4 ".ktv[0:3]"  81 0 81.00000017006802 3 106 3 107 0;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTU -n "R_Hand_IK_Ctrl_Follow";
 	rename -uid "2C49E2BC-47A1-CC0C-03FF-B28BF357AF03";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  85 0 85.00000017006802 3;
+	setAttr -s 2 ".ktv[0:1]"  81 0 81.00000017006802 3;
 	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTU -n "Pick2_Ctrl_Mount";
 	rename -uid "8D1BFACF-4CA9-6A4C-525E-B69E184C6E3B";
@@ -11039,7 +10739,7 @@ createNode animCurveTL -n "L_Hip_FK_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 16 ".ktv[0:15]"  0 0 9.6901437074829939 0 14.535221768707483 0
 		 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0 38 0 47 0 52 0 61 0
-		 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 16 ".kit[6:15]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 16 ".kot[6:15]"  1 18 18 18 18 18 18 18 
@@ -11054,7 +10754,7 @@ createNode animCurveTL -n "L_Hip_FK_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 16 ".ktv[0:15]"  0 0 9.6901437074829939 0 14.535221768707483 0
 		 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0 38 0 47 0 52 0 61 0
-		 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 16 ".kit[6:15]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 16 ".kot[6:15]"  1 18 18 18 18 18 18 18 
@@ -11069,7 +10769,7 @@ createNode animCurveTL -n "L_Hip_FK_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 16 ".ktv[0:15]"  0 0 9.6901437074829939 0 14.535221768707483 0
 		 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0 38 0 47 0 52 0 61 0
-		 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 16 ".kit[6:15]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 16 ".kot[6:15]"  1 18 18 18 18 18 18 18 
@@ -11083,7 +10783,7 @@ createNode animCurveTL -n "R_Hip_FK_Ctrl_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 0 27.859159693877551 0 38 0 47 0 52 0
-		 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 12 ".kit[2:11]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 12 ".kot[2:11]"  1 18 18 18 18 18 18 18 
@@ -11097,7 +10797,7 @@ createNode animCurveTL -n "R_Hip_FK_Ctrl_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 0 27.859159693877551 0 38 0 47 0 52 0
-		 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 12 ".kit[2:11]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 12 ".kot[2:11]"  1 18 18 18 18 18 18 18 
@@ -11111,7 +10811,7 @@ createNode animCurveTL -n "R_Hip_FK_Ctrl_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  0 0 27.859159693877551 0 38 0 47 0 52 0
-		 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 12 ".kit[2:11]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 12 ".kot[2:11]"  1 18 18 18 18 18 18 18 
@@ -11126,7 +10826,7 @@ createNode animCurveTL -n "L_Knee_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 15 ".ktv[0:14]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0;
 	setAttr -s 15 ".kit[7:14]"  1 18 18 18 18 18 18 18;
 	setAttr -s 15 ".kot[7:14]"  1 18 18 18 18 18 18 18;
 	setAttr -s 15 ".kix[7:14]"  1 1 1 1 1 1 1 1;
@@ -11139,7 +10839,7 @@ createNode animCurveTL -n "L_Knee_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 15 ".ktv[0:14]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0;
 	setAttr -s 15 ".kit[7:14]"  1 18 18 18 18 18 18 18;
 	setAttr -s 15 ".kot[7:14]"  1 18 18 18 18 18 18 18;
 	setAttr -s 15 ".kix[7:14]"  1 1 1 1 1 1 1 1;
@@ -11152,7 +10852,7 @@ createNode animCurveTL -n "L_Knee_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 15 ".ktv[0:14]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0;
 	setAttr -s 15 ".kit[7:14]"  1 18 18 18 18 18 18 18;
 	setAttr -s 15 ".kot[7:14]"  1 18 18 18 18 18 18 18;
 	setAttr -s 15 ".kix[7:14]"  1 1 1 1 1 1 1 1;
@@ -11165,7 +10865,7 @@ createNode animCurveTL -n "L_Foot_FK_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11180,7 +10880,7 @@ createNode animCurveTL -n "L_Foot_FK_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11195,7 +10895,7 @@ createNode animCurveTL -n "L_Foot_FK_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11210,7 +10910,7 @@ createNode animCurveTL -n "R_Foot_FK_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11225,7 +10925,7 @@ createNode animCurveTL -n "R_Foot_FK_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11240,7 +10940,7 @@ createNode animCurveTL -n "R_Foot_FK_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11255,7 +10955,7 @@ createNode animCurveTL -n "R_Toe_FK_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11270,7 +10970,7 @@ createNode animCurveTL -n "R_Toe_FK_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11285,7 +10985,7 @@ createNode animCurveTL -n "R_Toe_FK_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11300,7 +11000,7 @@ createNode animCurveTL -n "L_Toe_FK_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11315,7 +11015,7 @@ createNode animCurveTL -n "L_Toe_FK_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11330,7 +11030,7 @@ createNode animCurveTL -n "L_Toe_FK_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11345,7 +11045,7 @@ createNode animCurveTL -n "R_Knee_Ctrl_translateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11360,7 +11060,7 @@ createNode animCurveTL -n "R_Knee_Ctrl_translateY";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11375,7 +11075,7 @@ createNode animCurveTL -n "R_Knee_Ctrl_translateZ";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11405,7 +11105,7 @@ createNode animCurveTA -n "R_Toe_FK_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11420,7 +11120,7 @@ createNode animCurveTA -n "R_Toe_FK_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11435,7 +11135,7 @@ createNode animCurveTA -n "R_Toe_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 17 ".ktv[0:16]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 105.99999982993198 0 106 0;
 	setAttr -s 17 ".kit[7:16]"  1 18 18 18 18 18 18 18 
 		18 18;
 	setAttr -s 17 ".kot[7:16]"  1 18 18 18 18 18 18 18 
@@ -11450,8 +11150,8 @@ createNode animCurveTA -n "L_Toe_FK_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 107 -20.006047452160768 109.99999982993198 0
-		 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 103 -20.006047452160768 105.99999982993198 0
+		 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -11466,7 +11166,7 @@ createNode animCurveTA -n "L_Toe_FK_Ctrl_rotateY";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 107 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 103 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -11481,7 +11181,7 @@ createNode animCurveTA -n "L_Toe_FK_Ctrl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 18 ".ktv[0:17]"  0 0 4.8450717687074834 0 9.6901437074829939 0
 		 14.535221768707483 0 17.563381462585035 0 23.014088775510203 0 27.859159693877551 0
-		 38 0 47 0 52 0 61 0 66 0 83 0 100 0 105 0 107 0 109.99999982993198 0 110 0;
+		 38 0 47 0 52 0 61 0 66 0 79 0 96 0 101 0 103 0 105.99999982993198 0 106 0;
 	setAttr -s 18 ".kit[7:17]"  1 18 18 18 18 18 18 18 
 		18 18 18;
 	setAttr -s 18 ".kot[7:17]"  1 18 18 18 18 18 18 18 
@@ -11510,45 +11210,84 @@ createNode objectSet -n "All_Controls";
 	setAttr ".ihi" 0;
 	setAttr -s 96 ".dsm";
 createNode animCurveTL -n "locator1_translateX";
-	rename -uid "DEC75A47-4A0D-0869-366D-0C8B6E4757A5";
+	rename -uid "C071C33D-4505-2641-7213-CCA2F7FDDCEC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  86 18.184319659260009 89 18.184319659260009
-		 92 19.714334176722982;
+	setAttr ".ktv[0]"  106 18.184319659260019;
 createNode animCurveTL -n "locator1_translateY";
-	rename -uid "E156287D-4CDA-0B04-A384-3A93ABD8DFCC";
+	rename -uid "B3F1EC04-48D6-93B6-54E3-5E8A04FC6A7B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  86 -34.540766855617335 89 -34.540766855617335
-		 92 -28.643026456683845;
-createNode animCurveTA -n "locator1_rotateX";
-	rename -uid "D6789EF0-415E-FB07-BB50-D6970734E585";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  86 68.597708437862053;
-createNode animCurveTA -n "locator1_rotateY";
-	rename -uid "A3C780B8-4B2D-B3C5-AC10-0FB671012C02";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  86 -6.769260879986688;
-createNode animCurveTA -n "locator1_rotateZ";
-	rename -uid "980CC5F3-4105-0D5C-A43D-2ABDD6340CCC";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  86 -93.841542248705281;
+	setAttr ".ktv[0]"  106 -34.540766855617264;
 createNode animCurveTL -n "locator1_translateZ";
-	rename -uid "769FEFFB-43D7-D049-02E1-5194621900EC";
+	rename -uid "87D1BD45-44BF-3C70-6137-ADA480BA8EFE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  89 537.33135599174761 92 534.69521867301523;
+	setAttr ".ktv[0]"  106 562.11571940508543;
+createNode animCurveTA -n "locator1_rotateX";
+	rename -uid "3EB2724A-4742-9C03-479D-CFBF955B3049";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  106 68.597708437862025;
+createNode animCurveTA -n "locator1_rotateY";
+	rename -uid "611FF283-4A16-72DC-C977-03ADECEB1217";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  106 -6.7692608799866489;
+createNode animCurveTA -n "locator1_rotateZ";
+	rename -uid "D928F76C-43AE-E43B-7E46-93A6ACD4A934";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  106 -93.841542248705267;
+createNode animCurveTL -n "Look_Ctrl_translateX";
+	rename -uid "D6805FE9-46A7-1833-1B37-A0AFC5B1C0C6";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  0 165.20588365337244 11 165.20588365337244
+		 28 0 90 -3.9591774373133286 101 -6.6076930129103655 110 12.000680978272404;
+createNode animCurveTL -n "Look_Ctrl_translateY";
+	rename -uid "927907FE-4A0A-C75D-FA6A-7AB450F389D7";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  0 30.401374201613319 11 30.401374201613319
+		 28 0 90 4.2188474935755949e-15 101 7.2579210945090367 110 12.627961886923107;
+createNode animCurveTL -n "Look_Ctrl_translateZ";
+	rename -uid "5C0F42D9-4BC5-5B51-F218-859459CED7D0";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 6 ".ktv[0:5]"  0 2.9932614043328483e-14 11 2.9932614043328483e-14
+		 28 2.6370914729318935e-14 90 1.5338424974586928e-14 101 0.35067841133043148 110 0.61014077656445853;
+createNode animCurveTU -n "Look_Ctrl_Follow";
+	rename -uid "A4C5D2B0-4008-42C0-8E47-A999194B6C90";
+	setAttr ".tan" 10;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  0 0 18 1 84 1 92 1;
+	setAttr -s 4 ".kit[0:3]"  9 9 10 10;
+	setAttr -s 4 ".kot[0:3]"  5 5 10 10;
+createNode animCurveTA -n "Hair_Ctrl_Jnt_1_Ctrl_rotateX";
+	rename -uid "F6DA8A58-4809-CD1E-5564-3EB8C1BD0633";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  30 0 36 0 50 0;
+createNode animCurveTA -n "Hair_Ctrl_Jnt_1_Ctrl_rotateY";
+	rename -uid "C6EE2037-4440-FEB0-5E2F-68A8E549A7C5";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  30 0 36 0 50 0;
+createNode animCurveTA -n "Hair_Ctrl_Jnt_1_Ctrl_rotateZ";
+	rename -uid "515A7C69-4042-61AA-CD69-06BEFB961978";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  30 0 36 44.050985357707901 50 11.592867224451497;
 select -ne :time1;
-	setAttr ".o" 128;
-	setAttr ".unw" 128;
+	setAttr ".o" 21;
+	setAttr ".unw" 21;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
 		 1 1 1 0 0 0 0 0 0 0 0 0
 		 0 0 0 0 ;
+	setAttr ".laa" yes;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
 	setAttr -s 101 ".st";
@@ -11572,9 +11311,14 @@ select -ne :initialParticleSE;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
+	setAttr ".outf" 51;
+	setAttr ".imfkey" -type "string" "exr";
 	setAttr ".dss" -type "string" "lambert1";
 select -ne :defaultResolution;
+	setAttr ".w" 1920;
+	setAttr ".h" 1080;
 	setAttr ".pa" 1;
+	setAttr ".dar" 1.7777777910232544;
 select -ne :defaultColorMgtGlobals;
 	setAttr ".cfe" yes;
 	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya2022-default/config.ocio";
@@ -11590,7 +11334,7 @@ select -ne :hardwareRenderGlobals;
 select -ne :defaultHideFaceDataSet;
 	setAttr -s 4 ".dnsm";
 select -ne :ikSystem;
-	setAttr -s 3 ".sol";
+	setAttr -s 4 ".sol";
 connectAttr "Transform_Control_Left_Arm_IKFK.o" "LaraCroftAdvanced_RigRN.phl[1]";
 connectAttr "Transform_Control_Right_Arm_IKFK.o" "LaraCroftAdvanced_RigRN.phl[2]"
 		;
@@ -12336,424 +12080,416 @@ connectAttr "Hair_Ctrl_Jnt_3_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[516]";
 connectAttr "Hair_Ctrl_Jnt_3_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[517]";
 connectAttr "Hair_Ctrl_Jnt_3_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[518]";
 connectAttr "LaraCroftAdvanced_RigRN.phl[519]" "All_Controls.dsm" -na;
-connectAttr "Hair_Ctrl_Jnt_1_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[520]"
-		;
-connectAttr "Hair_Ctrl_Jnt_1_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[521]"
-		;
-connectAttr "Hair_Ctrl_Jnt_1_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[522]"
-		;
-connectAttr "Hair_Ctrl_Jnt_1_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[523]";
-connectAttr "Hair_Ctrl_Jnt_1_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[524]";
-connectAttr "Hair_Ctrl_Jnt_1_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[525]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[526]" "All_Controls.dsm" -na;
-connectAttr "Look_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[527]";
-connectAttr "Look_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[528]";
-connectAttr "Look_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[529]";
-connectAttr "Look_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[530]";
-connectAttr "Look_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[531]";
-connectAttr "Look_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[532]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[533]" "All_Controls.dsm" -na;
-connectAttr "L_Eye_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[534]";
-connectAttr "L_Eye_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[535]";
-connectAttr "L_Eye_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[536]";
-connectAttr "L_Eye_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[537]";
-connectAttr "L_Eye_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[538]";
-connectAttr "L_Eye_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[539]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[540]" "All_Controls.dsm" -na;
-connectAttr "R_Eye_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[541]";
-connectAttr "R_Eye_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[542]";
-connectAttr "R_Eye_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[543]";
-connectAttr "R_Eye_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[544]";
-connectAttr "R_Eye_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[545]";
-connectAttr "R_Eye_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[546]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[547]" "All_Controls.dsm" -na;
-connectAttr "Jaw_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[548]";
-connectAttr "Jaw_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[549]";
-connectAttr "Jaw_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[550]";
-connectAttr "Jaw_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[551]";
-connectAttr "Jaw_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[552]";
-connectAttr "Jaw_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[553]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[554]" "All_Controls.dsm" -na;
-connectAttr "Head_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[555]";
-connectAttr "Head_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[556]";
-connectAttr "Head_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[557]";
-connectAttr "Head_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[558]";
-connectAttr "Head_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[559]";
-connectAttr "Head_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[560]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[561]" "All_Controls.dsm" -na;
-connectAttr "Neck_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[562]";
-connectAttr "Neck_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[563]";
-connectAttr "Neck_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[564]";
-connectAttr "Neck_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[565]";
-connectAttr "Neck_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[566]";
-connectAttr "Neck_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[567]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[568]" "All_Controls.dsm" -na;
-connectAttr "L_Eyelid_Upper_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[569]"
-		;
-connectAttr "L_Eyelid_Upper_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[570]"
-		;
-connectAttr "L_Eyelid_Upper_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[571]"
-		;
-connectAttr "L_Eyelid_Upper_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[572]";
-connectAttr "L_Eyelid_Upper_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[573]";
-connectAttr "L_Eyelid_Upper_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[574]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[575]" "All_Controls.dsm" -na;
-connectAttr "L_Eyelid_Lower_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[576]"
-		;
-connectAttr "L_Eyelid_Lower_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[577]"
-		;
-connectAttr "L_Eyelid_Lower_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[578]"
-		;
-connectAttr "L_Eyelid_Lower_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[579]";
-connectAttr "L_Eyelid_Lower_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[580]";
-connectAttr "L_Eyelid_Lower_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[581]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[582]" "All_Controls.dsm" -na;
-connectAttr "R_Eyelid_Upper_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[583]"
-		;
-connectAttr "R_Eyelid_Upper_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[584]"
-		;
-connectAttr "R_Eyelid_Upper_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[585]"
-		;
-connectAttr "R_Eyelid_Upper_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[586]";
-connectAttr "R_Eyelid_Upper_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[587]";
-connectAttr "R_Eyelid_Upper_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[588]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[589]" "All_Controls.dsm" -na;
-connectAttr "R_Eyelid_Lower_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[590]"
-		;
-connectAttr "R_Eyelid_Lower_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[591]"
-		;
-connectAttr "R_Eyelid_Lower_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[592]"
-		;
-connectAttr "R_Eyelid_Lower_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[593]";
-connectAttr "R_Eyelid_Lower_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[594]";
-connectAttr "R_Eyelid_Lower_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[595]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[596]" "All_Controls.dsm" -na;
-connectAttr "Nose_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[597]";
-connectAttr "Nose_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[598]";
-connectAttr "Nose_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[599]";
-connectAttr "Nose_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[600]";
-connectAttr "Nose_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[601]";
-connectAttr "Nose_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[602]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[603]" "All_Controls.dsm" -na;
-connectAttr "Face_Controls_translateX.o" "LaraCroftAdvanced_RigRN.phl[604]";
-connectAttr "Face_Controls_translateY.o" "LaraCroftAdvanced_RigRN.phl[605]";
-connectAttr "Face_Controls_translateZ.o" "LaraCroftAdvanced_RigRN.phl[606]";
-connectAttr "Face_Controls_rotateX.o" "LaraCroftAdvanced_RigRN.phl[607]";
-connectAttr "Face_Controls_rotateY.o" "LaraCroftAdvanced_RigRN.phl[608]";
-connectAttr "Face_Controls_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[609]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[610]" "All_Controls.dsm" -na;
-connectAttr "R_Brow_Cluster_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[611]"
-		;
-connectAttr "R_Brow_Cluster_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[612]"
-		;
-connectAttr "R_Brow_Cluster_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[613]"
-		;
-connectAttr "R_Brow_Cluster_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[614]";
-connectAttr "R_Brow_Cluster_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[615]";
-connectAttr "R_Brow_Cluster_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[616]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[617]" "All_Controls.dsm" -na;
-connectAttr "L_Brow_Cluster_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[618]"
-		;
-connectAttr "L_Brow_Cluster_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[619]"
-		;
-connectAttr "L_Brow_Cluster_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[620]"
-		;
-connectAttr "L_Brow_Cluster_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[621]";
-connectAttr "L_Brow_Cluster_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[622]";
-connectAttr "L_Brow_Cluster_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[623]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[624]" "All_Controls.dsm" -na;
-connectAttr "R_Brow_3_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[625]";
-connectAttr "R_Brow_3_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[626]";
-connectAttr "R_Brow_3_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[627]";
-connectAttr "R_Brow_3_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[628]";
-connectAttr "R_Brow_3_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[629]";
-connectAttr "R_Brow_3_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[630]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[631]" "All_Controls.dsm" -na;
-connectAttr "R_Brow_2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[632]";
-connectAttr "R_Brow_2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[633]";
-connectAttr "R_Brow_2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[634]";
-connectAttr "R_Brow_2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[635]";
-connectAttr "R_Brow_2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[636]";
-connectAttr "R_Brow_2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[637]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[638]" "All_Controls.dsm" -na;
-connectAttr "R_Brow_1_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[639]";
-connectAttr "R_Brow_1_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[640]";
-connectAttr "R_Brow_1_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[641]";
-connectAttr "R_Brow_1_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[642]";
-connectAttr "R_Brow_1_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[643]";
-connectAttr "R_Brow_1_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[644]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[645]" "All_Controls.dsm" -na;
-connectAttr "L_Brow_1_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[646]";
-connectAttr "L_Brow_1_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[647]";
-connectAttr "L_Brow_1_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[648]";
-connectAttr "L_Brow_1_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[649]";
-connectAttr "L_Brow_1_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[650]";
-connectAttr "L_Brow_1_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[651]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[652]" "All_Controls.dsm" -na;
-connectAttr "L_Brow_2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[653]";
-connectAttr "L_Brow_2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[654]";
-connectAttr "L_Brow_2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[655]";
-connectAttr "L_Brow_2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[656]";
-connectAttr "L_Brow_2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[657]";
-connectAttr "L_Brow_2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[658]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[659]" "All_Controls.dsm" -na;
-connectAttr "L_Brow_3_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[660]";
-connectAttr "L_Brow_3_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[661]";
-connectAttr "L_Brow_3_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[662]";
-connectAttr "L_Brow_3_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[663]";
-connectAttr "L_Brow_3_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[664]";
-connectAttr "L_Brow_3_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[665]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[666]" "All_Controls.dsm" -na;
-connectAttr "LaraCroftAdvanced_RigRN.phl[667]" "All_Controls.dsm" -na;
-connectAttr "Mouth_Move_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[668]";
-connectAttr "Mouth_Move_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[669]";
-connectAttr "Mouth_Move_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[670]";
-connectAttr "Mouth_Move_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[671]";
-connectAttr "Mouth_Move_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[672]";
-connectAttr "Mouth_Move_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[673]";
-connectAttr "L_Sneer_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[674]";
-connectAttr "L_Sneer_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[675]";
-connectAttr "L_Sneer_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[676]";
-connectAttr "L_Sneer_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[677]";
-connectAttr "L_Sneer_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[678]";
-connectAttr "L_Sneer_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[679]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[680]" "All_Controls.dsm" -na;
-connectAttr "L_Squint_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[681]";
-connectAttr "L_Squint_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[682]";
-connectAttr "L_Squint_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[683]";
-connectAttr "L_Squint_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[684]";
-connectAttr "L_Squint_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[685]";
-connectAttr "L_Squint_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[686]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[687]" "All_Controls.dsm" -na;
-connectAttr "L_Cheek_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[688]";
-connectAttr "L_Cheek_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[689]";
-connectAttr "L_Cheek_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[690]";
-connectAttr "L_Cheek_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[691]";
-connectAttr "L_Cheek_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[692]";
-connectAttr "L_Cheek_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[693]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[694]" "All_Controls.dsm" -na;
-connectAttr "R_Cheek_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[695]";
-connectAttr "R_Cheek_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[696]";
-connectAttr "R_Cheek_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[697]";
-connectAttr "R_Cheek_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[698]";
-connectAttr "R_Cheek_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[699]";
-connectAttr "R_Cheek_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[700]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[701]" "All_Controls.dsm" -na;
-connectAttr "R_Squint_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[702]";
-connectAttr "R_Squint_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[703]";
-connectAttr "R_Squint_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[704]";
-connectAttr "R_Squint_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[705]";
-connectAttr "R_Squint_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[706]";
-connectAttr "R_Squint_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[707]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[708]" "All_Controls.dsm" -na;
-connectAttr "R_Sneer_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[709]";
-connectAttr "R_Sneer_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[710]";
-connectAttr "R_Sneer_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[711]";
-connectAttr "R_Sneer_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[712]";
-connectAttr "R_Sneer_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[713]";
-connectAttr "R_Sneer_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[714]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[715]" "All_Controls.dsm" -na;
-connectAttr "Lower_Middle_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[716]"
-		;
-connectAttr "Lower_Middle_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[717]"
-		;
-connectAttr "Lower_Middle_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[718]"
-		;
-connectAttr "Lower_Middle_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[719]"
-		;
-connectAttr "Lower_Middle_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[720]"
-		;
-connectAttr "Lower_Middle_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[721]"
+connectAttr "Hair_Ctrl_Jnt_1_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[520]";
+connectAttr "Hair_Ctrl_Jnt_1_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[521]";
+connectAttr "Hair_Ctrl_Jnt_1_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[522]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[523]" "All_Controls.dsm" -na;
+connectAttr "Look_Ctrl_Follow.o" "LaraCroftAdvanced_RigRN.phl[524]";
+connectAttr "Look_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[525]";
+connectAttr "Look_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[526]";
+connectAttr "Look_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[527]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[528]" "All_Controls.dsm" -na;
+connectAttr "L_Eye_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[529]";
+connectAttr "L_Eye_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[530]";
+connectAttr "L_Eye_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[531]";
+connectAttr "L_Eye_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[532]";
+connectAttr "L_Eye_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[533]";
+connectAttr "L_Eye_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[534]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[535]" "All_Controls.dsm" -na;
+connectAttr "R_Eye_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[536]";
+connectAttr "R_Eye_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[537]";
+connectAttr "R_Eye_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[538]";
+connectAttr "R_Eye_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[539]";
+connectAttr "R_Eye_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[540]";
+connectAttr "R_Eye_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[541]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[542]" "All_Controls.dsm" -na;
+connectAttr "Jaw_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[543]";
+connectAttr "Jaw_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[544]";
+connectAttr "Jaw_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[545]";
+connectAttr "Jaw_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[546]";
+connectAttr "Jaw_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[547]";
+connectAttr "Jaw_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[548]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[549]" "All_Controls.dsm" -na;
+connectAttr "Head_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[550]";
+connectAttr "Head_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[551]";
+connectAttr "Head_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[552]";
+connectAttr "Head_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[553]";
+connectAttr "Head_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[554]";
+connectAttr "Head_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[555]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[556]" "All_Controls.dsm" -na;
+connectAttr "Neck_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[557]";
+connectAttr "Neck_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[558]";
+connectAttr "Neck_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[559]";
+connectAttr "Neck_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[560]";
+connectAttr "Neck_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[561]";
+connectAttr "Neck_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[562]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[563]" "All_Controls.dsm" -na;
+connectAttr "L_Eyelid_Upper_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[564]"
+		;
+connectAttr "L_Eyelid_Upper_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[565]"
+		;
+connectAttr "L_Eyelid_Upper_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[566]"
+		;
+connectAttr "L_Eyelid_Upper_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[567]";
+connectAttr "L_Eyelid_Upper_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[568]";
+connectAttr "L_Eyelid_Upper_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[569]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[570]" "All_Controls.dsm" -na;
+connectAttr "L_Eyelid_Lower_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[571]"
+		;
+connectAttr "L_Eyelid_Lower_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[572]"
+		;
+connectAttr "L_Eyelid_Lower_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[573]"
+		;
+connectAttr "L_Eyelid_Lower_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[574]";
+connectAttr "L_Eyelid_Lower_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[575]";
+connectAttr "L_Eyelid_Lower_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[576]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[577]" "All_Controls.dsm" -na;
+connectAttr "R_Eyelid_Upper_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[578]"
+		;
+connectAttr "R_Eyelid_Upper_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[579]"
+		;
+connectAttr "R_Eyelid_Upper_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[580]"
+		;
+connectAttr "R_Eyelid_Upper_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[581]";
+connectAttr "R_Eyelid_Upper_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[582]";
+connectAttr "R_Eyelid_Upper_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[583]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[584]" "All_Controls.dsm" -na;
+connectAttr "R_Eyelid_Lower_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[585]"
+		;
+connectAttr "R_Eyelid_Lower_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[586]"
+		;
+connectAttr "R_Eyelid_Lower_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[587]"
+		;
+connectAttr "R_Eyelid_Lower_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[588]";
+connectAttr "R_Eyelid_Lower_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[589]";
+connectAttr "R_Eyelid_Lower_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[590]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[591]" "All_Controls.dsm" -na;
+connectAttr "Nose_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[592]";
+connectAttr "Nose_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[593]";
+connectAttr "Nose_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[594]";
+connectAttr "Nose_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[595]";
+connectAttr "Nose_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[596]";
+connectAttr "Nose_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[597]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[598]" "All_Controls.dsm" -na;
+connectAttr "Face_Controls_translateX.o" "LaraCroftAdvanced_RigRN.phl[599]";
+connectAttr "Face_Controls_translateY.o" "LaraCroftAdvanced_RigRN.phl[600]";
+connectAttr "Face_Controls_translateZ.o" "LaraCroftAdvanced_RigRN.phl[601]";
+connectAttr "Face_Controls_rotateX.o" "LaraCroftAdvanced_RigRN.phl[602]";
+connectAttr "Face_Controls_rotateY.o" "LaraCroftAdvanced_RigRN.phl[603]";
+connectAttr "Face_Controls_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[604]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[605]" "All_Controls.dsm" -na;
+connectAttr "R_Brow_Cluster_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[606]"
+		;
+connectAttr "R_Brow_Cluster_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[607]"
+		;
+connectAttr "R_Brow_Cluster_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[608]"
+		;
+connectAttr "R_Brow_Cluster_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[609]";
+connectAttr "R_Brow_Cluster_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[610]";
+connectAttr "R_Brow_Cluster_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[611]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[612]" "All_Controls.dsm" -na;
+connectAttr "L_Brow_Cluster_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[613]"
+		;
+connectAttr "L_Brow_Cluster_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[614]"
+		;
+connectAttr "L_Brow_Cluster_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[615]"
+		;
+connectAttr "L_Brow_Cluster_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[616]";
+connectAttr "L_Brow_Cluster_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[617]";
+connectAttr "L_Brow_Cluster_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[618]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[619]" "All_Controls.dsm" -na;
+connectAttr "R_Brow_3_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[620]";
+connectAttr "R_Brow_3_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[621]";
+connectAttr "R_Brow_3_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[622]";
+connectAttr "R_Brow_3_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[623]";
+connectAttr "R_Brow_3_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[624]";
+connectAttr "R_Brow_3_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[625]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[626]" "All_Controls.dsm" -na;
+connectAttr "R_Brow_2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[627]";
+connectAttr "R_Brow_2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[628]";
+connectAttr "R_Brow_2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[629]";
+connectAttr "R_Brow_2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[630]";
+connectAttr "R_Brow_2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[631]";
+connectAttr "R_Brow_2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[632]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[633]" "All_Controls.dsm" -na;
+connectAttr "R_Brow_1_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[634]";
+connectAttr "R_Brow_1_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[635]";
+connectAttr "R_Brow_1_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[636]";
+connectAttr "R_Brow_1_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[637]";
+connectAttr "R_Brow_1_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[638]";
+connectAttr "R_Brow_1_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[639]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[640]" "All_Controls.dsm" -na;
+connectAttr "L_Brow_1_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[641]";
+connectAttr "L_Brow_1_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[642]";
+connectAttr "L_Brow_1_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[643]";
+connectAttr "L_Brow_1_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[644]";
+connectAttr "L_Brow_1_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[645]";
+connectAttr "L_Brow_1_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[646]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[647]" "All_Controls.dsm" -na;
+connectAttr "L_Brow_2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[648]";
+connectAttr "L_Brow_2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[649]";
+connectAttr "L_Brow_2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[650]";
+connectAttr "L_Brow_2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[651]";
+connectAttr "L_Brow_2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[652]";
+connectAttr "L_Brow_2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[653]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[654]" "All_Controls.dsm" -na;
+connectAttr "L_Brow_3_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[655]";
+connectAttr "L_Brow_3_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[656]";
+connectAttr "L_Brow_3_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[657]";
+connectAttr "L_Brow_3_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[658]";
+connectAttr "L_Brow_3_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[659]";
+connectAttr "L_Brow_3_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[660]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[661]" "All_Controls.dsm" -na;
+connectAttr "LaraCroftAdvanced_RigRN.phl[662]" "All_Controls.dsm" -na;
+connectAttr "Mouth_Move_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[663]";
+connectAttr "Mouth_Move_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[664]";
+connectAttr "Mouth_Move_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[665]";
+connectAttr "Mouth_Move_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[666]";
+connectAttr "Mouth_Move_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[667]";
+connectAttr "Mouth_Move_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[668]";
+connectAttr "L_Sneer_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[669]";
+connectAttr "L_Sneer_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[670]";
+connectAttr "L_Sneer_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[671]";
+connectAttr "L_Sneer_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[672]";
+connectAttr "L_Sneer_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[673]";
+connectAttr "L_Sneer_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[674]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[675]" "All_Controls.dsm" -na;
+connectAttr "L_Squint_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[676]";
+connectAttr "L_Squint_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[677]";
+connectAttr "L_Squint_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[678]";
+connectAttr "L_Squint_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[679]";
+connectAttr "L_Squint_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[680]";
+connectAttr "L_Squint_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[681]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[682]" "All_Controls.dsm" -na;
+connectAttr "L_Cheek_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[683]";
+connectAttr "L_Cheek_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[684]";
+connectAttr "L_Cheek_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[685]";
+connectAttr "L_Cheek_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[686]";
+connectAttr "L_Cheek_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[687]";
+connectAttr "L_Cheek_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[688]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[689]" "All_Controls.dsm" -na;
+connectAttr "R_Cheek_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[690]";
+connectAttr "R_Cheek_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[691]";
+connectAttr "R_Cheek_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[692]";
+connectAttr "R_Cheek_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[693]";
+connectAttr "R_Cheek_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[694]";
+connectAttr "R_Cheek_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[695]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[696]" "All_Controls.dsm" -na;
+connectAttr "R_Squint_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[697]";
+connectAttr "R_Squint_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[698]";
+connectAttr "R_Squint_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[699]";
+connectAttr "R_Squint_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[700]";
+connectAttr "R_Squint_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[701]";
+connectAttr "R_Squint_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[702]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[703]" "All_Controls.dsm" -na;
+connectAttr "R_Sneer_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[704]";
+connectAttr "R_Sneer_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[705]";
+connectAttr "R_Sneer_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[706]";
+connectAttr "R_Sneer_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[707]";
+connectAttr "R_Sneer_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[708]";
+connectAttr "R_Sneer_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[709]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[710]" "All_Controls.dsm" -na;
+connectAttr "Lower_Middle_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[711]"
+		;
+connectAttr "Lower_Middle_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[712]"
 		;
-connectAttr "LaraCroftAdvanced_RigRN.phl[722]" "All_Controls.dsm" -na;
-connectAttr "L_Lower_Outer_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[723]"
+connectAttr "Lower_Middle_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[713]"
+		;
+connectAttr "Lower_Middle_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[714]"
 		;
-connectAttr "L_Lower_Outer_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[724]"
+connectAttr "Lower_Middle_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[715]"
 		;
-connectAttr "L_Lower_Outer_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[725]"
+connectAttr "Lower_Middle_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[716]"
 		;
-connectAttr "L_Lower_Outer_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[726]"
+connectAttr "LaraCroftAdvanced_RigRN.phl[717]" "All_Controls.dsm" -na;
+connectAttr "L_Lower_Outer_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[718]"
 		;
-connectAttr "L_Lower_Outer_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[727]"
+connectAttr "L_Lower_Outer_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[719]"
 		;
-connectAttr "L_Lower_Outer_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[728]"
+connectAttr "L_Lower_Outer_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[720]"
 		;
-connectAttr "LaraCroftAdvanced_RigRN.phl[729]" "All_Controls.dsm" -na;
-connectAttr "Upper_Middle_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[730]"
+connectAttr "L_Lower_Outer_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[721]"
 		;
-connectAttr "Upper_Middle_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[731]"
+connectAttr "L_Lower_Outer_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[722]"
 		;
-connectAttr "Upper_Middle_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[732]"
+connectAttr "L_Lower_Outer_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[723]"
 		;
-connectAttr "Upper_Middle_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[733]"
+connectAttr "LaraCroftAdvanced_RigRN.phl[724]" "All_Controls.dsm" -na;
+connectAttr "Upper_Middle_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[725]"
 		;
-connectAttr "Upper_Middle_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[734]"
+connectAttr "Upper_Middle_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[726]"
 		;
-connectAttr "Upper_Middle_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[735]"
+connectAttr "Upper_Middle_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[727]"
 		;
-connectAttr "LaraCroftAdvanced_RigRN.phl[736]" "All_Controls.dsm" -na;
-connectAttr "L_Lower_Corner_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[737]"
+connectAttr "Upper_Middle_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[728]"
 		;
-connectAttr "L_Lower_Corner_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[738]"
+connectAttr "Upper_Middle_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[729]"
 		;
-connectAttr "L_Lower_Corner_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[739]"
+connectAttr "Upper_Middle_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[730]"
 		;
-connectAttr "L_Lower_Corner_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[740]"
+connectAttr "LaraCroftAdvanced_RigRN.phl[731]" "All_Controls.dsm" -na;
+connectAttr "L_Lower_Corner_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[732]"
 		;
-connectAttr "L_Lower_Corner_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[741]"
-		;
-connectAttr "L_Lower_Corner_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[742]"
-		;
-connectAttr "LaraCroftAdvanced_RigRN.phl[743]" "All_Controls.dsm" -na;
-connectAttr "L_Upper_Outer_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[744]"
-		;
-connectAttr "L_Upper_Outer_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[745]"
-		;
-connectAttr "L_Upper_Outer_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[746]"
-		;
-connectAttr "L_Upper_Outer_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[747]"
-		;
-connectAttr "L_Upper_Outer_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[748]"
-		;
-connectAttr "L_Upper_Outer_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[749]"
-		;
-connectAttr "LaraCroftAdvanced_RigRN.phl[750]" "All_Controls.dsm" -na;
-connectAttr "L_Upper_Corner_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[751]"
-		;
-connectAttr "L_Upper_Corner_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[752]"
-		;
-connectAttr "L_Upper_Corner_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[753]"
+connectAttr "L_Lower_Corner_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[733]"
 		;
-connectAttr "L_Upper_Corner_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[754]"
-		;
-connectAttr "L_Upper_Corner_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[755]"
-		;
-connectAttr "L_Upper_Corner_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[756]"
-		;
-connectAttr "LaraCroftAdvanced_RigRN.phl[757]" "All_Controls.dsm" -na;
-connectAttr "R_Lower_Corner_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[758]"
-		;
-connectAttr "R_Lower_Corner_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[759]"
-		;
-connectAttr "R_Lower_Corner_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[760]"
-		;
-connectAttr "R_Lower_Corner_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[761]"
-		;
-connectAttr "R_Lower_Corner_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[762]"
-		;
-connectAttr "R_Lower_Corner_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[763]"
-		;
-connectAttr "LaraCroftAdvanced_RigRN.phl[764]" "All_Controls.dsm" -na;
-connectAttr "R_Lower_Outer_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[765]"
-		;
-connectAttr "R_Lower_Outer_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[766]"
-		;
-connectAttr "R_Lower_Outer_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[767]"
-		;
-connectAttr "R_Lower_Outer_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[768]"
-		;
-connectAttr "R_Lower_Outer_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[769]"
-		;
-connectAttr "R_Lower_Outer_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[770]"
-		;
-connectAttr "LaraCroftAdvanced_RigRN.phl[771]" "All_Controls.dsm" -na;
-connectAttr "R_Upper_Corner_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[772]"
-		;
-connectAttr "R_Upper_Corner_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[773]"
-		;
-connectAttr "R_Upper_Corner_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[774]"
-		;
-connectAttr "R_Upper_Corner_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[775]"
-		;
-connectAttr "R_Upper_Corner_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[776]"
-		;
-connectAttr "R_Upper_Corner_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[777]"
-		;
-connectAttr "LaraCroftAdvanced_RigRN.phl[778]" "All_Controls.dsm" -na;
-connectAttr "R_Upper_Outer_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[779]"
-		;
-connectAttr "R_Upper_Outer_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[780]"
-		;
-connectAttr "R_Upper_Outer_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[781]"
-		;
-connectAttr "R_Upper_Outer_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[782]"
-		;
-connectAttr "R_Upper_Outer_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[783]"
-		;
-connectAttr "R_Upper_Outer_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[784]"
-		;
-connectAttr "LaraCroftAdvanced_RigRN.phl[785]" "All_Controls.dsm" -na;
-connectAttr "R_Lips_Pull_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[786]";
-connectAttr "R_Lips_Pull_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[787]";
-connectAttr "R_Lips_Pull_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[788]";
-connectAttr "R_Lips_Pull_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[789]";
-connectAttr "R_Lips_Pull_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[790]";
-connectAttr "R_Lips_Pull_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[791]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[792]" "All_Controls.dsm" -na;
-connectAttr "L_Lips_Pull_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[793]";
-connectAttr "L_Lips_Pull_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[794]";
-connectAttr "L_Lips_Pull_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[795]";
-connectAttr "L_Lips_Pull_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[796]";
-connectAttr "L_Lips_Pull_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[797]";
-connectAttr "L_Lips_Pull_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[798]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[799]" "All_Controls.dsm" -na;
-connectAttr "Lower_Lip_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[800]";
-connectAttr "Lower_Lip_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[801]";
-connectAttr "Lower_Lip_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[802]";
-connectAttr "Lower_Lip_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[803]";
-connectAttr "Lower_Lip_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[804]";
-connectAttr "Lower_Lip_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[805]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[806]" "All_Controls.dsm" -na;
-connectAttr "Upper_Lip_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[807]";
-connectAttr "Upper_Lip_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[808]";
-connectAttr "Upper_Lip_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[809]";
-connectAttr "Upper_Lip_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[810]";
-connectAttr "Upper_Lip_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[811]";
-connectAttr "Upper_Lip_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[812]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[813]" "All_Controls.dsm" -na;
-connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[814]"
-		;
-connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[815]"
-		;
-connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[816]"
-		;
-connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[817]"
-		;
-connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[818]"
-		;
-connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[819]"
-		;
-connectAttr "LaraCroftAdvanced_RigRN.phl[820]" "All_Controls.dsm" -na;
-connectAttr "Pick_Holster_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[821]";
-connectAttr "Pick_Holster_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[822]";
-connectAttr "Pick_Holster_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[823]";
-connectAttr "Pick_Holster_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[824]";
-connectAttr "Pick_Holster_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[825]";
-connectAttr "Pick_Holster_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[826]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[827]" "All_Controls.dsm" -na;
-connectAttr "Gun_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[828]";
-connectAttr "Gun_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[829]";
-connectAttr "Gun_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[830]";
-connectAttr "Gun_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[831]";
-connectAttr "Gun_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[832]";
-connectAttr "Gun_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[833]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[834]" "All_Controls.dsm" -na;
-connectAttr "Pick1_Ctrl_Mount.o" "LaraCroftAdvanced_RigRN.phl[835]";
-connectAttr "Pick1_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[836]";
-connectAttr "Pick1_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[837]";
-connectAttr "Pick1_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[838]";
-connectAttr "Pick1_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[839]";
-connectAttr "Pick1_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[840]";
-connectAttr "Pick1_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[841]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[842]" "All_Controls.dsm" -na;
-connectAttr "Pick2_Ctrl_Mount.o" "LaraCroftAdvanced_RigRN.phl[843]";
-connectAttr "Pick2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[844]";
-connectAttr "Pick2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[845]";
-connectAttr "Pick2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[846]";
-connectAttr "Pick2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[847]";
-connectAttr "Pick2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[848]";
-connectAttr "Pick2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[849]";
-connectAttr "LaraCroftAdvanced_RigRN.phl[850]" "All_Controls.dsm" -na;
+connectAttr "L_Lower_Corner_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[734]"
+		;
+connectAttr "L_Lower_Corner_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[735]"
+		;
+connectAttr "L_Lower_Corner_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[736]"
+		;
+connectAttr "L_Lower_Corner_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[737]"
+		;
+connectAttr "LaraCroftAdvanced_RigRN.phl[738]" "All_Controls.dsm" -na;
+connectAttr "L_Upper_Outer_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[739]"
+		;
+connectAttr "L_Upper_Outer_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[740]"
+		;
+connectAttr "L_Upper_Outer_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[741]"
+		;
+connectAttr "L_Upper_Outer_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[742]"
+		;
+connectAttr "L_Upper_Outer_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[743]"
+		;
+connectAttr "L_Upper_Outer_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[744]"
+		;
+connectAttr "LaraCroftAdvanced_RigRN.phl[745]" "All_Controls.dsm" -na;
+connectAttr "L_Upper_Corner_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[746]"
+		;
+connectAttr "L_Upper_Corner_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[747]"
+		;
+connectAttr "L_Upper_Corner_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[748]"
+		;
+connectAttr "L_Upper_Corner_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[749]"
+		;
+connectAttr "L_Upper_Corner_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[750]"
+		;
+connectAttr "L_Upper_Corner_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[751]"
+		;
+connectAttr "LaraCroftAdvanced_RigRN.phl[752]" "All_Controls.dsm" -na;
+connectAttr "R_Lower_Corner_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[753]"
+		;
+connectAttr "R_Lower_Corner_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[754]"
+		;
+connectAttr "R_Lower_Corner_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[755]"
+		;
+connectAttr "R_Lower_Corner_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[756]"
+		;
+connectAttr "R_Lower_Corner_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[757]"
+		;
+connectAttr "R_Lower_Corner_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[758]"
+		;
+connectAttr "LaraCroftAdvanced_RigRN.phl[759]" "All_Controls.dsm" -na;
+connectAttr "R_Lower_Outer_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[760]"
+		;
+connectAttr "R_Lower_Outer_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[761]"
+		;
+connectAttr "R_Lower_Outer_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[762]"
+		;
+connectAttr "R_Lower_Outer_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[763]"
+		;
+connectAttr "R_Lower_Outer_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[764]"
+		;
+connectAttr "R_Lower_Outer_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[765]"
+		;
+connectAttr "LaraCroftAdvanced_RigRN.phl[766]" "All_Controls.dsm" -na;
+connectAttr "R_Upper_Corner_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[767]"
+		;
+connectAttr "R_Upper_Corner_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[768]"
+		;
+connectAttr "R_Upper_Corner_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[769]"
+		;
+connectAttr "R_Upper_Corner_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[770]"
+		;
+connectAttr "R_Upper_Corner_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[771]"
+		;
+connectAttr "R_Upper_Corner_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[772]"
+		;
+connectAttr "LaraCroftAdvanced_RigRN.phl[773]" "All_Controls.dsm" -na;
+connectAttr "R_Upper_Outer_Lips_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[774]"
+		;
+connectAttr "R_Upper_Outer_Lips_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[775]"
+		;
+connectAttr "R_Upper_Outer_Lips_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[776]"
+		;
+connectAttr "R_Upper_Outer_Lips_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[777]"
+		;
+connectAttr "R_Upper_Outer_Lips_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[778]"
+		;
+connectAttr "R_Upper_Outer_Lips_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[779]"
+		;
+connectAttr "LaraCroftAdvanced_RigRN.phl[780]" "All_Controls.dsm" -na;
+connectAttr "R_Lips_Pull_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[781]";
+connectAttr "R_Lips_Pull_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[782]";
+connectAttr "R_Lips_Pull_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[783]";
+connectAttr "R_Lips_Pull_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[784]";
+connectAttr "R_Lips_Pull_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[785]";
+connectAttr "R_Lips_Pull_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[786]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[787]" "All_Controls.dsm" -na;
+connectAttr "L_Lips_Pull_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[788]";
+connectAttr "L_Lips_Pull_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[789]";
+connectAttr "L_Lips_Pull_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[790]";
+connectAttr "L_Lips_Pull_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[791]";
+connectAttr "L_Lips_Pull_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[792]";
+connectAttr "L_Lips_Pull_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[793]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[794]" "All_Controls.dsm" -na;
+connectAttr "Lower_Lip_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[795]";
+connectAttr "Lower_Lip_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[796]";
+connectAttr "Lower_Lip_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[797]";
+connectAttr "Lower_Lip_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[798]";
+connectAttr "Lower_Lip_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[799]";
+connectAttr "Lower_Lip_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[800]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[801]" "All_Controls.dsm" -na;
+connectAttr "Upper_Lip_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[802]";
+connectAttr "Upper_Lip_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[803]";
+connectAttr "Upper_Lip_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[804]";
+connectAttr "Upper_Lip_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[805]";
+connectAttr "Upper_Lip_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[806]";
+connectAttr "Upper_Lip_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[807]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[808]" "All_Controls.dsm" -na;
+connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[809]"
+		;
+connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[810]"
+		;
+connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[811]"
+		;
+connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[812]"
+		;
+connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[813]"
+		;
+connectAttr "Pick_Holster_Ctrl_Jnt_2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[814]"
+		;
+connectAttr "LaraCroftAdvanced_RigRN.phl[815]" "All_Controls.dsm" -na;
+connectAttr "Pick_Holster_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[816]";
+connectAttr "Pick_Holster_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[817]";
+connectAttr "Pick_Holster_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[818]";
+connectAttr "Pick_Holster_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[819]";
+connectAttr "Pick_Holster_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[820]";
+connectAttr "Pick_Holster_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[821]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[822]" "All_Controls.dsm" -na;
+connectAttr "Gun_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[823]";
+connectAttr "Gun_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[824]";
+connectAttr "Gun_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[825]";
+connectAttr "Gun_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[826]";
+connectAttr "Gun_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[827]";
+connectAttr "Gun_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[828]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[829]" "All_Controls.dsm" -na;
+connectAttr "Pick1_Ctrl_Mount.o" "LaraCroftAdvanced_RigRN.phl[830]";
+connectAttr "Pick1_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[831]";
+connectAttr "Pick1_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[832]";
+connectAttr "Pick1_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[833]";
+connectAttr "Pick1_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[834]";
+connectAttr "Pick1_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[835]";
+connectAttr "Pick1_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[836]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[837]" "All_Controls.dsm" -na;
+connectAttr "Pick2_Ctrl_Mount.o" "LaraCroftAdvanced_RigRN.phl[838]";
+connectAttr "Pick2_Ctrl_translateX.o" "LaraCroftAdvanced_RigRN.phl[839]";
+connectAttr "Pick2_Ctrl_translateY.o" "LaraCroftAdvanced_RigRN.phl[840]";
+connectAttr "Pick2_Ctrl_translateZ.o" "LaraCroftAdvanced_RigRN.phl[841]";
+connectAttr "Pick2_Ctrl_rotateX.o" "LaraCroftAdvanced_RigRN.phl[842]";
+connectAttr "Pick2_Ctrl_rotateY.o" "LaraCroftAdvanced_RigRN.phl[843]";
+connectAttr "Pick2_Ctrl_rotateZ.o" "LaraCroftAdvanced_RigRN.phl[844]";
+connectAttr "LaraCroftAdvanced_RigRN.phl[845]" "All_Controls.dsm" -na;
 connectAttr "Level_Layer.di" "pCube1.do";
 connectAttr "polyCube1.out" "pCubeShape1.i";
 connectAttr "Level_Layer.di" "pCube2.do";

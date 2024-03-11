@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
-//Name: MC_PistonDemo.ma
-//Last modified: Thu, Feb 29, 2024 10:49:27 AM
+//Name: MC_PistonDemoCompleted.ma
+//Last modified: Thu, Feb 29, 2024 10:34:52 AM
 //Codeset: 1252
 requires maya "2023";
 requires "stereoCamera" "10.0";
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "D7E1E46B-410F-9E10-B2E6-FB81FD21F6A1";
+fileInfo "UUID" "9D00446A-4D62-E331-459C-DB9407B5D493";
 createNode transform -s -n "persp";
 	rename -uid "EEE9DA38-4D12-E3CB-0A13-C0B6D424CE2D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 14.675127306750854 3.4472055813717812 -25.543737249699337 ;
-	setAttr ".r" -type "double3" -8.1383527338749282 141.39999999994509 0 ;
+	setAttr ".t" -type "double3" 25.310858582452141 3.0985102818507357 -6.3130920944792948 ;
+	setAttr ".r" -type "double3" -18.938352733888809 92.199999999954969 2.5444437451708134e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "32EAA9A4-4238-D76B-2427-5F8D5EA8D8B7";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 32.479265340347212;
+	setAttr ".coi" 28.025845800906712;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -77,22 +77,108 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "Piston";
+createNode transform -n "test2_Piston_Loc";
 	rename -uid "9161663A-4C72-A79B-52F1-B88B041D811F";
 	setAttr ".rp" -type "double3" 0 8.8817841970012523e-16 -10.40745030699315 ;
 	setAttr ".sp" -type "double3" 0 8.8817841970012523e-16 -10.40745030699315 ;
-createNode locator -n "PistonShape" -p "Piston";
+createNode locator -n "test2_Piston_LocShape" -p "test2_Piston_Loc";
 	rename -uid "84EE5B58-4F4E-0917-CB89-4593FB7F3A11";
 	setAttr -k off ".v";
 	setAttr ".lp" -type "double3" 0 8.8817841970012523e-16 -10.40745030699315 ;
-createNode transform -n "Housing";
+createNode ikHandle -n "test2_housingIKHandle" -p "test2_Piston_Loc";
+	rename -uid "5884129C-4FD5-A305-EE2B-B3AAB7B73CAE";
+	setAttr ".t" -type "double3" 0 8.8817841970012523e-16 -10.40745030699315 ;
+	setAttr ".roc" yes;
+createNode poleVectorConstraint -n "test2_housingIKHandle_poleVectorConstraint1" 
+		-p "test2_housingIKHandle";
+	rename -uid "1D46E36E-4650-0401-7C5D-3EB203AF3FA7";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "test2_Housing_Loc_Up_TargetW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" 0 1 0 ;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "test2_Piston_Loc_parentConstraint1" -p "test2_Piston_Loc";
+	rename -uid "7FF579CE-449C-3618-DEF1-7FB54CF014C1";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "PistonBaseGeoW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0 1.3199989868993642 1.6827486071235853e-07 ;
+	setAttr ".tg[0].tor" -type "double3" 0 -90 0 ;
+	setAttr ".lr" -type "double3" 0 -90 0 ;
+	setAttr ".rsrr" -type "double3" 0 -90 0 ;
+	setAttr -k on ".w0";
+createNode transform -n "test2_Housing_Loc";
 	rename -uid "02AC5B86-4CEE-5598-D234-A6AFA33B55D1";
 	setAttr ".rp" -type "double3" 0 8.8817841970012523e-16 0 ;
 	setAttr ".sp" -type "double3" 0 8.8817841970012523e-16 0 ;
-createNode locator -n "HousingShape" -p "Housing";
+createNode locator -n "test2_Housing_LocShape" -p "test2_Housing_Loc";
 	rename -uid "CF0AF63B-4ED3-5F0F-EBE3-01A611A429DE";
 	setAttr -k off ".v";
 	setAttr ".lp" -type "double3" 0 8.8817841970012523e-16 0 ;
+createNode ikHandle -n "test2_pistonIKHandle" -p "test2_Housing_Loc";
+	rename -uid "5991013E-42AE-71C3-DC54-A381163802FF";
+	setAttr ".t" -type "double3" 0 8.8817841970012523e-16 0 ;
+	setAttr ".roc" yes;
+createNode poleVectorConstraint -n "test2_pistonIKHandle_poleVectorConstraint1" -p
+		 "test2_pistonIKHandle";
+	rename -uid "36BE8AE8-4EC0-2942-2529-499BC9B8A300";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "test2_Piston_Loc_Up_TargetW0" -dv 
+		1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" 0 1 0 ;
+	setAttr -k on ".w0";
+createNode parentConstraint -n "test2_Housing_Loc_parentConstraint1" -p "test2_Housing_Loc";
+	rename -uid "A2150BBB-4620-D217-7908-FF93063F5142";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "HousingBaseGeoW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0 1.3199989868993642 0 ;
+	setAttr ".tg[0].tor" -type "double3" 0 90 0 ;
+	setAttr ".lr" -type "double3" 0 90 0 ;
+	setAttr ".rsrr" -type "double3" 0 90 0 ;
+	setAttr -k on ".w0";
 createNode transform -n "pCylinder1";
 	rename -uid "43F4CEC5-4017-229C-7167-1A995ED08CCE";
 	setAttr ".v" no;
@@ -522,10 +608,8 @@ createNode mesh -n "pCylinderShape2" -p "pCylinder2";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Geo";
 	rename -uid "729CC83F-4E35-B761-5A1C-0D824B4881F6";
-	setAttr ".v" no;
 createNode transform -n "pCylinder10" -p "Geo";
 	rename -uid "DD6ED063-4FF5-7A3E-A8FB-1B8150B8DF62";
-	setAttr ".r" -type "double3" 360 -4.2964952914991028e-31 7.016709298534876e-15 ;
 	setAttr ".rp" -type "double3" 0 1.1920928955078125e-07 -2.9132738959907583 ;
 	setAttr ".sp" -type "double3" 0 1.1920928955078125e-07 -2.9132738959907583 ;
 createNode mesh -n "pCylinder10Shape" -p "pCylinder10";
@@ -890,9 +974,30 @@ createNode mesh -n "pCylinder10Shape" -p "pCylinder10";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode parentConstraint -n "pCylinder10_parentConstraint1" -p "pCylinder10";
+	rename -uid "A16FE0E3-4EF0-7F44-91DD-9AAE630416D6";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "test2_housingJnt1W0" -dv 1 -min 0 
+		-at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 2.9132738959907583 -1.192092886626028e-07 2.5121479005781526e-15 ;
+	setAttr ".tg[0].tor" -type "double3" 180 89.999998792581735 0 ;
+	setAttr ".lr" -type "double3" -7.016709257520983e-15 1.2074182617838682e-06 -1.2074182627090242e-06 ;
+	setAttr ".rst" -type "double3" -3.944304526105059e-31 0 0 ;
+	setAttr ".rsrr" -type "double3" -7.016709257520983e-15 1.2074182617838682e-06 -1.2074182627090242e-06 ;
+	setAttr -k on ".w0";
 createNode transform -n "pCylinder9" -p "Geo";
 	rename -uid "0DAA19CD-4964-E2D8-BA11-CF8BF42A12D6";
-	setAttr ".r" -type "double3" 360 4.2964952914991028e-31 -7.016709298534876e-15 ;
 	setAttr ".rp" -type "double3" 0 1.7881393432617188e-07 -8.0253923706253687 ;
 	setAttr ".sp" -type "double3" 0 1.7881393432617188e-07 -8.0253923706253687 ;
 createNode mesh -n "pCylinder9Shape" -p "pCylinder9";
@@ -1281,10 +1386,29 @@ createNode mesh -n "pCylinder9Shape" -p "pCylinder9";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode parentConstraint -n "pCylinder9_parentConstraint1" -p "pCylinder9";
+	rename -uid "2A0E302F-4A1C-6A9C-A5BC-86B701A2141B";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "test2_pistonJnt1W0" -dv 1 -min 0 
+		-at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 2.3820579363677812 -1.788139334379934e-07 3.7682218602257089e-15 ;
+	setAttr ".tg[0].tor" -type "double3" 180 -89.999998792581735 0 ;
+	setAttr ".lr" -type "double3" -7.016709257520983e-15 -1.2074182617838682e-06 1.2074182627090242e-06 ;
+	setAttr ".rsrr" -type "double3" -7.016709257520983e-15 -1.2074182617838682e-06 1.2074182627090242e-06 ;
+	setAttr -k on ".w0";
 createNode transform -n "pCylinder6" -p "Geo";
 	rename -uid "9FEF6851-4BEC-4EA2-8E5B-29AC3D1294F3";
-	setAttr ".t" -type "double3" -1.6251514501796523e-15 -1.1171481100721632 -5.5511151231257827e-17 ;
-	setAttr ".r" -type "double3" 179.99999999999991 -90 0 ;
 	setAttr ".s" -type "double3" 1.7699485267378527 0.38559601843594971 1.7699485267378527 ;
 createNode mesh -n "pCylinderShape6" -p "pCylinder6";
 	rename -uid "15A0652E-4DC8-83B9-EBAA-A79B919B1E0D";
@@ -1502,10 +1626,30 @@ createNode mesh -n "pCylinderShape6" -p "pCylinder6";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode parentConstraint -n "pCylinder6_parentConstraint1" -p "pCylinder6";
+	rename -uid "B4849627-4BC8-557A-85E2-6CBA3233DB36";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "test2_housingPivotJointW0" -dv 1 
+		-min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 5.5511151231257827e-17 1.1171481100721636 -2.3542134317758901e-08 ;
+	setAttr ".tg[0].tor" -type "double3" 1.2074181727283373e-06 180 0 ;
+	setAttr ".lr" -type "double3" 179.99999879258175 -90 0 ;
+	setAttr ".rst" -type "double3" -1.625151449429946e-15 -1.1171481100721632 -5.5511151231257827e-17 ;
+	setAttr ".rsrr" -type "double3" 179.99999879258175 -90 0 ;
+	setAttr -k on ".w0";
 createNode transform -n "pCylinder5" -p "Geo";
 	rename -uid "7C0048F0-4AFB-8937-84BD-3BBBDFBF8B1D";
-	setAttr ".t" -type "double3" -1.6251514501796523e-15 -1.1171481100721627 -10.407450306993153 ;
-	setAttr ".r" -type "double3" 179.99999999999991 -90 0 ;
 	setAttr ".s" -type "double3" 1.7699485267378527 0.38559601843594971 1.7699485267378527 ;
 createNode mesh -n "pCylinderShape5" -p "pCylinder5";
 	rename -uid "A612B3BB-4941-19E9-D97D-39A7FA866320";
@@ -1723,6 +1867,29 @@ createNode mesh -n "pCylinderShape5" -p "pCylinder5";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode parentConstraint -n "pCylinder5_parentConstraint1" -p "pCylinder5";
+	rename -uid "07DA6182-4298-50B4-F7BC-168329C7C010";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "test2_pistonPivotJointW0" -dv 1 -min 
+		0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -3.5527136788005009e-15 1.1171481100721632 
+		-2.354213756806179e-08 ;
+	setAttr ".tg[0].tor" -type "double3" -1.2074183394283804e-06 0 0 ;
+	setAttr ".lr" -type "double3" 179.99999999999991 -90 0 ;
+	setAttr ".rst" -type "double3" -1.625151449429946e-15 -1.1171481100721627 -10.407450306993153 ;
+	setAttr ".rsrr" -type "double3" 179.99999999999991 -90 0 ;
+	setAttr -k on ".w0";
 createNode transform -n "HousingBaseGeo";
 	rename -uid "702256E1-4FD3-9CEA-8CB9-3CBCD02E1AFD";
 	setAttr ".t" -type "double3" 0 -2.8943219184875484 0 ;
@@ -4011,6 +4178,175 @@ createNode locator -n "Piston2Shape" -p "Piston2";
 	rename -uid "8B5D06DA-48A7-DEF8-D575-899257CA0777";
 	setAttr -k off ".v";
 	setAttr ".lp" -type "double3" 0 8.8817841970012523e-16 0 ;
+createNode transform -n "test2_Piston_Loc_Up_Target";
+	rename -uid "06EC1263-45E7-2AC1-9F3F-EF964426FC4F";
+	setAttr ".rp" -type "double3" 0 8.8817841970012523e-16 -10.40745030699315 ;
+	setAttr ".sp" -type "double3" 0 8.8817841970012523e-16 -10.40745030699315 ;
+createNode locator -n "test2_Piston_Loc_Up_TargetShape" -p "test2_Piston_Loc_Up_Target";
+	rename -uid "52909419-46B0-E04C-246B-A495B48EDFFE";
+	setAttr -k off ".v";
+	setAttr ".lp" -type "double3" 0 8.8817841970012523e-16 -10.40745030699315 ;
+createNode parentConstraint -n "test2_Piston_Loc_Up_Target_parentConstraint1" -p "test2_Piston_Loc_Up_Target";
+	rename -uid "BD55C804-4FC7-C168-1F87-3DB5AF08AAF0";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "test2_Piston_LocW0" -dv 1 -min 0 
+		-at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0 1 0 ;
+	setAttr ".tg[0].tor" -type "double3" 0 90 0 ;
+	setAttr ".rst" -type "double3" 0 1 0 ;
+	setAttr -k on ".w0";
+createNode transform -n "test2_Housing_Loc_Up_Target";
+	rename -uid "636DFEDE-4FD0-DA12-D8AF-96958F04AC5D";
+	setAttr ".rp" -type "double3" 0 8.8817841970012523e-16 0 ;
+	setAttr ".sp" -type "double3" 0 8.8817841970012523e-16 0 ;
+createNode locator -n "test2_Housing_Loc_Up_TargetShape" -p "test2_Housing_Loc_Up_Target";
+	rename -uid "34D32D9A-4FB2-0A69-7A92-10B8291842A3";
+	setAttr -k off ".v";
+	setAttr ".lp" -type "double3" 0 8.8817841970012523e-16 0 ;
+createNode parentConstraint -n "test2_Housing_Loc_Up_Target_parentConstraint1" -p
+		 "test2_Housing_Loc_Up_Target";
+	rename -uid "53BDD2B6-4EEB-7D81-E035-D48357D277A3";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "test2_Housing_LocW0" -dv 1 -min 0 
+		-at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0 1 0 ;
+	setAttr ".tg[0].tor" -type "double3" 0 -90 0 ;
+	setAttr ".rst" -type "double3" 0 1 0 ;
+	setAttr -k on ".w0";
+createNode joint -n "test2_pistonJnt1";
+	rename -uid "F011B10B-43EE-5862-A24C-BABCE29889B3";
+	setAttr ".r" -type "double3" 1.2074182697257333e-06 0 0 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 180 -90 0 ;
+createNode joint -n "test2_pistonJnt2" -p "test2_pistonJnt1";
+	rename -uid "1B001F9D-45A8-6A3F-C724-4593966BC4EF";
+	setAttr ".t" -type "double3" 5.2037251534965749 0 0 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+createNode ikEffector -n "effector1" -p "test2_pistonJnt1";
+	rename -uid "42828D25-40EC-FC05-4441-6AA1C50C4E13";
+	setAttr ".v" no;
+	setAttr ".hd" yes;
+createNode pointConstraint -n "test2_pistonJnt1_pointConstraint1" -p "test2_pistonJnt1";
+	rename -uid "F3057737-4029-E688-CF41-9F949C66D171";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "test2_Piston_LocW0" -dv 1 -min 0 
+		-at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" 0 8.8817841970012523e-16 -10.40745030699315 ;
+	setAttr -k on ".w0";
+createNode joint -n "test2_pistonPivotJoint" -p "test2_pistonJnt1";
+	rename -uid "C975FBFC-491C-5AB1-758E-BAB827E695D1";
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+createNode aimConstraint -n "test2_pistonPivotJoint_aimConstraint1" -p "test2_pistonPivotJoint";
+	rename -uid "2AF04519-405E-E58B-BB7D-56AE32EC7ED5";
+	addAttr -dcb 0 -ci true -sn "w0" -ln "test2_Piston_Loc_Up_TargetW0" -dv 1 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".a" -type "double3" 0 -1 0 ;
+	setAttr ".u" -type "double3" 1 0 0 ;
+	setAttr ".wut" 1;
+	setAttr -k on ".w0";
+createNode joint -n "test2_housingJnt1";
+	rename -uid "CC59E782-420F-A33C-7117-9C96A3753D42";
+	setAttr ".r" -type "double3" 1.2074182697257333e-06 0 0 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".jo" -type "double3" 180 90 0 ;
+createNode joint -n "test2_housingJnt2" -p "test2_housingJnt1";
+	rename -uid "82E27A6A-4D25-0FC3-4906-37A833EB19E3";
+	setAttr ".t" -type "double3" 5.2037251534965749 0 0 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+createNode ikEffector -n "effector2" -p "test2_housingJnt1";
+	rename -uid "4F1FA6F6-45B7-E7FF-CC31-8BAB58AA08A7";
+	setAttr ".v" no;
+	setAttr ".hd" yes;
+createNode pointConstraint -n "test2_housingJnt1_pointConstraint1" -p "test2_housingJnt1";
+	rename -uid "9B2DCACB-4AE8-032A-8A5F-46AFB2FE2846";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "test2_Housing_LocW0" -dv 1 -min 0 
+		-at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".rst" -type "double3" 0 8.8817841970012523e-16 0 ;
+	setAttr -k on ".w0";
+createNode joint -n "test2_housingPivotJoint" -p "test2_housingJnt1";
+	rename -uid "07741277-4ADE-2A7B-6D79-59865C57D47F";
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+createNode aimConstraint -n "test2_housingPivotJoint_aimConstraint1" -p "test2_housingPivotJoint";
+	rename -uid "BC06B803-47D0-D83D-ECD1-C9ADBB59D334";
+	addAttr -dcb 0 -ci true -sn "w0" -ln "test2_Housing_Loc_Up_TargetW0" -dv 1 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".a" -type "double3" 0 -1 0 ;
+	setAttr ".u" -type "double3" 1 0 0 ;
+	setAttr ".wut" 1;
+	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "81B50D67-4520-261F-CF46-21AF8D57BB50";
 	setAttr -s 2 ".lnk";
@@ -4099,6 +4435,8 @@ createNode groupId -n "groupId6";
 createNode groupId -n "groupId7";
 	rename -uid "5960A100-4BFE-4822-685B-C2A964669B78";
 	setAttr ".ihi" 0;
+createNode ikRPsolver -n "ikRPsolver";
+	rename -uid "7D281F12-41DE-89EC-D765-30B4E7014DBD";
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
 	rename -uid "6A003B01-428F-B5D4-39B8-4B83F04EFEBF";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
@@ -4231,10 +4569,375 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
+connectAttr "test2_Piston_Loc_parentConstraint1.ctx" "test2_Piston_Loc.tx";
+connectAttr "test2_Piston_Loc_parentConstraint1.cty" "test2_Piston_Loc.ty";
+connectAttr "test2_Piston_Loc_parentConstraint1.ctz" "test2_Piston_Loc.tz";
+connectAttr "test2_Piston_Loc_parentConstraint1.crx" "test2_Piston_Loc.rx";
+connectAttr "test2_Piston_Loc_parentConstraint1.cry" "test2_Piston_Loc.ry";
+connectAttr "test2_Piston_Loc_parentConstraint1.crz" "test2_Piston_Loc.rz";
+connectAttr "test2_housingJnt1.msg" "test2_housingIKHandle.hsj";
+connectAttr "effector2.hp" "test2_housingIKHandle.hee";
+connectAttr "ikRPsolver.msg" "test2_housingIKHandle.hsv";
+connectAttr "test2_housingIKHandle_poleVectorConstraint1.ctx" "test2_housingIKHandle.pvx"
+		;
+connectAttr "test2_housingIKHandle_poleVectorConstraint1.cty" "test2_housingIKHandle.pvy"
+		;
+connectAttr "test2_housingIKHandle_poleVectorConstraint1.ctz" "test2_housingIKHandle.pvz"
+		;
+connectAttr "test2_housingIKHandle.pim" "test2_housingIKHandle_poleVectorConstraint1.cpim"
+		;
+connectAttr "test2_housingJnt1.pm" "test2_housingIKHandle_poleVectorConstraint1.ps"
+		;
+connectAttr "test2_housingJnt1.t" "test2_housingIKHandle_poleVectorConstraint1.crp"
+		;
+connectAttr "test2_Housing_Loc_Up_Target.t" "test2_housingIKHandle_poleVectorConstraint1.tg[0].tt"
+		;
+connectAttr "test2_Housing_Loc_Up_Target.rp" "test2_housingIKHandle_poleVectorConstraint1.tg[0].trp"
+		;
+connectAttr "test2_Housing_Loc_Up_Target.rpt" "test2_housingIKHandle_poleVectorConstraint1.tg[0].trt"
+		;
+connectAttr "test2_Housing_Loc_Up_Target.pm" "test2_housingIKHandle_poleVectorConstraint1.tg[0].tpm"
+		;
+connectAttr "test2_housingIKHandle_poleVectorConstraint1.w0" "test2_housingIKHandle_poleVectorConstraint1.tg[0].tw"
+		;
+connectAttr "test2_Piston_Loc.ro" "test2_Piston_Loc_parentConstraint1.cro";
+connectAttr "test2_Piston_Loc.pim" "test2_Piston_Loc_parentConstraint1.cpim";
+connectAttr "test2_Piston_Loc.rp" "test2_Piston_Loc_parentConstraint1.crp";
+connectAttr "test2_Piston_Loc.rpt" "test2_Piston_Loc_parentConstraint1.crt";
+connectAttr "PistonBaseGeo.t" "test2_Piston_Loc_parentConstraint1.tg[0].tt";
+connectAttr "PistonBaseGeo.rp" "test2_Piston_Loc_parentConstraint1.tg[0].trp";
+connectAttr "PistonBaseGeo.rpt" "test2_Piston_Loc_parentConstraint1.tg[0].trt";
+connectAttr "PistonBaseGeo.r" "test2_Piston_Loc_parentConstraint1.tg[0].tr";
+connectAttr "PistonBaseGeo.ro" "test2_Piston_Loc_parentConstraint1.tg[0].tro";
+connectAttr "PistonBaseGeo.s" "test2_Piston_Loc_parentConstraint1.tg[0].ts";
+connectAttr "PistonBaseGeo.pm" "test2_Piston_Loc_parentConstraint1.tg[0].tpm";
+connectAttr "test2_Piston_Loc_parentConstraint1.w0" "test2_Piston_Loc_parentConstraint1.tg[0].tw"
+		;
+connectAttr "test2_Housing_Loc_parentConstraint1.crx" "test2_Housing_Loc.rx";
+connectAttr "test2_Housing_Loc_parentConstraint1.cry" "test2_Housing_Loc.ry";
+connectAttr "test2_Housing_Loc_parentConstraint1.crz" "test2_Housing_Loc.rz";
+connectAttr "test2_Housing_Loc_parentConstraint1.ctx" "test2_Housing_Loc.tx";
+connectAttr "test2_Housing_Loc_parentConstraint1.cty" "test2_Housing_Loc.ty";
+connectAttr "test2_Housing_Loc_parentConstraint1.ctz" "test2_Housing_Loc.tz";
+connectAttr "test2_pistonJnt1.msg" "test2_pistonIKHandle.hsj";
+connectAttr "effector1.hp" "test2_pistonIKHandle.hee";
+connectAttr "ikRPsolver.msg" "test2_pistonIKHandle.hsv";
+connectAttr "test2_pistonIKHandle_poleVectorConstraint1.ctx" "test2_pistonIKHandle.pvx"
+		;
+connectAttr "test2_pistonIKHandle_poleVectorConstraint1.cty" "test2_pistonIKHandle.pvy"
+		;
+connectAttr "test2_pistonIKHandle_poleVectorConstraint1.ctz" "test2_pistonIKHandle.pvz"
+		;
+connectAttr "test2_pistonIKHandle.pim" "test2_pistonIKHandle_poleVectorConstraint1.cpim"
+		;
+connectAttr "test2_pistonJnt1.pm" "test2_pistonIKHandle_poleVectorConstraint1.ps"
+		;
+connectAttr "test2_pistonJnt1.t" "test2_pistonIKHandle_poleVectorConstraint1.crp"
+		;
+connectAttr "test2_Piston_Loc_Up_Target.t" "test2_pistonIKHandle_poleVectorConstraint1.tg[0].tt"
+		;
+connectAttr "test2_Piston_Loc_Up_Target.rp" "test2_pistonIKHandle_poleVectorConstraint1.tg[0].trp"
+		;
+connectAttr "test2_Piston_Loc_Up_Target.rpt" "test2_pistonIKHandle_poleVectorConstraint1.tg[0].trt"
+		;
+connectAttr "test2_Piston_Loc_Up_Target.pm" "test2_pistonIKHandle_poleVectorConstraint1.tg[0].tpm"
+		;
+connectAttr "test2_pistonIKHandle_poleVectorConstraint1.w0" "test2_pistonIKHandle_poleVectorConstraint1.tg[0].tw"
+		;
+connectAttr "test2_Housing_Loc.ro" "test2_Housing_Loc_parentConstraint1.cro";
+connectAttr "test2_Housing_Loc.pim" "test2_Housing_Loc_parentConstraint1.cpim";
+connectAttr "test2_Housing_Loc.rp" "test2_Housing_Loc_parentConstraint1.crp";
+connectAttr "test2_Housing_Loc.rpt" "test2_Housing_Loc_parentConstraint1.crt";
+connectAttr "HousingBaseGeo.t" "test2_Housing_Loc_parentConstraint1.tg[0].tt";
+connectAttr "HousingBaseGeo.rp" "test2_Housing_Loc_parentConstraint1.tg[0].trp";
+connectAttr "HousingBaseGeo.rpt" "test2_Housing_Loc_parentConstraint1.tg[0].trt"
+		;
+connectAttr "HousingBaseGeo.r" "test2_Housing_Loc_parentConstraint1.tg[0].tr";
+connectAttr "HousingBaseGeo.ro" "test2_Housing_Loc_parentConstraint1.tg[0].tro";
+connectAttr "HousingBaseGeo.s" "test2_Housing_Loc_parentConstraint1.tg[0].ts";
+connectAttr "HousingBaseGeo.pm" "test2_Housing_Loc_parentConstraint1.tg[0].tpm";
+connectAttr "test2_Housing_Loc_parentConstraint1.w0" "test2_Housing_Loc_parentConstraint1.tg[0].tw"
+		;
+connectAttr "pCylinder10_parentConstraint1.ctx" "pCylinder10.tx";
+connectAttr "pCylinder10_parentConstraint1.cty" "pCylinder10.ty";
+connectAttr "pCylinder10_parentConstraint1.ctz" "pCylinder10.tz";
+connectAttr "pCylinder10_parentConstraint1.crx" "pCylinder10.rx";
+connectAttr "pCylinder10_parentConstraint1.cry" "pCylinder10.ry";
+connectAttr "pCylinder10_parentConstraint1.crz" "pCylinder10.rz";
 connectAttr "groupId6.id" "pCylinder10Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pCylinder10Shape.iog.og[0].gco";
+connectAttr "pCylinder10.ro" "pCylinder10_parentConstraint1.cro";
+connectAttr "pCylinder10.pim" "pCylinder10_parentConstraint1.cpim";
+connectAttr "pCylinder10.rp" "pCylinder10_parentConstraint1.crp";
+connectAttr "pCylinder10.rpt" "pCylinder10_parentConstraint1.crt";
+connectAttr "test2_housingJnt1.t" "pCylinder10_parentConstraint1.tg[0].tt";
+connectAttr "test2_housingJnt1.rp" "pCylinder10_parentConstraint1.tg[0].trp";
+connectAttr "test2_housingJnt1.rpt" "pCylinder10_parentConstraint1.tg[0].trt";
+connectAttr "test2_housingJnt1.r" "pCylinder10_parentConstraint1.tg[0].tr";
+connectAttr "test2_housingJnt1.ro" "pCylinder10_parentConstraint1.tg[0].tro";
+connectAttr "test2_housingJnt1.s" "pCylinder10_parentConstraint1.tg[0].ts";
+connectAttr "test2_housingJnt1.pm" "pCylinder10_parentConstraint1.tg[0].tpm";
+connectAttr "test2_housingJnt1.jo" "pCylinder10_parentConstraint1.tg[0].tjo";
+connectAttr "test2_housingJnt1.ssc" "pCylinder10_parentConstraint1.tg[0].tsc";
+connectAttr "test2_housingJnt1.is" "pCylinder10_parentConstraint1.tg[0].tis";
+connectAttr "pCylinder10_parentConstraint1.w0" "pCylinder10_parentConstraint1.tg[0].tw"
+		;
+connectAttr "pCylinder9_parentConstraint1.ctx" "pCylinder9.tx";
+connectAttr "pCylinder9_parentConstraint1.cty" "pCylinder9.ty";
+connectAttr "pCylinder9_parentConstraint1.ctz" "pCylinder9.tz";
+connectAttr "pCylinder9_parentConstraint1.crx" "pCylinder9.rx";
+connectAttr "pCylinder9_parentConstraint1.cry" "pCylinder9.ry";
+connectAttr "pCylinder9_parentConstraint1.crz" "pCylinder9.rz";
 connectAttr "groupId7.id" "pCylinder9Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "pCylinder9Shape.iog.og[0].gco";
+connectAttr "pCylinder9.ro" "pCylinder9_parentConstraint1.cro";
+connectAttr "pCylinder9.pim" "pCylinder9_parentConstraint1.cpim";
+connectAttr "pCylinder9.rp" "pCylinder9_parentConstraint1.crp";
+connectAttr "pCylinder9.rpt" "pCylinder9_parentConstraint1.crt";
+connectAttr "test2_pistonJnt1.t" "pCylinder9_parentConstraint1.tg[0].tt";
+connectAttr "test2_pistonJnt1.rp" "pCylinder9_parentConstraint1.tg[0].trp";
+connectAttr "test2_pistonJnt1.rpt" "pCylinder9_parentConstraint1.tg[0].trt";
+connectAttr "test2_pistonJnt1.r" "pCylinder9_parentConstraint1.tg[0].tr";
+connectAttr "test2_pistonJnt1.ro" "pCylinder9_parentConstraint1.tg[0].tro";
+connectAttr "test2_pistonJnt1.s" "pCylinder9_parentConstraint1.tg[0].ts";
+connectAttr "test2_pistonJnt1.pm" "pCylinder9_parentConstraint1.tg[0].tpm";
+connectAttr "test2_pistonJnt1.jo" "pCylinder9_parentConstraint1.tg[0].tjo";
+connectAttr "test2_pistonJnt1.ssc" "pCylinder9_parentConstraint1.tg[0].tsc";
+connectAttr "test2_pistonJnt1.is" "pCylinder9_parentConstraint1.tg[0].tis";
+connectAttr "pCylinder9_parentConstraint1.w0" "pCylinder9_parentConstraint1.tg[0].tw"
+		;
+connectAttr "pCylinder6_parentConstraint1.ctx" "pCylinder6.tx";
+connectAttr "pCylinder6_parentConstraint1.cty" "pCylinder6.ty";
+connectAttr "pCylinder6_parentConstraint1.ctz" "pCylinder6.tz";
+connectAttr "pCylinder6_parentConstraint1.crx" "pCylinder6.rx";
+connectAttr "pCylinder6_parentConstraint1.cry" "pCylinder6.ry";
+connectAttr "pCylinder6_parentConstraint1.crz" "pCylinder6.rz";
+connectAttr "pCylinder6.ro" "pCylinder6_parentConstraint1.cro";
+connectAttr "pCylinder6.pim" "pCylinder6_parentConstraint1.cpim";
+connectAttr "pCylinder6.rp" "pCylinder6_parentConstraint1.crp";
+connectAttr "pCylinder6.rpt" "pCylinder6_parentConstraint1.crt";
+connectAttr "test2_housingPivotJoint.t" "pCylinder6_parentConstraint1.tg[0].tt";
+connectAttr "test2_housingPivotJoint.rp" "pCylinder6_parentConstraint1.tg[0].trp"
+		;
+connectAttr "test2_housingPivotJoint.rpt" "pCylinder6_parentConstraint1.tg[0].trt"
+		;
+connectAttr "test2_housingPivotJoint.r" "pCylinder6_parentConstraint1.tg[0].tr";
+connectAttr "test2_housingPivotJoint.ro" "pCylinder6_parentConstraint1.tg[0].tro"
+		;
+connectAttr "test2_housingPivotJoint.s" "pCylinder6_parentConstraint1.tg[0].ts";
+connectAttr "test2_housingPivotJoint.pm" "pCylinder6_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "test2_housingPivotJoint.jo" "pCylinder6_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "test2_housingPivotJoint.ssc" "pCylinder6_parentConstraint1.tg[0].tsc"
+		;
+connectAttr "test2_housingPivotJoint.is" "pCylinder6_parentConstraint1.tg[0].tis"
+		;
+connectAttr "pCylinder6_parentConstraint1.w0" "pCylinder6_parentConstraint1.tg[0].tw"
+		;
+connectAttr "pCylinder5_parentConstraint1.ctx" "pCylinder5.tx";
+connectAttr "pCylinder5_parentConstraint1.cty" "pCylinder5.ty";
+connectAttr "pCylinder5_parentConstraint1.ctz" "pCylinder5.tz";
+connectAttr "pCylinder5_parentConstraint1.crx" "pCylinder5.rx";
+connectAttr "pCylinder5_parentConstraint1.cry" "pCylinder5.ry";
+connectAttr "pCylinder5_parentConstraint1.crz" "pCylinder5.rz";
+connectAttr "pCylinder5.ro" "pCylinder5_parentConstraint1.cro";
+connectAttr "pCylinder5.pim" "pCylinder5_parentConstraint1.cpim";
+connectAttr "pCylinder5.rp" "pCylinder5_parentConstraint1.crp";
+connectAttr "pCylinder5.rpt" "pCylinder5_parentConstraint1.crt";
+connectAttr "test2_pistonPivotJoint.t" "pCylinder5_parentConstraint1.tg[0].tt";
+connectAttr "test2_pistonPivotJoint.rp" "pCylinder5_parentConstraint1.tg[0].trp"
+		;
+connectAttr "test2_pistonPivotJoint.rpt" "pCylinder5_parentConstraint1.tg[0].trt"
+		;
+connectAttr "test2_pistonPivotJoint.r" "pCylinder5_parentConstraint1.tg[0].tr";
+connectAttr "test2_pistonPivotJoint.ro" "pCylinder5_parentConstraint1.tg[0].tro"
+		;
+connectAttr "test2_pistonPivotJoint.s" "pCylinder5_parentConstraint1.tg[0].ts";
+connectAttr "test2_pistonPivotJoint.pm" "pCylinder5_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "test2_pistonPivotJoint.jo" "pCylinder5_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "test2_pistonPivotJoint.ssc" "pCylinder5_parentConstraint1.tg[0].tsc"
+		;
+connectAttr "test2_pistonPivotJoint.is" "pCylinder5_parentConstraint1.tg[0].tis"
+		;
+connectAttr "pCylinder5_parentConstraint1.w0" "pCylinder5_parentConstraint1.tg[0].tw"
+		;
+connectAttr "test2_Piston_Loc_Up_Target_parentConstraint1.ctx" "test2_Piston_Loc_Up_Target.tx"
+		;
+connectAttr "test2_Piston_Loc_Up_Target_parentConstraint1.cty" "test2_Piston_Loc_Up_Target.ty"
+		;
+connectAttr "test2_Piston_Loc_Up_Target_parentConstraint1.ctz" "test2_Piston_Loc_Up_Target.tz"
+		;
+connectAttr "test2_Piston_Loc_Up_Target_parentConstraint1.crx" "test2_Piston_Loc_Up_Target.rx"
+		;
+connectAttr "test2_Piston_Loc_Up_Target_parentConstraint1.cry" "test2_Piston_Loc_Up_Target.ry"
+		;
+connectAttr "test2_Piston_Loc_Up_Target_parentConstraint1.crz" "test2_Piston_Loc_Up_Target.rz"
+		;
+connectAttr "test2_Piston_Loc_Up_Target.ro" "test2_Piston_Loc_Up_Target_parentConstraint1.cro"
+		;
+connectAttr "test2_Piston_Loc_Up_Target.pim" "test2_Piston_Loc_Up_Target_parentConstraint1.cpim"
+		;
+connectAttr "test2_Piston_Loc_Up_Target.rp" "test2_Piston_Loc_Up_Target_parentConstraint1.crp"
+		;
+connectAttr "test2_Piston_Loc_Up_Target.rpt" "test2_Piston_Loc_Up_Target_parentConstraint1.crt"
+		;
+connectAttr "test2_Piston_Loc.t" "test2_Piston_Loc_Up_Target_parentConstraint1.tg[0].tt"
+		;
+connectAttr "test2_Piston_Loc.rp" "test2_Piston_Loc_Up_Target_parentConstraint1.tg[0].trp"
+		;
+connectAttr "test2_Piston_Loc.rpt" "test2_Piston_Loc_Up_Target_parentConstraint1.tg[0].trt"
+		;
+connectAttr "test2_Piston_Loc.r" "test2_Piston_Loc_Up_Target_parentConstraint1.tg[0].tr"
+		;
+connectAttr "test2_Piston_Loc.ro" "test2_Piston_Loc_Up_Target_parentConstraint1.tg[0].tro"
+		;
+connectAttr "test2_Piston_Loc.s" "test2_Piston_Loc_Up_Target_parentConstraint1.tg[0].ts"
+		;
+connectAttr "test2_Piston_Loc.pm" "test2_Piston_Loc_Up_Target_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "test2_Piston_Loc_Up_Target_parentConstraint1.w0" "test2_Piston_Loc_Up_Target_parentConstraint1.tg[0].tw"
+		;
+connectAttr "test2_Housing_Loc_Up_Target_parentConstraint1.crx" "test2_Housing_Loc_Up_Target.rx"
+		;
+connectAttr "test2_Housing_Loc_Up_Target_parentConstraint1.cry" "test2_Housing_Loc_Up_Target.ry"
+		;
+connectAttr "test2_Housing_Loc_Up_Target_parentConstraint1.crz" "test2_Housing_Loc_Up_Target.rz"
+		;
+connectAttr "test2_Housing_Loc_Up_Target_parentConstraint1.ctx" "test2_Housing_Loc_Up_Target.tx"
+		;
+connectAttr "test2_Housing_Loc_Up_Target_parentConstraint1.cty" "test2_Housing_Loc_Up_Target.ty"
+		;
+connectAttr "test2_Housing_Loc_Up_Target_parentConstraint1.ctz" "test2_Housing_Loc_Up_Target.tz"
+		;
+connectAttr "test2_Housing_Loc_Up_Target.ro" "test2_Housing_Loc_Up_Target_parentConstraint1.cro"
+		;
+connectAttr "test2_Housing_Loc_Up_Target.pim" "test2_Housing_Loc_Up_Target_parentConstraint1.cpim"
+		;
+connectAttr "test2_Housing_Loc_Up_Target.rp" "test2_Housing_Loc_Up_Target_parentConstraint1.crp"
+		;
+connectAttr "test2_Housing_Loc_Up_Target.rpt" "test2_Housing_Loc_Up_Target_parentConstraint1.crt"
+		;
+connectAttr "test2_Housing_Loc.t" "test2_Housing_Loc_Up_Target_parentConstraint1.tg[0].tt"
+		;
+connectAttr "test2_Housing_Loc.rp" "test2_Housing_Loc_Up_Target_parentConstraint1.tg[0].trp"
+		;
+connectAttr "test2_Housing_Loc.rpt" "test2_Housing_Loc_Up_Target_parentConstraint1.tg[0].trt"
+		;
+connectAttr "test2_Housing_Loc.r" "test2_Housing_Loc_Up_Target_parentConstraint1.tg[0].tr"
+		;
+connectAttr "test2_Housing_Loc.ro" "test2_Housing_Loc_Up_Target_parentConstraint1.tg[0].tro"
+		;
+connectAttr "test2_Housing_Loc.s" "test2_Housing_Loc_Up_Target_parentConstraint1.tg[0].ts"
+		;
+connectAttr "test2_Housing_Loc.pm" "test2_Housing_Loc_Up_Target_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "test2_Housing_Loc_Up_Target_parentConstraint1.w0" "test2_Housing_Loc_Up_Target_parentConstraint1.tg[0].tw"
+		;
+connectAttr "test2_pistonJnt1_pointConstraint1.ctx" "test2_pistonJnt1.tx";
+connectAttr "test2_pistonJnt1_pointConstraint1.cty" "test2_pistonJnt1.ty";
+connectAttr "test2_pistonJnt1_pointConstraint1.ctz" "test2_pistonJnt1.tz";
+connectAttr "test2_pistonJnt1.s" "test2_pistonJnt2.is";
+connectAttr "test2_pistonJnt2.tx" "effector1.tx";
+connectAttr "test2_pistonJnt2.ty" "effector1.ty";
+connectAttr "test2_pistonJnt2.tz" "effector1.tz";
+connectAttr "test2_pistonJnt2.opm" "effector1.opm";
+connectAttr "test2_pistonJnt1.pim" "test2_pistonJnt1_pointConstraint1.cpim";
+connectAttr "test2_pistonJnt1.rp" "test2_pistonJnt1_pointConstraint1.crp";
+connectAttr "test2_pistonJnt1.rpt" "test2_pistonJnt1_pointConstraint1.crt";
+connectAttr "test2_Piston_Loc.t" "test2_pistonJnt1_pointConstraint1.tg[0].tt";
+connectAttr "test2_Piston_Loc.rp" "test2_pistonJnt1_pointConstraint1.tg[0].trp";
+connectAttr "test2_Piston_Loc.rpt" "test2_pistonJnt1_pointConstraint1.tg[0].trt"
+		;
+connectAttr "test2_Piston_Loc.pm" "test2_pistonJnt1_pointConstraint1.tg[0].tpm";
+connectAttr "test2_pistonJnt1_pointConstraint1.w0" "test2_pistonJnt1_pointConstraint1.tg[0].tw"
+		;
+connectAttr "test2_pistonJnt1.s" "test2_pistonPivotJoint.is";
+connectAttr "test2_pistonPivotJoint_aimConstraint1.crx" "test2_pistonPivotJoint.rx"
+		;
+connectAttr "test2_pistonPivotJoint_aimConstraint1.cry" "test2_pistonPivotJoint.ry"
+		;
+connectAttr "test2_pistonPivotJoint_aimConstraint1.crz" "test2_pistonPivotJoint.rz"
+		;
+connectAttr "test2_pistonPivotJoint.pim" "test2_pistonPivotJoint_aimConstraint1.cpim"
+		;
+connectAttr "test2_pistonPivotJoint.t" "test2_pistonPivotJoint_aimConstraint1.ct"
+		;
+connectAttr "test2_pistonPivotJoint.rp" "test2_pistonPivotJoint_aimConstraint1.crp"
+		;
+connectAttr "test2_pistonPivotJoint.rpt" "test2_pistonPivotJoint_aimConstraint1.crt"
+		;
+connectAttr "test2_pistonPivotJoint.ro" "test2_pistonPivotJoint_aimConstraint1.cro"
+		;
+connectAttr "test2_pistonPivotJoint.jo" "test2_pistonPivotJoint_aimConstraint1.cjo"
+		;
+connectAttr "test2_pistonPivotJoint.is" "test2_pistonPivotJoint_aimConstraint1.is"
+		;
+connectAttr "test2_Piston_Loc_Up_Target.t" "test2_pistonPivotJoint_aimConstraint1.tg[0].tt"
+		;
+connectAttr "test2_Piston_Loc_Up_Target.rp" "test2_pistonPivotJoint_aimConstraint1.tg[0].trp"
+		;
+connectAttr "test2_Piston_Loc_Up_Target.rpt" "test2_pistonPivotJoint_aimConstraint1.tg[0].trt"
+		;
+connectAttr "test2_Piston_Loc_Up_Target.pm" "test2_pistonPivotJoint_aimConstraint1.tg[0].tpm"
+		;
+connectAttr "test2_pistonPivotJoint_aimConstraint1.w0" "test2_pistonPivotJoint_aimConstraint1.tg[0].tw"
+		;
+connectAttr "test2_housingJnt1.wm" "test2_pistonPivotJoint_aimConstraint1.wum";
+connectAttr "test2_housingJnt1_pointConstraint1.ctx" "test2_housingJnt1.tx";
+connectAttr "test2_housingJnt1_pointConstraint1.cty" "test2_housingJnt1.ty";
+connectAttr "test2_housingJnt1_pointConstraint1.ctz" "test2_housingJnt1.tz";
+connectAttr "test2_housingJnt1.s" "test2_housingJnt2.is";
+connectAttr "test2_housingJnt2.tx" "effector2.tx";
+connectAttr "test2_housingJnt2.ty" "effector2.ty";
+connectAttr "test2_housingJnt2.tz" "effector2.tz";
+connectAttr "test2_housingJnt2.opm" "effector2.opm";
+connectAttr "test2_housingJnt1.pim" "test2_housingJnt1_pointConstraint1.cpim";
+connectAttr "test2_housingJnt1.rp" "test2_housingJnt1_pointConstraint1.crp";
+connectAttr "test2_housingJnt1.rpt" "test2_housingJnt1_pointConstraint1.crt";
+connectAttr "test2_Housing_Loc.t" "test2_housingJnt1_pointConstraint1.tg[0].tt";
+connectAttr "test2_Housing_Loc.rp" "test2_housingJnt1_pointConstraint1.tg[0].trp"
+		;
+connectAttr "test2_Housing_Loc.rpt" "test2_housingJnt1_pointConstraint1.tg[0].trt"
+		;
+connectAttr "test2_Housing_Loc.pm" "test2_housingJnt1_pointConstraint1.tg[0].tpm"
+		;
+connectAttr "test2_housingJnt1_pointConstraint1.w0" "test2_housingJnt1_pointConstraint1.tg[0].tw"
+		;
+connectAttr "test2_housingJnt1.s" "test2_housingPivotJoint.is";
+connectAttr "test2_housingPivotJoint_aimConstraint1.crx" "test2_housingPivotJoint.rx"
+		;
+connectAttr "test2_housingPivotJoint_aimConstraint1.cry" "test2_housingPivotJoint.ry"
+		;
+connectAttr "test2_housingPivotJoint_aimConstraint1.crz" "test2_housingPivotJoint.rz"
+		;
+connectAttr "test2_housingPivotJoint.pim" "test2_housingPivotJoint_aimConstraint1.cpim"
+		;
+connectAttr "test2_housingPivotJoint.t" "test2_housingPivotJoint_aimConstraint1.ct"
+		;
+connectAttr "test2_housingPivotJoint.rp" "test2_housingPivotJoint_aimConstraint1.crp"
+		;
+connectAttr "test2_housingPivotJoint.rpt" "test2_housingPivotJoint_aimConstraint1.crt"
+		;
+connectAttr "test2_housingPivotJoint.ro" "test2_housingPivotJoint_aimConstraint1.cro"
+		;
+connectAttr "test2_housingPivotJoint.jo" "test2_housingPivotJoint_aimConstraint1.cjo"
+		;
+connectAttr "test2_housingPivotJoint.is" "test2_housingPivotJoint_aimConstraint1.is"
+		;
+connectAttr "test2_Housing_Loc_Up_Target.t" "test2_housingPivotJoint_aimConstraint1.tg[0].tt"
+		;
+connectAttr "test2_Housing_Loc_Up_Target.rp" "test2_housingPivotJoint_aimConstraint1.tg[0].trp"
+		;
+connectAttr "test2_Housing_Loc_Up_Target.rpt" "test2_housingPivotJoint_aimConstraint1.tg[0].trt"
+		;
+connectAttr "test2_Housing_Loc_Up_Target.pm" "test2_housingPivotJoint_aimConstraint1.tg[0].tpm"
+		;
+connectAttr "test2_housingPivotJoint_aimConstraint1.w0" "test2_housingPivotJoint_aimConstraint1.tg[0].tw"
+		;
+connectAttr "test2_pistonJnt1.wm" "test2_housingPivotJoint_aimConstraint1.wum";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -4245,6 +4948,60 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 		 -na;
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
+connectAttr "test2_housingPivotJoint_aimConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "test2_pistonIKHandle.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "test2_pistonJnt1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "test2_Housing_Loc_Up_Target.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "test2_Housing_Loc_Up_TargetShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "test2_Housing_Loc_Up_Target_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "test2_pistonIKHandle_poleVectorConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+		;
+connectAttr "test2_pistonJnt1_pointConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+		;
+connectAttr "test2_housingIKHandle.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+		;
+connectAttr "test2_housingIKHandle_poleVectorConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+		;
+connectAttr "test2_housingJnt1_pointConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+		;
+connectAttr "test2_Piston_Loc_Up_Target_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+		;
+connectAttr "test2_housingJnt2.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
+		;
+connectAttr "test2_housingPivotJoint.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
+		;
+connectAttr "test2_pistonPivotJoint.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[14].dn"
+		;
+connectAttr "effector2.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[15].dn";
+connectAttr "pCylinder10_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[16].dn"
+		;
+connectAttr "test2_pistonJnt2.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[17].dn"
+		;
+connectAttr "test2_Piston_Loc_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[18].dn"
+		;
+connectAttr "test2_Piston_Loc_Up_TargetShape.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[19].dn"
+		;
+connectAttr "pCylinder9_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[20].dn"
+		;
+connectAttr "pCylinder5_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[21].dn"
+		;
+connectAttr "test2_housingJnt1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[22].dn"
+		;
+connectAttr "test2_Piston_Loc_Up_Target.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[23].dn"
+		;
+connectAttr "effector1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[24].dn";
+connectAttr "test2_Housing_Loc_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[25].dn"
+		;
+connectAttr "test2_pistonPivotJoint_aimConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[26].dn"
+		;
+connectAttr "pCylinder6_parentConstraint1.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[27].dn"
+		;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCylinderShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinderShape2.iog" ":initialShadingGroup.dsm" -na;
@@ -4256,4 +5013,5 @@ connectAttr "pCylinder10Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "pCylinder9Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId6.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId7.msg" ":initialShadingGroup.gn" -na;
-// End of MC_PistonDemo.ma
+connectAttr "ikRPsolver.msg" ":ikSystem.sol" -na;
+// End of MC_PistonDemoCompleted.ma

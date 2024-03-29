@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Graybox.ma
-//Last modified: Fri, Mar 29, 2024 02:42:08 PM
+//Last modified: Fri, Mar 29, 2024 02:55:39 PM
 //Codeset: 1252
 requires maya "2023";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.2.1.1";
@@ -11,12 +11,12 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "5C8CA247-4637-5D0D-5A3F-92980ACE1E79";
+fileInfo "UUID" "9C57563C-44C0-E156-0609-65A8B0DAC570";
 createNode transform -s -n "persp";
 	rename -uid "AC9CE73A-483F-8E6B-68DC-0485EDCCE328";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.57887933988077422 2.3553034154105901 7.7041704310002919 ;
-	setAttr ".r" -type "double3" -25.20000000008956 2836.79999999962 2.1815442817710448e-15 ;
+	setAttr ".t" -type "double3" 24.147735725360285 5.2454949849190982 31.530668925653387 ;
+	setAttr ".r" -type "double3" -1.2000000001204667 2914.7999999993467 1.2104052794473751e-16 ;
 	setAttr ".rpt" -type "double3" 3.9120988537823209e-19 -4.1892899188439292e-17 7.1634115773762185e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C3D1022C-45A4-3744-50D6-9C83A1EEBB1F";
@@ -25,7 +25,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".ncp" 0.03937007874015748;
 	setAttr ".fcp" 3937.0078740157478;
 	setAttr ".fd" 1.9685039370078738;
-	setAttr ".coi" 4.6738581579614271;
+	setAttr ".coi" 38.660949226648313;
 	setAttr ".ow" 3.9370078740157477;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";

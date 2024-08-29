@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Mech Cat Run.ma
-//Last modified: Thu, Aug 29, 2024 11:27:00 AM
+//Last modified: Thu, Aug 29, 2024 04:21:32 PM
 //Codeset: 1252
 file -rdi 1 -ns "Mech_Cat_Final_RIg" -rfn "Mech_Cat_Final_RIgRN" -op "v=0;" 
 		-typ "mayaAscii" "F:/School/AdvancedRigging/ADVRig//scenes/Mech Cat/Mech Cat Final RIg.ma";
@@ -9,23 +9,24 @@ file -r -ns "Mech_Cat_Final_RIg" -dr 1 -rfn "Mech_Cat_Final_RIgRN" -op "v=0;" -t
 requires maya "2023";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.4.1.2";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "63DA1426-4D71-9891-CC53-5B9CF1AB9D63";
+fileInfo "UUID" "14573187-4FBC-254D-DD73-6EB73BFAD831";
 createNode transform -s -n "persp";
 	rename -uid "AC4A775E-4E50-F3E5-7C23-2AA2F563E9C3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 155.94909908831843 32.065983241691455 34.410141015153904 ;
-	setAttr ".r" -type "double3" -7.2000000005862343 -1361.5999999999531 -1.9771903992180452e-15 ;
+	setAttr ".t" -type "double3" 132.09762410041211 41.727711802348246 148.04001866453657 ;
+	setAttr ".r" -type "double3" -7.2000000000029631 -2117.5999999999717 -5.3837965996177234e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7F861A02-4CB8-977A-C969-15B609347D55";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 161.00229684657606;
+	setAttr ".coi" 187.42512181422185;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -82,27 +83,27 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "A944927A-4899-82EC-E7E8-DBB1E76AEBB0";
+	rename -uid "9E7AE644-4E0E-25DD-1566-00BFF028B40E";
 	setAttr -s 12 ".lnk";
 	setAttr -s 12 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "DFEBC826-42B1-9D83-84A9-868FB1EE8104";
+	rename -uid "47893CDB-40CC-177C-37B9-82A6ECDB0C49";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "FD8A28D2-4146-8F95-4203-159EBC850737";
+	rename -uid "6F083F7D-44D8-DC52-44AC-D5840B3F6473";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "06B120BD-4E10-1754-D46B-629F93954E2D";
+	rename -uid "9E411D9D-4DB7-169B-D3DA-6BBF908503FD";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "CE63E84E-4BEF-1A42-1352-89A9D28868D1";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "B1CA1C0D-498F-F3B9-9C55-A086FE49ADF7";
+	rename -uid "71255525-45C4-16C9-09BE-B7A61A753E08";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "51EF55AF-4778-4ADA-16B7-F183B0A94C90";
 	setAttr ".g" yes;
 createNode reference -n "Mech_Cat_Final_RIgRN";
 	rename -uid "95DA3AEB-4C5B-9D45-43D5-8987B3E6E986";
-	setAttr -s 63 ".phl";
+	setAttr -s 73 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -166,153 +167,199 @@ createNode reference -n "Mech_Cat_Final_RIgRN";
 	setAttr ".phl[61]" 0;
 	setAttr ".phl[62]" 0;
 	setAttr ".phl[63]" 0;
+	setAttr ".phl[64]" 0;
+	setAttr ".phl[65]" 0;
+	setAttr ".phl[66]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
+	setAttr ".phl[69]" 0;
+	setAttr ".phl[70]" 0;
+	setAttr ".phl[71]" 0;
+	setAttr ".phl[72]" 0;
+	setAttr ".phl[73]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Mech_Cat_Final_RIgRN"
 		"Mech_Cat_Final_RIgRN" 0
-		"Mech_Cat_Final_RIgRN" 73
+		"Mech_Cat_Final_RIgRN" 90
 		2 "|Mech_Cat_Final_RIg:MECH_CAT" "scale" " -type \"double3\" 1 1 1"
 		2 "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Transform_Control_Grp|Mech_Cat_Final_RIg:Transform_Control" 
 		"MasterScale" " -k 1 1"
 		2 "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Neck_and_Head_Ctrls|Mech_Cat_Final_RIg:Neck_1_Jnt_Ctrl_Grp|Mech_Cat_Final_RIg:Neck_1_Auto_Follow_OFFSETTOWORLD|Mech_Cat_Final_RIg:Neck_1_Auto_Follow_OFFSET|Mech_Cat_Final_RIg:Neck_1_Auto_Follow_OFFSETTOCONTROL|Mech_Cat_Final_RIg:Neck_1_Jnt_Ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
-		2 "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Neck_and_Head_Ctrls|Mech_Cat_Final_RIg:Jaw_Ctrl_Grp|Mech_Cat_Final_RIg:Jaw_Ctrl" 
-		"rotate" " -type \"double3\" -21.407160999983887 0 0"
 		2 "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl" 
 		"IKAutoFollow" " -k 1 0"
+		2 "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Front_Leg_IK_PV_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Leg_IK_PV_Ctrl_OFFSET|Mech_Cat_Final_RIg:L_Front_Leg_IK_PV_Ctrl" 
+		"translate" " -type \"double3\" -0.13800022612569171 -1.19390255711087234 -2.53702989211646512"
+		
 		2 "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_IK_Ctrls|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl" 
 		"IKAutoFollow" " -k 1 0"
+		2 "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_IK_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_IK_PV_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Leg_IK_PV_Ctrl_OFFSET|Mech_Cat_Final_RIg:R_Front_Leg_IK_PV_Ctrl" 
+		"translate" " -type \"double3\" 0.1372826891415013 -1.19212061846655226 -2.53790660704213344"
+		
 		2 "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:IKFK_Switches|Mech_Cat_Final_RIg:Spine_IKFK_Control_Grp|Mech_Cat_Final_RIg:Spine_IKFK_Control" 
 		"Spine_IKFK" " -k 1 0"
+		2 "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Tail_Ctrls|Mech_Cat_Final_RIg:Tail_IK_Ctrls|Mech_Cat_Final_RIg:Tail_Spline_Control_Jnt_3_Ctrl_Grp|Mech_Cat_Final_RIg:Tail_Spline_Control_Jnt_3_Ctrl" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Tail_Ctrls|Mech_Cat_Final_RIg:Tail_IK_Ctrls|Mech_Cat_Final_RIg:Tail_Spline_Control_Jnt_3_Ctrl_Grp|Mech_Cat_Final_RIg:Tail_Spline_Control_Jnt_3_Ctrl" 
+		"SV_Effect" " -k 1 1"
+		2 "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Tail_Ctrls|Mech_Cat_Final_RIg:Tail_IK_Ctrls|Mech_Cat_Final_RIg:Tail_Spline_Control_Jnt_3_Ctrl_Grp|Mech_Cat_Final_RIg:Tail_Spline_Control_Jnt_3_Ctrl" 
+		"SV_Amplitude" " -k 1 2"
+		2 "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Tail_Ctrls|Mech_Cat_Final_RIg:Tail_IK_Ctrls|Mech_Cat_Final_RIg:Tail_Spline_Control_Jnt_3_Ctrl_Grp|Mech_Cat_Final_RIg:Tail_Spline_Control_Jnt_3_Ctrl" 
+		"SV_Wavelength" " -k 1 4"
+		2 "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Tail_Ctrls|Mech_Cat_Final_RIg:Tail_IK_Ctrls|Mech_Cat_Final_RIg:Tail_Spline_Control_Jnt_3_Ctrl_Grp|Mech_Cat_Final_RIg:Tail_Spline_Control_Jnt_3_Ctrl" 
+		"SV_Offset" " -k 1"
+		2 "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Tail_Ctrls|Mech_Cat_Final_RIg:Tail_Master_FK_Ctrl_Grp|Mech_Cat_Final_RIg:Tail_Master_FK_Ctrl" 
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Spine_Ctrls|Mech_Cat_Final_RIg:Spine_IK_Ctrl_Grp|Mech_Cat_Final_RIg:Spine_IK_Ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "Mech_Cat_Final_RIg:MC_Geo_Layer" "displayType" " 2"
 		2 "Mech_Cat_Final_RIg:MC_Skeleton_Layer" "visibility" " 0"
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl.translateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Neck_and_Head_Ctrls|Mech_Cat_Final_RIg:Head_Ctrl_Grp|Mech_Cat_Final_RIg:Head_Ctrl.rotateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[1]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl.translateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Neck_and_Head_Ctrls|Mech_Cat_Final_RIg:Head_Ctrl_Grp|Mech_Cat_Final_RIg:Head_Ctrl.rotateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[2]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl.translateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Neck_and_Head_Ctrls|Mech_Cat_Final_RIg:Head_Ctrl_Grp|Mech_Cat_Final_RIg:Head_Ctrl.rotateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[3]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl.rotateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Neck_and_Head_Ctrls|Mech_Cat_Final_RIg:Jaw_Ctrl_Grp|Mech_Cat_Final_RIg:Jaw_Ctrl.rotateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[4]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl.rotateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Neck_and_Head_Ctrls|Mech_Cat_Final_RIg:Jaw_Ctrl_Grp|Mech_Cat_Final_RIg:Jaw_Ctrl.rotateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[5]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl.rotateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Neck_and_Head_Ctrls|Mech_Cat_Final_RIg:Jaw_Ctrl_Grp|Mech_Cat_Final_RIg:Jaw_Ctrl.rotateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[6]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl.translateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl.translateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[7]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl.translateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl.translateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[8]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl.translateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl.translateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[9]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl.rotateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl.rotateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[10]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl.rotateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl.rotateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[11]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl.rotateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:L_Clav_IK_Ctrl.rotateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[12]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_ball_Ctrl.rotateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl.translateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[13]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_ball_Ctrl.rotateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl.translateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[14]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_ball_Ctrl.rotateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl.translateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[15]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_IK_Ctrls|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl.translateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl.rotateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[16]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_IK_Ctrls|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl.translateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl.rotateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[17]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_IK_Ctrls|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl.translateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl.rotateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[18]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_IK_Ctrls|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl.rotateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_ball_Ctrl.rotateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[19]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_IK_Ctrls|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl.rotateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_ball_Ctrl.rotateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[20]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_IK_Ctrls|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl.rotateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Front_Leg_Ctrls|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_Foot_IK_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:L_Front_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:L_Front_reverse_foot_ball_Ctrl.rotateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[21]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl.translateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_IK_Ctrls|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl.translateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[22]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl.translateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_IK_Ctrls|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl.translateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[23]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl.translateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_IK_Ctrls|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl.translateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[24]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl.rotateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_IK_Ctrls|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl.rotateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[25]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl.rotateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_IK_Ctrls|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl.rotateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[26]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl.rotateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_IK_Ctrls|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_IK_Auto_Clav_OFFSET|Mech_Cat_Final_RIg:R_Clav_IK_Ctrl.rotateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[27]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_ball_Ctrl.rotateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl.translateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[28]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_ball_Ctrl.rotateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl.translateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[29]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_ball_Ctrl.rotateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl.translateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[30]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl_OFFSET|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl.translateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl.rotateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[31]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl_OFFSET|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl.translateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl.rotateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[32]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl_OFFSET|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl.translateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl.rotateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[33]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl.translateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_ball_Ctrl.rotateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[34]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl.translateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_ball_Ctrl.rotateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[35]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl.translateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Front_Leg_Ctrls|Mech_Cat_Final_RIg:R_Front_Leg_FK_Ctrls|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_Foot_IK_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:R_Front_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:R_Front_reverse_foot_ball_Ctrl.rotateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[36]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl.rotateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl_OFFSET|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl.translateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[37]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl.rotateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl_OFFSET|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl.translateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[38]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl.rotateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl_OFFSET|Mech_Cat_Final_RIg:R_Rear_Leg_IK_PV_Ctrl.translateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[39]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_outer_Ctrl_Grp1|Mech_Cat_Final_RIg:R_Rear_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_ball_Ctrl.rotateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl.translateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[40]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_outer_Ctrl_Grp1|Mech_Cat_Final_RIg:R_Rear_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_ball_Ctrl.rotateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl.translateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[41]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_outer_Ctrl_Grp1|Mech_Cat_Final_RIg:R_Rear_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_ball_Ctrl.rotateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl.translateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[42]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl.translateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl.rotateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[43]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl.translateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl.rotateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[44]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl.translateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl.rotateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[45]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl.rotateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_outer_Ctrl_Grp1|Mech_Cat_Final_RIg:R_Rear_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_ball_Ctrl.rotateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[46]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl.rotateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_outer_Ctrl_Grp1|Mech_Cat_Final_RIg:R_Rear_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_ball_Ctrl.rotateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[47]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl.rotateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:R_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:R_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_Foot_IK_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_outer_Ctrl_Grp1|Mech_Cat_Final_RIg:R_Rear_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:R_Rear_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:R_Rear_reverse_foot_ball_Ctrl.rotateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[48]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_ball_Ctrl.rotateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl.translateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[49]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_ball_Ctrl.rotateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl.translateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[50]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_ball_Ctrl.rotateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl.translateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[51]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl_OFFSET|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl.translateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl.rotateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[52]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl_OFFSET|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl.translateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl.rotateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[53]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl_OFFSET|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl.translateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl.rotateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[54]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Spine_Ctrls|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl_Grp|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl.translateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_ball_Ctrl.rotateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[55]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Spine_Ctrls|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl_Grp|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl.translateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_ball_Ctrl.rotateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[56]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Spine_Ctrls|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl_Grp|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl.translateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Foot_IK_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_outer_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_outer_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_inner_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_inner_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_heel_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_heel_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_toe_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_toe_Ctrl|Mech_Cat_Final_RIg:L_Rear_reverse_foot_ball_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_reverse_foot_ball_Ctrl.rotateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[57]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Pelvis_Jnt_Ctrl_Grp|Mech_Cat_Final_RIg:Pelvis_Jnt_Ctrl.translateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl_OFFSET|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl.translateX" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[58]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Pelvis_Jnt_Ctrl_Grp|Mech_Cat_Final_RIg:Pelvis_Jnt_Ctrl.translateX" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl_OFFSET|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl.translateY" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[59]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Pelvis_Jnt_Ctrl_Grp|Mech_Cat_Final_RIg:Pelvis_Jnt_Ctrl.translateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:L_Rear_Leg_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_Ctrls|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl_Grp|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl_OFFSET|Mech_Cat_Final_RIg:L_Rear_Leg_IK_PV_Ctrl.translateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[60]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Cog_Ctrl_Grp|Mech_Cat_Final_RIg:Cog_Ctrl.translateY" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Tail_Ctrls|Mech_Cat_Final_RIg:Tail_IK_Ctrls|Mech_Cat_Final_RIg:Tail_Spline_Control_Jnt_3_Ctrl_Grp|Mech_Cat_Final_RIg:Tail_Spline_Control_Jnt_3_Ctrl.SV_Offset" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[61]" ""
-		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Cog_Ctrl_Grp|Mech_Cat_Final_RIg:Cog_Ctrl.translateZ" 
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Spine_Ctrls|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl_Grp|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl.rotateZ" 
 		"Mech_Cat_Final_RIgRN.placeHolderList[62]" ""
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Spine_Ctrls|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl_Grp|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl.rotateX" 
+		"Mech_Cat_Final_RIgRN.placeHolderList[63]" ""
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Spine_Ctrls|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl_Grp|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl.rotateY" 
+		"Mech_Cat_Final_RIgRN.placeHolderList[64]" ""
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Spine_Ctrls|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl_Grp|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl.translateY" 
+		"Mech_Cat_Final_RIgRN.placeHolderList[65]" ""
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Spine_Ctrls|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl_Grp|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl.translateZ" 
+		"Mech_Cat_Final_RIgRN.placeHolderList[66]" ""
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Spine_Ctrls|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl_Grp|Mech_Cat_Final_RIg:Chest_IK_Jnt_Ctrl.translateX" 
+		"Mech_Cat_Final_RIgRN.placeHolderList[67]" ""
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Pelvis_Jnt_Ctrl_Grp|Mech_Cat_Final_RIg:Pelvis_Jnt_Ctrl.translateY" 
+		"Mech_Cat_Final_RIgRN.placeHolderList[68]" ""
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Pelvis_Jnt_Ctrl_Grp|Mech_Cat_Final_RIg:Pelvis_Jnt_Ctrl.translateX" 
+		"Mech_Cat_Final_RIgRN.placeHolderList[69]" ""
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Pelvis_Jnt_Ctrl_Grp|Mech_Cat_Final_RIg:Pelvis_Jnt_Ctrl.translateZ" 
+		"Mech_Cat_Final_RIgRN.placeHolderList[70]" ""
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Cog_Ctrl_Grp|Mech_Cat_Final_RIg:Cog_Ctrl.translateY" 
+		"Mech_Cat_Final_RIgRN.placeHolderList[71]" ""
+		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Cog_Ctrl_Grp|Mech_Cat_Final_RIg:Cog_Ctrl.translateZ" 
+		"Mech_Cat_Final_RIgRN.placeHolderList[72]" ""
 		5 4 "Mech_Cat_Final_RIgRN" "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Cog_Ctrl_Grp|Mech_Cat_Final_RIg:Cog_Ctrl.translateX" 
-		"Mech_Cat_Final_RIgRN.placeHolderList[63]" "";
+		"Mech_Cat_Final_RIgRN.placeHolderList[73]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
@@ -377,53 +424,74 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "31EE9A18-4AC8-A12B-7F52-9A871184FF8C";
-	setAttr ".b" -type "string" "playbackOptions -min 0 -max 127 -ast 0 -aet 500 ";
+	setAttr ".b" -type "string" "playbackOptions -min 36 -max 60 -ast 0 -aet 501 ";
 	setAttr ".st" 6;
 createNode animCurveTL -n "L_Front_Foot_IK_Ctrl_translateX";
 	rename -uid "C96B0A12-494A-A75D-30E1-4E9A19AEBEE1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 -3.1353842379944443 12 -3.1353842379944443
-		 18 -3.6839462476961433 24 -3.1353842379944443;
+	setAttr -s 6 ".ktv[0:5]"  -3 -3.1353842379944443 9 -3.1353842379944443
+		 15 -3.6839462476961433 21 -3.1353842379944443 24 -3.1353842379944443 28 -3.1353842379944443;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "L_Front_Foot_IK_Ctrl_translateY";
 	rename -uid "79C5A4CC-4C62-62E6-7A68-CAB01DED2900";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 -2.2204460492503131e-16 10 0 18 4.8330430218614095
-		 24 -2.2204460492503131e-16;
+	setAttr -s 6 ".ktv[0:5]"  6.9999998299319728 0 7 0 15 4.8330430218614095
+		 24 3.1402193592563066 26 0 31 0;
+	setAttr -s 6 ".kit[0:5]"  1 1 18 18 18 18;
+	setAttr -s 6 ".kot[0:5]"  1 1 18 18 18 18;
+	setAttr -s 6 ".kix[0:5]"  0.076303610865890117 0.076303610865890117 
+		1 0.094409702715862354 1 1;
+	setAttr -s 6 ".kiy[0:5]"  0.99708462979269052 0.99708462979269052 
+		0 -0.99553342888780105 0 0;
+	setAttr -s 6 ".kox[0:5]"  0.076303623595248948 0.076303623595248948 
+		1 0.094409702715862354 1 1;
+	setAttr -s 6 ".koy[0:5]"  0.99708462881855453 0.99708462881855453 
+		0 -0.99553342888780116 0 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "L_Front_Foot_IK_Ctrl_translateZ";
 	rename -uid "906285B0-4974-F87F-2EB9-1F9797AEBAA9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 10.516652273125018 12 -12.103328999353451
-		 24 10.516652273125018;
+	setAttr -s 3 ".ktv[0:2]"  2 13.046198565961323 9 -14.807579275193749
+		 26 13.046198565961323;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "R_Front_Foot_IK_Ctrl_translateX";
 	rename -uid "02C6FB95-45D6-3609-ADDD-3E91D49867C3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 -3.1353842379944443 12 -3.1353842379944443
-		 18 -3.6839462476961433 24 -3.1353842379944443;
+	setAttr -s 6 ".ktv[0:5]"  0 -3.1353842379944443 12 -3.1353842379944443
+		 18 -3.6839462476961433 24 -3.1353842379944443 27 -3.1353842379944443 29 -3.1353842379944443;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "R_Front_Foot_IK_Ctrl_translateY";
 	rename -uid "5A8E6540-48CB-CA31-219F-91BEF81CED06";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 0 10 0 18 4.8330430218614095 24 0;
+	setAttr -s 6 ".ktv[0:5]"  9.9999998299319728 0 10 0 18 4.8330430218614095
+		 27 3.1180922721686519 29 0 34 0;
+	setAttr -s 6 ".kit[0:5]"  1 1 18 18 18 18;
+	setAttr -s 6 ".kot[0:5]"  1 1 18 18 18 18;
+	setAttr -s 6 ".kix[0:5]"  0.076303610865890117 0.076303610865890117 
+		1 0.094409702715862354 1 1;
+	setAttr -s 6 ".kiy[0:5]"  0.99708462979269064 0.99708462979269064 
+		0 -0.99553342888780105 0 0;
+	setAttr -s 6 ".kox[0:5]"  0.076303623595248948 0.076303623595248948 
+		1 0.094409702715862354 1 1;
+	setAttr -s 6 ".koy[0:5]"  0.99708462881855453 0.99708462881855453 
+		0 -0.99553342888780116 0 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "R_Front_Foot_IK_Ctrl_translateZ";
 	rename -uid "57D75424-4D30-DFBC-0D01-AAB1A123FCF5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 10.516652273125018 12 -12.103328999353451
-		 24 10.516652273125018;
+	setAttr -s 3 ".ktv[0:2]"  5 13.046198565961323 12 -14.807579275193749
+		 29 13.046198565961323;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "Cog_Ctrl_translateX";
@@ -445,79 +513,91 @@ createNode animCurveTL -n "R_Clav_IK_Ctrl_translateX";
 	rename -uid "FCDF4BD9-430B-54FB-56FB-0FAC244FE161";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr ".ktv[0]"  2 0;
+	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "R_Clav_IK_Ctrl_translateY";
 	rename -uid "7BB48CBB-4188-3612-1EF7-E7A64F2BE5F0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr ".ktv[0]"  2 0;
+	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "R_Clav_IK_Ctrl_translateZ";
 	rename -uid "C0FBDD71-459D-2DF0-94AC-6B8F350C86EB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr ".ktv[0]"  2 0;
+	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "L_Clav_IK_Ctrl_translateX";
 	rename -uid "C64802E0-40A6-ECE3-9D56-9A9B9986C050";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr ".ktv[0]"  -1 0;
+	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "L_Clav_IK_Ctrl_translateY";
 	rename -uid "0BD981AD-482A-77D4-1F67-2984550C5593";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr ".ktv[0]"  -1 0;
+	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "L_Clav_IK_Ctrl_translateZ";
 	rename -uid "38FD6712-4523-9FF6-2D62-529820081CF3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr ".ktv[0]"  -1 0;
+	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "R_Clav_IK_Ctrl_rotateX";
 	rename -uid "80C80FE5-4E2E-9FC4-4522-D594CCFCA27F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 3.5910110660312169 12 -1.6923014577324238
-		 18 0.98868674083113961 24 3.5910110660312169;
+	setAttr -s 4 ".ktv[0:3]"  2 3.5910110660312169 11 -1.6923014577324238
+		 20 0.98868674083113961 26 3.5910110660312169;
+	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "R_Clav_IK_Ctrl_rotateY";
 	rename -uid "173298D3-4568-B6A4-7E03-A8BB7ACAB854";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 6.5776353970840544 12 7.2976401907643194
-		 18 17.599904255706438 24 6.5776353970840544;
+	setAttr -s 4 ".ktv[0:3]"  0 6.5776353970840544 11 7.2976401907643194
+		 20 17.599904255706438 26 6.5776353970840544;
+	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "R_Clav_IK_Ctrl_rotateZ";
 	rename -uid "3C98ED48-4158-F29A-9DFA-6CAA0F183BE3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 28.716622471441767 12 -13.093782768141399
-		 18 7.9957124203168553 24 28.716622471441767;
+	setAttr -s 4 ".ktv[0:3]"  2 28.716622471441767 11 -13.093782768141399
+		 20 7.9957124203168553 26 28.716622471441767;
+	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "L_Clav_IK_Ctrl_rotateX";
 	rename -uid "1F20F6D7-43B7-5B4A-91CD-039F8597C0C4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 3.5910110660312169 12 -1.6923014577324238
-		 18 0.98868674083113961 24 3.5910110660312169;
+	setAttr -s 4 ".ktv[0:3]"  -1 3.5910110660312169 8 -1.6923014577324238
+		 17 0.98868674083113961 23 3.5910110660312169;
+	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "L_Clav_IK_Ctrl_rotateY";
 	rename -uid "BDA8EA81-405B-FE63-B223-E7B87A164F61";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 6.5776353970840544 12 7.2976401907643194
-		 18 17.599904255706438 24 6.5776353970840544;
+	setAttr -s 4 ".ktv[0:3]"  -1 6.5776353970840544 8 7.2976401907643194
+		 17 17.599904255706438 23 6.5776353970840544;
+	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "L_Clav_IK_Ctrl_rotateZ";
 	rename -uid "2EDB8D56-4990-FF1D-6F8D-A1BB757CBF60";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 28.716622471441767 12 -13.093782768141399
-		 18 7.9957124203168553 24 28.716622471441767;
+	setAttr -s 4 ".ktv[0:3]"  -1 28.716622471441767 8 -13.093782768141399
+		 17 7.9957124203168553 23 28.716622471441767;
+	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "L_Front_reverse_foot_ball_Ctrl_rotateX";
 	rename -uid "52BD3D37-4E42-54CB-8E3D-6A9DD398D949";
@@ -553,30 +633,30 @@ createNode animCurveTA -n "L_Front_Foot_IK_Ctrl_rotateX";
 	rename -uid "D966A7F4-45FF-1EEE-6AE9-539D3D683A74";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 10 0 16 62.337993268094877 21 -27.865122005807539
-		 24 0;
+	setAttr -s 5 ".ktv[0:4]"  4 0 7 0 13 62.337993268094877 24 -27.865122005807539
+		 28 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "L_Front_Foot_IK_Ctrl_rotateY";
 	rename -uid "59F09800-402C-DC5C-45F4-558DD26EB0E7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 10 0 18 0 21 0 24 0;
+	setAttr -s 5 ".ktv[0:4]"  -3 0 7 0 15 0 18 0 21 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "L_Front_Foot_IK_Ctrl_rotateZ";
 	rename -uid "C401E882-4C38-C2B3-2EA9-7AAD511C26DD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 10 0 18 0 21 0 24 0;
+	setAttr -s 5 ".ktv[0:4]"  -3 0 7 0 15 0 16 0 21 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "R_Front_Foot_IK_Ctrl_rotateX";
 	rename -uid "32D5F6A4-4FFB-42DF-8DB9-5FACDBFA4659";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 0 10 0 16 62.337993268094877 21 -27.865122005807539
-		 24 0;
+	setAttr -s 5 ".ktv[0:4]"  7 0 10 0 16 62.337993268094877 27 -27.865122005807539
+		 31 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "R_Front_Foot_IK_Ctrl_rotateY";
@@ -597,92 +677,92 @@ createNode animCurveTL -n "R_Rear_Foot_IK_Ctrl_translateX";
 	rename -uid "C434D554-4E03-282F-995D-39AFFA5DCA7F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  16 1.5945713356998419 28 2.0119308996403009
-		 33 1.8549380081117719 38 1.6319933147417436 40 1.5945713356998419;
+	setAttr -s 5 ".ktv[0:4]"  10 1.5945713356998419 17 2.0119308996403009
+		 26 1.2930793978731039 32 1.6319933147417436 34 1.5945713356998419;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "R_Rear_Foot_IK_Ctrl_translateY";
 	rename -uid "075FB2E3-4684-66F8-D2C7-919EFE8143CE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  16 0 28 0.33733476700873677 31 5.3797304123097822
-		 33 5.7671888895961114 38 2.4610471527318056 40 0;
+	setAttr -s 5 ".ktv[0:4]"  10 0 17 0.33733476700873677 20 5.3797304123097822
+		 32 2.4610471527318056 34 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "R_Rear_Foot_IK_Ctrl_translateZ";
 	rename -uid "40ECDE47-48EC-C5C5-3685-8582817F5452";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  16 10.338252168420462 30 -15.001754358527325
-		 38 8.2115787996176177 40 10.338252168420462;
+	setAttr -s 3 ".ktv[0:2]"  10 10.338252168420462 19 -15.001754358527325
+		 34 10.338252168420462;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "L_Rear_Foot_IK_Ctrl_translateX";
 	rename -uid "B09B8763-439E-8BB4-4170-0A87BF84697F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  16 1.5945713356998419 28 2.0119308996403009
-		 33 1.8549380081117719 38 1.6319933147417436 40 1.5945713356998419;
+	setAttr -s 5 ".ktv[0:4]"  8 1.5945713356998419 15 2.0119308996403009
+		 24 1.2930793978731039 30 1.6319933147417436 32 1.5945713356998419;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "L_Rear_Foot_IK_Ctrl_translateY";
 	rename -uid "1A046861-4BEC-374F-41A1-02A7190DD47D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  16 0 28 0.33733476700873677 31 5.3797304123097822
-		 33 5.7671888895961114 38 2.4610471527318056 40 0;
+	setAttr -s 5 ".ktv[0:4]"  8 0 15 0.33733476700873677 18 5.3797304123097822
+		 30 2.4610471527318056 32 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "L_Rear_Foot_IK_Ctrl_translateZ";
 	rename -uid "F6E4C720-4D93-016E-6A44-E98E98674761";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  16 10.338252168420462 30 -15.001754358527325
-		 38 8.2115787996176177 40 10.338252168420462;
+	setAttr -s 3 ".ktv[0:2]"  8 10.338252168420462 17 -15.001754358527325
+		 32 10.338252168420462;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "R_Rear_Foot_IK_Ctrl_rotateX";
 	rename -uid "0EFF464B-4DA1-D0F2-078D-CA96617A7C00";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  16 0 28 0 30 53.926548206258936 35 42.028750946910272
-		 40 0;
+	setAttr -s 5 ".ktv[0:4]"  10 0 17 0 19 53.926548206258936 29 42.028750946910272
+		 34 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "R_Rear_Foot_IK_Ctrl_rotateY";
 	rename -uid "ADFF0834-41B0-DCD5-437B-DDACB30FE1F3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  16 0 28 0 29 0 30 0 35 0 40 0;
+	setAttr -s 6 ".ktv[0:5]"  10 0 17 0 18 0 19 0 29 0 34 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "R_Rear_Foot_IK_Ctrl_rotateZ";
 	rename -uid "66EDB1B0-419D-A94A-5635-CDB7172D6EC1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  16 0 28 0 29 0 30 0 35 0 40 0;
+	setAttr -s 6 ".ktv[0:5]"  10 0 18 0 23 0 25 0 29 0 34 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "L_Rear_Foot_IK_Ctrl_rotateX";
 	rename -uid "C87BDF8F-4C29-1F00-8B83-589B04DA59EE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  16 0 28 0 30 53.926548206258936 35 42.028750946910272
-		 40 0;
+	setAttr -s 5 ".ktv[0:4]"  8 0 15 0 17 53.926548206258936 27 42.028750946910272
+		 32 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "L_Rear_Foot_IK_Ctrl_rotateY";
 	rename -uid "C067C809-472A-197D-9F60-BE8BCFDDA822";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  16 0 28 0 29 0 30 0 35 0 40 0;
+	setAttr -s 6 ".ktv[0:5]"  8 0 15 0 16 0 17 0 27 0 32 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "L_Rear_Foot_IK_Ctrl_rotateZ";
 	rename -uid "EA2675F8-41DA-9772-DCAA-78A82B860138";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  16 0 28 0 29 0 30 0 35 0 40 0;
+	setAttr -s 6 ".ktv[0:5]"  8 0 15 0 18 0 19 0 27 0 32 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "L_Rear_reverse_foot_ball_Ctrl_rotateX";
@@ -719,30 +799,29 @@ createNode animCurveTL -n "Pelvis_Jnt_Ctrl_translateX";
 	rename -uid "E08E3CC0-45BB-8999-748A-FAAB2556AB8E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  19 0 31 0 43 0;
+	setAttr -s 3 ".ktv[0:2]"  10 0 22 0 34 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "Pelvis_Jnt_Ctrl_translateY";
 	rename -uid "3BBD18C4-4336-5347-9A07-7DA23CC9C310";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  19 -4.3276067362197876 31 0.077899670968252899
-		 43 -4.3276067362197876;
+	setAttr -s 3 ".ktv[0:2]"  10 -4.3276067362197876 19 0.077899670968252899
+		 34 -4.3276067362197876;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "Pelvis_Jnt_Ctrl_translateZ";
 	rename -uid "9468BE2A-4312-C799-DA4E-B9872F39272B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  19 0 31 0 43 0;
+	setAttr -s 3 ".ktv[0:2]"  8 0 28 0 34 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "Chest_IK_Jnt_Ctrl_translateX";
 	rename -uid "84DC2E13-473A-497E-37BD-FDAD4760872F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 -2.0194839173657902e-28 6 -2.0194839173657902e-28
-		 12 -2.0194839173657902e-28 18 -2.0194839173657902e-28 24 -2.0194839173657902e-28;
+	setAttr -s 5 ".ktv[0:4]"  0 0 6 0 12 0 18 0 24 0;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "Chest_IK_Jnt_Ctrl_translateY";
 	rename -uid "5E9F34A6-4177-7480-C3CA-3D8C63EACDC8";
@@ -762,8 +841,7 @@ createNode animCurveTL -n "Chest_IK_Jnt_Ctrl_translateZ";
 	rename -uid "6FC94FED-496B-9689-C730-90B36BA27ECD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  0 2.6645352591003757e-15 6 4.4408920985006262e-15
-		 12 2.6645352591003757e-15 18 3.5527136788005009e-15 24 2.6645352591003757e-15;
+	setAttr -s 5 ".ktv[0:4]"  0 0 6 0 12 0 18 3.5527136788005009e-15 24 0;
 	setAttr ".pst" 3;
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
 	rename -uid "8AD2EE85-463A-7C14-17EF-D987CB932E2B";
@@ -772,79 +850,154 @@ createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].vh" -type "double2" 751.1904463408498 547.61902585862265 ;
 createNode animCurveTL -n "R_Rear_Leg_IK_PV_Ctrl_translateX";
 	rename -uid "19867AEC-47AA-3ED0-9174-9CB6C2C031C0";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  16 -6.757921663510059 28 0.48929929775191333
-		 40 -6.757921663510059;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 3 ".ktv[0:2]"  14 -4.3934390153018574 26 0.48929929775191333
+		 38 -4.3934390153018574;
+	setAttr -s 3 ".kit[1:2]"  18 1;
+	setAttr -s 3 ".kot[1:2]"  18 1;
+	setAttr -s 3 ".kix[0:2]"  1 1 1;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1 1 1;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr ".pst" 3;
 createNode animCurveTL -n "R_Rear_Leg_IK_PV_Ctrl_translateY";
 	rename -uid "DA478F42-4F89-33A0-65BD-2BBC2532A637";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  16 0.055776840082120194 28 0.055776840082118445
-		 40 0.055776840082120194;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 3 ".ktv[0:2]"  14 0.055776840082120104 26 0.055776840082118445
+		 38 0.055776840082120104;
+	setAttr -s 3 ".kit[1:2]"  18 1;
+	setAttr -s 3 ".kot[1:2]"  18 1;
+	setAttr -s 3 ".kix[0:2]"  1 1 1;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1 1 1;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr ".pst" 3;
 createNode animCurveTL -n "R_Rear_Leg_IK_PV_Ctrl_translateZ";
 	rename -uid "1060A8E6-4526-2FBE-10BA-6793E8638007";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  16 5.1757060401167942 28 6.5828274283238111
-		 40 5.1757060401167942;
-	setAttr -s 3 ".kit[2]"  1;
-	setAttr -s 3 ".kot[2]"  1;
-	setAttr -s 3 ".kix[2]"  1;
-	setAttr -s 3 ".kiy[2]"  0;
-	setAttr -s 3 ".kox[2]"  1;
-	setAttr -s 3 ".koy[2]"  0;
+	setAttr -s 3 ".ktv[0:2]"  14 5.8388678393604305 26 6.5828274283238111
+		 38 5.8388678393604305;
+	setAttr -s 3 ".kit[1:2]"  18 1;
+	setAttr -s 3 ".kot[1:2]"  18 1;
+	setAttr -s 3 ".kix[0:2]"  1 1 1;
+	setAttr -s 3 ".kiy[0:2]"  0 0 0;
+	setAttr -s 3 ".kox[0:2]"  1 1 1;
+	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr ".pst" 3;
 createNode animCurveTL -n "L_Rear_Leg_IK_PV_Ctrl_translateX";
 	rename -uid "A80DA82E-4F34-A510-E846-9CAD9519D0B5";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  16 5.4445332590784572 28 -0.48929942715767111
-		 40 5.4445332590784572;
-	setAttr -s 3 ".kit[0:2]"  1 18 18;
-	setAttr -s 3 ".kot[0:2]"  1 18 18;
+	setAttr -s 3 ".ktv[0:2]"  14 3.1951350611314782 26 -0.48929942715767111
+		 38 3.1951350611314782;
+	setAttr -s 3 ".kit[1:2]"  18 1;
+	setAttr -s 3 ".kot[1:2]"  18 1;
 	setAttr -s 3 ".kix[0:2]"  1 1 1;
 	setAttr -s 3 ".kiy[0:2]"  0 0 0;
 	setAttr -s 3 ".kox[0:2]"  1 1 1;
 	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr ".pst" 3;
 createNode animCurveTL -n "L_Rear_Leg_IK_PV_Ctrl_translateY";
 	rename -uid "049265C1-492B-06BB-34EE-0BB5C0A727E5";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  16 0.055773536739048585 28 0.055773536739052144
-		 40 0.055773536739048585;
-	setAttr -s 3 ".kit[0:2]"  1 18 18;
-	setAttr -s 3 ".kot[0:2]"  1 18 18;
+	setAttr -s 3 ".ktv[0:2]"  14 0.055773536739045081 26 0.055773536739052144
+		 38 0.055773536739045081;
+	setAttr -s 3 ".kit[1:2]"  18 1;
+	setAttr -s 3 ".kot[1:2]"  18 1;
 	setAttr -s 3 ".kix[0:2]"  1 1 1;
 	setAttr -s 3 ".kiy[0:2]"  0 0 0;
 	setAttr -s 3 ".kox[0:2]"  1 1 1;
 	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr ".pst" 3;
 createNode animCurveTL -n "L_Rear_Leg_IK_PV_Ctrl_translateZ";
 	rename -uid "23067887-41A0-343A-4C1B-51960F2C23B1";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  16 5.6213163144538356 28 6.582827446693793
-		 40 5.6213163144538356;
-	setAttr -s 3 ".kit[0:2]"  1 18 18;
-	setAttr -s 3 ".kot[0:2]"  1 18 18;
+	setAttr -s 3 ".ktv[0:2]"  14 6.1458154227095827 26 6.582827446693793
+		 38 6.1458154227095827;
+	setAttr -s 3 ".kit[1:2]"  18 1;
+	setAttr -s 3 ".kot[1:2]"  18 1;
 	setAttr -s 3 ".kix[0:2]"  1 1 1;
 	setAttr -s 3 ".kiy[0:2]"  0 0 0;
 	setAttr -s 3 ".kox[0:2]"  1 1 1;
 	setAttr -s 3 ".koy[0:2]"  0 0 0;
+	setAttr ".pst" 3;
+createNode animCurveTU -n "Tail_Spline_Control_Jnt_3_Ctrl_SV_Offset";
+	rename -uid "7E7A9C5F-4974-3404-B079-C7A71D0D11B8";
+	setAttr ".tan" 1;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  22 0 46 20;
+	setAttr -s 2 ".kix[0:1]"  0.77570278444150198 0.3740580778714041;
+	setAttr -s 2 ".kiy[0:1]"  0.63109839978382198 0.92740528054305937;
+	setAttr -s 2 ".kox[0:1]"  0.77570005460098246 0.37405828448055295;
+	setAttr -s 2 ".koy[0:1]"  0.63110175510137267 0.92740519720964776;
+	setAttr ".pre" 3;
+	setAttr ".pst" 3;
+createNode animCurveTA -n "Jaw_Ctrl_rotateX";
+	rename -uid "2BDE3064-4E52-58DF-28D9-E382DA9ADED3";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  7 -14.6187430808148 19 -0.7628320310610659
+		 31 -14.6187430808148;
+	setAttr ".pst" 3;
+createNode animCurveTA -n "Jaw_Ctrl_rotateY";
+	rename -uid "F4FAC4B7-4F4D-CF7C-438E-D38A185CA46F";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  7 0 19 0 31 0;
+	setAttr ".pst" 3;
+createNode animCurveTA -n "Jaw_Ctrl_rotateZ";
+	rename -uid "21895FDA-4436-CB13-0D40-F8988D3C9471";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  7 0 19 0 31 0;
+	setAttr ".pst" 3;
+createNode animCurveTA -n "Chest_IK_Jnt_Ctrl_rotateX";
+	rename -uid "6CC5718A-4C3C-044E-CDB6-85867B10D545";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  7 0 15 0 27 0 28 0;
+createNode animCurveTA -n "Chest_IK_Jnt_Ctrl_rotateY";
+	rename -uid "51D5937C-4342-8FC5-B35A-5FBC8A616EFC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  7 0 15 0 27 0 28 0;
+createNode animCurveTA -n "Chest_IK_Jnt_Ctrl_rotateZ";
+	rename -uid "B4CDF20E-4583-0EA0-450C-41A6F6ACACFA";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 4 ".ktv[0:3]"  5 0 9 8.6152707814019607 25 -7.6606917819431919
+		 29 -0.0038778711123051168;
+	setAttr ".pst" 3;
+createNode animCurveTA -n "Head_Ctrl_rotateX";
+	rename -uid "6AFC07FD-4956-60BC-EC87-DDBD6498076C";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  9 0 25 0 35 0;
+	setAttr ".pre" 3;
+	setAttr ".pst" 3;
+createNode animCurveTA -n "Head_Ctrl_rotateY";
+	rename -uid "69B03CF7-4ACE-394F-BB31-F7A3BB155499";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  9 0 25 0 35 0;
+	setAttr ".pre" 3;
+	setAttr ".pst" 3;
+createNode animCurveTA -n "Head_Ctrl_rotateZ";
+	rename -uid "EADA9DAD-4219-D39C-6184-AE85E3BBFBDD";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  9 -2.733872102508919 25 3.7147311803442902
+		 35 -2.7280631813869651;
+	setAttr ".pre" 3;
+	setAttr ".pst" 3;
 select -ne :time1;
-	setAttr ".o" 60;
-	setAttr ".unw" 60;
+	setAttr ".o" 58;
+	setAttr ".unw" 58;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -889,81 +1042,92 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 3 ".sol";
-connectAttr "L_Clav_IK_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[1]";
-connectAttr "L_Clav_IK_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[2]";
-connectAttr "L_Clav_IK_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[3]";
-connectAttr "L_Clav_IK_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[4]";
-connectAttr "L_Clav_IK_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[5]";
-connectAttr "L_Clav_IK_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[6]";
-connectAttr "L_Front_Foot_IK_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[7]";
-connectAttr "L_Front_Foot_IK_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[8]";
-connectAttr "L_Front_Foot_IK_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[9]";
-connectAttr "L_Front_Foot_IK_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[10]";
-connectAttr "L_Front_Foot_IK_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[11]";
-connectAttr "L_Front_Foot_IK_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[12]";
-connectAttr "L_Front_reverse_foot_ball_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[13]"
+connectAttr "Head_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[1]";
+connectAttr "Head_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[2]";
+connectAttr "Head_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[3]";
+connectAttr "Jaw_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[4]";
+connectAttr "Jaw_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[5]";
+connectAttr "Jaw_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[6]";
+connectAttr "L_Clav_IK_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[7]";
+connectAttr "L_Clav_IK_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[8]";
+connectAttr "L_Clav_IK_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[9]";
+connectAttr "L_Clav_IK_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[10]";
+connectAttr "L_Clav_IK_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[11]";
+connectAttr "L_Clav_IK_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[12]";
+connectAttr "L_Front_Foot_IK_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[13]";
+connectAttr "L_Front_Foot_IK_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[14]";
+connectAttr "L_Front_Foot_IK_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[15]";
+connectAttr "L_Front_Foot_IK_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[16]";
+connectAttr "L_Front_Foot_IK_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[17]";
+connectAttr "L_Front_Foot_IK_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[18]";
+connectAttr "L_Front_reverse_foot_ball_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[19]"
 		;
-connectAttr "L_Front_reverse_foot_ball_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[14]"
+connectAttr "L_Front_reverse_foot_ball_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[20]"
 		;
-connectAttr "L_Front_reverse_foot_ball_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[15]"
+connectAttr "L_Front_reverse_foot_ball_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[21]"
 		;
-connectAttr "R_Clav_IK_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[16]";
-connectAttr "R_Clav_IK_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[17]";
-connectAttr "R_Clav_IK_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[18]";
-connectAttr "R_Clav_IK_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[19]";
-connectAttr "R_Clav_IK_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[20]";
-connectAttr "R_Clav_IK_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[21]";
-connectAttr "R_Front_Foot_IK_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[22]";
-connectAttr "R_Front_Foot_IK_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[23]";
-connectAttr "R_Front_Foot_IK_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[24]";
-connectAttr "R_Front_Foot_IK_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[25]";
-connectAttr "R_Front_Foot_IK_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[26]";
-connectAttr "R_Front_Foot_IK_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[27]";
-connectAttr "R_Front_reverse_foot_ball_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[28]"
+connectAttr "R_Clav_IK_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[22]";
+connectAttr "R_Clav_IK_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[23]";
+connectAttr "R_Clav_IK_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[24]";
+connectAttr "R_Clav_IK_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[25]";
+connectAttr "R_Clav_IK_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[26]";
+connectAttr "R_Clav_IK_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[27]";
+connectAttr "R_Front_Foot_IK_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[28]";
+connectAttr "R_Front_Foot_IK_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[29]";
+connectAttr "R_Front_Foot_IK_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[30]";
+connectAttr "R_Front_Foot_IK_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[31]";
+connectAttr "R_Front_Foot_IK_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[32]";
+connectAttr "R_Front_Foot_IK_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[33]";
+connectAttr "R_Front_reverse_foot_ball_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[34]"
 		;
-connectAttr "R_Front_reverse_foot_ball_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[29]"
+connectAttr "R_Front_reverse_foot_ball_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[35]"
 		;
-connectAttr "R_Front_reverse_foot_ball_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[30]"
+connectAttr "R_Front_reverse_foot_ball_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[36]"
 		;
-connectAttr "R_Rear_Leg_IK_PV_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[31]";
-connectAttr "R_Rear_Leg_IK_PV_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[32]";
-connectAttr "R_Rear_Leg_IK_PV_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[33]";
-connectAttr "R_Rear_Foot_IK_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[34]";
-connectAttr "R_Rear_Foot_IK_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[35]";
-connectAttr "R_Rear_Foot_IK_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[36]";
-connectAttr "R_Rear_Foot_IK_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[37]";
-connectAttr "R_Rear_Foot_IK_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[38]";
-connectAttr "R_Rear_Foot_IK_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[39]";
-connectAttr "R_Rear_reverse_foot_ball_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[40]"
+connectAttr "R_Rear_Leg_IK_PV_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[37]";
+connectAttr "R_Rear_Leg_IK_PV_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[38]";
+connectAttr "R_Rear_Leg_IK_PV_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[39]";
+connectAttr "R_Rear_Foot_IK_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[40]";
+connectAttr "R_Rear_Foot_IK_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[41]";
+connectAttr "R_Rear_Foot_IK_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[42]";
+connectAttr "R_Rear_Foot_IK_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[43]";
+connectAttr "R_Rear_Foot_IK_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[44]";
+connectAttr "R_Rear_Foot_IK_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[45]";
+connectAttr "R_Rear_reverse_foot_ball_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[46]"
 		;
-connectAttr "R_Rear_reverse_foot_ball_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[41]"
+connectAttr "R_Rear_reverse_foot_ball_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[47]"
 		;
-connectAttr "R_Rear_reverse_foot_ball_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[42]"
+connectAttr "R_Rear_reverse_foot_ball_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[48]"
 		;
-connectAttr "L_Rear_Foot_IK_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[43]";
-connectAttr "L_Rear_Foot_IK_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[44]";
-connectAttr "L_Rear_Foot_IK_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[45]";
-connectAttr "L_Rear_Foot_IK_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[46]";
-connectAttr "L_Rear_Foot_IK_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[47]";
-connectAttr "L_Rear_Foot_IK_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[48]";
-connectAttr "L_Rear_reverse_foot_ball_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[49]"
+connectAttr "L_Rear_Foot_IK_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[49]";
+connectAttr "L_Rear_Foot_IK_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[50]";
+connectAttr "L_Rear_Foot_IK_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[51]";
+connectAttr "L_Rear_Foot_IK_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[52]";
+connectAttr "L_Rear_Foot_IK_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[53]";
+connectAttr "L_Rear_Foot_IK_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[54]";
+connectAttr "L_Rear_reverse_foot_ball_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[55]"
 		;
-connectAttr "L_Rear_reverse_foot_ball_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[50]"
+connectAttr "L_Rear_reverse_foot_ball_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[56]"
 		;
-connectAttr "L_Rear_reverse_foot_ball_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[51]"
+connectAttr "L_Rear_reverse_foot_ball_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[57]"
 		;
-connectAttr "L_Rear_Leg_IK_PV_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[52]";
-connectAttr "L_Rear_Leg_IK_PV_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[53]";
-connectAttr "L_Rear_Leg_IK_PV_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[54]";
-connectAttr "Chest_IK_Jnt_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[55]";
-connectAttr "Chest_IK_Jnt_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[56]";
-connectAttr "Chest_IK_Jnt_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[57]";
-connectAttr "Pelvis_Jnt_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[58]";
-connectAttr "Pelvis_Jnt_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[59]";
-connectAttr "Pelvis_Jnt_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[60]";
-connectAttr "Cog_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[61]";
-connectAttr "Cog_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[62]";
-connectAttr "Cog_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[63]";
+connectAttr "L_Rear_Leg_IK_PV_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[58]";
+connectAttr "L_Rear_Leg_IK_PV_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[59]";
+connectAttr "L_Rear_Leg_IK_PV_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[60]";
+connectAttr "Tail_Spline_Control_Jnt_3_Ctrl_SV_Offset.o" "Mech_Cat_Final_RIgRN.phl[61]"
+		;
+connectAttr "Chest_IK_Jnt_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[62]";
+connectAttr "Chest_IK_Jnt_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[63]";
+connectAttr "Chest_IK_Jnt_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[64]";
+connectAttr "Chest_IK_Jnt_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[65]";
+connectAttr "Chest_IK_Jnt_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[66]";
+connectAttr "Chest_IK_Jnt_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[67]";
+connectAttr "Pelvis_Jnt_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[68]";
+connectAttr "Pelvis_Jnt_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[69]";
+connectAttr "Pelvis_Jnt_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[70]";
+connectAttr "Cog_Ctrl_translateY.o" "Mech_Cat_Final_RIgRN.phl[71]";
+connectAttr "Cog_Ctrl_translateZ.o" "Mech_Cat_Final_RIgRN.phl[72]";
+connectAttr "Cog_Ctrl_translateX.o" "Mech_Cat_Final_RIgRN.phl[73]";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";

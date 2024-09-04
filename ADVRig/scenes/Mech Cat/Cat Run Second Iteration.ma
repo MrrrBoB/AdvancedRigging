@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Cat Run Second Iteration.ma
-//Last modified: Wed, Sep 04, 2024 02:26:05 PM
+//Last modified: Wed, Sep 04, 2024 02:38:37 PM
 //Codeset: 1252
 file -rdi 1 -ns "Mech_Cat_Final_RIg" -rfn "Mech_Cat_Final_RIgRN" -op "v=0;" 
 		-typ "mayaAscii" "F:/School/AdvancedRigging/ADVRig//scenes/Mech Cat/Mech Cat Final RIg.ma";
@@ -9,23 +9,24 @@ file -r -ns "Mech_Cat_Final_RIg" -dr 1 -rfn "Mech_Cat_Final_RIgRN" -op "v=0;" -t
 requires maya "2023";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.2.0";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202208031415-1dee56799d";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "09D88942-4CC8-0D50-6EB5-598EFAA2BBBC";
+fileInfo "UUID" "3D900B12-42EB-1579-FACA-8E9C91B10772";
 createNode transform -s -n "persp";
 	rename -uid "AC4A775E-4E50-F3E5-7C23-2AA2F563E9C3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -54.589629474785475 33.707582816480219 35.599540836839587 ;
-	setAttr ".r" -type "double3" -19.800000000048581 -2940.3999999999055 3.2195637752361758e-15 ;
+	setAttr ".t" -type "double3" 76.042948892478066 26.588312554168041 90.086622157379765 ;
+	setAttr ".r" -type "double3" -8.9999999999932321 -2841.9999999999845 -5.0452272810155216e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "7F861A02-4CB8-977A-C969-15B609347D55";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 66.511559013603232;
+	setAttr ".coi" 142.49123858654741;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -122,21 +123,21 @@ createNode motionTrailShape -n "motionTrail2HandleShape" -p "motionTrail2Handle"
 	setAttr ".sf" yes;
 instanceable -a 0;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D3843A65-4296-EB73-E631-EE934D8D1486";
+	rename -uid "B39C265F-425A-1558-9E98-6CBC2AC2959D";
 	setAttr -s 12 ".lnk";
 	setAttr -s 12 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "0FDD6E74-4D2B-3EDC-65B9-0AA431E2B3B1";
+	rename -uid "7D1C2E26-43D7-1A83-367E-D48AD45CC6FF";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "0735C8FA-40CB-8447-2055-58B283E6F17C";
+	rename -uid "B5CBE001-40F8-3DF9-5C5F-D4A2CC4B1C13";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "23F03C87-46A3-7D84-0672-D4A83E0E3709";
+	rename -uid "26963B9B-48F2-32A6-E82B-27B4BEBCA0B2";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "CE63E84E-4BEF-1A42-1352-89A9D28868D1";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "50364272-48E0-8E85-2A3B-C3B41ADE53DC";
+	rename -uid "E3AECF67-4782-E0E0-DA25-60863E968CBD";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "51EF55AF-4778-4ADA-16B7-F183B0A94C90";
 	setAttr ".g" yes;
@@ -261,7 +262,7 @@ createNode reference -n "Mech_Cat_Final_RIgRN";
 		2 "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Control_Group|Mech_Cat_Final_RIg:Spine_Ctrls|Mech_Cat_Final_RIg:Spine_IK_Ctrl_Grp|Mech_Cat_Final_RIg:Spine_IK_Ctrl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Mech_Cat_Final_RIg:MECH_CAT|Mech_Cat_Final_RIg:Deformers" "visibility" 
-		" 1"
+		" 0"
 		2 "Mech_Cat_Final_RIg:MC_Geo_Layer" "displayType" " 2"
 		2 "Mech_Cat_Final_RIg:MC_Geo_Layer" "visibility" " 1"
 		2 "Mech_Cat_Final_RIg:MC_Skeleton_Layer" "visibility" " 0"
@@ -747,7 +748,7 @@ createNode animCurveTL -n "R_Rear_Foot_IK_Ctrl_translateY";
 	rename -uid "075FB2E3-4684-66F8-D2C7-919EFE8143CE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  10 0 15 0.33733476700873677 18 5.3797304123097822
+	setAttr -s 6 ".ktv[0:5]"  10 0 17 0.33733476700873677 20 5.3797304123097822
 		 24 6.4322863625443043 32 2.4610471527318056 34 0;
 	setAttr -s 6 ".kit[3:5]"  1 18 18;
 	setAttr -s 6 ".kot[3:5]"  1 18 18;
@@ -761,7 +762,7 @@ createNode animCurveTL -n "R_Rear_Foot_IK_Ctrl_translateZ";
 	rename -uid "40ECDE47-48EC-C5C5-3685-8582817F5452";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  10 12.982426762536756 17 -24.735382574549615
+	setAttr -s 3 ".ktv[0:2]"  10 12.982426762536756 19 -24.735382574549615
 		 34 12.982426762536756;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
@@ -777,7 +778,7 @@ createNode animCurveTL -n "L_Rear_Foot_IK_Ctrl_translateY";
 	rename -uid "1A046861-4BEC-374F-41A1-02A7190DD47D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  8 0 13 0.33733476700873677 16 5.3797304123097822
+	setAttr -s 6 ".ktv[0:5]"  8 0 15 0.33733476700873677 18 5.3797304123097822
 		 22 6.4322863625443043 30 2.4610471527318056 32 0;
 	setAttr -s 6 ".kit[3:5]"  1 18 18;
 	setAttr -s 6 ".kot[3:5]"  1 18 18;
@@ -791,7 +792,7 @@ createNode animCurveTL -n "L_Rear_Foot_IK_Ctrl_translateZ";
 	rename -uid "F6E4C720-4D93-016E-6A44-E98E98674761";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  8 12.982426762536756 15 -24.735382574549615
+	setAttr -s 3 ".ktv[0:2]"  8 12.982426762536756 17 -24.735382574549615
 		 32 12.982426762536756;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
@@ -799,7 +800,7 @@ createNode animCurveTA -n "R_Rear_Foot_IK_Ctrl_rotateX";
 	rename -uid "0EFF464B-4DA1-D0F2-078D-CA96617A7C00";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  10 0 17 0 19 53.926548206258936 29 42.028750946910272
+	setAttr -s 5 ".ktv[0:4]"  10 0 19 0 21 53.926548206258936 29 42.028750946910272
 		 34 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
@@ -807,21 +808,21 @@ createNode animCurveTA -n "R_Rear_Foot_IK_Ctrl_rotateY";
 	rename -uid "ADFF0834-41B0-DCD5-437B-DDACB30FE1F3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  10 0 17 0 18 0 19 0 29 0 34 0;
+	setAttr -s 6 ".ktv[0:5]"  10 0 19 0 20 0 21 0 29 0 34 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "R_Rear_Foot_IK_Ctrl_rotateZ";
 	rename -uid "66EDB1B0-419D-A94A-5635-CDB7172D6EC1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  10 0 18 0 23 0 25 0 29 0 34 0;
+	setAttr -s 6 ".ktv[0:5]"  10 0 20 0 23 0 25 0 29 0 34 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "L_Rear_Foot_IK_Ctrl_rotateX";
 	rename -uid "C87BDF8F-4C29-1F00-8B83-589B04DA59EE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  8 0 15 0 17 53.926548206258936 27 42.028750946910272
+	setAttr -s 5 ".ktv[0:4]"  8 0 17 0 19 53.926548206258936 27 42.028750946910272
 		 32 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
@@ -829,14 +830,14 @@ createNode animCurveTA -n "L_Rear_Foot_IK_Ctrl_rotateY";
 	rename -uid "C067C809-472A-197D-9F60-BE8BCFDDA822";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  8 0 15 0 16 0 17 0 27 0 32 0;
+	setAttr -s 6 ".ktv[0:5]"  8 0 17 0 18 0 19 0 27 0 32 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "L_Rear_Foot_IK_Ctrl_rotateZ";
 	rename -uid "EA2675F8-41DA-9772-DCAA-78A82B860138";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  8 0 15 0 18 0 19 0 27 0 32 0;
+	setAttr -s 6 ".ktv[0:5]"  8 0 15 0 20 0 21 0 27 0 32 0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "L_Rear_reverse_foot_ball_Ctrl_rotateX";
@@ -1031,8 +1032,8 @@ createNode motionTrail -n "motionTrail2";
 	setAttr ".s" 24;
 	setAttr ".e" 48;
 select -ne :time1;
-	setAttr ".o" 32;
-	setAttr ".unw" 32;
+	setAttr ".o" 23;
+	setAttr ".unw" 23;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -1097,8 +1098,8 @@ connectAttr "L_Front_Foot_IK_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[17]";
 connectAttr "L_Front_Foot_IK_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[18]";
 connectAttr "L_Front_Foot_IK_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[19]";
 connectAttr "Mech_Cat_Final_RIgRN.phl[20]" "motionTrail1.im";
-connectAttr "Mech_Cat_Final_RIgRN.phl[21]" "motionTrail1HandleShape.tr";
-connectAttr "Mech_Cat_Final_RIgRN.phl[22]" "motionTrail1.so";
+connectAttr "Mech_Cat_Final_RIgRN.phl[21]" "motionTrail1.so";
+connectAttr "Mech_Cat_Final_RIgRN.phl[22]" "motionTrail1HandleShape.tr";
 connectAttr "L_Front_reverse_foot_ball_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[23]"
 		;
 connectAttr "L_Front_reverse_foot_ball_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[24]"
@@ -1119,8 +1120,8 @@ connectAttr "R_Front_Foot_IK_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[36]";
 connectAttr "R_Front_Foot_IK_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[37]";
 connectAttr "R_Front_Foot_IK_Ctrl_rotateZ.o" "Mech_Cat_Final_RIgRN.phl[38]";
 connectAttr "Mech_Cat_Final_RIgRN.phl[39]" "motionTrail2.im";
-connectAttr "Mech_Cat_Final_RIgRN.phl[40]" "motionTrail2HandleShape.tr";
-connectAttr "Mech_Cat_Final_RIgRN.phl[41]" "motionTrail2.so";
+connectAttr "Mech_Cat_Final_RIgRN.phl[40]" "motionTrail2.so";
+connectAttr "Mech_Cat_Final_RIgRN.phl[41]" "motionTrail2HandleShape.tr";
 connectAttr "R_Front_reverse_foot_ball_Ctrl_rotateX.o" "Mech_Cat_Final_RIgRN.phl[42]"
 		;
 connectAttr "R_Front_reverse_foot_ball_Ctrl_rotateY.o" "Mech_Cat_Final_RIgRN.phl[43]"

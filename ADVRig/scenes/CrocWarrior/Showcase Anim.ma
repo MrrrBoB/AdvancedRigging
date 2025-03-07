@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Showcase Anim.ma
-//Last modified: Thu, Mar 06, 2025 05:39:00 PM
+//Last modified: Thu, Mar 06, 2025 10:39:11 PM
 //Codeset: 1252
 file -rdi 1 -ns "CrocRig" -rfn "CrocRigRN" -op "v=0;" -typ "mayaAscii" "F:/School/AdvancedRigging/ADVRig//scenes/CrocWarrior/CrocRig.ma";
 file -r -ns "CrocRig" -dr 1 -rfn "CrocRigRN" -op "v=0;" -typ "mayaAscii" "F:/School/AdvancedRigging/ADVRig//scenes/CrocWarrior/CrocRig.ma";
@@ -8,26 +8,28 @@ requires maya "2023";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.4.5";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "438C0A5D-445E-F415-24A0-54863C202748";
+fileInfo "UUID" "65A179AD-4F2A-C33E-7A08-4F84DEAC4294";
 createNode transform -s -n "persp";
 	rename -uid "1E15DF80-49E5-51E9-4A17-3EB0E882FFA7";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 39.346092798458805 10.114028252908062 25.661322336815147 ;
-	setAttr ".r" -type "double3" -9.9383527300573942 -303.39999999995155 0 ;
+	setAttr ".t" -type "double3" -3.0196652807529034 -0.58539985051899768 49.748073830266748 ;
+	setAttr ".r" -type "double3" 7.4616472644514005 -1081.8000000000502 1.9888280424966657e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E56B8E2C-4569-D137-6071-0C891EBA522B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 47.150296685880647;
+	setAttr ".coi" 45.324699847643728;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
+	setAttr ".tp" -type "double3" -0.19824391775507633 3.3945308419197766 1.8717924374638693 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "87A48C3B-4317-C081-0690-EAB2365A2F68";
@@ -89,27 +91,27 @@ createNode locator -n "locatorShape1" -p "locator1";
 	setAttr ".ovc" 9;
 	setAttr ".los" -type "double3" 6 6 6 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9C89959F-41D1-ED8E-EF30-2CBC41E287BC";
+	rename -uid "1AF38D5C-4358-4DC3-C090-3CBEA305917E";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "6C69B99B-4B51-1837-16DE-F3991498C49E";
+	rename -uid "5823D62F-45F3-98CE-2620-7A84B50712ED";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "6C2E6F72-42FB-AB8F-DA8A-F0B77B765892";
+	rename -uid "132198E1-4ADB-569D-8054-F28A7BCAEEDF";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "3346D307-4D80-7694-573F-4E8A32A2A8F8";
+	rename -uid "693AC225-482A-D0BF-8E3C-43BA2376BB0F";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "9CC3FF0E-4EF4-9EF1-69BF-B7A6DC82E70A";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "62F18013-4C77-4315-C7F3-C5B97D91BCD8";
+	rename -uid "F75EE615-4AD8-488D-EE3F-D89C3F60083F";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "78CFD7DD-4379-9F78-E274-BBA18019ADE1";
 	setAttr ".g" yes;
 createNode reference -n "CrocRigRN";
 	rename -uid "2180028E-4F91-4C7F-D7B9-7E908089EDCA";
-	setAttr -s 1172 ".phl";
+	setAttr -s 1163 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -1273,33 +1275,26 @@ createNode reference -n "CrocRigRN";
 	setAttr ".phl[1161]" 0;
 	setAttr ".phl[1162]" 0;
 	setAttr ".phl[1163]" 0;
-	setAttr ".phl[1164]" 0;
-	setAttr ".phl[1165]" 0;
-	setAttr ".phl[1166]" 0;
-	setAttr ".phl[1167]" 0;
-	setAttr ".phl[1168]" 0;
-	setAttr ".phl[1169]" 0;
-	setAttr ".phl[1170]" 0;
-	setAttr ".phl[1171]" 0;
-	setAttr ".phl[1172]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"CrocRigRN"
 		"CrocRigRN" 0
-		"CrocRigRN" 1248
+		"CrocRigRN" 1242
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl" 
 		"Local_Space" " -k 1 2"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl_Grp_parentConstraint1" 
-		"CrocWarriorW0" " -k 1"
+		"CrocWarriorW0" " -av -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl_Grp_parentConstraint1" 
-		"Transform_CtrlW1" " -k 1"
+		"Transform_CtrlW1" " -av -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl_Grp_parentConstraint1" 
-		"CoG_CtrlW2" " -k 1"
+		"CoG_CtrlW2" " -av -k 1 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl_Grp_parentConstraint1" 
-		"Pelvis_CtrlW3" " -k 1"
+		"Pelvis_CtrlW3" " -av -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Mid_Ctrl_Grp|CrocRig:IK_Torso_Mid_Ctrl" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl" 
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl" 
 		"Local_Space" " -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:L_Reverse_Foot_Ball_Ctrl|CrocRig:L_Reverse_Foot_Ankle_Ctrl_Grp|CrocRig:L_Reverse_Foot_Ankle_Ctrl" 
@@ -1323,15 +1318,17 @@ createNode reference -n "CrocRigRN";
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_PV_Ctrl_Grp|CrocRig:R_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Leg_IK_PV_Ctrl" 
 		"Local_Space" " -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_PV_Ctrl_Grp|CrocRig:R_Leg_IK_PV_Ctrl_Grp_parentConstraint1" 
-		"CrocWarriorW0" " -k 1"
+		"CrocWarriorW0" " -av -k 1 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_PV_Ctrl_Grp|CrocRig:R_Leg_IK_PV_Ctrl_Grp_parentConstraint1" 
-		"Transform_CtrlW1" " -k 1"
+		"Transform_CtrlW1" " -av -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_PV_Ctrl_Grp|CrocRig:R_Leg_IK_PV_Ctrl_Grp_parentConstraint1" 
-		"CoG_CtrlW2" " -k 1"
+		"CoG_CtrlW2" " -av -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_PV_Ctrl_Grp|CrocRig:R_Leg_IK_PV_Ctrl_Grp_parentConstraint1" 
-		"R_Leg_IK_CtrlW3" " -k 1"
+		"R_Leg_IK_CtrlW3" " -av -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_FK_Ctrls|CrocRig:L_Leg_FK_Ctrls|CrocRig:L_Leg_02_FK_Ctrl_Grp|CrocRig:L_Leg_02_FK_Ctrl" 
 		"rotate" " -type \"double3\" 0 0 0"
+		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Hand_IK_Ctrl_Grp|CrocRig:L_Hand_IK_Ctrl" 
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Hand_IK_Ctrl_Grp|CrocRig:L_Hand_IK_Ctrl" 
 		"Local_Space" " -k 1 3"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Hand_IK_Ctrl_Grp|CrocRig:L_Hand_IK_Ctrl|CrocRig:L_Hand_IK_CtrlShape" 
@@ -1389,15 +1386,15 @@ createNode reference -n "CrocRigRN";
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl" 
 		"Local_Space" " -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_Grp_parentConstraint1" 
-		"CrocWarriorW0" " -k 1"
+		"CrocWarriorW0" " -av -k 1 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_Grp_parentConstraint1" 
-		"Transform_CtrlW1" " -k 1"
+		"Transform_CtrlW1" " -av -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_Grp_parentConstraint1" 
-		"CoG_CtrlW2" " -k 1"
+		"CoG_CtrlW2" " -av -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_Grp_parentConstraint1" 
-		"R_Clav_CtrlW3" " -k 1"
+		"R_Clav_CtrlW3" " -av -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_Grp_parentConstraint1" 
-		"R_Hand_IK_CtrlW4" " -k 1"
+		"R_Hand_IK_CtrlW4" " -av -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_FK_Ctrls|CrocRig:L_Arm_FK_Ctrls|CrocRig:L_Arm_02_FK_Ctrl_Grp|CrocRig:L_Arm_02_FK_Ctrl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Head_Ctrl_Grp|CrocRig:Head_Ctrl" 
@@ -1426,6 +1423,8 @@ createNode reference -n "CrocRigRN";
 		"ShowSpear" " -k 1 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Transform_Ctrl_Grp|CrocRig:Transform_Ctrl" 
 		"ShowShield" " -k 1 1"
+		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:CoG_Ctrl_Grp|CrocRig:CoG_Ctrl" 
+		"scale" " -type \"double3\" 1 1 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_11_Jnt_FK_Ctrl_Grp|CrocRig:Tail_11_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_11_Auto_FK_Grp|CrocRig:Tail_11_Jnt_FK_Ctrl" 
 		"visibility" " -av 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_01_Jnt_FK_Ctrl_Grp|CrocRig:Tail_01_Jnt_FK_Ctrl" 
@@ -1523,2266 +1522,2248 @@ createNode reference -n "CrocRigRN";
 		"CrocRigRN.placeHolderList[41]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Pelvis_Ctrl_Grp|CrocRig:Pelvis_Ctrl.scaleZ" 
 		"CrocRigRN.placeHolderList[42]" ""
-		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[43]" ""
-		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[44]" ""
-		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[45]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[46]" ""
+		"CrocRigRN.placeHolderList[43]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[47]" ""
+		"CrocRigRN.placeHolderList[44]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[48]" ""
+		"CrocRigRN.placeHolderList[45]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[49]" ""
+		"CrocRigRN.placeHolderList[46]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[50]" ""
+		"CrocRigRN.placeHolderList[47]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[51]" ""
+		"CrocRigRN.placeHolderList[48]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[52]" ""
+		"CrocRigRN.placeHolderList[49]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[53]" ""
+		"CrocRigRN.placeHolderList[50]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[54]" ""
+		"CrocRigRN.placeHolderList[51]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[55]" ""
+		"CrocRigRN.placeHolderList[52]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[56]" ""
+		"CrocRigRN.placeHolderList[53]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[57]" ""
+		"CrocRigRN.placeHolderList[54]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[58]" ""
+		"CrocRigRN.placeHolderList[55]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[59]" ""
+		"CrocRigRN.placeHolderList[56]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[60]" ""
+		"CrocRigRN.placeHolderList[57]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[61]" ""
+		"CrocRigRN.placeHolderList[58]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[62]" ""
+		"CrocRigRN.placeHolderList[59]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[63]" ""
+		"CrocRigRN.placeHolderList[60]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[64]" ""
+		"CrocRigRN.placeHolderList[61]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[65]" ""
+		"CrocRigRN.placeHolderList[62]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[66]" ""
+		"CrocRigRN.placeHolderList[63]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[67]" ""
+		"CrocRigRN.placeHolderList[64]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[68]" ""
+		"CrocRigRN.placeHolderList[65]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[69]" ""
+		"CrocRigRN.placeHolderList[66]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[70]" ""
+		"CrocRigRN.placeHolderList[67]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[71]" ""
+		"CrocRigRN.placeHolderList[68]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[72]" ""
+		"CrocRigRN.placeHolderList[69]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[73]" ""
+		"CrocRigRN.placeHolderList[70]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[74]" ""
+		"CrocRigRN.placeHolderList[71]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[75]" ""
+		"CrocRigRN.placeHolderList[72]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[76]" ""
+		"CrocRigRN.placeHolderList[73]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[77]" ""
+		"CrocRigRN.placeHolderList[74]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[78]" ""
+		"CrocRigRN.placeHolderList[75]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[79]" ""
+		"CrocRigRN.placeHolderList[76]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[80]" ""
+		"CrocRigRN.placeHolderList[77]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[81]" ""
+		"CrocRigRN.placeHolderList[78]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[82]" ""
+		"CrocRigRN.placeHolderList[79]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[83]" ""
+		"CrocRigRN.placeHolderList[80]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[84]" ""
+		"CrocRigRN.placeHolderList[81]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[85]" ""
+		"CrocRigRN.placeHolderList[82]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[86]" ""
+		"CrocRigRN.placeHolderList[83]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[87]" ""
+		"CrocRigRN.placeHolderList[84]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:L_Reverse_Foot_ToeTap_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[88]" ""
+		"CrocRigRN.placeHolderList[85]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:L_Reverse_Foot_ToeTap_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[89]" ""
+		"CrocRigRN.placeHolderList[86]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:L_Reverse_Foot_ToeTap_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[90]" ""
+		"CrocRigRN.placeHolderList[87]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:L_Reverse_Foot_ToeTap_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[91]" ""
+		"CrocRigRN.placeHolderList[88]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:L_Reverse_Foot_ToeTap_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[92]" ""
+		"CrocRigRN.placeHolderList[89]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:L_Reverse_Foot_ToeTap_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[93]" ""
+		"CrocRigRN.placeHolderList[90]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:L_Reverse_Foot_ToeTap_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[94]" ""
+		"CrocRigRN.placeHolderList[91]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:L_Reverse_Foot_ToeTap_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[95]" ""
+		"CrocRigRN.placeHolderList[92]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:L_Reverse_Foot_ToeTap_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[96]" ""
+		"CrocRigRN.placeHolderList[93]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:L_Reverse_Foot_Ball_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[97]" ""
+		"CrocRigRN.placeHolderList[94]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:L_Reverse_Foot_Ball_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[98]" ""
+		"CrocRigRN.placeHolderList[95]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:L_Reverse_Foot_Ball_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[99]" ""
+		"CrocRigRN.placeHolderList[96]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:L_Reverse_Foot_Ball_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[100]" ""
+		"CrocRigRN.placeHolderList[97]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:L_Reverse_Foot_Ball_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[101]" ""
+		"CrocRigRN.placeHolderList[98]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:L_Reverse_Foot_Ball_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[102]" ""
+		"CrocRigRN.placeHolderList[99]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:L_Reverse_Foot_Ball_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[103]" ""
+		"CrocRigRN.placeHolderList[100]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:L_Reverse_Foot_Ball_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[104]" ""
+		"CrocRigRN.placeHolderList[101]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrl_Grp|CrocRig:L_Leg_IK_Ctrl|CrocRig:L_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:L_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:L_Reverse_Foot_Outer_Ctrl|CrocRig:L_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:L_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:L_Reverse_Foot_Inner_Ctrl|CrocRig:L_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:L_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:L_Reverse_Foot_Heel_Ctrl|CrocRig:L_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:L_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:L_Reverse_Foot_Toe_Ctrl|CrocRig:L_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:L_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:L_Reverse_Foot_Ball_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[105]" ""
+		"CrocRigRN.placeHolderList[102]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_PV_Ctrl_Grp|CrocRig:L_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Leg_IK_PV_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[106]" ""
+		"CrocRigRN.placeHolderList[103]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_PV_Ctrl_Grp|CrocRig:L_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Leg_IK_PV_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[107]" ""
+		"CrocRigRN.placeHolderList[104]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_PV_Ctrl_Grp|CrocRig:L_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Leg_IK_PV_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[108]" ""
+		"CrocRigRN.placeHolderList[105]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_PV_Ctrl_Grp|CrocRig:L_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Leg_IK_PV_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[109]" ""
+		"CrocRigRN.placeHolderList[106]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_PV_Ctrl_Grp|CrocRig:L_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Leg_IK_PV_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[110]" ""
+		"CrocRigRN.placeHolderList[107]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_PV_Ctrl_Grp|CrocRig:L_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Leg_IK_PV_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[111]" ""
+		"CrocRigRN.placeHolderList[108]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_PV_Ctrl_Grp|CrocRig:L_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Leg_IK_PV_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[112]" ""
+		"CrocRigRN.placeHolderList[109]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_PV_Ctrl_Grp|CrocRig:L_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Leg_IK_PV_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[113]" ""
+		"CrocRigRN.placeHolderList[110]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:L_Leg_IK_Ctrls|CrocRig:L_Leg_IK_PV_Ctrl_Grp|CrocRig:L_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Leg_IK_PV_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[114]" ""
+		"CrocRigRN.placeHolderList[111]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[115]" ""
+		"CrocRigRN.placeHolderList[112]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[116]" ""
+		"CrocRigRN.placeHolderList[113]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[117]" ""
+		"CrocRigRN.placeHolderList[114]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[118]" ""
+		"CrocRigRN.placeHolderList[115]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[119]" ""
+		"CrocRigRN.placeHolderList[116]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[120]" ""
+		"CrocRigRN.placeHolderList[117]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[121]" ""
+		"CrocRigRN.placeHolderList[118]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[122]" ""
+		"CrocRigRN.placeHolderList[119]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[123]" ""
+		"CrocRigRN.placeHolderList[120]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[124]" ""
+		"CrocRigRN.placeHolderList[121]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[125]" ""
+		"CrocRigRN.placeHolderList[122]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[126]" ""
+		"CrocRigRN.placeHolderList[123]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[127]" ""
+		"CrocRigRN.placeHolderList[124]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[128]" ""
+		"CrocRigRN.placeHolderList[125]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[129]" ""
+		"CrocRigRN.placeHolderList[126]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[130]" ""
+		"CrocRigRN.placeHolderList[127]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[131]" ""
+		"CrocRigRN.placeHolderList[128]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[132]" ""
+		"CrocRigRN.placeHolderList[129]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[133]" ""
+		"CrocRigRN.placeHolderList[130]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[134]" ""
+		"CrocRigRN.placeHolderList[131]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[135]" ""
+		"CrocRigRN.placeHolderList[132]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[136]" ""
+		"CrocRigRN.placeHolderList[133]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[137]" ""
+		"CrocRigRN.placeHolderList[134]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[138]" ""
+		"CrocRigRN.placeHolderList[135]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[139]" ""
+		"CrocRigRN.placeHolderList[136]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[140]" ""
+		"CrocRigRN.placeHolderList[137]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[141]" ""
+		"CrocRigRN.placeHolderList[138]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[142]" ""
+		"CrocRigRN.placeHolderList[139]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[143]" ""
+		"CrocRigRN.placeHolderList[140]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[144]" ""
+		"CrocRigRN.placeHolderList[141]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[145]" ""
+		"CrocRigRN.placeHolderList[142]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[146]" ""
+		"CrocRigRN.placeHolderList[143]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[147]" ""
+		"CrocRigRN.placeHolderList[144]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[148]" ""
+		"CrocRigRN.placeHolderList[145]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[149]" ""
+		"CrocRigRN.placeHolderList[146]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[150]" ""
+		"CrocRigRN.placeHolderList[147]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[151]" ""
+		"CrocRigRN.placeHolderList[148]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[152]" ""
+		"CrocRigRN.placeHolderList[149]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[153]" ""
+		"CrocRigRN.placeHolderList[150]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[154]" ""
+		"CrocRigRN.placeHolderList[151]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[155]" ""
+		"CrocRigRN.placeHolderList[152]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[156]" ""
+		"CrocRigRN.placeHolderList[153]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[157]" ""
+		"CrocRigRN.placeHolderList[154]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[158]" ""
+		"CrocRigRN.placeHolderList[155]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[159]" ""
+		"CrocRigRN.placeHolderList[156]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:R_Reverse_Foot_ToeTap_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[160]" ""
+		"CrocRigRN.placeHolderList[157]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:R_Reverse_Foot_ToeTap_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[161]" ""
+		"CrocRigRN.placeHolderList[158]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:R_Reverse_Foot_ToeTap_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[162]" ""
+		"CrocRigRN.placeHolderList[159]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:R_Reverse_Foot_ToeTap_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[163]" ""
+		"CrocRigRN.placeHolderList[160]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:R_Reverse_Foot_ToeTap_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[164]" ""
+		"CrocRigRN.placeHolderList[161]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:R_Reverse_Foot_ToeTap_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[165]" ""
+		"CrocRigRN.placeHolderList[162]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:R_Reverse_Foot_ToeTap_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[166]" ""
+		"CrocRigRN.placeHolderList[163]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:R_Reverse_Foot_ToeTap_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[167]" ""
+		"CrocRigRN.placeHolderList[164]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_ToeTap_Ctrl_ToeTapOFFSET|CrocRig:R_Reverse_Foot_ToeTap_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[168]" ""
+		"CrocRigRN.placeHolderList[165]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:R_Reverse_Foot_Ball_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[169]" ""
+		"CrocRigRN.placeHolderList[166]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:R_Reverse_Foot_Ball_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[170]" ""
+		"CrocRigRN.placeHolderList[167]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:R_Reverse_Foot_Ball_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[171]" ""
+		"CrocRigRN.placeHolderList[168]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:R_Reverse_Foot_Ball_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[172]" ""
+		"CrocRigRN.placeHolderList[169]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:R_Reverse_Foot_Ball_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[173]" ""
+		"CrocRigRN.placeHolderList[170]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:R_Reverse_Foot_Ball_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[174]" ""
+		"CrocRigRN.placeHolderList[171]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:R_Reverse_Foot_Ball_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[175]" ""
+		"CrocRigRN.placeHolderList[172]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:R_Reverse_Foot_Ball_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[176]" ""
+		"CrocRigRN.placeHolderList[173]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrl_Grp|CrocRig:R_Leg_IK_Ctrl|CrocRig:R_Reverse_Foot_Outer_Ctrl_Grp|CrocRig:R_Reverse_Foot_Outer_Ctrl_TiltOutOFFSET|CrocRig:R_Reverse_Foot_Outer_Ctrl|CrocRig:R_Reverse_Foot_Inner_Ctrl_Grp|CrocRig:R_Reverse_Foot_Inner_Ctrl_TiltInOFFSET|CrocRig:R_Reverse_Foot_Inner_Ctrl|CrocRig:R_Reverse_Foot_Heel_Ctrl_Grp|CrocRig:R_Reverse_Foot_Heel_Ctrl_PitchBackwardOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl_HeelPivotOFFSET|CrocRig:R_Reverse_Foot_Heel_Ctrl|CrocRig:R_Reverse_Foot_Toe_Ctrl_Grp|CrocRig:R_Reverse_Foot_Toe_Ctrl_PitchForwardOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl_ToePivotOFFSET|CrocRig:R_Reverse_Foot_Toe_Ctrl|CrocRig:R_Reverse_Foot_Ball_Ctrl_Grp|CrocRig:R_Reverse_Foot_Ball_Ctrl_BallTiltOFFSET|CrocRig:R_Reverse_Foot_Ball_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[177]" ""
+		"CrocRigRN.placeHolderList[174]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_PV_Ctrl_Grp|CrocRig:R_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Leg_IK_PV_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[178]" ""
+		"CrocRigRN.placeHolderList[175]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_PV_Ctrl_Grp|CrocRig:R_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Leg_IK_PV_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[179]" ""
+		"CrocRigRN.placeHolderList[176]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_PV_Ctrl_Grp|CrocRig:R_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Leg_IK_PV_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[180]" ""
+		"CrocRigRN.placeHolderList[177]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_PV_Ctrl_Grp|CrocRig:R_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Leg_IK_PV_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[181]" ""
+		"CrocRigRN.placeHolderList[178]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_PV_Ctrl_Grp|CrocRig:R_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Leg_IK_PV_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[182]" ""
+		"CrocRigRN.placeHolderList[179]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_PV_Ctrl_Grp|CrocRig:R_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Leg_IK_PV_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[183]" ""
+		"CrocRigRN.placeHolderList[180]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_PV_Ctrl_Grp|CrocRig:R_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Leg_IK_PV_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[184]" ""
+		"CrocRigRN.placeHolderList[181]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_PV_Ctrl_Grp|CrocRig:R_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Leg_IK_PV_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[185]" ""
+		"CrocRigRN.placeHolderList[182]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Leg_Ctrls|CrocRig:Leg_IK_Ctrls|CrocRig:R_Leg_IK_Ctrls|CrocRig:R_Leg_IK_PV_Ctrl_Grp|CrocRig:R_Leg_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Leg_IK_PV_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[186]" ""
-		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Hand_IK_Ctrl_Grp|CrocRig:L_Hand_IK_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[187]" ""
-		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Hand_IK_Ctrl_Grp|CrocRig:L_Hand_IK_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[188]" ""
-		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Hand_IK_Ctrl_Grp|CrocRig:L_Hand_IK_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[189]" ""
+		"CrocRigRN.placeHolderList[183]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Hand_IK_Ctrl_Grp|CrocRig:L_Hand_IK_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[190]" ""
+		"CrocRigRN.placeHolderList[184]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Hand_IK_Ctrl_Grp|CrocRig:L_Hand_IK_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[191]" ""
+		"CrocRigRN.placeHolderList[185]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Hand_IK_Ctrl_Grp|CrocRig:L_Hand_IK_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[192]" ""
+		"CrocRigRN.placeHolderList[186]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Hand_IK_Ctrl_Grp|CrocRig:L_Hand_IK_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[193]" ""
+		"CrocRigRN.placeHolderList[187]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Hand_IK_Ctrl_Grp|CrocRig:L_Hand_IK_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[194]" ""
+		"CrocRigRN.placeHolderList[188]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Hand_IK_Ctrl_Grp|CrocRig:L_Hand_IK_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[195]" ""
+		"CrocRigRN.placeHolderList[189]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Arm_IK_PV_Ctrl_Grp|CrocRig:L_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Arm_IK_PV_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[196]" ""
+		"CrocRigRN.placeHolderList[190]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Arm_IK_PV_Ctrl_Grp|CrocRig:L_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Arm_IK_PV_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[197]" ""
+		"CrocRigRN.placeHolderList[191]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Arm_IK_PV_Ctrl_Grp|CrocRig:L_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Arm_IK_PV_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[198]" ""
+		"CrocRigRN.placeHolderList[192]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Arm_IK_PV_Ctrl_Grp|CrocRig:L_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Arm_IK_PV_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[199]" ""
+		"CrocRigRN.placeHolderList[193]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Arm_IK_PV_Ctrl_Grp|CrocRig:L_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Arm_IK_PV_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[200]" ""
+		"CrocRigRN.placeHolderList[194]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Arm_IK_PV_Ctrl_Grp|CrocRig:L_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Arm_IK_PV_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[201]" ""
+		"CrocRigRN.placeHolderList[195]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Arm_IK_PV_Ctrl_Grp|CrocRig:L_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Arm_IK_PV_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[202]" ""
+		"CrocRigRN.placeHolderList[196]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Arm_IK_PV_Ctrl_Grp|CrocRig:L_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Arm_IK_PV_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[203]" ""
+		"CrocRigRN.placeHolderList[197]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Arm_IK_PV_Ctrl_Grp|CrocRig:L_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Arm_IK_PV_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[204]" ""
+		"CrocRigRN.placeHolderList[198]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[205]" ""
+		"CrocRigRN.placeHolderList[199]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[206]" ""
+		"CrocRigRN.placeHolderList[200]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[207]" ""
+		"CrocRigRN.placeHolderList[201]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[208]" ""
+		"CrocRigRN.placeHolderList[202]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[209]" ""
+		"CrocRigRN.placeHolderList[203]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[210]" ""
+		"CrocRigRN.placeHolderList[204]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[211]" ""
+		"CrocRigRN.placeHolderList[205]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[212]" ""
+		"CrocRigRN.placeHolderList[206]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[213]" ""
+		"CrocRigRN.placeHolderList[207]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[214]" ""
+		"CrocRigRN.placeHolderList[208]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[215]" ""
+		"CrocRigRN.placeHolderList[209]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[216]" ""
+		"CrocRigRN.placeHolderList[210]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[217]" ""
+		"CrocRigRN.placeHolderList[211]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[218]" ""
+		"CrocRigRN.placeHolderList[212]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[219]" ""
+		"CrocRigRN.placeHolderList[213]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[220]" ""
+		"CrocRigRN.placeHolderList[214]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[221]" ""
+		"CrocRigRN.placeHolderList[215]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[222]" ""
+		"CrocRigRN.placeHolderList[216]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_01_Ctrl_Grp|CrocRig:L_PointerFinger_01_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[223]" ""
+		"CrocRigRN.placeHolderList[217]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_01_Ctrl_Grp|CrocRig:L_PointerFinger_01_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[224]" ""
+		"CrocRigRN.placeHolderList[218]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_01_Ctrl_Grp|CrocRig:L_PointerFinger_01_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[225]" ""
+		"CrocRigRN.placeHolderList[219]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_01_Ctrl_Grp|CrocRig:L_PointerFinger_01_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[226]" ""
+		"CrocRigRN.placeHolderList[220]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_01_Ctrl_Grp|CrocRig:L_PointerFinger_01_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[227]" ""
+		"CrocRigRN.placeHolderList[221]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_01_Ctrl_Grp|CrocRig:L_PointerFinger_01_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[228]" ""
+		"CrocRigRN.placeHolderList[222]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_01_Ctrl_Grp|CrocRig:L_PointerFinger_01_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[229]" ""
+		"CrocRigRN.placeHolderList[223]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_01_Ctrl_Grp|CrocRig:L_PointerFinger_01_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[230]" ""
+		"CrocRigRN.placeHolderList[224]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_01_Ctrl_Grp|CrocRig:L_PointerFinger_01_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[231]" ""
+		"CrocRigRN.placeHolderList[225]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_02_Ctrl_Grp|CrocRig:L_PointerFinger_02_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[232]" ""
+		"CrocRigRN.placeHolderList[226]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_02_Ctrl_Grp|CrocRig:L_PointerFinger_02_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[233]" ""
+		"CrocRigRN.placeHolderList[227]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_02_Ctrl_Grp|CrocRig:L_PointerFinger_02_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[234]" ""
+		"CrocRigRN.placeHolderList[228]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_02_Ctrl_Grp|CrocRig:L_PointerFinger_02_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[235]" ""
+		"CrocRigRN.placeHolderList[229]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_02_Ctrl_Grp|CrocRig:L_PointerFinger_02_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[236]" ""
+		"CrocRigRN.placeHolderList[230]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_02_Ctrl_Grp|CrocRig:L_PointerFinger_02_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[237]" ""
+		"CrocRigRN.placeHolderList[231]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_02_Ctrl_Grp|CrocRig:L_PointerFinger_02_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[238]" ""
+		"CrocRigRN.placeHolderList[232]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_02_Ctrl_Grp|CrocRig:L_PointerFinger_02_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[239]" ""
+		"CrocRigRN.placeHolderList[233]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_02_Ctrl_Grp|CrocRig:L_PointerFinger_02_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[240]" ""
+		"CrocRigRN.placeHolderList[234]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_03_Ctrl_Grp|CrocRig:L_PointerFinger_03_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[241]" ""
+		"CrocRigRN.placeHolderList[235]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_03_Ctrl_Grp|CrocRig:L_PointerFinger_03_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[242]" ""
+		"CrocRigRN.placeHolderList[236]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_03_Ctrl_Grp|CrocRig:L_PointerFinger_03_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[243]" ""
+		"CrocRigRN.placeHolderList[237]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_03_Ctrl_Grp|CrocRig:L_PointerFinger_03_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[244]" ""
+		"CrocRigRN.placeHolderList[238]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_03_Ctrl_Grp|CrocRig:L_PointerFinger_03_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[245]" ""
+		"CrocRigRN.placeHolderList[239]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_03_Ctrl_Grp|CrocRig:L_PointerFinger_03_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[246]" ""
+		"CrocRigRN.placeHolderList[240]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_03_Ctrl_Grp|CrocRig:L_PointerFinger_03_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[247]" ""
+		"CrocRigRN.placeHolderList[241]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_03_Ctrl_Grp|CrocRig:L_PointerFinger_03_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[248]" ""
+		"CrocRigRN.placeHolderList[242]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:L_PointerFinger_03_Ctrl_Grp|CrocRig:L_PointerFinger_03_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[249]" ""
+		"CrocRigRN.placeHolderList[243]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_01_Ctrl_Grp|CrocRig:L_MiddleFinger_01_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[250]" ""
+		"CrocRigRN.placeHolderList[244]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_01_Ctrl_Grp|CrocRig:L_MiddleFinger_01_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[251]" ""
+		"CrocRigRN.placeHolderList[245]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_01_Ctrl_Grp|CrocRig:L_MiddleFinger_01_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[252]" ""
+		"CrocRigRN.placeHolderList[246]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_01_Ctrl_Grp|CrocRig:L_MiddleFinger_01_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[253]" ""
+		"CrocRigRN.placeHolderList[247]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_01_Ctrl_Grp|CrocRig:L_MiddleFinger_01_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[254]" ""
+		"CrocRigRN.placeHolderList[248]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_01_Ctrl_Grp|CrocRig:L_MiddleFinger_01_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[255]" ""
+		"CrocRigRN.placeHolderList[249]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_01_Ctrl_Grp|CrocRig:L_MiddleFinger_01_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[256]" ""
+		"CrocRigRN.placeHolderList[250]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_01_Ctrl_Grp|CrocRig:L_MiddleFinger_01_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[257]" ""
+		"CrocRigRN.placeHolderList[251]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_01_Ctrl_Grp|CrocRig:L_MiddleFinger_01_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[258]" ""
+		"CrocRigRN.placeHolderList[252]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_02_Ctrl_Grp|CrocRig:L_MiddleFinger_02_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[259]" ""
+		"CrocRigRN.placeHolderList[253]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_02_Ctrl_Grp|CrocRig:L_MiddleFinger_02_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[260]" ""
+		"CrocRigRN.placeHolderList[254]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_02_Ctrl_Grp|CrocRig:L_MiddleFinger_02_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[261]" ""
+		"CrocRigRN.placeHolderList[255]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_02_Ctrl_Grp|CrocRig:L_MiddleFinger_02_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[262]" ""
+		"CrocRigRN.placeHolderList[256]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_02_Ctrl_Grp|CrocRig:L_MiddleFinger_02_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[263]" ""
+		"CrocRigRN.placeHolderList[257]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_02_Ctrl_Grp|CrocRig:L_MiddleFinger_02_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[264]" ""
+		"CrocRigRN.placeHolderList[258]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_02_Ctrl_Grp|CrocRig:L_MiddleFinger_02_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[265]" ""
+		"CrocRigRN.placeHolderList[259]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_02_Ctrl_Grp|CrocRig:L_MiddleFinger_02_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[266]" ""
+		"CrocRigRN.placeHolderList[260]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_02_Ctrl_Grp|CrocRig:L_MiddleFinger_02_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[267]" ""
+		"CrocRigRN.placeHolderList[261]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_03_Ctrl_Grp|CrocRig:L_MiddleFinger_03_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[268]" ""
+		"CrocRigRN.placeHolderList[262]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_03_Ctrl_Grp|CrocRig:L_MiddleFinger_03_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[269]" ""
+		"CrocRigRN.placeHolderList[263]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_03_Ctrl_Grp|CrocRig:L_MiddleFinger_03_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[270]" ""
+		"CrocRigRN.placeHolderList[264]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_03_Ctrl_Grp|CrocRig:L_MiddleFinger_03_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[271]" ""
+		"CrocRigRN.placeHolderList[265]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_03_Ctrl_Grp|CrocRig:L_MiddleFinger_03_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[272]" ""
+		"CrocRigRN.placeHolderList[266]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_03_Ctrl_Grp|CrocRig:L_MiddleFinger_03_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[273]" ""
+		"CrocRigRN.placeHolderList[267]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_03_Ctrl_Grp|CrocRig:L_MiddleFinger_03_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[274]" ""
+		"CrocRigRN.placeHolderList[268]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_03_Ctrl_Grp|CrocRig:L_MiddleFinger_03_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[275]" ""
+		"CrocRigRN.placeHolderList[269]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:L_MiddleFinger_03_Ctrl_Grp|CrocRig:L_MiddleFinger_03_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[276]" ""
+		"CrocRigRN.placeHolderList[270]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_01_Ctrl_Grp|CrocRig:L_RingFinger_01_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[277]" ""
+		"CrocRigRN.placeHolderList[271]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_01_Ctrl_Grp|CrocRig:L_RingFinger_01_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[278]" ""
+		"CrocRigRN.placeHolderList[272]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_01_Ctrl_Grp|CrocRig:L_RingFinger_01_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[279]" ""
+		"CrocRigRN.placeHolderList[273]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_01_Ctrl_Grp|CrocRig:L_RingFinger_01_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[280]" ""
+		"CrocRigRN.placeHolderList[274]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_01_Ctrl_Grp|CrocRig:L_RingFinger_01_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[281]" ""
+		"CrocRigRN.placeHolderList[275]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_01_Ctrl_Grp|CrocRig:L_RingFinger_01_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[282]" ""
+		"CrocRigRN.placeHolderList[276]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_01_Ctrl_Grp|CrocRig:L_RingFinger_01_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[283]" ""
+		"CrocRigRN.placeHolderList[277]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_01_Ctrl_Grp|CrocRig:L_RingFinger_01_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[284]" ""
+		"CrocRigRN.placeHolderList[278]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_01_Ctrl_Grp|CrocRig:L_RingFinger_01_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[285]" ""
+		"CrocRigRN.placeHolderList[279]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_02_Ctrl_Grp|CrocRig:L_RingFinger_02_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[286]" ""
+		"CrocRigRN.placeHolderList[280]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_02_Ctrl_Grp|CrocRig:L_RingFinger_02_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[287]" ""
+		"CrocRigRN.placeHolderList[281]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_02_Ctrl_Grp|CrocRig:L_RingFinger_02_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[288]" ""
+		"CrocRigRN.placeHolderList[282]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_02_Ctrl_Grp|CrocRig:L_RingFinger_02_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[289]" ""
+		"CrocRigRN.placeHolderList[283]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_02_Ctrl_Grp|CrocRig:L_RingFinger_02_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[290]" ""
+		"CrocRigRN.placeHolderList[284]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_02_Ctrl_Grp|CrocRig:L_RingFinger_02_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[291]" ""
+		"CrocRigRN.placeHolderList[285]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_02_Ctrl_Grp|CrocRig:L_RingFinger_02_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[292]" ""
+		"CrocRigRN.placeHolderList[286]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_02_Ctrl_Grp|CrocRig:L_RingFinger_02_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[293]" ""
+		"CrocRigRN.placeHolderList[287]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_02_Ctrl_Grp|CrocRig:L_RingFinger_02_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[294]" ""
+		"CrocRigRN.placeHolderList[288]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_03_Ctrl_Grp|CrocRig:L_RingFinger_03_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[295]" ""
+		"CrocRigRN.placeHolderList[289]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_03_Ctrl_Grp|CrocRig:L_RingFinger_03_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[296]" ""
+		"CrocRigRN.placeHolderList[290]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_03_Ctrl_Grp|CrocRig:L_RingFinger_03_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[297]" ""
+		"CrocRigRN.placeHolderList[291]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_03_Ctrl_Grp|CrocRig:L_RingFinger_03_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[298]" ""
+		"CrocRigRN.placeHolderList[292]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_03_Ctrl_Grp|CrocRig:L_RingFinger_03_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[299]" ""
+		"CrocRigRN.placeHolderList[293]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_03_Ctrl_Grp|CrocRig:L_RingFinger_03_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[300]" ""
+		"CrocRigRN.placeHolderList[294]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_03_Ctrl_Grp|CrocRig:L_RingFinger_03_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[301]" ""
+		"CrocRigRN.placeHolderList[295]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_03_Ctrl_Grp|CrocRig:L_RingFinger_03_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[302]" ""
+		"CrocRigRN.placeHolderList[296]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:L_RingFinger_03_Ctrl_Grp|CrocRig:L_RingFinger_03_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[303]" ""
+		"CrocRigRN.placeHolderList[297]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_Base_Ctrl_Grp|CrocRig:L_Thumb_Base_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[304]" ""
+		"CrocRigRN.placeHolderList[298]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_Base_Ctrl_Grp|CrocRig:L_Thumb_Base_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[305]" ""
+		"CrocRigRN.placeHolderList[299]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_Base_Ctrl_Grp|CrocRig:L_Thumb_Base_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[306]" ""
+		"CrocRigRN.placeHolderList[300]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_Base_Ctrl_Grp|CrocRig:L_Thumb_Base_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[307]" ""
+		"CrocRigRN.placeHolderList[301]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_Base_Ctrl_Grp|CrocRig:L_Thumb_Base_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[308]" ""
+		"CrocRigRN.placeHolderList[302]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_Base_Ctrl_Grp|CrocRig:L_Thumb_Base_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[309]" ""
+		"CrocRigRN.placeHolderList[303]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_Base_Ctrl_Grp|CrocRig:L_Thumb_Base_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[310]" ""
+		"CrocRigRN.placeHolderList[304]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_Base_Ctrl_Grp|CrocRig:L_Thumb_Base_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[311]" ""
+		"CrocRigRN.placeHolderList[305]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_Base_Ctrl_Grp|CrocRig:L_Thumb_Base_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[312]" ""
+		"CrocRigRN.placeHolderList[306]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_01_Ctrl_Grp|CrocRig:L_Thumb_01_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[313]" ""
+		"CrocRigRN.placeHolderList[307]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_01_Ctrl_Grp|CrocRig:L_Thumb_01_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[314]" ""
+		"CrocRigRN.placeHolderList[308]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_01_Ctrl_Grp|CrocRig:L_Thumb_01_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[315]" ""
+		"CrocRigRN.placeHolderList[309]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_01_Ctrl_Grp|CrocRig:L_Thumb_01_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[316]" ""
+		"CrocRigRN.placeHolderList[310]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_01_Ctrl_Grp|CrocRig:L_Thumb_01_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[317]" ""
+		"CrocRigRN.placeHolderList[311]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_01_Ctrl_Grp|CrocRig:L_Thumb_01_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[318]" ""
+		"CrocRigRN.placeHolderList[312]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_01_Ctrl_Grp|CrocRig:L_Thumb_01_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[319]" ""
+		"CrocRigRN.placeHolderList[313]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_01_Ctrl_Grp|CrocRig:L_Thumb_01_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[320]" ""
+		"CrocRigRN.placeHolderList[314]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_01_Ctrl_Grp|CrocRig:L_Thumb_01_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[321]" ""
+		"CrocRigRN.placeHolderList[315]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_02_Ctrl_Grp|CrocRig:L_Thumb_02_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[322]" ""
+		"CrocRigRN.placeHolderList[316]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_02_Ctrl_Grp|CrocRig:L_Thumb_02_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[323]" ""
+		"CrocRigRN.placeHolderList[317]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_02_Ctrl_Grp|CrocRig:L_Thumb_02_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[324]" ""
+		"CrocRigRN.placeHolderList[318]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_02_Ctrl_Grp|CrocRig:L_Thumb_02_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[325]" ""
+		"CrocRigRN.placeHolderList[319]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_02_Ctrl_Grp|CrocRig:L_Thumb_02_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[326]" ""
+		"CrocRigRN.placeHolderList[320]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_02_Ctrl_Grp|CrocRig:L_Thumb_02_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[327]" ""
+		"CrocRigRN.placeHolderList[321]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_02_Ctrl_Grp|CrocRig:L_Thumb_02_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[328]" ""
+		"CrocRigRN.placeHolderList[322]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_02_Ctrl_Grp|CrocRig:L_Thumb_02_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[329]" ""
+		"CrocRigRN.placeHolderList[323]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:L_Thumb_02_Ctrl_Grp|CrocRig:L_Thumb_02_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[330]" ""
+		"CrocRigRN.placeHolderList[324]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_01_Ctrl_Grp|CrocRig:R_PointerFinger_01_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[331]" ""
+		"CrocRigRN.placeHolderList[325]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_01_Ctrl_Grp|CrocRig:R_PointerFinger_01_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[332]" ""
+		"CrocRigRN.placeHolderList[326]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_01_Ctrl_Grp|CrocRig:R_PointerFinger_01_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[333]" ""
+		"CrocRigRN.placeHolderList[327]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_01_Ctrl_Grp|CrocRig:R_PointerFinger_01_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[334]" ""
+		"CrocRigRN.placeHolderList[328]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_01_Ctrl_Grp|CrocRig:R_PointerFinger_01_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[335]" ""
+		"CrocRigRN.placeHolderList[329]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_01_Ctrl_Grp|CrocRig:R_PointerFinger_01_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[336]" ""
+		"CrocRigRN.placeHolderList[330]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_01_Ctrl_Grp|CrocRig:R_PointerFinger_01_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[337]" ""
+		"CrocRigRN.placeHolderList[331]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_01_Ctrl_Grp|CrocRig:R_PointerFinger_01_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[338]" ""
+		"CrocRigRN.placeHolderList[332]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_01_Ctrl_Grp|CrocRig:R_PointerFinger_01_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[339]" ""
+		"CrocRigRN.placeHolderList[333]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_02_Ctrl_Grp|CrocRig:R_PointerFinger_02_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[340]" ""
+		"CrocRigRN.placeHolderList[334]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_02_Ctrl_Grp|CrocRig:R_PointerFinger_02_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[341]" ""
+		"CrocRigRN.placeHolderList[335]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_02_Ctrl_Grp|CrocRig:R_PointerFinger_02_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[342]" ""
+		"CrocRigRN.placeHolderList[336]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_02_Ctrl_Grp|CrocRig:R_PointerFinger_02_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[343]" ""
+		"CrocRigRN.placeHolderList[337]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_02_Ctrl_Grp|CrocRig:R_PointerFinger_02_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[344]" ""
+		"CrocRigRN.placeHolderList[338]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_02_Ctrl_Grp|CrocRig:R_PointerFinger_02_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[345]" ""
+		"CrocRigRN.placeHolderList[339]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_02_Ctrl_Grp|CrocRig:R_PointerFinger_02_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[346]" ""
+		"CrocRigRN.placeHolderList[340]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_02_Ctrl_Grp|CrocRig:R_PointerFinger_02_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[347]" ""
+		"CrocRigRN.placeHolderList[341]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_02_Ctrl_Grp|CrocRig:R_PointerFinger_02_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[348]" ""
+		"CrocRigRN.placeHolderList[342]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_03_Ctrl_Grp|CrocRig:R_PointerFinger_03_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[349]" ""
+		"CrocRigRN.placeHolderList[343]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_03_Ctrl_Grp|CrocRig:R_PointerFinger_03_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[350]" ""
+		"CrocRigRN.placeHolderList[344]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_03_Ctrl_Grp|CrocRig:R_PointerFinger_03_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[351]" ""
+		"CrocRigRN.placeHolderList[345]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_03_Ctrl_Grp|CrocRig:R_PointerFinger_03_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[352]" ""
+		"CrocRigRN.placeHolderList[346]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_03_Ctrl_Grp|CrocRig:R_PointerFinger_03_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[353]" ""
+		"CrocRigRN.placeHolderList[347]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_03_Ctrl_Grp|CrocRig:R_PointerFinger_03_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[354]" ""
+		"CrocRigRN.placeHolderList[348]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_03_Ctrl_Grp|CrocRig:R_PointerFinger_03_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[355]" ""
+		"CrocRigRN.placeHolderList[349]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_03_Ctrl_Grp|CrocRig:R_PointerFinger_03_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[356]" ""
+		"CrocRigRN.placeHolderList[350]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:PointerFinger_Ctrls|CrocRig:R_PointerFinger_03_Ctrl_Grp|CrocRig:R_PointerFinger_03_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[357]" ""
+		"CrocRigRN.placeHolderList[351]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_01_Ctrl_Grp|CrocRig:R_MiddleFinger_01_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[358]" ""
+		"CrocRigRN.placeHolderList[352]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_01_Ctrl_Grp|CrocRig:R_MiddleFinger_01_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[359]" ""
+		"CrocRigRN.placeHolderList[353]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_01_Ctrl_Grp|CrocRig:R_MiddleFinger_01_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[360]" ""
+		"CrocRigRN.placeHolderList[354]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_01_Ctrl_Grp|CrocRig:R_MiddleFinger_01_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[361]" ""
+		"CrocRigRN.placeHolderList[355]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_01_Ctrl_Grp|CrocRig:R_MiddleFinger_01_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[362]" ""
+		"CrocRigRN.placeHolderList[356]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_01_Ctrl_Grp|CrocRig:R_MiddleFinger_01_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[363]" ""
+		"CrocRigRN.placeHolderList[357]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_01_Ctrl_Grp|CrocRig:R_MiddleFinger_01_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[364]" ""
+		"CrocRigRN.placeHolderList[358]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_01_Ctrl_Grp|CrocRig:R_MiddleFinger_01_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[365]" ""
+		"CrocRigRN.placeHolderList[359]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_01_Ctrl_Grp|CrocRig:R_MiddleFinger_01_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[366]" ""
+		"CrocRigRN.placeHolderList[360]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_02_Ctrl_Grp|CrocRig:R_MiddleFinger_02_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[367]" ""
+		"CrocRigRN.placeHolderList[361]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_02_Ctrl_Grp|CrocRig:R_MiddleFinger_02_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[368]" ""
+		"CrocRigRN.placeHolderList[362]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_02_Ctrl_Grp|CrocRig:R_MiddleFinger_02_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[369]" ""
+		"CrocRigRN.placeHolderList[363]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_02_Ctrl_Grp|CrocRig:R_MiddleFinger_02_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[370]" ""
+		"CrocRigRN.placeHolderList[364]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_02_Ctrl_Grp|CrocRig:R_MiddleFinger_02_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[371]" ""
+		"CrocRigRN.placeHolderList[365]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_02_Ctrl_Grp|CrocRig:R_MiddleFinger_02_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[372]" ""
+		"CrocRigRN.placeHolderList[366]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_02_Ctrl_Grp|CrocRig:R_MiddleFinger_02_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[373]" ""
+		"CrocRigRN.placeHolderList[367]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_02_Ctrl_Grp|CrocRig:R_MiddleFinger_02_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[374]" ""
+		"CrocRigRN.placeHolderList[368]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_02_Ctrl_Grp|CrocRig:R_MiddleFinger_02_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[375]" ""
+		"CrocRigRN.placeHolderList[369]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_03_Ctrl_Grp|CrocRig:R_MiddleFinger_03_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[376]" ""
+		"CrocRigRN.placeHolderList[370]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_03_Ctrl_Grp|CrocRig:R_MiddleFinger_03_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[377]" ""
+		"CrocRigRN.placeHolderList[371]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_03_Ctrl_Grp|CrocRig:R_MiddleFinger_03_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[378]" ""
+		"CrocRigRN.placeHolderList[372]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_03_Ctrl_Grp|CrocRig:R_MiddleFinger_03_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[379]" ""
+		"CrocRigRN.placeHolderList[373]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_03_Ctrl_Grp|CrocRig:R_MiddleFinger_03_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[380]" ""
+		"CrocRigRN.placeHolderList[374]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_03_Ctrl_Grp|CrocRig:R_MiddleFinger_03_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[381]" ""
+		"CrocRigRN.placeHolderList[375]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_03_Ctrl_Grp|CrocRig:R_MiddleFinger_03_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[382]" ""
+		"CrocRigRN.placeHolderList[376]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_03_Ctrl_Grp|CrocRig:R_MiddleFinger_03_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[383]" ""
+		"CrocRigRN.placeHolderList[377]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:MiddleFinger_Ctrls|CrocRig:R_MiddleFinger_03_Ctrl_Grp|CrocRig:R_MiddleFinger_03_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[384]" ""
+		"CrocRigRN.placeHolderList[378]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_01_Ctrl_Grp|CrocRig:R_RingFinger_01_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[385]" ""
+		"CrocRigRN.placeHolderList[379]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_01_Ctrl_Grp|CrocRig:R_RingFinger_01_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[386]" ""
+		"CrocRigRN.placeHolderList[380]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_01_Ctrl_Grp|CrocRig:R_RingFinger_01_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[387]" ""
+		"CrocRigRN.placeHolderList[381]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_01_Ctrl_Grp|CrocRig:R_RingFinger_01_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[388]" ""
+		"CrocRigRN.placeHolderList[382]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_01_Ctrl_Grp|CrocRig:R_RingFinger_01_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[389]" ""
+		"CrocRigRN.placeHolderList[383]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_01_Ctrl_Grp|CrocRig:R_RingFinger_01_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[390]" ""
+		"CrocRigRN.placeHolderList[384]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_01_Ctrl_Grp|CrocRig:R_RingFinger_01_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[391]" ""
+		"CrocRigRN.placeHolderList[385]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_01_Ctrl_Grp|CrocRig:R_RingFinger_01_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[392]" ""
+		"CrocRigRN.placeHolderList[386]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_01_Ctrl_Grp|CrocRig:R_RingFinger_01_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[393]" ""
+		"CrocRigRN.placeHolderList[387]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_02_Ctrl_Grp|CrocRig:R_RingFinger_02_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[394]" ""
+		"CrocRigRN.placeHolderList[388]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_02_Ctrl_Grp|CrocRig:R_RingFinger_02_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[395]" ""
+		"CrocRigRN.placeHolderList[389]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_02_Ctrl_Grp|CrocRig:R_RingFinger_02_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[396]" ""
+		"CrocRigRN.placeHolderList[390]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_02_Ctrl_Grp|CrocRig:R_RingFinger_02_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[397]" ""
+		"CrocRigRN.placeHolderList[391]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_02_Ctrl_Grp|CrocRig:R_RingFinger_02_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[398]" ""
+		"CrocRigRN.placeHolderList[392]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_02_Ctrl_Grp|CrocRig:R_RingFinger_02_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[399]" ""
+		"CrocRigRN.placeHolderList[393]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_02_Ctrl_Grp|CrocRig:R_RingFinger_02_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[400]" ""
+		"CrocRigRN.placeHolderList[394]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_02_Ctrl_Grp|CrocRig:R_RingFinger_02_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[401]" ""
+		"CrocRigRN.placeHolderList[395]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_02_Ctrl_Grp|CrocRig:R_RingFinger_02_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[402]" ""
+		"CrocRigRN.placeHolderList[396]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_03_Ctrl_Grp|CrocRig:R_RingFinger_03_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[403]" ""
+		"CrocRigRN.placeHolderList[397]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_03_Ctrl_Grp|CrocRig:R_RingFinger_03_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[404]" ""
+		"CrocRigRN.placeHolderList[398]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_03_Ctrl_Grp|CrocRig:R_RingFinger_03_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[405]" ""
+		"CrocRigRN.placeHolderList[399]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_03_Ctrl_Grp|CrocRig:R_RingFinger_03_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[406]" ""
+		"CrocRigRN.placeHolderList[400]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_03_Ctrl_Grp|CrocRig:R_RingFinger_03_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[407]" ""
+		"CrocRigRN.placeHolderList[401]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_03_Ctrl_Grp|CrocRig:R_RingFinger_03_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[408]" ""
+		"CrocRigRN.placeHolderList[402]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_03_Ctrl_Grp|CrocRig:R_RingFinger_03_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[409]" ""
+		"CrocRigRN.placeHolderList[403]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_03_Ctrl_Grp|CrocRig:R_RingFinger_03_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[410]" ""
+		"CrocRigRN.placeHolderList[404]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:RingFinger_Ctrls|CrocRig:R_RingFinger_03_Ctrl_Grp|CrocRig:R_RingFinger_03_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[411]" ""
+		"CrocRigRN.placeHolderList[405]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_Base_Ctrl_Grp|CrocRig:R_Thumb_Base_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[412]" ""
+		"CrocRigRN.placeHolderList[406]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_Base_Ctrl_Grp|CrocRig:R_Thumb_Base_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[413]" ""
+		"CrocRigRN.placeHolderList[407]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_Base_Ctrl_Grp|CrocRig:R_Thumb_Base_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[414]" ""
+		"CrocRigRN.placeHolderList[408]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_Base_Ctrl_Grp|CrocRig:R_Thumb_Base_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[415]" ""
+		"CrocRigRN.placeHolderList[409]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_Base_Ctrl_Grp|CrocRig:R_Thumb_Base_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[416]" ""
+		"CrocRigRN.placeHolderList[410]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_Base_Ctrl_Grp|CrocRig:R_Thumb_Base_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[417]" ""
+		"CrocRigRN.placeHolderList[411]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_Base_Ctrl_Grp|CrocRig:R_Thumb_Base_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[418]" ""
+		"CrocRigRN.placeHolderList[412]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_Base_Ctrl_Grp|CrocRig:R_Thumb_Base_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[419]" ""
+		"CrocRigRN.placeHolderList[413]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_Base_Ctrl_Grp|CrocRig:R_Thumb_Base_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[420]" ""
+		"CrocRigRN.placeHolderList[414]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_01_Ctrl_Grp|CrocRig:R_Thumb_01_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[421]" ""
+		"CrocRigRN.placeHolderList[415]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_01_Ctrl_Grp|CrocRig:R_Thumb_01_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[422]" ""
+		"CrocRigRN.placeHolderList[416]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_01_Ctrl_Grp|CrocRig:R_Thumb_01_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[423]" ""
+		"CrocRigRN.placeHolderList[417]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_01_Ctrl_Grp|CrocRig:R_Thumb_01_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[424]" ""
+		"CrocRigRN.placeHolderList[418]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_01_Ctrl_Grp|CrocRig:R_Thumb_01_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[425]" ""
+		"CrocRigRN.placeHolderList[419]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_01_Ctrl_Grp|CrocRig:R_Thumb_01_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[426]" ""
+		"CrocRigRN.placeHolderList[420]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_01_Ctrl_Grp|CrocRig:R_Thumb_01_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[427]" ""
+		"CrocRigRN.placeHolderList[421]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_01_Ctrl_Grp|CrocRig:R_Thumb_01_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[428]" ""
+		"CrocRigRN.placeHolderList[422]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_01_Ctrl_Grp|CrocRig:R_Thumb_01_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[429]" ""
+		"CrocRigRN.placeHolderList[423]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_02_Ctrl_Grp|CrocRig:R_Thumb_02_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[430]" ""
+		"CrocRigRN.placeHolderList[424]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_02_Ctrl_Grp|CrocRig:R_Thumb_02_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[431]" ""
+		"CrocRigRN.placeHolderList[425]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_02_Ctrl_Grp|CrocRig:R_Thumb_02_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[432]" ""
+		"CrocRigRN.placeHolderList[426]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_02_Ctrl_Grp|CrocRig:R_Thumb_02_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[433]" ""
+		"CrocRigRN.placeHolderList[427]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_02_Ctrl_Grp|CrocRig:R_Thumb_02_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[434]" ""
+		"CrocRigRN.placeHolderList[428]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_02_Ctrl_Grp|CrocRig:R_Thumb_02_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[435]" ""
+		"CrocRigRN.placeHolderList[429]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_02_Ctrl_Grp|CrocRig:R_Thumb_02_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[436]" ""
+		"CrocRigRN.placeHolderList[430]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_02_Ctrl_Grp|CrocRig:R_Thumb_02_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[437]" ""
+		"CrocRigRN.placeHolderList[431]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Hand_Ctrls|CrocRig:Thumb_Ctrls|CrocRig:R_Thumb_02_Ctrl_Grp|CrocRig:R_Thumb_02_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[438]" ""
+		"CrocRigRN.placeHolderList[432]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Clav_Ctrl_Grp|CrocRig:L_Clav_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[439]" ""
+		"CrocRigRN.placeHolderList[433]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Clav_Ctrl_Grp|CrocRig:L_Clav_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[440]" ""
+		"CrocRigRN.placeHolderList[434]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Clav_Ctrl_Grp|CrocRig:L_Clav_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[441]" ""
+		"CrocRigRN.placeHolderList[435]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Clav_Ctrl_Grp|CrocRig:L_Clav_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[442]" ""
+		"CrocRigRN.placeHolderList[436]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Clav_Ctrl_Grp|CrocRig:L_Clav_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[443]" ""
+		"CrocRigRN.placeHolderList[437]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Clav_Ctrl_Grp|CrocRig:L_Clav_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[444]" ""
+		"CrocRigRN.placeHolderList[438]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Clav_Ctrl_Grp|CrocRig:L_Clav_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[445]" ""
+		"CrocRigRN.placeHolderList[439]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Clav_Ctrl_Grp|CrocRig:L_Clav_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[446]" ""
+		"CrocRigRN.placeHolderList[440]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:L_Clav_Ctrl_Grp|CrocRig:L_Clav_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[447]" ""
+		"CrocRigRN.placeHolderList[441]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Clav_Ctrl_Grp|CrocRig:R_Clav_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[448]" ""
+		"CrocRigRN.placeHolderList[442]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Clav_Ctrl_Grp|CrocRig:R_Clav_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[449]" ""
+		"CrocRigRN.placeHolderList[443]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Clav_Ctrl_Grp|CrocRig:R_Clav_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[450]" ""
+		"CrocRigRN.placeHolderList[444]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Clav_Ctrl_Grp|CrocRig:R_Clav_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[451]" ""
+		"CrocRigRN.placeHolderList[445]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Clav_Ctrl_Grp|CrocRig:R_Clav_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[452]" ""
+		"CrocRigRN.placeHolderList[446]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Clav_Ctrl_Grp|CrocRig:R_Clav_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[453]" ""
+		"CrocRigRN.placeHolderList[447]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Clav_Ctrl_Grp|CrocRig:R_Clav_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[454]" ""
+		"CrocRigRN.placeHolderList[448]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Clav_Ctrl_Grp|CrocRig:R_Clav_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[455]" ""
+		"CrocRigRN.placeHolderList[449]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:R_Clav_Ctrl_Grp|CrocRig:R_Clav_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[456]" ""
+		"CrocRigRN.placeHolderList[450]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Neck_Ctrl_Grp|CrocRig:Neck_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[457]" ""
+		"CrocRigRN.placeHolderList[451]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Neck_Ctrl_Grp|CrocRig:Neck_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[458]" ""
+		"CrocRigRN.placeHolderList[452]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Neck_Ctrl_Grp|CrocRig:Neck_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[459]" ""
+		"CrocRigRN.placeHolderList[453]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Neck_Ctrl_Grp|CrocRig:Neck_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[460]" ""
+		"CrocRigRN.placeHolderList[454]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Neck_Ctrl_Grp|CrocRig:Neck_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[461]" ""
+		"CrocRigRN.placeHolderList[455]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Neck_Ctrl_Grp|CrocRig:Neck_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[462]" ""
+		"CrocRigRN.placeHolderList[456]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Neck_Ctrl_Grp|CrocRig:Neck_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[463]" ""
+		"CrocRigRN.placeHolderList[457]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Neck_Ctrl_Grp|CrocRig:Neck_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[464]" ""
+		"CrocRigRN.placeHolderList[458]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Neck_Ctrl_Grp|CrocRig:Neck_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[465]" ""
+		"CrocRigRN.placeHolderList[459]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Head_Ctrl_Grp|CrocRig:Head_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[466]" ""
+		"CrocRigRN.placeHolderList[460]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Head_Ctrl_Grp|CrocRig:Head_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[467]" ""
+		"CrocRigRN.placeHolderList[461]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Head_Ctrl_Grp|CrocRig:Head_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[468]" ""
+		"CrocRigRN.placeHolderList[462]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Head_Ctrl_Grp|CrocRig:Head_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[469]" ""
+		"CrocRigRN.placeHolderList[463]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Head_Ctrl_Grp|CrocRig:Head_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[470]" ""
+		"CrocRigRN.placeHolderList[464]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Head_Ctrl_Grp|CrocRig:Head_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[471]" ""
+		"CrocRigRN.placeHolderList[465]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Jaw_Ctrl_Grp|CrocRig:Jaw_PLate_Ctrl_Offset|CrocRig:Jaw_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[472]" ""
+		"CrocRigRN.placeHolderList[466]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Jaw_Ctrl_Grp|CrocRig:Jaw_PLate_Ctrl_Offset|CrocRig:Jaw_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[473]" ""
+		"CrocRigRN.placeHolderList[467]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Jaw_Ctrl_Grp|CrocRig:Jaw_PLate_Ctrl_Offset|CrocRig:Jaw_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[474]" ""
+		"CrocRigRN.placeHolderList[468]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Jaw_Ctrl_Grp|CrocRig:Jaw_PLate_Ctrl_Offset|CrocRig:Jaw_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[475]" ""
+		"CrocRigRN.placeHolderList[469]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Jaw_Ctrl_Grp|CrocRig:Jaw_PLate_Ctrl_Offset|CrocRig:Jaw_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[476]" ""
+		"CrocRigRN.placeHolderList[470]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Jaw_Ctrl_Grp|CrocRig:Jaw_PLate_Ctrl_Offset|CrocRig:Jaw_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[477]" ""
+		"CrocRigRN.placeHolderList[471]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Jaw_Ctrl_Grp|CrocRig:Jaw_PLate_Ctrl_Offset|CrocRig:Jaw_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[478]" ""
+		"CrocRigRN.placeHolderList[472]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Jaw_Ctrl_Grp|CrocRig:Jaw_PLate_Ctrl_Offset|CrocRig:Jaw_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[479]" ""
+		"CrocRigRN.placeHolderList[473]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Jaw_Ctrl_Grp|CrocRig:Jaw_PLate_Ctrl_Offset|CrocRig:Jaw_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[480]" ""
+		"CrocRigRN.placeHolderList[474]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Eye_Target_Main_Ctrl_Grp|CrocRig:Eye_Target_Main_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[481]" ""
+		"CrocRigRN.placeHolderList[475]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Eye_Target_Main_Ctrl_Grp|CrocRig:Eye_Target_Main_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[482]" ""
+		"CrocRigRN.placeHolderList[476]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Eye_Target_Main_Ctrl_Grp|CrocRig:Eye_Target_Main_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[483]" ""
+		"CrocRigRN.placeHolderList[477]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Eye_Target_Main_Ctrl_Grp|CrocRig:Eye_Target_Main_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[484]" ""
+		"CrocRigRN.placeHolderList[478]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Eye_Target_Main_Ctrl_Grp|CrocRig:Eye_Target_Main_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[485]" ""
+		"CrocRigRN.placeHolderList[479]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Eye_Target_Main_Ctrl_Grp|CrocRig:Eye_Target_Main_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[486]" ""
+		"CrocRigRN.placeHolderList[480]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Eye_Target_Main_Ctrl_Grp|CrocRig:Eye_Target_Main_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[487]" ""
+		"CrocRigRN.placeHolderList[481]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Eye_Target_Main_Ctrl_Grp|CrocRig:Eye_Target_Main_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[488]" ""
+		"CrocRigRN.placeHolderList[482]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Eye_Target_Main_Ctrl_Grp|CrocRig:Eye_Target_Main_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[489]" ""
+		"CrocRigRN.placeHolderList[483]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:L_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:L_Eye_Aim_Ctrl_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[490]" ""
+		"CrocRigRN.placeHolderList[484]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:L_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:L_Eye_Aim_Ctrl_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[491]" ""
+		"CrocRigRN.placeHolderList[485]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:L_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:L_Eye_Aim_Ctrl_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[492]" ""
+		"CrocRigRN.placeHolderList[486]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:L_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:L_Eye_Aim_Ctrl_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[493]" ""
+		"CrocRigRN.placeHolderList[487]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:L_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:L_Eye_Aim_Ctrl_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[494]" ""
+		"CrocRigRN.placeHolderList[488]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:L_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:L_Eye_Aim_Ctrl_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[495]" ""
+		"CrocRigRN.placeHolderList[489]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:L_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:L_Eye_Aim_Ctrl_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[496]" ""
+		"CrocRigRN.placeHolderList[490]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:L_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:L_Eye_Aim_Ctrl_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[497]" ""
+		"CrocRigRN.placeHolderList[491]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:L_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:L_Eye_Aim_Ctrl_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[498]" ""
+		"CrocRigRN.placeHolderList[492]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:R_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:R_Eye_Aim_Ctrl_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[499]" ""
+		"CrocRigRN.placeHolderList[493]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:R_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:R_Eye_Aim_Ctrl_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[500]" ""
+		"CrocRigRN.placeHolderList[494]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:R_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:R_Eye_Aim_Ctrl_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[501]" ""
+		"CrocRigRN.placeHolderList[495]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:R_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:R_Eye_Aim_Ctrl_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[502]" ""
+		"CrocRigRN.placeHolderList[496]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:R_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:R_Eye_Aim_Ctrl_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[503]" ""
+		"CrocRigRN.placeHolderList[497]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:R_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:R_Eye_Aim_Ctrl_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[504]" ""
+		"CrocRigRN.placeHolderList[498]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:R_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:R_Eye_Aim_Ctrl_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[505]" ""
+		"CrocRigRN.placeHolderList[499]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:R_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:R_Eye_Aim_Ctrl_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[506]" ""
+		"CrocRigRN.placeHolderList[500]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:R_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:R_Eye_Aim_Ctrl_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[507]" ""
+		"CrocRigRN.placeHolderList[501]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_1_Ctrl_Grp|CrocRig:Tongue_Control_Joint_1_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[508]" ""
+		"CrocRigRN.placeHolderList[502]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_1_Ctrl_Grp|CrocRig:Tongue_Control_Joint_1_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[509]" ""
+		"CrocRigRN.placeHolderList[503]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_1_Ctrl_Grp|CrocRig:Tongue_Control_Joint_1_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[510]" ""
+		"CrocRigRN.placeHolderList[504]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_1_Ctrl_Grp|CrocRig:Tongue_Control_Joint_1_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[511]" ""
+		"CrocRigRN.placeHolderList[505]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_1_Ctrl_Grp|CrocRig:Tongue_Control_Joint_1_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[512]" ""
+		"CrocRigRN.placeHolderList[506]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_1_Ctrl_Grp|CrocRig:Tongue_Control_Joint_1_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[513]" ""
+		"CrocRigRN.placeHolderList[507]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_1_Ctrl_Grp|CrocRig:Tongue_Control_Joint_1_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[514]" ""
+		"CrocRigRN.placeHolderList[508]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_1_Ctrl_Grp|CrocRig:Tongue_Control_Joint_1_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[515]" ""
+		"CrocRigRN.placeHolderList[509]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_1_Ctrl_Grp|CrocRig:Tongue_Control_Joint_1_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[516]" ""
+		"CrocRigRN.placeHolderList[510]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_2_Ctrl_Grp|CrocRig:Tongue_Control_Joint_2_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[517]" ""
+		"CrocRigRN.placeHolderList[511]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_2_Ctrl_Grp|CrocRig:Tongue_Control_Joint_2_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[518]" ""
+		"CrocRigRN.placeHolderList[512]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_2_Ctrl_Grp|CrocRig:Tongue_Control_Joint_2_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[519]" ""
+		"CrocRigRN.placeHolderList[513]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_2_Ctrl_Grp|CrocRig:Tongue_Control_Joint_2_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[520]" ""
+		"CrocRigRN.placeHolderList[514]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_2_Ctrl_Grp|CrocRig:Tongue_Control_Joint_2_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[521]" ""
+		"CrocRigRN.placeHolderList[515]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_2_Ctrl_Grp|CrocRig:Tongue_Control_Joint_2_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[522]" ""
+		"CrocRigRN.placeHolderList[516]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_2_Ctrl_Grp|CrocRig:Tongue_Control_Joint_2_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[523]" ""
+		"CrocRigRN.placeHolderList[517]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_2_Ctrl_Grp|CrocRig:Tongue_Control_Joint_2_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[524]" ""
+		"CrocRigRN.placeHolderList[518]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Tongue_Controls|CrocRig:Tongue_Control_Joint_2_Ctrl_Grp|CrocRig:Tongue_Control_Joint_2_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[525]" ""
+		"CrocRigRN.placeHolderList[519]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Transform_Ctrl_Grp|CrocRig:Transform_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[526]" ""
+		"CrocRigRN.placeHolderList[520]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Transform_Ctrl_Grp|CrocRig:Transform_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[527]" ""
+		"CrocRigRN.placeHolderList[521]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Transform_Ctrl_Grp|CrocRig:Transform_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[528]" ""
+		"CrocRigRN.placeHolderList[522]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Transform_Ctrl_Grp|CrocRig:Transform_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[529]" ""
+		"CrocRigRN.placeHolderList[523]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Transform_Ctrl_Grp|CrocRig:Transform_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[530]" ""
+		"CrocRigRN.placeHolderList[524]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Transform_Ctrl_Grp|CrocRig:Transform_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[531]" ""
+		"CrocRigRN.placeHolderList[525]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Transform_Ctrl_Grp|CrocRig:Transform_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[532]" ""
+		"CrocRigRN.placeHolderList[526]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Transform_Ctrl_Grp|CrocRig:Transform_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[533]" ""
+		"CrocRigRN.placeHolderList[527]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:CoG_Ctrl_Grp|CrocRig:CoG_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[534]" ""
+		"CrocRigRN.placeHolderList[528]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:CoG_Ctrl_Grp|CrocRig:CoG_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[535]" ""
+		"CrocRigRN.placeHolderList[529]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:CoG_Ctrl_Grp|CrocRig:CoG_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[536]" ""
+		"CrocRigRN.placeHolderList[530]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:CoG_Ctrl_Grp|CrocRig:CoG_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[537]" ""
+		"CrocRigRN.placeHolderList[531]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:CoG_Ctrl_Grp|CrocRig:CoG_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[538]" ""
+		"CrocRigRN.placeHolderList[532]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:CoG_Ctrl_Grp|CrocRig:CoG_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[539]" ""
-		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:CoG_Ctrl_Grp|CrocRig:CoG_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[540]" ""
-		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:CoG_Ctrl_Grp|CrocRig:CoG_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[541]" ""
-		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:CoG_Ctrl_Grp|CrocRig:CoG_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[542]" ""
+		"CrocRigRN.placeHolderList[533]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_12_Jnt_FK_Ctrl_Grp|CrocRig:Tail_12_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_12_Auto_FK_Grp|CrocRig:Tail_12_Jnt_FK_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[543]" ""
+		"CrocRigRN.placeHolderList[534]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_12_Jnt_FK_Ctrl_Grp|CrocRig:Tail_12_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_12_Auto_FK_Grp|CrocRig:Tail_12_Jnt_FK_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[544]" ""
+		"CrocRigRN.placeHolderList[535]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_12_Jnt_FK_Ctrl_Grp|CrocRig:Tail_12_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_12_Auto_FK_Grp|CrocRig:Tail_12_Jnt_FK_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[545]" ""
+		"CrocRigRN.placeHolderList[536]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_12_Jnt_FK_Ctrl_Grp|CrocRig:Tail_12_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_12_Auto_FK_Grp|CrocRig:Tail_12_Jnt_FK_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[546]" ""
+		"CrocRigRN.placeHolderList[537]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_12_Jnt_FK_Ctrl_Grp|CrocRig:Tail_12_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_12_Auto_FK_Grp|CrocRig:Tail_12_Jnt_FK_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[547]" ""
+		"CrocRigRN.placeHolderList[538]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_12_Jnt_FK_Ctrl_Grp|CrocRig:Tail_12_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_12_Auto_FK_Grp|CrocRig:Tail_12_Jnt_FK_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[548]" ""
+		"CrocRigRN.placeHolderList[539]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_12_Jnt_FK_Ctrl_Grp|CrocRig:Tail_12_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_12_Auto_FK_Grp|CrocRig:Tail_12_Jnt_FK_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[549]" ""
+		"CrocRigRN.placeHolderList[540]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_12_Jnt_FK_Ctrl_Grp|CrocRig:Tail_12_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_12_Auto_FK_Grp|CrocRig:Tail_12_Jnt_FK_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[550]" ""
+		"CrocRigRN.placeHolderList[541]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_12_Jnt_FK_Ctrl_Grp|CrocRig:Tail_12_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_12_Auto_FK_Grp|CrocRig:Tail_12_Jnt_FK_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[551]" ""
+		"CrocRigRN.placeHolderList[542]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_11_Jnt_FK_Ctrl_Grp|CrocRig:Tail_11_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_11_Auto_FK_Grp|CrocRig:Tail_11_Jnt_FK_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[552]" ""
+		"CrocRigRN.placeHolderList[543]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_11_Jnt_FK_Ctrl_Grp|CrocRig:Tail_11_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_11_Auto_FK_Grp|CrocRig:Tail_11_Jnt_FK_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[553]" ""
+		"CrocRigRN.placeHolderList[544]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_11_Jnt_FK_Ctrl_Grp|CrocRig:Tail_11_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_11_Auto_FK_Grp|CrocRig:Tail_11_Jnt_FK_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[554]" ""
+		"CrocRigRN.placeHolderList[545]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_11_Jnt_FK_Ctrl_Grp|CrocRig:Tail_11_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_11_Auto_FK_Grp|CrocRig:Tail_11_Jnt_FK_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[555]" ""
+		"CrocRigRN.placeHolderList[546]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_11_Jnt_FK_Ctrl_Grp|CrocRig:Tail_11_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_11_Auto_FK_Grp|CrocRig:Tail_11_Jnt_FK_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[556]" ""
+		"CrocRigRN.placeHolderList[547]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_11_Jnt_FK_Ctrl_Grp|CrocRig:Tail_11_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_11_Auto_FK_Grp|CrocRig:Tail_11_Jnt_FK_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[557]" ""
+		"CrocRigRN.placeHolderList[548]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_11_Jnt_FK_Ctrl_Grp|CrocRig:Tail_11_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_11_Auto_FK_Grp|CrocRig:Tail_11_Jnt_FK_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[558]" ""
+		"CrocRigRN.placeHolderList[549]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_11_Jnt_FK_Ctrl_Grp|CrocRig:Tail_11_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_11_Auto_FK_Grp|CrocRig:Tail_11_Jnt_FK_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[559]" ""
+		"CrocRigRN.placeHolderList[550]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_11_Jnt_FK_Ctrl_Grp|CrocRig:Tail_11_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_11_Auto_FK_Grp|CrocRig:Tail_11_Jnt_FK_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[560]" ""
+		"CrocRigRN.placeHolderList[551]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_10_Jnt_FK_Ctrl_Grp|CrocRig:Tail_10_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_10_Auto_FK_Grp|CrocRig:Tail_10_Jnt_FK_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[561]" ""
+		"CrocRigRN.placeHolderList[552]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_10_Jnt_FK_Ctrl_Grp|CrocRig:Tail_10_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_10_Auto_FK_Grp|CrocRig:Tail_10_Jnt_FK_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[562]" ""
+		"CrocRigRN.placeHolderList[553]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_10_Jnt_FK_Ctrl_Grp|CrocRig:Tail_10_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_10_Auto_FK_Grp|CrocRig:Tail_10_Jnt_FK_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[563]" ""
+		"CrocRigRN.placeHolderList[554]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_10_Jnt_FK_Ctrl_Grp|CrocRig:Tail_10_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_10_Auto_FK_Grp|CrocRig:Tail_10_Jnt_FK_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[564]" ""
+		"CrocRigRN.placeHolderList[555]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_10_Jnt_FK_Ctrl_Grp|CrocRig:Tail_10_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_10_Auto_FK_Grp|CrocRig:Tail_10_Jnt_FK_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[565]" ""
+		"CrocRigRN.placeHolderList[556]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_10_Jnt_FK_Ctrl_Grp|CrocRig:Tail_10_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_10_Auto_FK_Grp|CrocRig:Tail_10_Jnt_FK_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[566]" ""
+		"CrocRigRN.placeHolderList[557]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_10_Jnt_FK_Ctrl_Grp|CrocRig:Tail_10_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_10_Auto_FK_Grp|CrocRig:Tail_10_Jnt_FK_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[567]" ""
+		"CrocRigRN.placeHolderList[558]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_10_Jnt_FK_Ctrl_Grp|CrocRig:Tail_10_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_10_Auto_FK_Grp|CrocRig:Tail_10_Jnt_FK_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[568]" ""
+		"CrocRigRN.placeHolderList[559]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_10_Jnt_FK_Ctrl_Grp|CrocRig:Tail_10_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_10_Auto_FK_Grp|CrocRig:Tail_10_Jnt_FK_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[569]" ""
+		"CrocRigRN.placeHolderList[560]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_09_Jnt_FK_Ctrl_Grp|CrocRig:Tail_09_Auto_FK_Grp_Major|CrocRig:Tail_09_Jnt_FK_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[570]" ""
+		"CrocRigRN.placeHolderList[561]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_09_Jnt_FK_Ctrl_Grp|CrocRig:Tail_09_Auto_FK_Grp_Major|CrocRig:Tail_09_Jnt_FK_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[571]" ""
+		"CrocRigRN.placeHolderList[562]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_09_Jnt_FK_Ctrl_Grp|CrocRig:Tail_09_Auto_FK_Grp_Major|CrocRig:Tail_09_Jnt_FK_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[572]" ""
+		"CrocRigRN.placeHolderList[563]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_09_Jnt_FK_Ctrl_Grp|CrocRig:Tail_09_Auto_FK_Grp_Major|CrocRig:Tail_09_Jnt_FK_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[573]" ""
+		"CrocRigRN.placeHolderList[564]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_09_Jnt_FK_Ctrl_Grp|CrocRig:Tail_09_Auto_FK_Grp_Major|CrocRig:Tail_09_Jnt_FK_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[574]" ""
+		"CrocRigRN.placeHolderList[565]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_09_Jnt_FK_Ctrl_Grp|CrocRig:Tail_09_Auto_FK_Grp_Major|CrocRig:Tail_09_Jnt_FK_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[575]" ""
+		"CrocRigRN.placeHolderList[566]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_09_Jnt_FK_Ctrl_Grp|CrocRig:Tail_09_Auto_FK_Grp_Major|CrocRig:Tail_09_Jnt_FK_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[576]" ""
+		"CrocRigRN.placeHolderList[567]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_09_Jnt_FK_Ctrl_Grp|CrocRig:Tail_09_Auto_FK_Grp_Major|CrocRig:Tail_09_Jnt_FK_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[577]" ""
+		"CrocRigRN.placeHolderList[568]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_09_Jnt_FK_Ctrl_Grp|CrocRig:Tail_09_Auto_FK_Grp_Major|CrocRig:Tail_09_Jnt_FK_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[578]" ""
+		"CrocRigRN.placeHolderList[569]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_08_Jnt_FK_Ctrl_Grp|CrocRig:Tail_08_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_08_Auto_FK_Grp|CrocRig:Tail_08_Jnt_FK_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[579]" ""
+		"CrocRigRN.placeHolderList[570]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_08_Jnt_FK_Ctrl_Grp|CrocRig:Tail_08_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_08_Auto_FK_Grp|CrocRig:Tail_08_Jnt_FK_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[580]" ""
+		"CrocRigRN.placeHolderList[571]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_08_Jnt_FK_Ctrl_Grp|CrocRig:Tail_08_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_08_Auto_FK_Grp|CrocRig:Tail_08_Jnt_FK_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[581]" ""
+		"CrocRigRN.placeHolderList[572]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_08_Jnt_FK_Ctrl_Grp|CrocRig:Tail_08_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_08_Auto_FK_Grp|CrocRig:Tail_08_Jnt_FK_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[582]" ""
+		"CrocRigRN.placeHolderList[573]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_08_Jnt_FK_Ctrl_Grp|CrocRig:Tail_08_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_08_Auto_FK_Grp|CrocRig:Tail_08_Jnt_FK_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[583]" ""
+		"CrocRigRN.placeHolderList[574]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_08_Jnt_FK_Ctrl_Grp|CrocRig:Tail_08_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_08_Auto_FK_Grp|CrocRig:Tail_08_Jnt_FK_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[584]" ""
+		"CrocRigRN.placeHolderList[575]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_08_Jnt_FK_Ctrl_Grp|CrocRig:Tail_08_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_08_Auto_FK_Grp|CrocRig:Tail_08_Jnt_FK_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[585]" ""
+		"CrocRigRN.placeHolderList[576]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_08_Jnt_FK_Ctrl_Grp|CrocRig:Tail_08_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_08_Auto_FK_Grp|CrocRig:Tail_08_Jnt_FK_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[586]" ""
+		"CrocRigRN.placeHolderList[577]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_08_Jnt_FK_Ctrl_Grp|CrocRig:Tail_08_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_08_Auto_FK_Grp|CrocRig:Tail_08_Jnt_FK_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[587]" ""
+		"CrocRigRN.placeHolderList[578]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_07_Jnt_FK_Ctrl_Grp|CrocRig:Tail_07_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_07_Auto_FK_Grp|CrocRig:Tail_07_Jnt_FK_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[588]" ""
+		"CrocRigRN.placeHolderList[579]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_07_Jnt_FK_Ctrl_Grp|CrocRig:Tail_07_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_07_Auto_FK_Grp|CrocRig:Tail_07_Jnt_FK_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[589]" ""
+		"CrocRigRN.placeHolderList[580]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_07_Jnt_FK_Ctrl_Grp|CrocRig:Tail_07_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_07_Auto_FK_Grp|CrocRig:Tail_07_Jnt_FK_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[590]" ""
+		"CrocRigRN.placeHolderList[581]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_07_Jnt_FK_Ctrl_Grp|CrocRig:Tail_07_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_07_Auto_FK_Grp|CrocRig:Tail_07_Jnt_FK_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[591]" ""
+		"CrocRigRN.placeHolderList[582]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_07_Jnt_FK_Ctrl_Grp|CrocRig:Tail_07_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_07_Auto_FK_Grp|CrocRig:Tail_07_Jnt_FK_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[592]" ""
+		"CrocRigRN.placeHolderList[583]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_07_Jnt_FK_Ctrl_Grp|CrocRig:Tail_07_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_07_Auto_FK_Grp|CrocRig:Tail_07_Jnt_FK_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[593]" ""
+		"CrocRigRN.placeHolderList[584]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_07_Jnt_FK_Ctrl_Grp|CrocRig:Tail_07_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_07_Auto_FK_Grp|CrocRig:Tail_07_Jnt_FK_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[594]" ""
+		"CrocRigRN.placeHolderList[585]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_07_Jnt_FK_Ctrl_Grp|CrocRig:Tail_07_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_07_Auto_FK_Grp|CrocRig:Tail_07_Jnt_FK_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[595]" ""
+		"CrocRigRN.placeHolderList[586]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_07_Jnt_FK_Ctrl_Grp|CrocRig:Tail_07_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_07_Auto_FK_Grp|CrocRig:Tail_07_Jnt_FK_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[596]" ""
+		"CrocRigRN.placeHolderList[587]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_06_Jnt_FK_Ctrl_Grp|CrocRig:Tail_06_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_06_Auto_FK_Grp|CrocRig:Tail_06_Jnt_FK_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[597]" ""
+		"CrocRigRN.placeHolderList[588]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_06_Jnt_FK_Ctrl_Grp|CrocRig:Tail_06_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_06_Auto_FK_Grp|CrocRig:Tail_06_Jnt_FK_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[598]" ""
+		"CrocRigRN.placeHolderList[589]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_06_Jnt_FK_Ctrl_Grp|CrocRig:Tail_06_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_06_Auto_FK_Grp|CrocRig:Tail_06_Jnt_FK_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[599]" ""
+		"CrocRigRN.placeHolderList[590]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_06_Jnt_FK_Ctrl_Grp|CrocRig:Tail_06_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_06_Auto_FK_Grp|CrocRig:Tail_06_Jnt_FK_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[600]" ""
+		"CrocRigRN.placeHolderList[591]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_06_Jnt_FK_Ctrl_Grp|CrocRig:Tail_06_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_06_Auto_FK_Grp|CrocRig:Tail_06_Jnt_FK_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[601]" ""
+		"CrocRigRN.placeHolderList[592]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_06_Jnt_FK_Ctrl_Grp|CrocRig:Tail_06_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_06_Auto_FK_Grp|CrocRig:Tail_06_Jnt_FK_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[602]" ""
+		"CrocRigRN.placeHolderList[593]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_06_Jnt_FK_Ctrl_Grp|CrocRig:Tail_06_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_06_Auto_FK_Grp|CrocRig:Tail_06_Jnt_FK_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[603]" ""
+		"CrocRigRN.placeHolderList[594]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_06_Jnt_FK_Ctrl_Grp|CrocRig:Tail_06_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_06_Auto_FK_Grp|CrocRig:Tail_06_Jnt_FK_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[604]" ""
+		"CrocRigRN.placeHolderList[595]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_06_Jnt_FK_Ctrl_Grp|CrocRig:Tail_06_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_06_Auto_FK_Grp|CrocRig:Tail_06_Jnt_FK_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[605]" ""
+		"CrocRigRN.placeHolderList[596]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_05_Jnt_FK_Ctrl_Grp|CrocRig:Tail_05_Auto_FK_Grp_Major|CrocRig:Tail_05_Jnt_FK_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[606]" ""
+		"CrocRigRN.placeHolderList[597]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_05_Jnt_FK_Ctrl_Grp|CrocRig:Tail_05_Auto_FK_Grp_Major|CrocRig:Tail_05_Jnt_FK_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[607]" ""
+		"CrocRigRN.placeHolderList[598]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_05_Jnt_FK_Ctrl_Grp|CrocRig:Tail_05_Auto_FK_Grp_Major|CrocRig:Tail_05_Jnt_FK_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[608]" ""
+		"CrocRigRN.placeHolderList[599]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_05_Jnt_FK_Ctrl_Grp|CrocRig:Tail_05_Auto_FK_Grp_Major|CrocRig:Tail_05_Jnt_FK_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[609]" ""
+		"CrocRigRN.placeHolderList[600]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_05_Jnt_FK_Ctrl_Grp|CrocRig:Tail_05_Auto_FK_Grp_Major|CrocRig:Tail_05_Jnt_FK_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[610]" ""
+		"CrocRigRN.placeHolderList[601]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_05_Jnt_FK_Ctrl_Grp|CrocRig:Tail_05_Auto_FK_Grp_Major|CrocRig:Tail_05_Jnt_FK_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[611]" ""
+		"CrocRigRN.placeHolderList[602]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_05_Jnt_FK_Ctrl_Grp|CrocRig:Tail_05_Auto_FK_Grp_Major|CrocRig:Tail_05_Jnt_FK_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[612]" ""
+		"CrocRigRN.placeHolderList[603]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_05_Jnt_FK_Ctrl_Grp|CrocRig:Tail_05_Auto_FK_Grp_Major|CrocRig:Tail_05_Jnt_FK_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[613]" ""
+		"CrocRigRN.placeHolderList[604]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_05_Jnt_FK_Ctrl_Grp|CrocRig:Tail_05_Auto_FK_Grp_Major|CrocRig:Tail_05_Jnt_FK_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[614]" ""
+		"CrocRigRN.placeHolderList[605]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_04_Jnt_FK_Ctrl_Grp|CrocRig:Tail_04_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_04_Auto_FK_Grp|CrocRig:Tail_04_Jnt_FK_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[615]" ""
+		"CrocRigRN.placeHolderList[606]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_04_Jnt_FK_Ctrl_Grp|CrocRig:Tail_04_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_04_Auto_FK_Grp|CrocRig:Tail_04_Jnt_FK_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[616]" ""
+		"CrocRigRN.placeHolderList[607]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_04_Jnt_FK_Ctrl_Grp|CrocRig:Tail_04_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_04_Auto_FK_Grp|CrocRig:Tail_04_Jnt_FK_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[617]" ""
+		"CrocRigRN.placeHolderList[608]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_04_Jnt_FK_Ctrl_Grp|CrocRig:Tail_04_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_04_Auto_FK_Grp|CrocRig:Tail_04_Jnt_FK_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[618]" ""
+		"CrocRigRN.placeHolderList[609]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_04_Jnt_FK_Ctrl_Grp|CrocRig:Tail_04_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_04_Auto_FK_Grp|CrocRig:Tail_04_Jnt_FK_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[619]" ""
+		"CrocRigRN.placeHolderList[610]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_04_Jnt_FK_Ctrl_Grp|CrocRig:Tail_04_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_04_Auto_FK_Grp|CrocRig:Tail_04_Jnt_FK_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[620]" ""
+		"CrocRigRN.placeHolderList[611]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_04_Jnt_FK_Ctrl_Grp|CrocRig:Tail_04_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_04_Auto_FK_Grp|CrocRig:Tail_04_Jnt_FK_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[621]" ""
+		"CrocRigRN.placeHolderList[612]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_04_Jnt_FK_Ctrl_Grp|CrocRig:Tail_04_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_04_Auto_FK_Grp|CrocRig:Tail_04_Jnt_FK_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[622]" ""
+		"CrocRigRN.placeHolderList[613]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_04_Jnt_FK_Ctrl_Grp|CrocRig:Tail_04_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_04_Auto_FK_Grp|CrocRig:Tail_04_Jnt_FK_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[623]" ""
+		"CrocRigRN.placeHolderList[614]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_03_Jnt_FK_Ctrl_Grp|CrocRig:Tail_03_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_03_Auto_FK_Grp|CrocRig:Tail_03_Jnt_FK_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[624]" ""
+		"CrocRigRN.placeHolderList[615]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_03_Jnt_FK_Ctrl_Grp|CrocRig:Tail_03_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_03_Auto_FK_Grp|CrocRig:Tail_03_Jnt_FK_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[625]" ""
+		"CrocRigRN.placeHolderList[616]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_03_Jnt_FK_Ctrl_Grp|CrocRig:Tail_03_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_03_Auto_FK_Grp|CrocRig:Tail_03_Jnt_FK_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[626]" ""
+		"CrocRigRN.placeHolderList[617]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_03_Jnt_FK_Ctrl_Grp|CrocRig:Tail_03_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_03_Auto_FK_Grp|CrocRig:Tail_03_Jnt_FK_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[627]" ""
+		"CrocRigRN.placeHolderList[618]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_03_Jnt_FK_Ctrl_Grp|CrocRig:Tail_03_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_03_Auto_FK_Grp|CrocRig:Tail_03_Jnt_FK_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[628]" ""
+		"CrocRigRN.placeHolderList[619]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_03_Jnt_FK_Ctrl_Grp|CrocRig:Tail_03_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_03_Auto_FK_Grp|CrocRig:Tail_03_Jnt_FK_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[629]" ""
+		"CrocRigRN.placeHolderList[620]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_03_Jnt_FK_Ctrl_Grp|CrocRig:Tail_03_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_03_Auto_FK_Grp|CrocRig:Tail_03_Jnt_FK_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[630]" ""
+		"CrocRigRN.placeHolderList[621]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_03_Jnt_FK_Ctrl_Grp|CrocRig:Tail_03_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_03_Auto_FK_Grp|CrocRig:Tail_03_Jnt_FK_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[631]" ""
+		"CrocRigRN.placeHolderList[622]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_03_Jnt_FK_Ctrl_Grp|CrocRig:Tail_03_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_03_Auto_FK_Grp|CrocRig:Tail_03_Jnt_FK_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[632]" ""
+		"CrocRigRN.placeHolderList[623]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_02_Jnt_FK_Ctrl_Grp|CrocRig:Tail_02_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_02_Auto_FK_Grp|CrocRig:Tail_02_Jnt_FK_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[633]" ""
+		"CrocRigRN.placeHolderList[624]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_02_Jnt_FK_Ctrl_Grp|CrocRig:Tail_02_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_02_Auto_FK_Grp|CrocRig:Tail_02_Jnt_FK_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[634]" ""
+		"CrocRigRN.placeHolderList[625]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_02_Jnt_FK_Ctrl_Grp|CrocRig:Tail_02_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_02_Auto_FK_Grp|CrocRig:Tail_02_Jnt_FK_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[635]" ""
+		"CrocRigRN.placeHolderList[626]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_02_Jnt_FK_Ctrl_Grp|CrocRig:Tail_02_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_02_Auto_FK_Grp|CrocRig:Tail_02_Jnt_FK_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[636]" ""
+		"CrocRigRN.placeHolderList[627]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_02_Jnt_FK_Ctrl_Grp|CrocRig:Tail_02_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_02_Auto_FK_Grp|CrocRig:Tail_02_Jnt_FK_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[637]" ""
+		"CrocRigRN.placeHolderList[628]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_02_Jnt_FK_Ctrl_Grp|CrocRig:Tail_02_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_02_Auto_FK_Grp|CrocRig:Tail_02_Jnt_FK_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[638]" ""
+		"CrocRigRN.placeHolderList[629]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_02_Jnt_FK_Ctrl_Grp|CrocRig:Tail_02_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_02_Auto_FK_Grp|CrocRig:Tail_02_Jnt_FK_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[639]" ""
+		"CrocRigRN.placeHolderList[630]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_02_Jnt_FK_Ctrl_Grp|CrocRig:Tail_02_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_02_Auto_FK_Grp|CrocRig:Tail_02_Jnt_FK_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[640]" ""
+		"CrocRigRN.placeHolderList[631]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_02_Jnt_FK_Ctrl_Grp|CrocRig:Tail_02_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_02_Auto_FK_Grp|CrocRig:Tail_02_Jnt_FK_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[641]" ""
+		"CrocRigRN.placeHolderList[632]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_01_Jnt_FK_Ctrl_Grp|CrocRig:Tail_01_Jnt_FK_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[642]" ""
+		"CrocRigRN.placeHolderList[633]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_01_Jnt_FK_Ctrl_Grp|CrocRig:Tail_01_Jnt_FK_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[643]" ""
+		"CrocRigRN.placeHolderList[634]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_01_Jnt_FK_Ctrl_Grp|CrocRig:Tail_01_Jnt_FK_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[644]" ""
+		"CrocRigRN.placeHolderList[635]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_01_Jnt_FK_Ctrl_Grp|CrocRig:Tail_01_Jnt_FK_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[645]" ""
+		"CrocRigRN.placeHolderList[636]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_01_Jnt_FK_Ctrl_Grp|CrocRig:Tail_01_Jnt_FK_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[646]" ""
+		"CrocRigRN.placeHolderList[637]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_01_Jnt_FK_Ctrl_Grp|CrocRig:Tail_01_Jnt_FK_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[647]" ""
+		"CrocRigRN.placeHolderList[638]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_01_Jnt_FK_Ctrl_Grp|CrocRig:Tail_01_Jnt_FK_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[648]" ""
+		"CrocRigRN.placeHolderList[639]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_01_Jnt_FK_Ctrl_Grp|CrocRig:Tail_01_Jnt_FK_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[649]" ""
+		"CrocRigRN.placeHolderList[640]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_01_Jnt_FK_Ctrl_Grp|CrocRig:Tail_01_Jnt_FK_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[650]" ""
+		"CrocRigRN.placeHolderList[641]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheekbone_Jnt_Ctrl_Grp|CrocRig:R_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheekbone_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[651]" ""
+		"CrocRigRN.placeHolderList[642]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheekbone_Jnt_Ctrl_Grp|CrocRig:R_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheekbone_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[652]" ""
+		"CrocRigRN.placeHolderList[643]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheekbone_Jnt_Ctrl_Grp|CrocRig:R_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheekbone_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[653]" ""
+		"CrocRigRN.placeHolderList[644]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheekbone_Jnt_Ctrl_Grp|CrocRig:R_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheekbone_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[654]" ""
+		"CrocRigRN.placeHolderList[645]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheekbone_Jnt_Ctrl_Grp|CrocRig:R_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheekbone_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[655]" ""
+		"CrocRigRN.placeHolderList[646]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheekbone_Jnt_Ctrl_Grp|CrocRig:R_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheekbone_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[656]" ""
+		"CrocRigRN.placeHolderList[647]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheekbone_Jnt_Ctrl_Grp|CrocRig:R_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheekbone_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[657]" ""
+		"CrocRigRN.placeHolderList[648]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheekbone_Jnt_Ctrl_Grp|CrocRig:R_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheekbone_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[658]" ""
+		"CrocRigRN.placeHolderList[649]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheekbone_Jnt_Ctrl_Grp|CrocRig:R_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheekbone_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[659]" ""
+		"CrocRigRN.placeHolderList[650]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheekbone_Jnt_Ctrl_Grp|CrocRig:L_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheekbone_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[660]" ""
+		"CrocRigRN.placeHolderList[651]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheekbone_Jnt_Ctrl_Grp|CrocRig:L_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheekbone_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[661]" ""
+		"CrocRigRN.placeHolderList[652]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheekbone_Jnt_Ctrl_Grp|CrocRig:L_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheekbone_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[662]" ""
+		"CrocRigRN.placeHolderList[653]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheekbone_Jnt_Ctrl_Grp|CrocRig:L_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheekbone_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[663]" ""
+		"CrocRigRN.placeHolderList[654]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheekbone_Jnt_Ctrl_Grp|CrocRig:L_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheekbone_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[664]" ""
+		"CrocRigRN.placeHolderList[655]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheekbone_Jnt_Ctrl_Grp|CrocRig:L_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheekbone_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[665]" ""
+		"CrocRigRN.placeHolderList[656]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheekbone_Jnt_Ctrl_Grp|CrocRig:L_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheekbone_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[666]" ""
+		"CrocRigRN.placeHolderList[657]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheekbone_Jnt_Ctrl_Grp|CrocRig:L_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheekbone_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[667]" ""
+		"CrocRigRN.placeHolderList[658]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheekbone_Jnt_Ctrl_Grp|CrocRig:L_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheekbone_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[668]" ""
+		"CrocRigRN.placeHolderList[659]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheek_Jnt_Ctrl_Grp|CrocRig:R_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheek_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[669]" ""
+		"CrocRigRN.placeHolderList[660]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheek_Jnt_Ctrl_Grp|CrocRig:R_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheek_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[670]" ""
+		"CrocRigRN.placeHolderList[661]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheek_Jnt_Ctrl_Grp|CrocRig:R_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheek_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[671]" ""
+		"CrocRigRN.placeHolderList[662]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheek_Jnt_Ctrl_Grp|CrocRig:R_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheek_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[672]" ""
+		"CrocRigRN.placeHolderList[663]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheek_Jnt_Ctrl_Grp|CrocRig:R_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheek_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[673]" ""
+		"CrocRigRN.placeHolderList[664]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheek_Jnt_Ctrl_Grp|CrocRig:R_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheek_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[674]" ""
+		"CrocRigRN.placeHolderList[665]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheek_Jnt_Ctrl_Grp|CrocRig:R_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheek_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[675]" ""
+		"CrocRigRN.placeHolderList[666]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheek_Jnt_Ctrl_Grp|CrocRig:R_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheek_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[676]" ""
+		"CrocRigRN.placeHolderList[667]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheek_Jnt_Ctrl_Grp|CrocRig:R_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheek_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[677]" ""
+		"CrocRigRN.placeHolderList[668]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheek_Jnt_Ctrl_Grp|CrocRig:L_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheek_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[678]" ""
+		"CrocRigRN.placeHolderList[669]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheek_Jnt_Ctrl_Grp|CrocRig:L_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheek_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[679]" ""
+		"CrocRigRN.placeHolderList[670]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheek_Jnt_Ctrl_Grp|CrocRig:L_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheek_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[680]" ""
+		"CrocRigRN.placeHolderList[671]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheek_Jnt_Ctrl_Grp|CrocRig:L_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheek_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[681]" ""
+		"CrocRigRN.placeHolderList[672]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheek_Jnt_Ctrl_Grp|CrocRig:L_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheek_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[682]" ""
+		"CrocRigRN.placeHolderList[673]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheek_Jnt_Ctrl_Grp|CrocRig:L_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheek_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[683]" ""
+		"CrocRigRN.placeHolderList[674]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheek_Jnt_Ctrl_Grp|CrocRig:L_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheek_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[684]" ""
+		"CrocRigRN.placeHolderList[675]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheek_Jnt_Ctrl_Grp|CrocRig:L_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheek_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[685]" ""
+		"CrocRigRN.placeHolderList[676]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Cheek_Jnt_Ctrl_Grp|CrocRig:L_Cheek_Jnt_Ctrl_Plate_Offset|CrocRig:L_Cheek_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[686]" ""
+		"CrocRigRN.placeHolderList[677]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_Bridge_Jnt_Ctrl_Grp|CrocRig:Snout_Ctrl_SDK_Offset|CrocRig:Snout_Bridge_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[687]" ""
+		"CrocRigRN.placeHolderList[678]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_Bridge_Jnt_Ctrl_Grp|CrocRig:Snout_Ctrl_SDK_Offset|CrocRig:Snout_Bridge_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[688]" ""
+		"CrocRigRN.placeHolderList[679]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_Bridge_Jnt_Ctrl_Grp|CrocRig:Snout_Ctrl_SDK_Offset|CrocRig:Snout_Bridge_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[689]" ""
+		"CrocRigRN.placeHolderList[680]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_Bridge_Jnt_Ctrl_Grp|CrocRig:Snout_Ctrl_SDK_Offset|CrocRig:Snout_Bridge_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[690]" ""
+		"CrocRigRN.placeHolderList[681]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_Bridge_Jnt_Ctrl_Grp|CrocRig:Snout_Ctrl_SDK_Offset|CrocRig:Snout_Bridge_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[691]" ""
+		"CrocRigRN.placeHolderList[682]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_Bridge_Jnt_Ctrl_Grp|CrocRig:Snout_Ctrl_SDK_Offset|CrocRig:Snout_Bridge_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[692]" ""
+		"CrocRigRN.placeHolderList[683]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_Bridge_Jnt_Ctrl_Grp|CrocRig:Snout_Ctrl_SDK_Offset|CrocRig:Snout_Bridge_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[693]" ""
+		"CrocRigRN.placeHolderList[684]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_Bridge_Jnt_Ctrl_Grp|CrocRig:Snout_Ctrl_SDK_Offset|CrocRig:Snout_Bridge_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[694]" ""
+		"CrocRigRN.placeHolderList[685]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_Bridge_Jnt_Ctrl_Grp|CrocRig:Snout_Ctrl_SDK_Offset|CrocRig:Snout_Bridge_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[695]" ""
+		"CrocRigRN.placeHolderList[686]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_tip_Jnt_Ctrl_Grp|CrocRig:Snout_tip_Jnt_Ctrl_Plate_Offset|CrocRig:Snout_tip_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[696]" ""
+		"CrocRigRN.placeHolderList[687]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_tip_Jnt_Ctrl_Grp|CrocRig:Snout_tip_Jnt_Ctrl_Plate_Offset|CrocRig:Snout_tip_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[697]" ""
+		"CrocRigRN.placeHolderList[688]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_tip_Jnt_Ctrl_Grp|CrocRig:Snout_tip_Jnt_Ctrl_Plate_Offset|CrocRig:Snout_tip_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[698]" ""
+		"CrocRigRN.placeHolderList[689]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_tip_Jnt_Ctrl_Grp|CrocRig:Snout_tip_Jnt_Ctrl_Plate_Offset|CrocRig:Snout_tip_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[699]" ""
+		"CrocRigRN.placeHolderList[690]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_tip_Jnt_Ctrl_Grp|CrocRig:Snout_tip_Jnt_Ctrl_Plate_Offset|CrocRig:Snout_tip_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[700]" ""
+		"CrocRigRN.placeHolderList[691]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_tip_Jnt_Ctrl_Grp|CrocRig:Snout_tip_Jnt_Ctrl_Plate_Offset|CrocRig:Snout_tip_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[701]" ""
+		"CrocRigRN.placeHolderList[692]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_tip_Jnt_Ctrl_Grp|CrocRig:Snout_tip_Jnt_Ctrl_Plate_Offset|CrocRig:Snout_tip_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[702]" ""
+		"CrocRigRN.placeHolderList[693]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_tip_Jnt_Ctrl_Grp|CrocRig:Snout_tip_Jnt_Ctrl_Plate_Offset|CrocRig:Snout_tip_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[703]" ""
+		"CrocRigRN.placeHolderList[694]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Snout_tip_Jnt_Ctrl_Grp|CrocRig:Snout_tip_Jnt_Ctrl_Plate_Offset|CrocRig:Snout_tip_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[704]" ""
+		"CrocRigRN.placeHolderList[695]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Nostril_Joint_Ctrl_Grp|CrocRig:R_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:R_Nostril_Joint_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[705]" ""
+		"CrocRigRN.placeHolderList[696]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Nostril_Joint_Ctrl_Grp|CrocRig:R_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:R_Nostril_Joint_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[706]" ""
+		"CrocRigRN.placeHolderList[697]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Nostril_Joint_Ctrl_Grp|CrocRig:R_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:R_Nostril_Joint_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[707]" ""
+		"CrocRigRN.placeHolderList[698]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Nostril_Joint_Ctrl_Grp|CrocRig:R_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:R_Nostril_Joint_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[708]" ""
+		"CrocRigRN.placeHolderList[699]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Nostril_Joint_Ctrl_Grp|CrocRig:R_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:R_Nostril_Joint_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[709]" ""
+		"CrocRigRN.placeHolderList[700]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Nostril_Joint_Ctrl_Grp|CrocRig:R_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:R_Nostril_Joint_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[710]" ""
+		"CrocRigRN.placeHolderList[701]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Nostril_Joint_Ctrl_Grp|CrocRig:R_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:R_Nostril_Joint_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[711]" ""
+		"CrocRigRN.placeHolderList[702]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Nostril_Joint_Ctrl_Grp|CrocRig:R_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:R_Nostril_Joint_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[712]" ""
+		"CrocRigRN.placeHolderList[703]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Nostril_Joint_Ctrl_Grp|CrocRig:R_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:R_Nostril_Joint_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[713]" ""
+		"CrocRigRN.placeHolderList[704]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Nostril_Joint_Ctrl_Grp|CrocRig:L_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:L_Nostril_Joint_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[714]" ""
+		"CrocRigRN.placeHolderList[705]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Nostril_Joint_Ctrl_Grp|CrocRig:L_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:L_Nostril_Joint_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[715]" ""
+		"CrocRigRN.placeHolderList[706]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Nostril_Joint_Ctrl_Grp|CrocRig:L_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:L_Nostril_Joint_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[716]" ""
+		"CrocRigRN.placeHolderList[707]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Nostril_Joint_Ctrl_Grp|CrocRig:L_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:L_Nostril_Joint_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[717]" ""
+		"CrocRigRN.placeHolderList[708]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Nostril_Joint_Ctrl_Grp|CrocRig:L_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:L_Nostril_Joint_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[718]" ""
+		"CrocRigRN.placeHolderList[709]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Nostril_Joint_Ctrl_Grp|CrocRig:L_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:L_Nostril_Joint_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[719]" ""
+		"CrocRigRN.placeHolderList[710]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Nostril_Joint_Ctrl_Grp|CrocRig:L_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:L_Nostril_Joint_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[720]" ""
+		"CrocRigRN.placeHolderList[711]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Nostril_Joint_Ctrl_Grp|CrocRig:L_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:L_Nostril_Joint_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[721]" ""
+		"CrocRigRN.placeHolderList[712]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:L_Nostril_Joint_Ctrl_Grp|CrocRig:L_Nostril_Joint_Ctrl_Plate_Offset|CrocRig:L_Nostril_Joint_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[722]" ""
+		"CrocRigRN.placeHolderList[713]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[723]" ""
+		"CrocRigRN.placeHolderList[714]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[724]" ""
+		"CrocRigRN.placeHolderList[715]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[725]" ""
+		"CrocRigRN.placeHolderList[716]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[726]" ""
+		"CrocRigRN.placeHolderList[717]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[727]" ""
+		"CrocRigRN.placeHolderList[718]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[728]" ""
+		"CrocRigRN.placeHolderList[719]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[729]" ""
+		"CrocRigRN.placeHolderList[720]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[730]" ""
+		"CrocRigRN.placeHolderList[721]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_1_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[731]" ""
+		"CrocRigRN.placeHolderList[722]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[732]" ""
+		"CrocRigRN.placeHolderList[723]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[733]" ""
+		"CrocRigRN.placeHolderList[724]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[734]" ""
+		"CrocRigRN.placeHolderList[725]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[735]" ""
+		"CrocRigRN.placeHolderList[726]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[736]" ""
+		"CrocRigRN.placeHolderList[727]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[737]" ""
+		"CrocRigRN.placeHolderList[728]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[738]" ""
+		"CrocRigRN.placeHolderList[729]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[739]" ""
+		"CrocRigRN.placeHolderList[730]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_2_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[740]" ""
+		"CrocRigRN.placeHolderList[731]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[741]" ""
+		"CrocRigRN.placeHolderList[732]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[742]" ""
+		"CrocRigRN.placeHolderList[733]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[743]" ""
+		"CrocRigRN.placeHolderList[734]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[744]" ""
+		"CrocRigRN.placeHolderList[735]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[745]" ""
+		"CrocRigRN.placeHolderList[736]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[746]" ""
+		"CrocRigRN.placeHolderList[737]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[747]" ""
+		"CrocRigRN.placeHolderList[738]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[748]" ""
+		"CrocRigRN.placeHolderList[739]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Upper_Jnt_3_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[749]" ""
+		"CrocRigRN.placeHolderList[740]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Plate_Offset|CrocRig:L_Mouth_Corner_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[750]" ""
+		"CrocRigRN.placeHolderList[741]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Plate_Offset|CrocRig:L_Mouth_Corner_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[751]" ""
+		"CrocRigRN.placeHolderList[742]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Plate_Offset|CrocRig:L_Mouth_Corner_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[752]" ""
+		"CrocRigRN.placeHolderList[743]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Plate_Offset|CrocRig:L_Mouth_Corner_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[753]" ""
+		"CrocRigRN.placeHolderList[744]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Plate_Offset|CrocRig:L_Mouth_Corner_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[754]" ""
+		"CrocRigRN.placeHolderList[745]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Plate_Offset|CrocRig:L_Mouth_Corner_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[755]" ""
+		"CrocRigRN.placeHolderList[746]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Plate_Offset|CrocRig:L_Mouth_Corner_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[756]" ""
+		"CrocRigRN.placeHolderList[747]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Plate_Offset|CrocRig:L_Mouth_Corner_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[757]" ""
+		"CrocRigRN.placeHolderList[748]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:L_Mouth_Corner_Jnt_Ctrl_Plate_Offset|CrocRig:L_Mouth_Corner_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[758]" ""
+		"CrocRigRN.placeHolderList[749]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[759]" ""
+		"CrocRigRN.placeHolderList[750]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[760]" ""
+		"CrocRigRN.placeHolderList[751]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[761]" ""
+		"CrocRigRN.placeHolderList[752]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[762]" ""
+		"CrocRigRN.placeHolderList[753]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[763]" ""
+		"CrocRigRN.placeHolderList[754]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[764]" ""
+		"CrocRigRN.placeHolderList[755]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[765]" ""
+		"CrocRigRN.placeHolderList[756]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[766]" ""
+		"CrocRigRN.placeHolderList[757]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_1_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[767]" ""
+		"CrocRigRN.placeHolderList[758]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[768]" ""
+		"CrocRigRN.placeHolderList[759]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[769]" ""
+		"CrocRigRN.placeHolderList[760]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[770]" ""
+		"CrocRigRN.placeHolderList[761]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[771]" ""
+		"CrocRigRN.placeHolderList[762]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[772]" ""
+		"CrocRigRN.placeHolderList[763]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[773]" ""
+		"CrocRigRN.placeHolderList[764]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[774]" ""
+		"CrocRigRN.placeHolderList[765]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[775]" ""
+		"CrocRigRN.placeHolderList[766]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_2_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[776]" ""
+		"CrocRigRN.placeHolderList[767]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[777]" ""
+		"CrocRigRN.placeHolderList[768]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[778]" ""
+		"CrocRigRN.placeHolderList[769]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[779]" ""
+		"CrocRigRN.placeHolderList[770]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[780]" ""
+		"CrocRigRN.placeHolderList[771]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[781]" ""
+		"CrocRigRN.placeHolderList[772]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[782]" ""
+		"CrocRigRN.placeHolderList[773]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[783]" ""
+		"CrocRigRN.placeHolderList[774]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[784]" ""
+		"CrocRigRN.placeHolderList[775]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Upper_Jnt_3_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[785]" ""
+		"CrocRigRN.placeHolderList[776]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:R_Mouth_Corner_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[786]" ""
+		"CrocRigRN.placeHolderList[777]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:R_Mouth_Corner_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[787]" ""
+		"CrocRigRN.placeHolderList[778]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:R_Mouth_Corner_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[788]" ""
+		"CrocRigRN.placeHolderList[779]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:R_Mouth_Corner_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[789]" ""
+		"CrocRigRN.placeHolderList[780]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:R_Mouth_Corner_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[790]" ""
+		"CrocRigRN.placeHolderList[781]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:R_Mouth_Corner_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[791]" ""
+		"CrocRigRN.placeHolderList[782]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:R_Mouth_Corner_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[792]" ""
+		"CrocRigRN.placeHolderList[783]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:R_Mouth_Corner_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[793]" ""
+		"CrocRigRN.placeHolderList[784]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Corner_Jnt_Ctrl_Grp|CrocRig:R_Mouth_Corner_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[794]" ""
+		"CrocRigRN.placeHolderList[785]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Grp|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Plate_Offset|CrocRig:Mouth_Upper_Center_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[795]" ""
+		"CrocRigRN.placeHolderList[786]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Grp|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Plate_Offset|CrocRig:Mouth_Upper_Center_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[796]" ""
+		"CrocRigRN.placeHolderList[787]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Grp|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Plate_Offset|CrocRig:Mouth_Upper_Center_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[797]" ""
+		"CrocRigRN.placeHolderList[788]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Grp|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Plate_Offset|CrocRig:Mouth_Upper_Center_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[798]" ""
+		"CrocRigRN.placeHolderList[789]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Grp|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Plate_Offset|CrocRig:Mouth_Upper_Center_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[799]" ""
+		"CrocRigRN.placeHolderList[790]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Grp|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Plate_Offset|CrocRig:Mouth_Upper_Center_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[800]" ""
+		"CrocRigRN.placeHolderList[791]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Grp|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Plate_Offset|CrocRig:Mouth_Upper_Center_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[801]" ""
+		"CrocRigRN.placeHolderList[792]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Grp|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Plate_Offset|CrocRig:Mouth_Upper_Center_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[802]" ""
+		"CrocRigRN.placeHolderList[793]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Grp|CrocRig:Mouth_Upper_Center_Jnt_Ctrl_Plate_Offset|CrocRig:Mouth_Upper_Center_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[803]" ""
+		"CrocRigRN.placeHolderList[794]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[804]" ""
+		"CrocRigRN.placeHolderList[795]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[805]" ""
+		"CrocRigRN.placeHolderList[796]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[806]" ""
+		"CrocRigRN.placeHolderList[797]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[807]" ""
+		"CrocRigRN.placeHolderList[798]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[808]" ""
+		"CrocRigRN.placeHolderList[799]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[809]" ""
+		"CrocRigRN.placeHolderList[800]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[810]" ""
+		"CrocRigRN.placeHolderList[801]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[811]" ""
+		"CrocRigRN.placeHolderList[802]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_1_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[812]" ""
+		"CrocRigRN.placeHolderList[803]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Center_Lower_Jnt_Ctrl_Grp|CrocRig:Mouth_Center_Lower_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[813]" ""
+		"CrocRigRN.placeHolderList[804]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Center_Lower_Jnt_Ctrl_Grp|CrocRig:Mouth_Center_Lower_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[814]" ""
+		"CrocRigRN.placeHolderList[805]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Center_Lower_Jnt_Ctrl_Grp|CrocRig:Mouth_Center_Lower_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[815]" ""
+		"CrocRigRN.placeHolderList[806]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Center_Lower_Jnt_Ctrl_Grp|CrocRig:Mouth_Center_Lower_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[816]" ""
+		"CrocRigRN.placeHolderList[807]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Center_Lower_Jnt_Ctrl_Grp|CrocRig:Mouth_Center_Lower_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[817]" ""
+		"CrocRigRN.placeHolderList[808]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Center_Lower_Jnt_Ctrl_Grp|CrocRig:Mouth_Center_Lower_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[818]" ""
+		"CrocRigRN.placeHolderList[809]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Center_Lower_Jnt_Ctrl_Grp|CrocRig:Mouth_Center_Lower_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[819]" ""
+		"CrocRigRN.placeHolderList[810]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Center_Lower_Jnt_Ctrl_Grp|CrocRig:Mouth_Center_Lower_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[820]" ""
+		"CrocRigRN.placeHolderList[811]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:Mouth_Center_Lower_Jnt_Ctrl_Grp|CrocRig:Mouth_Center_Lower_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[821]" ""
+		"CrocRigRN.placeHolderList[812]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[822]" ""
+		"CrocRigRN.placeHolderList[813]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[823]" ""
+		"CrocRigRN.placeHolderList[814]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[824]" ""
+		"CrocRigRN.placeHolderList[815]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[825]" ""
+		"CrocRigRN.placeHolderList[816]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[826]" ""
+		"CrocRigRN.placeHolderList[817]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[827]" ""
+		"CrocRigRN.placeHolderList[818]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[828]" ""
+		"CrocRigRN.placeHolderList[819]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[829]" ""
+		"CrocRigRN.placeHolderList[820]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_1_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[830]" ""
+		"CrocRigRN.placeHolderList[821]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[831]" ""
+		"CrocRigRN.placeHolderList[822]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[832]" ""
+		"CrocRigRN.placeHolderList[823]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[833]" ""
+		"CrocRigRN.placeHolderList[824]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[834]" ""
+		"CrocRigRN.placeHolderList[825]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[835]" ""
+		"CrocRigRN.placeHolderList[826]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[836]" ""
+		"CrocRigRN.placeHolderList[827]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[837]" ""
+		"CrocRigRN.placeHolderList[828]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[838]" ""
+		"CrocRigRN.placeHolderList[829]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_2_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[839]" ""
+		"CrocRigRN.placeHolderList[830]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[840]" ""
+		"CrocRigRN.placeHolderList[831]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[841]" ""
+		"CrocRigRN.placeHolderList[832]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[842]" ""
+		"CrocRigRN.placeHolderList[833]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[843]" ""
+		"CrocRigRN.placeHolderList[834]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[844]" ""
+		"CrocRigRN.placeHolderList[835]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[845]" ""
+		"CrocRigRN.placeHolderList[836]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[846]" ""
+		"CrocRigRN.placeHolderList[837]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[847]" ""
+		"CrocRigRN.placeHolderList[838]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_2_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[848]" ""
+		"CrocRigRN.placeHolderList[839]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[849]" ""
+		"CrocRigRN.placeHolderList[840]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[850]" ""
+		"CrocRigRN.placeHolderList[841]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[851]" ""
+		"CrocRigRN.placeHolderList[842]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[852]" ""
+		"CrocRigRN.placeHolderList[843]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[853]" ""
+		"CrocRigRN.placeHolderList[844]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[854]" ""
+		"CrocRigRN.placeHolderList[845]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[855]" ""
+		"CrocRigRN.placeHolderList[846]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[856]" ""
+		"CrocRigRN.placeHolderList[847]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Mouth_Lower_Jnt_3_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[857]" ""
+		"CrocRigRN.placeHolderList[848]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[858]" ""
+		"CrocRigRN.placeHolderList[849]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[859]" ""
+		"CrocRigRN.placeHolderList[850]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[860]" ""
+		"CrocRigRN.placeHolderList[851]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[861]" ""
+		"CrocRigRN.placeHolderList[852]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[862]" ""
+		"CrocRigRN.placeHolderList[853]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[863]" ""
+		"CrocRigRN.placeHolderList[854]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[864]" ""
+		"CrocRigRN.placeHolderList[855]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[865]" ""
+		"CrocRigRN.placeHolderList[856]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Mouth|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Grp|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Mouth_Lower_Jnt_3_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[866]" ""
+		"CrocRigRN.placeHolderList[857]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[867]" ""
+		"CrocRigRN.placeHolderList[858]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[868]" ""
+		"CrocRigRN.placeHolderList[859]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[869]" ""
+		"CrocRigRN.placeHolderList[860]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[870]" ""
+		"CrocRigRN.placeHolderList[861]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[871]" ""
+		"CrocRigRN.placeHolderList[862]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[872]" ""
+		"CrocRigRN.placeHolderList[863]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[873]" ""
+		"CrocRigRN.placeHolderList[864]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[874]" ""
+		"CrocRigRN.placeHolderList[865]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_3_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[875]" ""
+		"CrocRigRN.placeHolderList[866]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[876]" ""
+		"CrocRigRN.placeHolderList[867]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[877]" ""
+		"CrocRigRN.placeHolderList[868]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[878]" ""
+		"CrocRigRN.placeHolderList[869]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[879]" ""
+		"CrocRigRN.placeHolderList[870]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[880]" ""
+		"CrocRigRN.placeHolderList[871]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[881]" ""
+		"CrocRigRN.placeHolderList[872]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[882]" ""
+		"CrocRigRN.placeHolderList[873]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[883]" ""
+		"CrocRigRN.placeHolderList[874]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_2_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[884]" ""
+		"CrocRigRN.placeHolderList[875]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[885]" ""
+		"CrocRigRN.placeHolderList[876]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[886]" ""
+		"CrocRigRN.placeHolderList[877]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[887]" ""
+		"CrocRigRN.placeHolderList[878]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[888]" ""
+		"CrocRigRN.placeHolderList[879]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[889]" ""
+		"CrocRigRN.placeHolderList[880]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[890]" ""
+		"CrocRigRN.placeHolderList[881]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[891]" ""
+		"CrocRigRN.placeHolderList[882]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[892]" ""
+		"CrocRigRN.placeHolderList[883]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:R_Eyebrow_Ctrl_Jnt_1_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[893]" ""
+		"CrocRigRN.placeHolderList[884]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[894]" ""
+		"CrocRigRN.placeHolderList[885]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[895]" ""
+		"CrocRigRN.placeHolderList[886]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[896]" ""
+		"CrocRigRN.placeHolderList[887]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[897]" ""
+		"CrocRigRN.placeHolderList[888]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[898]" ""
+		"CrocRigRN.placeHolderList[889]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[899]" ""
+		"CrocRigRN.placeHolderList[890]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[900]" ""
+		"CrocRigRN.placeHolderList[891]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[901]" ""
+		"CrocRigRN.placeHolderList[892]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_1_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[902]" ""
+		"CrocRigRN.placeHolderList[893]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[903]" ""
+		"CrocRigRN.placeHolderList[894]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[904]" ""
+		"CrocRigRN.placeHolderList[895]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[905]" ""
+		"CrocRigRN.placeHolderList[896]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[906]" ""
+		"CrocRigRN.placeHolderList[897]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[907]" ""
+		"CrocRigRN.placeHolderList[898]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[908]" ""
+		"CrocRigRN.placeHolderList[899]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[909]" ""
+		"CrocRigRN.placeHolderList[900]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[910]" ""
+		"CrocRigRN.placeHolderList[901]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_2_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[911]" ""
+		"CrocRigRN.placeHolderList[902]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[912]" ""
+		"CrocRigRN.placeHolderList[903]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[913]" ""
+		"CrocRigRN.placeHolderList[904]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[914]" ""
+		"CrocRigRN.placeHolderList[905]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[915]" ""
+		"CrocRigRN.placeHolderList[906]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[916]" ""
+		"CrocRigRN.placeHolderList[907]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[917]" ""
+		"CrocRigRN.placeHolderList[908]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[918]" ""
+		"CrocRigRN.placeHolderList[909]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[919]" ""
+		"CrocRigRN.placeHolderList[910]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Grp|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl_Plate_Offset|CrocRig:L_Eyebrow_Ctrl_Jnt_3_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[920]" ""
+		"CrocRigRN.placeHolderList[911]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Brow_Master_Ctrl_Grp|CrocRig:L_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[921]" ""
+		"CrocRigRN.placeHolderList[912]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Brow_Master_Ctrl_Grp|CrocRig:L_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[922]" ""
+		"CrocRigRN.placeHolderList[913]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Brow_Master_Ctrl_Grp|CrocRig:L_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[923]" ""
+		"CrocRigRN.placeHolderList[914]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Brow_Master_Ctrl_Grp|CrocRig:L_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[924]" ""
+		"CrocRigRN.placeHolderList[915]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Brow_Master_Ctrl_Grp|CrocRig:L_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[925]" ""
+		"CrocRigRN.placeHolderList[916]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Brow_Master_Ctrl_Grp|CrocRig:L_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[926]" ""
+		"CrocRigRN.placeHolderList[917]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Brow_Master_Ctrl_Grp|CrocRig:L_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[927]" ""
+		"CrocRigRN.placeHolderList[918]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Brow_Master_Ctrl_Grp|CrocRig:L_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[928]" ""
+		"CrocRigRN.placeHolderList[919]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:L_Brow_Master_Ctrl_Grp|CrocRig:L_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[929]" ""
+		"CrocRigRN.placeHolderList[920]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Brow_Master_Ctrl_Grp|CrocRig:R_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[930]" ""
+		"CrocRigRN.placeHolderList[921]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Brow_Master_Ctrl_Grp|CrocRig:R_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[931]" ""
+		"CrocRigRN.placeHolderList[922]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Brow_Master_Ctrl_Grp|CrocRig:R_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[932]" ""
+		"CrocRigRN.placeHolderList[923]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Brow_Master_Ctrl_Grp|CrocRig:R_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[933]" ""
+		"CrocRigRN.placeHolderList[924]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Brow_Master_Ctrl_Grp|CrocRig:R_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[934]" ""
+		"CrocRigRN.placeHolderList[925]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Brow_Master_Ctrl_Grp|CrocRig:R_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[935]" ""
+		"CrocRigRN.placeHolderList[926]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Brow_Master_Ctrl_Grp|CrocRig:R_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[936]" ""
+		"CrocRigRN.placeHolderList[927]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Brow_Master_Ctrl_Grp|CrocRig:R_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[937]" ""
+		"CrocRigRN.placeHolderList[928]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:EyeBrows|CrocRig:R_Brow_Master_Ctrl_Grp|CrocRig:R_Brow_Master_Ctrl_Grp_L_Brow_Master_Ctrl_Plate_Offset|CrocRig:L_Brow_Master_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[938]" ""
+		"CrocRigRN.placeHolderList[929]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[939]" ""
+		"CrocRigRN.placeHolderList[930]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[940]" ""
+		"CrocRigRN.placeHolderList[931]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[941]" ""
+		"CrocRigRN.placeHolderList[932]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[942]" ""
+		"CrocRigRN.placeHolderList[933]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[943]" ""
+		"CrocRigRN.placeHolderList[934]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[944]" ""
+		"CrocRigRN.placeHolderList[935]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[945]" ""
+		"CrocRigRN.placeHolderList[936]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[946]" ""
+		"CrocRigRN.placeHolderList[937]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_2_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[947]" ""
+		"CrocRigRN.placeHolderList[938]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[948]" ""
+		"CrocRigRN.placeHolderList[939]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[949]" ""
+		"CrocRigRN.placeHolderList[940]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[950]" ""
+		"CrocRigRN.placeHolderList[941]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[951]" ""
+		"CrocRigRN.placeHolderList[942]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[952]" ""
+		"CrocRigRN.placeHolderList[943]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[953]" ""
+		"CrocRigRN.placeHolderList[944]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[954]" ""
+		"CrocRigRN.placeHolderList[945]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[955]" ""
+		"CrocRigRN.placeHolderList[946]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_1_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[956]" ""
+		"CrocRigRN.placeHolderList[947]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[957]" ""
+		"CrocRigRN.placeHolderList[948]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[958]" ""
+		"CrocRigRN.placeHolderList[949]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[959]" ""
+		"CrocRigRN.placeHolderList[950]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[960]" ""
+		"CrocRigRN.placeHolderList[951]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[961]" ""
+		"CrocRigRN.placeHolderList[952]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[962]" ""
+		"CrocRigRN.placeHolderList[953]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[963]" ""
+		"CrocRigRN.placeHolderList[954]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[964]" ""
+		"CrocRigRN.placeHolderList[955]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_1_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[965]" ""
+		"CrocRigRN.placeHolderList[956]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[966]" ""
+		"CrocRigRN.placeHolderList[957]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[967]" ""
+		"CrocRigRN.placeHolderList[958]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[968]" ""
+		"CrocRigRN.placeHolderList[959]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[969]" ""
+		"CrocRigRN.placeHolderList[960]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[970]" ""
+		"CrocRigRN.placeHolderList[961]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[971]" ""
+		"CrocRigRN.placeHolderList[962]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[972]" ""
+		"CrocRigRN.placeHolderList[963]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[973]" ""
+		"CrocRigRN.placeHolderList[964]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_3_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[974]" ""
+		"CrocRigRN.placeHolderList[965]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[975]" ""
+		"CrocRigRN.placeHolderList[966]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[976]" ""
+		"CrocRigRN.placeHolderList[967]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[977]" ""
+		"CrocRigRN.placeHolderList[968]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[978]" ""
+		"CrocRigRN.placeHolderList[969]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[979]" ""
+		"CrocRigRN.placeHolderList[970]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[980]" ""
+		"CrocRigRN.placeHolderList[971]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[981]" ""
+		"CrocRigRN.placeHolderList[972]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[982]" ""
+		"CrocRigRN.placeHolderList[973]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Upper_3_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[983]" ""
+		"CrocRigRN.placeHolderList[974]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[984]" ""
+		"CrocRigRN.placeHolderList[975]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[985]" ""
+		"CrocRigRN.placeHolderList[976]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[986]" ""
+		"CrocRigRN.placeHolderList[977]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[987]" ""
+		"CrocRigRN.placeHolderList[978]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[988]" ""
+		"CrocRigRN.placeHolderList[979]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[989]" ""
+		"CrocRigRN.placeHolderList[980]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[990]" ""
+		"CrocRigRN.placeHolderList[981]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[991]" ""
+		"CrocRigRN.placeHolderList[982]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:R_Eyelid_Lower_2_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[992]" ""
+		"CrocRigRN.placeHolderList[983]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[993]" ""
+		"CrocRigRN.placeHolderList[984]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[994]" ""
+		"CrocRigRN.placeHolderList[985]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[995]" ""
+		"CrocRigRN.placeHolderList[986]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[996]" ""
+		"CrocRigRN.placeHolderList[987]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[997]" ""
+		"CrocRigRN.placeHolderList[988]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[998]" ""
+		"CrocRigRN.placeHolderList[989]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[999]" ""
+		"CrocRigRN.placeHolderList[990]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1000]" ""
+		"CrocRigRN.placeHolderList[991]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_2_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1001]" ""
+		"CrocRigRN.placeHolderList[992]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1002]" ""
+		"CrocRigRN.placeHolderList[993]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1003]" ""
+		"CrocRigRN.placeHolderList[994]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1004]" ""
+		"CrocRigRN.placeHolderList[995]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1005]" ""
+		"CrocRigRN.placeHolderList[996]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1006]" ""
+		"CrocRigRN.placeHolderList[997]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1007]" ""
+		"CrocRigRN.placeHolderList[998]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1008]" ""
+		"CrocRigRN.placeHolderList[999]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1009]" ""
+		"CrocRigRN.placeHolderList[1000]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_1_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1010]" ""
+		"CrocRigRN.placeHolderList[1001]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1011]" ""
+		"CrocRigRN.placeHolderList[1002]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1012]" ""
+		"CrocRigRN.placeHolderList[1003]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1013]" ""
+		"CrocRigRN.placeHolderList[1004]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1014]" ""
+		"CrocRigRN.placeHolderList[1005]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1015]" ""
+		"CrocRigRN.placeHolderList[1006]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1016]" ""
+		"CrocRigRN.placeHolderList[1007]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1017]" ""
+		"CrocRigRN.placeHolderList[1008]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1018]" ""
+		"CrocRigRN.placeHolderList[1009]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_1_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1019]" ""
+		"CrocRigRN.placeHolderList[1010]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1020]" ""
+		"CrocRigRN.placeHolderList[1011]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1021]" ""
+		"CrocRigRN.placeHolderList[1012]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1022]" ""
+		"CrocRigRN.placeHolderList[1013]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1023]" ""
+		"CrocRigRN.placeHolderList[1014]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1024]" ""
+		"CrocRigRN.placeHolderList[1015]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1025]" ""
+		"CrocRigRN.placeHolderList[1016]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1026]" ""
+		"CrocRigRN.placeHolderList[1017]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1027]" ""
+		"CrocRigRN.placeHolderList[1018]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_3_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1028]" ""
+		"CrocRigRN.placeHolderList[1019]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1029]" ""
+		"CrocRigRN.placeHolderList[1020]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1030]" ""
+		"CrocRigRN.placeHolderList[1021]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1031]" ""
+		"CrocRigRN.placeHolderList[1022]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1032]" ""
+		"CrocRigRN.placeHolderList[1023]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1033]" ""
+		"CrocRigRN.placeHolderList[1024]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1034]" ""
+		"CrocRigRN.placeHolderList[1025]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1035]" ""
+		"CrocRigRN.placeHolderList[1026]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1036]" ""
+		"CrocRigRN.placeHolderList[1027]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Upper_3_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1037]" ""
+		"CrocRigRN.placeHolderList[1028]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1038]" ""
+		"CrocRigRN.placeHolderList[1029]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1039]" ""
+		"CrocRigRN.placeHolderList[1030]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1040]" ""
+		"CrocRigRN.placeHolderList[1031]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1041]" ""
+		"CrocRigRN.placeHolderList[1032]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1042]" ""
+		"CrocRigRN.placeHolderList[1033]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1043]" ""
+		"CrocRigRN.placeHolderList[1034]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1044]" ""
+		"CrocRigRN.placeHolderList[1035]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1045]" ""
+		"CrocRigRN.placeHolderList[1036]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:Eyelid_Ctrls|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Grp|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl_Plate_Offset|CrocRig:L_Eyelid_Lower_2_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1046]" ""
+		"CrocRigRN.placeHolderList[1037]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Buckle_Jnt_Ctrl_Grp|CrocRig:Belt_Buckle_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1047]" ""
+		"CrocRigRN.placeHolderList[1038]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Buckle_Jnt_Ctrl_Grp|CrocRig:Belt_Buckle_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1048]" ""
+		"CrocRigRN.placeHolderList[1039]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Buckle_Jnt_Ctrl_Grp|CrocRig:Belt_Buckle_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1049]" ""
+		"CrocRigRN.placeHolderList[1040]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Buckle_Jnt_Ctrl_Grp|CrocRig:Belt_Buckle_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1050]" ""
+		"CrocRigRN.placeHolderList[1041]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Buckle_Jnt_Ctrl_Grp|CrocRig:Belt_Buckle_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1051]" ""
+		"CrocRigRN.placeHolderList[1042]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Buckle_Jnt_Ctrl_Grp|CrocRig:Belt_Buckle_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1052]" ""
+		"CrocRigRN.placeHolderList[1043]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Buckle_Jnt_Ctrl_Grp|CrocRig:Belt_Buckle_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1053]" ""
+		"CrocRigRN.placeHolderList[1044]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Buckle_Jnt_Ctrl_Grp|CrocRig:Belt_Buckle_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1054]" ""
+		"CrocRigRN.placeHolderList[1045]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Buckle_Jnt_Ctrl_Grp|CrocRig:Belt_Buckle_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1055]" ""
+		"CrocRigRN.placeHolderList[1046]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1056]" ""
+		"CrocRigRN.placeHolderList[1047]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1057]" ""
+		"CrocRigRN.placeHolderList[1048]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1058]" ""
+		"CrocRigRN.placeHolderList[1049]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1059]" ""
+		"CrocRigRN.placeHolderList[1050]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1060]" ""
+		"CrocRigRN.placeHolderList[1051]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1061]" ""
+		"CrocRigRN.placeHolderList[1052]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1062]" ""
+		"CrocRigRN.placeHolderList[1053]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1063]" ""
+		"CrocRigRN.placeHolderList[1054]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_2_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1064]" ""
+		"CrocRigRN.placeHolderList[1055]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1065]" ""
+		"CrocRigRN.placeHolderList[1056]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1066]" ""
+		"CrocRigRN.placeHolderList[1057]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1067]" ""
+		"CrocRigRN.placeHolderList[1058]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1068]" ""
+		"CrocRigRN.placeHolderList[1059]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1069]" ""
+		"CrocRigRN.placeHolderList[1060]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1070]" ""
+		"CrocRigRN.placeHolderList[1061]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1071]" ""
+		"CrocRigRN.placeHolderList[1062]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1072]" ""
+		"CrocRigRN.placeHolderList[1063]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Cloth_Ctrl_Jnt_Ctrls|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl_Grp|CrocRig:Cloth_Ctrl_Jnt_1_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1073]" ""
+		"CrocRigRN.placeHolderList[1064]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_1_Ctrl_Grp|CrocRig:L_Belt_Jnt_1_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1074]" ""
+		"CrocRigRN.placeHolderList[1065]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_1_Ctrl_Grp|CrocRig:L_Belt_Jnt_1_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1075]" ""
+		"CrocRigRN.placeHolderList[1066]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_1_Ctrl_Grp|CrocRig:L_Belt_Jnt_1_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1076]" ""
+		"CrocRigRN.placeHolderList[1067]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_1_Ctrl_Grp|CrocRig:L_Belt_Jnt_1_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1077]" ""
+		"CrocRigRN.placeHolderList[1068]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_1_Ctrl_Grp|CrocRig:L_Belt_Jnt_1_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1078]" ""
+		"CrocRigRN.placeHolderList[1069]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_1_Ctrl_Grp|CrocRig:L_Belt_Jnt_1_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1079]" ""
+		"CrocRigRN.placeHolderList[1070]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_1_Ctrl_Grp|CrocRig:L_Belt_Jnt_1_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1080]" ""
+		"CrocRigRN.placeHolderList[1071]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_1_Ctrl_Grp|CrocRig:L_Belt_Jnt_1_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1081]" ""
+		"CrocRigRN.placeHolderList[1072]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_1_Ctrl_Grp|CrocRig:L_Belt_Jnt_1_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1082]" ""
+		"CrocRigRN.placeHolderList[1073]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_3_Ctrl_Grp|CrocRig:L_Belt_Jnt_3_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1083]" ""
+		"CrocRigRN.placeHolderList[1074]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_3_Ctrl_Grp|CrocRig:L_Belt_Jnt_3_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1084]" ""
+		"CrocRigRN.placeHolderList[1075]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_3_Ctrl_Grp|CrocRig:L_Belt_Jnt_3_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1085]" ""
+		"CrocRigRN.placeHolderList[1076]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_3_Ctrl_Grp|CrocRig:L_Belt_Jnt_3_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1086]" ""
+		"CrocRigRN.placeHolderList[1077]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_3_Ctrl_Grp|CrocRig:L_Belt_Jnt_3_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1087]" ""
+		"CrocRigRN.placeHolderList[1078]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_3_Ctrl_Grp|CrocRig:L_Belt_Jnt_3_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1088]" ""
+		"CrocRigRN.placeHolderList[1079]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_3_Ctrl_Grp|CrocRig:L_Belt_Jnt_3_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1089]" ""
+		"CrocRigRN.placeHolderList[1080]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_3_Ctrl_Grp|CrocRig:L_Belt_Jnt_3_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1090]" ""
+		"CrocRigRN.placeHolderList[1081]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_3_Ctrl_Grp|CrocRig:L_Belt_Jnt_3_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1091]" ""
+		"CrocRigRN.placeHolderList[1082]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_2_Ctrl_Grp|CrocRig:L_Belt_Jnt_2_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1092]" ""
+		"CrocRigRN.placeHolderList[1083]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_2_Ctrl_Grp|CrocRig:L_Belt_Jnt_2_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1093]" ""
+		"CrocRigRN.placeHolderList[1084]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_2_Ctrl_Grp|CrocRig:L_Belt_Jnt_2_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1094]" ""
+		"CrocRigRN.placeHolderList[1085]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_2_Ctrl_Grp|CrocRig:L_Belt_Jnt_2_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1095]" ""
+		"CrocRigRN.placeHolderList[1086]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_2_Ctrl_Grp|CrocRig:L_Belt_Jnt_2_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1096]" ""
+		"CrocRigRN.placeHolderList[1087]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_2_Ctrl_Grp|CrocRig:L_Belt_Jnt_2_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1097]" ""
+		"CrocRigRN.placeHolderList[1088]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_2_Ctrl_Grp|CrocRig:L_Belt_Jnt_2_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1098]" ""
+		"CrocRigRN.placeHolderList[1089]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_2_Ctrl_Grp|CrocRig:L_Belt_Jnt_2_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1099]" ""
+		"CrocRigRN.placeHolderList[1090]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_Jnt_2_Ctrl_Grp|CrocRig:L_Belt_Jnt_2_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1100]" ""
+		"CrocRigRN.placeHolderList[1091]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1101]" ""
+		"CrocRigRN.placeHolderList[1092]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1102]" ""
+		"CrocRigRN.placeHolderList[1093]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1103]" ""
+		"CrocRigRN.placeHolderList[1094]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1104]" ""
+		"CrocRigRN.placeHolderList[1095]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1105]" ""
+		"CrocRigRN.placeHolderList[1096]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1106]" ""
+		"CrocRigRN.placeHolderList[1097]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1107]" ""
+		"CrocRigRN.placeHolderList[1098]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1108]" ""
+		"CrocRigRN.placeHolderList[1099]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:L_Belt_BuckleBack_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1109]" ""
+		"CrocRigRN.placeHolderList[1100]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_1_Ctrl_Grp|CrocRig:R_Belt_Jnt_1_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1110]" ""
+		"CrocRigRN.placeHolderList[1101]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_1_Ctrl_Grp|CrocRig:R_Belt_Jnt_1_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1111]" ""
+		"CrocRigRN.placeHolderList[1102]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_1_Ctrl_Grp|CrocRig:R_Belt_Jnt_1_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1112]" ""
+		"CrocRigRN.placeHolderList[1103]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_1_Ctrl_Grp|CrocRig:R_Belt_Jnt_1_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1113]" ""
+		"CrocRigRN.placeHolderList[1104]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_1_Ctrl_Grp|CrocRig:R_Belt_Jnt_1_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1114]" ""
+		"CrocRigRN.placeHolderList[1105]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_1_Ctrl_Grp|CrocRig:R_Belt_Jnt_1_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1115]" ""
+		"CrocRigRN.placeHolderList[1106]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_1_Ctrl_Grp|CrocRig:R_Belt_Jnt_1_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1116]" ""
+		"CrocRigRN.placeHolderList[1107]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_1_Ctrl_Grp|CrocRig:R_Belt_Jnt_1_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1117]" ""
+		"CrocRigRN.placeHolderList[1108]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_1_Ctrl_Grp|CrocRig:R_Belt_Jnt_1_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1118]" ""
+		"CrocRigRN.placeHolderList[1109]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1119]" ""
+		"CrocRigRN.placeHolderList[1110]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1120]" ""
+		"CrocRigRN.placeHolderList[1111]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1121]" ""
+		"CrocRigRN.placeHolderList[1112]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1122]" ""
+		"CrocRigRN.placeHolderList[1113]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1123]" ""
+		"CrocRigRN.placeHolderList[1114]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1124]" ""
+		"CrocRigRN.placeHolderList[1115]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1125]" ""
+		"CrocRigRN.placeHolderList[1116]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1126]" ""
+		"CrocRigRN.placeHolderList[1117]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl_Grp|CrocRig:R_Belt_BuckleBack_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1127]" ""
+		"CrocRigRN.placeHolderList[1118]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_2_Ctrl_Grp|CrocRig:R_Belt_Jnt_2_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1128]" ""
+		"CrocRigRN.placeHolderList[1119]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_2_Ctrl_Grp|CrocRig:R_Belt_Jnt_2_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1129]" ""
+		"CrocRigRN.placeHolderList[1120]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_2_Ctrl_Grp|CrocRig:R_Belt_Jnt_2_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1130]" ""
+		"CrocRigRN.placeHolderList[1121]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_2_Ctrl_Grp|CrocRig:R_Belt_Jnt_2_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1131]" ""
+		"CrocRigRN.placeHolderList[1122]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_2_Ctrl_Grp|CrocRig:R_Belt_Jnt_2_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1132]" ""
+		"CrocRigRN.placeHolderList[1123]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_2_Ctrl_Grp|CrocRig:R_Belt_Jnt_2_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1133]" ""
+		"CrocRigRN.placeHolderList[1124]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_2_Ctrl_Grp|CrocRig:R_Belt_Jnt_2_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1134]" ""
+		"CrocRigRN.placeHolderList[1125]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_2_Ctrl_Grp|CrocRig:R_Belt_Jnt_2_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1135]" ""
+		"CrocRigRN.placeHolderList[1126]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_2_Ctrl_Grp|CrocRig:R_Belt_Jnt_2_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1136]" ""
+		"CrocRigRN.placeHolderList[1127]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_3_Ctrl_Grp|CrocRig:R_Belt_Jnt_3_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1137]" ""
+		"CrocRigRN.placeHolderList[1128]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_3_Ctrl_Grp|CrocRig:R_Belt_Jnt_3_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1138]" ""
+		"CrocRigRN.placeHolderList[1129]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_3_Ctrl_Grp|CrocRig:R_Belt_Jnt_3_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1139]" ""
+		"CrocRigRN.placeHolderList[1130]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_3_Ctrl_Grp|CrocRig:R_Belt_Jnt_3_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1140]" ""
+		"CrocRigRN.placeHolderList[1131]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_3_Ctrl_Grp|CrocRig:R_Belt_Jnt_3_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1141]" ""
+		"CrocRigRN.placeHolderList[1132]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_3_Ctrl_Grp|CrocRig:R_Belt_Jnt_3_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1142]" ""
+		"CrocRigRN.placeHolderList[1133]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_3_Ctrl_Grp|CrocRig:R_Belt_Jnt_3_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1143]" ""
+		"CrocRigRN.placeHolderList[1134]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_3_Ctrl_Grp|CrocRig:R_Belt_Jnt_3_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1144]" ""
+		"CrocRigRN.placeHolderList[1135]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Belt_Ctrls|CrocRig:R_Belt_Jnt_3_Ctrl_Grp|CrocRig:R_Belt_Jnt_3_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1145]" ""
+		"CrocRigRN.placeHolderList[1136]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Shield_Ctrl_Grp|CrocRig:Shield_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1146]" ""
+		"CrocRigRN.placeHolderList[1137]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Shield_Ctrl_Grp|CrocRig:Shield_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1147]" ""
+		"CrocRigRN.placeHolderList[1138]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Shield_Ctrl_Grp|CrocRig:Shield_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1148]" ""
+		"CrocRigRN.placeHolderList[1139]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Shield_Ctrl_Grp|CrocRig:Shield_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1149]" ""
+		"CrocRigRN.placeHolderList[1140]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Shield_Ctrl_Grp|CrocRig:Shield_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1150]" ""
+		"CrocRigRN.placeHolderList[1141]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Shield_Ctrl_Grp|CrocRig:Shield_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1151]" ""
+		"CrocRigRN.placeHolderList[1142]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Shield_Ctrl_Grp|CrocRig:Shield_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1152]" ""
+		"CrocRigRN.placeHolderList[1143]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Shield_Ctrl_Grp|CrocRig:Shield_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1153]" ""
+		"CrocRigRN.placeHolderList[1144]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Shield_Ctrl_Grp|CrocRig:Shield_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1154]" ""
+		"CrocRigRN.placeHolderList[1145]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ctrl_Grp|CrocRig:Spear_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1155]" ""
+		"CrocRigRN.placeHolderList[1146]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ctrl_Grp|CrocRig:Spear_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1156]" ""
+		"CrocRigRN.placeHolderList[1147]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ctrl_Grp|CrocRig:Spear_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1157]" ""
+		"CrocRigRN.placeHolderList[1148]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ctrl_Grp|CrocRig:Spear_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1158]" ""
+		"CrocRigRN.placeHolderList[1149]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ctrl_Grp|CrocRig:Spear_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1159]" ""
+		"CrocRigRN.placeHolderList[1150]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ctrl_Grp|CrocRig:Spear_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1160]" ""
+		"CrocRigRN.placeHolderList[1151]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ctrl_Grp|CrocRig:Spear_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1161]" ""
+		"CrocRigRN.placeHolderList[1152]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ctrl_Grp|CrocRig:Spear_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1162]" ""
+		"CrocRigRN.placeHolderList[1153]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ctrl_Grp|CrocRig:Spear_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1163]" ""
+		"CrocRigRN.placeHolderList[1154]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_Grp|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl.rotateX" 
-		"CrocRigRN.placeHolderList[1164]" ""
+		"CrocRigRN.placeHolderList[1155]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_Grp|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl.rotateY" 
-		"CrocRigRN.placeHolderList[1165]" ""
+		"CrocRigRN.placeHolderList[1156]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_Grp|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl.rotateZ" 
-		"CrocRigRN.placeHolderList[1166]" ""
+		"CrocRigRN.placeHolderList[1157]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_Grp|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl.translateX" 
-		"CrocRigRN.placeHolderList[1167]" ""
+		"CrocRigRN.placeHolderList[1158]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_Grp|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl.translateY" 
-		"CrocRigRN.placeHolderList[1168]" ""
+		"CrocRigRN.placeHolderList[1159]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_Grp|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl.translateZ" 
-		"CrocRigRN.placeHolderList[1169]" ""
+		"CrocRigRN.placeHolderList[1160]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_Grp|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl.scaleX" 
-		"CrocRigRN.placeHolderList[1170]" ""
+		"CrocRigRN.placeHolderList[1161]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_Grp|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl.scaleY" 
-		"CrocRigRN.placeHolderList[1171]" ""
+		"CrocRigRN.placeHolderList[1162]" ""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_Grp|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl.scaleZ" 
-		"CrocRigRN.placeHolderList[1172]" "";
+		"CrocRigRN.placeHolderList[1163]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode aiOptions -s -n "defaultArnoldRenderOptions";
@@ -3809,14 +3790,14 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1227\n            -height 356\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n"
 		+ "            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n"
-		+ "            -width 1227\n            -height 356\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
+		+ "            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
 		+ "            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n"
 		+ "            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n"
-		+ "            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1227\n            -height 356\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
+		+ "            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
 		+ "            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n"
 		+ "            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n"
 		+ "            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 2461\n            -height 757\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n"
@@ -3852,7 +3833,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "2EC3D4F3-4442-8660-9BD5-5A82CA2CE391";
-	setAttr ".b" -type "string" "playbackOptions -min 0 -max 22 -ast 0 -aet 500 ";
+	setAttr ".b" -type "string" "playbackOptions -min -10 -max 22 -ast -10 -aet 500 ";
 	setAttr ".st" 6;
 createNode animCurveTL -n "L_Eyebrow_Ctrl_Jnt_2_Ctrl_translateX";
 	rename -uid "32B582EE-4942-C905-DED4-DD88330E9902";
@@ -3888,17 +3869,17 @@ createNode animCurveTL -n "Eye_Target_Main_Ctrl_translateX";
 	rename -uid "017C88C9-4C91-1719-0A31-89B40DAFEF28";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Eye_Target_Main_Ctrl_translateY";
 	rename -uid "F3852FD4-45CD-8F5C-D4FB-19868B2336C5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Eye_Target_Main_Ctrl_translateZ";
 	rename -uid "3824C07E-43A0-38EE-C75F-A780AA17F9F8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Eyelid_Lower_2_Jnt_Ctrl_translateX";
 	rename -uid "4DFD2745-4371-B787-82A0-2E83EA127885";
 	setAttr ".tan" 18;
@@ -3918,17 +3899,17 @@ createNode animCurveTL -n "R_MiddleFinger_02_Ctrl_translateX";
 	rename -uid "9FFE6627-47D2-501F-B589-B7A6E5124D5C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_MiddleFinger_02_Ctrl_translateY";
 	rename -uid "94CAB3A3-428D-56F1-4373-C982B6249FF5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_MiddleFinger_02_Ctrl_translateZ";
 	rename -uid "F83F5A27-4422-8EA5-A07F-97AF524BFEDB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Mouth_Upper_Jnt_2_Ctrl_translateX";
 	rename -uid "1FDB2A2E-45D9-F60A-2D8F-71AF1A0ECC35";
 	setAttr ".tan" 18;
@@ -3978,32 +3959,53 @@ createNode animCurveTL -n "L_Eye_Aim_Ctrl_Ctrl_translateX";
 	rename -uid "033014CA-447A-DF2C-AE03-2ABFA3BB3F92";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Eye_Aim_Ctrl_Ctrl_translateY";
 	rename -uid "2B6853EF-43DC-F07C-D943-36B1588875E8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Eye_Aim_Ctrl_Ctrl_translateZ";
 	rename -uid "0BEF9F14-4A99-0EAA-2843-C593E38A3E0D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Hand_IK_Ctrl_translateX";
 	rename -uid "FC0A2D9D-45FE-9513-D919-AABD8E306B34";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 -0.84275111562895089 15.454547448979591 -1.1378626273411758;
+	setAttr -s 4 ".ktv[0:3]"  -8 -0.63303446681216524 -4 -0.88430138695447602
+		 0 -1.2281123009379902 15 -1.1378626273411758;
+	setAttr -s 4 ".kit[2:3]"  1 18;
+	setAttr -s 4 ".kot[2:3]"  1 18;
+	setAttr -s 4 ".kix[2:3]"  1 1;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[2:3]"  1 1;
+	setAttr -s 4 ".koy[2:3]"  0 0;
 createNode animCurveTL -n "L_Hand_IK_Ctrl_translateY";
 	rename -uid "C011A4A9-4D62-9C49-526C-A38722938DB8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0.87353519838002991 15.454547448979591 -0.22365620504852882;
+	setAttr -s 4 ".ktv[0:3]"  -8 1.1156413148597331 -4 0.67097664635026555
+		 0 0.32716573236675139 15 -0.22365620504852882;
+	setAttr -s 4 ".kit[2:3]"  1 18;
+	setAttr -s 4 ".kot[2:3]"  1 18;
+	setAttr -s 4 ".kix[2:3]"  1 1;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[2:3]"  1 1;
+	setAttr -s 4 ".koy[2:3]"  0 0;
 createNode animCurveTL -n "L_Hand_IK_Ctrl_translateZ";
 	rename -uid "1F204F31-49F4-1CBB-9B3C-1EB0C5E6C3C7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0.71781347448011013 15.454547448979591 1.8088841059163845;
+	setAttr -s 4 ".ktv[0:3]"  -8 0.84677429351499822 -4 0.84677429351499822
+		 0 0.50653834858619473 15 1.8088841059163845;
+	setAttr -s 4 ".kit[2:3]"  1 18;
+	setAttr -s 4 ".kot[2:3]"  1 18;
+	setAttr -s 4 ".kix[2:3]"  1 1;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[2:3]"  1 1;
+	setAttr -s 4 ".koy[2:3]"  0 0;
 createNode animCurveTL -n "L_Eyebrow_Ctrl_Jnt_1_Ctrl_translateX";
 	rename -uid "67CF9658-49C4-3DEC-FC2A-9D919AAEE74E";
 	setAttr ".tan" 18;
@@ -4023,47 +4025,47 @@ createNode animCurveTL -n "L_RingFinger_03_Ctrl_translateX";
 	rename -uid "D6F2ECFE-4D20-1DDC-9D0E-A8BE69BB3E54";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_RingFinger_03_Ctrl_translateY";
 	rename -uid "AB82CCA4-422A-3515-656A-B89FA12A8038";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_RingFinger_03_Ctrl_translateZ";
 	rename -uid "D2DC511F-42A2-6AF9-C31D-9089C8B8D6CE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_12_Jnt_FK_Ctrl_translateX";
 	rename -uid "8D7D149A-42AD-F379-22B8-54823A43E925";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_12_Jnt_FK_Ctrl_translateY";
 	rename -uid "C372FD10-48BE-4415-F87F-79BE4AF0FEEF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_12_Jnt_FK_Ctrl_translateZ";
 	rename -uid "B96E7865-478B-F4A8-696E-149E17F5467D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_06_Jnt_FK_Ctrl_translateX";
 	rename -uid "556ECDB1-4705-C075-4C73-46913AFEAA47";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_06_Jnt_FK_Ctrl_translateY";
 	rename -uid "74F5D6C3-4A6D-4D5E-0E5F-5DB3AA03CCE4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_06_Jnt_FK_Ctrl_translateZ";
 	rename -uid "B978CD3A-4211-0910-BE8D-EB847853538F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Eyelid_Lower_2_Jnt_Ctrl_translateX";
 	rename -uid "3F452DA8-4F9B-767B-8020-4897B8AEE214";
 	setAttr ".tan" 18;
@@ -4083,47 +4085,47 @@ createNode animCurveTL -n "R_Belt_Jnt_3_Ctrl_translateX";
 	rename -uid "24F23C37-4A69-19DD-8939-E39A86651A12";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Belt_Jnt_3_Ctrl_translateY";
 	rename -uid "B8AFAAE3-4F09-752C-A1A5-5DA260602267";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Belt_Jnt_3_Ctrl_translateZ";
 	rename -uid "F5BE9494-40D8-4DA9-5427-8793EA1B5A62";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Leg_IK_PV_Ctrl_translateX";
 	rename -uid "0E4E1EDD-4745-7266-9179-CB80463059BE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Leg_IK_PV_Ctrl_translateY";
 	rename -uid "91A10087-4BC6-EF6B-0557-41BB91F87D58";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Leg_IK_PV_Ctrl_translateZ";
 	rename -uid "E0B78FA4-4711-6B7E-29AE-0CB888FA9E63";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  2.3181821428571427 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  2.3181821428571427 0 15 0;
 createNode animCurveTL -n "R_Thumb_01_Ctrl_translateX";
 	rename -uid "A0A9932C-46B3-BC97-4AA1-C2A7924473D2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Thumb_01_Ctrl_translateY";
 	rename -uid "59A8CD55-4166-821C-D780-E38CDA48A95B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Thumb_01_Ctrl_translateZ";
 	rename -uid "CF34D802-49B8-4940-2A83-A2B89D663613";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Spine_03_FK_Ctrl_translateX";
 	rename -uid "0217D268-4A07-AB0E-2E16-28ADC941B707";
 	setAttr ".tan" 18;
@@ -4143,77 +4145,77 @@ createNode animCurveTL -n "Tail_03_Jnt_FK_Ctrl_translateX";
 	rename -uid "B1A8D94F-4000-4A6D-2FB1-ACA8475B25B3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_03_Jnt_FK_Ctrl_translateY";
 	rename -uid "9337D3D0-49E7-E0CE-07B9-6FB2F6127529";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_03_Jnt_FK_Ctrl_translateZ";
 	rename -uid "C1D067AA-42DA-9C6F-F4F5-78BA41FFFA7C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Belt_Jnt_3_Ctrl_translateX";
 	rename -uid "340E032D-4EF6-B1FE-0BDC-A7AD4071D0BA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Belt_Jnt_3_Ctrl_translateY";
 	rename -uid "BD5A2CE2-4C03-908E-545A-02AA9DC9ADFE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Belt_Jnt_3_Ctrl_translateZ";
 	rename -uid "D06E0387-46B8-B4B0-C101-DC9129F8B288";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_07_Jnt_FK_Ctrl_translateX";
 	rename -uid "A8CB3853-475F-E408-7C2F-59A0AB0CCCF5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_07_Jnt_FK_Ctrl_translateY";
 	rename -uid "8E0E743C-4661-B895-BD11-D08DDA4D4BD3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_07_Jnt_FK_Ctrl_translateZ";
 	rename -uid "FF737D16-4AE5-A183-8A39-19B97D2DEF92";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Belt_BuckleBack_Jnt_Ctrl_translateX";
 	rename -uid "4CDB6FB2-4712-12AC-1F8D-5EAA3EFFAAFB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Belt_BuckleBack_Jnt_Ctrl_translateY";
 	rename -uid "49AEB108-4F02-F164-E94A-E2981A88F354";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Belt_BuckleBack_Jnt_Ctrl_translateZ";
 	rename -uid "54EDD032-4228-BAD7-C6DB-709D9DDBA3BD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_RingFinger_01_Ctrl_translateX";
 	rename -uid "2BE8286E-41E1-561F-615C-07A92B08AAF5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_RingFinger_01_Ctrl_translateY";
 	rename -uid "D042C819-45E2-0817-CDF1-1BB28F7655CB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_RingFinger_01_Ctrl_translateZ";
 	rename -uid "21F47CDB-48DF-DF64-3129-B7889FB8C7D1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Mouth_Upper_Center_Jnt_Ctrl_translateX";
 	rename -uid "5AB7A6D5-4614-03DD-3BBD-64B88131E3A9";
 	setAttr ".tan" 18;
@@ -4233,32 +4235,32 @@ createNode animCurveTL -n "Tail_04_Jnt_FK_Ctrl_translateX";
 	rename -uid "791E921C-44C2-B7B2-8CF5-5EBBA1D552E5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_04_Jnt_FK_Ctrl_translateY";
 	rename -uid "BDCDC067-41E9-BE37-0BC6-2EA236718692";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_04_Jnt_FK_Ctrl_translateZ";
 	rename -uid "4A25DF19-43DF-8C56-1A18-F6A026736783";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Belt_Jnt_1_Ctrl_translateX";
 	rename -uid "F04B63EA-49E9-AB2F-1E82-E98C5A1CAF3F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Belt_Jnt_1_Ctrl_translateY";
 	rename -uid "E58A6AB7-40CD-81E2-490F-D18E055EEF57";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Belt_Jnt_1_Ctrl_translateZ";
 	rename -uid "2B3A5ECA-425E-DFE3-7A88-E5825997CDCD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Nostril_Joint_Ctrl_translateX";
 	rename -uid "8A7BF432-455D-E63A-779D-B8B52C8AA620";
 	setAttr ".tan" 18;
@@ -4293,32 +4295,32 @@ createNode animCurveTL -n "L_Reverse_Foot_Inner_Ctrl_translateX";
 	rename -uid "AC93ACE0-4581-BF92-F3DF-EE8972AA508B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Reverse_Foot_Inner_Ctrl_translateY";
 	rename -uid "64B1AA8E-422A-3E95-A102-2A8C06530D9E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Reverse_Foot_Inner_Ctrl_translateZ";
 	rename -uid "2C5DB776-4B3B-AF28-F1A6-AEB44FC00385";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Arm_IK_PV_Ctrl_translateX";
 	rename -uid "CDA68948-43A2-9BB4-51ED-CDB3CDEC9BD9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 -2.7180552735336883;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 -2.7180552735336883;
 createNode animCurveTL -n "L_Arm_IK_PV_Ctrl_translateY";
 	rename -uid "92BEAC01-41DF-DE86-D57E-009329C7C211";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 15.454547278911564 0 15.454547448979591 0;
+	setAttr -s 3 ".ktv[0:2]"  0 0 15 0 15.000000170068027 0;
 createNode animCurveTL -n "L_Arm_IK_PV_Ctrl_translateZ";
 	rename -uid "99FAA70F-4996-2FD2-9E19-53ABC6A4579E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 -1.7876203560853943;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 -1.7876203560853943;
 createNode animCurveTL -n "Snout_Bridge_Jnt_Ctrl_translateX";
 	rename -uid "BBA2E038-49D3-C70D-60C5-B1B20B9A8D6A";
 	setAttr ".tan" 18;
@@ -4353,77 +4355,77 @@ createNode animCurveTL -n "L_RingFinger_01_Ctrl_translateX";
 	rename -uid "197EBA0F-4C44-3EEE-D667-6C88C6A88C2F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_RingFinger_01_Ctrl_translateY";
 	rename -uid "381EAF41-4924-8BFA-4520-C8B5901E867B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_RingFinger_01_Ctrl_translateZ";
 	rename -uid "D6517A93-431A-716E-912E-6DA3F610ED2A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Reverse_Foot_Heel_Ctrl_translateX";
 	rename -uid "A0B0FCDD-4603-339A-7332-99A624A0EA0A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Reverse_Foot_Heel_Ctrl_translateY";
 	rename -uid "52F80E08-4ECF-8088-96E8-0EAF5C133355";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Reverse_Foot_Heel_Ctrl_translateZ";
 	rename -uid "E43B7574-471D-F27F-025C-C790AB3B2B17";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Pelvis_Ctrl_translateX";
 	rename -uid "4CB57F70-43EC-BE72-005C-338AB1AEF6FE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Pelvis_Ctrl_translateY";
 	rename -uid "F8CF779B-4F2C-4550-0177-E0BBE5473D5C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Pelvis_Ctrl_translateZ";
 	rename -uid "27FE3E57-44E8-F26E-D56C-FA94983EF3AF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_02_Jnt_FK_Ctrl_translateX";
 	rename -uid "479ED161-4190-5473-7B1F-6BBA2BABD7E4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_02_Jnt_FK_Ctrl_translateY";
 	rename -uid "D460AA59-43BA-A374-4924-9BB1FEE7BAA1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_02_Jnt_FK_Ctrl_translateZ";
 	rename -uid "E1031955-4FD8-8264-F158-71BDAD0B403F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Thumb_02_Ctrl_translateX";
 	rename -uid "A4BAEE1F-498D-63FF-5E1C-5FA91582C6EB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Thumb_02_Ctrl_translateY";
 	rename -uid "E36D7BFC-4877-02FA-7036-04B937CC6C50";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Thumb_02_Ctrl_translateZ";
 	rename -uid "7ADF4F01-4AAE-5845-7B24-86A07EAF6168";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Eyelid_Lower_1_Jnt_Ctrl_translateX";
 	rename -uid "5F9C1AB6-4D4C-EFD0-FDC1-D4A9FFC1E592";
 	setAttr ".tan" 18;
@@ -4475,77 +4477,77 @@ createNode animCurveTL -n "R_Belt_BuckleBack_Jnt_Ctrl_translateX";
 	rename -uid "7D8A970B-4101-C411-6C92-E8BFCAF99C51";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Belt_BuckleBack_Jnt_Ctrl_translateY";
 	rename -uid "5DB23F13-4434-5C4D-2F2A-12A6954685DE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Belt_BuckleBack_Jnt_Ctrl_translateZ";
 	rename -uid "1277A25F-410E-4366-F0A3-8EB89C9B73FD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_11_Jnt_FK_Ctrl_translateX";
 	rename -uid "37E0A6A3-47A6-8A55-B5CB-B7912E0CF985";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_11_Jnt_FK_Ctrl_translateY";
 	rename -uid "6EE74264-4D62-62AD-F293-9B9B428B5454";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_11_Jnt_FK_Ctrl_translateZ";
 	rename -uid "5F41FF4A-416A-4A06-3E8C-CDA0E632EDE4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_MiddleFinger_01_Ctrl_translateX";
 	rename -uid "287C805B-4035-B623-2617-02AAB2466A0E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_MiddleFinger_01_Ctrl_translateY";
 	rename -uid "2BFCBD05-480C-0B4A-A241-33B65B25DBDC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_MiddleFinger_01_Ctrl_translateZ";
 	rename -uid "E4755573-42DE-7CF2-FA14-6494096FD677";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_PointerFinger_03_Ctrl_translateX";
 	rename -uid "CE496606-4114-8126-98BE-27A080CD6AC0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_PointerFinger_03_Ctrl_translateY";
 	rename -uid "803AF88D-48EA-18F4-19A9-EB94542652E0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_PointerFinger_03_Ctrl_translateZ";
 	rename -uid "3904FB76-46BC-24B9-9821-7FA28C026219";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_MiddleFinger_02_Ctrl_translateX";
 	rename -uid "8A7879FD-410A-D957-6785-B9A99831D4CE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_MiddleFinger_02_Ctrl_translateY";
 	rename -uid "7E4DEF45-4E49-0074-EF4A-67B1A632AE56";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_MiddleFinger_02_Ctrl_translateZ";
 	rename -uid "DEA669C5-45D5-88DE-A048-DAB44C4D6DC4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Eyelid_Upper_3_Jnt_Ctrl_translateX";
 	rename -uid "4294AE87-45D2-7C95-4B6B-DEA46427ED40";
 	setAttr ".tan" 18;
@@ -4565,62 +4567,62 @@ createNode animCurveTL -n "Tail_10_Jnt_FK_Ctrl_translateX";
 	rename -uid "67160F6D-4EFC-C6EF-485D-5D82B80C5602";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_10_Jnt_FK_Ctrl_translateY";
 	rename -uid "3B9AE4F4-4431-8C25-5522-5581A732507C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_10_Jnt_FK_Ctrl_translateZ";
 	rename -uid "F9F3AA65-44C3-0463-B8DF-9F9BEB06CC40";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Belt_Buckle_Jnt_Ctrl_translateX";
 	rename -uid "45A60254-4068-6C2B-E985-768A32F25A93";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Belt_Buckle_Jnt_Ctrl_translateY";
 	rename -uid "739F9565-478F-95AA-446A-348870143BDD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Belt_Buckle_Jnt_Ctrl_translateZ";
 	rename -uid "E34E7489-496F-ED3A-034E-719BB1D74C6A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_RingFinger_02_Ctrl_translateX";
 	rename -uid "F61FEFAF-41AF-ACC7-E757-009AA9F51B03";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_RingFinger_02_Ctrl_translateY";
 	rename -uid "826ACC4B-4063-24BE-E3D3-32A7E973D667";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_RingFinger_02_Ctrl_translateZ";
 	rename -uid "E0AB50A4-430E-9B6F-E65E-0AB8D1087B8F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Reverse_Foot_ToeTap_Ctrl_translateX";
 	rename -uid "259D5821-4A33-510D-8EC9-8C93D74D0EBF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Reverse_Foot_ToeTap_Ctrl_translateY";
 	rename -uid "F74E04FD-4138-E676-C496-DA825344F638";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Reverse_Foot_ToeTap_Ctrl_translateZ";
 	rename -uid "23D00171-4831-5EC5-BC7F-19B127AFEACA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Eyelid_Upper_1_Jnt_Ctrl_translateX";
 	rename -uid "A4553D34-48CE-D7DA-2102-148C980F7B3A";
 	setAttr ".tan" 18;
@@ -4655,17 +4657,17 @@ createNode animCurveTL -n "L_Leg_IK_Ctrl_translateX";
 	rename -uid "03D65E63-4D8E-E900-9A58-3AABE1029CC3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -3 -0.30157787890938748 11 -0.30157787890938748;
+	setAttr ".ktv[0]"  11 -0.30157787890938748;
 createNode animCurveTL -n "L_Leg_IK_Ctrl_translateY";
 	rename -uid "1A9F44D8-4A2A-7846-493F-F182F56C12FA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -3 0 11 0;
+	setAttr ".ktv[0]"  11 0;
 createNode animCurveTL -n "L_Leg_IK_Ctrl_translateZ";
 	rename -uid "D0AFF440-4E7B-D065-5EF9-90BCB807822A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -3 1.2660207649789395 11 1.2660207649789395;
+	setAttr ".ktv[0]"  11 1.2660207649789395;
 createNode animCurveTL -n "R_Cheek_Jnt_Ctrl_translateX";
 	rename -uid "AB5CB46F-4C36-D6F2-6B75-699FD1A7E801";
 	setAttr ".tan" 18;
@@ -4702,32 +4704,32 @@ createNode animCurveTL -n "R_Belt_Jnt_2_Ctrl_translateX";
 	rename -uid "090D7775-4EE8-9682-94B8-D5A2E1171D62";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Belt_Jnt_2_Ctrl_translateY";
 	rename -uid "E320FA6F-41C0-7046-0504-B0BFE13C7784";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Belt_Jnt_2_Ctrl_translateZ";
 	rename -uid "2A785092-4B47-BC55-F398-B9A079A225D8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_PointerFinger_02_Ctrl_translateX";
 	rename -uid "556F89F0-4680-7C57-8B01-D483A5A0A5B8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_PointerFinger_02_Ctrl_translateY";
 	rename -uid "61D32ACC-4C53-2CD7-2395-3A84698CA587";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_PointerFinger_02_Ctrl_translateZ";
 	rename -uid "59B289B6-49C6-2D74-A40F-9A854B30FCC7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Leg_IK_Ctrl_translateX";
 	rename -uid "F6357A1F-431E-CDC0-B01F-BCBD23530A17";
 	setAttr ".tan" 18;
@@ -4827,32 +4829,32 @@ createNode animCurveTL -n "L_Clav_Ctrl_translateX";
 	rename -uid "48E8D3CD-40D8-650E-4A0B-AE9FED09717F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Clav_Ctrl_translateY";
 	rename -uid "EA04CB23-4C9C-3067-CE04-E49463F6DB8D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Clav_Ctrl_translateZ";
 	rename -uid "57D6D793-4447-71B4-E36B-35877BBCD55F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_09_Jnt_FK_Ctrl_translateX";
 	rename -uid "CD7E3283-4C68-F894-8005-8D81C5070957";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_09_Jnt_FK_Ctrl_translateY";
 	rename -uid "B4E44028-419E-2698-E81D-96BE4370B4B2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_09_Jnt_FK_Ctrl_translateZ";
 	rename -uid "59B04768-43B5-B5E3-5A07-0E9D0AB15411";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Mouth_Lower_Jnt_1_Ctrl_translateX";
 	rename -uid "0AACCCA7-4F28-47E7-84AF-4BA02731FAC6";
 	setAttr ".tan" 18;
@@ -4902,62 +4904,62 @@ createNode animCurveTL -n "R_Clav_Ctrl_translateX";
 	rename -uid "60E45346-47BC-0EE2-F6F4-D5B32A586768";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 0 7 0 15.454547278911564 0 15.454547448979591 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 7 0 15 0 15.000000170068027 0;
 createNode animCurveTL -n "R_Clav_Ctrl_translateY";
 	rename -uid "8BD47450-497F-039C-07AF-DEB3C9627932";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 0 7 0 15.454547278911564 0 15.454547448979591 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 7 0 15 0 15.000000170068027 0;
 createNode animCurveTL -n "R_Clav_Ctrl_translateZ";
 	rename -uid "A998260B-4E7F-A972-2D5F-F59D320FA96C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 0 7 0 15.454547278911564 0 15.454547448979591 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 7 0 15 0 15.000000170068027 0;
 createNode animCurveTL -n "L_Reverse_Foot_ToeTap_Ctrl_translateX";
 	rename -uid "071A2FF4-4874-9F84-FDB9-7A9043D8CDA6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Reverse_Foot_ToeTap_Ctrl_translateY";
 	rename -uid "938B2F79-45AE-A06C-6C23-339EEB87114E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Reverse_Foot_ToeTap_Ctrl_translateZ";
 	rename -uid "EE84E26C-454C-27D8-BE1D-47BB2A0C58AA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Belt_Jnt_1_Ctrl_translateX";
 	rename -uid "C545C31D-4C68-AF7A-1444-D582059D1215";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Belt_Jnt_1_Ctrl_translateY";
 	rename -uid "F63943B6-461D-8250-3B00-BEBDE1C90053";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Belt_Jnt_1_Ctrl_translateZ";
 	rename -uid "BC98981E-41A0-106C-E0B6-BA8B890BDFB1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Reverse_Foot_Heel_Ctrl_translateX";
 	rename -uid "B0193A82-44B4-8463-882E-DA98C275512F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Reverse_Foot_Heel_Ctrl_translateY";
 	rename -uid "0364CFFA-4414-F113-60F4-5EA65901A973";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Reverse_Foot_Heel_Ctrl_translateZ";
 	rename -uid "2C451A81-4F6C-077A-2121-55851AE4DCEF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Mouth_Upper_Jnt_1_Ctrl_translateX";
 	rename -uid "9625D973-41F5-C82E-4997-3A968307CC62";
 	setAttr ".tan" 18;
@@ -4977,22 +4979,22 @@ createNode animCurveTL -n "R_MiddleFinger_01_Ctrl_translateX";
 	rename -uid "8014EAA6-44D9-FDC3-8B91-C9AF264EBF59";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_MiddleFinger_01_Ctrl_translateY";
 	rename -uid "48B5AF2D-4E07-F08A-D574-04B060A3EC2A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_MiddleFinger_01_Ctrl_translateZ";
 	rename -uid "84F992E1-436F-53B1-AA79-8AB9DCD3BF04";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_01_Jnt_FK_Ctrl_translateX";
 	rename -uid "38166ED7-437A-097C-3EDE-A6B841019C8D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  6 0 15 0;
+	setAttr -s 2 ".ktv[0:1]"  6 0 18 0;
 	setAttr -s 2 ".kit[1]"  1;
 	setAttr -s 2 ".kot[1]"  1;
 	setAttr -s 2 ".kix[1]"  1;
@@ -5003,7 +5005,7 @@ createNode animCurveTL -n "Tail_01_Jnt_FK_Ctrl_translateY";
 	rename -uid "BFAFD006-4401-10E1-61F7-CAA1BF482895";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  6 0 15 0;
+	setAttr -s 2 ".ktv[0:1]"  6 0 18 0;
 	setAttr -s 2 ".kit[1]"  1;
 	setAttr -s 2 ".kot[1]"  1;
 	setAttr -s 2 ".kix[1]"  1;
@@ -5014,7 +5016,7 @@ createNode animCurveTL -n "Tail_01_Jnt_FK_Ctrl_translateZ";
 	rename -uid "2F7EE83A-465A-2D4C-BA7F-8DB89C5B8304";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  6 0 15 0;
+	setAttr -s 2 ".ktv[0:1]"  6 0 18 0;
 	setAttr -s 2 ".kit[1]"  1;
 	setAttr -s 2 ".kot[1]"  1;
 	setAttr -s 2 ".kix[1]"  1;
@@ -5025,32 +5027,32 @@ createNode animCurveTL -n "R_PointerFinger_03_Ctrl_translateX";
 	rename -uid "592A9523-4607-3FCD-2E89-4086A098B519";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_PointerFinger_03_Ctrl_translateY";
 	rename -uid "F7F7068C-4C19-5CBD-B992-0D863F15BE32";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_PointerFinger_03_Ctrl_translateZ";
 	rename -uid "9A905126-4758-782E-956D-40A3D4A69CCB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Eye_Aim_Ctrl_Ctrl_translateX";
 	rename -uid "2C635965-4A8D-04F3-EDDC-D4A0D3E9A127";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Eye_Aim_Ctrl_Ctrl_translateY";
 	rename -uid "C6AA0233-4D25-7B21-067A-10A11CF60918";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Eye_Aim_Ctrl_Ctrl_translateZ";
 	rename -uid "CE02F027-49D4-3A7E-8851-B28A5301A94A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Eyelid_Upper_3_Jnt_Ctrl_translateX";
 	rename -uid "86213905-48EB-A97A-6370-23B846E923ED";
 	setAttr ".tan" 18;
@@ -5070,47 +5072,47 @@ createNode animCurveTL -n "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_translateX";
 	rename -uid "E3B1723D-4255-9CB0-8199-27963C3F5125";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 -0.00027074131099524834 15.454547448979591 -0.00027074131099524834;
+	setAttr -s 2 ".ktv[0:1]"  0 -0.00027074131099524834 15 -0.00027074131099524834;
 createNode animCurveTL -n "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_translateY";
 	rename -uid "1EE7D7A5-47A9-85F6-DD03-B68728672CA0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0.0044557576608745819 15.454547448979591 0.0044557576608745819;
+	setAttr -s 2 ".ktv[0:1]"  0 0.0044557576608745819 15 0.0044557576608745819;
 createNode animCurveTL -n "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_translateZ";
 	rename -uid "9DF5265F-4364-069C-1DE5-8198F772752F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 -0.0015047169432680363 15.454547448979591 -0.0015047169432680363;
+	setAttr -s 2 ".ktv[0:1]"  0 -0.0015047169432680363 15 -0.0015047169432680363;
 createNode animCurveTL -n "Tongue_Control_Joint_2_Ctrl_translateX";
 	rename -uid "434B1FA4-457A-4C28-FB1F-3A984375876E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tongue_Control_Joint_2_Ctrl_translateY";
 	rename -uid "E81B46DD-42E9-E8E2-AB86-0291F358129E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tongue_Control_Joint_2_Ctrl_translateZ";
 	rename -uid "4822CB46-4F61-727F-3231-1EB2643502B8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Jaw_Ctrl_translateX";
 	rename -uid "71F851A6-4B68-95DB-AADC-5DB5F012392C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Jaw_Ctrl_translateY";
 	rename -uid "D59A3EBD-470C-CFD8-791F-9489B4CF8362";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Jaw_Ctrl_translateZ";
 	rename -uid "B363DF64-43ED-6B98-51C0-68A30E331A24";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Brow_Master_Ctrl_translateX1";
 	rename -uid "79BDB83A-47DD-2C5C-CF52-CEA686591D36";
 	setAttr ".tan" 18;
@@ -5145,32 +5147,32 @@ createNode animCurveTL -n "Spear_Ctrl_translateX";
 	rename -uid "C7E28889-4C13-8D67-60A6-D0B54816144E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 -0.0049336483112380706 15.454547448979591 -0.0049336483112380706;
+	setAttr -s 2 ".ktv[0:1]"  0 -0.0049336483112380706 15 -0.0049336483112380706;
 createNode animCurveTL -n "Spear_Ctrl_translateY";
 	rename -uid "47F54C55-44A6-68AD-F365-9BBF1631EB4A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0.80485648744475369 15.454547448979591 0.80485648744475369;
+	setAttr -s 2 ".ktv[0:1]"  0 0.80485648744475369 15 0.80485648744475369;
 createNode animCurveTL -n "Spear_Ctrl_translateZ";
 	rename -uid "3A1DB01C-4F29-41F8-24D3-A983A3A8A296";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0.42546790223673747 15.454547448979591 0.42546790223673747;
+	setAttr -s 2 ".ktv[0:1]"  0 0.42546790223673747 15 0.42546790223673747;
 createNode animCurveTL -n "L_PointerFinger_02_Ctrl_translateX";
 	rename -uid "FB83CE3F-4D71-3082-E175-3899EBE07703";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_PointerFinger_02_Ctrl_translateY";
 	rename -uid "6F0D465E-479A-FCCE-C6D5-65AC5175481E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_PointerFinger_02_Ctrl_translateZ";
 	rename -uid "0111BFE5-47A4-0DB1-F9A2-908B1F91AAA0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Mouth_Upper_Jnt_3_Ctrl_translateX";
 	rename -uid "9533B021-413B-19FC-C6F6-6F8DBD5390F8";
 	setAttr ".tan" 18;
@@ -5190,17 +5192,17 @@ createNode animCurveTL -n "L_Thumb_Base_Ctrl_translateX";
 	rename -uid "D4F1C571-46E0-94AC-2CEC-F2878E643091";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Thumb_Base_Ctrl_translateY";
 	rename -uid "BFC08BA9-48A4-534C-A8CD-08B5C68F5525";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Thumb_Base_Ctrl_translateZ";
 	rename -uid "DB34F413-47C4-3258-70EA-908DAB28491F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Cheekbone_Jnt_Ctrl_translateX";
 	rename -uid "394D813C-4B16-1E48-9866-648F361B9AC2";
 	setAttr ".tan" 18;
@@ -5235,32 +5237,32 @@ createNode animCurveTL -n "R_MiddleFinger_03_Ctrl_translateX";
 	rename -uid "48C078B4-46B2-F233-6850-64A4BFE07E59";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_MiddleFinger_03_Ctrl_translateY";
 	rename -uid "0EA96C56-45E3-B5B9-A074-03A93EC3BDEC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_MiddleFinger_03_Ctrl_translateZ";
 	rename -uid "7D6172DF-4BDE-C364-9A8C-FA873E598545";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_08_Jnt_FK_Ctrl_translateX";
 	rename -uid "75F4672D-4B1C-9E6B-495A-B188042B3A1B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_08_Jnt_FK_Ctrl_translateY";
 	rename -uid "34429D2E-44A4-30B0-ABD3-EFB5848310A7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_08_Jnt_FK_Ctrl_translateZ";
 	rename -uid "364B9A7A-4914-3B77-27E1-5EB4A36D146B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Eyelid_Upper_1_Jnt_Ctrl_translateX";
 	rename -uid "4F2A93E8-47BB-18B5-D917-6BAD20A61963";
 	setAttr ".tan" 18;
@@ -5295,17 +5297,17 @@ createNode animCurveTL -n "L_Thumb_01_Ctrl_translateX";
 	rename -uid "B39B3F43-47C6-88A2-9371-B783A02AA52E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Thumb_01_Ctrl_translateY";
 	rename -uid "5CF3A007-4057-A61B-CF60-A0A21613728E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Thumb_01_Ctrl_translateZ";
 	rename -uid "AA73FE19-4196-1E7D-A364-F08A3E9020D2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Cheek_Jnt_Ctrl_translateX";
 	rename -uid "CB822B4F-42B5-5E87-06DF-549C14B8CD3F";
 	setAttr ".tan" 18;
@@ -5325,17 +5327,17 @@ createNode animCurveTL -n "Cloth_Ctrl_Jnt_1_Ctrl_translateX";
 	rename -uid "26B75AC5-498F-CB1E-80BA-32A2813BCF08";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Cloth_Ctrl_Jnt_1_Ctrl_translateY";
 	rename -uid "BF2D0C7E-4BDC-8BE4-4854-BF8488761F5D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Cloth_Ctrl_Jnt_1_Ctrl_translateZ";
 	rename -uid "DDF733A1-458A-474B-1F4F-1F9945C4281E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Mouth_Center_Lower_Jnt_Ctrl_translateX";
 	rename -uid "DF521E8A-42DC-5A6A-28BF-23B03E3D49AB";
 	setAttr ".tan" 18;
@@ -5355,77 +5357,80 @@ createNode animCurveTL -n "CoG_Ctrl_translateX";
 	rename -uid "91F5D339-406A-B940-C70E-1093B2A5A69A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -3 0 11 0;
+	setAttr -s 6 ".ktv[0:5]"  -10 0 -5 -0.41346790759639357 0 0 11 0 15 0
+		 18 -0.20360613563311414;
 createNode animCurveTL -n "CoG_Ctrl_translateY";
 	rename -uid "13BB049A-4D5B-C9AE-4BA6-66ADEE9BBC73";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -3 -0.46969140862896941 11 -0.46969140862896941;
+	setAttr -s 6 ".ktv[0:5]"  -10 -0.46969140862896941 -5 -0.46969140862896896
+		 0 -0.46969140862896941 11 -0.46969140862896941 15 -0.46969140862896941 18 -0.46969140862896941;
 createNode animCurveTL -n "CoG_Ctrl_translateZ";
 	rename -uid "50BF1607-46D1-590E-2DF8-E9B40B0F1A70";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -3 0 11 0;
+	setAttr -s 6 ".ktv[0:5]"  -10 0 -5 -0.16039692976159597 0 0 11 0 15 0
+		 18 -0.078985087926226424;
 createNode animCurveTL -n "L_Belt_Jnt_2_Ctrl_translateX";
 	rename -uid "87D5A8B0-4DAA-9793-ACEE-458E46689923";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Belt_Jnt_2_Ctrl_translateY";
 	rename -uid "2DDE8A86-47BE-E1A0-D433-59B15338F316";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Belt_Jnt_2_Ctrl_translateZ";
 	rename -uid "6AB3272F-4FF8-5F33-8D27-34B5AA8A7F21";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Reverse_Foot_Inner_Ctrl_translateX";
 	rename -uid "15739EC7-4006-0503-872F-129DBDB026FA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Reverse_Foot_Inner_Ctrl_translateY";
 	rename -uid "EFB4672F-419C-651D-58CE-E09C9DFC2113";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Reverse_Foot_Inner_Ctrl_translateZ";
 	rename -uid "D5CBF739-431E-7B00-F1EB-38B2882DE9FF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_PointerFinger_01_Ctrl_translateX";
 	rename -uid "A353CB1D-4D0F-4E38-38F9-6F9D9EB611D6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_PointerFinger_01_Ctrl_translateY";
 	rename -uid "B36FF6B7-4A9F-356B-F4B9-6FB3FB25F1B1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_PointerFinger_01_Ctrl_translateZ";
 	rename -uid "41207367-41E7-21BF-236E-03ABCE98EBB4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_RingFinger_02_Ctrl_translateX";
 	rename -uid "A35527EA-4301-6346-FAB3-9AAF94F02D4F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_RingFinger_02_Ctrl_translateY";
 	rename -uid "57F426C0-4580-EF08-896C-F9A11E2C8FDB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_RingFinger_02_Ctrl_translateZ";
 	rename -uid "74F8BB75-450B-8F7F-4138-08814F0F2BB0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Mouth_Upper_Jnt_1_Ctrl_translateX";
 	rename -uid "572C4AFB-4F67-BCF2-FA13-B380F79EB40B";
 	setAttr ".tan" 18;
@@ -5445,32 +5450,32 @@ createNode animCurveTL -n "Cloth_Ctrl_Jnt_2_Ctrl_translateX";
 	rename -uid "1945537A-4B20-0FB0-02B7-BDBC67E4F3F1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Cloth_Ctrl_Jnt_2_Ctrl_translateY";
 	rename -uid "2C88EE62-49FA-464F-63F2-EF885AA05B99";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Cloth_Ctrl_Jnt_2_Ctrl_translateZ";
 	rename -uid "7C927889-43D6-7AC7-1BAD-7388306B01BB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_PointerFinger_01_Ctrl_translateX";
 	rename -uid "82464FA9-4193-9EB7-55CB-4B813E377D3F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_PointerFinger_01_Ctrl_translateY";
 	rename -uid "EF065732-4EF4-77A8-F6D4-619A83C8AC37";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_PointerFinger_01_Ctrl_translateZ";
 	rename -uid "5CD64A26-466F-0719-A89F-36BFCC1868DF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Eyebrow_Ctrl_Jnt_3_Ctrl_translateX";
 	rename -uid "D3B16EFF-4891-A63D-1FC7-66AF62EEDECF";
 	setAttr ".tan" 18;
@@ -5490,47 +5495,47 @@ createNode animCurveTL -n "L_Reverse_Foot_Toe_Ctrl_translateX";
 	rename -uid "3988DEB3-4EAC-97C9-4213-C79399C0F88E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Reverse_Foot_Toe_Ctrl_translateY";
 	rename -uid "BA8B6790-4AF1-C532-6EE9-EFA7414BCA60";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Reverse_Foot_Toe_Ctrl_translateZ";
 	rename -uid "064BA734-4DE3-1B64-84B6-ECBB66227DE7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Transform_Ctrl_translateX";
 	rename -uid "3D63D04B-44C4-1098-E891-B2B21B8C7311";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Transform_Ctrl_translateY";
 	rename -uid "AA87A4E7-4C45-44D9-1238-8184D005A18E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Transform_Ctrl_translateZ";
 	rename -uid "0376ED28-46DA-C2B6-77B8-1E9CB14842FA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 3.5719716702535242;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 3.5719716702535242;
 createNode animCurveTL -n "R_Thumb_Base_Ctrl_translateX";
 	rename -uid "3F66BCDF-46D9-5040-A2CA-F49730B8488B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Thumb_Base_Ctrl_translateY";
 	rename -uid "688C225F-493D-0E17-96BD-5EABE780DB97";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Thumb_Base_Ctrl_translateZ";
 	rename -uid "5CD9EA29-444D-F07E-DBA2-E3A69D5A0A69";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Mouth_Lower_Jnt_1_Ctrl_translateX";
 	rename -uid "C42B554B-4BB4-EC66-4F43-C0BE1265E916";
 	setAttr ".tan" 18;
@@ -5550,17 +5555,17 @@ createNode animCurveTL -n "R_Thumb_02_Ctrl_translateX";
 	rename -uid "5D2C7369-430E-46A5-3CC7-E7B87CDC1E7C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Thumb_02_Ctrl_translateY";
 	rename -uid "897C1AB5-4649-EC97-DD5B-1EA3C7B5F778";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Thumb_02_Ctrl_translateZ";
 	rename -uid "B33D82C9-4D5E-B0A7-1481-719F1F8916A7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Eyebrow_Ctrl_Jnt_2_Ctrl_translateX";
 	rename -uid "5EFF613D-4E49-E04D-F820-E294FB140D13";
 	setAttr ".tan" 18;
@@ -5580,47 +5585,47 @@ createNode animCurveTL -n "L_Reverse_Foot_Ball_Ctrl_translateX";
 	rename -uid "826A87F8-480B-8185-BDDE-A2A8E02735F9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Reverse_Foot_Ball_Ctrl_translateY";
 	rename -uid "545E14BA-4B31-21C6-603A-8F982ADD7D87";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Reverse_Foot_Ball_Ctrl_translateZ";
 	rename -uid "8596B71D-4462-3F16-9F96-449E58F9FDFD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Reverse_Foot_Ball_Ctrl_translateX";
 	rename -uid "42068F9D-4860-2957-C4D7-71ACC46FADA9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Reverse_Foot_Ball_Ctrl_translateY";
 	rename -uid "FE1D3172-466D-7BB8-0A1F-18B527571D74";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Reverse_Foot_Ball_Ctrl_translateZ";
 	rename -uid "141850E0-4379-A283-28A2-48ABB3BCB6ED";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Shield_Ctrl_translateX";
 	rename -uid "4B893D74-4EC6-5C4E-88C8-6F9EE8D0175E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Shield_Ctrl_translateY";
 	rename -uid "823951A2-47B8-FC28-8E05-E8B82DA6598C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Shield_Ctrl_translateZ";
 	rename -uid "A9DE7CF7-433F-21C4-7A93-A587167D8BFA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Eyelid_Upper_2_Jnt_Ctrl_translateX";
 	rename -uid "888FBAE6-4FC9-FDBB-484B-FFAF2B89C875";
 	setAttr ".tan" 18;
@@ -5640,17 +5645,17 @@ createNode animCurveTL -n "L_MiddleFinger_03_Ctrl_translateX";
 	rename -uid "B6DDF7B6-42D0-8254-46B9-D1ADD7DD0872";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_MiddleFinger_03_Ctrl_translateY";
 	rename -uid "61EF98C5-414B-1E80-D5CE-CDABBCF4629E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_MiddleFinger_03_Ctrl_translateZ";
 	rename -uid "4855AA3D-47DF-0D84-B11F-538482D3D885";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Mouth_Lower_Jnt_2_Ctrl_translateX";
 	rename -uid "B2D210D7-46AA-A92D-AF28-F2AA97614FF8";
 	setAttr ".tan" 18;
@@ -5670,62 +5675,62 @@ createNode animCurveTL -n "R_Reverse_Foot_Toe_Ctrl_translateX";
 	rename -uid "8AB302AC-4D8F-B73D-829D-25B53691DC70";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Reverse_Foot_Toe_Ctrl_translateY";
 	rename -uid "5DF636DA-4866-CAD5-E648-DB8CAE5C0DAF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Reverse_Foot_Toe_Ctrl_translateZ";
 	rename -uid "211A8C15-43D4-2AE1-261E-B487A4C1B698";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_05_Jnt_FK_Ctrl_translateX";
 	rename -uid "1F7EC688-4770-80A8-BF5B-EE96F57BB635";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_05_Jnt_FK_Ctrl_translateY";
 	rename -uid "C42AACE3-4F98-BEFF-93AA-9BB8A5E34A60";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tail_05_Jnt_FK_Ctrl_translateZ";
 	rename -uid "E77D0F9A-49BE-0E8B-1503-1599836BF644";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Reverse_Foot_Outer_Ctrl_translateX";
 	rename -uid "ADBC67A4-489E-31C4-4B89-DD825C9BD9ED";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Reverse_Foot_Outer_Ctrl_translateY";
 	rename -uid "8A821FDC-497C-EE29-2B11-A8877C0D0FAC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Reverse_Foot_Outer_Ctrl_translateZ";
 	rename -uid "9C2FC573-4D8F-97A1-BF70-8A8287E77513";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tongue_Control_Joint_1_Ctrl_translateX";
 	rename -uid "DF0A93FC-47A3-D02F-A52E-4F8F87E6AE62";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tongue_Control_Joint_1_Ctrl_translateY";
 	rename -uid "D345586B-47B2-D34D-1C48-B29451AF7E15";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Tongue_Control_Joint_1_Ctrl_translateZ";
 	rename -uid "BAE9B8E0-4BC5-700C-ACF9-AE9FEC66F367";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Eyelid_Lower_3_Jnt_Ctrl_translateX";
 	rename -uid "8F5B9F84-4947-46C2-B229-328BE006F07D";
 	setAttr ".tan" 18;
@@ -5745,17 +5750,17 @@ createNode animCurveTL -n "Neck_Ctrl_translateX";
 	rename -uid "CA6112F6-43FB-6F9B-41FD-00A3ED4053B6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Neck_Ctrl_translateY";
 	rename -uid "CB057665-4EBC-12BA-5E04-3D935EAFF348";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Neck_Ctrl_translateZ";
 	rename -uid "7BC02054-4323-92D1-502A-908AD6AB0442";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "L_Mouth_Lower_Jnt_3_Ctrl_translateX";
 	rename -uid "9212C3F8-43EE-B46D-5A1A-2EB5EF72E643";
 	setAttr ".tan" 18;
@@ -5775,50 +5780,83 @@ createNode animCurveTL -n "R_Reverse_Foot_Outer_Ctrl_translateX";
 	rename -uid "0953B380-4CD5-F21B-3723-8A9774681BCC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Reverse_Foot_Outer_Ctrl_translateY";
 	rename -uid "DB997699-4593-8166-2FC5-11845FEEF2EC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Reverse_Foot_Outer_Ctrl_translateZ";
 	rename -uid "893B71C6-4F63-4E23-4426-30805CD2DC68";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_Hand_IK_Ctrl_translateX";
 	rename -uid "A7A43A11-4D1D-638F-CFBB-3A85305200F8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 1.977833417532451 7.7272729591836731 2.0212860659888485
-		 11.590910204081633 1.3331248553691069 15.454547448979591 2.2559304910944022;
+	setAttr -s 7 ".ktv[0:6]"  -10 1.9150025457356339 -5 1.8963456222321891
+		 0 1.9375753999852969 8 2.0212860659888485 11 1.3331248553691069 15 2.2579530126488452
+		 18 2.2801772524852515;
+	setAttr -s 7 ".kit[0:6]"  1 18 18 18 18 18 18;
+	setAttr -s 7 ".kot[0:6]"  1 18 18 18 18 18 18;
+	setAttr -s 7 ".kix[0:6]"  0.97441466419605083 1 0.97441466419605083 
+		1 1 0.88233520002836185 1;
+	setAttr -s 7 ".kiy[0:6]"  0.22475778562643248 0 0.22475778562643248 
+		0 0 0.47062149843681245 0;
+	setAttr -s 7 ".kox[0:6]"  0.97441466419605094 1 0.97441466419605094 
+		1 1 0.88233520002836197 1;
+	setAttr -s 7 ".koy[0:6]"  0.2247577856264325 0 0.2247577856264325 
+		0 0 0.47062149843681245 0;
 createNode animCurveTL -n "R_Hand_IK_Ctrl_translateY";
 	rename -uid "E3C91D69-48DB-ACC5-139C-A79E7C719BF4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 -1.4729699596140007 7.7272729591836731 -1.128769701144998
-		 11.590910204081633 -0.68152914213175309 15.454547448979591 0.72991267239744217;
+	setAttr -s 7 ".ktv[0:6]"  -10 -1.5196987159649298 -5 -1.5335742966741948
+		 0 -1.4630117139953049 8 -1.128769701144998 11 -0.68152914213175309 15 0.73141686793427418
+		 18 0.74794554338793406;
+	setAttr -s 7 ".kit[0:6]"  1 18 18 18 18 18 18;
+	setAttr -s 7 ".kot[0:6]"  1 18 18 18 18 18 18;
+	setAttr -s 7 ".kix[0:6]"  0.80102482360548299 1 0.80102482360548299 
+		0.50590256602673211 0.15490178154937215 0.92953442307886569 1;
+	setAttr -s 7 ".kiy[0:6]"  0.5986311318063946 0 0.5986311318063946 
+		0.86259062926023489 0.9879298750786063 0.36873534724981311 0;
+	setAttr -s 7 ".kox[0:6]"  0.80102482360548288 1 0.80102482360548288 
+		0.50590256602673211 0.15490178154937215 0.92953442307886569 1;
+	setAttr -s 7 ".koy[0:6]"  0.5986311318063946 0 0.5986311318063946 
+		0.86259062926023489 0.9879298750786063 0.36873534724981311 0;
 createNode animCurveTL -n "R_Hand_IK_Ctrl_translateZ";
 	rename -uid "42CDB44A-4DB6-1C5C-39FE-E7AAB73A8DED";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 0.78812509570806877 7.7272729591836731 -0.7363463354969173
-		 11.590910204081633 -5.3153896437407866 15.454547448979591 -8.968496394747671;
+	setAttr -s 7 ".ktv[0:6]"  -10 0.050424603965804692 -5 1.0741484623124706
+		 0 0.94929239213579686 8 -0.7363463354969173 11 -5.3153896437407866 15 -8.9447498653330086
+		 18 -8.6838139243367731;
+	setAttr -s 7 ".kit[0:6]"  1 18 18 18 18 18 18;
+	setAttr -s 7 ".kot[0:6]"  1 18 18 18 18 18 18;
+	setAttr -s 7 ".kix[0:6]"  0.28662845117810154 1 0.48607055335458682 
+		0.072966448343637413 0.035510280979066569 1 1;
+	setAttr -s 7 ".kiy[0:6]"  -0.95804182109928926 0 -0.87391957133455123 
+		-0.99733439598567697 -0.99936931108814209 0 0;
+	setAttr -s 7 ".kox[0:6]"  0.28662845117810154 1 0.48607055335458682 
+		0.072966448343637413 0.035510280979066569 1 1;
+	setAttr -s 7 ".koy[0:6]"  -0.95804182109928926 0 -0.87391957133455123 
+		-0.99733439598567708 -0.99936931108814209 0 0;
 createNode animCurveTL -n "R_RingFinger_03_Ctrl_translateX";
 	rename -uid "E8C96F25-4C69-9524-8E13-CB99CD129CC5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_RingFinger_03_Ctrl_translateY";
 	rename -uid "77EC3167-4C77-3D87-A993-7492FC1DAC21";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "R_RingFinger_03_Ctrl_translateZ";
 	rename -uid "5FC10EFE-48BD-23FE-EE12-06B721742C61";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Spine_01_FK_Ctrl_translateX";
 	rename -uid "CB01E069-4921-9664-D747-7DB37C3E5C28";
 	setAttr ".tan" 18;
@@ -5973,17 +6011,17 @@ createNode animCurveTA -n "L_Hand_IK_Ctrl_rotateX";
 	rename -uid "35578B07-4F76-B780-9539-AE8ADD856858";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 -113.84106594524062 15.454547448979591 -32.044985817661882;
+	setAttr -s 2 ".ktv[0:1]"  -8 -157.91396547430659 15 -32.044985817661882;
 createNode animCurveTA -n "L_Hand_IK_Ctrl_rotateY";
 	rename -uid "A758527D-4493-F9AA-B983-B3A299B0B94B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 -62.068337768675967 15.454547448979591 -74.303015336282385;
+	setAttr -s 2 ".ktv[0:1]"  -8 -67.555857152093466 15 -74.303015336282385;
 createNode animCurveTA -n "L_Hand_IK_Ctrl_rotateZ";
 	rename -uid "39B86E66-4D86-B836-6251-1BBE0CFD44E0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 78.534851439088413 15.454547448979591 -4.527273918819648;
+	setAttr -s 2 ".ktv[0:1]"  -8 123.84091675574143 15 -4.527273918819648;
 createNode animCurveTA -n "L_Eyebrow_Ctrl_Jnt_1_Ctrl_rotateX";
 	rename -uid "56AE4511-46F7-6FB9-8A41-99A4B203E79D";
 	setAttr ".tan" 18;
@@ -6423,17 +6461,17 @@ createNode animCurveTA -n "R_Leg_IK_PV_Ctrl_rotateX";
 	rename -uid "BF3BC930-48B6-9FF2-B14A-D395DCFEB08E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 4 0;
 createNode animCurveTA -n "R_Leg_IK_PV_Ctrl_rotateY";
 	rename -uid "2FA488D2-440B-0A66-71A4-4BBAF22E8610";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 4 0;
 createNode animCurveTA -n "R_Leg_IK_PV_Ctrl_rotateZ";
 	rename -uid "4BACF1D7-4B57-0369-CEAD-C78AD3920F3A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 4 0;
 createNode animCurveTA -n "R_Cheekbone_Jnt_Ctrl_rotateX";
 	rename -uid "199C21B4-4E55-4D07-8A8D-0CB0E0BA3DF7";
 	setAttr ".tan" 18;
@@ -6631,38 +6669,37 @@ createNode animCurveTA -n "L_Mouth_Corner_Jnt_Ctrl_rotateZ";
 	setAttr ".ktv[0]"  0 0;
 createNode animCurveTA -n "L_Leg_IK_Ctrl_rotateX";
 	rename -uid "EFA84206-4BB7-257A-8817-10BB35B28E53";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  -3 0 0 0 11 0;
-	setAttr -s 3 ".kit[1:2]"  1 18;
-	setAttr -s 3 ".kot[1:2]"  1 18;
-	setAttr -s 3 ".kix[1:2]"  1 1;
-	setAttr -s 3 ".kiy[1:2]"  0 0;
-	setAttr -s 3 ".kox[1:2]"  1 1;
-	setAttr -s 3 ".koy[1:2]"  0 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 11 0;
+	setAttr -s 2 ".kit[1]"  18;
+	setAttr -s 2 ".kot[1]"  18;
+	setAttr -s 2 ".kix[0:1]"  1 1;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  1 1;
+	setAttr -s 2 ".koy[0:1]"  0 0;
 createNode animCurveTA -n "L_Leg_IK_Ctrl_rotateY";
 	rename -uid "6037AFBA-4816-424C-9F9D-638A53B8AC89";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  -3 -37.744148005963233 0 -37.744148005963233
-		 11 92.717949980270035;
-	setAttr -s 3 ".kit[1:2]"  1 18;
-	setAttr -s 3 ".kot[1:2]"  1 18;
-	setAttr -s 3 ".kix[1:2]"  1 1;
-	setAttr -s 3 ".kiy[1:2]"  0 0;
-	setAttr -s 3 ".kox[1:2]"  1 1;
-	setAttr -s 3 ".koy[1:2]"  0 0;
+	setAttr -s 2 ".ktv[0:1]"  0 -37.744148005963233 11 92.717949980270035;
+	setAttr -s 2 ".kit[1]"  18;
+	setAttr -s 2 ".kot[1]"  18;
+	setAttr -s 2 ".kix[0:1]"  1 1;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  1 1;
+	setAttr -s 2 ".koy[0:1]"  0 0;
 createNode animCurveTA -n "L_Leg_IK_Ctrl_rotateZ";
 	rename -uid "D242FAF4-4EF6-101D-C09D-798B9B8C089A";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  -3 0 0 0 11 0;
-	setAttr -s 3 ".kit[1:2]"  1 18;
-	setAttr -s 3 ".kot[1:2]"  1 18;
-	setAttr -s 3 ".kix[1:2]"  1 1;
-	setAttr -s 3 ".kiy[1:2]"  0 0;
-	setAttr -s 3 ".kox[1:2]"  1 1;
-	setAttr -s 3 ".koy[1:2]"  0 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 11 0;
+	setAttr -s 2 ".kit[1]"  18;
+	setAttr -s 2 ".kot[1]"  18;
+	setAttr -s 2 ".kix[0:1]"  1 1;
+	setAttr -s 2 ".kiy[0:1]"  0 0;
+	setAttr -s 2 ".kox[0:1]"  1 1;
+	setAttr -s 2 ".koy[0:1]"  0 0;
 createNode animCurveTA -n "R_Cheek_Jnt_Ctrl_rotateX";
 	rename -uid "FA4E97E1-4508-DA93-7FA2-93B2C360D05D";
 	setAttr ".tan" 18;
@@ -6712,50 +6749,57 @@ createNode animCurveTA -n "R_PointerFinger_02_Ctrl_rotateX";
 	rename -uid "651F0AF6-4AD2-2DBC-7ABF-1CBF6B44204C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTA -n "R_PointerFinger_02_Ctrl_rotateY";
 	rename -uid "256ACCC0-4353-9CAB-7935-F6B2DA6AD365";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTA -n "R_PointerFinger_02_Ctrl_rotateZ";
 	rename -uid "EE4C8C91-4F8B-05B2-E7EF-64A5570026AA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 -30.726781782397794 15.454547448979591 -73.801389247709196;
+	setAttr -s 2 ".ktv[0:1]"  0 -30.726781782397794 15 -73.801389247709196;
 createNode animCurveTA -n "R_Leg_IK_Ctrl_rotateX";
 	rename -uid "F7A1D3C7-4C41-4322-3E2F-D2885CEDE73A";
-	setAttr ".tan" 1;
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -3 0 11 0;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-	setAttr -s 2 ".kix[0:1]"  1 1;
-	setAttr -s 2 ".kiy[0:1]"  0 0;
-	setAttr -s 2 ".kox[0:1]"  1 1;
-	setAttr -s 2 ".koy[0:1]"  0 0;
+	setAttr -s 5 ".ktv[0:4]"  -3 0 -2 0 1 16.432001496102785 6 6.6374109843403701
+		 11 0;
+	setAttr -s 5 ".kit[0:4]"  1 18 18 18 18;
+	setAttr -s 5 ".kot[0:4]"  1 18 18 18 18;
+	setAttr -s 5 ".kix[0:4]"  1 1 1 0.82373336272850017 1;
+	setAttr -s 5 ".kiy[0:4]"  0 0 0 -0.56697737796846626 0;
+	setAttr -s 5 ".kox[0:4]"  1 1 1 0.82373336272850017 1;
+	setAttr -s 5 ".koy[0:4]"  0 0 0 -0.56697737796846637 0;
 createNode animCurveTA -n "R_Leg_IK_Ctrl_rotateY";
 	rename -uid "DFB35BC4-40EB-53A3-B7EA-9AA55D9BDB69";
-	setAttr ".tan" 1;
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -3 -73.403731580198638 11 12.99526068532397;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-	setAttr -s 2 ".kix[0:1]"  1 1;
-	setAttr -s 2 ".kiy[0:1]"  0 0;
-	setAttr -s 2 ".kox[0:1]"  1 1;
-	setAttr -s 2 ".koy[0:1]"  0 0;
+	setAttr -s 5 ".ktv[0:4]"  -3 -73.403731580198638 -2 -76.242323017323145
+		 1 -91.570716777795525 6 -16.880768765122859 11 12.99526068532397;
+	setAttr -s 5 ".kit[0:4]"  1 18 18 18 18;
+	setAttr -s 5 ".kot[0:4]"  1 18 18 18 18;
+	setAttr -s 5 ".kix[0:4]"  1 0.4652780356722051 1 0.2225806572016123 
+		1;
+	setAttr -s 5 ".kiy[0:4]"  0 -0.88516458894434669 0 0.9749142788161933 
+		0;
+	setAttr -s 5 ".kox[0:4]"  1 0.46527803567220516 1 0.2225806572016123 
+		1;
+	setAttr -s 5 ".koy[0:4]"  0 -0.8851645889443468 0 0.9749142788161933 
+		0;
 createNode animCurveTA -n "R_Leg_IK_Ctrl_rotateZ";
 	rename -uid "69A778B0-4606-6876-CDB6-A28BBF162B1A";
-	setAttr ".tan" 1;
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -3 0 11 0;
-	setAttr -s 2 ".kit[1]"  18;
-	setAttr -s 2 ".kot[1]"  18;
-	setAttr -s 2 ".kix[0:1]"  1 1;
-	setAttr -s 2 ".kiy[0:1]"  0 0;
-	setAttr -s 2 ".kox[0:1]"  1 1;
-	setAttr -s 2 ".koy[0:1]"  0 0;
+	setAttr -s 5 ".ktv[0:4]"  -3 0 -2 0 1 5.0888874903416268e-14 6 3.2886166609913827
+		 11 0;
+	setAttr -s 5 ".kit[0:4]"  1 18 18 18 18;
+	setAttr -s 5 ".kot[0:4]"  1 18 18 18 18;
+	setAttr -s 5 ".kix[0:4]"  1 1 1 1 1;
+	setAttr -s 5 ".kiy[0:4]"  0 0 0 0 0;
+	setAttr -s 5 ".kox[0:4]"  1 1 1 1 1;
+	setAttr -s 5 ".koy[0:4]"  0 0 0 0 0;
 createNode animCurveTA -n "L_Mouth_Upper_Jnt_2_Ctrl_rotateX";
 	rename -uid "05D9D58F-4315-DFBC-3E3B-89B6E525657A";
 	setAttr ".tan" 18;
@@ -6820,18 +6864,18 @@ createNode animCurveTA -n "L_Clav_Ctrl_rotateX";
 	rename -uid "FF06EB25-4669-1DF9-DBE6-209C18FD2908";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10.045455272108844 0 15.454547448979591 0;
+	setAttr -s 3 ".ktv[0:2]"  0 0 10.045455272108844 0 15 0;
 createNode animCurveTA -n "L_Clav_Ctrl_rotateY";
 	rename -uid "70CB2AA1-4C03-BE2A-1891-95AC8D197028";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  0 20.357547207259302 10.045455272108844 1.7090853797203491
-		 15.454547448979591 10.737250888291838;
+		 15 10.737250888291838;
 createNode animCurveTA -n "L_Clav_Ctrl_rotateZ";
 	rename -uid "F1BEB687-4187-652E-DA9D-0B8306E60649";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 10.045455272108844 0 15.454547448979591 0;
+	setAttr -s 3 ".ktv[0:2]"  0 0 10.045455272108844 0 15 0;
 createNode animCurveTA -n "Tail_09_Jnt_FK_Ctrl_rotateX";
 	rename -uid "7683220B-4E32-CF3F-85C9-CB92D3D227B5";
 	setAttr ".tan" 18;
@@ -6896,33 +6940,52 @@ createNode animCurveTA -n "R_Clav_Ctrl_rotateX";
 	rename -uid "A64CE8A3-4E67-12A0-D085-07A745C275EB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 7 -32.6709875694213 15.454547448979591 0;
+	setAttr -s 4 ".ktv[0:3]"  -10 0 0 0 7 -32.6709875694213 15 0;
 createNode animCurveTA -n "R_Clav_Ctrl_rotateY";
 	rename -uid "72DF1AE7-43B3-0A38-18D5-299616E43418";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 -14.34303219115569 7 35.776905099639315
-		 15.454547448979591 0;
+	setAttr -s 4 ".ktv[0:3]"  -10 -37.829497853579824 0 -14.34303219115569
+		 7 35.776905099639322 15 0;
 createNode animCurveTA -n "R_Clav_Ctrl_rotateZ";
 	rename -uid "E1543D82-4813-A9FB-F72A-A3AA7C19D770";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 0 7 17.032602790489999 15.454547448979591 -7.6645527855019431;
+	setAttr -s 4 ".ktv[0:3]"  -10 0 0 0 7 17.032602790489999 15 -7.6645527855019431;
 createNode animCurveTA -n "L_Reverse_Foot_ToeTap_Ctrl_rotateX";
 	rename -uid "EC7E6379-450E-9D20-57B3-3A83B22B439E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 2 -10.757373886377687 9 -10.757373886377687
+		 13 0;
+	setAttr -s 4 ".kit[2:3]"  1 18;
+	setAttr -s 4 ".kot[2:3]"  1 18;
+	setAttr -s 4 ".kix[2:3]"  1 1;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[2:3]"  1 1;
+	setAttr -s 4 ".koy[2:3]"  0 0;
 createNode animCurveTA -n "L_Reverse_Foot_ToeTap_Ctrl_rotateY";
 	rename -uid "834E4F71-4F1F-D743-3557-5298D5B3AEB5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 2 0 9 0 13 0;
+	setAttr -s 4 ".kit[2:3]"  1 18;
+	setAttr -s 4 ".kot[2:3]"  1 18;
+	setAttr -s 4 ".kix[2:3]"  1 1;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[2:3]"  1 1;
+	setAttr -s 4 ".koy[2:3]"  0 0;
 createNode animCurveTA -n "L_Reverse_Foot_ToeTap_Ctrl_rotateZ";
 	rename -uid "04D43638-44FE-777A-6DEB-08BE24722903";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 4 ".ktv[0:3]"  0 0 2 0 9 0 13 0;
+	setAttr -s 4 ".kit[2:3]"  1 18;
+	setAttr -s 4 ".kot[2:3]"  1 18;
+	setAttr -s 4 ".kix[2:3]"  1 1;
+	setAttr -s 4 ".kiy[2:3]"  0 0;
+	setAttr -s 4 ".kox[2:3]"  1 1;
+	setAttr -s 4 ".koy[2:3]"  0 0;
 createNode animCurveTA -n "L_Belt_Jnt_1_Ctrl_rotateX";
 	rename -uid "CBEC6AFD-4BAA-FD20-39DC-798AC289B782";
 	setAttr ".tan" 18;
@@ -6987,7 +7050,7 @@ createNode animCurveTA -n "Tail_01_Jnt_FK_Ctrl_rotateX";
 	rename -uid "CC4A475B-4FE5-25A3-B7B8-C38C9ED5F647";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  6 6.2673893042504911 15 -6.3419588940464893;
+	setAttr -s 2 ".ktv[0:1]"  6 6.2673893042504911 18 -6.3419588940464893;
 	setAttr -s 2 ".kit[1]"  1;
 	setAttr -s 2 ".kot[1]"  1;
 	setAttr -s 2 ".kix[1]"  1;
@@ -6998,7 +7061,7 @@ createNode animCurveTA -n "Tail_01_Jnt_FK_Ctrl_rotateY";
 	rename -uid "3BCAA2A5-43B6-DCFA-A00D-DE9AB5099AEC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  6 -9.5642914228952929 15 9.2466395817281306;
+	setAttr -s 2 ".ktv[0:1]"  6 -9.5642914228952929 18 9.2466395817281306;
 	setAttr -s 2 ".kit[1]"  1;
 	setAttr -s 2 ".kot[1]"  1;
 	setAttr -s 2 ".kix[1]"  1;
@@ -7009,7 +7072,7 @@ createNode animCurveTA -n "Tail_01_Jnt_FK_Ctrl_rotateZ";
 	rename -uid "DB58AF09-4539-1CE2-50FE-1DAB12B40AFD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  6 -0.68588309042591367 15 0.28068160036081052;
+	setAttr -s 2 ".ktv[0:1]"  6 -0.68588309042591367 18 0.28068160036081052;
 	setAttr -s 2 ".kit[1]"  1;
 	setAttr -s 2 ".kot[1]"  1;
 	setAttr -s 2 ".kix[1]"  1;
@@ -7350,17 +7413,18 @@ createNode animCurveTA -n "CoG_Ctrl_rotateX";
 	rename -uid "EB534578-401D-6D7B-E95D-0686D099D99E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -3 0 11 0;
+	setAttr -s 4 ".ktv[0:3]"  -10 0 -5 0 0 0 11 0;
 createNode animCurveTA -n "CoG_Ctrl_rotateY";
 	rename -uid "D9A07E24-4021-6F94-1F15-BF90E52EFDB3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -3 0 11 102.12945708795388;
+	setAttr -s 4 ".ktv[0:3]"  -10 12.059017527877943 -5 4.0765259888031595
+		 0 12.059017527877943 11 102.12945708795388;
 createNode animCurveTA -n "CoG_Ctrl_rotateZ";
 	rename -uid "55359136-448B-0376-567D-14B2861FB3CA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  -3 0 11 0;
+	setAttr -s 4 ".ktv[0:3]"  -10 0 -5 0 0 0 11 0;
 createNode animCurveTA -n "L_Belt_Jnt_2_Ctrl_rotateX";
 	rename -uid "63EE94CD-46E3-16F3-98C1-9C8B774BDBDD";
 	setAttr ".tan" 18;
@@ -7455,17 +7519,17 @@ createNode animCurveTA -n "R_PointerFinger_01_Ctrl_rotateX";
 	rename -uid "4DC8E455-4FD8-0C23-CECF-DE8631A648F6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTA -n "R_PointerFinger_01_Ctrl_rotateY";
 	rename -uid "74620F71-42BD-2CCA-817A-649CB9382F82";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTA -n "R_PointerFinger_01_Ctrl_rotateZ";
 	rename -uid "282FA30D-4A35-DBB2-24A2-978F568AD323";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 -65.579067435259418 15.454547448979591 -15.124669647956152;
+	setAttr -s 2 ".ktv[0:1]"  0 -65.579067435259418 15 -15.124669647956152;
 createNode animCurveTA -n "R_Eyebrow_Ctrl_Jnt_3_Ctrl_rotateX";
 	rename -uid "D4AD5E1D-48F0-9D9E-0284-B8A7E8ECA926";
 	setAttr ".tan" 18;
@@ -7585,17 +7649,17 @@ createNode animCurveTA -n "R_Reverse_Foot_Ball_Ctrl_rotateX";
 	rename -uid "13E570EB-42E2-B78B-D837-ADA1AC7AA7FA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 3 ".ktv[0:2]"  -6 0 -2 -40.176159938119724 1 0;
 createNode animCurveTA -n "R_Reverse_Foot_Ball_Ctrl_rotateY";
 	rename -uid "1ACF28B3-42ED-6D16-8DD7-409A1AA2CA86";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 3 ".ktv[0:2]"  -6 0 0 0 1 0;
 createNode animCurveTA -n "R_Reverse_Foot_Ball_Ctrl_rotateZ";
 	rename -uid "9AB219D8-45A4-8473-4EA0-758855C9A163";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 3 ".ktv[0:2]"  -6 0 0 0 1 0;
 createNode animCurveTA -n "Shield_Ctrl_rotateX";
 	rename -uid "55FC5DA0-40BE-F48D-11DD-0594AC3F5091";
 	setAttr ".tan" 18;
@@ -7735,17 +7799,17 @@ createNode animCurveTA -n "Neck_Ctrl_rotateX";
 	rename -uid "506B7EDE-4FC0-60AA-9D8B-D59A0E80A8FF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 -22.504219216155882 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 -22.504219216155882 15 0;
 createNode animCurveTA -n "Neck_Ctrl_rotateY";
 	rename -uid "4094EB2A-44E6-6C58-3EF3-DEAE740B1C6B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 24.086086381566492 15.454547448979591 -18.328986260498493;
+	setAttr -s 2 ".ktv[0:1]"  0 24.086086381566492 15 -18.328986260498493;
 createNode animCurveTA -n "Neck_Ctrl_rotateZ";
 	rename -uid "355F1B1D-4A35-E468-6592-A48F7989B282";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTA -n "L_Mouth_Lower_Jnt_3_Ctrl_rotateX";
 	rename -uid "C66005EE-41F4-EBD3-3542-92B50B6F0270";
 	setAttr ".tan" 18;
@@ -7780,20 +7844,42 @@ createNode animCurveTA -n "R_Hand_IK_Ctrl_rotateX";
 	rename -uid "E34F1260-4097-D0E8-3BEB-B3B717FEB26D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 -342.26968047351954 7.7272729591836731 -342.3658255980169
-		 15.454547448979591 -342.885009543433;
+	setAttr -s 6 ".ktv[0:5]"  -10 -342.26968047351954 -5 -342.97934646789543
+		 0 -342.77688737337473 8 -342.3658255980169 15 -342.885009543433 18 -342.40529970796388;
+	setAttr -s 6 ".kit[0:5]"  1 18 18 18 18 18;
+	setAttr -s 6 ".kot[0:5]"  1 18 18 18 18 18;
+	setAttr -s 6 ".kix[0:5]"  1 1 0.99980465966326815 1 1 1;
+	setAttr -s 6 ".kiy[0:5]"  0 0 0.019764678485026291 0 0 0;
+	setAttr -s 6 ".kox[0:5]"  1 1 0.99980465966326826 1 1 1;
+	setAttr -s 6 ".koy[0:5]"  0 0 0.019764678485026291 0 0 0;
 createNode animCurveTA -n "R_Hand_IK_Ctrl_rotateY";
 	rename -uid "6B4F47A7-4653-403B-D80B-7DA0375B040B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 -43.732855299122406 7.7272729591836731 -41.793654879774827
-		 15.454547448979591 -31.321967106385021;
+	setAttr -s 6 ".ktv[0:5]"  -10 -43.732855299122406 -5 -41.257772490837162
+		 0 -41.43461124003143 8 -41.793654879774834 15 -31.321967106385021 18 -33.728734585644702;
+	setAttr -s 6 ".kit[0:5]"  1 18 18 18 18 18;
+	setAttr -s 6 ".kot[0:5]"  1 18 18 18 18 18;
+	setAttr -s 6 ".kix[0:5]"  1 1 0.99985096015554198 1 1 1;
+	setAttr -s 6 ".kiy[0:5]"  0 0 -0.017264341170188376 0 0 0;
+	setAttr -s 6 ".kox[0:5]"  1 1 0.99985096015554198 1 1 1;
+	setAttr -s 6 ".koy[0:5]"  0 0 -0.01726434117018838 0 0 0;
 createNode animCurveTA -n "R_Hand_IK_Ctrl_rotateZ";
 	rename -uid "D6BBD24F-4635-9E52-0E2B-1DB42FA7B294";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  0 389.61575492979659 7.7272729591836731 389.11641130399232
-		 15.454547448979591 386.41995430610581;
+	setAttr -s 6 ".ktv[0:5]"  -10 389.61575492979659 -5 390.66602622186298
+		 0 390.40590721120856 8 389.11641130399232 15 386.41995430610581 18 385.52796717173942;
+	setAttr -s 6 ".kit[0:5]"  1 18 18 18 18 18;
+	setAttr -s 6 ".kot[0:5]"  1 18 18 18 18 18;
+	setAttr -s 6 ".kix[0:5]"  0.99875578059518932 1 0.99875578059518932 
+		0.9938621509858967 0.9888909875138755 1;
+	setAttr -s 6 ".kiy[0:5]"  -0.049868734971864899 0 -0.049868734971864899 
+		-0.11062560660934877 -0.14864257402854705 0;
+	setAttr -s 6 ".kox[0:5]"  0.99875578059518932 1 0.99875578059518932 
+		0.99386215098589681 0.98889098751387561 1;
+	setAttr -s 6 ".koy[0:5]"  -0.049868734971864899 0 -0.049868734971864899 
+		-0.11062560660934878 -0.14864257402854705 0;
 createNode animCurveTA -n "R_RingFinger_03_Ctrl_rotateX";
 	rename -uid "DF3EE112-4D37-9323-E452-EABFD16FF384";
 	setAttr ".tan" 18;
@@ -7956,21 +8042,6 @@ createNode animCurveTU -n "L_Eye_Aim_Ctrl_Ctrl_scaleY";
 	setAttr ".ktv[0]"  0 1;
 createNode animCurveTU -n "L_Eye_Aim_Ctrl_Ctrl_scaleZ";
 	rename -uid "040EEDAF-4B0F-90F9-7701-759506ECF7BB";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-createNode animCurveTU -n "L_Hand_IK_Ctrl_scaleX";
-	rename -uid "1794D2BE-4499-CC4A-7523-5BB15182BF5A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-createNode animCurveTU -n "L_Hand_IK_Ctrl_scaleY";
-	rename -uid "EDFF2BC8-47EC-2EAB-1234-22AAB0F6ACCD";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-createNode animCurveTU -n "L_Hand_IK_Ctrl_scaleZ";
-	rename -uid "E730D634-4A56-8283-749F-24BFE5E25654";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  0 1;
@@ -8619,21 +8690,6 @@ createNode animCurveTU -n "L_Mouth_Corner_Jnt_Ctrl_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  0 1;
-createNode animCurveTU -n "L_Leg_IK_Ctrl_scaleX";
-	rename -uid "1291F565-4A88-96FD-B200-068E17B26D01";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  -3 1;
-createNode animCurveTU -n "L_Leg_IK_Ctrl_scaleY";
-	rename -uid "A77A581C-484E-924A-0E05-B9BA1C07284D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  -3 1;
-createNode animCurveTU -n "L_Leg_IK_Ctrl_scaleZ";
-	rename -uid "AFE36BAD-4787-6227-2EF6-8BB781D5D14B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  -3 1;
 createNode animCurveTU -n "R_Cheek_Jnt_Ctrl_scaleX";
 	rename -uid "FCE98735-4D23-C105-4924-BEA94DA1788E";
 	setAttr ".tan" 18;
@@ -9279,21 +9335,6 @@ createNode animCurveTU -n "Mouth_Center_Lower_Jnt_Ctrl_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  0 1;
-createNode animCurveTU -n "CoG_Ctrl_scaleX";
-	rename -uid "A71F2FBF-4BA4-8C22-1D15-E8B5754B3E81";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  -3 1;
-createNode animCurveTU -n "CoG_Ctrl_scaleY";
-	rename -uid "ACDF4A56-414D-55A8-07ED-F1AC8C25F9B6";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  -3 1;
-createNode animCurveTU -n "CoG_Ctrl_scaleZ";
-	rename -uid "D4F36E5E-4D03-810E-B6BB-B49997606A5B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  -3 1;
 createNode animCurveTU -n "L_Belt_Jnt_2_Ctrl_scaleX";
 	rename -uid "A68BF8AC-47D3-9F8F-5BEF-3A9827EA9EF2";
 	setAttr ".tan" 18;
@@ -9718,17 +9759,17 @@ createNode animCurveTU -n "R_Hand_IK_Ctrl_scaleX";
 	rename -uid "55BFC7E4-4922-1C29-76B4-F8BEFE225BD1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
+	setAttr ".ktv[0]"  -10 1;
 createNode animCurveTU -n "R_Hand_IK_Ctrl_scaleY";
 	rename -uid "51FFAA2A-424A-524E-7E94-4FA8C98AF928";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
+	setAttr ".ktv[0]"  -10 1;
 createNode animCurveTU -n "R_Hand_IK_Ctrl_scaleZ";
 	rename -uid "E4C0CC94-4368-2D2C-2693-038E7E2B357E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
+	setAttr ".ktv[0]"  -10 1;
 createNode animCurveTU -n "R_RingFinger_03_Ctrl_scaleX";
 	rename -uid "10CEA173-4B0B-0379-EA6F-0BB42E665169";
 	setAttr ".tan" 18;
@@ -9763,32 +9804,33 @@ createNode animCurveTA -n "Head_Ctrl_rotateX";
 	rename -uid "8C14617C-4C6D-87F8-52D8-81A63147837E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 7.9136984289771828;
+	setAttr -s 3 ".ktv[0:2]"  0 0 15 7.9136984289771828 18 12.29905604866166;
 createNode animCurveTA -n "Head_Ctrl_rotateY";
 	rename -uid "D4B031B8-4B18-C3C4-134D-2FBC5D77CA07";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 49.173042896171886 15.454547448979591 -23.873783226552828;
+	setAttr -s 3 ".ktv[0:2]"  0 49.173042896171886 15 -23.873783226552828
+		 18 -23.873783226552842;
 createNode animCurveTA -n "Head_Ctrl_rotateZ";
 	rename -uid "493FB8B0-48F8-4BD9-CA21-E88F31DD6216";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 3 ".ktv[0:2]"  0 0 15 0 18 4.3476845469665172e-16;
 createNode animCurveTL -n "Head_Ctrl_translateX";
 	rename -uid "035BFF19-4349-BFC7-137D-86B75CB63024";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Head_Ctrl_translateY";
 	rename -uid "0904C2F2-49C1-BB64-2DD8-389E59D4B773";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "Head_Ctrl_translateZ";
 	rename -uid "4D6CF3B3-490C-9E27-25AC-C98D953EA972";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 15.454547448979591 0;
+	setAttr -s 2 ".ktv[0:1]"  0 0 15 0;
 createNode animCurveTL -n "locator1_translateX";
 	rename -uid "311D37E4-4CE9-D3F7-74AA-E89C79381193";
 	setAttr ".tan" 18;
@@ -9823,38 +9865,38 @@ createNode animCurveTL -n "IK_Torso_Top_Ctrl_translateX";
 	rename -uid "1CC49757-4E23-2921-992D-4F836DF2D462";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 -0.16278647519401551 3.8636370748299318 -0.16278647519401551
-		 8 -0.16278647519401551 15.454547448979591 -0.00011834191462467558;
+	setAttr -s 5 ".ktv[0:4]"  0 -0.16278647519401551 4 -0.16278647519401551
+		 8 -0.16278647519401551 15 -0.00011834191462467558 17 -0.00011834191462467558;
 createNode animCurveTL -n "IK_Torso_Top_Ctrl_translateY";
 	rename -uid "70DECC70-4BD6-F42D-5A94-D59D62B5411F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 -0.038715356210821561 3.8636370748299318 -0.038715356210821561
-		 8 -0.038715356210821561 15.454547448979591 -0.0076178617886402122;
+	setAttr -s 5 ".ktv[0:4]"  0 -0.038715356210821561 4 -0.038715356210821561
+		 8 -0.038715356210821561 15 -0.0076178617886402122 17 -0.0076178617886402122;
 createNode animCurveTL -n "IK_Torso_Top_Ctrl_translateZ";
 	rename -uid "7A9639A3-45A9-6DBC-ED35-32BFFB88A6B4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 0.2516374471802223 3.8636370748299318 0.2516374471802223
-		 8 0.2516374471802223 15.454547448979591 0.023062913186885137;
+	setAttr -s 5 ".ktv[0:4]"  0 0.2516374471802223 4 0.2516374471802223
+		 8 0.2516374471802223 15 0.023062913186885137 17 0.023062913186885137;
 createNode animCurveTA -n "IK_Torso_Top_Ctrl_rotateX";
 	rename -uid "A10C6FBE-4DDD-E3DA-18E1-95A503D65CE5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 26.07664128434752 3.8636370748299318 28.916444061089237
-		 8 26.07664128434752 15.454547448979591 -17.353441273857268;
+	setAttr -s 5 ".ktv[0:4]"  0 26.07664128434752 4 28.916444061089237
+		 8 26.07664128434752 15 -17.353441273857268 17 -16.894069742348183;
 createNode animCurveTA -n "IK_Torso_Top_Ctrl_rotateY";
 	rename -uid "242D6028-4C0E-3672-EB6E-47B78E32A23B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 -21.052037164567182 3.8636370748299318 -31.961125422973772
-		 8 -21.052037164567182 15.454547448979591 33.821354553636368;
+	setAttr -s 5 ".ktv[0:4]"  0 -21.052037164567182 4 -31.961125422973772
+		 8 -21.052037164567182 15 33.821354553636368 17 31.495461219119619;
 createNode animCurveTA -n "IK_Torso_Top_Ctrl_rotateZ";
 	rename -uid "FB2CF78A-4444-51EC-2B1D-18AC2A235585";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  0 -16.614361589524567 3.8636370748299318 -22.943385271108308
-		 8 -16.614361589524567 15.454547448979591 -5.1671934466707494;
+	setAttr -s 5 ".ktv[0:4]"  0 -16.614361589524567 4 -22.943385271108308
+		 8 -16.614361589524567 15 -5.1671934466707494 17 -4.3161074945177713;
 select -ne :time1;
 	setAttr ".o" 22;
 	setAttr ".unw" 22;
@@ -9948,1136 +9990,1127 @@ connectAttr "Pelvis_Ctrl_rotateZ.o" "CrocRigRN.phl[39]";
 connectAttr "Pelvis_Ctrl_scaleX.o" "CrocRigRN.phl[40]";
 connectAttr "Pelvis_Ctrl_scaleY.o" "CrocRigRN.phl[41]";
 connectAttr "Pelvis_Ctrl_scaleZ.o" "CrocRigRN.phl[42]";
-connectAttr "L_Leg_IK_Ctrl_scaleX.o" "CrocRigRN.phl[43]";
-connectAttr "L_Leg_IK_Ctrl_scaleY.o" "CrocRigRN.phl[44]";
-connectAttr "L_Leg_IK_Ctrl_scaleZ.o" "CrocRigRN.phl[45]";
-connectAttr "L_Leg_IK_Ctrl_translateX.o" "CrocRigRN.phl[46]";
-connectAttr "L_Leg_IK_Ctrl_translateY.o" "CrocRigRN.phl[47]";
-connectAttr "L_Leg_IK_Ctrl_translateZ.o" "CrocRigRN.phl[48]";
-connectAttr "L_Leg_IK_Ctrl_rotateX.o" "CrocRigRN.phl[49]";
-connectAttr "L_Leg_IK_Ctrl_rotateY.o" "CrocRigRN.phl[50]";
-connectAttr "L_Leg_IK_Ctrl_rotateZ.o" "CrocRigRN.phl[51]";
-connectAttr "L_Reverse_Foot_Outer_Ctrl_translateX.o" "CrocRigRN.phl[52]";
-connectAttr "L_Reverse_Foot_Outer_Ctrl_translateY.o" "CrocRigRN.phl[53]";
-connectAttr "L_Reverse_Foot_Outer_Ctrl_translateZ.o" "CrocRigRN.phl[54]";
-connectAttr "L_Reverse_Foot_Outer_Ctrl_rotateX.o" "CrocRigRN.phl[55]";
-connectAttr "L_Reverse_Foot_Outer_Ctrl_rotateY.o" "CrocRigRN.phl[56]";
-connectAttr "L_Reverse_Foot_Outer_Ctrl_rotateZ.o" "CrocRigRN.phl[57]";
-connectAttr "L_Reverse_Foot_Outer_Ctrl_scaleX.o" "CrocRigRN.phl[58]";
-connectAttr "L_Reverse_Foot_Outer_Ctrl_scaleY.o" "CrocRigRN.phl[59]";
-connectAttr "L_Reverse_Foot_Outer_Ctrl_scaleZ.o" "CrocRigRN.phl[60]";
-connectAttr "L_Reverse_Foot_Inner_Ctrl_translateX.o" "CrocRigRN.phl[61]";
-connectAttr "L_Reverse_Foot_Inner_Ctrl_translateY.o" "CrocRigRN.phl[62]";
-connectAttr "L_Reverse_Foot_Inner_Ctrl_translateZ.o" "CrocRigRN.phl[63]";
-connectAttr "L_Reverse_Foot_Inner_Ctrl_rotateX.o" "CrocRigRN.phl[64]";
-connectAttr "L_Reverse_Foot_Inner_Ctrl_rotateY.o" "CrocRigRN.phl[65]";
-connectAttr "L_Reverse_Foot_Inner_Ctrl_rotateZ.o" "CrocRigRN.phl[66]";
-connectAttr "L_Reverse_Foot_Inner_Ctrl_scaleX.o" "CrocRigRN.phl[67]";
-connectAttr "L_Reverse_Foot_Inner_Ctrl_scaleY.o" "CrocRigRN.phl[68]";
-connectAttr "L_Reverse_Foot_Inner_Ctrl_scaleZ.o" "CrocRigRN.phl[69]";
-connectAttr "L_Reverse_Foot_Heel_Ctrl_translateX.o" "CrocRigRN.phl[70]";
-connectAttr "L_Reverse_Foot_Heel_Ctrl_translateY.o" "CrocRigRN.phl[71]";
-connectAttr "L_Reverse_Foot_Heel_Ctrl_translateZ.o" "CrocRigRN.phl[72]";
-connectAttr "L_Reverse_Foot_Heel_Ctrl_rotateX.o" "CrocRigRN.phl[73]";
-connectAttr "L_Reverse_Foot_Heel_Ctrl_rotateY.o" "CrocRigRN.phl[74]";
-connectAttr "L_Reverse_Foot_Heel_Ctrl_rotateZ.o" "CrocRigRN.phl[75]";
-connectAttr "L_Reverse_Foot_Heel_Ctrl_scaleX.o" "CrocRigRN.phl[76]";
-connectAttr "L_Reverse_Foot_Heel_Ctrl_scaleY.o" "CrocRigRN.phl[77]";
-connectAttr "L_Reverse_Foot_Heel_Ctrl_scaleZ.o" "CrocRigRN.phl[78]";
-connectAttr "L_Reverse_Foot_Toe_Ctrl_translateX.o" "CrocRigRN.phl[79]";
-connectAttr "L_Reverse_Foot_Toe_Ctrl_translateY.o" "CrocRigRN.phl[80]";
-connectAttr "L_Reverse_Foot_Toe_Ctrl_translateZ.o" "CrocRigRN.phl[81]";
-connectAttr "L_Reverse_Foot_Toe_Ctrl_rotateX.o" "CrocRigRN.phl[82]";
-connectAttr "L_Reverse_Foot_Toe_Ctrl_rotateY.o" "CrocRigRN.phl[83]";
-connectAttr "L_Reverse_Foot_Toe_Ctrl_rotateZ.o" "CrocRigRN.phl[84]";
-connectAttr "L_Reverse_Foot_Toe_Ctrl_scaleX.o" "CrocRigRN.phl[85]";
-connectAttr "L_Reverse_Foot_Toe_Ctrl_scaleY.o" "CrocRigRN.phl[86]";
-connectAttr "L_Reverse_Foot_Toe_Ctrl_scaleZ.o" "CrocRigRN.phl[87]";
-connectAttr "L_Reverse_Foot_ToeTap_Ctrl_translateX.o" "CrocRigRN.phl[88]";
-connectAttr "L_Reverse_Foot_ToeTap_Ctrl_translateY.o" "CrocRigRN.phl[89]";
-connectAttr "L_Reverse_Foot_ToeTap_Ctrl_translateZ.o" "CrocRigRN.phl[90]";
-connectAttr "L_Reverse_Foot_ToeTap_Ctrl_rotateX.o" "CrocRigRN.phl[91]";
-connectAttr "L_Reverse_Foot_ToeTap_Ctrl_rotateY.o" "CrocRigRN.phl[92]";
-connectAttr "L_Reverse_Foot_ToeTap_Ctrl_rotateZ.o" "CrocRigRN.phl[93]";
-connectAttr "L_Reverse_Foot_ToeTap_Ctrl_scaleX.o" "CrocRigRN.phl[94]";
-connectAttr "L_Reverse_Foot_ToeTap_Ctrl_scaleY.o" "CrocRigRN.phl[95]";
-connectAttr "L_Reverse_Foot_ToeTap_Ctrl_scaleZ.o" "CrocRigRN.phl[96]";
-connectAttr "L_Reverse_Foot_Ball_Ctrl_translateX.o" "CrocRigRN.phl[97]";
-connectAttr "L_Reverse_Foot_Ball_Ctrl_translateY.o" "CrocRigRN.phl[98]";
-connectAttr "L_Reverse_Foot_Ball_Ctrl_translateZ.o" "CrocRigRN.phl[99]";
-connectAttr "L_Reverse_Foot_Ball_Ctrl_rotateX.o" "CrocRigRN.phl[100]";
-connectAttr "L_Reverse_Foot_Ball_Ctrl_rotateY.o" "CrocRigRN.phl[101]";
-connectAttr "L_Reverse_Foot_Ball_Ctrl_rotateZ.o" "CrocRigRN.phl[102]";
-connectAttr "L_Reverse_Foot_Ball_Ctrl_scaleX.o" "CrocRigRN.phl[103]";
-connectAttr "L_Reverse_Foot_Ball_Ctrl_scaleY.o" "CrocRigRN.phl[104]";
-connectAttr "L_Reverse_Foot_Ball_Ctrl_scaleZ.o" "CrocRigRN.phl[105]";
-connectAttr "L_Leg_IK_PV_Ctrl_translateX.o" "CrocRigRN.phl[106]";
-connectAttr "L_Leg_IK_PV_Ctrl_translateY.o" "CrocRigRN.phl[107]";
-connectAttr "L_Leg_IK_PV_Ctrl_translateZ.o" "CrocRigRN.phl[108]";
-connectAttr "L_Leg_IK_PV_Ctrl_rotateX.o" "CrocRigRN.phl[109]";
-connectAttr "L_Leg_IK_PV_Ctrl_rotateY.o" "CrocRigRN.phl[110]";
-connectAttr "L_Leg_IK_PV_Ctrl_rotateZ.o" "CrocRigRN.phl[111]";
-connectAttr "L_Leg_IK_PV_Ctrl_scaleX.o" "CrocRigRN.phl[112]";
-connectAttr "L_Leg_IK_PV_Ctrl_scaleY.o" "CrocRigRN.phl[113]";
-connectAttr "L_Leg_IK_PV_Ctrl_scaleZ.o" "CrocRigRN.phl[114]";
-connectAttr "R_Leg_IK_Ctrl_scaleX.o" "CrocRigRN.phl[115]";
-connectAttr "R_Leg_IK_Ctrl_scaleY.o" "CrocRigRN.phl[116]";
-connectAttr "R_Leg_IK_Ctrl_scaleZ.o" "CrocRigRN.phl[117]";
-connectAttr "R_Leg_IK_Ctrl_translateX.o" "CrocRigRN.phl[118]";
-connectAttr "R_Leg_IK_Ctrl_translateY.o" "CrocRigRN.phl[119]";
-connectAttr "R_Leg_IK_Ctrl_translateZ.o" "CrocRigRN.phl[120]";
-connectAttr "R_Leg_IK_Ctrl_rotateX.o" "CrocRigRN.phl[121]";
-connectAttr "R_Leg_IK_Ctrl_rotateY.o" "CrocRigRN.phl[122]";
-connectAttr "R_Leg_IK_Ctrl_rotateZ.o" "CrocRigRN.phl[123]";
-connectAttr "R_Reverse_Foot_Outer_Ctrl_translateX.o" "CrocRigRN.phl[124]";
-connectAttr "R_Reverse_Foot_Outer_Ctrl_translateY.o" "CrocRigRN.phl[125]";
-connectAttr "R_Reverse_Foot_Outer_Ctrl_translateZ.o" "CrocRigRN.phl[126]";
-connectAttr "R_Reverse_Foot_Outer_Ctrl_rotateX.o" "CrocRigRN.phl[127]";
-connectAttr "R_Reverse_Foot_Outer_Ctrl_rotateY.o" "CrocRigRN.phl[128]";
-connectAttr "R_Reverse_Foot_Outer_Ctrl_rotateZ.o" "CrocRigRN.phl[129]";
-connectAttr "R_Reverse_Foot_Outer_Ctrl_scaleX.o" "CrocRigRN.phl[130]";
-connectAttr "R_Reverse_Foot_Outer_Ctrl_scaleY.o" "CrocRigRN.phl[131]";
-connectAttr "R_Reverse_Foot_Outer_Ctrl_scaleZ.o" "CrocRigRN.phl[132]";
-connectAttr "R_Reverse_Foot_Inner_Ctrl_translateX.o" "CrocRigRN.phl[133]";
-connectAttr "R_Reverse_Foot_Inner_Ctrl_translateY.o" "CrocRigRN.phl[134]";
-connectAttr "R_Reverse_Foot_Inner_Ctrl_translateZ.o" "CrocRigRN.phl[135]";
-connectAttr "R_Reverse_Foot_Inner_Ctrl_rotateX.o" "CrocRigRN.phl[136]";
-connectAttr "R_Reverse_Foot_Inner_Ctrl_rotateY.o" "CrocRigRN.phl[137]";
-connectAttr "R_Reverse_Foot_Inner_Ctrl_rotateZ.o" "CrocRigRN.phl[138]";
-connectAttr "R_Reverse_Foot_Inner_Ctrl_scaleX.o" "CrocRigRN.phl[139]";
-connectAttr "R_Reverse_Foot_Inner_Ctrl_scaleY.o" "CrocRigRN.phl[140]";
-connectAttr "R_Reverse_Foot_Inner_Ctrl_scaleZ.o" "CrocRigRN.phl[141]";
-connectAttr "R_Reverse_Foot_Heel_Ctrl_translateX.o" "CrocRigRN.phl[142]";
-connectAttr "R_Reverse_Foot_Heel_Ctrl_translateY.o" "CrocRigRN.phl[143]";
-connectAttr "R_Reverse_Foot_Heel_Ctrl_translateZ.o" "CrocRigRN.phl[144]";
-connectAttr "R_Reverse_Foot_Heel_Ctrl_rotateX.o" "CrocRigRN.phl[145]";
-connectAttr "R_Reverse_Foot_Heel_Ctrl_rotateY.o" "CrocRigRN.phl[146]";
-connectAttr "R_Reverse_Foot_Heel_Ctrl_rotateZ.o" "CrocRigRN.phl[147]";
-connectAttr "R_Reverse_Foot_Heel_Ctrl_scaleX.o" "CrocRigRN.phl[148]";
-connectAttr "R_Reverse_Foot_Heel_Ctrl_scaleY.o" "CrocRigRN.phl[149]";
-connectAttr "R_Reverse_Foot_Heel_Ctrl_scaleZ.o" "CrocRigRN.phl[150]";
-connectAttr "R_Reverse_Foot_Toe_Ctrl_translateX.o" "CrocRigRN.phl[151]";
-connectAttr "R_Reverse_Foot_Toe_Ctrl_translateY.o" "CrocRigRN.phl[152]";
-connectAttr "R_Reverse_Foot_Toe_Ctrl_translateZ.o" "CrocRigRN.phl[153]";
-connectAttr "R_Reverse_Foot_Toe_Ctrl_rotateX.o" "CrocRigRN.phl[154]";
-connectAttr "R_Reverse_Foot_Toe_Ctrl_rotateY.o" "CrocRigRN.phl[155]";
-connectAttr "R_Reverse_Foot_Toe_Ctrl_rotateZ.o" "CrocRigRN.phl[156]";
-connectAttr "R_Reverse_Foot_Toe_Ctrl_scaleX.o" "CrocRigRN.phl[157]";
-connectAttr "R_Reverse_Foot_Toe_Ctrl_scaleY.o" "CrocRigRN.phl[158]";
-connectAttr "R_Reverse_Foot_Toe_Ctrl_scaleZ.o" "CrocRigRN.phl[159]";
-connectAttr "R_Reverse_Foot_ToeTap_Ctrl_translateX.o" "CrocRigRN.phl[160]";
-connectAttr "R_Reverse_Foot_ToeTap_Ctrl_translateY.o" "CrocRigRN.phl[161]";
-connectAttr "R_Reverse_Foot_ToeTap_Ctrl_translateZ.o" "CrocRigRN.phl[162]";
-connectAttr "R_Reverse_Foot_ToeTap_Ctrl_rotateX.o" "CrocRigRN.phl[163]";
-connectAttr "R_Reverse_Foot_ToeTap_Ctrl_rotateY.o" "CrocRigRN.phl[164]";
-connectAttr "R_Reverse_Foot_ToeTap_Ctrl_rotateZ.o" "CrocRigRN.phl[165]";
-connectAttr "R_Reverse_Foot_ToeTap_Ctrl_scaleX.o" "CrocRigRN.phl[166]";
-connectAttr "R_Reverse_Foot_ToeTap_Ctrl_scaleY.o" "CrocRigRN.phl[167]";
-connectAttr "R_Reverse_Foot_ToeTap_Ctrl_scaleZ.o" "CrocRigRN.phl[168]";
-connectAttr "R_Reverse_Foot_Ball_Ctrl_translateX.o" "CrocRigRN.phl[169]";
-connectAttr "R_Reverse_Foot_Ball_Ctrl_translateY.o" "CrocRigRN.phl[170]";
-connectAttr "R_Reverse_Foot_Ball_Ctrl_translateZ.o" "CrocRigRN.phl[171]";
-connectAttr "R_Reverse_Foot_Ball_Ctrl_rotateX.o" "CrocRigRN.phl[172]";
-connectAttr "R_Reverse_Foot_Ball_Ctrl_rotateY.o" "CrocRigRN.phl[173]";
-connectAttr "R_Reverse_Foot_Ball_Ctrl_rotateZ.o" "CrocRigRN.phl[174]";
-connectAttr "R_Reverse_Foot_Ball_Ctrl_scaleX.o" "CrocRigRN.phl[175]";
-connectAttr "R_Reverse_Foot_Ball_Ctrl_scaleY.o" "CrocRigRN.phl[176]";
-connectAttr "R_Reverse_Foot_Ball_Ctrl_scaleZ.o" "CrocRigRN.phl[177]";
-connectAttr "R_Leg_IK_PV_Ctrl_translateX.o" "CrocRigRN.phl[178]";
-connectAttr "R_Leg_IK_PV_Ctrl_translateY.o" "CrocRigRN.phl[179]";
-connectAttr "R_Leg_IK_PV_Ctrl_translateZ.o" "CrocRigRN.phl[180]";
-connectAttr "R_Leg_IK_PV_Ctrl_rotateX.o" "CrocRigRN.phl[181]";
-connectAttr "R_Leg_IK_PV_Ctrl_rotateY.o" "CrocRigRN.phl[182]";
-connectAttr "R_Leg_IK_PV_Ctrl_rotateZ.o" "CrocRigRN.phl[183]";
-connectAttr "R_Leg_IK_PV_Ctrl_scaleX.o" "CrocRigRN.phl[184]";
-connectAttr "R_Leg_IK_PV_Ctrl_scaleY.o" "CrocRigRN.phl[185]";
-connectAttr "R_Leg_IK_PV_Ctrl_scaleZ.o" "CrocRigRN.phl[186]";
-connectAttr "L_Hand_IK_Ctrl_scaleX.o" "CrocRigRN.phl[187]";
-connectAttr "L_Hand_IK_Ctrl_scaleY.o" "CrocRigRN.phl[188]";
-connectAttr "L_Hand_IK_Ctrl_scaleZ.o" "CrocRigRN.phl[189]";
-connectAttr "L_Hand_IK_Ctrl_translateX.o" "CrocRigRN.phl[190]";
-connectAttr "L_Hand_IK_Ctrl_translateY.o" "CrocRigRN.phl[191]";
-connectAttr "L_Hand_IK_Ctrl_translateZ.o" "CrocRigRN.phl[192]";
-connectAttr "L_Hand_IK_Ctrl_rotateX.o" "CrocRigRN.phl[193]";
-connectAttr "L_Hand_IK_Ctrl_rotateY.o" "CrocRigRN.phl[194]";
-connectAttr "L_Hand_IK_Ctrl_rotateZ.o" "CrocRigRN.phl[195]";
-connectAttr "L_Arm_IK_PV_Ctrl_translateX.o" "CrocRigRN.phl[196]";
-connectAttr "L_Arm_IK_PV_Ctrl_translateY.o" "CrocRigRN.phl[197]";
-connectAttr "L_Arm_IK_PV_Ctrl_translateZ.o" "CrocRigRN.phl[198]";
-connectAttr "L_Arm_IK_PV_Ctrl_rotateX.o" "CrocRigRN.phl[199]";
-connectAttr "L_Arm_IK_PV_Ctrl_rotateY.o" "CrocRigRN.phl[200]";
-connectAttr "L_Arm_IK_PV_Ctrl_rotateZ.o" "CrocRigRN.phl[201]";
-connectAttr "L_Arm_IK_PV_Ctrl_scaleX.o" "CrocRigRN.phl[202]";
-connectAttr "L_Arm_IK_PV_Ctrl_scaleY.o" "CrocRigRN.phl[203]";
-connectAttr "L_Arm_IK_PV_Ctrl_scaleZ.o" "CrocRigRN.phl[204]";
-connectAttr "R_Hand_IK_Ctrl_scaleX.o" "CrocRigRN.phl[205]";
-connectAttr "R_Hand_IK_Ctrl_scaleY.o" "CrocRigRN.phl[206]";
-connectAttr "R_Hand_IK_Ctrl_scaleZ.o" "CrocRigRN.phl[207]";
-connectAttr "R_Hand_IK_Ctrl_translateX.o" "CrocRigRN.phl[208]";
-connectAttr "R_Hand_IK_Ctrl_translateY.o" "CrocRigRN.phl[209]";
-connectAttr "R_Hand_IK_Ctrl_translateZ.o" "CrocRigRN.phl[210]";
-connectAttr "R_Hand_IK_Ctrl_rotateX.o" "CrocRigRN.phl[211]";
-connectAttr "R_Hand_IK_Ctrl_rotateY.o" "CrocRigRN.phl[212]";
-connectAttr "R_Hand_IK_Ctrl_rotateZ.o" "CrocRigRN.phl[213]";
-connectAttr "R_Arm_IK_PV_Ctrl_translateX.o" "CrocRigRN.phl[214]";
-connectAttr "R_Arm_IK_PV_Ctrl_translateY.o" "CrocRigRN.phl[215]";
-connectAttr "R_Arm_IK_PV_Ctrl_translateZ.o" "CrocRigRN.phl[216]";
-connectAttr "R_Arm_IK_PV_Ctrl_rotateX.o" "CrocRigRN.phl[217]";
-connectAttr "R_Arm_IK_PV_Ctrl_rotateY.o" "CrocRigRN.phl[218]";
-connectAttr "R_Arm_IK_PV_Ctrl_rotateZ.o" "CrocRigRN.phl[219]";
-connectAttr "R_Arm_IK_PV_Ctrl_scaleX.o" "CrocRigRN.phl[220]";
-connectAttr "R_Arm_IK_PV_Ctrl_scaleY.o" "CrocRigRN.phl[221]";
-connectAttr "R_Arm_IK_PV_Ctrl_scaleZ.o" "CrocRigRN.phl[222]";
-connectAttr "L_PointerFinger_01_Ctrl_translateX.o" "CrocRigRN.phl[223]";
-connectAttr "L_PointerFinger_01_Ctrl_translateY.o" "CrocRigRN.phl[224]";
-connectAttr "L_PointerFinger_01_Ctrl_translateZ.o" "CrocRigRN.phl[225]";
-connectAttr "L_PointerFinger_01_Ctrl_rotateX.o" "CrocRigRN.phl[226]";
-connectAttr "L_PointerFinger_01_Ctrl_rotateY.o" "CrocRigRN.phl[227]";
-connectAttr "L_PointerFinger_01_Ctrl_rotateZ.o" "CrocRigRN.phl[228]";
-connectAttr "L_PointerFinger_01_Ctrl_scaleX.o" "CrocRigRN.phl[229]";
-connectAttr "L_PointerFinger_01_Ctrl_scaleY.o" "CrocRigRN.phl[230]";
-connectAttr "L_PointerFinger_01_Ctrl_scaleZ.o" "CrocRigRN.phl[231]";
-connectAttr "L_PointerFinger_02_Ctrl_translateX.o" "CrocRigRN.phl[232]";
-connectAttr "L_PointerFinger_02_Ctrl_translateY.o" "CrocRigRN.phl[233]";
-connectAttr "L_PointerFinger_02_Ctrl_translateZ.o" "CrocRigRN.phl[234]";
-connectAttr "L_PointerFinger_02_Ctrl_rotateX.o" "CrocRigRN.phl[235]";
-connectAttr "L_PointerFinger_02_Ctrl_rotateY.o" "CrocRigRN.phl[236]";
-connectAttr "L_PointerFinger_02_Ctrl_rotateZ.o" "CrocRigRN.phl[237]";
-connectAttr "L_PointerFinger_02_Ctrl_scaleX.o" "CrocRigRN.phl[238]";
-connectAttr "L_PointerFinger_02_Ctrl_scaleY.o" "CrocRigRN.phl[239]";
-connectAttr "L_PointerFinger_02_Ctrl_scaleZ.o" "CrocRigRN.phl[240]";
-connectAttr "L_PointerFinger_03_Ctrl_translateX.o" "CrocRigRN.phl[241]";
-connectAttr "L_PointerFinger_03_Ctrl_translateY.o" "CrocRigRN.phl[242]";
-connectAttr "L_PointerFinger_03_Ctrl_translateZ.o" "CrocRigRN.phl[243]";
-connectAttr "L_PointerFinger_03_Ctrl_rotateX.o" "CrocRigRN.phl[244]";
-connectAttr "L_PointerFinger_03_Ctrl_rotateY.o" "CrocRigRN.phl[245]";
-connectAttr "L_PointerFinger_03_Ctrl_rotateZ.o" "CrocRigRN.phl[246]";
-connectAttr "L_PointerFinger_03_Ctrl_scaleX.o" "CrocRigRN.phl[247]";
-connectAttr "L_PointerFinger_03_Ctrl_scaleY.o" "CrocRigRN.phl[248]";
-connectAttr "L_PointerFinger_03_Ctrl_scaleZ.o" "CrocRigRN.phl[249]";
-connectAttr "L_MiddleFinger_01_Ctrl_translateX.o" "CrocRigRN.phl[250]";
-connectAttr "L_MiddleFinger_01_Ctrl_translateY.o" "CrocRigRN.phl[251]";
-connectAttr "L_MiddleFinger_01_Ctrl_translateZ.o" "CrocRigRN.phl[252]";
-connectAttr "L_MiddleFinger_01_Ctrl_rotateX.o" "CrocRigRN.phl[253]";
-connectAttr "L_MiddleFinger_01_Ctrl_rotateY.o" "CrocRigRN.phl[254]";
-connectAttr "L_MiddleFinger_01_Ctrl_rotateZ.o" "CrocRigRN.phl[255]";
-connectAttr "L_MiddleFinger_01_Ctrl_scaleX.o" "CrocRigRN.phl[256]";
-connectAttr "L_MiddleFinger_01_Ctrl_scaleY.o" "CrocRigRN.phl[257]";
-connectAttr "L_MiddleFinger_01_Ctrl_scaleZ.o" "CrocRigRN.phl[258]";
-connectAttr "L_MiddleFinger_02_Ctrl_translateX.o" "CrocRigRN.phl[259]";
-connectAttr "L_MiddleFinger_02_Ctrl_translateY.o" "CrocRigRN.phl[260]";
-connectAttr "L_MiddleFinger_02_Ctrl_translateZ.o" "CrocRigRN.phl[261]";
-connectAttr "L_MiddleFinger_02_Ctrl_rotateX.o" "CrocRigRN.phl[262]";
-connectAttr "L_MiddleFinger_02_Ctrl_rotateY.o" "CrocRigRN.phl[263]";
-connectAttr "L_MiddleFinger_02_Ctrl_rotateZ.o" "CrocRigRN.phl[264]";
-connectAttr "L_MiddleFinger_02_Ctrl_scaleX.o" "CrocRigRN.phl[265]";
-connectAttr "L_MiddleFinger_02_Ctrl_scaleY.o" "CrocRigRN.phl[266]";
-connectAttr "L_MiddleFinger_02_Ctrl_scaleZ.o" "CrocRigRN.phl[267]";
-connectAttr "L_MiddleFinger_03_Ctrl_translateX.o" "CrocRigRN.phl[268]";
-connectAttr "L_MiddleFinger_03_Ctrl_translateY.o" "CrocRigRN.phl[269]";
-connectAttr "L_MiddleFinger_03_Ctrl_translateZ.o" "CrocRigRN.phl[270]";
-connectAttr "L_MiddleFinger_03_Ctrl_rotateX.o" "CrocRigRN.phl[271]";
-connectAttr "L_MiddleFinger_03_Ctrl_rotateY.o" "CrocRigRN.phl[272]";
-connectAttr "L_MiddleFinger_03_Ctrl_rotateZ.o" "CrocRigRN.phl[273]";
-connectAttr "L_MiddleFinger_03_Ctrl_scaleX.o" "CrocRigRN.phl[274]";
-connectAttr "L_MiddleFinger_03_Ctrl_scaleY.o" "CrocRigRN.phl[275]";
-connectAttr "L_MiddleFinger_03_Ctrl_scaleZ.o" "CrocRigRN.phl[276]";
-connectAttr "L_RingFinger_01_Ctrl_translateX.o" "CrocRigRN.phl[277]";
-connectAttr "L_RingFinger_01_Ctrl_translateY.o" "CrocRigRN.phl[278]";
-connectAttr "L_RingFinger_01_Ctrl_translateZ.o" "CrocRigRN.phl[279]";
-connectAttr "L_RingFinger_01_Ctrl_rotateX.o" "CrocRigRN.phl[280]";
-connectAttr "L_RingFinger_01_Ctrl_rotateY.o" "CrocRigRN.phl[281]";
-connectAttr "L_RingFinger_01_Ctrl_rotateZ.o" "CrocRigRN.phl[282]";
-connectAttr "L_RingFinger_01_Ctrl_scaleX.o" "CrocRigRN.phl[283]";
-connectAttr "L_RingFinger_01_Ctrl_scaleY.o" "CrocRigRN.phl[284]";
-connectAttr "L_RingFinger_01_Ctrl_scaleZ.o" "CrocRigRN.phl[285]";
-connectAttr "L_RingFinger_02_Ctrl_translateX.o" "CrocRigRN.phl[286]";
-connectAttr "L_RingFinger_02_Ctrl_translateY.o" "CrocRigRN.phl[287]";
-connectAttr "L_RingFinger_02_Ctrl_translateZ.o" "CrocRigRN.phl[288]";
-connectAttr "L_RingFinger_02_Ctrl_rotateX.o" "CrocRigRN.phl[289]";
-connectAttr "L_RingFinger_02_Ctrl_rotateY.o" "CrocRigRN.phl[290]";
-connectAttr "L_RingFinger_02_Ctrl_rotateZ.o" "CrocRigRN.phl[291]";
-connectAttr "L_RingFinger_02_Ctrl_scaleX.o" "CrocRigRN.phl[292]";
-connectAttr "L_RingFinger_02_Ctrl_scaleY.o" "CrocRigRN.phl[293]";
-connectAttr "L_RingFinger_02_Ctrl_scaleZ.o" "CrocRigRN.phl[294]";
-connectAttr "L_RingFinger_03_Ctrl_translateX.o" "CrocRigRN.phl[295]";
-connectAttr "L_RingFinger_03_Ctrl_translateY.o" "CrocRigRN.phl[296]";
-connectAttr "L_RingFinger_03_Ctrl_translateZ.o" "CrocRigRN.phl[297]";
-connectAttr "L_RingFinger_03_Ctrl_rotateX.o" "CrocRigRN.phl[298]";
-connectAttr "L_RingFinger_03_Ctrl_rotateY.o" "CrocRigRN.phl[299]";
-connectAttr "L_RingFinger_03_Ctrl_rotateZ.o" "CrocRigRN.phl[300]";
-connectAttr "L_RingFinger_03_Ctrl_scaleX.o" "CrocRigRN.phl[301]";
-connectAttr "L_RingFinger_03_Ctrl_scaleY.o" "CrocRigRN.phl[302]";
-connectAttr "L_RingFinger_03_Ctrl_scaleZ.o" "CrocRigRN.phl[303]";
-connectAttr "L_Thumb_Base_Ctrl_translateX.o" "CrocRigRN.phl[304]";
-connectAttr "L_Thumb_Base_Ctrl_translateY.o" "CrocRigRN.phl[305]";
-connectAttr "L_Thumb_Base_Ctrl_translateZ.o" "CrocRigRN.phl[306]";
-connectAttr "L_Thumb_Base_Ctrl_rotateX.o" "CrocRigRN.phl[307]";
-connectAttr "L_Thumb_Base_Ctrl_rotateY.o" "CrocRigRN.phl[308]";
-connectAttr "L_Thumb_Base_Ctrl_rotateZ.o" "CrocRigRN.phl[309]";
-connectAttr "L_Thumb_Base_Ctrl_scaleX.o" "CrocRigRN.phl[310]";
-connectAttr "L_Thumb_Base_Ctrl_scaleY.o" "CrocRigRN.phl[311]";
-connectAttr "L_Thumb_Base_Ctrl_scaleZ.o" "CrocRigRN.phl[312]";
-connectAttr "L_Thumb_01_Ctrl_translateX.o" "CrocRigRN.phl[313]";
-connectAttr "L_Thumb_01_Ctrl_translateY.o" "CrocRigRN.phl[314]";
-connectAttr "L_Thumb_01_Ctrl_translateZ.o" "CrocRigRN.phl[315]";
-connectAttr "L_Thumb_01_Ctrl_rotateX.o" "CrocRigRN.phl[316]";
-connectAttr "L_Thumb_01_Ctrl_rotateY.o" "CrocRigRN.phl[317]";
-connectAttr "L_Thumb_01_Ctrl_rotateZ.o" "CrocRigRN.phl[318]";
-connectAttr "L_Thumb_01_Ctrl_scaleX.o" "CrocRigRN.phl[319]";
-connectAttr "L_Thumb_01_Ctrl_scaleY.o" "CrocRigRN.phl[320]";
-connectAttr "L_Thumb_01_Ctrl_scaleZ.o" "CrocRigRN.phl[321]";
-connectAttr "L_Thumb_02_Ctrl_translateX.o" "CrocRigRN.phl[322]";
-connectAttr "L_Thumb_02_Ctrl_translateY.o" "CrocRigRN.phl[323]";
-connectAttr "L_Thumb_02_Ctrl_translateZ.o" "CrocRigRN.phl[324]";
-connectAttr "L_Thumb_02_Ctrl_rotateX.o" "CrocRigRN.phl[325]";
-connectAttr "L_Thumb_02_Ctrl_rotateY.o" "CrocRigRN.phl[326]";
-connectAttr "L_Thumb_02_Ctrl_rotateZ.o" "CrocRigRN.phl[327]";
-connectAttr "L_Thumb_02_Ctrl_scaleX.o" "CrocRigRN.phl[328]";
-connectAttr "L_Thumb_02_Ctrl_scaleY.o" "CrocRigRN.phl[329]";
-connectAttr "L_Thumb_02_Ctrl_scaleZ.o" "CrocRigRN.phl[330]";
-connectAttr "R_PointerFinger_01_Ctrl_translateX.o" "CrocRigRN.phl[331]";
-connectAttr "R_PointerFinger_01_Ctrl_translateY.o" "CrocRigRN.phl[332]";
-connectAttr "R_PointerFinger_01_Ctrl_translateZ.o" "CrocRigRN.phl[333]";
-connectAttr "R_PointerFinger_01_Ctrl_rotateX.o" "CrocRigRN.phl[334]";
-connectAttr "R_PointerFinger_01_Ctrl_rotateY.o" "CrocRigRN.phl[335]";
-connectAttr "R_PointerFinger_01_Ctrl_rotateZ.o" "CrocRigRN.phl[336]";
-connectAttr "R_PointerFinger_01_Ctrl_scaleX.o" "CrocRigRN.phl[337]";
-connectAttr "R_PointerFinger_01_Ctrl_scaleY.o" "CrocRigRN.phl[338]";
-connectAttr "R_PointerFinger_01_Ctrl_scaleZ.o" "CrocRigRN.phl[339]";
-connectAttr "R_PointerFinger_02_Ctrl_translateX.o" "CrocRigRN.phl[340]";
-connectAttr "R_PointerFinger_02_Ctrl_translateY.o" "CrocRigRN.phl[341]";
-connectAttr "R_PointerFinger_02_Ctrl_translateZ.o" "CrocRigRN.phl[342]";
-connectAttr "R_PointerFinger_02_Ctrl_rotateX.o" "CrocRigRN.phl[343]";
-connectAttr "R_PointerFinger_02_Ctrl_rotateY.o" "CrocRigRN.phl[344]";
-connectAttr "R_PointerFinger_02_Ctrl_rotateZ.o" "CrocRigRN.phl[345]";
-connectAttr "R_PointerFinger_02_Ctrl_scaleX.o" "CrocRigRN.phl[346]";
-connectAttr "R_PointerFinger_02_Ctrl_scaleY.o" "CrocRigRN.phl[347]";
-connectAttr "R_PointerFinger_02_Ctrl_scaleZ.o" "CrocRigRN.phl[348]";
-connectAttr "R_PointerFinger_03_Ctrl_translateX.o" "CrocRigRN.phl[349]";
-connectAttr "R_PointerFinger_03_Ctrl_translateY.o" "CrocRigRN.phl[350]";
-connectAttr "R_PointerFinger_03_Ctrl_translateZ.o" "CrocRigRN.phl[351]";
-connectAttr "R_PointerFinger_03_Ctrl_rotateX.o" "CrocRigRN.phl[352]";
-connectAttr "R_PointerFinger_03_Ctrl_rotateY.o" "CrocRigRN.phl[353]";
-connectAttr "R_PointerFinger_03_Ctrl_rotateZ.o" "CrocRigRN.phl[354]";
-connectAttr "R_PointerFinger_03_Ctrl_scaleX.o" "CrocRigRN.phl[355]";
-connectAttr "R_PointerFinger_03_Ctrl_scaleY.o" "CrocRigRN.phl[356]";
-connectAttr "R_PointerFinger_03_Ctrl_scaleZ.o" "CrocRigRN.phl[357]";
-connectAttr "R_MiddleFinger_01_Ctrl_translateX.o" "CrocRigRN.phl[358]";
-connectAttr "R_MiddleFinger_01_Ctrl_translateY.o" "CrocRigRN.phl[359]";
-connectAttr "R_MiddleFinger_01_Ctrl_translateZ.o" "CrocRigRN.phl[360]";
-connectAttr "R_MiddleFinger_01_Ctrl_rotateX.o" "CrocRigRN.phl[361]";
-connectAttr "R_MiddleFinger_01_Ctrl_rotateY.o" "CrocRigRN.phl[362]";
-connectAttr "R_MiddleFinger_01_Ctrl_rotateZ.o" "CrocRigRN.phl[363]";
-connectAttr "R_MiddleFinger_01_Ctrl_scaleX.o" "CrocRigRN.phl[364]";
-connectAttr "R_MiddleFinger_01_Ctrl_scaleY.o" "CrocRigRN.phl[365]";
-connectAttr "R_MiddleFinger_01_Ctrl_scaleZ.o" "CrocRigRN.phl[366]";
-connectAttr "R_MiddleFinger_02_Ctrl_translateX.o" "CrocRigRN.phl[367]";
-connectAttr "R_MiddleFinger_02_Ctrl_translateY.o" "CrocRigRN.phl[368]";
-connectAttr "R_MiddleFinger_02_Ctrl_translateZ.o" "CrocRigRN.phl[369]";
-connectAttr "R_MiddleFinger_02_Ctrl_rotateX.o" "CrocRigRN.phl[370]";
-connectAttr "R_MiddleFinger_02_Ctrl_rotateY.o" "CrocRigRN.phl[371]";
-connectAttr "R_MiddleFinger_02_Ctrl_rotateZ.o" "CrocRigRN.phl[372]";
-connectAttr "R_MiddleFinger_02_Ctrl_scaleX.o" "CrocRigRN.phl[373]";
-connectAttr "R_MiddleFinger_02_Ctrl_scaleY.o" "CrocRigRN.phl[374]";
-connectAttr "R_MiddleFinger_02_Ctrl_scaleZ.o" "CrocRigRN.phl[375]";
-connectAttr "R_MiddleFinger_03_Ctrl_translateX.o" "CrocRigRN.phl[376]";
-connectAttr "R_MiddleFinger_03_Ctrl_translateY.o" "CrocRigRN.phl[377]";
-connectAttr "R_MiddleFinger_03_Ctrl_translateZ.o" "CrocRigRN.phl[378]";
-connectAttr "R_MiddleFinger_03_Ctrl_rotateX.o" "CrocRigRN.phl[379]";
-connectAttr "R_MiddleFinger_03_Ctrl_rotateY.o" "CrocRigRN.phl[380]";
-connectAttr "R_MiddleFinger_03_Ctrl_rotateZ.o" "CrocRigRN.phl[381]";
-connectAttr "R_MiddleFinger_03_Ctrl_scaleX.o" "CrocRigRN.phl[382]";
-connectAttr "R_MiddleFinger_03_Ctrl_scaleY.o" "CrocRigRN.phl[383]";
-connectAttr "R_MiddleFinger_03_Ctrl_scaleZ.o" "CrocRigRN.phl[384]";
-connectAttr "R_RingFinger_01_Ctrl_translateX.o" "CrocRigRN.phl[385]";
-connectAttr "R_RingFinger_01_Ctrl_translateY.o" "CrocRigRN.phl[386]";
-connectAttr "R_RingFinger_01_Ctrl_translateZ.o" "CrocRigRN.phl[387]";
-connectAttr "R_RingFinger_01_Ctrl_rotateX.o" "CrocRigRN.phl[388]";
-connectAttr "R_RingFinger_01_Ctrl_rotateY.o" "CrocRigRN.phl[389]";
-connectAttr "R_RingFinger_01_Ctrl_rotateZ.o" "CrocRigRN.phl[390]";
-connectAttr "R_RingFinger_01_Ctrl_scaleX.o" "CrocRigRN.phl[391]";
-connectAttr "R_RingFinger_01_Ctrl_scaleY.o" "CrocRigRN.phl[392]";
-connectAttr "R_RingFinger_01_Ctrl_scaleZ.o" "CrocRigRN.phl[393]";
-connectAttr "R_RingFinger_02_Ctrl_translateX.o" "CrocRigRN.phl[394]";
-connectAttr "R_RingFinger_02_Ctrl_translateY.o" "CrocRigRN.phl[395]";
-connectAttr "R_RingFinger_02_Ctrl_translateZ.o" "CrocRigRN.phl[396]";
-connectAttr "R_RingFinger_02_Ctrl_rotateX.o" "CrocRigRN.phl[397]";
-connectAttr "R_RingFinger_02_Ctrl_rotateY.o" "CrocRigRN.phl[398]";
-connectAttr "R_RingFinger_02_Ctrl_rotateZ.o" "CrocRigRN.phl[399]";
-connectAttr "R_RingFinger_02_Ctrl_scaleX.o" "CrocRigRN.phl[400]";
-connectAttr "R_RingFinger_02_Ctrl_scaleY.o" "CrocRigRN.phl[401]";
-connectAttr "R_RingFinger_02_Ctrl_scaleZ.o" "CrocRigRN.phl[402]";
-connectAttr "R_RingFinger_03_Ctrl_translateX.o" "CrocRigRN.phl[403]";
-connectAttr "R_RingFinger_03_Ctrl_translateY.o" "CrocRigRN.phl[404]";
-connectAttr "R_RingFinger_03_Ctrl_translateZ.o" "CrocRigRN.phl[405]";
-connectAttr "R_RingFinger_03_Ctrl_rotateX.o" "CrocRigRN.phl[406]";
-connectAttr "R_RingFinger_03_Ctrl_rotateY.o" "CrocRigRN.phl[407]";
-connectAttr "R_RingFinger_03_Ctrl_rotateZ.o" "CrocRigRN.phl[408]";
-connectAttr "R_RingFinger_03_Ctrl_scaleX.o" "CrocRigRN.phl[409]";
-connectAttr "R_RingFinger_03_Ctrl_scaleY.o" "CrocRigRN.phl[410]";
-connectAttr "R_RingFinger_03_Ctrl_scaleZ.o" "CrocRigRN.phl[411]";
-connectAttr "R_Thumb_Base_Ctrl_translateX.o" "CrocRigRN.phl[412]";
-connectAttr "R_Thumb_Base_Ctrl_translateY.o" "CrocRigRN.phl[413]";
-connectAttr "R_Thumb_Base_Ctrl_translateZ.o" "CrocRigRN.phl[414]";
-connectAttr "R_Thumb_Base_Ctrl_rotateX.o" "CrocRigRN.phl[415]";
-connectAttr "R_Thumb_Base_Ctrl_rotateY.o" "CrocRigRN.phl[416]";
-connectAttr "R_Thumb_Base_Ctrl_rotateZ.o" "CrocRigRN.phl[417]";
-connectAttr "R_Thumb_Base_Ctrl_scaleX.o" "CrocRigRN.phl[418]";
-connectAttr "R_Thumb_Base_Ctrl_scaleY.o" "CrocRigRN.phl[419]";
-connectAttr "R_Thumb_Base_Ctrl_scaleZ.o" "CrocRigRN.phl[420]";
-connectAttr "R_Thumb_01_Ctrl_translateX.o" "CrocRigRN.phl[421]";
-connectAttr "R_Thumb_01_Ctrl_translateY.o" "CrocRigRN.phl[422]";
-connectAttr "R_Thumb_01_Ctrl_translateZ.o" "CrocRigRN.phl[423]";
-connectAttr "R_Thumb_01_Ctrl_rotateX.o" "CrocRigRN.phl[424]";
-connectAttr "R_Thumb_01_Ctrl_rotateY.o" "CrocRigRN.phl[425]";
-connectAttr "R_Thumb_01_Ctrl_rotateZ.o" "CrocRigRN.phl[426]";
-connectAttr "R_Thumb_01_Ctrl_scaleX.o" "CrocRigRN.phl[427]";
-connectAttr "R_Thumb_01_Ctrl_scaleY.o" "CrocRigRN.phl[428]";
-connectAttr "R_Thumb_01_Ctrl_scaleZ.o" "CrocRigRN.phl[429]";
-connectAttr "R_Thumb_02_Ctrl_translateX.o" "CrocRigRN.phl[430]";
-connectAttr "R_Thumb_02_Ctrl_translateY.o" "CrocRigRN.phl[431]";
-connectAttr "R_Thumb_02_Ctrl_translateZ.o" "CrocRigRN.phl[432]";
-connectAttr "R_Thumb_02_Ctrl_rotateX.o" "CrocRigRN.phl[433]";
-connectAttr "R_Thumb_02_Ctrl_rotateY.o" "CrocRigRN.phl[434]";
-connectAttr "R_Thumb_02_Ctrl_rotateZ.o" "CrocRigRN.phl[435]";
-connectAttr "R_Thumb_02_Ctrl_scaleX.o" "CrocRigRN.phl[436]";
-connectAttr "R_Thumb_02_Ctrl_scaleY.o" "CrocRigRN.phl[437]";
-connectAttr "R_Thumb_02_Ctrl_scaleZ.o" "CrocRigRN.phl[438]";
-connectAttr "L_Clav_Ctrl_translateX.o" "CrocRigRN.phl[439]";
-connectAttr "L_Clav_Ctrl_translateY.o" "CrocRigRN.phl[440]";
-connectAttr "L_Clav_Ctrl_translateZ.o" "CrocRigRN.phl[441]";
-connectAttr "L_Clav_Ctrl_rotateX.o" "CrocRigRN.phl[442]";
-connectAttr "L_Clav_Ctrl_rotateY.o" "CrocRigRN.phl[443]";
-connectAttr "L_Clav_Ctrl_rotateZ.o" "CrocRigRN.phl[444]";
-connectAttr "L_Clav_Ctrl_scaleX.o" "CrocRigRN.phl[445]";
-connectAttr "L_Clav_Ctrl_scaleY.o" "CrocRigRN.phl[446]";
-connectAttr "L_Clav_Ctrl_scaleZ.o" "CrocRigRN.phl[447]";
-connectAttr "R_Clav_Ctrl_translateX.o" "CrocRigRN.phl[448]";
-connectAttr "R_Clav_Ctrl_translateY.o" "CrocRigRN.phl[449]";
-connectAttr "R_Clav_Ctrl_translateZ.o" "CrocRigRN.phl[450]";
-connectAttr "R_Clav_Ctrl_rotateX.o" "CrocRigRN.phl[451]";
-connectAttr "R_Clav_Ctrl_rotateY.o" "CrocRigRN.phl[452]";
-connectAttr "R_Clav_Ctrl_rotateZ.o" "CrocRigRN.phl[453]";
-connectAttr "R_Clav_Ctrl_scaleX.o" "CrocRigRN.phl[454]";
-connectAttr "R_Clav_Ctrl_scaleY.o" "CrocRigRN.phl[455]";
-connectAttr "R_Clav_Ctrl_scaleZ.o" "CrocRigRN.phl[456]";
-connectAttr "Neck_Ctrl_translateX.o" "CrocRigRN.phl[457]";
-connectAttr "Neck_Ctrl_translateY.o" "CrocRigRN.phl[458]";
-connectAttr "Neck_Ctrl_translateZ.o" "CrocRigRN.phl[459]";
-connectAttr "Neck_Ctrl_rotateX.o" "CrocRigRN.phl[460]";
-connectAttr "Neck_Ctrl_rotateY.o" "CrocRigRN.phl[461]";
-connectAttr "Neck_Ctrl_rotateZ.o" "CrocRigRN.phl[462]";
-connectAttr "Neck_Ctrl_scaleX.o" "CrocRigRN.phl[463]";
-connectAttr "Neck_Ctrl_scaleY.o" "CrocRigRN.phl[464]";
-connectAttr "Neck_Ctrl_scaleZ.o" "CrocRigRN.phl[465]";
-connectAttr "Head_Ctrl_translateX.o" "CrocRigRN.phl[466]";
-connectAttr "Head_Ctrl_translateY.o" "CrocRigRN.phl[467]";
-connectAttr "Head_Ctrl_translateZ.o" "CrocRigRN.phl[468]";
-connectAttr "Head_Ctrl_rotateY.o" "CrocRigRN.phl[469]";
-connectAttr "Head_Ctrl_rotateX.o" "CrocRigRN.phl[470]";
-connectAttr "Head_Ctrl_rotateZ.o" "CrocRigRN.phl[471]";
-connectAttr "Jaw_Ctrl_translateX.o" "CrocRigRN.phl[472]";
-connectAttr "Jaw_Ctrl_translateY.o" "CrocRigRN.phl[473]";
-connectAttr "Jaw_Ctrl_translateZ.o" "CrocRigRN.phl[474]";
-connectAttr "Jaw_Ctrl_rotateX.o" "CrocRigRN.phl[475]";
-connectAttr "Jaw_Ctrl_rotateY.o" "CrocRigRN.phl[476]";
-connectAttr "Jaw_Ctrl_rotateZ.o" "CrocRigRN.phl[477]";
-connectAttr "Jaw_Ctrl_scaleX.o" "CrocRigRN.phl[478]";
-connectAttr "Jaw_Ctrl_scaleY.o" "CrocRigRN.phl[479]";
-connectAttr "Jaw_Ctrl_scaleZ.o" "CrocRigRN.phl[480]";
-connectAttr "Eye_Target_Main_Ctrl_translateX.o" "CrocRigRN.phl[481]";
-connectAttr "Eye_Target_Main_Ctrl_translateY.o" "CrocRigRN.phl[482]";
-connectAttr "Eye_Target_Main_Ctrl_translateZ.o" "CrocRigRN.phl[483]";
-connectAttr "Eye_Target_Main_Ctrl_rotateX.o" "CrocRigRN.phl[484]";
-connectAttr "Eye_Target_Main_Ctrl_rotateY.o" "CrocRigRN.phl[485]";
-connectAttr "Eye_Target_Main_Ctrl_rotateZ.o" "CrocRigRN.phl[486]";
-connectAttr "Eye_Target_Main_Ctrl_scaleX.o" "CrocRigRN.phl[487]";
-connectAttr "Eye_Target_Main_Ctrl_scaleY.o" "CrocRigRN.phl[488]";
-connectAttr "Eye_Target_Main_Ctrl_scaleZ.o" "CrocRigRN.phl[489]";
-connectAttr "L_Eye_Aim_Ctrl_Ctrl_translateX.o" "CrocRigRN.phl[490]";
-connectAttr "L_Eye_Aim_Ctrl_Ctrl_translateY.o" "CrocRigRN.phl[491]";
-connectAttr "L_Eye_Aim_Ctrl_Ctrl_translateZ.o" "CrocRigRN.phl[492]";
-connectAttr "L_Eye_Aim_Ctrl_Ctrl_rotateX.o" "CrocRigRN.phl[493]";
-connectAttr "L_Eye_Aim_Ctrl_Ctrl_rotateY.o" "CrocRigRN.phl[494]";
-connectAttr "L_Eye_Aim_Ctrl_Ctrl_rotateZ.o" "CrocRigRN.phl[495]";
-connectAttr "L_Eye_Aim_Ctrl_Ctrl_scaleX.o" "CrocRigRN.phl[496]";
-connectAttr "L_Eye_Aim_Ctrl_Ctrl_scaleY.o" "CrocRigRN.phl[497]";
-connectAttr "L_Eye_Aim_Ctrl_Ctrl_scaleZ.o" "CrocRigRN.phl[498]";
-connectAttr "R_Eye_Aim_Ctrl_Ctrl_translateX.o" "CrocRigRN.phl[499]";
-connectAttr "R_Eye_Aim_Ctrl_Ctrl_translateY.o" "CrocRigRN.phl[500]";
-connectAttr "R_Eye_Aim_Ctrl_Ctrl_translateZ.o" "CrocRigRN.phl[501]";
-connectAttr "R_Eye_Aim_Ctrl_Ctrl_rotateX.o" "CrocRigRN.phl[502]";
-connectAttr "R_Eye_Aim_Ctrl_Ctrl_rotateY.o" "CrocRigRN.phl[503]";
-connectAttr "R_Eye_Aim_Ctrl_Ctrl_rotateZ.o" "CrocRigRN.phl[504]";
-connectAttr "R_Eye_Aim_Ctrl_Ctrl_scaleX.o" "CrocRigRN.phl[505]";
-connectAttr "R_Eye_Aim_Ctrl_Ctrl_scaleY.o" "CrocRigRN.phl[506]";
-connectAttr "R_Eye_Aim_Ctrl_Ctrl_scaleZ.o" "CrocRigRN.phl[507]";
-connectAttr "Tongue_Control_Joint_1_Ctrl_rotateX.o" "CrocRigRN.phl[508]";
-connectAttr "Tongue_Control_Joint_1_Ctrl_rotateY.o" "CrocRigRN.phl[509]";
-connectAttr "Tongue_Control_Joint_1_Ctrl_rotateZ.o" "CrocRigRN.phl[510]";
-connectAttr "Tongue_Control_Joint_1_Ctrl_translateX.o" "CrocRigRN.phl[511]";
-connectAttr "Tongue_Control_Joint_1_Ctrl_translateY.o" "CrocRigRN.phl[512]";
-connectAttr "Tongue_Control_Joint_1_Ctrl_translateZ.o" "CrocRigRN.phl[513]";
-connectAttr "Tongue_Control_Joint_1_Ctrl_scaleX.o" "CrocRigRN.phl[514]";
-connectAttr "Tongue_Control_Joint_1_Ctrl_scaleY.o" "CrocRigRN.phl[515]";
-connectAttr "Tongue_Control_Joint_1_Ctrl_scaleZ.o" "CrocRigRN.phl[516]";
-connectAttr "Tongue_Control_Joint_2_Ctrl_translateX.o" "CrocRigRN.phl[517]";
-connectAttr "Tongue_Control_Joint_2_Ctrl_translateY.o" "CrocRigRN.phl[518]";
-connectAttr "Tongue_Control_Joint_2_Ctrl_translateZ.o" "CrocRigRN.phl[519]";
-connectAttr "Tongue_Control_Joint_2_Ctrl_rotateX.o" "CrocRigRN.phl[520]";
-connectAttr "Tongue_Control_Joint_2_Ctrl_rotateY.o" "CrocRigRN.phl[521]";
-connectAttr "Tongue_Control_Joint_2_Ctrl_rotateZ.o" "CrocRigRN.phl[522]";
-connectAttr "Tongue_Control_Joint_2_Ctrl_scaleX.o" "CrocRigRN.phl[523]";
-connectAttr "Tongue_Control_Joint_2_Ctrl_scaleY.o" "CrocRigRN.phl[524]";
-connectAttr "Tongue_Control_Joint_2_Ctrl_scaleZ.o" "CrocRigRN.phl[525]";
-connectAttr "Transform_Ctrl_translateX.o" "CrocRigRN.phl[526]";
-connectAttr "Transform_Ctrl_translateY.o" "CrocRigRN.phl[527]";
-connectAttr "Transform_Ctrl_translateZ.o" "CrocRigRN.phl[528]";
-connectAttr "Transform_Ctrl_rotateX.o" "CrocRigRN.phl[529]";
-connectAttr "Transform_Ctrl_rotateZ.o" "CrocRigRN.phl[530]";
-connectAttr "Transform_Ctrl_scaleX.o" "CrocRigRN.phl[531]";
-connectAttr "Transform_Ctrl_scaleY.o" "CrocRigRN.phl[532]";
-connectAttr "Transform_Ctrl_scaleZ.o" "CrocRigRN.phl[533]";
-connectAttr "CoG_Ctrl_translateX.o" "CrocRigRN.phl[534]";
-connectAttr "CoG_Ctrl_translateY.o" "CrocRigRN.phl[535]";
-connectAttr "CoG_Ctrl_translateZ.o" "CrocRigRN.phl[536]";
-connectAttr "CoG_Ctrl_rotateX.o" "CrocRigRN.phl[537]";
-connectAttr "CoG_Ctrl_rotateY.o" "CrocRigRN.phl[538]";
-connectAttr "CoG_Ctrl_rotateZ.o" "CrocRigRN.phl[539]";
-connectAttr "CoG_Ctrl_scaleX.o" "CrocRigRN.phl[540]";
-connectAttr "CoG_Ctrl_scaleY.o" "CrocRigRN.phl[541]";
-connectAttr "CoG_Ctrl_scaleZ.o" "CrocRigRN.phl[542]";
-connectAttr "Tail_12_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[543]";
-connectAttr "Tail_12_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[544]";
-connectAttr "Tail_12_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[545]";
-connectAttr "Tail_12_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[546]";
-connectAttr "Tail_12_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[547]";
-connectAttr "Tail_12_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[548]";
-connectAttr "Tail_12_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[549]";
-connectAttr "Tail_12_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[550]";
-connectAttr "Tail_12_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[551]";
-connectAttr "Tail_11_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[552]";
-connectAttr "Tail_11_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[553]";
-connectAttr "Tail_11_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[554]";
-connectAttr "Tail_11_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[555]";
-connectAttr "Tail_11_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[556]";
-connectAttr "Tail_11_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[557]";
-connectAttr "Tail_11_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[558]";
-connectAttr "Tail_11_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[559]";
-connectAttr "Tail_11_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[560]";
-connectAttr "Tail_10_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[561]";
-connectAttr "Tail_10_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[562]";
-connectAttr "Tail_10_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[563]";
-connectAttr "Tail_10_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[564]";
-connectAttr "Tail_10_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[565]";
-connectAttr "Tail_10_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[566]";
-connectAttr "Tail_10_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[567]";
-connectAttr "Tail_10_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[568]";
-connectAttr "Tail_10_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[569]";
-connectAttr "Tail_09_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[570]";
-connectAttr "Tail_09_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[571]";
-connectAttr "Tail_09_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[572]";
-connectAttr "Tail_09_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[573]";
-connectAttr "Tail_09_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[574]";
-connectAttr "Tail_09_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[575]";
-connectAttr "Tail_09_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[576]";
-connectAttr "Tail_09_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[577]";
-connectAttr "Tail_09_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[578]";
-connectAttr "Tail_08_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[579]";
-connectAttr "Tail_08_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[580]";
-connectAttr "Tail_08_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[581]";
-connectAttr "Tail_08_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[582]";
-connectAttr "Tail_08_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[583]";
-connectAttr "Tail_08_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[584]";
-connectAttr "Tail_08_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[585]";
-connectAttr "Tail_08_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[586]";
-connectAttr "Tail_08_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[587]";
-connectAttr "Tail_07_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[588]";
-connectAttr "Tail_07_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[589]";
-connectAttr "Tail_07_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[590]";
-connectAttr "Tail_07_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[591]";
-connectAttr "Tail_07_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[592]";
-connectAttr "Tail_07_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[593]";
-connectAttr "Tail_07_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[594]";
-connectAttr "Tail_07_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[595]";
-connectAttr "Tail_07_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[596]";
-connectAttr "Tail_06_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[597]";
-connectAttr "Tail_06_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[598]";
-connectAttr "Tail_06_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[599]";
-connectAttr "Tail_06_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[600]";
-connectAttr "Tail_06_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[601]";
-connectAttr "Tail_06_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[602]";
-connectAttr "Tail_06_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[603]";
-connectAttr "Tail_06_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[604]";
-connectAttr "Tail_06_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[605]";
-connectAttr "Tail_05_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[606]";
-connectAttr "Tail_05_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[607]";
-connectAttr "Tail_05_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[608]";
-connectAttr "Tail_05_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[609]";
-connectAttr "Tail_05_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[610]";
-connectAttr "Tail_05_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[611]";
-connectAttr "Tail_05_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[612]";
-connectAttr "Tail_05_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[613]";
-connectAttr "Tail_05_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[614]";
-connectAttr "Tail_04_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[615]";
-connectAttr "Tail_04_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[616]";
-connectAttr "Tail_04_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[617]";
-connectAttr "Tail_04_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[618]";
-connectAttr "Tail_04_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[619]";
-connectAttr "Tail_04_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[620]";
-connectAttr "Tail_04_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[621]";
-connectAttr "Tail_04_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[622]";
-connectAttr "Tail_04_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[623]";
-connectAttr "Tail_03_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[624]";
-connectAttr "Tail_03_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[625]";
-connectAttr "Tail_03_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[626]";
-connectAttr "Tail_03_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[627]";
-connectAttr "Tail_03_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[628]";
-connectAttr "Tail_03_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[629]";
-connectAttr "Tail_03_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[630]";
-connectAttr "Tail_03_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[631]";
-connectAttr "Tail_03_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[632]";
-connectAttr "Tail_02_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[633]";
-connectAttr "Tail_02_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[634]";
-connectAttr "Tail_02_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[635]";
-connectAttr "Tail_02_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[636]";
-connectAttr "Tail_02_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[637]";
-connectAttr "Tail_02_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[638]";
-connectAttr "Tail_02_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[639]";
-connectAttr "Tail_02_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[640]";
-connectAttr "Tail_02_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[641]";
-connectAttr "Tail_01_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[642]";
-connectAttr "Tail_01_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[643]";
-connectAttr "Tail_01_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[644]";
-connectAttr "Tail_01_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[645]";
-connectAttr "Tail_01_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[646]";
-connectAttr "Tail_01_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[647]";
-connectAttr "Tail_01_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[648]";
-connectAttr "Tail_01_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[649]";
-connectAttr "Tail_01_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[650]";
-connectAttr "R_Cheekbone_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[651]";
-connectAttr "R_Cheekbone_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[652]";
-connectAttr "R_Cheekbone_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[653]";
-connectAttr "R_Cheekbone_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[654]";
-connectAttr "R_Cheekbone_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[655]";
-connectAttr "R_Cheekbone_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[656]";
-connectAttr "R_Cheekbone_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[657]";
-connectAttr "R_Cheekbone_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[658]";
-connectAttr "R_Cheekbone_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[659]";
-connectAttr "L_Cheekbone_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[660]";
-connectAttr "L_Cheekbone_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[661]";
-connectAttr "L_Cheekbone_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[662]";
-connectAttr "L_Cheekbone_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[663]";
-connectAttr "L_Cheekbone_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[664]";
-connectAttr "L_Cheekbone_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[665]";
-connectAttr "L_Cheekbone_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[666]";
-connectAttr "L_Cheekbone_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[667]";
-connectAttr "L_Cheekbone_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[668]";
-connectAttr "R_Cheek_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[669]";
-connectAttr "R_Cheek_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[670]";
-connectAttr "R_Cheek_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[671]";
-connectAttr "R_Cheek_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[672]";
-connectAttr "R_Cheek_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[673]";
-connectAttr "R_Cheek_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[674]";
-connectAttr "R_Cheek_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[675]";
-connectAttr "R_Cheek_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[676]";
-connectAttr "R_Cheek_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[677]";
-connectAttr "L_Cheek_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[678]";
-connectAttr "L_Cheek_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[679]";
-connectAttr "L_Cheek_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[680]";
-connectAttr "L_Cheek_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[681]";
-connectAttr "L_Cheek_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[682]";
-connectAttr "L_Cheek_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[683]";
-connectAttr "L_Cheek_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[684]";
-connectAttr "L_Cheek_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[685]";
-connectAttr "L_Cheek_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[686]";
-connectAttr "Snout_Bridge_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[687]";
-connectAttr "Snout_Bridge_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[688]";
-connectAttr "Snout_Bridge_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[689]";
-connectAttr "Snout_Bridge_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[690]";
-connectAttr "Snout_Bridge_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[691]";
-connectAttr "Snout_Bridge_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[692]";
-connectAttr "Snout_Bridge_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[693]";
-connectAttr "Snout_Bridge_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[694]";
-connectAttr "Snout_Bridge_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[695]";
-connectAttr "Snout_tip_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[696]";
-connectAttr "Snout_tip_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[697]";
-connectAttr "Snout_tip_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[698]";
-connectAttr "Snout_tip_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[699]";
-connectAttr "Snout_tip_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[700]";
-connectAttr "Snout_tip_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[701]";
-connectAttr "Snout_tip_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[702]";
-connectAttr "Snout_tip_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[703]";
-connectAttr "Snout_tip_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[704]";
-connectAttr "R_Nostril_Joint_Ctrl_translateX.o" "CrocRigRN.phl[705]";
-connectAttr "R_Nostril_Joint_Ctrl_translateY.o" "CrocRigRN.phl[706]";
-connectAttr "R_Nostril_Joint_Ctrl_translateZ.o" "CrocRigRN.phl[707]";
-connectAttr "R_Nostril_Joint_Ctrl_rotateX.o" "CrocRigRN.phl[708]";
-connectAttr "R_Nostril_Joint_Ctrl_rotateY.o" "CrocRigRN.phl[709]";
-connectAttr "R_Nostril_Joint_Ctrl_rotateZ.o" "CrocRigRN.phl[710]";
-connectAttr "R_Nostril_Joint_Ctrl_scaleX.o" "CrocRigRN.phl[711]";
-connectAttr "R_Nostril_Joint_Ctrl_scaleY.o" "CrocRigRN.phl[712]";
-connectAttr "R_Nostril_Joint_Ctrl_scaleZ.o" "CrocRigRN.phl[713]";
-connectAttr "L_Nostril_Joint_Ctrl_translateX.o" "CrocRigRN.phl[714]";
-connectAttr "L_Nostril_Joint_Ctrl_translateY.o" "CrocRigRN.phl[715]";
-connectAttr "L_Nostril_Joint_Ctrl_translateZ.o" "CrocRigRN.phl[716]";
-connectAttr "L_Nostril_Joint_Ctrl_rotateX.o" "CrocRigRN.phl[717]";
-connectAttr "L_Nostril_Joint_Ctrl_rotateY.o" "CrocRigRN.phl[718]";
-connectAttr "L_Nostril_Joint_Ctrl_rotateZ.o" "CrocRigRN.phl[719]";
-connectAttr "L_Nostril_Joint_Ctrl_scaleX.o" "CrocRigRN.phl[720]";
-connectAttr "L_Nostril_Joint_Ctrl_scaleY.o" "CrocRigRN.phl[721]";
-connectAttr "L_Nostril_Joint_Ctrl_scaleZ.o" "CrocRigRN.phl[722]";
-connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[723]";
-connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[724]";
-connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[725]";
-connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[726]";
-connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[727]";
-connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[728]";
-connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[729]";
-connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[730]";
-connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[731]";
-connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[732]";
-connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[733]";
-connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[734]";
-connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[735]";
-connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[736]";
-connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[737]";
-connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[738]";
-connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[739]";
-connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[740]";
-connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_translateX.o" "CrocRigRN.phl[741]";
-connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_translateY.o" "CrocRigRN.phl[742]";
-connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_translateZ.o" "CrocRigRN.phl[743]";
-connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_rotateX.o" "CrocRigRN.phl[744]";
-connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_rotateY.o" "CrocRigRN.phl[745]";
-connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_rotateZ.o" "CrocRigRN.phl[746]";
-connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_scaleX.o" "CrocRigRN.phl[747]";
-connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_scaleY.o" "CrocRigRN.phl[748]";
-connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_scaleZ.o" "CrocRigRN.phl[749]";
-connectAttr "L_Mouth_Corner_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[750]";
-connectAttr "L_Mouth_Corner_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[751]";
-connectAttr "L_Mouth_Corner_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[752]";
-connectAttr "L_Mouth_Corner_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[753]";
-connectAttr "L_Mouth_Corner_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[754]";
-connectAttr "L_Mouth_Corner_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[755]";
-connectAttr "L_Mouth_Corner_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[756]";
-connectAttr "L_Mouth_Corner_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[757]";
-connectAttr "L_Mouth_Corner_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[758]";
-connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[759]";
-connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[760]";
-connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[761]";
-connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[762]";
-connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[763]";
-connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[764]";
-connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[765]";
-connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[766]";
-connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[767]";
-connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[768]";
-connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[769]";
-connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[770]";
-connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[771]";
-connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[772]";
-connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[773]";
-connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[774]";
-connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[775]";
-connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[776]";
-connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_translateX.o" "CrocRigRN.phl[777]";
-connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_translateY.o" "CrocRigRN.phl[778]";
-connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_translateZ.o" "CrocRigRN.phl[779]";
-connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_rotateX.o" "CrocRigRN.phl[780]";
-connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_rotateY.o" "CrocRigRN.phl[781]";
-connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_rotateZ.o" "CrocRigRN.phl[782]";
-connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_scaleX.o" "CrocRigRN.phl[783]";
-connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_scaleY.o" "CrocRigRN.phl[784]";
-connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_scaleZ.o" "CrocRigRN.phl[785]";
-connectAttr "R_Mouth_Corner_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[786]";
-connectAttr "R_Mouth_Corner_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[787]";
-connectAttr "R_Mouth_Corner_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[788]";
-connectAttr "R_Mouth_Corner_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[789]";
-connectAttr "R_Mouth_Corner_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[790]";
-connectAttr "R_Mouth_Corner_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[791]";
-connectAttr "R_Mouth_Corner_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[792]";
-connectAttr "R_Mouth_Corner_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[793]";
-connectAttr "R_Mouth_Corner_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[794]";
-connectAttr "Mouth_Upper_Center_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[795]";
-connectAttr "Mouth_Upper_Center_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[796]";
-connectAttr "Mouth_Upper_Center_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[797]";
-connectAttr "Mouth_Upper_Center_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[798]";
-connectAttr "Mouth_Upper_Center_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[799]";
-connectAttr "Mouth_Upper_Center_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[800]";
-connectAttr "Mouth_Upper_Center_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[801]";
-connectAttr "Mouth_Upper_Center_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[802]";
-connectAttr "Mouth_Upper_Center_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[803]";
-connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[804]";
-connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[805]";
-connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[806]";
-connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[807]";
-connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[808]";
-connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[809]";
-connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[810]";
-connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[811]";
-connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[812]";
-connectAttr "Mouth_Center_Lower_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[813]";
-connectAttr "Mouth_Center_Lower_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[814]";
-connectAttr "Mouth_Center_Lower_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[815]";
-connectAttr "Mouth_Center_Lower_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[816]";
-connectAttr "Mouth_Center_Lower_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[817]";
-connectAttr "Mouth_Center_Lower_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[818]";
-connectAttr "Mouth_Center_Lower_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[819]";
-connectAttr "Mouth_Center_Lower_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[820]";
-connectAttr "Mouth_Center_Lower_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[821]";
-connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[822]";
-connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[823]";
-connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[824]";
-connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[825]";
-connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[826]";
-connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[827]";
-connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[828]";
-connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[829]";
-connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[830]";
-connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[831]";
-connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[832]";
-connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[833]";
-connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[834]";
-connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[835]";
-connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[836]";
-connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[837]";
-connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[838]";
-connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[839]";
-connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[840]";
-connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[841]";
-connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[842]";
-connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[843]";
-connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[844]";
-connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[845]";
-connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[846]";
-connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[847]";
-connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[848]";
-connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_translateX.o" "CrocRigRN.phl[849]";
-connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_translateY.o" "CrocRigRN.phl[850]";
-connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_translateZ.o" "CrocRigRN.phl[851]";
-connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_rotateX.o" "CrocRigRN.phl[852]";
-connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_rotateY.o" "CrocRigRN.phl[853]";
-connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_rotateZ.o" "CrocRigRN.phl[854]";
-connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_scaleX.o" "CrocRigRN.phl[855]";
-connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_scaleY.o" "CrocRigRN.phl[856]";
-connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_scaleZ.o" "CrocRigRN.phl[857]";
-connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_translateX.o" "CrocRigRN.phl[858]";
-connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_translateY.o" "CrocRigRN.phl[859]";
-connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_translateZ.o" "CrocRigRN.phl[860]";
-connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_rotateX.o" "CrocRigRN.phl[861]";
-connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_rotateY.o" "CrocRigRN.phl[862]";
-connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_rotateZ.o" "CrocRigRN.phl[863]";
-connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_scaleX.o" "CrocRigRN.phl[864]";
-connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_scaleY.o" "CrocRigRN.phl[865]";
-connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_scaleZ.o" "CrocRigRN.phl[866]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_translateX.o" "CrocRigRN.phl[867]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_translateY.o" "CrocRigRN.phl[868]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_translateZ.o" "CrocRigRN.phl[869]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_rotateX.o" "CrocRigRN.phl[870]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_rotateY.o" "CrocRigRN.phl[871]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_rotateZ.o" "CrocRigRN.phl[872]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_scaleX.o" "CrocRigRN.phl[873]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_scaleY.o" "CrocRigRN.phl[874]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_scaleZ.o" "CrocRigRN.phl[875]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[876]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[877]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[878]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[879]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[880]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[881]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[882]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[883]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[884]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[885]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[886]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[887]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[888]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[889]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[890]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[891]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[892]";
-connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[893]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[894]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[895]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[896]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[897]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[898]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[899]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[900]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[901]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[902]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[903]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[904]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[905]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[906]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[907]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[908]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[909]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[910]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[911]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_translateX.o" "CrocRigRN.phl[912]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_translateY.o" "CrocRigRN.phl[913]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_translateZ.o" "CrocRigRN.phl[914]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_rotateX.o" "CrocRigRN.phl[915]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_rotateY.o" "CrocRigRN.phl[916]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_rotateZ.o" "CrocRigRN.phl[917]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_scaleX.o" "CrocRigRN.phl[918]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_scaleY.o" "CrocRigRN.phl[919]";
-connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_scaleZ.o" "CrocRigRN.phl[920]";
-connectAttr "L_Brow_Master_Ctrl_translateX.o" "CrocRigRN.phl[921]";
-connectAttr "L_Brow_Master_Ctrl_translateY.o" "CrocRigRN.phl[922]";
-connectAttr "L_Brow_Master_Ctrl_translateZ.o" "CrocRigRN.phl[923]";
-connectAttr "L_Brow_Master_Ctrl_rotateX.o" "CrocRigRN.phl[924]";
-connectAttr "L_Brow_Master_Ctrl_rotateY.o" "CrocRigRN.phl[925]";
-connectAttr "L_Brow_Master_Ctrl_rotateZ.o" "CrocRigRN.phl[926]";
-connectAttr "L_Brow_Master_Ctrl_scaleX.o" "CrocRigRN.phl[927]";
-connectAttr "L_Brow_Master_Ctrl_scaleY.o" "CrocRigRN.phl[928]";
-connectAttr "L_Brow_Master_Ctrl_scaleZ.o" "CrocRigRN.phl[929]";
-connectAttr "L_Brow_Master_Ctrl_translateX1.o" "CrocRigRN.phl[930]";
-connectAttr "L_Brow_Master_Ctrl_translateY1.o" "CrocRigRN.phl[931]";
-connectAttr "L_Brow_Master_Ctrl_translateZ1.o" "CrocRigRN.phl[932]";
-connectAttr "L_Brow_Master_Ctrl_rotateX1.o" "CrocRigRN.phl[933]";
-connectAttr "L_Brow_Master_Ctrl_rotateY1.o" "CrocRigRN.phl[934]";
-connectAttr "L_Brow_Master_Ctrl_rotateZ1.o" "CrocRigRN.phl[935]";
-connectAttr "L_Brow_Master_Ctrl_scaleX1.o" "CrocRigRN.phl[936]";
-connectAttr "L_Brow_Master_Ctrl_scaleY1.o" "CrocRigRN.phl[937]";
-connectAttr "L_Brow_Master_Ctrl_scaleZ1.o" "CrocRigRN.phl[938]";
-connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[939]";
-connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[940]";
-connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[941]";
-connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[942]";
-connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[943]";
-connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[944]";
-connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[945]";
-connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[946]";
-connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[947]";
-connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[948]";
-connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[949]";
-connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[950]";
-connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[951]";
-connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[952]";
-connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[953]";
-connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[954]";
-connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[955]";
-connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[956]";
-connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[957]";
-connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[958]";
-connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[959]";
-connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[960]";
-connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[961]";
-connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[962]";
-connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[963]";
-connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[964]";
-connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[965]";
-connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[966]";
-connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[967]";
-connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[968]";
-connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[969]";
-connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[970]";
-connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[971]";
-connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[972]";
-connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[973]";
-connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[974]";
-connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[975]";
-connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[976]";
-connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[977]";
-connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[978]";
-connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[979]";
-connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[980]";
-connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[981]";
-connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[982]";
-connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[983]";
-connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[984]";
-connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[985]";
-connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[986]";
-connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[987]";
-connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[988]";
-connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[989]";
-connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[990]";
-connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[991]";
-connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[992]";
-connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[993]";
-connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[994]";
-connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[995]";
-connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[996]";
-connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[997]";
-connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[998]";
-connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[999]";
-connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1000]";
-connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1001]";
-connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[1002]";
-connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[1003]";
-connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[1004]";
-connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[1005]";
-connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[1006]";
-connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[1007]";
-connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[1008]";
-connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1009]";
-connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1010]";
-connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[1011]";
-connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[1012]";
-connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[1013]";
-connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[1014]";
-connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[1015]";
-connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[1016]";
-connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[1017]";
-connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1018]";
-connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1019]";
-connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[1020]";
-connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[1021]";
-connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[1022]";
-connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[1023]";
-connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[1024]";
-connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[1025]";
-connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[1026]";
-connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1027]";
-connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1028]";
-connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[1029]";
-connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[1030]";
-connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[1031]";
-connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[1032]";
-connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[1033]";
-connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[1034]";
-connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[1035]";
-connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1036]";
-connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1037]";
-connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[1038]";
-connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[1039]";
-connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[1040]";
-connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[1041]";
-connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[1042]";
-connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[1043]";
-connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[1044]";
-connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1045]";
-connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1046]";
-connectAttr "Belt_Buckle_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[1047]";
-connectAttr "Belt_Buckle_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[1048]";
-connectAttr "Belt_Buckle_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[1049]";
-connectAttr "Belt_Buckle_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[1050]";
-connectAttr "Belt_Buckle_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[1051]";
-connectAttr "Belt_Buckle_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[1052]";
-connectAttr "Belt_Buckle_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[1053]";
-connectAttr "Belt_Buckle_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1054]";
-connectAttr "Belt_Buckle_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1055]";
-connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[1056]";
-connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[1057]";
-connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[1058]";
-connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[1059]";
-connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[1060]";
-connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[1061]";
-connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[1062]";
-connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[1063]";
-connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[1064]";
-connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[1065]";
-connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[1066]";
-connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[1067]";
-connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[1068]";
-connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[1069]";
-connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[1070]";
-connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[1071]";
-connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[1072]";
-connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[1073]";
-connectAttr "L_Belt_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[1074]";
-connectAttr "L_Belt_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[1075]";
-connectAttr "L_Belt_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[1076]";
-connectAttr "L_Belt_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[1077]";
-connectAttr "L_Belt_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[1078]";
-connectAttr "L_Belt_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[1079]";
-connectAttr "L_Belt_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[1080]";
-connectAttr "L_Belt_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[1081]";
-connectAttr "L_Belt_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[1082]";
-connectAttr "L_Belt_Jnt_3_Ctrl_translateX.o" "CrocRigRN.phl[1083]";
-connectAttr "L_Belt_Jnt_3_Ctrl_translateY.o" "CrocRigRN.phl[1084]";
-connectAttr "L_Belt_Jnt_3_Ctrl_translateZ.o" "CrocRigRN.phl[1085]";
-connectAttr "L_Belt_Jnt_3_Ctrl_scaleX.o" "CrocRigRN.phl[1086]";
-connectAttr "L_Belt_Jnt_3_Ctrl_scaleY.o" "CrocRigRN.phl[1087]";
-connectAttr "L_Belt_Jnt_3_Ctrl_scaleZ.o" "CrocRigRN.phl[1088]";
-connectAttr "L_Belt_Jnt_3_Ctrl_rotateX.o" "CrocRigRN.phl[1089]";
-connectAttr "L_Belt_Jnt_3_Ctrl_rotateY.o" "CrocRigRN.phl[1090]";
-connectAttr "L_Belt_Jnt_3_Ctrl_rotateZ.o" "CrocRigRN.phl[1091]";
-connectAttr "L_Belt_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[1092]";
-connectAttr "L_Belt_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[1093]";
-connectAttr "L_Belt_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[1094]";
-connectAttr "L_Belt_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[1095]";
-connectAttr "L_Belt_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[1096]";
-connectAttr "L_Belt_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[1097]";
-connectAttr "L_Belt_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[1098]";
-connectAttr "L_Belt_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[1099]";
-connectAttr "L_Belt_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[1100]";
-connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[1101]";
-connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[1102]";
-connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[1103]";
-connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[1104]";
-connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1105]";
-connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1106]";
-connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[1107]";
-connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[1108]";
-connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[1109]";
-connectAttr "R_Belt_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[1110]";
-connectAttr "R_Belt_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[1111]";
-connectAttr "R_Belt_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[1112]";
-connectAttr "R_Belt_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[1113]";
-connectAttr "R_Belt_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[1114]";
-connectAttr "R_Belt_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[1115]";
-connectAttr "R_Belt_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[1116]";
-connectAttr "R_Belt_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[1117]";
-connectAttr "R_Belt_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[1118]";
-connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[1119]";
-connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[1120]";
-connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[1121]";
-connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[1122]";
-connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1123]";
-connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1124]";
-connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[1125]";
-connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[1126]";
-connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[1127]";
-connectAttr "R_Belt_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[1128]";
-connectAttr "R_Belt_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[1129]";
-connectAttr "R_Belt_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[1130]";
-connectAttr "R_Belt_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[1131]";
-connectAttr "R_Belt_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[1132]";
-connectAttr "R_Belt_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[1133]";
-connectAttr "R_Belt_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[1134]";
-connectAttr "R_Belt_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[1135]";
-connectAttr "R_Belt_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[1136]";
-connectAttr "R_Belt_Jnt_3_Ctrl_translateX.o" "CrocRigRN.phl[1137]";
-connectAttr "R_Belt_Jnt_3_Ctrl_translateY.o" "CrocRigRN.phl[1138]";
-connectAttr "R_Belt_Jnt_3_Ctrl_translateZ.o" "CrocRigRN.phl[1139]";
-connectAttr "R_Belt_Jnt_3_Ctrl_scaleX.o" "CrocRigRN.phl[1140]";
-connectAttr "R_Belt_Jnt_3_Ctrl_scaleY.o" "CrocRigRN.phl[1141]";
-connectAttr "R_Belt_Jnt_3_Ctrl_scaleZ.o" "CrocRigRN.phl[1142]";
-connectAttr "R_Belt_Jnt_3_Ctrl_rotateX.o" "CrocRigRN.phl[1143]";
-connectAttr "R_Belt_Jnt_3_Ctrl_rotateY.o" "CrocRigRN.phl[1144]";
-connectAttr "R_Belt_Jnt_3_Ctrl_rotateZ.o" "CrocRigRN.phl[1145]";
-connectAttr "Shield_Ctrl_translateX.o" "CrocRigRN.phl[1146]";
-connectAttr "Shield_Ctrl_translateY.o" "CrocRigRN.phl[1147]";
-connectAttr "Shield_Ctrl_translateZ.o" "CrocRigRN.phl[1148]";
-connectAttr "Shield_Ctrl_rotateX.o" "CrocRigRN.phl[1149]";
-connectAttr "Shield_Ctrl_rotateY.o" "CrocRigRN.phl[1150]";
-connectAttr "Shield_Ctrl_rotateZ.o" "CrocRigRN.phl[1151]";
-connectAttr "Shield_Ctrl_scaleX.o" "CrocRigRN.phl[1152]";
-connectAttr "Shield_Ctrl_scaleY.o" "CrocRigRN.phl[1153]";
-connectAttr "Shield_Ctrl_scaleZ.o" "CrocRigRN.phl[1154]";
-connectAttr "Spear_Ctrl_translateX.o" "CrocRigRN.phl[1155]";
-connectAttr "Spear_Ctrl_translateY.o" "CrocRigRN.phl[1156]";
-connectAttr "Spear_Ctrl_translateZ.o" "CrocRigRN.phl[1157]";
-connectAttr "Spear_Ctrl_rotateX.o" "CrocRigRN.phl[1158]";
-connectAttr "Spear_Ctrl_rotateY.o" "CrocRigRN.phl[1159]";
-connectAttr "Spear_Ctrl_rotateZ.o" "CrocRigRN.phl[1160]";
-connectAttr "Spear_Ctrl_scaleX.o" "CrocRigRN.phl[1161]";
-connectAttr "Spear_Ctrl_scaleY.o" "CrocRigRN.phl[1162]";
-connectAttr "Spear_Ctrl_scaleZ.o" "CrocRigRN.phl[1163]";
-connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[1164]";
-connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[1165]";
-connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[1166]";
-connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[1167]";
-connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[1168]";
-connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[1169]";
-connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[1170]";
-connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1171]";
-connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1172]";
+connectAttr "L_Leg_IK_Ctrl_translateX.o" "CrocRigRN.phl[43]";
+connectAttr "L_Leg_IK_Ctrl_translateY.o" "CrocRigRN.phl[44]";
+connectAttr "L_Leg_IK_Ctrl_translateZ.o" "CrocRigRN.phl[45]";
+connectAttr "L_Leg_IK_Ctrl_rotateX.o" "CrocRigRN.phl[46]";
+connectAttr "L_Leg_IK_Ctrl_rotateY.o" "CrocRigRN.phl[47]";
+connectAttr "L_Leg_IK_Ctrl_rotateZ.o" "CrocRigRN.phl[48]";
+connectAttr "L_Reverse_Foot_Outer_Ctrl_translateX.o" "CrocRigRN.phl[49]";
+connectAttr "L_Reverse_Foot_Outer_Ctrl_translateY.o" "CrocRigRN.phl[50]";
+connectAttr "L_Reverse_Foot_Outer_Ctrl_translateZ.o" "CrocRigRN.phl[51]";
+connectAttr "L_Reverse_Foot_Outer_Ctrl_rotateX.o" "CrocRigRN.phl[52]";
+connectAttr "L_Reverse_Foot_Outer_Ctrl_rotateY.o" "CrocRigRN.phl[53]";
+connectAttr "L_Reverse_Foot_Outer_Ctrl_rotateZ.o" "CrocRigRN.phl[54]";
+connectAttr "L_Reverse_Foot_Outer_Ctrl_scaleX.o" "CrocRigRN.phl[55]";
+connectAttr "L_Reverse_Foot_Outer_Ctrl_scaleY.o" "CrocRigRN.phl[56]";
+connectAttr "L_Reverse_Foot_Outer_Ctrl_scaleZ.o" "CrocRigRN.phl[57]";
+connectAttr "L_Reverse_Foot_Inner_Ctrl_translateX.o" "CrocRigRN.phl[58]";
+connectAttr "L_Reverse_Foot_Inner_Ctrl_translateY.o" "CrocRigRN.phl[59]";
+connectAttr "L_Reverse_Foot_Inner_Ctrl_translateZ.o" "CrocRigRN.phl[60]";
+connectAttr "L_Reverse_Foot_Inner_Ctrl_rotateX.o" "CrocRigRN.phl[61]";
+connectAttr "L_Reverse_Foot_Inner_Ctrl_rotateY.o" "CrocRigRN.phl[62]";
+connectAttr "L_Reverse_Foot_Inner_Ctrl_rotateZ.o" "CrocRigRN.phl[63]";
+connectAttr "L_Reverse_Foot_Inner_Ctrl_scaleX.o" "CrocRigRN.phl[64]";
+connectAttr "L_Reverse_Foot_Inner_Ctrl_scaleY.o" "CrocRigRN.phl[65]";
+connectAttr "L_Reverse_Foot_Inner_Ctrl_scaleZ.o" "CrocRigRN.phl[66]";
+connectAttr "L_Reverse_Foot_Heel_Ctrl_translateX.o" "CrocRigRN.phl[67]";
+connectAttr "L_Reverse_Foot_Heel_Ctrl_translateY.o" "CrocRigRN.phl[68]";
+connectAttr "L_Reverse_Foot_Heel_Ctrl_translateZ.o" "CrocRigRN.phl[69]";
+connectAttr "L_Reverse_Foot_Heel_Ctrl_rotateX.o" "CrocRigRN.phl[70]";
+connectAttr "L_Reverse_Foot_Heel_Ctrl_rotateY.o" "CrocRigRN.phl[71]";
+connectAttr "L_Reverse_Foot_Heel_Ctrl_rotateZ.o" "CrocRigRN.phl[72]";
+connectAttr "L_Reverse_Foot_Heel_Ctrl_scaleX.o" "CrocRigRN.phl[73]";
+connectAttr "L_Reverse_Foot_Heel_Ctrl_scaleY.o" "CrocRigRN.phl[74]";
+connectAttr "L_Reverse_Foot_Heel_Ctrl_scaleZ.o" "CrocRigRN.phl[75]";
+connectAttr "L_Reverse_Foot_Toe_Ctrl_translateX.o" "CrocRigRN.phl[76]";
+connectAttr "L_Reverse_Foot_Toe_Ctrl_translateY.o" "CrocRigRN.phl[77]";
+connectAttr "L_Reverse_Foot_Toe_Ctrl_translateZ.o" "CrocRigRN.phl[78]";
+connectAttr "L_Reverse_Foot_Toe_Ctrl_rotateX.o" "CrocRigRN.phl[79]";
+connectAttr "L_Reverse_Foot_Toe_Ctrl_rotateY.o" "CrocRigRN.phl[80]";
+connectAttr "L_Reverse_Foot_Toe_Ctrl_rotateZ.o" "CrocRigRN.phl[81]";
+connectAttr "L_Reverse_Foot_Toe_Ctrl_scaleX.o" "CrocRigRN.phl[82]";
+connectAttr "L_Reverse_Foot_Toe_Ctrl_scaleY.o" "CrocRigRN.phl[83]";
+connectAttr "L_Reverse_Foot_Toe_Ctrl_scaleZ.o" "CrocRigRN.phl[84]";
+connectAttr "L_Reverse_Foot_ToeTap_Ctrl_translateX.o" "CrocRigRN.phl[85]";
+connectAttr "L_Reverse_Foot_ToeTap_Ctrl_translateY.o" "CrocRigRN.phl[86]";
+connectAttr "L_Reverse_Foot_ToeTap_Ctrl_translateZ.o" "CrocRigRN.phl[87]";
+connectAttr "L_Reverse_Foot_ToeTap_Ctrl_rotateX.o" "CrocRigRN.phl[88]";
+connectAttr "L_Reverse_Foot_ToeTap_Ctrl_rotateY.o" "CrocRigRN.phl[89]";
+connectAttr "L_Reverse_Foot_ToeTap_Ctrl_rotateZ.o" "CrocRigRN.phl[90]";
+connectAttr "L_Reverse_Foot_ToeTap_Ctrl_scaleX.o" "CrocRigRN.phl[91]";
+connectAttr "L_Reverse_Foot_ToeTap_Ctrl_scaleY.o" "CrocRigRN.phl[92]";
+connectAttr "L_Reverse_Foot_ToeTap_Ctrl_scaleZ.o" "CrocRigRN.phl[93]";
+connectAttr "L_Reverse_Foot_Ball_Ctrl_translateX.o" "CrocRigRN.phl[94]";
+connectAttr "L_Reverse_Foot_Ball_Ctrl_translateY.o" "CrocRigRN.phl[95]";
+connectAttr "L_Reverse_Foot_Ball_Ctrl_translateZ.o" "CrocRigRN.phl[96]";
+connectAttr "L_Reverse_Foot_Ball_Ctrl_rotateX.o" "CrocRigRN.phl[97]";
+connectAttr "L_Reverse_Foot_Ball_Ctrl_rotateY.o" "CrocRigRN.phl[98]";
+connectAttr "L_Reverse_Foot_Ball_Ctrl_rotateZ.o" "CrocRigRN.phl[99]";
+connectAttr "L_Reverse_Foot_Ball_Ctrl_scaleX.o" "CrocRigRN.phl[100]";
+connectAttr "L_Reverse_Foot_Ball_Ctrl_scaleY.o" "CrocRigRN.phl[101]";
+connectAttr "L_Reverse_Foot_Ball_Ctrl_scaleZ.o" "CrocRigRN.phl[102]";
+connectAttr "L_Leg_IK_PV_Ctrl_translateX.o" "CrocRigRN.phl[103]";
+connectAttr "L_Leg_IK_PV_Ctrl_translateY.o" "CrocRigRN.phl[104]";
+connectAttr "L_Leg_IK_PV_Ctrl_translateZ.o" "CrocRigRN.phl[105]";
+connectAttr "L_Leg_IK_PV_Ctrl_rotateX.o" "CrocRigRN.phl[106]";
+connectAttr "L_Leg_IK_PV_Ctrl_rotateY.o" "CrocRigRN.phl[107]";
+connectAttr "L_Leg_IK_PV_Ctrl_rotateZ.o" "CrocRigRN.phl[108]";
+connectAttr "L_Leg_IK_PV_Ctrl_scaleX.o" "CrocRigRN.phl[109]";
+connectAttr "L_Leg_IK_PV_Ctrl_scaleY.o" "CrocRigRN.phl[110]";
+connectAttr "L_Leg_IK_PV_Ctrl_scaleZ.o" "CrocRigRN.phl[111]";
+connectAttr "R_Leg_IK_Ctrl_scaleX.o" "CrocRigRN.phl[112]";
+connectAttr "R_Leg_IK_Ctrl_scaleY.o" "CrocRigRN.phl[113]";
+connectAttr "R_Leg_IK_Ctrl_scaleZ.o" "CrocRigRN.phl[114]";
+connectAttr "R_Leg_IK_Ctrl_translateX.o" "CrocRigRN.phl[115]";
+connectAttr "R_Leg_IK_Ctrl_translateY.o" "CrocRigRN.phl[116]";
+connectAttr "R_Leg_IK_Ctrl_translateZ.o" "CrocRigRN.phl[117]";
+connectAttr "R_Leg_IK_Ctrl_rotateX.o" "CrocRigRN.phl[118]";
+connectAttr "R_Leg_IK_Ctrl_rotateY.o" "CrocRigRN.phl[119]";
+connectAttr "R_Leg_IK_Ctrl_rotateZ.o" "CrocRigRN.phl[120]";
+connectAttr "R_Reverse_Foot_Outer_Ctrl_translateX.o" "CrocRigRN.phl[121]";
+connectAttr "R_Reverse_Foot_Outer_Ctrl_translateY.o" "CrocRigRN.phl[122]";
+connectAttr "R_Reverse_Foot_Outer_Ctrl_translateZ.o" "CrocRigRN.phl[123]";
+connectAttr "R_Reverse_Foot_Outer_Ctrl_rotateX.o" "CrocRigRN.phl[124]";
+connectAttr "R_Reverse_Foot_Outer_Ctrl_rotateY.o" "CrocRigRN.phl[125]";
+connectAttr "R_Reverse_Foot_Outer_Ctrl_rotateZ.o" "CrocRigRN.phl[126]";
+connectAttr "R_Reverse_Foot_Outer_Ctrl_scaleX.o" "CrocRigRN.phl[127]";
+connectAttr "R_Reverse_Foot_Outer_Ctrl_scaleY.o" "CrocRigRN.phl[128]";
+connectAttr "R_Reverse_Foot_Outer_Ctrl_scaleZ.o" "CrocRigRN.phl[129]";
+connectAttr "R_Reverse_Foot_Inner_Ctrl_translateX.o" "CrocRigRN.phl[130]";
+connectAttr "R_Reverse_Foot_Inner_Ctrl_translateY.o" "CrocRigRN.phl[131]";
+connectAttr "R_Reverse_Foot_Inner_Ctrl_translateZ.o" "CrocRigRN.phl[132]";
+connectAttr "R_Reverse_Foot_Inner_Ctrl_rotateX.o" "CrocRigRN.phl[133]";
+connectAttr "R_Reverse_Foot_Inner_Ctrl_rotateY.o" "CrocRigRN.phl[134]";
+connectAttr "R_Reverse_Foot_Inner_Ctrl_rotateZ.o" "CrocRigRN.phl[135]";
+connectAttr "R_Reverse_Foot_Inner_Ctrl_scaleX.o" "CrocRigRN.phl[136]";
+connectAttr "R_Reverse_Foot_Inner_Ctrl_scaleY.o" "CrocRigRN.phl[137]";
+connectAttr "R_Reverse_Foot_Inner_Ctrl_scaleZ.o" "CrocRigRN.phl[138]";
+connectAttr "R_Reverse_Foot_Heel_Ctrl_translateX.o" "CrocRigRN.phl[139]";
+connectAttr "R_Reverse_Foot_Heel_Ctrl_translateY.o" "CrocRigRN.phl[140]";
+connectAttr "R_Reverse_Foot_Heel_Ctrl_translateZ.o" "CrocRigRN.phl[141]";
+connectAttr "R_Reverse_Foot_Heel_Ctrl_rotateX.o" "CrocRigRN.phl[142]";
+connectAttr "R_Reverse_Foot_Heel_Ctrl_rotateY.o" "CrocRigRN.phl[143]";
+connectAttr "R_Reverse_Foot_Heel_Ctrl_rotateZ.o" "CrocRigRN.phl[144]";
+connectAttr "R_Reverse_Foot_Heel_Ctrl_scaleX.o" "CrocRigRN.phl[145]";
+connectAttr "R_Reverse_Foot_Heel_Ctrl_scaleY.o" "CrocRigRN.phl[146]";
+connectAttr "R_Reverse_Foot_Heel_Ctrl_scaleZ.o" "CrocRigRN.phl[147]";
+connectAttr "R_Reverse_Foot_Toe_Ctrl_translateX.o" "CrocRigRN.phl[148]";
+connectAttr "R_Reverse_Foot_Toe_Ctrl_translateY.o" "CrocRigRN.phl[149]";
+connectAttr "R_Reverse_Foot_Toe_Ctrl_translateZ.o" "CrocRigRN.phl[150]";
+connectAttr "R_Reverse_Foot_Toe_Ctrl_rotateX.o" "CrocRigRN.phl[151]";
+connectAttr "R_Reverse_Foot_Toe_Ctrl_rotateY.o" "CrocRigRN.phl[152]";
+connectAttr "R_Reverse_Foot_Toe_Ctrl_rotateZ.o" "CrocRigRN.phl[153]";
+connectAttr "R_Reverse_Foot_Toe_Ctrl_scaleX.o" "CrocRigRN.phl[154]";
+connectAttr "R_Reverse_Foot_Toe_Ctrl_scaleY.o" "CrocRigRN.phl[155]";
+connectAttr "R_Reverse_Foot_Toe_Ctrl_scaleZ.o" "CrocRigRN.phl[156]";
+connectAttr "R_Reverse_Foot_ToeTap_Ctrl_translateX.o" "CrocRigRN.phl[157]";
+connectAttr "R_Reverse_Foot_ToeTap_Ctrl_translateY.o" "CrocRigRN.phl[158]";
+connectAttr "R_Reverse_Foot_ToeTap_Ctrl_translateZ.o" "CrocRigRN.phl[159]";
+connectAttr "R_Reverse_Foot_ToeTap_Ctrl_rotateX.o" "CrocRigRN.phl[160]";
+connectAttr "R_Reverse_Foot_ToeTap_Ctrl_rotateY.o" "CrocRigRN.phl[161]";
+connectAttr "R_Reverse_Foot_ToeTap_Ctrl_rotateZ.o" "CrocRigRN.phl[162]";
+connectAttr "R_Reverse_Foot_ToeTap_Ctrl_scaleX.o" "CrocRigRN.phl[163]";
+connectAttr "R_Reverse_Foot_ToeTap_Ctrl_scaleY.o" "CrocRigRN.phl[164]";
+connectAttr "R_Reverse_Foot_ToeTap_Ctrl_scaleZ.o" "CrocRigRN.phl[165]";
+connectAttr "R_Reverse_Foot_Ball_Ctrl_translateX.o" "CrocRigRN.phl[166]";
+connectAttr "R_Reverse_Foot_Ball_Ctrl_translateY.o" "CrocRigRN.phl[167]";
+connectAttr "R_Reverse_Foot_Ball_Ctrl_translateZ.o" "CrocRigRN.phl[168]";
+connectAttr "R_Reverse_Foot_Ball_Ctrl_rotateX.o" "CrocRigRN.phl[169]";
+connectAttr "R_Reverse_Foot_Ball_Ctrl_rotateY.o" "CrocRigRN.phl[170]";
+connectAttr "R_Reverse_Foot_Ball_Ctrl_rotateZ.o" "CrocRigRN.phl[171]";
+connectAttr "R_Reverse_Foot_Ball_Ctrl_scaleX.o" "CrocRigRN.phl[172]";
+connectAttr "R_Reverse_Foot_Ball_Ctrl_scaleY.o" "CrocRigRN.phl[173]";
+connectAttr "R_Reverse_Foot_Ball_Ctrl_scaleZ.o" "CrocRigRN.phl[174]";
+connectAttr "R_Leg_IK_PV_Ctrl_translateX.o" "CrocRigRN.phl[175]";
+connectAttr "R_Leg_IK_PV_Ctrl_translateY.o" "CrocRigRN.phl[176]";
+connectAttr "R_Leg_IK_PV_Ctrl_translateZ.o" "CrocRigRN.phl[177]";
+connectAttr "R_Leg_IK_PV_Ctrl_rotateX.o" "CrocRigRN.phl[178]";
+connectAttr "R_Leg_IK_PV_Ctrl_rotateY.o" "CrocRigRN.phl[179]";
+connectAttr "R_Leg_IK_PV_Ctrl_rotateZ.o" "CrocRigRN.phl[180]";
+connectAttr "R_Leg_IK_PV_Ctrl_scaleX.o" "CrocRigRN.phl[181]";
+connectAttr "R_Leg_IK_PV_Ctrl_scaleY.o" "CrocRigRN.phl[182]";
+connectAttr "R_Leg_IK_PV_Ctrl_scaleZ.o" "CrocRigRN.phl[183]";
+connectAttr "L_Hand_IK_Ctrl_translateX.o" "CrocRigRN.phl[184]";
+connectAttr "L_Hand_IK_Ctrl_translateY.o" "CrocRigRN.phl[185]";
+connectAttr "L_Hand_IK_Ctrl_translateZ.o" "CrocRigRN.phl[186]";
+connectAttr "L_Hand_IK_Ctrl_rotateX.o" "CrocRigRN.phl[187]";
+connectAttr "L_Hand_IK_Ctrl_rotateY.o" "CrocRigRN.phl[188]";
+connectAttr "L_Hand_IK_Ctrl_rotateZ.o" "CrocRigRN.phl[189]";
+connectAttr "L_Arm_IK_PV_Ctrl_translateX.o" "CrocRigRN.phl[190]";
+connectAttr "L_Arm_IK_PV_Ctrl_translateY.o" "CrocRigRN.phl[191]";
+connectAttr "L_Arm_IK_PV_Ctrl_translateZ.o" "CrocRigRN.phl[192]";
+connectAttr "L_Arm_IK_PV_Ctrl_rotateX.o" "CrocRigRN.phl[193]";
+connectAttr "L_Arm_IK_PV_Ctrl_rotateY.o" "CrocRigRN.phl[194]";
+connectAttr "L_Arm_IK_PV_Ctrl_rotateZ.o" "CrocRigRN.phl[195]";
+connectAttr "L_Arm_IK_PV_Ctrl_scaleX.o" "CrocRigRN.phl[196]";
+connectAttr "L_Arm_IK_PV_Ctrl_scaleY.o" "CrocRigRN.phl[197]";
+connectAttr "L_Arm_IK_PV_Ctrl_scaleZ.o" "CrocRigRN.phl[198]";
+connectAttr "R_Hand_IK_Ctrl_scaleX.o" "CrocRigRN.phl[199]";
+connectAttr "R_Hand_IK_Ctrl_scaleY.o" "CrocRigRN.phl[200]";
+connectAttr "R_Hand_IK_Ctrl_scaleZ.o" "CrocRigRN.phl[201]";
+connectAttr "R_Hand_IK_Ctrl_translateX.o" "CrocRigRN.phl[202]";
+connectAttr "R_Hand_IK_Ctrl_translateY.o" "CrocRigRN.phl[203]";
+connectAttr "R_Hand_IK_Ctrl_translateZ.o" "CrocRigRN.phl[204]";
+connectAttr "R_Hand_IK_Ctrl_rotateX.o" "CrocRigRN.phl[205]";
+connectAttr "R_Hand_IK_Ctrl_rotateY.o" "CrocRigRN.phl[206]";
+connectAttr "R_Hand_IK_Ctrl_rotateZ.o" "CrocRigRN.phl[207]";
+connectAttr "R_Arm_IK_PV_Ctrl_translateX.o" "CrocRigRN.phl[208]";
+connectAttr "R_Arm_IK_PV_Ctrl_translateY.o" "CrocRigRN.phl[209]";
+connectAttr "R_Arm_IK_PV_Ctrl_translateZ.o" "CrocRigRN.phl[210]";
+connectAttr "R_Arm_IK_PV_Ctrl_rotateX.o" "CrocRigRN.phl[211]";
+connectAttr "R_Arm_IK_PV_Ctrl_rotateY.o" "CrocRigRN.phl[212]";
+connectAttr "R_Arm_IK_PV_Ctrl_rotateZ.o" "CrocRigRN.phl[213]";
+connectAttr "R_Arm_IK_PV_Ctrl_scaleX.o" "CrocRigRN.phl[214]";
+connectAttr "R_Arm_IK_PV_Ctrl_scaleY.o" "CrocRigRN.phl[215]";
+connectAttr "R_Arm_IK_PV_Ctrl_scaleZ.o" "CrocRigRN.phl[216]";
+connectAttr "L_PointerFinger_01_Ctrl_translateX.o" "CrocRigRN.phl[217]";
+connectAttr "L_PointerFinger_01_Ctrl_translateY.o" "CrocRigRN.phl[218]";
+connectAttr "L_PointerFinger_01_Ctrl_translateZ.o" "CrocRigRN.phl[219]";
+connectAttr "L_PointerFinger_01_Ctrl_rotateX.o" "CrocRigRN.phl[220]";
+connectAttr "L_PointerFinger_01_Ctrl_rotateY.o" "CrocRigRN.phl[221]";
+connectAttr "L_PointerFinger_01_Ctrl_rotateZ.o" "CrocRigRN.phl[222]";
+connectAttr "L_PointerFinger_01_Ctrl_scaleX.o" "CrocRigRN.phl[223]";
+connectAttr "L_PointerFinger_01_Ctrl_scaleY.o" "CrocRigRN.phl[224]";
+connectAttr "L_PointerFinger_01_Ctrl_scaleZ.o" "CrocRigRN.phl[225]";
+connectAttr "L_PointerFinger_02_Ctrl_translateX.o" "CrocRigRN.phl[226]";
+connectAttr "L_PointerFinger_02_Ctrl_translateY.o" "CrocRigRN.phl[227]";
+connectAttr "L_PointerFinger_02_Ctrl_translateZ.o" "CrocRigRN.phl[228]";
+connectAttr "L_PointerFinger_02_Ctrl_rotateX.o" "CrocRigRN.phl[229]";
+connectAttr "L_PointerFinger_02_Ctrl_rotateY.o" "CrocRigRN.phl[230]";
+connectAttr "L_PointerFinger_02_Ctrl_rotateZ.o" "CrocRigRN.phl[231]";
+connectAttr "L_PointerFinger_02_Ctrl_scaleX.o" "CrocRigRN.phl[232]";
+connectAttr "L_PointerFinger_02_Ctrl_scaleY.o" "CrocRigRN.phl[233]";
+connectAttr "L_PointerFinger_02_Ctrl_scaleZ.o" "CrocRigRN.phl[234]";
+connectAttr "L_PointerFinger_03_Ctrl_translateX.o" "CrocRigRN.phl[235]";
+connectAttr "L_PointerFinger_03_Ctrl_translateY.o" "CrocRigRN.phl[236]";
+connectAttr "L_PointerFinger_03_Ctrl_translateZ.o" "CrocRigRN.phl[237]";
+connectAttr "L_PointerFinger_03_Ctrl_rotateX.o" "CrocRigRN.phl[238]";
+connectAttr "L_PointerFinger_03_Ctrl_rotateY.o" "CrocRigRN.phl[239]";
+connectAttr "L_PointerFinger_03_Ctrl_rotateZ.o" "CrocRigRN.phl[240]";
+connectAttr "L_PointerFinger_03_Ctrl_scaleX.o" "CrocRigRN.phl[241]";
+connectAttr "L_PointerFinger_03_Ctrl_scaleY.o" "CrocRigRN.phl[242]";
+connectAttr "L_PointerFinger_03_Ctrl_scaleZ.o" "CrocRigRN.phl[243]";
+connectAttr "L_MiddleFinger_01_Ctrl_translateX.o" "CrocRigRN.phl[244]";
+connectAttr "L_MiddleFinger_01_Ctrl_translateY.o" "CrocRigRN.phl[245]";
+connectAttr "L_MiddleFinger_01_Ctrl_translateZ.o" "CrocRigRN.phl[246]";
+connectAttr "L_MiddleFinger_01_Ctrl_rotateX.o" "CrocRigRN.phl[247]";
+connectAttr "L_MiddleFinger_01_Ctrl_rotateY.o" "CrocRigRN.phl[248]";
+connectAttr "L_MiddleFinger_01_Ctrl_rotateZ.o" "CrocRigRN.phl[249]";
+connectAttr "L_MiddleFinger_01_Ctrl_scaleX.o" "CrocRigRN.phl[250]";
+connectAttr "L_MiddleFinger_01_Ctrl_scaleY.o" "CrocRigRN.phl[251]";
+connectAttr "L_MiddleFinger_01_Ctrl_scaleZ.o" "CrocRigRN.phl[252]";
+connectAttr "L_MiddleFinger_02_Ctrl_translateX.o" "CrocRigRN.phl[253]";
+connectAttr "L_MiddleFinger_02_Ctrl_translateY.o" "CrocRigRN.phl[254]";
+connectAttr "L_MiddleFinger_02_Ctrl_translateZ.o" "CrocRigRN.phl[255]";
+connectAttr "L_MiddleFinger_02_Ctrl_rotateX.o" "CrocRigRN.phl[256]";
+connectAttr "L_MiddleFinger_02_Ctrl_rotateY.o" "CrocRigRN.phl[257]";
+connectAttr "L_MiddleFinger_02_Ctrl_rotateZ.o" "CrocRigRN.phl[258]";
+connectAttr "L_MiddleFinger_02_Ctrl_scaleX.o" "CrocRigRN.phl[259]";
+connectAttr "L_MiddleFinger_02_Ctrl_scaleY.o" "CrocRigRN.phl[260]";
+connectAttr "L_MiddleFinger_02_Ctrl_scaleZ.o" "CrocRigRN.phl[261]";
+connectAttr "L_MiddleFinger_03_Ctrl_translateX.o" "CrocRigRN.phl[262]";
+connectAttr "L_MiddleFinger_03_Ctrl_translateY.o" "CrocRigRN.phl[263]";
+connectAttr "L_MiddleFinger_03_Ctrl_translateZ.o" "CrocRigRN.phl[264]";
+connectAttr "L_MiddleFinger_03_Ctrl_rotateX.o" "CrocRigRN.phl[265]";
+connectAttr "L_MiddleFinger_03_Ctrl_rotateY.o" "CrocRigRN.phl[266]";
+connectAttr "L_MiddleFinger_03_Ctrl_rotateZ.o" "CrocRigRN.phl[267]";
+connectAttr "L_MiddleFinger_03_Ctrl_scaleX.o" "CrocRigRN.phl[268]";
+connectAttr "L_MiddleFinger_03_Ctrl_scaleY.o" "CrocRigRN.phl[269]";
+connectAttr "L_MiddleFinger_03_Ctrl_scaleZ.o" "CrocRigRN.phl[270]";
+connectAttr "L_RingFinger_01_Ctrl_translateX.o" "CrocRigRN.phl[271]";
+connectAttr "L_RingFinger_01_Ctrl_translateY.o" "CrocRigRN.phl[272]";
+connectAttr "L_RingFinger_01_Ctrl_translateZ.o" "CrocRigRN.phl[273]";
+connectAttr "L_RingFinger_01_Ctrl_rotateX.o" "CrocRigRN.phl[274]";
+connectAttr "L_RingFinger_01_Ctrl_rotateY.o" "CrocRigRN.phl[275]";
+connectAttr "L_RingFinger_01_Ctrl_rotateZ.o" "CrocRigRN.phl[276]";
+connectAttr "L_RingFinger_01_Ctrl_scaleX.o" "CrocRigRN.phl[277]";
+connectAttr "L_RingFinger_01_Ctrl_scaleY.o" "CrocRigRN.phl[278]";
+connectAttr "L_RingFinger_01_Ctrl_scaleZ.o" "CrocRigRN.phl[279]";
+connectAttr "L_RingFinger_02_Ctrl_translateX.o" "CrocRigRN.phl[280]";
+connectAttr "L_RingFinger_02_Ctrl_translateY.o" "CrocRigRN.phl[281]";
+connectAttr "L_RingFinger_02_Ctrl_translateZ.o" "CrocRigRN.phl[282]";
+connectAttr "L_RingFinger_02_Ctrl_rotateX.o" "CrocRigRN.phl[283]";
+connectAttr "L_RingFinger_02_Ctrl_rotateY.o" "CrocRigRN.phl[284]";
+connectAttr "L_RingFinger_02_Ctrl_rotateZ.o" "CrocRigRN.phl[285]";
+connectAttr "L_RingFinger_02_Ctrl_scaleX.o" "CrocRigRN.phl[286]";
+connectAttr "L_RingFinger_02_Ctrl_scaleY.o" "CrocRigRN.phl[287]";
+connectAttr "L_RingFinger_02_Ctrl_scaleZ.o" "CrocRigRN.phl[288]";
+connectAttr "L_RingFinger_03_Ctrl_translateX.o" "CrocRigRN.phl[289]";
+connectAttr "L_RingFinger_03_Ctrl_translateY.o" "CrocRigRN.phl[290]";
+connectAttr "L_RingFinger_03_Ctrl_translateZ.o" "CrocRigRN.phl[291]";
+connectAttr "L_RingFinger_03_Ctrl_rotateX.o" "CrocRigRN.phl[292]";
+connectAttr "L_RingFinger_03_Ctrl_rotateY.o" "CrocRigRN.phl[293]";
+connectAttr "L_RingFinger_03_Ctrl_rotateZ.o" "CrocRigRN.phl[294]";
+connectAttr "L_RingFinger_03_Ctrl_scaleX.o" "CrocRigRN.phl[295]";
+connectAttr "L_RingFinger_03_Ctrl_scaleY.o" "CrocRigRN.phl[296]";
+connectAttr "L_RingFinger_03_Ctrl_scaleZ.o" "CrocRigRN.phl[297]";
+connectAttr "L_Thumb_Base_Ctrl_translateX.o" "CrocRigRN.phl[298]";
+connectAttr "L_Thumb_Base_Ctrl_translateY.o" "CrocRigRN.phl[299]";
+connectAttr "L_Thumb_Base_Ctrl_translateZ.o" "CrocRigRN.phl[300]";
+connectAttr "L_Thumb_Base_Ctrl_rotateX.o" "CrocRigRN.phl[301]";
+connectAttr "L_Thumb_Base_Ctrl_rotateY.o" "CrocRigRN.phl[302]";
+connectAttr "L_Thumb_Base_Ctrl_rotateZ.o" "CrocRigRN.phl[303]";
+connectAttr "L_Thumb_Base_Ctrl_scaleX.o" "CrocRigRN.phl[304]";
+connectAttr "L_Thumb_Base_Ctrl_scaleY.o" "CrocRigRN.phl[305]";
+connectAttr "L_Thumb_Base_Ctrl_scaleZ.o" "CrocRigRN.phl[306]";
+connectAttr "L_Thumb_01_Ctrl_translateX.o" "CrocRigRN.phl[307]";
+connectAttr "L_Thumb_01_Ctrl_translateY.o" "CrocRigRN.phl[308]";
+connectAttr "L_Thumb_01_Ctrl_translateZ.o" "CrocRigRN.phl[309]";
+connectAttr "L_Thumb_01_Ctrl_rotateX.o" "CrocRigRN.phl[310]";
+connectAttr "L_Thumb_01_Ctrl_rotateY.o" "CrocRigRN.phl[311]";
+connectAttr "L_Thumb_01_Ctrl_rotateZ.o" "CrocRigRN.phl[312]";
+connectAttr "L_Thumb_01_Ctrl_scaleX.o" "CrocRigRN.phl[313]";
+connectAttr "L_Thumb_01_Ctrl_scaleY.o" "CrocRigRN.phl[314]";
+connectAttr "L_Thumb_01_Ctrl_scaleZ.o" "CrocRigRN.phl[315]";
+connectAttr "L_Thumb_02_Ctrl_translateX.o" "CrocRigRN.phl[316]";
+connectAttr "L_Thumb_02_Ctrl_translateY.o" "CrocRigRN.phl[317]";
+connectAttr "L_Thumb_02_Ctrl_translateZ.o" "CrocRigRN.phl[318]";
+connectAttr "L_Thumb_02_Ctrl_rotateX.o" "CrocRigRN.phl[319]";
+connectAttr "L_Thumb_02_Ctrl_rotateY.o" "CrocRigRN.phl[320]";
+connectAttr "L_Thumb_02_Ctrl_rotateZ.o" "CrocRigRN.phl[321]";
+connectAttr "L_Thumb_02_Ctrl_scaleX.o" "CrocRigRN.phl[322]";
+connectAttr "L_Thumb_02_Ctrl_scaleY.o" "CrocRigRN.phl[323]";
+connectAttr "L_Thumb_02_Ctrl_scaleZ.o" "CrocRigRN.phl[324]";
+connectAttr "R_PointerFinger_01_Ctrl_translateX.o" "CrocRigRN.phl[325]";
+connectAttr "R_PointerFinger_01_Ctrl_translateY.o" "CrocRigRN.phl[326]";
+connectAttr "R_PointerFinger_01_Ctrl_translateZ.o" "CrocRigRN.phl[327]";
+connectAttr "R_PointerFinger_01_Ctrl_rotateX.o" "CrocRigRN.phl[328]";
+connectAttr "R_PointerFinger_01_Ctrl_rotateY.o" "CrocRigRN.phl[329]";
+connectAttr "R_PointerFinger_01_Ctrl_rotateZ.o" "CrocRigRN.phl[330]";
+connectAttr "R_PointerFinger_01_Ctrl_scaleX.o" "CrocRigRN.phl[331]";
+connectAttr "R_PointerFinger_01_Ctrl_scaleY.o" "CrocRigRN.phl[332]";
+connectAttr "R_PointerFinger_01_Ctrl_scaleZ.o" "CrocRigRN.phl[333]";
+connectAttr "R_PointerFinger_02_Ctrl_translateX.o" "CrocRigRN.phl[334]";
+connectAttr "R_PointerFinger_02_Ctrl_translateY.o" "CrocRigRN.phl[335]";
+connectAttr "R_PointerFinger_02_Ctrl_translateZ.o" "CrocRigRN.phl[336]";
+connectAttr "R_PointerFinger_02_Ctrl_rotateX.o" "CrocRigRN.phl[337]";
+connectAttr "R_PointerFinger_02_Ctrl_rotateY.o" "CrocRigRN.phl[338]";
+connectAttr "R_PointerFinger_02_Ctrl_rotateZ.o" "CrocRigRN.phl[339]";
+connectAttr "R_PointerFinger_02_Ctrl_scaleX.o" "CrocRigRN.phl[340]";
+connectAttr "R_PointerFinger_02_Ctrl_scaleY.o" "CrocRigRN.phl[341]";
+connectAttr "R_PointerFinger_02_Ctrl_scaleZ.o" "CrocRigRN.phl[342]";
+connectAttr "R_PointerFinger_03_Ctrl_translateX.o" "CrocRigRN.phl[343]";
+connectAttr "R_PointerFinger_03_Ctrl_translateY.o" "CrocRigRN.phl[344]";
+connectAttr "R_PointerFinger_03_Ctrl_translateZ.o" "CrocRigRN.phl[345]";
+connectAttr "R_PointerFinger_03_Ctrl_rotateX.o" "CrocRigRN.phl[346]";
+connectAttr "R_PointerFinger_03_Ctrl_rotateY.o" "CrocRigRN.phl[347]";
+connectAttr "R_PointerFinger_03_Ctrl_rotateZ.o" "CrocRigRN.phl[348]";
+connectAttr "R_PointerFinger_03_Ctrl_scaleX.o" "CrocRigRN.phl[349]";
+connectAttr "R_PointerFinger_03_Ctrl_scaleY.o" "CrocRigRN.phl[350]";
+connectAttr "R_PointerFinger_03_Ctrl_scaleZ.o" "CrocRigRN.phl[351]";
+connectAttr "R_MiddleFinger_01_Ctrl_translateX.o" "CrocRigRN.phl[352]";
+connectAttr "R_MiddleFinger_01_Ctrl_translateY.o" "CrocRigRN.phl[353]";
+connectAttr "R_MiddleFinger_01_Ctrl_translateZ.o" "CrocRigRN.phl[354]";
+connectAttr "R_MiddleFinger_01_Ctrl_rotateX.o" "CrocRigRN.phl[355]";
+connectAttr "R_MiddleFinger_01_Ctrl_rotateY.o" "CrocRigRN.phl[356]";
+connectAttr "R_MiddleFinger_01_Ctrl_rotateZ.o" "CrocRigRN.phl[357]";
+connectAttr "R_MiddleFinger_01_Ctrl_scaleX.o" "CrocRigRN.phl[358]";
+connectAttr "R_MiddleFinger_01_Ctrl_scaleY.o" "CrocRigRN.phl[359]";
+connectAttr "R_MiddleFinger_01_Ctrl_scaleZ.o" "CrocRigRN.phl[360]";
+connectAttr "R_MiddleFinger_02_Ctrl_translateX.o" "CrocRigRN.phl[361]";
+connectAttr "R_MiddleFinger_02_Ctrl_translateY.o" "CrocRigRN.phl[362]";
+connectAttr "R_MiddleFinger_02_Ctrl_translateZ.o" "CrocRigRN.phl[363]";
+connectAttr "R_MiddleFinger_02_Ctrl_rotateX.o" "CrocRigRN.phl[364]";
+connectAttr "R_MiddleFinger_02_Ctrl_rotateY.o" "CrocRigRN.phl[365]";
+connectAttr "R_MiddleFinger_02_Ctrl_rotateZ.o" "CrocRigRN.phl[366]";
+connectAttr "R_MiddleFinger_02_Ctrl_scaleX.o" "CrocRigRN.phl[367]";
+connectAttr "R_MiddleFinger_02_Ctrl_scaleY.o" "CrocRigRN.phl[368]";
+connectAttr "R_MiddleFinger_02_Ctrl_scaleZ.o" "CrocRigRN.phl[369]";
+connectAttr "R_MiddleFinger_03_Ctrl_translateX.o" "CrocRigRN.phl[370]";
+connectAttr "R_MiddleFinger_03_Ctrl_translateY.o" "CrocRigRN.phl[371]";
+connectAttr "R_MiddleFinger_03_Ctrl_translateZ.o" "CrocRigRN.phl[372]";
+connectAttr "R_MiddleFinger_03_Ctrl_rotateX.o" "CrocRigRN.phl[373]";
+connectAttr "R_MiddleFinger_03_Ctrl_rotateY.o" "CrocRigRN.phl[374]";
+connectAttr "R_MiddleFinger_03_Ctrl_rotateZ.o" "CrocRigRN.phl[375]";
+connectAttr "R_MiddleFinger_03_Ctrl_scaleX.o" "CrocRigRN.phl[376]";
+connectAttr "R_MiddleFinger_03_Ctrl_scaleY.o" "CrocRigRN.phl[377]";
+connectAttr "R_MiddleFinger_03_Ctrl_scaleZ.o" "CrocRigRN.phl[378]";
+connectAttr "R_RingFinger_01_Ctrl_translateX.o" "CrocRigRN.phl[379]";
+connectAttr "R_RingFinger_01_Ctrl_translateY.o" "CrocRigRN.phl[380]";
+connectAttr "R_RingFinger_01_Ctrl_translateZ.o" "CrocRigRN.phl[381]";
+connectAttr "R_RingFinger_01_Ctrl_rotateX.o" "CrocRigRN.phl[382]";
+connectAttr "R_RingFinger_01_Ctrl_rotateY.o" "CrocRigRN.phl[383]";
+connectAttr "R_RingFinger_01_Ctrl_rotateZ.o" "CrocRigRN.phl[384]";
+connectAttr "R_RingFinger_01_Ctrl_scaleX.o" "CrocRigRN.phl[385]";
+connectAttr "R_RingFinger_01_Ctrl_scaleY.o" "CrocRigRN.phl[386]";
+connectAttr "R_RingFinger_01_Ctrl_scaleZ.o" "CrocRigRN.phl[387]";
+connectAttr "R_RingFinger_02_Ctrl_translateX.o" "CrocRigRN.phl[388]";
+connectAttr "R_RingFinger_02_Ctrl_translateY.o" "CrocRigRN.phl[389]";
+connectAttr "R_RingFinger_02_Ctrl_translateZ.o" "CrocRigRN.phl[390]";
+connectAttr "R_RingFinger_02_Ctrl_rotateX.o" "CrocRigRN.phl[391]";
+connectAttr "R_RingFinger_02_Ctrl_rotateY.o" "CrocRigRN.phl[392]";
+connectAttr "R_RingFinger_02_Ctrl_rotateZ.o" "CrocRigRN.phl[393]";
+connectAttr "R_RingFinger_02_Ctrl_scaleX.o" "CrocRigRN.phl[394]";
+connectAttr "R_RingFinger_02_Ctrl_scaleY.o" "CrocRigRN.phl[395]";
+connectAttr "R_RingFinger_02_Ctrl_scaleZ.o" "CrocRigRN.phl[396]";
+connectAttr "R_RingFinger_03_Ctrl_translateX.o" "CrocRigRN.phl[397]";
+connectAttr "R_RingFinger_03_Ctrl_translateY.o" "CrocRigRN.phl[398]";
+connectAttr "R_RingFinger_03_Ctrl_translateZ.o" "CrocRigRN.phl[399]";
+connectAttr "R_RingFinger_03_Ctrl_rotateX.o" "CrocRigRN.phl[400]";
+connectAttr "R_RingFinger_03_Ctrl_rotateY.o" "CrocRigRN.phl[401]";
+connectAttr "R_RingFinger_03_Ctrl_rotateZ.o" "CrocRigRN.phl[402]";
+connectAttr "R_RingFinger_03_Ctrl_scaleX.o" "CrocRigRN.phl[403]";
+connectAttr "R_RingFinger_03_Ctrl_scaleY.o" "CrocRigRN.phl[404]";
+connectAttr "R_RingFinger_03_Ctrl_scaleZ.o" "CrocRigRN.phl[405]";
+connectAttr "R_Thumb_Base_Ctrl_translateX.o" "CrocRigRN.phl[406]";
+connectAttr "R_Thumb_Base_Ctrl_translateY.o" "CrocRigRN.phl[407]";
+connectAttr "R_Thumb_Base_Ctrl_translateZ.o" "CrocRigRN.phl[408]";
+connectAttr "R_Thumb_Base_Ctrl_rotateX.o" "CrocRigRN.phl[409]";
+connectAttr "R_Thumb_Base_Ctrl_rotateY.o" "CrocRigRN.phl[410]";
+connectAttr "R_Thumb_Base_Ctrl_rotateZ.o" "CrocRigRN.phl[411]";
+connectAttr "R_Thumb_Base_Ctrl_scaleX.o" "CrocRigRN.phl[412]";
+connectAttr "R_Thumb_Base_Ctrl_scaleY.o" "CrocRigRN.phl[413]";
+connectAttr "R_Thumb_Base_Ctrl_scaleZ.o" "CrocRigRN.phl[414]";
+connectAttr "R_Thumb_01_Ctrl_translateX.o" "CrocRigRN.phl[415]";
+connectAttr "R_Thumb_01_Ctrl_translateY.o" "CrocRigRN.phl[416]";
+connectAttr "R_Thumb_01_Ctrl_translateZ.o" "CrocRigRN.phl[417]";
+connectAttr "R_Thumb_01_Ctrl_rotateX.o" "CrocRigRN.phl[418]";
+connectAttr "R_Thumb_01_Ctrl_rotateY.o" "CrocRigRN.phl[419]";
+connectAttr "R_Thumb_01_Ctrl_rotateZ.o" "CrocRigRN.phl[420]";
+connectAttr "R_Thumb_01_Ctrl_scaleX.o" "CrocRigRN.phl[421]";
+connectAttr "R_Thumb_01_Ctrl_scaleY.o" "CrocRigRN.phl[422]";
+connectAttr "R_Thumb_01_Ctrl_scaleZ.o" "CrocRigRN.phl[423]";
+connectAttr "R_Thumb_02_Ctrl_translateX.o" "CrocRigRN.phl[424]";
+connectAttr "R_Thumb_02_Ctrl_translateY.o" "CrocRigRN.phl[425]";
+connectAttr "R_Thumb_02_Ctrl_translateZ.o" "CrocRigRN.phl[426]";
+connectAttr "R_Thumb_02_Ctrl_rotateX.o" "CrocRigRN.phl[427]";
+connectAttr "R_Thumb_02_Ctrl_rotateY.o" "CrocRigRN.phl[428]";
+connectAttr "R_Thumb_02_Ctrl_rotateZ.o" "CrocRigRN.phl[429]";
+connectAttr "R_Thumb_02_Ctrl_scaleX.o" "CrocRigRN.phl[430]";
+connectAttr "R_Thumb_02_Ctrl_scaleY.o" "CrocRigRN.phl[431]";
+connectAttr "R_Thumb_02_Ctrl_scaleZ.o" "CrocRigRN.phl[432]";
+connectAttr "L_Clav_Ctrl_translateX.o" "CrocRigRN.phl[433]";
+connectAttr "L_Clav_Ctrl_translateY.o" "CrocRigRN.phl[434]";
+connectAttr "L_Clav_Ctrl_translateZ.o" "CrocRigRN.phl[435]";
+connectAttr "L_Clav_Ctrl_rotateX.o" "CrocRigRN.phl[436]";
+connectAttr "L_Clav_Ctrl_rotateY.o" "CrocRigRN.phl[437]";
+connectAttr "L_Clav_Ctrl_rotateZ.o" "CrocRigRN.phl[438]";
+connectAttr "L_Clav_Ctrl_scaleX.o" "CrocRigRN.phl[439]";
+connectAttr "L_Clav_Ctrl_scaleY.o" "CrocRigRN.phl[440]";
+connectAttr "L_Clav_Ctrl_scaleZ.o" "CrocRigRN.phl[441]";
+connectAttr "R_Clav_Ctrl_translateX.o" "CrocRigRN.phl[442]";
+connectAttr "R_Clav_Ctrl_translateY.o" "CrocRigRN.phl[443]";
+connectAttr "R_Clav_Ctrl_translateZ.o" "CrocRigRN.phl[444]";
+connectAttr "R_Clav_Ctrl_rotateX.o" "CrocRigRN.phl[445]";
+connectAttr "R_Clav_Ctrl_rotateY.o" "CrocRigRN.phl[446]";
+connectAttr "R_Clav_Ctrl_rotateZ.o" "CrocRigRN.phl[447]";
+connectAttr "R_Clav_Ctrl_scaleX.o" "CrocRigRN.phl[448]";
+connectAttr "R_Clav_Ctrl_scaleY.o" "CrocRigRN.phl[449]";
+connectAttr "R_Clav_Ctrl_scaleZ.o" "CrocRigRN.phl[450]";
+connectAttr "Neck_Ctrl_translateX.o" "CrocRigRN.phl[451]";
+connectAttr "Neck_Ctrl_translateY.o" "CrocRigRN.phl[452]";
+connectAttr "Neck_Ctrl_translateZ.o" "CrocRigRN.phl[453]";
+connectAttr "Neck_Ctrl_rotateX.o" "CrocRigRN.phl[454]";
+connectAttr "Neck_Ctrl_rotateY.o" "CrocRigRN.phl[455]";
+connectAttr "Neck_Ctrl_rotateZ.o" "CrocRigRN.phl[456]";
+connectAttr "Neck_Ctrl_scaleX.o" "CrocRigRN.phl[457]";
+connectAttr "Neck_Ctrl_scaleY.o" "CrocRigRN.phl[458]";
+connectAttr "Neck_Ctrl_scaleZ.o" "CrocRigRN.phl[459]";
+connectAttr "Head_Ctrl_translateX.o" "CrocRigRN.phl[460]";
+connectAttr "Head_Ctrl_translateY.o" "CrocRigRN.phl[461]";
+connectAttr "Head_Ctrl_translateZ.o" "CrocRigRN.phl[462]";
+connectAttr "Head_Ctrl_rotateY.o" "CrocRigRN.phl[463]";
+connectAttr "Head_Ctrl_rotateX.o" "CrocRigRN.phl[464]";
+connectAttr "Head_Ctrl_rotateZ.o" "CrocRigRN.phl[465]";
+connectAttr "Jaw_Ctrl_translateX.o" "CrocRigRN.phl[466]";
+connectAttr "Jaw_Ctrl_translateY.o" "CrocRigRN.phl[467]";
+connectAttr "Jaw_Ctrl_translateZ.o" "CrocRigRN.phl[468]";
+connectAttr "Jaw_Ctrl_rotateX.o" "CrocRigRN.phl[469]";
+connectAttr "Jaw_Ctrl_rotateY.o" "CrocRigRN.phl[470]";
+connectAttr "Jaw_Ctrl_rotateZ.o" "CrocRigRN.phl[471]";
+connectAttr "Jaw_Ctrl_scaleX.o" "CrocRigRN.phl[472]";
+connectAttr "Jaw_Ctrl_scaleY.o" "CrocRigRN.phl[473]";
+connectAttr "Jaw_Ctrl_scaleZ.o" "CrocRigRN.phl[474]";
+connectAttr "Eye_Target_Main_Ctrl_translateX.o" "CrocRigRN.phl[475]";
+connectAttr "Eye_Target_Main_Ctrl_translateY.o" "CrocRigRN.phl[476]";
+connectAttr "Eye_Target_Main_Ctrl_translateZ.o" "CrocRigRN.phl[477]";
+connectAttr "Eye_Target_Main_Ctrl_rotateX.o" "CrocRigRN.phl[478]";
+connectAttr "Eye_Target_Main_Ctrl_rotateY.o" "CrocRigRN.phl[479]";
+connectAttr "Eye_Target_Main_Ctrl_rotateZ.o" "CrocRigRN.phl[480]";
+connectAttr "Eye_Target_Main_Ctrl_scaleX.o" "CrocRigRN.phl[481]";
+connectAttr "Eye_Target_Main_Ctrl_scaleY.o" "CrocRigRN.phl[482]";
+connectAttr "Eye_Target_Main_Ctrl_scaleZ.o" "CrocRigRN.phl[483]";
+connectAttr "L_Eye_Aim_Ctrl_Ctrl_translateX.o" "CrocRigRN.phl[484]";
+connectAttr "L_Eye_Aim_Ctrl_Ctrl_translateY.o" "CrocRigRN.phl[485]";
+connectAttr "L_Eye_Aim_Ctrl_Ctrl_translateZ.o" "CrocRigRN.phl[486]";
+connectAttr "L_Eye_Aim_Ctrl_Ctrl_rotateX.o" "CrocRigRN.phl[487]";
+connectAttr "L_Eye_Aim_Ctrl_Ctrl_rotateY.o" "CrocRigRN.phl[488]";
+connectAttr "L_Eye_Aim_Ctrl_Ctrl_rotateZ.o" "CrocRigRN.phl[489]";
+connectAttr "L_Eye_Aim_Ctrl_Ctrl_scaleX.o" "CrocRigRN.phl[490]";
+connectAttr "L_Eye_Aim_Ctrl_Ctrl_scaleY.o" "CrocRigRN.phl[491]";
+connectAttr "L_Eye_Aim_Ctrl_Ctrl_scaleZ.o" "CrocRigRN.phl[492]";
+connectAttr "R_Eye_Aim_Ctrl_Ctrl_translateX.o" "CrocRigRN.phl[493]";
+connectAttr "R_Eye_Aim_Ctrl_Ctrl_translateY.o" "CrocRigRN.phl[494]";
+connectAttr "R_Eye_Aim_Ctrl_Ctrl_translateZ.o" "CrocRigRN.phl[495]";
+connectAttr "R_Eye_Aim_Ctrl_Ctrl_rotateX.o" "CrocRigRN.phl[496]";
+connectAttr "R_Eye_Aim_Ctrl_Ctrl_rotateY.o" "CrocRigRN.phl[497]";
+connectAttr "R_Eye_Aim_Ctrl_Ctrl_rotateZ.o" "CrocRigRN.phl[498]";
+connectAttr "R_Eye_Aim_Ctrl_Ctrl_scaleX.o" "CrocRigRN.phl[499]";
+connectAttr "R_Eye_Aim_Ctrl_Ctrl_scaleY.o" "CrocRigRN.phl[500]";
+connectAttr "R_Eye_Aim_Ctrl_Ctrl_scaleZ.o" "CrocRigRN.phl[501]";
+connectAttr "Tongue_Control_Joint_1_Ctrl_rotateX.o" "CrocRigRN.phl[502]";
+connectAttr "Tongue_Control_Joint_1_Ctrl_rotateY.o" "CrocRigRN.phl[503]";
+connectAttr "Tongue_Control_Joint_1_Ctrl_rotateZ.o" "CrocRigRN.phl[504]";
+connectAttr "Tongue_Control_Joint_1_Ctrl_translateX.o" "CrocRigRN.phl[505]";
+connectAttr "Tongue_Control_Joint_1_Ctrl_translateY.o" "CrocRigRN.phl[506]";
+connectAttr "Tongue_Control_Joint_1_Ctrl_translateZ.o" "CrocRigRN.phl[507]";
+connectAttr "Tongue_Control_Joint_1_Ctrl_scaleX.o" "CrocRigRN.phl[508]";
+connectAttr "Tongue_Control_Joint_1_Ctrl_scaleY.o" "CrocRigRN.phl[509]";
+connectAttr "Tongue_Control_Joint_1_Ctrl_scaleZ.o" "CrocRigRN.phl[510]";
+connectAttr "Tongue_Control_Joint_2_Ctrl_translateX.o" "CrocRigRN.phl[511]";
+connectAttr "Tongue_Control_Joint_2_Ctrl_translateY.o" "CrocRigRN.phl[512]";
+connectAttr "Tongue_Control_Joint_2_Ctrl_translateZ.o" "CrocRigRN.phl[513]";
+connectAttr "Tongue_Control_Joint_2_Ctrl_rotateX.o" "CrocRigRN.phl[514]";
+connectAttr "Tongue_Control_Joint_2_Ctrl_rotateY.o" "CrocRigRN.phl[515]";
+connectAttr "Tongue_Control_Joint_2_Ctrl_rotateZ.o" "CrocRigRN.phl[516]";
+connectAttr "Tongue_Control_Joint_2_Ctrl_scaleX.o" "CrocRigRN.phl[517]";
+connectAttr "Tongue_Control_Joint_2_Ctrl_scaleY.o" "CrocRigRN.phl[518]";
+connectAttr "Tongue_Control_Joint_2_Ctrl_scaleZ.o" "CrocRigRN.phl[519]";
+connectAttr "Transform_Ctrl_translateX.o" "CrocRigRN.phl[520]";
+connectAttr "Transform_Ctrl_translateY.o" "CrocRigRN.phl[521]";
+connectAttr "Transform_Ctrl_translateZ.o" "CrocRigRN.phl[522]";
+connectAttr "Transform_Ctrl_rotateX.o" "CrocRigRN.phl[523]";
+connectAttr "Transform_Ctrl_rotateZ.o" "CrocRigRN.phl[524]";
+connectAttr "Transform_Ctrl_scaleX.o" "CrocRigRN.phl[525]";
+connectAttr "Transform_Ctrl_scaleY.o" "CrocRigRN.phl[526]";
+connectAttr "Transform_Ctrl_scaleZ.o" "CrocRigRN.phl[527]";
+connectAttr "CoG_Ctrl_translateX.o" "CrocRigRN.phl[528]";
+connectAttr "CoG_Ctrl_translateY.o" "CrocRigRN.phl[529]";
+connectAttr "CoG_Ctrl_translateZ.o" "CrocRigRN.phl[530]";
+connectAttr "CoG_Ctrl_rotateX.o" "CrocRigRN.phl[531]";
+connectAttr "CoG_Ctrl_rotateY.o" "CrocRigRN.phl[532]";
+connectAttr "CoG_Ctrl_rotateZ.o" "CrocRigRN.phl[533]";
+connectAttr "Tail_12_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[534]";
+connectAttr "Tail_12_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[535]";
+connectAttr "Tail_12_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[536]";
+connectAttr "Tail_12_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[537]";
+connectAttr "Tail_12_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[538]";
+connectAttr "Tail_12_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[539]";
+connectAttr "Tail_12_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[540]";
+connectAttr "Tail_12_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[541]";
+connectAttr "Tail_12_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[542]";
+connectAttr "Tail_11_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[543]";
+connectAttr "Tail_11_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[544]";
+connectAttr "Tail_11_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[545]";
+connectAttr "Tail_11_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[546]";
+connectAttr "Tail_11_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[547]";
+connectAttr "Tail_11_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[548]";
+connectAttr "Tail_11_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[549]";
+connectAttr "Tail_11_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[550]";
+connectAttr "Tail_11_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[551]";
+connectAttr "Tail_10_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[552]";
+connectAttr "Tail_10_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[553]";
+connectAttr "Tail_10_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[554]";
+connectAttr "Tail_10_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[555]";
+connectAttr "Tail_10_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[556]";
+connectAttr "Tail_10_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[557]";
+connectAttr "Tail_10_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[558]";
+connectAttr "Tail_10_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[559]";
+connectAttr "Tail_10_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[560]";
+connectAttr "Tail_09_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[561]";
+connectAttr "Tail_09_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[562]";
+connectAttr "Tail_09_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[563]";
+connectAttr "Tail_09_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[564]";
+connectAttr "Tail_09_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[565]";
+connectAttr "Tail_09_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[566]";
+connectAttr "Tail_09_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[567]";
+connectAttr "Tail_09_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[568]";
+connectAttr "Tail_09_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[569]";
+connectAttr "Tail_08_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[570]";
+connectAttr "Tail_08_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[571]";
+connectAttr "Tail_08_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[572]";
+connectAttr "Tail_08_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[573]";
+connectAttr "Tail_08_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[574]";
+connectAttr "Tail_08_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[575]";
+connectAttr "Tail_08_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[576]";
+connectAttr "Tail_08_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[577]";
+connectAttr "Tail_08_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[578]";
+connectAttr "Tail_07_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[579]";
+connectAttr "Tail_07_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[580]";
+connectAttr "Tail_07_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[581]";
+connectAttr "Tail_07_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[582]";
+connectAttr "Tail_07_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[583]";
+connectAttr "Tail_07_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[584]";
+connectAttr "Tail_07_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[585]";
+connectAttr "Tail_07_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[586]";
+connectAttr "Tail_07_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[587]";
+connectAttr "Tail_06_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[588]";
+connectAttr "Tail_06_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[589]";
+connectAttr "Tail_06_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[590]";
+connectAttr "Tail_06_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[591]";
+connectAttr "Tail_06_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[592]";
+connectAttr "Tail_06_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[593]";
+connectAttr "Tail_06_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[594]";
+connectAttr "Tail_06_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[595]";
+connectAttr "Tail_06_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[596]";
+connectAttr "Tail_05_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[597]";
+connectAttr "Tail_05_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[598]";
+connectAttr "Tail_05_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[599]";
+connectAttr "Tail_05_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[600]";
+connectAttr "Tail_05_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[601]";
+connectAttr "Tail_05_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[602]";
+connectAttr "Tail_05_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[603]";
+connectAttr "Tail_05_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[604]";
+connectAttr "Tail_05_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[605]";
+connectAttr "Tail_04_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[606]";
+connectAttr "Tail_04_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[607]";
+connectAttr "Tail_04_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[608]";
+connectAttr "Tail_04_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[609]";
+connectAttr "Tail_04_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[610]";
+connectAttr "Tail_04_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[611]";
+connectAttr "Tail_04_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[612]";
+connectAttr "Tail_04_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[613]";
+connectAttr "Tail_04_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[614]";
+connectAttr "Tail_03_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[615]";
+connectAttr "Tail_03_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[616]";
+connectAttr "Tail_03_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[617]";
+connectAttr "Tail_03_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[618]";
+connectAttr "Tail_03_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[619]";
+connectAttr "Tail_03_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[620]";
+connectAttr "Tail_03_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[621]";
+connectAttr "Tail_03_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[622]";
+connectAttr "Tail_03_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[623]";
+connectAttr "Tail_02_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[624]";
+connectAttr "Tail_02_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[625]";
+connectAttr "Tail_02_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[626]";
+connectAttr "Tail_02_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[627]";
+connectAttr "Tail_02_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[628]";
+connectAttr "Tail_02_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[629]";
+connectAttr "Tail_02_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[630]";
+connectAttr "Tail_02_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[631]";
+connectAttr "Tail_02_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[632]";
+connectAttr "Tail_01_Jnt_FK_Ctrl_translateX.o" "CrocRigRN.phl[633]";
+connectAttr "Tail_01_Jnt_FK_Ctrl_translateY.o" "CrocRigRN.phl[634]";
+connectAttr "Tail_01_Jnt_FK_Ctrl_translateZ.o" "CrocRigRN.phl[635]";
+connectAttr "Tail_01_Jnt_FK_Ctrl_rotateX.o" "CrocRigRN.phl[636]";
+connectAttr "Tail_01_Jnt_FK_Ctrl_rotateY.o" "CrocRigRN.phl[637]";
+connectAttr "Tail_01_Jnt_FK_Ctrl_rotateZ.o" "CrocRigRN.phl[638]";
+connectAttr "Tail_01_Jnt_FK_Ctrl_scaleX.o" "CrocRigRN.phl[639]";
+connectAttr "Tail_01_Jnt_FK_Ctrl_scaleY.o" "CrocRigRN.phl[640]";
+connectAttr "Tail_01_Jnt_FK_Ctrl_scaleZ.o" "CrocRigRN.phl[641]";
+connectAttr "R_Cheekbone_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[642]";
+connectAttr "R_Cheekbone_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[643]";
+connectAttr "R_Cheekbone_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[644]";
+connectAttr "R_Cheekbone_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[645]";
+connectAttr "R_Cheekbone_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[646]";
+connectAttr "R_Cheekbone_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[647]";
+connectAttr "R_Cheekbone_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[648]";
+connectAttr "R_Cheekbone_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[649]";
+connectAttr "R_Cheekbone_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[650]";
+connectAttr "L_Cheekbone_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[651]";
+connectAttr "L_Cheekbone_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[652]";
+connectAttr "L_Cheekbone_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[653]";
+connectAttr "L_Cheekbone_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[654]";
+connectAttr "L_Cheekbone_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[655]";
+connectAttr "L_Cheekbone_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[656]";
+connectAttr "L_Cheekbone_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[657]";
+connectAttr "L_Cheekbone_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[658]";
+connectAttr "L_Cheekbone_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[659]";
+connectAttr "R_Cheek_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[660]";
+connectAttr "R_Cheek_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[661]";
+connectAttr "R_Cheek_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[662]";
+connectAttr "R_Cheek_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[663]";
+connectAttr "R_Cheek_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[664]";
+connectAttr "R_Cheek_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[665]";
+connectAttr "R_Cheek_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[666]";
+connectAttr "R_Cheek_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[667]";
+connectAttr "R_Cheek_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[668]";
+connectAttr "L_Cheek_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[669]";
+connectAttr "L_Cheek_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[670]";
+connectAttr "L_Cheek_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[671]";
+connectAttr "L_Cheek_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[672]";
+connectAttr "L_Cheek_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[673]";
+connectAttr "L_Cheek_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[674]";
+connectAttr "L_Cheek_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[675]";
+connectAttr "L_Cheek_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[676]";
+connectAttr "L_Cheek_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[677]";
+connectAttr "Snout_Bridge_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[678]";
+connectAttr "Snout_Bridge_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[679]";
+connectAttr "Snout_Bridge_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[680]";
+connectAttr "Snout_Bridge_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[681]";
+connectAttr "Snout_Bridge_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[682]";
+connectAttr "Snout_Bridge_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[683]";
+connectAttr "Snout_Bridge_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[684]";
+connectAttr "Snout_Bridge_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[685]";
+connectAttr "Snout_Bridge_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[686]";
+connectAttr "Snout_tip_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[687]";
+connectAttr "Snout_tip_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[688]";
+connectAttr "Snout_tip_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[689]";
+connectAttr "Snout_tip_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[690]";
+connectAttr "Snout_tip_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[691]";
+connectAttr "Snout_tip_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[692]";
+connectAttr "Snout_tip_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[693]";
+connectAttr "Snout_tip_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[694]";
+connectAttr "Snout_tip_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[695]";
+connectAttr "R_Nostril_Joint_Ctrl_translateX.o" "CrocRigRN.phl[696]";
+connectAttr "R_Nostril_Joint_Ctrl_translateY.o" "CrocRigRN.phl[697]";
+connectAttr "R_Nostril_Joint_Ctrl_translateZ.o" "CrocRigRN.phl[698]";
+connectAttr "R_Nostril_Joint_Ctrl_rotateX.o" "CrocRigRN.phl[699]";
+connectAttr "R_Nostril_Joint_Ctrl_rotateY.o" "CrocRigRN.phl[700]";
+connectAttr "R_Nostril_Joint_Ctrl_rotateZ.o" "CrocRigRN.phl[701]";
+connectAttr "R_Nostril_Joint_Ctrl_scaleX.o" "CrocRigRN.phl[702]";
+connectAttr "R_Nostril_Joint_Ctrl_scaleY.o" "CrocRigRN.phl[703]";
+connectAttr "R_Nostril_Joint_Ctrl_scaleZ.o" "CrocRigRN.phl[704]";
+connectAttr "L_Nostril_Joint_Ctrl_translateX.o" "CrocRigRN.phl[705]";
+connectAttr "L_Nostril_Joint_Ctrl_translateY.o" "CrocRigRN.phl[706]";
+connectAttr "L_Nostril_Joint_Ctrl_translateZ.o" "CrocRigRN.phl[707]";
+connectAttr "L_Nostril_Joint_Ctrl_rotateX.o" "CrocRigRN.phl[708]";
+connectAttr "L_Nostril_Joint_Ctrl_rotateY.o" "CrocRigRN.phl[709]";
+connectAttr "L_Nostril_Joint_Ctrl_rotateZ.o" "CrocRigRN.phl[710]";
+connectAttr "L_Nostril_Joint_Ctrl_scaleX.o" "CrocRigRN.phl[711]";
+connectAttr "L_Nostril_Joint_Ctrl_scaleY.o" "CrocRigRN.phl[712]";
+connectAttr "L_Nostril_Joint_Ctrl_scaleZ.o" "CrocRigRN.phl[713]";
+connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[714]";
+connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[715]";
+connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[716]";
+connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[717]";
+connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[718]";
+connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[719]";
+connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[720]";
+connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[721]";
+connectAttr "L_Mouth_Upper_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[722]";
+connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[723]";
+connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[724]";
+connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[725]";
+connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[726]";
+connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[727]";
+connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[728]";
+connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[729]";
+connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[730]";
+connectAttr "L_Mouth_Upper_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[731]";
+connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_translateX.o" "CrocRigRN.phl[732]";
+connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_translateY.o" "CrocRigRN.phl[733]";
+connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_translateZ.o" "CrocRigRN.phl[734]";
+connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_rotateX.o" "CrocRigRN.phl[735]";
+connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_rotateY.o" "CrocRigRN.phl[736]";
+connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_rotateZ.o" "CrocRigRN.phl[737]";
+connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_scaleX.o" "CrocRigRN.phl[738]";
+connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_scaleY.o" "CrocRigRN.phl[739]";
+connectAttr "L_Mouth_Upper_Jnt_3_Ctrl_scaleZ.o" "CrocRigRN.phl[740]";
+connectAttr "L_Mouth_Corner_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[741]";
+connectAttr "L_Mouth_Corner_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[742]";
+connectAttr "L_Mouth_Corner_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[743]";
+connectAttr "L_Mouth_Corner_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[744]";
+connectAttr "L_Mouth_Corner_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[745]";
+connectAttr "L_Mouth_Corner_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[746]";
+connectAttr "L_Mouth_Corner_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[747]";
+connectAttr "L_Mouth_Corner_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[748]";
+connectAttr "L_Mouth_Corner_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[749]";
+connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[750]";
+connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[751]";
+connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[752]";
+connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[753]";
+connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[754]";
+connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[755]";
+connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[756]";
+connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[757]";
+connectAttr "R_Mouth_Upper_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[758]";
+connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[759]";
+connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[760]";
+connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[761]";
+connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[762]";
+connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[763]";
+connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[764]";
+connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[765]";
+connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[766]";
+connectAttr "R_Mouth_Upper_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[767]";
+connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_translateX.o" "CrocRigRN.phl[768]";
+connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_translateY.o" "CrocRigRN.phl[769]";
+connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_translateZ.o" "CrocRigRN.phl[770]";
+connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_rotateX.o" "CrocRigRN.phl[771]";
+connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_rotateY.o" "CrocRigRN.phl[772]";
+connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_rotateZ.o" "CrocRigRN.phl[773]";
+connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_scaleX.o" "CrocRigRN.phl[774]";
+connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_scaleY.o" "CrocRigRN.phl[775]";
+connectAttr "R_Mouth_Upper_Jnt_3_Ctrl_scaleZ.o" "CrocRigRN.phl[776]";
+connectAttr "R_Mouth_Corner_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[777]";
+connectAttr "R_Mouth_Corner_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[778]";
+connectAttr "R_Mouth_Corner_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[779]";
+connectAttr "R_Mouth_Corner_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[780]";
+connectAttr "R_Mouth_Corner_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[781]";
+connectAttr "R_Mouth_Corner_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[782]";
+connectAttr "R_Mouth_Corner_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[783]";
+connectAttr "R_Mouth_Corner_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[784]";
+connectAttr "R_Mouth_Corner_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[785]";
+connectAttr "Mouth_Upper_Center_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[786]";
+connectAttr "Mouth_Upper_Center_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[787]";
+connectAttr "Mouth_Upper_Center_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[788]";
+connectAttr "Mouth_Upper_Center_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[789]";
+connectAttr "Mouth_Upper_Center_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[790]";
+connectAttr "Mouth_Upper_Center_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[791]";
+connectAttr "Mouth_Upper_Center_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[792]";
+connectAttr "Mouth_Upper_Center_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[793]";
+connectAttr "Mouth_Upper_Center_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[794]";
+connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[795]";
+connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[796]";
+connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[797]";
+connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[798]";
+connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[799]";
+connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[800]";
+connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[801]";
+connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[802]";
+connectAttr "R_Mouth_Lower_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[803]";
+connectAttr "Mouth_Center_Lower_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[804]";
+connectAttr "Mouth_Center_Lower_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[805]";
+connectAttr "Mouth_Center_Lower_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[806]";
+connectAttr "Mouth_Center_Lower_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[807]";
+connectAttr "Mouth_Center_Lower_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[808]";
+connectAttr "Mouth_Center_Lower_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[809]";
+connectAttr "Mouth_Center_Lower_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[810]";
+connectAttr "Mouth_Center_Lower_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[811]";
+connectAttr "Mouth_Center_Lower_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[812]";
+connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[813]";
+connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[814]";
+connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[815]";
+connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[816]";
+connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[817]";
+connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[818]";
+connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[819]";
+connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[820]";
+connectAttr "L_Mouth_Lower_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[821]";
+connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[822]";
+connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[823]";
+connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[824]";
+connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[825]";
+connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[826]";
+connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[827]";
+connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[828]";
+connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[829]";
+connectAttr "L_Mouth_Lower_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[830]";
+connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[831]";
+connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[832]";
+connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[833]";
+connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[834]";
+connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[835]";
+connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[836]";
+connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[837]";
+connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[838]";
+connectAttr "R_Mouth_Lower_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[839]";
+connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_translateX.o" "CrocRigRN.phl[840]";
+connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_translateY.o" "CrocRigRN.phl[841]";
+connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_translateZ.o" "CrocRigRN.phl[842]";
+connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_rotateX.o" "CrocRigRN.phl[843]";
+connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_rotateY.o" "CrocRigRN.phl[844]";
+connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_rotateZ.o" "CrocRigRN.phl[845]";
+connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_scaleX.o" "CrocRigRN.phl[846]";
+connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_scaleY.o" "CrocRigRN.phl[847]";
+connectAttr "R_Mouth_Lower_Jnt_3_Ctrl_scaleZ.o" "CrocRigRN.phl[848]";
+connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_translateX.o" "CrocRigRN.phl[849]";
+connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_translateY.o" "CrocRigRN.phl[850]";
+connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_translateZ.o" "CrocRigRN.phl[851]";
+connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_rotateX.o" "CrocRigRN.phl[852]";
+connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_rotateY.o" "CrocRigRN.phl[853]";
+connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_rotateZ.o" "CrocRigRN.phl[854]";
+connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_scaleX.o" "CrocRigRN.phl[855]";
+connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_scaleY.o" "CrocRigRN.phl[856]";
+connectAttr "L_Mouth_Lower_Jnt_3_Ctrl_scaleZ.o" "CrocRigRN.phl[857]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_translateX.o" "CrocRigRN.phl[858]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_translateY.o" "CrocRigRN.phl[859]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_translateZ.o" "CrocRigRN.phl[860]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_rotateX.o" "CrocRigRN.phl[861]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_rotateY.o" "CrocRigRN.phl[862]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_rotateZ.o" "CrocRigRN.phl[863]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_scaleX.o" "CrocRigRN.phl[864]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_scaleY.o" "CrocRigRN.phl[865]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_3_Ctrl_scaleZ.o" "CrocRigRN.phl[866]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[867]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[868]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[869]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[870]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[871]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[872]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[873]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[874]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[875]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[876]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[877]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[878]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[879]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[880]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[881]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[882]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[883]";
+connectAttr "R_Eyebrow_Ctrl_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[884]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[885]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[886]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[887]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[888]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[889]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[890]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[891]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[892]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[893]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[894]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[895]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[896]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[897]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[898]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[899]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[900]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[901]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[902]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_translateX.o" "CrocRigRN.phl[903]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_translateY.o" "CrocRigRN.phl[904]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_translateZ.o" "CrocRigRN.phl[905]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_rotateX.o" "CrocRigRN.phl[906]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_rotateY.o" "CrocRigRN.phl[907]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_rotateZ.o" "CrocRigRN.phl[908]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_scaleX.o" "CrocRigRN.phl[909]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_scaleY.o" "CrocRigRN.phl[910]";
+connectAttr "L_Eyebrow_Ctrl_Jnt_3_Ctrl_scaleZ.o" "CrocRigRN.phl[911]";
+connectAttr "L_Brow_Master_Ctrl_translateX.o" "CrocRigRN.phl[912]";
+connectAttr "L_Brow_Master_Ctrl_translateY.o" "CrocRigRN.phl[913]";
+connectAttr "L_Brow_Master_Ctrl_translateZ.o" "CrocRigRN.phl[914]";
+connectAttr "L_Brow_Master_Ctrl_rotateX.o" "CrocRigRN.phl[915]";
+connectAttr "L_Brow_Master_Ctrl_rotateY.o" "CrocRigRN.phl[916]";
+connectAttr "L_Brow_Master_Ctrl_rotateZ.o" "CrocRigRN.phl[917]";
+connectAttr "L_Brow_Master_Ctrl_scaleX.o" "CrocRigRN.phl[918]";
+connectAttr "L_Brow_Master_Ctrl_scaleY.o" "CrocRigRN.phl[919]";
+connectAttr "L_Brow_Master_Ctrl_scaleZ.o" "CrocRigRN.phl[920]";
+connectAttr "L_Brow_Master_Ctrl_translateX1.o" "CrocRigRN.phl[921]";
+connectAttr "L_Brow_Master_Ctrl_translateY1.o" "CrocRigRN.phl[922]";
+connectAttr "L_Brow_Master_Ctrl_translateZ1.o" "CrocRigRN.phl[923]";
+connectAttr "L_Brow_Master_Ctrl_rotateX1.o" "CrocRigRN.phl[924]";
+connectAttr "L_Brow_Master_Ctrl_rotateY1.o" "CrocRigRN.phl[925]";
+connectAttr "L_Brow_Master_Ctrl_rotateZ1.o" "CrocRigRN.phl[926]";
+connectAttr "L_Brow_Master_Ctrl_scaleX1.o" "CrocRigRN.phl[927]";
+connectAttr "L_Brow_Master_Ctrl_scaleY1.o" "CrocRigRN.phl[928]";
+connectAttr "L_Brow_Master_Ctrl_scaleZ1.o" "CrocRigRN.phl[929]";
+connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[930]";
+connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[931]";
+connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[932]";
+connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[933]";
+connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[934]";
+connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[935]";
+connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[936]";
+connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[937]";
+connectAttr "R_Eyelid_Upper_2_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[938]";
+connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[939]";
+connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[940]";
+connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[941]";
+connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[942]";
+connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[943]";
+connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[944]";
+connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[945]";
+connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[946]";
+connectAttr "R_Eyelid_Upper_1_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[947]";
+connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[948]";
+connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[949]";
+connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[950]";
+connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[951]";
+connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[952]";
+connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[953]";
+connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[954]";
+connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[955]";
+connectAttr "R_Eyelid_Lower_1_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[956]";
+connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[957]";
+connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[958]";
+connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[959]";
+connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[960]";
+connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[961]";
+connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[962]";
+connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[963]";
+connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[964]";
+connectAttr "R_Eyelid_Lower_3_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[965]";
+connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[966]";
+connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[967]";
+connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[968]";
+connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[969]";
+connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[970]";
+connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[971]";
+connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[972]";
+connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[973]";
+connectAttr "R_Eyelid_Upper_3_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[974]";
+connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[975]";
+connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[976]";
+connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[977]";
+connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[978]";
+connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[979]";
+connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[980]";
+connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[981]";
+connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[982]";
+connectAttr "R_Eyelid_Lower_2_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[983]";
+connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[984]";
+connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[985]";
+connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[986]";
+connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[987]";
+connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[988]";
+connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[989]";
+connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[990]";
+connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[991]";
+connectAttr "L_Eyelid_Upper_2_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[992]";
+connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[993]";
+connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[994]";
+connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[995]";
+connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[996]";
+connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[997]";
+connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[998]";
+connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[999]";
+connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1000]";
+connectAttr "L_Eyelid_Upper_1_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1001]";
+connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[1002]";
+connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[1003]";
+connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[1004]";
+connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[1005]";
+connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[1006]";
+connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[1007]";
+connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[1008]";
+connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1009]";
+connectAttr "L_Eyelid_Lower_1_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1010]";
+connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[1011]";
+connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[1012]";
+connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[1013]";
+connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[1014]";
+connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[1015]";
+connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[1016]";
+connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[1017]";
+connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1018]";
+connectAttr "L_Eyelid_Lower_3_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1019]";
+connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[1020]";
+connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[1021]";
+connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[1022]";
+connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[1023]";
+connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[1024]";
+connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[1025]";
+connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[1026]";
+connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1027]";
+connectAttr "L_Eyelid_Upper_3_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1028]";
+connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[1029]";
+connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[1030]";
+connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[1031]";
+connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[1032]";
+connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[1033]";
+connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[1034]";
+connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[1035]";
+connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1036]";
+connectAttr "L_Eyelid_Lower_2_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1037]";
+connectAttr "Belt_Buckle_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[1038]";
+connectAttr "Belt_Buckle_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[1039]";
+connectAttr "Belt_Buckle_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[1040]";
+connectAttr "Belt_Buckle_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[1041]";
+connectAttr "Belt_Buckle_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[1042]";
+connectAttr "Belt_Buckle_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[1043]";
+connectAttr "Belt_Buckle_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[1044]";
+connectAttr "Belt_Buckle_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1045]";
+connectAttr "Belt_Buckle_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1046]";
+connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[1047]";
+connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[1048]";
+connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[1049]";
+connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[1050]";
+connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[1051]";
+connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[1052]";
+connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[1053]";
+connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[1054]";
+connectAttr "Cloth_Ctrl_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[1055]";
+connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[1056]";
+connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[1057]";
+connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[1058]";
+connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[1059]";
+connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[1060]";
+connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[1061]";
+connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[1062]";
+connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[1063]";
+connectAttr "Cloth_Ctrl_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[1064]";
+connectAttr "L_Belt_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[1065]";
+connectAttr "L_Belt_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[1066]";
+connectAttr "L_Belt_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[1067]";
+connectAttr "L_Belt_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[1068]";
+connectAttr "L_Belt_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[1069]";
+connectAttr "L_Belt_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[1070]";
+connectAttr "L_Belt_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[1071]";
+connectAttr "L_Belt_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[1072]";
+connectAttr "L_Belt_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[1073]";
+connectAttr "L_Belt_Jnt_3_Ctrl_translateX.o" "CrocRigRN.phl[1074]";
+connectAttr "L_Belt_Jnt_3_Ctrl_translateY.o" "CrocRigRN.phl[1075]";
+connectAttr "L_Belt_Jnt_3_Ctrl_translateZ.o" "CrocRigRN.phl[1076]";
+connectAttr "L_Belt_Jnt_3_Ctrl_scaleX.o" "CrocRigRN.phl[1077]";
+connectAttr "L_Belt_Jnt_3_Ctrl_scaleY.o" "CrocRigRN.phl[1078]";
+connectAttr "L_Belt_Jnt_3_Ctrl_scaleZ.o" "CrocRigRN.phl[1079]";
+connectAttr "L_Belt_Jnt_3_Ctrl_rotateX.o" "CrocRigRN.phl[1080]";
+connectAttr "L_Belt_Jnt_3_Ctrl_rotateY.o" "CrocRigRN.phl[1081]";
+connectAttr "L_Belt_Jnt_3_Ctrl_rotateZ.o" "CrocRigRN.phl[1082]";
+connectAttr "L_Belt_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[1083]";
+connectAttr "L_Belt_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[1084]";
+connectAttr "L_Belt_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[1085]";
+connectAttr "L_Belt_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[1086]";
+connectAttr "L_Belt_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[1087]";
+connectAttr "L_Belt_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[1088]";
+connectAttr "L_Belt_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[1089]";
+connectAttr "L_Belt_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[1090]";
+connectAttr "L_Belt_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[1091]";
+connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[1092]";
+connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[1093]";
+connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[1094]";
+connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[1095]";
+connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1096]";
+connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1097]";
+connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[1098]";
+connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[1099]";
+connectAttr "L_Belt_BuckleBack_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[1100]";
+connectAttr "R_Belt_Jnt_1_Ctrl_translateX.o" "CrocRigRN.phl[1101]";
+connectAttr "R_Belt_Jnt_1_Ctrl_translateY.o" "CrocRigRN.phl[1102]";
+connectAttr "R_Belt_Jnt_1_Ctrl_translateZ.o" "CrocRigRN.phl[1103]";
+connectAttr "R_Belt_Jnt_1_Ctrl_scaleX.o" "CrocRigRN.phl[1104]";
+connectAttr "R_Belt_Jnt_1_Ctrl_scaleY.o" "CrocRigRN.phl[1105]";
+connectAttr "R_Belt_Jnt_1_Ctrl_scaleZ.o" "CrocRigRN.phl[1106]";
+connectAttr "R_Belt_Jnt_1_Ctrl_rotateX.o" "CrocRigRN.phl[1107]";
+connectAttr "R_Belt_Jnt_1_Ctrl_rotateY.o" "CrocRigRN.phl[1108]";
+connectAttr "R_Belt_Jnt_1_Ctrl_rotateZ.o" "CrocRigRN.phl[1109]";
+connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[1110]";
+connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[1111]";
+connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[1112]";
+connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[1113]";
+connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1114]";
+connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1115]";
+connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[1116]";
+connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[1117]";
+connectAttr "R_Belt_BuckleBack_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[1118]";
+connectAttr "R_Belt_Jnt_2_Ctrl_translateX.o" "CrocRigRN.phl[1119]";
+connectAttr "R_Belt_Jnt_2_Ctrl_translateY.o" "CrocRigRN.phl[1120]";
+connectAttr "R_Belt_Jnt_2_Ctrl_translateZ.o" "CrocRigRN.phl[1121]";
+connectAttr "R_Belt_Jnt_2_Ctrl_scaleX.o" "CrocRigRN.phl[1122]";
+connectAttr "R_Belt_Jnt_2_Ctrl_scaleY.o" "CrocRigRN.phl[1123]";
+connectAttr "R_Belt_Jnt_2_Ctrl_scaleZ.o" "CrocRigRN.phl[1124]";
+connectAttr "R_Belt_Jnt_2_Ctrl_rotateX.o" "CrocRigRN.phl[1125]";
+connectAttr "R_Belt_Jnt_2_Ctrl_rotateY.o" "CrocRigRN.phl[1126]";
+connectAttr "R_Belt_Jnt_2_Ctrl_rotateZ.o" "CrocRigRN.phl[1127]";
+connectAttr "R_Belt_Jnt_3_Ctrl_translateX.o" "CrocRigRN.phl[1128]";
+connectAttr "R_Belt_Jnt_3_Ctrl_translateY.o" "CrocRigRN.phl[1129]";
+connectAttr "R_Belt_Jnt_3_Ctrl_translateZ.o" "CrocRigRN.phl[1130]";
+connectAttr "R_Belt_Jnt_3_Ctrl_scaleX.o" "CrocRigRN.phl[1131]";
+connectAttr "R_Belt_Jnt_3_Ctrl_scaleY.o" "CrocRigRN.phl[1132]";
+connectAttr "R_Belt_Jnt_3_Ctrl_scaleZ.o" "CrocRigRN.phl[1133]";
+connectAttr "R_Belt_Jnt_3_Ctrl_rotateX.o" "CrocRigRN.phl[1134]";
+connectAttr "R_Belt_Jnt_3_Ctrl_rotateY.o" "CrocRigRN.phl[1135]";
+connectAttr "R_Belt_Jnt_3_Ctrl_rotateZ.o" "CrocRigRN.phl[1136]";
+connectAttr "Shield_Ctrl_translateX.o" "CrocRigRN.phl[1137]";
+connectAttr "Shield_Ctrl_translateY.o" "CrocRigRN.phl[1138]";
+connectAttr "Shield_Ctrl_translateZ.o" "CrocRigRN.phl[1139]";
+connectAttr "Shield_Ctrl_rotateX.o" "CrocRigRN.phl[1140]";
+connectAttr "Shield_Ctrl_rotateY.o" "CrocRigRN.phl[1141]";
+connectAttr "Shield_Ctrl_rotateZ.o" "CrocRigRN.phl[1142]";
+connectAttr "Shield_Ctrl_scaleX.o" "CrocRigRN.phl[1143]";
+connectAttr "Shield_Ctrl_scaleY.o" "CrocRigRN.phl[1144]";
+connectAttr "Shield_Ctrl_scaleZ.o" "CrocRigRN.phl[1145]";
+connectAttr "Spear_Ctrl_translateX.o" "CrocRigRN.phl[1146]";
+connectAttr "Spear_Ctrl_translateY.o" "CrocRigRN.phl[1147]";
+connectAttr "Spear_Ctrl_translateZ.o" "CrocRigRN.phl[1148]";
+connectAttr "Spear_Ctrl_rotateX.o" "CrocRigRN.phl[1149]";
+connectAttr "Spear_Ctrl_rotateY.o" "CrocRigRN.phl[1150]";
+connectAttr "Spear_Ctrl_rotateZ.o" "CrocRigRN.phl[1151]";
+connectAttr "Spear_Ctrl_scaleX.o" "CrocRigRN.phl[1152]";
+connectAttr "Spear_Ctrl_scaleY.o" "CrocRigRN.phl[1153]";
+connectAttr "Spear_Ctrl_scaleZ.o" "CrocRigRN.phl[1154]";
+connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_rotateX.o" "CrocRigRN.phl[1155]";
+connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_rotateY.o" "CrocRigRN.phl[1156]";
+connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_rotateZ.o" "CrocRigRN.phl[1157]";
+connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_translateX.o" "CrocRigRN.phl[1158]";
+connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_translateY.o" "CrocRigRN.phl[1159]";
+connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_translateZ.o" "CrocRigRN.phl[1160]";
+connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_scaleX.o" "CrocRigRN.phl[1161]";
+connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_scaleY.o" "CrocRigRN.phl[1162]";
+connectAttr "Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_scaleZ.o" "CrocRigRN.phl[1163]";
 connectAttr "locator1_translateX.o" "locator1.tx";
 connectAttr "locator1_translateY.o" "locator1.ty";
 connectAttr "locator1_translateZ.o" "locator1.tz";

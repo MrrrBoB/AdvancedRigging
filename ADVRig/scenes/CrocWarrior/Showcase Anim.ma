@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Showcase Anim.ma
-//Last modified: Fri, Mar 07, 2025 06:50:09 PM
+//Last modified: Sat, Mar 08, 2025 03:36:36 PM
 //Codeset: 1252
 file -rdi 1 -ns "CrocRig" -rfn "CrocRigRN" -op "v=0;" -typ "mayaAscii" "F:/School/AdvancedRigging/ADVRig//scenes/CrocWarrior/CrocRig.ma";
 file -r -ns "CrocRig" -dr 1 -rfn "CrocRigRN" -op "v=0;" -typ "mayaAscii" "F:/School/AdvancedRigging/ADVRig//scenes/CrocWarrior/CrocRig.ma";
@@ -15,17 +15,17 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Home v2009 (Build: 19045)";
-fileInfo "UUID" "C1D0E8CA-4B4B-4CBF-1FB8-6D913F077B36";
+fileInfo "UUID" "8AF4D091-41A0-E2E4-2CF5-DEBB7FA51CA6";
 createNode transform -s -n "persp";
 	rename -uid "1E15DF80-49E5-51E9-4A17-3EB0E882FFA7";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 41.708157545280891 -3.5078057728630574 24.4841999123005 ;
-	setAttr ".r" -type "double3" 13.461647267084579 -294.59999999984967 -1.9101017513991936e-15 ;
+	setAttr ".t" -type "double3" 29.329825613499295 14.887084427221227 5.9735568835027593 ;
+	setAttr ".r" -type "double3" -18.338352732903871 -276.2000000001525 -1.4724878035583639e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "E56B8E2C-4569-D137-6071-0C891EBA522B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 46.552859942709055;
+	setAttr ".coi" 28.587849244498202;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -91,21 +91,21 @@ createNode locator -n "locatorShape1" -p "locator1";
 	setAttr ".ovc" 9;
 	setAttr ".los" -type "double3" 6 6 6 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "6BF0EF90-44C5-BC63-7CDE-A585388E495A";
+	rename -uid "855C0036-4558-BF15-3D9F-D38996AB409A";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "D6D91C43-47D5-1FB4-15EC-9AB7127D548D";
+	rename -uid "F5AD6E20-4E5F-57A5-EC75-AAB0603B4062";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "E0D9F1A7-4976-912C-9BBC-889AB5CBD028";
+	rename -uid "EFB46D7F-4E2F-02B1-0B1E-1D884632C562";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "50CF6827-4FDA-4828-7AEA-F2B28A51975F";
+	rename -uid "DCA34BF8-46D7-22B7-DDA1-5B96CD05B5AA";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "9CC3FF0E-4EF4-9EF1-69BF-B7A6DC82E70A";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "5D9E6660-40CF-1858-932E-65B2DCE22B17";
+	rename -uid "4B6F05B3-437E-63CF-C41C-3EB17F4AAEFB";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "78CFD7DD-4379-9F78-E274-BBA18019ADE1";
 	setAttr ".g" yes;
@@ -1194,7 +1194,7 @@ createNode reference -n "CrocRigRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"CrocRigRN"
 		"CrocRigRN" 0
-		"CrocRigRN" 1504
+		"CrocRigRN" 1501
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl" 
@@ -1204,13 +1204,13 @@ createNode reference -n "CrocRigRN";
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl" 
 		"Stretch" " -k 1 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl_Grp_parentConstraint1" 
-		"CrocWarriorW0" " -k 1"
+		"CrocWarriorW0" " -av -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl_Grp_parentConstraint1" 
-		"Transform_CtrlW1" " -k 1"
+		"Transform_CtrlW1" " -av -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl_Grp_parentConstraint1" 
-		"CoG_CtrlW2" " -k 1"
+		"CoG_CtrlW2" " -av -k 1 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl_Grp_parentConstraint1" 
-		"Pelvis_CtrlW3" " -k 1"
+		"Pelvis_CtrlW3" " -av -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Mid_Ctrl_Grp|CrocRig:IK_Torso_Mid_Ctrl" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Mid_Ctrl_Grp|CrocRig:IK_Torso_Mid_Ctrl" 
@@ -1407,13 +1407,13 @@ createNode reference -n "CrocRigRN";
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl" 
 		"Max_Stretch" " -k 1 3"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl_Grp_parentConstraint1" 
-		"CrocWarriorW0" " -k 1"
+		"CrocWarriorW0" " -av -k 1 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl_Grp_parentConstraint1" 
-		"Transform_CtrlW1" " -k 1"
+		"Transform_CtrlW1" " -av -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl_Grp_parentConstraint1" 
-		"CoG_CtrlW2" " -k 1"
+		"CoG_CtrlW2" " -av -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl_Grp_parentConstraint1" 
-		"R_Clav_CtrlW3" " -k 1"
+		"R_Clav_CtrlW3" " -av -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl" 
 		"SpaceSwapDivider" " -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl" 
@@ -1597,8 +1597,6 @@ createNode reference -n "CrocRigRN";
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Head_Ctrl_Grp|CrocRig:Head_Ctrl" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Head_Ctrl_Grp|CrocRig:Head_Ctrl" 
-		"ShowFaceCtrls" " -k 1"
-		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Head_Ctrl_Grp|CrocRig:Head_Ctrl" 
 		"FollowTranslate" " -k 1 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Head_Ctrl_Grp|CrocRig:Head_Ctrl" 
 		"FollowRotate" " -k 1 1"
@@ -1610,8 +1608,6 @@ createNode reference -n "CrocRigRN";
 		"FollowTranslate" " -k 1 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Jaw_Ctrl_Grp|CrocRig:Jaw_PLate_Ctrl_Offset|CrocRig:Jaw_Ctrl" 
 		"FollowRotate" " -k 1 1"
-		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Jaw_Ctrl_Grp|CrocRig:Jaw_PLate_Ctrl_Offset|CrocRig:Jaw_Ctrl" 
-		"HideTeethClosed" " -k 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Eye_Target_Main_Ctrl_Grp|CrocRig:Eye_Target_Main_Ctrl" 
 		"visibility" " 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Eye_Target_Main_Ctrl_Grp|CrocRig:Eye_Target_Main_Ctrl" 
@@ -1622,8 +1618,6 @@ createNode reference -n "CrocRigRN";
 		"SpaceSwapDivider" " -k 1 0"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Eye_Target_Main_Ctrl_Grp|CrocRig:Eye_Target_Main_Ctrl" 
 		"Local_Space" " -k 1 0"
-		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:Eye_Target_Main_Ctrl_Grp|CrocRig:Eye_Target_Main_Ctrl" 
-		"BlinkBoth" " -k 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:L_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:L_Eye_Aim_Ctrl_Ctrl" 
 		"visibility" " 1"
 		2 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Head_Ctrls|CrocRig:L_Eye_Aim_Ctrl_Ctrl_Grp|CrocRig:L_Eye_Aim_Ctrl_Ctrl" 
@@ -2049,62 +2043,62 @@ createNode reference -n "CrocRigRN";
 		2 "|CrocRig:Croc_Body_Full_Skin_For_Copy" "visibility" " 0"
 		2 "CrocRig:Geometry_Layer" "displayType" " 2"
 		2 "CrocRig:Skeleton_Layer" "visibility" " 0"
-		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
-		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_08_Jnt_FK_Ctrl_Grp|CrocRig:Tail_08_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_08_Auto_FK_Grp|CrocRig:Tail_08_Jnt_FK_Ctrl.visibility" 
-		""
-		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
-		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_06_Jnt_FK_Ctrl_Grp|CrocRig:Tail_06_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_06_Auto_FK_Grp|CrocRig:Tail_06_Jnt_FK_Ctrl.visibility" 
-		""
-		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Transform_Ctrl_Grp|CrocRig:Transform_Ctrl.ShowShield" 
-		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Shield_Ctrl_Grp|CrocRig:Shield_Ctrl.visibility" 
-		""
-		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
-		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_10_Jnt_FK_Ctrl_Grp|CrocRig:Tail_10_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_10_Auto_FK_Grp|CrocRig:Tail_10_Jnt_FK_Ctrl.visibility" 
-		""
-		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
-		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_11_Jnt_FK_Ctrl_Grp|CrocRig:Tail_11_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_11_Auto_FK_Grp|CrocRig:Tail_11_Jnt_FK_Ctrl.visibility" 
-		""
-		3 "CrocRig:R_Arm_IKFK_Reverse.outputX" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl.visibility" 
-		""
-		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
-		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_09_Jnt_FK_Ctrl_Grp|CrocRig:Tail_09_Auto_FK_Grp_Major|CrocRig:Tail_09_Jnt_FK_Ctrl.visibility" 
-		""
-		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
-		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_12_Jnt_FK_Ctrl_Grp|CrocRig:Tail_12_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_12_Auto_FK_Grp|CrocRig:Tail_12_Jnt_FK_Ctrl.visibility" 
-		""
-		3 "CrocRig:R_Arm_IKFK_Reverse.outputX" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl.visibility" 
-		""
-		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ctrl_Grp|CrocRig:Spear_Ctrl.visibility" 
-		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_Grp|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl.visibility" 
-		""
 		3 "CrocRig:L_Arm_IKFK_Reverse.outputX" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Arm_IK_PV_Ctrl_Grp|CrocRig:L_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:L_Arm_IK_PV_Ctrl.visibility" 
-		""
-		3 "CrocRig:Spine_IKFK_Reverse.outputX" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl.visibility" 
-		""
-		3 "CrocRig:L_Arm_IKFK_Reverse.outputX" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Hand_IK_Ctrl_Grp|CrocRig:L_Hand_IK_Ctrl.visibility" 
-		""
-		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
-		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_04_Jnt_FK_Ctrl_Grp|CrocRig:Tail_04_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_04_Auto_FK_Grp|CrocRig:Tail_04_Jnt_FK_Ctrl.visibility" 
-		""
-		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
-		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_05_Jnt_FK_Ctrl_Grp|CrocRig:Tail_05_Auto_FK_Grp_Major|CrocRig:Tail_05_Jnt_FK_Ctrl.visibility" 
-		""
-		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
-		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_02_Jnt_FK_Ctrl_Grp|CrocRig:Tail_02_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_02_Auto_FK_Grp|CrocRig:Tail_02_Jnt_FK_Ctrl.visibility" 
-		""
-		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Transform_Ctrl_Grp|CrocRig:Transform_Ctrl.ShowSpear" 
-		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ctrl_Grp|CrocRig:Spear_Ctrl.visibility" 
-		""
-		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
-		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_03_Jnt_FK_Ctrl_Grp|CrocRig:Tail_03_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_03_Auto_FK_Grp|CrocRig:Tail_03_Jnt_FK_Ctrl.visibility" 
-		""
-		3 "CrocRig:Spine_IKFK_Reverse.outputX" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Mid_Ctrl_Grp|CrocRig:IK_Torso_Mid_Ctrl.visibility" 
 		""
 		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
 		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_01_Jnt_FK_Ctrl_Grp|CrocRig:Tail_01_Jnt_FK_Ctrl.visibility" 
 		""
 		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
+		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_11_Jnt_FK_Ctrl_Grp|CrocRig:Tail_11_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_11_Auto_FK_Grp|CrocRig:Tail_11_Jnt_FK_Ctrl.visibility" 
+		""
+		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
 		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_07_Jnt_FK_Ctrl_Grp|CrocRig:Tail_07_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_07_Auto_FK_Grp|CrocRig:Tail_07_Jnt_FK_Ctrl.visibility" 
+		""
+		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
+		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_09_Jnt_FK_Ctrl_Grp|CrocRig:Tail_09_Auto_FK_Grp_Major|CrocRig:Tail_09_Jnt_FK_Ctrl.visibility" 
+		""
+		3 "CrocRig:Spine_IKFK_Reverse.outputX" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Mid_Ctrl_Grp|CrocRig:IK_Torso_Mid_Ctrl.visibility" 
+		""
+		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
+		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_10_Jnt_FK_Ctrl_Grp|CrocRig:Tail_10_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_10_Auto_FK_Grp|CrocRig:Tail_10_Jnt_FK_Ctrl.visibility" 
+		""
+		3 "CrocRig:R_Arm_IKFK_Reverse.outputX" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl.visibility" 
+		""
+		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
+		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_02_Jnt_FK_Ctrl_Grp|CrocRig:Tail_02_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_02_Auto_FK_Grp|CrocRig:Tail_02_Jnt_FK_Ctrl.visibility" 
+		""
+		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
+		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_03_Jnt_FK_Ctrl_Grp|CrocRig:Tail_03_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_03_Auto_FK_Grp|CrocRig:Tail_03_Jnt_FK_Ctrl.visibility" 
+		""
+		3 "CrocRig:L_Arm_IKFK_Reverse.outputX" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:L_Arm_IK_Ctrls|CrocRig:L_Hand_IK_Ctrl_Grp|CrocRig:L_Hand_IK_Ctrl.visibility" 
+		""
+		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ctrl_Grp|CrocRig:Spear_Ctrl.visibility" 
+		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl_Grp|CrocRig:Spear_Ribbon_Tip_Ctrl_Jnt_Ctrl.visibility" 
+		""
+		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
+		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_04_Jnt_FK_Ctrl_Grp|CrocRig:Tail_04_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_04_Auto_FK_Grp|CrocRig:Tail_04_Jnt_FK_Ctrl.visibility" 
+		""
+		3 "CrocRig:R_Arm_IKFK_Reverse.outputX" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl.visibility" 
+		""
+		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Transform_Ctrl_Grp|CrocRig:Transform_Ctrl.ShowSpear" 
+		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Spear_Ctrl_Grp|CrocRig:Spear_Ctrl.visibility" 
+		""
+		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
+		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_06_Jnt_FK_Ctrl_Grp|CrocRig:Tail_06_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_06_Auto_FK_Grp|CrocRig:Tail_06_Jnt_FK_Ctrl.visibility" 
+		""
+		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
+		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_05_Jnt_FK_Ctrl_Grp|CrocRig:Tail_05_Auto_FK_Grp_Major|CrocRig:Tail_05_Jnt_FK_Ctrl.visibility" 
+		""
+		3 "CrocRig:Spine_IKFK_Reverse.outputX" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl.visibility" 
+		""
+		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
+		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_08_Jnt_FK_Ctrl_Grp|CrocRig:Tail_08_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_08_Auto_FK_Grp|CrocRig:Tail_08_Jnt_FK_Ctrl.visibility" 
+		""
+		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
+		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_12_Jnt_FK_Ctrl_Grp|CrocRig:Tail_12_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_12_Auto_FK_Grp|CrocRig:Tail_12_Jnt_FK_Ctrl.visibility" 
+		""
+		3 "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Transform_Ctrl_Grp|CrocRig:Transform_Ctrl.ShowShield" 
+		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Auxillary_Ctrls|CrocRig:Shield_Ctrl_Grp|CrocRig:Shield_Ctrl.visibility" 
 		""
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl.rotateY" 
 		"CrocRigRN.placeHolderList[1]" ""
@@ -2119,7 +2113,7 @@ createNode reference -n "CrocRigRN";
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl.translateZ" 
 		"CrocRigRN.placeHolderList[6]" ""
 		5 0 "CrocRigRN" "CrocRig:Spine_IKFK_Reverse.outputX" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Top_Ctrl_Grp|CrocRig:IK_Torso_Top_Ctrl.visibility" 
-		"CrocRigRN.placeHolderList[7]" "CrocRigRN.placeHolderList[8]" "CrocRig:IK_Torso_Mid_Ctrl.v"
+		"CrocRigRN.placeHolderList[7]" "CrocRigRN.placeHolderList[8]" "CrocRig:IK_Torso_Top_Ctrl.v"
 		
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Mid_Ctrl_Grp|CrocRig:IK_Torso_Mid_Ctrl.translateX" 
 		"CrocRigRN.placeHolderList[9]" ""
@@ -2134,7 +2128,7 @@ createNode reference -n "CrocRigRN";
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Mid_Ctrl_Grp|CrocRig:IK_Torso_Mid_Ctrl.rotateZ" 
 		"CrocRigRN.placeHolderList[14]" ""
 		5 0 "CrocRigRN" "CrocRig:Spine_IKFK_Reverse.outputX" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_IK_Ctrls|CrocRig:IK_Torso_Mid_Ctrl_Grp|CrocRig:IK_Torso_Mid_Ctrl.visibility" 
-		"CrocRigRN.placeHolderList[15]" "CrocRigRN.placeHolderList[16]" "CrocRig:IK_Torso_Mid_Ctrl.v"
+		"CrocRigRN.placeHolderList[15]" "CrocRigRN.placeHolderList[16]" "CrocRig:IK_Torso_Top_Ctrl.v"
 		
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Spine_Ctrls|CrocRig:Spine_FK_Ctrls|CrocRig:Spine_01_FK_Ctrl_Grp|CrocRig:Spine_01_FK_Ctrl.translateX" 
 		"CrocRigRN.placeHolderList[17]" ""
@@ -2547,7 +2541,7 @@ createNode reference -n "CrocRigRN";
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl.rotateZ" 
 		"CrocRigRN.placeHolderList[222]" ""
 		5 0 "CrocRigRN" "CrocRig:R_Arm_IKFK_Reverse.outputX" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Hand_IK_Ctrl_Grp|CrocRig:R_Hand_IK_Ctrl.visibility" 
-		"CrocRigRN.placeHolderList[223]" "CrocRigRN.placeHolderList[224]" "CrocRig:R_Hand_IK_Ctrl.v"
+		"CrocRigRN.placeHolderList[223]" "CrocRigRN.placeHolderList[224]" "CrocRig:R_Arm_IK_PV_Ctrl.v"
 		
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl.translateX" 
 		"CrocRigRN.placeHolderList[225]" ""
@@ -2556,7 +2550,7 @@ createNode reference -n "CrocRigRN";
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl.translateZ" 
 		"CrocRigRN.placeHolderList[227]" ""
 		5 0 "CrocRigRN" "CrocRig:R_Arm_IKFK_Reverse.outputX" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl.visibility" 
-		"CrocRigRN.placeHolderList[228]" "CrocRigRN.placeHolderList[229]" "CrocRig:R_Hand_IK_Ctrl.v"
+		"CrocRigRN.placeHolderList[228]" "CrocRigRN.placeHolderList[229]" "CrocRig:R_Arm_IK_PV_Ctrl.v"
 		
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Arm_Ctrls|CrocRig:Arm_IK_Ctrls|CrocRig:R_Arm_IK_Ctrls|CrocRig:R_Arm_IK_PV_Ctrl_Grp|CrocRig:R_Arm_IK_PV_Ctrl_OFFSET_Grp|CrocRig:R_Arm_IK_PV_Ctrl.rotateX" 
 		"CrocRigRN.placeHolderList[230]" ""
@@ -3202,11 +3196,11 @@ createNode reference -n "CrocRigRN";
 		"CrocRigRN.placeHolderList[550]" ""
 		5 0 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
 		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_12_Jnt_FK_Ctrl_Grp|CrocRig:Tail_12_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_12_Auto_FK_Grp|CrocRig:Tail_12_Jnt_FK_Ctrl.visibility" 
-		"CrocRigRN.placeHolderList[551]" "CrocRigRN.placeHolderList[552]" "CrocRig:Tail_09_Jnt_FK_Ctrl.v"
+		"CrocRigRN.placeHolderList[551]" "CrocRigRN.placeHolderList[552]" "CrocRig:Tail_08_Jnt_FK_Ctrl.v"
 		
 		5 0 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
 		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_11_Jnt_FK_Ctrl_Grp|CrocRig:Tail_11_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_11_Auto_FK_Grp|CrocRig:Tail_11_Jnt_FK_Ctrl.visibility" 
-		"CrocRigRN.placeHolderList[553]" "CrocRigRN.placeHolderList[554]" "CrocRig:Tail_09_Jnt_FK_Ctrl.v"
+		"CrocRigRN.placeHolderList[553]" "CrocRigRN.placeHolderList[554]" "CrocRig:Tail_08_Jnt_FK_Ctrl.v"
 		
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_11_Jnt_FK_Ctrl_Grp|CrocRig:Tail_11_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_11_Auto_FK_Grp|CrocRig:Tail_11_Jnt_FK_Ctrl.translateX" 
 		"CrocRigRN.placeHolderList[555]" ""
@@ -3246,7 +3240,7 @@ createNode reference -n "CrocRigRN";
 		"CrocRigRN.placeHolderList[572]" ""
 		5 0 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
 		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_10_Jnt_FK_Ctrl_Grp|CrocRig:Tail_10_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_10_Auto_FK_Grp|CrocRig:Tail_10_Jnt_FK_Ctrl.visibility" 
-		"CrocRigRN.placeHolderList[573]" "CrocRigRN.placeHolderList[574]" "CrocRig:Tail_09_Jnt_FK_Ctrl.v"
+		"CrocRigRN.placeHolderList[573]" "CrocRigRN.placeHolderList[574]" "CrocRig:Tail_08_Jnt_FK_Ctrl.v"
 		
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_09_Jnt_FK_Ctrl_Grp|CrocRig:Tail_09_Auto_FK_Grp_Major|CrocRig:Tail_09_Jnt_FK_Ctrl.translateX" 
 		"CrocRigRN.placeHolderList[575]" ""
@@ -3268,7 +3262,7 @@ createNode reference -n "CrocRigRN";
 		"CrocRigRN.placeHolderList[583]" ""
 		5 0 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
 		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_09_Jnt_FK_Ctrl_Grp|CrocRig:Tail_09_Auto_FK_Grp_Major|CrocRig:Tail_09_Jnt_FK_Ctrl.visibility" 
-		"CrocRigRN.placeHolderList[584]" "CrocRigRN.placeHolderList[585]" "CrocRig:Tail_09_Jnt_FK_Ctrl.v"
+		"CrocRigRN.placeHolderList[584]" "CrocRigRN.placeHolderList[585]" "CrocRig:Tail_08_Jnt_FK_Ctrl.v"
 		
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_08_Jnt_FK_Ctrl_Grp|CrocRig:Tail_08_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_08_Auto_FK_Grp|CrocRig:Tail_08_Jnt_FK_Ctrl.translateX" 
 		"CrocRigRN.placeHolderList[586]" ""
@@ -3290,7 +3284,7 @@ createNode reference -n "CrocRigRN";
 		"CrocRigRN.placeHolderList[594]" ""
 		5 0 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
 		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_08_Jnt_FK_Ctrl_Grp|CrocRig:Tail_08_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_08_Auto_FK_Grp|CrocRig:Tail_08_Jnt_FK_Ctrl.visibility" 
-		"CrocRigRN.placeHolderList[595]" "CrocRigRN.placeHolderList[596]" "CrocRig:Tail_09_Jnt_FK_Ctrl.v"
+		"CrocRigRN.placeHolderList[595]" "CrocRigRN.placeHolderList[596]" "CrocRig:Tail_08_Jnt_FK_Ctrl.v"
 		
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_07_Jnt_FK_Ctrl_Grp|CrocRig:Tail_07_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_07_Auto_FK_Grp|CrocRig:Tail_07_Jnt_FK_Ctrl.translateX" 
 		"CrocRigRN.placeHolderList[597]" ""
@@ -3312,7 +3306,7 @@ createNode reference -n "CrocRigRN";
 		"CrocRigRN.placeHolderList[605]" ""
 		5 0 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
 		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_07_Jnt_FK_Ctrl_Grp|CrocRig:Tail_07_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_07_Auto_FK_Grp|CrocRig:Tail_07_Jnt_FK_Ctrl.visibility" 
-		"CrocRigRN.placeHolderList[606]" "CrocRigRN.placeHolderList[607]" "CrocRig:Tail_09_Jnt_FK_Ctrl.v"
+		"CrocRigRN.placeHolderList[606]" "CrocRigRN.placeHolderList[607]" "CrocRig:Tail_08_Jnt_FK_Ctrl.v"
 		
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_06_Jnt_FK_Ctrl_Grp|CrocRig:Tail_06_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_06_Auto_FK_Grp|CrocRig:Tail_06_Jnt_FK_Ctrl.translateX" 
 		"CrocRigRN.placeHolderList[608]" ""
@@ -3334,7 +3328,7 @@ createNode reference -n "CrocRigRN";
 		"CrocRigRN.placeHolderList[616]" ""
 		5 0 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
 		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_06_Jnt_FK_Ctrl_Grp|CrocRig:Tail_06_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_06_Auto_FK_Grp|CrocRig:Tail_06_Jnt_FK_Ctrl.visibility" 
-		"CrocRigRN.placeHolderList[617]" "CrocRigRN.placeHolderList[618]" "CrocRig:Tail_09_Jnt_FK_Ctrl.v"
+		"CrocRigRN.placeHolderList[617]" "CrocRigRN.placeHolderList[618]" "CrocRig:Tail_08_Jnt_FK_Ctrl.v"
 		
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_05_Jnt_FK_Ctrl_Grp|CrocRig:Tail_05_Auto_FK_Grp_Major|CrocRig:Tail_05_Jnt_FK_Ctrl.translateX" 
 		"CrocRigRN.placeHolderList[619]" ""
@@ -3356,7 +3350,7 @@ createNode reference -n "CrocRigRN";
 		"CrocRigRN.placeHolderList[627]" ""
 		5 0 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
 		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_05_Jnt_FK_Ctrl_Grp|CrocRig:Tail_05_Auto_FK_Grp_Major|CrocRig:Tail_05_Jnt_FK_Ctrl.visibility" 
-		"CrocRigRN.placeHolderList[628]" "CrocRigRN.placeHolderList[629]" "CrocRig:Tail_09_Jnt_FK_Ctrl.v"
+		"CrocRigRN.placeHolderList[628]" "CrocRigRN.placeHolderList[629]" "CrocRig:Tail_08_Jnt_FK_Ctrl.v"
 		
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_04_Jnt_FK_Ctrl_Grp|CrocRig:Tail_04_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_04_Auto_FK_Grp|CrocRig:Tail_04_Jnt_FK_Ctrl.translateX" 
 		"CrocRigRN.placeHolderList[630]" ""
@@ -3378,7 +3372,7 @@ createNode reference -n "CrocRigRN";
 		"CrocRigRN.placeHolderList[638]" ""
 		5 0 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
 		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_04_Jnt_FK_Ctrl_Grp|CrocRig:Tail_04_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_04_Auto_FK_Grp|CrocRig:Tail_04_Jnt_FK_Ctrl.visibility" 
-		"CrocRigRN.placeHolderList[639]" "CrocRigRN.placeHolderList[640]" "CrocRig:Tail_09_Jnt_FK_Ctrl.v"
+		"CrocRigRN.placeHolderList[639]" "CrocRigRN.placeHolderList[640]" "CrocRig:Tail_08_Jnt_FK_Ctrl.v"
 		
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_03_Jnt_FK_Ctrl_Grp|CrocRig:Tail_03_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_03_Auto_FK_Grp|CrocRig:Tail_03_Jnt_FK_Ctrl.translateX" 
 		"CrocRigRN.placeHolderList[641]" ""
@@ -3400,7 +3394,7 @@ createNode reference -n "CrocRigRN";
 		"CrocRigRN.placeHolderList[649]" ""
 		5 0 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
 		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_03_Jnt_FK_Ctrl_Grp|CrocRig:Tail_03_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_03_Auto_FK_Grp|CrocRig:Tail_03_Jnt_FK_Ctrl.visibility" 
-		"CrocRigRN.placeHolderList[650]" "CrocRigRN.placeHolderList[651]" "CrocRig:Tail_09_Jnt_FK_Ctrl.v"
+		"CrocRigRN.placeHolderList[650]" "CrocRigRN.placeHolderList[651]" "CrocRig:Tail_08_Jnt_FK_Ctrl.v"
 		
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_02_Jnt_FK_Ctrl_Grp|CrocRig:Tail_02_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_02_Auto_FK_Grp|CrocRig:Tail_02_Jnt_FK_Ctrl.translateX" 
 		"CrocRigRN.placeHolderList[652]" ""
@@ -3422,7 +3416,7 @@ createNode reference -n "CrocRigRN";
 		"CrocRigRN.placeHolderList[660]" ""
 		5 0 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
 		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_02_Jnt_FK_Ctrl_Grp|CrocRig:Tail_02_Jnt_Ctrl_AUTO_FK_MAJOR|CrocRig:Tail_02_Auto_FK_Grp|CrocRig:Tail_02_Jnt_FK_Ctrl.visibility" 
-		"CrocRigRN.placeHolderList[661]" "CrocRigRN.placeHolderList[662]" "CrocRig:Tail_09_Jnt_FK_Ctrl.v"
+		"CrocRigRN.placeHolderList[661]" "CrocRigRN.placeHolderList[662]" "CrocRig:Tail_08_Jnt_FK_Ctrl.v"
 		
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_01_Jnt_FK_Ctrl_Grp|CrocRig:Tail_01_Jnt_FK_Ctrl.translateX" 
 		"CrocRigRN.placeHolderList[663]" ""
@@ -3444,7 +3438,7 @@ createNode reference -n "CrocRigRN";
 		"CrocRigRN.placeHolderList[671]" ""
 		5 0 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:IKFK_Switches|CrocRig:Tail_IKFK_Switch_Ctrl_Grp|CrocRig:Tail_IKFK_Switch_Ctrl.Tail_IKFK" 
 		"|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Tail_Ctrls|CrocRig:Tail_FK_Ctrls|CrocRig:Tail_01_Jnt_FK_Ctrl_Grp|CrocRig:Tail_01_Jnt_FK_Ctrl.visibility" 
-		"CrocRigRN.placeHolderList[672]" "CrocRigRN.placeHolderList[673]" "CrocRig:Tail_09_Jnt_FK_Ctrl.v"
+		"CrocRigRN.placeHolderList[672]" "CrocRigRN.placeHolderList[673]" "CrocRig:Tail_08_Jnt_FK_Ctrl.v"
 		
 		5 4 "CrocRigRN" "|CrocRig:CrocWarrior|CrocRig:Controls|CrocRig:Face_Ctrls|CrocRig:R_Cheekbone_Jnt_Ctrl_Grp|CrocRig:R_Cheekbone_Jnt_Ctrl_Plate_Offset|CrocRig:R_Cheekbone_Jnt_Ctrl.translateX" 
 		"CrocRigRN.placeHolderList[674]" ""
@@ -5778,7 +5772,7 @@ createNode animCurveTA -n "L_Hand_IK_Ctrl_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 12 ".ktv[0:11]"  25 -74.303015336282385 28 -74.303015336282385
-		 29 -2.3980406412425768 42 -1.8769888465386753 54 -2.3980406412425768 67 -24.847425112945718
+		 29 -2.3980406412425768 42 -1.8769888465386753 54 -2.3980406412425768 67 -24.847425112945722
 		 79 -2.3980406412425768 92 -1.8769888465386753 104 -2.3980406412425768 117 -1.8769888465386753
 		 129 -2.3980406412425768 142 -1.8769888465386753;
 	setAttr -s 12 ".kit[11]"  1;
@@ -6394,18 +6388,37 @@ createNode animCurveTA -n "L_Clav_Ctrl_rotateX";
 	rename -uid "FF06EB25-4669-1DF9-DBE6-209C18FD2908";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  10 0 20 0 25 0 28 0;
+	setAttr -s 8 ".ktv[0:7]"  10 0 20 0 25 0 28 0 87 0 104 0 121 0 138 0;
+	setAttr -s 8 ".kit[7]"  1;
+	setAttr -s 8 ".kot[6:7]"  1 1;
+	setAttr -s 8 ".kix[7]"  1;
+	setAttr -s 8 ".kiy[7]"  0;
+	setAttr -s 8 ".kox[6:7]"  1 1;
+	setAttr -s 8 ".koy[6:7]"  0 0;
 createNode animCurveTA -n "L_Clav_Ctrl_rotateY";
 	rename -uid "70CB2AA1-4C03-BE2A-1891-95AC8D197028";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  10 20.357547207259302 20 1.7090853797203491
-		 25 10.737250888291838 28 10.737250888291838;
+	setAttr -s 8 ".ktv[0:7]"  10 20.357547207259302 20 1.7090853797203491
+		 25 10.737250888291838 28 10.737250888291838 87 10.737250888291838 104 -7.1092281086498943
+		 121 10.737250888291838 138 -7.1092281086498943;
+	setAttr -s 8 ".kit[7]"  1;
+	setAttr -s 8 ".kot[6:7]"  1 1;
+	setAttr -s 8 ".kix[7]"  1;
+	setAttr -s 8 ".kiy[7]"  0;
+	setAttr -s 8 ".kox[6:7]"  1 1;
+	setAttr -s 8 ".koy[6:7]"  0 0;
 createNode animCurveTA -n "L_Clav_Ctrl_rotateZ";
 	rename -uid "F1BEB687-4187-652E-DA9D-0B8306E60649";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  10 0 20 0 25 0 28 0;
+	setAttr -s 8 ".ktv[0:7]"  10 0 20 0 25 0 28 0 87 0 104 0 121 0 138 0;
+	setAttr -s 8 ".kit[7]"  1;
+	setAttr -s 8 ".kot[6:7]"  1 1;
+	setAttr -s 8 ".kix[7]"  1;
+	setAttr -s 8 ".kiy[7]"  0;
+	setAttr -s 8 ".kox[6:7]"  1 1;
+	setAttr -s 8 ".koy[6:7]"  0 0;
 createNode animCurveTA -n "Tail_09_Jnt_FK_Ctrl_rotateX";
 	rename -uid "7683220B-4E32-CF3F-85C9-CB92D3D227B5";
 	setAttr ".tan" 18;
@@ -7027,8 +7040,8 @@ createNode animCurveTA -n "Neck_Ctrl_rotateX";
 	rename -uid "506B7EDE-4FC0-60AA-9D8B-D59A0E80A8FF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 8 ".ktv[0:7]"  10 -22.504219216155882 25 0 28 0 50 -4.4466002781984617
-		 96 -4.4466002781984617 104 -0.61276775920458437 117 -1.5419691542064387 133 -3.2721359542735464;
+	setAttr -s 8 ".ktv[0:7]"  10 -22.504219216155882 25 0 28 0 50 -4.4466002781984626
+		 96 -4.4466002781984626 104 -0.61276775920458437 117 -1.5419691542064387 133 -3.2721359542735464;
 createNode animCurveTA -n "Neck_Ctrl_rotateY";
 	rename -uid "4094EB2A-44E6-6C58-3EF3-DEAE740B1C6B";
 	setAttr ".tan" 18;
@@ -8329,21 +8342,21 @@ createNode animCurveTA -n "Head_Ctrl_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  10 0 25 7.9136984289771828 28 12.29905604866166
-		 50 22.634063892742972 65 41.473928230424441 70 22.634063892742972 93 22.634063892742972
-		 104 18.443298233685564 117 15.875774583204304 133 11.555082061699226;
+		 50 22.634063892742976 65 41.473928230424441 70 22.634063892742976 93 22.634063892742976
+		 104 12.133633375202519 117 15.875774583204304 133 11.555082061699226;
 createNode animCurveTA -n "Head_Ctrl_rotateY";
 	rename -uid "D4B031B8-4B18-C3C4-134D-2FBC5D77CA07";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  10 49.173042896171886 25 -23.873783226552828
-		 28 -23.873783226552842 50 -23.873783226552845 65 -8.6510037454488433 70 -23.873783226552845
-		 93 -23.873783226552845 104 -24.319375154898655 117 -23.860293561315487 133 -23.388783433787452;
+		 28 -23.873783226552842 50 -23.873783226552849 65 -8.6510037454488433 70 -23.873783226552849
+		 93 -23.873783226552849 104 -24.319375154898651 117 -23.860293561315487 133 -23.388783433787452;
 createNode animCurveTA -n "Head_Ctrl_rotateZ";
 	rename -uid "493FB8B0-48F8-4BD9-CA21-E88F31DD6216";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 10 ".ktv[0:9]"  10 0 25 0 28 0 50 8.6953690939330344e-16
-		 65 -7.2930399773010812 70 0 93 0 104 -3.3993804482199499 117 -5.56175452854231 133 -8.9848451737134276;
+		 65 -7.2930399773010812 70 0 93 0 104 -3.3993804482199446 117 -5.56175452854231 133 -8.9848451737134276;
 createNode animCurveTL -n "Head_Ctrl_translateX";
 	rename -uid "035BFF19-4349-BFC7-137D-86B75CB63024";
 	setAttr ".tan" 18;
@@ -8411,9 +8424,9 @@ createNode animCurveTA -n "IK_Torso_Top_Ctrl_rotateX";
 	setAttr -s 19 ".ktv[0:18]"  0 26.07664128434752 5 25.268378722179012
 		 10 26.07664128434752 14 28.916444061089237 18 26.07664128434752 25 -17.353441273857268
 		 27 -17.518954190438961 28 -16.894069742348183 32 -16.370883265429654 41 -14.731429412479391
-		 50 -12.384379990656511 52 -12.227816200495397 65 -24.531111001721658 70 3.2318660943039919
-		 80 -3.6377709188296534 104 -12.02386287728333 128 -3.6377709188296534 152 -12.02386287728333
-		 176 3.2318660943039919;
+		 50 -12.384379990656512 52 -12.227816200495397 65 -24.531111001721658 70 3.2318660943039923
+		 80 -3.6377709188296534 104 -12.02386287728333 128 -3.6377709188296534 152 -16.257747574284469
+		 176 3.2318660943039923;
 	setAttr -s 19 ".kit[18]"  1;
 	setAttr -s 19 ".kot[16:18]"  1 18 1;
 	setAttr -s 19 ".kix[18]"  1;
@@ -8428,7 +8441,7 @@ createNode animCurveTA -n "IK_Torso_Top_Ctrl_rotateY";
 		 10 -21.052037164567182 14 -31.961125422973772 18 -21.052037164567182 25 33.821354553636368
 		 27 34.596518634897443 32 31.495461219119619 41 31.495461219119612 50 31.495461219119605
 		 52 31.495461219119605 65 12.220179005225736 70 29.22531702900649 80 29.335119170752595
-		 104 33.299027681135826 128 29.335119170752595 152 33.299027681135826 176 29.22531702900649;
+		 104 33.299027681135826 128 29.335119170752595 152 34.110334148281069 176 29.22531702900649;
 	setAttr -s 18 ".kit[17]"  1;
 	setAttr -s 18 ".kot[15:17]"  1 18 1;
 	setAttr -s 18 ".kix[17]"  0.99990481920085361;
@@ -8443,7 +8456,7 @@ createNode animCurveTA -n "IK_Torso_Top_Ctrl_rotateZ";
 		 10 -16.614361589524567 14 -22.943385271108308 18 -16.614361589524567 25 -5.1671934466707494
 		 27 -5.4615819883543386 28 -4.3161074945177713 32 -4.3161074945177713 41 -4.3161074945177722
 		 50 -4.3161074945177731 52 -4.3161074945177731 65 -10.298019588630712 70 7.7020233091546269
-		 80 4.8616481157738143 104 0.47330214096303769 128 4.8616481157738143 152 0.47330214096303769
+		 80 4.8616481157738152 104 0.47330214096303769 128 4.8616481157738152 152 -0.24105805260693897
 		 176 7.7020233091546269;
 	setAttr -s 19 ".kit[18]"  1;
 	setAttr -s 19 ".kot[16:18]"  1 18 1;
@@ -8573,7 +8586,7 @@ createNode animCurveTA -n "Jaw_Ctrl_rotateX";
 	setAttr ".wgt" no;
 	setAttr -s 24 ".ktv[0:23]"  10 -15.764598080706037 20 -12.249705758212244
 		 30 -9.8339961889080687 42 -15.441697286556352 50 -15.441697286556352 55 -16.104039404573193
-		 60 -14.065824726517491 65 -11.313423891263703 68 -14.726089438321313 76 -10.695821281851575
+		 60 -14.065824726517492 65 -11.313423891263703 68 -14.726089438321313 76 -10.695821281851575
 		 79 -14.392427187314468 81 -11.536421981834039 86 -15.334093098085166 91 -10.963652380758777
 		 97 -15.557351374806489 102 -7.8750207200057369 107 -16.601787367362576 110 -13.394708559847011
 		 115 -16.607729067501293 120 -9.6673374387494064 122 -14.224004193489874 127 -9.6673374387494064
@@ -10452,8 +10465,7 @@ createNode animCurveTU -n "Eye_Target_Main_Ctrl_BlinkBoth";
 	setAttr -s 3 ".kox[0:2]"  1 1 1;
 	setAttr -s 3 ".koy[0:2]"  0 0 0;
 select -ne :time1;
-	setAttr ".o" 99;
-	setAttr ".unw" 99;
+	setAttr ".o" 0;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
